@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * Quake2kSchemaAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-13T15:26:41.418240Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-13T15:38:19.342502Z[Etc/UTC]")
 public class Quake2kSchemaAllOf {
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
