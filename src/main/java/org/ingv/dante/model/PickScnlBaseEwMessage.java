@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlBaseEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-13T15:58:56.207905Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-13T16:31:40.895232Z[Etc/UTC]")
 public class PickScnlBaseEwMessage {
   public static final String SERIALIZED_NAME_PICK_ID = "pickId";
   @SerializedName(SERIALIZED_NAME_PICK_ID)
