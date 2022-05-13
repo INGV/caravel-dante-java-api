@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-13T15:12:05.152558Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-13T15:27:09.958940Z[Etc/UTC]")
 public class Hyp2000arcSchemaAllOf {
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
