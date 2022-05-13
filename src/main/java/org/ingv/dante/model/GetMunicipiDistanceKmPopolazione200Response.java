@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipiDistanceKmPopolazione200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-13T15:51:23.577461Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-13T15:59:23.978540Z[Etc/UTC]")
 public class GetMunicipiDistanceKmPopolazione200Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
