@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.AddEvent201ResponseDataEventAllOf;
+import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,22 +50,22 @@ import org.ingv.dante.JSON;
 /**
  * AddEwHyp2000arc201ResponseDataEventAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T10:11:14.608809Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T13:44:19.428745Z[Etc/UTC]")
 public class AddEwHyp2000arc201ResponseDataEventAllOf {
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<AddEvent201ResponseDataEventAllOf> origins = null;
+  private List<AddEvent201ResponseDataEventOriginsInnerAllOf> origins = null;
 
   public AddEwHyp2000arc201ResponseDataEventAllOf() { 
   }
 
-  public AddEwHyp2000arc201ResponseDataEventAllOf origins(List<AddEvent201ResponseDataEventAllOf> origins) {
+  public AddEwHyp2000arc201ResponseDataEventAllOf origins(List<AddEvent201ResponseDataEventOriginsInnerAllOf> origins) {
     
     this.origins = origins;
     return this;
   }
 
-  public AddEwHyp2000arc201ResponseDataEventAllOf addOriginsItem(AddEvent201ResponseDataEventAllOf originsItem) {
+  public AddEwHyp2000arc201ResponseDataEventAllOf addOriginsItem(AddEvent201ResponseDataEventOriginsInnerAllOf originsItem) {
     if (this.origins == null) {
       this.origins = new ArrayList<>();
     }
@@ -80,12 +80,12 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AddEvent201ResponseDataEventAllOf> getOrigins() {
+  public List<AddEvent201ResponseDataEventOriginsInnerAllOf> getOrigins() {
     return origins;
   }
 
 
-  public void setOrigins(List<AddEvent201ResponseDataEventAllOf> origins) {
+  public void setOrigins(List<AddEvent201ResponseDataEventOriginsInnerAllOf> origins) {
     this.origins = origins;
   }
 
@@ -172,7 +172,7 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
 
         // validate the optional field `origins` (array)
         for (int i = 0; i < jsonArrayorigins.size(); i++) {
-          AddEvent201ResponseDataEventAllOf.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
+          AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
         };
       }
   }

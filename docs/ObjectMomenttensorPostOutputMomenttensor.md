@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] |
 |**idLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
-|**localspace** | [**AddEvent201ResponseDataEventAllOfLocalspace**](AddEvent201ResponseDataEventAllOfLocalspace.md) |  |  [optional] |
+|**localspace** | [**AddEvent201ResponseDataEventLocalspace**](AddEvent201ResponseDataEventLocalspace.md) |  |  [optional] |
 
 
 

@@ -25,10 +25,8 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.AddEvent201ResponseDataEventAllOf;
-import org.ingv.dante.model.AddEvent201ResponseDataEventAllOf1;
-import org.ingv.dante.model.AddEvent201ResponseDataEventAllOf1OriginsInner;
-import org.ingv.dante.model.AddEvent201ResponseDataEventAllOfLocalspace;
+import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
+import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEvent201ResponseDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T10:11:14.608809Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T13:44:19.428745Z[Etc/UTC]")
 public class AddEvent201ResponseDataEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -65,11 +63,11 @@ public class AddEvent201ResponseDataEvent {
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
-  private AddEvent201ResponseDataEventAllOfLocalspace localspace;
+  private AddEvent201ResponseDataEventLocalspace localspace;
 
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<AddEvent201ResponseDataEventAllOf1OriginsInner> origins = null;
+  private List<AddEvent201ResponseDataEventOriginsInner> origins = null;
 
   public AddEvent201ResponseDataEvent() { 
   }
@@ -120,7 +118,7 @@ public class AddEvent201ResponseDataEvent {
   }
 
 
-  public AddEvent201ResponseDataEvent localspace(AddEvent201ResponseDataEventAllOfLocalspace localspace) {
+  public AddEvent201ResponseDataEvent localspace(AddEvent201ResponseDataEventLocalspace localspace) {
     
     this.localspace = localspace;
     return this;
@@ -133,23 +131,23 @@ public class AddEvent201ResponseDataEvent {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AddEvent201ResponseDataEventAllOfLocalspace getLocalspace() {
+  public AddEvent201ResponseDataEventLocalspace getLocalspace() {
     return localspace;
   }
 
 
-  public void setLocalspace(AddEvent201ResponseDataEventAllOfLocalspace localspace) {
+  public void setLocalspace(AddEvent201ResponseDataEventLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public AddEvent201ResponseDataEvent origins(List<AddEvent201ResponseDataEventAllOf1OriginsInner> origins) {
+  public AddEvent201ResponseDataEvent origins(List<AddEvent201ResponseDataEventOriginsInner> origins) {
     
     this.origins = origins;
     return this;
   }
 
-  public AddEvent201ResponseDataEvent addOriginsItem(AddEvent201ResponseDataEventAllOf1OriginsInner originsItem) {
+  public AddEvent201ResponseDataEvent addOriginsItem(AddEvent201ResponseDataEventOriginsInner originsItem) {
     if (this.origins == null) {
       this.origins = new ArrayList<>();
     }
@@ -164,12 +162,12 @@ public class AddEvent201ResponseDataEvent {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AddEvent201ResponseDataEventAllOf1OriginsInner> getOrigins() {
+  public List<AddEvent201ResponseDataEventOriginsInner> getOrigins() {
     return origins;
   }
 
 
-  public void setOrigins(List<AddEvent201ResponseDataEventAllOf1OriginsInner> origins) {
+  public void setOrigins(List<AddEvent201ResponseDataEventOriginsInner> origins) {
     this.origins = origins;
   }
 
@@ -258,7 +256,7 @@ public class AddEvent201ResponseDataEvent {
       }
       // validate the optional field `localspace`
       if (jsonObj.getAsJsonObject("localspace") != null) {
-        AddEvent201ResponseDataEventAllOfLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        AddEvent201ResponseDataEventLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
       if (jsonArrayorigins != null) {
@@ -269,7 +267,7 @@ public class AddEvent201ResponseDataEvent {
 
         // validate the optional field `origins` (array)
         for (int i = 0; i < jsonArrayorigins.size(); i++) {
-          AddEvent201ResponseDataEventAllOf1OriginsInner.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
+          AddEvent201ResponseDataEventOriginsInner.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
         };
       }
   }

@@ -2799,8 +2799,86 @@ components:
           parameters: ToDo
           username: ew
         strongmotions:
-        - null
-        - null
+        - sta: ACER
+          loc: "00"
+          rsa:
+          - period: 0.000096
+            value: 1.5
+          - period: 0.000096
+            value: 1.5
+          rsa_030: 0.02604
+          alternative:
+            code: 0
+            time: 2000-01-23T04:56:07.000+00:00
+          pga: 0.000162
+          pgd: 0.000025
+          t_dt: 2017-04-12T08:46:56.19Z
+          tpgv_dt: 2017-04-12T08:46:56.19Z
+          id_localspace: 182491
+          rsa_300: 0.000339
+          inserted: 2016-06-22T16:52:06.26Z
+          tpga_dt: 2017-04-12T08:47:06.99Z
+          provenance:
+            hostname: hew10.ingv.it
+            method: ToDo
+            name: INGV
+            description: Auto added
+            model: prem
+            program: IPO-EW__tdmt_invc.c
+            softwarename: software
+            version: hew1_mole
+            parameters: ToDo
+            username: ew
+          rsa_100: 0.003673
+          localspace:
+            name: hew1_mole
+            description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          net: IV
+          cha: HHZ
+          tpgd_dt: 2017-04-12T08:46:59.989Z
+          pgv: 0.000034
+        - sta: ACER
+          loc: "00"
+          rsa:
+          - period: 0.000096
+            value: 1.5
+          - period: 0.000096
+            value: 1.5
+          rsa_030: 0.02604
+          alternative:
+            code: 0
+            time: 2000-01-23T04:56:07.000+00:00
+          pga: 0.000162
+          pgd: 0.000025
+          t_dt: 2017-04-12T08:46:56.19Z
+          tpgv_dt: 2017-04-12T08:46:56.19Z
+          id_localspace: 182491
+          rsa_300: 0.000339
+          inserted: 2016-06-22T16:52:06.26Z
+          tpga_dt: 2017-04-12T08:47:06.99Z
+          provenance:
+            hostname: hew10.ingv.it
+            method: ToDo
+            name: INGV
+            description: Auto added
+            model: prem
+            program: IPO-EW__tdmt_invc.c
+            softwarename: software
+            version: hew1_mole
+            parameters: ToDo
+            username: ew
+          rsa_100: 0.003673
+          localspace:
+            name: hew1_mole
+            description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          net: IV
+          cha: HHZ
+          tpgd_dt: 2017-04-12T08:46:59.989Z
+          pgv: 0.000034
         localspace:
           name: hew1_mole
           description: Auto added
@@ -4915,7 +4993,7 @@ components:
       properties:
         magnitudes:
           items:
-            $ref: '#/components/schemas/addEvent_201_response_data_event_allOf'
+            $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
           type: array
     ObjectFocalmechanism:
       example:
@@ -5237,19 +5315,165 @@ components:
         momenttensor:
           $ref: '#/components/schemas/ObjectMomenttensorPostOutput_momenttensor'
     ObjectStrongmotion:
-      allOf:
-      - $ref: '#/components/schemas/ObjectStrongmotion_allOf'
+      example:
+        sta: ACER
+        loc: "00"
+        rsa:
+        - period: 0.000096
+          value: 1.5
+        - period: 0.000096
+          value: 1.5
+        rsa_030: 0.02604
+        alternative:
+          code: 0
+          time: 2000-01-23T04:56:07.000+00:00
+        pga: 0.000162
+        pgd: 0.000025
+        t_dt: 2017-04-12T08:46:56.19Z
+        tpgv_dt: 2017-04-12T08:46:56.19Z
+        id_localspace: 182491
+        rsa_300: 0.000339
+        inserted: 2016-06-22T16:52:06.26Z
+        tpga_dt: 2017-04-12T08:47:06.99Z
+        provenance:
+          hostname: hew10.ingv.it
+          method: ToDo
+          name: INGV
+          description: Auto added
+          model: prem
+          program: IPO-EW__tdmt_invc.c
+          softwarename: software
+          version: hew1_mole
+          parameters: ToDo
+          username: ew
+        rsa_100: 0.003673
+        localspace:
+          name: hew1_mole
+          description: Auto added
+        modified: 2016-06-22T16:52:06.26Z
+        id: 14932631
+        net: IV
+        cha: HHZ
+        tpgd_dt: 2017-04-12T08:46:59.989Z
+        pgv: 0.000034
+      properties:
+        net:
+          description: Channel net code | char(2)
+          example: IV
+          type: string
+        sta:
+          description: Channel station code | varchar(5)
+          example: ACER
+          type: string
+        cha:
+          description: Channel code | char(3)
+          example: HHZ
+          type: string
+        loc:
+          default: --
+          description: Channel location | char(2)
+          example: "00"
+          type: string
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          readOnly: true
+          type: integer
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        id_localspace:
+          description: Localspace Id | bigint(19)
+          example: 182491
+          format: int64
+          type: integer
+        t_dt:
+          description: "time: trigger reported by SM box - datetime part | datetime(6)"
+          example: 2017-04-12T08:46:56.19Z
+          format: date-time
+          type: string
+        pga:
+          description: "REQUIRED: peak ground acceleration (cm/s/s) | double"
+          example: 0.000162
+          format: float
+          type: number
+        tpga_dt:
+          description: "OPTIONAL: time of pga - datetime part | datetime(3)"
+          example: 2017-04-12T08:47:06.99Z
+          format: date-time
+          type: string
+        pgv:
+          description: "REQUIRED: peak ground velocity (cm/s) | double"
+          example: 0.000034
+          format: float
+          type: number
+        tpgv_dt:
+          description: "OPTIONAL: time of pgv - datetime part | datetime(3)"
+          example: 2017-04-12T08:46:56.19Z
+          format: date-time
+          type: string
+        pgd:
+          description: "REQUIRED: peak ground displacement (cm) | double"
+          example: 0.000025
+          format: float
+          type: number
+        tpgd_dt:
+          description: "OPTIONAL: time of pgd - datetime part | datetime(3)"
+          example: 2017-04-12T08:46:59.989Z
+          format: date-time
+          type: string
+        rsa_030:
+          description: RSA(response spectrum accel) value for period 0.30 | double
+          example: 0.02604
+          format: float
+          type: number
+        rsa_100:
+          description: RSA(response spectrum accel) value for period 1.00 | double
+          example: 0.003673
+          format: float
+          type: number
+        rsa_300:
+          description: RSA(response spectrum accel) value for period 3.00 | double
+          example: 0.000339
+          format: float
+          type: number
+        localspace:
+          $ref: '#/components/schemas/ObjectLocalspace'
+        provenance:
+          $ref: '#/components/schemas/ObjectProvenance'
+        alternative:
+          $ref: '#/components/schemas/ObjectStrongmotion_alternative'
+        rsa:
+          items:
+            $ref: '#/components/schemas/ObjectStrongmotion_rsa_inner'
+          type: array
       required:
       - t_dt
     ObjectStrongmotionPostOutput:
       example:
         strongmotions:
-        - null
-        - null
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
       properties:
         strongmotions:
           items:
-            $ref: '#/components/schemas/ObjectStrongmotionPostOutput_strongmotions_inner'
+            $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
           type: array
     ObjectStationmagnitude:
       example:
@@ -7003,8 +7227,86 @@ components:
             parameters: ToDo
             username: ew
           strongmotions:
-          - null
-          - null
+          - sta: ACER
+            loc: "00"
+            rsa:
+            - period: 0.000096
+              value: 1.5
+            - period: 0.000096
+              value: 1.5
+            rsa_030: 0.02604
+            alternative:
+              code: 0
+              time: 2000-01-23T04:56:07.000+00:00
+            pga: 0.000162
+            pgd: 0.000025
+            t_dt: 2017-04-12T08:46:56.19Z
+            tpgv_dt: 2017-04-12T08:46:56.19Z
+            id_localspace: 182491
+            rsa_300: 0.000339
+            inserted: 2016-06-22T16:52:06.26Z
+            tpga_dt: 2017-04-12T08:47:06.99Z
+            provenance:
+              hostname: hew10.ingv.it
+              method: ToDo
+              name: INGV
+              description: Auto added
+              model: prem
+              program: IPO-EW__tdmt_invc.c
+              softwarename: software
+              version: hew1_mole
+              parameters: ToDo
+              username: ew
+            rsa_100: 0.003673
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            net: IV
+            cha: HHZ
+            tpgd_dt: 2017-04-12T08:46:59.989Z
+            pgv: 0.000034
+          - sta: ACER
+            loc: "00"
+            rsa:
+            - period: 0.000096
+              value: 1.5
+            - period: 0.000096
+              value: 1.5
+            rsa_030: 0.02604
+            alternative:
+              code: 0
+              time: 2000-01-23T04:56:07.000+00:00
+            pga: 0.000162
+            pgd: 0.000025
+            t_dt: 2017-04-12T08:46:56.19Z
+            tpgv_dt: 2017-04-12T08:46:56.19Z
+            id_localspace: 182491
+            rsa_300: 0.000339
+            inserted: 2016-06-22T16:52:06.26Z
+            tpga_dt: 2017-04-12T08:47:06.99Z
+            provenance:
+              hostname: hew10.ingv.it
+              method: ToDo
+              name: INGV
+              description: Auto added
+              model: prem
+              program: IPO-EW__tdmt_invc.c
+              softwarename: software
+              version: hew1_mole
+              parameters: ToDo
+              username: ew
+            rsa_100: 0.003673
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            net: IV
+            cha: HHZ
+            tpgd_dt: 2017-04-12T08:46:59.989Z
+            pgv: 0.000034
           localspace:
             name: hew1_mole
             description: Auto added
@@ -8048,8 +8350,86 @@ components:
               parameters: ToDo
               username: ew
             strongmotions:
-            - null
-            - null
+            - sta: ACER
+              loc: "00"
+              rsa:
+              - period: 0.000096
+                value: 1.5
+              - period: 0.000096
+                value: 1.5
+              rsa_030: 0.02604
+              alternative:
+                code: 0
+                time: 2000-01-23T04:56:07.000+00:00
+              pga: 0.000162
+              pgd: 0.000025
+              t_dt: 2017-04-12T08:46:56.19Z
+              tpgv_dt: 2017-04-12T08:46:56.19Z
+              id_localspace: 182491
+              rsa_300: 0.000339
+              inserted: 2016-06-22T16:52:06.26Z
+              tpga_dt: 2017-04-12T08:47:06.99Z
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              rsa_100: 0.003673
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              modified: 2016-06-22T16:52:06.26Z
+              id: 14932631
+              net: IV
+              cha: HHZ
+              tpgd_dt: 2017-04-12T08:46:59.989Z
+              pgv: 0.000034
+            - sta: ACER
+              loc: "00"
+              rsa:
+              - period: 0.000096
+                value: 1.5
+              - period: 0.000096
+                value: 1.5
+              rsa_030: 0.02604
+              alternative:
+                code: 0
+                time: 2000-01-23T04:56:07.000+00:00
+              pga: 0.000162
+              pgd: 0.000025
+              t_dt: 2017-04-12T08:46:56.19Z
+              tpgv_dt: 2017-04-12T08:46:56.19Z
+              id_localspace: 182491
+              rsa_300: 0.000339
+              inserted: 2016-06-22T16:52:06.26Z
+              tpga_dt: 2017-04-12T08:47:06.99Z
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              rsa_100: 0.003673
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              modified: 2016-06-22T16:52:06.26Z
+              id: 14932631
+              net: IV
+              cha: HHZ
+              tpgd_dt: 2017-04-12T08:46:59.989Z
+              pgv: 0.000034
             localspace:
               name: hew1_mole
               description: Auto added
@@ -9070,7 +9450,7 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/getEvent_200_response_data'
-    addEvent_201_response_data_event_allOf_localspace:
+    addEvent_201_response_data_event_localspace:
       example:
         name: hew1_mole
       properties:
@@ -9078,7 +9458,7 @@ components:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
           type: string
-    addEvent_201_response_data_event_allOf:
+    addEvent_201_response_data_event_origins_inner_allOf:
       example:
         id_localspace: 182491
         localspace:
@@ -9096,32 +9476,62 @@ components:
           format: int64
           type: integer
         localspace:
-          $ref: '#/components/schemas/addEvent_201_response_data_event_allOf_localspace'
-    addEvent_201_response_data_event_allOf_1_origins_inner:
+          $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
+    addEvent_201_response_data_event_origins_inner:
       allOf:
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_allOf'
+      - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
       - $ref: '#/components/schemas/ObjectMagnitudePostOutput'
       - $ref: '#/components/schemas/ObjectFocalmechanismPostOutput'
-    addEvent_201_response_data_event_allOf_1:
+    addEvent_201_response_data_event:
+      example:
+        id_localspace: 182491
+        localspace:
+          name: hew1_mole
+        origins:
+        - null
+        - null
+        id: 14932631
       properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        id_localspace:
+          description: Localspace Id | bigint(19)
+          example: 182491
+          format: int64
+          type: integer
+        localspace:
+          $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
         origins:
           items:
-            $ref: '#/components/schemas/addEvent_201_response_data_event_allOf_1_origins_inner'
+            $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner'
           type: array
-    addEvent_201_response_data_event:
-      allOf:
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_allOf'
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_allOf_1'
     addEvent_201_response_data:
       example:
-        event: null
+        event:
+          id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          origins:
+          - null
+          - null
+          id: 14932631
       properties:
         event:
           $ref: '#/components/schemas/addEvent_201_response_data_event'
     addEvent_201_response:
       example:
         data:
-          event: null
+          event:
+            id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            origins:
+            - null
+            - null
+            id: 14932631
       properties:
         data:
           $ref: '#/components/schemas/addEvent_201_response_data'
@@ -9415,8 +9825,14 @@ components:
       example:
         data:
           strongmotions:
-          - null
-          - null
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
       properties:
         data:
           $ref: '#/components/schemas/ObjectStrongmotionPostOutput'
@@ -9481,7 +9897,7 @@ components:
           id: 14932631
       properties:
         event:
-          $ref: '#/components/schemas/addEvent_201_response_data_event_allOf'
+          $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
     addEwQuake2k_201_response:
       example:
         data:
@@ -9501,11 +9917,11 @@ components:
       properties:
         origins:
           items:
-            $ref: '#/components/schemas/addEvent_201_response_data_event_allOf'
+            $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
           type: array
     addEwHyp2000arc_201_response_data_event:
       allOf:
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_allOf'
+      - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
       - $ref: '#/components/schemas/addEwHyp2000arc_201_response_data_event_allOf'
     addEwHyp2000arc_201_response_data:
       example:
@@ -9534,7 +9950,7 @@ components:
           $ref: '#/components/schemas/addOrigin_201_response_data_origins_inner_allOf'
     addHEwPickScnl_201_response_data_picks_inner:
       allOf:
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_allOf'
+      - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
       - $ref: '#/components/schemas/addHEwPickScnl_201_response_data_picks_inner_allOf'
     addHEwPickScnl_201_response_data:
       example:
@@ -9573,7 +9989,7 @@ components:
       properties:
         strongmotions:
           items:
-            $ref: '#/components/schemas/addEvent_201_response_data_event_allOf'
+            $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
           type: array
     addHEwStrongmotionii_201_response:
       example:
@@ -9625,7 +10041,7 @@ components:
           type: string
     ObjectFocalmechanismPostOutput_focalmechanisms_inner:
       allOf:
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_allOf'
+      - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
       - $ref: '#/components/schemas/ObjectMomenttensorPostOutput'
     ObjectMomenttensorPostOutput_momenttensor:
       example:
@@ -9645,121 +10061,38 @@ components:
           format: int64
           type: integer
         localspace:
-          $ref: '#/components/schemas/addEvent_201_response_data_event_allOf_localspace'
+          $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
       type: object
-    ObjectStrongmotion_allOf:
+    ObjectStrongmotion_alternative:
+      example:
+        code: 0
+        time: 2000-01-23T04:56:07.000+00:00
       properties:
-        net:
-          description: Channel net code | char(2)
-          example: IV
-          type: string
-        sta:
-          description: Channel station code | varchar(5)
-          example: ACER
-          type: string
-        cha:
-          description: Channel code | char(3)
-          example: HHZ
-          type: string
-        loc:
-          default: --
-          description: Channel location | char(2)
-          example: "00"
-          type: string
-        id:
-          description: Unique incremental id | bigint(20)
-          example: 14932631
-          format: int64
-          readOnly: true
-          type: integer
-        modified:
-          description: Last Review | timestamp
-          example: 2016-06-22T16:52:06.26Z
+        time:
+          description: "alternate time: trigger reported by SM box - time with microseconds\
+            \ | datetime(3)"
           format: date-time
-          readOnly: true
           type: string
-        inserted:
-          description: Insert time | timestamp
-          example: 2016-06-22T16:52:06.26Z
-          format: date-time
-          readOnly: true
-          type: string
-        id_localspace:
-          description: Localspace Id | bigint(19)
-          example: 182491
+        code:
+          description: code specifying the source of the alternate time field | int(11)
+          example: 0
           format: int64
           type: integer
-        t_dt:
-          description: "time: trigger reported by SM box - datetime part | datetime(6)"
-          example: 2017-04-12T08:46:56.19Z
-          format: date-time
-          type: string
-        pga:
-          description: "REQUIRED: peak ground acceleration (cm/s/s) | double"
-          example: 0.000162
-          format: float
+    ObjectStrongmotion_rsa_inner:
+      example:
+        period: 0.000096
+        value: 1.5
+      properties:
+        value:
+          description: RSA value (cm/s/s) at given period | double
+          example: 1.5
+          format: double
           type: number
-        tpga_dt:
-          description: "OPTIONAL: time of pga - datetime part | datetime(3)"
-          example: 2017-04-12T08:47:06.99Z
-          format: date-time
-          type: string
-        pgv:
-          description: "REQUIRED: peak ground velocity (cm/s) | double"
-          example: 0.000034
-          format: float
+        period:
+          description: period (s) at which RSA values are given | double
+          example: 0.000096
+          format: double
           type: number
-        tpgv_dt:
-          description: "OPTIONAL: time of pgv - datetime part | datetime(3)"
-          example: 2017-04-12T08:46:56.19Z
-          format: date-time
-          type: string
-        pgd:
-          description: "REQUIRED: peak ground displacement (cm) | double"
-          example: 0.000025
-          format: float
-          type: number
-        tpgd_dt:
-          description: "OPTIONAL: time of pgd - datetime part | datetime(3)"
-          example: 2017-04-12T08:46:59.989Z
-          format: date-time
-          type: string
-        rsa_030:
-          description: RSA(response spectrum accel) value for period 0.30 | double
-          example: 0.02604
-          format: float
-          type: number
-        rsa_100:
-          description: RSA(response spectrum accel) value for period 1.00 | double
-          example: 0.003673
-          format: float
-          type: number
-        rsa_300:
-          description: RSA(response spectrum accel) value for period 3.00 | double
-          example: 0.000339
-          format: float
-          type: number
-        localspace:
-          $ref: '#/components/schemas/ObjectLocalspace'
-        provenance:
-          $ref: '#/components/schemas/ObjectProvenance'
-        alternative:
-          properties:
-            time:
-              $ref: '#/components/schemas/strongmotion_alt__t_alt_dt'
-            code:
-              $ref: '#/components/schemas/strongmotion_alt__altcode'
-        rsa:
-          items:
-            properties:
-              value:
-                $ref: '#/components/schemas/strongmotion_rsa__value'
-              period:
-                $ref: '#/components/schemas/strongmotion_rsa__period'
-          type: array
-    ObjectStrongmotionPostOutput_strongmotions_inner:
-      allOf:
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_allOf'
     ObjectStationmagnitude_type_amplitude:
       example:
         unit: m/s

@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.AddEvent201ResponseDataEventAllOf;
+import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
 import org.ingv.dante.model.AddOrigin201ResponseDataOriginsInnerAllOf;
 import org.ingv.dante.model.ObjectMagnitudePostOutput;
 
@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * AddOrigin201ResponseDataOriginsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T10:11:14.608809Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T13:44:19.428745Z[Etc/UTC]")
 public class AddOrigin201ResponseDataOriginsInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -60,7 +60,7 @@ public class AddOrigin201ResponseDataOriginsInner {
 
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
-  private List<AddEvent201ResponseDataEventAllOf> magnitudes = null;
+  private List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes = null;
 
   public AddOrigin201ResponseDataOriginsInner() { 
   }
@@ -88,13 +88,13 @@ public class AddOrigin201ResponseDataOriginsInner {
   }
 
 
-  public AddOrigin201ResponseDataOriginsInner magnitudes(List<AddEvent201ResponseDataEventAllOf> magnitudes) {
+  public AddOrigin201ResponseDataOriginsInner magnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {
     
     this.magnitudes = magnitudes;
     return this;
   }
 
-  public AddOrigin201ResponseDataOriginsInner addMagnitudesItem(AddEvent201ResponseDataEventAllOf magnitudesItem) {
+  public AddOrigin201ResponseDataOriginsInner addMagnitudesItem(AddEvent201ResponseDataEventOriginsInnerAllOf magnitudesItem) {
     if (this.magnitudes == null) {
       this.magnitudes = new ArrayList<>();
     }
@@ -109,12 +109,12 @@ public class AddOrigin201ResponseDataOriginsInner {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AddEvent201ResponseDataEventAllOf> getMagnitudes() {
+  public List<AddEvent201ResponseDataEventOriginsInnerAllOf> getMagnitudes() {
     return magnitudes;
   }
 
 
-  public void setMagnitudes(List<AddEvent201ResponseDataEventAllOf> magnitudes) {
+  public void setMagnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {
     this.magnitudes = magnitudes;
   }
 
@@ -204,7 +204,7 @@ public class AddOrigin201ResponseDataOriginsInner {
 
         // validate the optional field `magnitudes` (array)
         for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
-          AddEvent201ResponseDataEventAllOf.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
+          AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
         };
       }
   }

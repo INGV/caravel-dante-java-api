@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.45.0-dev
-  - Build date: 2022-05-17T10:11:14.608809Z[Etc/UTC]
+  - Build date: 2022-05-17T13:44:19.428745Z[Etc/UTC]
 
   
 
@@ -165,10 +165,9 @@ Class | Method | HTTP request | Description
  - [AddEvent201Response](docs/AddEvent201Response.md)
  - [AddEvent201ResponseData](docs/AddEvent201ResponseData.md)
  - [AddEvent201ResponseDataEvent](docs/AddEvent201ResponseDataEvent.md)
- - [AddEvent201ResponseDataEventAllOf](docs/AddEvent201ResponseDataEventAllOf.md)
- - [AddEvent201ResponseDataEventAllOf1](docs/AddEvent201ResponseDataEventAllOf1.md)
- - [AddEvent201ResponseDataEventAllOf1OriginsInner](docs/AddEvent201ResponseDataEventAllOf1OriginsInner.md)
- - [AddEvent201ResponseDataEventAllOfLocalspace](docs/AddEvent201ResponseDataEventAllOfLocalspace.md)
+ - [AddEvent201ResponseDataEventLocalspace](docs/AddEvent201ResponseDataEventLocalspace.md)
+ - [AddEvent201ResponseDataEventOriginsInner](docs/AddEvent201ResponseDataEventOriginsInner.md)
+ - [AddEvent201ResponseDataEventOriginsInnerAllOf](docs/AddEvent201ResponseDataEventOriginsInnerAllOf.md)
  - [AddEwHyp2000arc201Response](docs/AddEwHyp2000arc201Response.md)
  - [AddEwHyp2000arc201ResponseData](docs/AddEwHyp2000arc201ResponseData.md)
  - [AddEwHyp2000arc201ResponseDataEvent](docs/AddEwHyp2000arc201ResponseDataEvent.md)
@@ -255,9 +254,9 @@ Class | Method | HTTP request | Description
  - [ObjectStatus](docs/ObjectStatus.md)
  - [ObjectStatusDbHost](docs/ObjectStatusDbHost.md)
  - [ObjectStrongmotion](docs/ObjectStrongmotion.md)
- - [ObjectStrongmotionAllOf](docs/ObjectStrongmotionAllOf.md)
+ - [ObjectStrongmotionAlternative](docs/ObjectStrongmotionAlternative.md)
  - [ObjectStrongmotionPostOutput](docs/ObjectStrongmotionPostOutput.md)
- - [ObjectStrongmotionPostOutputStrongmotionsInner](docs/ObjectStrongmotionPostOutputStrongmotionsInner.md)
+ - [ObjectStrongmotionRsaInner](docs/ObjectStrongmotionRsaInner.md)
  - [ObjectTypeOrigin](docs/ObjectTypeOrigin.md)
  - [PickEmersio](docs/PickEmersio.md)
  - [PickFirstmotion](docs/PickFirstmotion.md)

@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.ObjectStrongmotionPostOutputStrongmotionsInner;
+import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,22 +50,22 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotionPostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T10:11:14.608809Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T13:44:19.428745Z[Etc/UTC]")
 public class ObjectStrongmotionPostOutput {
   public static final String SERIALIZED_NAME_STRONGMOTIONS = "strongmotions";
   @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
-  private List<ObjectStrongmotionPostOutputStrongmotionsInner> strongmotions = null;
+  private List<AddEvent201ResponseDataEventOriginsInnerAllOf> strongmotions = null;
 
   public ObjectStrongmotionPostOutput() { 
   }
 
-  public ObjectStrongmotionPostOutput strongmotions(List<ObjectStrongmotionPostOutputStrongmotionsInner> strongmotions) {
+  public ObjectStrongmotionPostOutput strongmotions(List<AddEvent201ResponseDataEventOriginsInnerAllOf> strongmotions) {
     
     this.strongmotions = strongmotions;
     return this;
   }
 
-  public ObjectStrongmotionPostOutput addStrongmotionsItem(ObjectStrongmotionPostOutputStrongmotionsInner strongmotionsItem) {
+  public ObjectStrongmotionPostOutput addStrongmotionsItem(AddEvent201ResponseDataEventOriginsInnerAllOf strongmotionsItem) {
     if (this.strongmotions == null) {
       this.strongmotions = new ArrayList<>();
     }
@@ -80,12 +80,12 @@ public class ObjectStrongmotionPostOutput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<ObjectStrongmotionPostOutputStrongmotionsInner> getStrongmotions() {
+  public List<AddEvent201ResponseDataEventOriginsInnerAllOf> getStrongmotions() {
     return strongmotions;
   }
 
 
-  public void setStrongmotions(List<ObjectStrongmotionPostOutputStrongmotionsInner> strongmotions) {
+  public void setStrongmotions(List<AddEvent201ResponseDataEventOriginsInnerAllOf> strongmotions) {
     this.strongmotions = strongmotions;
   }
 
@@ -172,7 +172,7 @@ public class ObjectStrongmotionPostOutput {
 
         // validate the optional field `strongmotions` (array)
         for (int i = 0; i < jsonArraystrongmotions.size(); i++) {
-          ObjectStrongmotionPostOutputStrongmotionsInner.validateJsonObject(jsonArraystrongmotions.get(i).getAsJsonObject());
+          AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonArraystrongmotions.get(i).getAsJsonObject());
         };
       }
   }

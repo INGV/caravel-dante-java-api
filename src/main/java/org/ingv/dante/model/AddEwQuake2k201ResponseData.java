@@ -23,7 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.AddEvent201ResponseDataEventAllOf;
+import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,16 +48,16 @@ import org.ingv.dante.JSON;
 /**
  * AddEwQuake2k201ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T10:11:14.608809Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T13:44:19.428745Z[Etc/UTC]")
 public class AddEwQuake2k201ResponseData {
   public static final String SERIALIZED_NAME_EVENT = "event";
   @SerializedName(SERIALIZED_NAME_EVENT)
-  private AddEvent201ResponseDataEventAllOf event;
+  private AddEvent201ResponseDataEventOriginsInnerAllOf event;
 
   public AddEwQuake2k201ResponseData() { 
   }
 
-  public AddEwQuake2k201ResponseData event(AddEvent201ResponseDataEventAllOf event) {
+  public AddEwQuake2k201ResponseData event(AddEvent201ResponseDataEventOriginsInnerAllOf event) {
     
     this.event = event;
     return this;
@@ -70,12 +70,12 @@ public class AddEwQuake2k201ResponseData {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AddEvent201ResponseDataEventAllOf getEvent() {
+  public AddEvent201ResponseDataEventOriginsInnerAllOf getEvent() {
     return event;
   }
 
 
-  public void setEvent(AddEvent201ResponseDataEventAllOf event) {
+  public void setEvent(AddEvent201ResponseDataEventOriginsInnerAllOf event) {
     this.event = event;
   }
 
@@ -155,7 +155,7 @@ public class AddEwQuake2k201ResponseData {
       }
       // validate the optional field `event`
       if (jsonObj.getAsJsonObject("event") != null) {
-        AddEvent201ResponseDataEventAllOf.validateJsonObject(jsonObj.getAsJsonObject("event"));
+        AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonObj.getAsJsonObject("event"));
       }
   }
 

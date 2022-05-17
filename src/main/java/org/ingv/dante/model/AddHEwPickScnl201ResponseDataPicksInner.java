@@ -23,8 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.AddEvent201ResponseDataEventAllOf;
-import org.ingv.dante.model.AddEvent201ResponseDataEventAllOfLocalspace;
+import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
+import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
 import org.ingv.dante.model.AddHEwPickScnl201ResponseDataPicksInnerAllOf;
 import org.ingv.dante.model.AddOrigin201ResponseDataOriginsInnerAllOf;
 
@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * AddHEwPickScnl201ResponseDataPicksInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T10:11:14.608809Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T13:44:19.428745Z[Etc/UTC]")
 public class AddHEwPickScnl201ResponseDataPicksInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -63,7 +63,7 @@ public class AddHEwPickScnl201ResponseDataPicksInner {
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
-  private AddEvent201ResponseDataEventAllOfLocalspace localspace;
+  private AddEvent201ResponseDataEventLocalspace localspace;
 
   public static final String SERIALIZED_NAME_PICK_EW = "pick_ew";
   @SerializedName(SERIALIZED_NAME_PICK_EW)
@@ -118,7 +118,7 @@ public class AddHEwPickScnl201ResponseDataPicksInner {
   }
 
 
-  public AddHEwPickScnl201ResponseDataPicksInner localspace(AddEvent201ResponseDataEventAllOfLocalspace localspace) {
+  public AddHEwPickScnl201ResponseDataPicksInner localspace(AddEvent201ResponseDataEventLocalspace localspace) {
     
     this.localspace = localspace;
     return this;
@@ -131,12 +131,12 @@ public class AddHEwPickScnl201ResponseDataPicksInner {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AddEvent201ResponseDataEventAllOfLocalspace getLocalspace() {
+  public AddEvent201ResponseDataEventLocalspace getLocalspace() {
     return localspace;
   }
 
 
-  public void setLocalspace(AddEvent201ResponseDataEventAllOfLocalspace localspace) {
+  public void setLocalspace(AddEvent201ResponseDataEventLocalspace localspace) {
     this.localspace = localspace;
   }
 
@@ -248,7 +248,7 @@ public class AddHEwPickScnl201ResponseDataPicksInner {
       }
       // validate the optional field `localspace`
       if (jsonObj.getAsJsonObject("localspace") != null) {
-        AddEvent201ResponseDataEventAllOfLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        AddEvent201ResponseDataEventLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       // validate the optional field `pick_ew`
       if (jsonObj.getAsJsonObject("pick_ew") != null) {
