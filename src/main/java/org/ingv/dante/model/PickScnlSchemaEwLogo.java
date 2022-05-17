@@ -45,10 +45,10 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * Quake2kSchemaInnerAllOf1EwLogo
+ * PickScnlSchemaEwLogo
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T09:47:10.901446Z[Etc/UTC]")
-public class Quake2kSchemaInnerAllOf1EwLogo {
+public class PickScnlSchemaEwLogo {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private String type;
@@ -73,10 +73,10 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
   @SerializedName(SERIALIZED_NAME_INSTANCE)
   private String instance;
 
-  public Quake2kSchemaInnerAllOf1EwLogo() { 
+  public PickScnlSchemaEwLogo() { 
   }
 
-  public Quake2kSchemaInnerAllOf1EwLogo type(String type) {
+  public PickScnlSchemaEwLogo type(String type) {
     
     this.type = type;
     return this;
@@ -87,7 +87,7 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
    * @return type
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "TYPE_QUAKE2K", required = true, value = "Type description | ???")
+  @ApiModelProperty(example = "TYPE_PICK_SCNL", required = true, value = "Type description | ???")
 
   public String getType() {
     return type;
@@ -99,7 +99,7 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
   }
 
 
-  public Quake2kSchemaInnerAllOf1EwLogo module(String module) {
+  public PickScnlSchemaEwLogo module(String module) {
     
     this.module = module;
     return this;
@@ -110,7 +110,7 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
    * @return module
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "MOD_BINDER_EW", required = true, value = "Module description | ???")
+  @ApiModelProperty(example = "MOD_PICK_EW", required = true, value = "Module description | ???")
 
   public String getModule() {
     return module;
@@ -122,7 +122,7 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
   }
 
 
-  public Quake2kSchemaInnerAllOf1EwLogo installation(String installation) {
+  public PickScnlSchemaEwLogo installation(String installation) {
     
     this.installation = installation;
     return this;
@@ -145,7 +145,7 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
   }
 
 
-  public Quake2kSchemaInnerAllOf1EwLogo user(String user) {
+  public PickScnlSchemaEwLogo user(String user) {
     
     this.user = user;
     return this;
@@ -168,7 +168,7 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
   }
 
 
-  public Quake2kSchemaInnerAllOf1EwLogo hostname(String hostname) {
+  public PickScnlSchemaEwLogo hostname(String hostname) {
     
     this.hostname = hostname;
     return this;
@@ -191,7 +191,7 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
   }
 
 
-  public Quake2kSchemaInnerAllOf1EwLogo instance(String instance) {
+  public PickScnlSchemaEwLogo instance(String instance) {
     
     this.instance = instance;
     return this;
@@ -223,13 +223,13 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Quake2kSchemaInnerAllOf1EwLogo quake2kSchemaInnerAllOf1EwLogo = (Quake2kSchemaInnerAllOf1EwLogo) o;
-    return Objects.equals(this.type, quake2kSchemaInnerAllOf1EwLogo.type) &&
-        Objects.equals(this.module, quake2kSchemaInnerAllOf1EwLogo.module) &&
-        Objects.equals(this.installation, quake2kSchemaInnerAllOf1EwLogo.installation) &&
-        Objects.equals(this.user, quake2kSchemaInnerAllOf1EwLogo.user) &&
-        Objects.equals(this.hostname, quake2kSchemaInnerAllOf1EwLogo.hostname) &&
-        Objects.equals(this.instance, quake2kSchemaInnerAllOf1EwLogo.instance);
+    PickScnlSchemaEwLogo pickScnlSchemaEwLogo = (PickScnlSchemaEwLogo) o;
+    return Objects.equals(this.type, pickScnlSchemaEwLogo.type) &&
+        Objects.equals(this.module, pickScnlSchemaEwLogo.module) &&
+        Objects.equals(this.installation, pickScnlSchemaEwLogo.installation) &&
+        Objects.equals(this.user, pickScnlSchemaEwLogo.user) &&
+        Objects.equals(this.hostname, pickScnlSchemaEwLogo.hostname) &&
+        Objects.equals(this.instance, pickScnlSchemaEwLogo.instance);
   }
 
   @Override
@@ -240,7 +240,7 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Quake2kSchemaInnerAllOf1EwLogo {\n");
+    sb.append("class PickScnlSchemaEwLogo {\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    module: ").append(toIndentedString(module)).append("\n");
     sb.append("    installation: ").append(toIndentedString(installation)).append("\n");
@@ -288,27 +288,27 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to Quake2kSchemaInnerAllOf1EwLogo
+  * @throws IOException if the JSON Object is invalid with respect to PickScnlSchemaEwLogo
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (Quake2kSchemaInnerAllOf1EwLogo.openapiRequiredFields.isEmpty()) {
+        if (PickScnlSchemaEwLogo.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in Quake2kSchemaInnerAllOf1EwLogo is not found in the empty JSON string", Quake2kSchemaInnerAllOf1EwLogo.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in PickScnlSchemaEwLogo is not found in the empty JSON string", PickScnlSchemaEwLogo.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!Quake2kSchemaInnerAllOf1EwLogo.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Quake2kSchemaInnerAllOf1EwLogo` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!PickScnlSchemaEwLogo.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `PickScnlSchemaEwLogo` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : Quake2kSchemaInnerAllOf1EwLogo.openapiRequiredFields) {
+      for (String requiredField : PickScnlSchemaEwLogo.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
@@ -337,22 +337,22 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!Quake2kSchemaInnerAllOf1EwLogo.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'Quake2kSchemaInnerAllOf1EwLogo' and its subtypes
+       if (!PickScnlSchemaEwLogo.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'PickScnlSchemaEwLogo' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<Quake2kSchemaInnerAllOf1EwLogo> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(Quake2kSchemaInnerAllOf1EwLogo.class));
+       final TypeAdapter<PickScnlSchemaEwLogo> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(PickScnlSchemaEwLogo.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<Quake2kSchemaInnerAllOf1EwLogo>() {
+       return (TypeAdapter<T>) new TypeAdapter<PickScnlSchemaEwLogo>() {
            @Override
-           public void write(JsonWriter out, Quake2kSchemaInnerAllOf1EwLogo value) throws IOException {
+           public void write(JsonWriter out, PickScnlSchemaEwLogo value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public Quake2kSchemaInnerAllOf1EwLogo read(JsonReader in) throws IOException {
+           public PickScnlSchemaEwLogo read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -363,18 +363,18 @@ public class Quake2kSchemaInnerAllOf1EwLogo {
   }
 
  /**
-  * Create an instance of Quake2kSchemaInnerAllOf1EwLogo given an JSON string
+  * Create an instance of PickScnlSchemaEwLogo given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of Quake2kSchemaInnerAllOf1EwLogo
-  * @throws IOException if the JSON string is invalid with respect to Quake2kSchemaInnerAllOf1EwLogo
+  * @return An instance of PickScnlSchemaEwLogo
+  * @throws IOException if the JSON string is invalid with respect to PickScnlSchemaEwLogo
   */
-  public static Quake2kSchemaInnerAllOf1EwLogo fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, Quake2kSchemaInnerAllOf1EwLogo.class);
+  public static PickScnlSchemaEwLogo fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, PickScnlSchemaEwLogo.class);
   }
 
  /**
-  * Convert an instance of Quake2kSchemaInnerAllOf1EwLogo to an JSON string
+  * Convert an instance of PickScnlSchemaEwLogo to an JSON string
   *
   * @return JSON string
   */

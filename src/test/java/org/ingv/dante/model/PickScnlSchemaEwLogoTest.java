@@ -21,40 +21,70 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.PickScnlSchemaEwLogo;
-import org.ingv.dante.model.PickScnlSchemaEwMessage;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for PickScnlSchema
+ * Model tests for PickScnlSchemaEwLogo
  */
-public class PickScnlSchemaTest {
-    private final PickScnlSchema model = new PickScnlSchema();
+public class PickScnlSchemaEwLogoTest {
+    private final PickScnlSchemaEwLogo model = new PickScnlSchemaEwLogo();
 
     /**
-     * Model tests for PickScnlSchema
+     * Model tests for PickScnlSchemaEwLogo
      */
     @Test
-    public void testPickScnlSchema() {
-        // TODO: test PickScnlSchema
+    public void testPickScnlSchemaEwLogo() {
+        // TODO: test PickScnlSchemaEwLogo
     }
 
     /**
-     * Test the property 'ewMessage'
+     * Test the property 'type'
      */
     @Test
-    public void ewMessageTest() {
-        // TODO: test ewMessage
+    public void typeTest() {
+        // TODO: test type
     }
 
     /**
-     * Test the property 'ewLogo'
+     * Test the property 'module'
      */
     @Test
-    public void ewLogoTest() {
-        // TODO: test ewLogo
+    public void moduleTest() {
+        // TODO: test module
+    }
+
+    /**
+     * Test the property 'installation'
+     */
+    @Test
+    public void installationTest() {
+        // TODO: test installation
+    }
+
+    /**
+     * Test the property 'user'
+     */
+    @Test
+    public void userTest() {
+        // TODO: test user
+    }
+
+    /**
+     * Test the property 'hostname'
+     */
+    @Test
+    public void hostnameTest() {
+        // TODO: test hostname
+    }
+
+    /**
+     * Test the property 'instance'
+     */
+    @Test
+    public void instanceTest() {
+        // TODO: test instance
     }
 
 }
