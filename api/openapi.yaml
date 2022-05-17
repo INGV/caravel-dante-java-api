@@ -6011,13 +6011,13 @@ components:
       format: int64
       type: integer
     quake2kSchema:
+      items:
+        $ref: '#/components/schemas/quake2kSchema_inner'
+      type: array
+    hyp2000arcSchema:
       allOf:
-      - $ref: '#/components/schemas/quake2k__base'
-      - $ref: '#/components/schemas/quake2kSchema_allOf'
-    quake2k__base:
-      properties:
-        ewMessage:
-          $ref: '#/components/schemas/quake2k__base_ewMessage'
+      - $ref: '#/components/schemas/hyp2000arcSchema_allOf'
+      - $ref: '#/components/schemas/hyp2000arcSchema_allOf_1'
     type_origin__name:
       default: hypocenter
       description: "type_origin by QuakeML definition (es:hypocenter,centroid,macroseismic,..)\
@@ -6041,38 +6041,10 @@ components:
       example: 0.02
       format: double
       type: number
-    origin__rms:
-      description: Root mean square | double
-      format: double
-      type: number
     origin__nph:
       description: '# arrivals (P&S) weight >0.1 | int(11)'
       format: int64
       type: integer
-    ewLogo__installation:
-      description: Installation description | ???
-      example: INST_INGV
-      type: string
-    ewLogo__user:
-      description: User | ???
-      example: ew
-      type: string
-    ewLogo__hostname:
-      description: Hostname | ???
-      example: hew3.int.ingv.it
-      type: string
-    ewLogo__instance:
-      description: Instance description | ???
-      example: hew3_mole
-      type: string
-    hyp2000arcSchema:
-      allOf:
-      - $ref: '#/components/schemas/hyp2000arc__base'
-      - $ref: '#/components/schemas/hyp2000arcSchema_allOf'
-    hyp2000arc__base:
-      properties:
-        ewMessage:
-          $ref: '#/components/schemas/hyp2000arc__base_ewMessage'
     origin__nph_s:
       description: '# S arrivals weight >0.1 | int(11)'
       format: int64
@@ -6085,6 +6057,10 @@ components:
       description: '# P first motions | int(11)'
       format: int64
       type: integer
+    origin__rms:
+      description: Root mean square | double
+      format: double
+      type: number
     origin__e0_az:
       description: azimuth of largest principal error | double
       format: float
@@ -6142,14 +6118,26 @@ components:
       description: Channel location | char(2)
       example: "00"
       type: string
+    ewLogo__installation:
+      description: Installation description | ???
+      example: INST_INGV
+      type: string
+    ewLogo__user:
+      description: User | ???
+      example: ew
+      type: string
+    ewLogo__hostname:
+      description: Hostname | ???
+      example: hew3.int.ingv.it
+      type: string
+    ewLogo__instance:
+      description: Instance description | ???
+      example: hew3_mole
+      type: string
     magnitudeSchema:
       allOf:
-      - $ref: '#/components/schemas/magnitude__base'
       - $ref: '#/components/schemas/magnitudeSchema_allOf'
-    magnitude__base:
-      properties:
-        ewMessage:
-          $ref: '#/components/schemas/magnitude__base_ewMessage'
+      - $ref: '#/components/schemas/magnitudeSchema_allOf_1'
     magnitude__mag:
       description: Magnitude value | double
       example: 3.01
@@ -6228,12 +6216,8 @@ components:
       type: number
     pick_scnlSchema:
       allOf:
-      - $ref: '#/components/schemas/pick_scnl__base'
       - $ref: '#/components/schemas/pick_scnlSchema_allOf'
-    pick_scnl__base:
-      properties:
-        ewMessage:
-          $ref: '#/components/schemas/pick_scnl__base_ewMessage'
+      - $ref: '#/components/schemas/pick_scnlSchema_allOf_1'
     pick__firstmotion:
       description: First motion polarity associated with the pick | varchar(1)
       enum:
@@ -6256,12 +6240,8 @@ components:
       type: string
     strongmotioniiSchema:
       allOf:
-      - $ref: '#/components/schemas/strongmotionii__base'
       - $ref: '#/components/schemas/strongmotioniiSchema_allOf'
-    strongmotionii__base:
-      properties:
-        ewMessage:
-          $ref: '#/components/schemas/strongmotionii__base_ewMessage'
+      - $ref: '#/components/schemas/strongmotioniiSchema_allOf_1'
     strongmotion__t_dt:
       description: "time: trigger reported by SM box - datetime part | datetime(6)"
       example: 2017-04-12T08:46:56.19Z
@@ -9481,7 +9461,9 @@ components:
     addEwQuake2k_request:
       properties:
         data:
-          $ref: '#/components/schemas/quake2kSchema'
+          items:
+            $ref: '#/components/schemas/quake2kSchema_inner'
+          type: array
     addEwQuake2k_201_response_data:
       example:
         event:
@@ -9803,33 +9785,7 @@ components:
         active:
           example: "false"
           type: string
-    quake2kSchema_allOf:
-      properties:
-        ewLogo:
-          properties:
-            type:
-              description: Type description | ???
-              example: TYPE_QUAKE2K
-              type: string
-            module:
-              description: Module description | ???
-              example: MOD_BINDER_EW
-              type: string
-            installation:
-              $ref: '#/components/schemas/ewLogo__installation'
-            user:
-              $ref: '#/components/schemas/ewLogo__user'
-            hostname:
-              $ref: '#/components/schemas/ewLogo__hostname'
-            instance:
-              $ref: '#/components/schemas/ewLogo__instance'
-          required:
-          - installation
-          - instance
-          - module
-          - type
-      type: object
-    quake2k__base_ewMessage:
+    quake2kSchema_inner_allOf_ewMessage:
       properties:
         quakeId:
           description: Localspace Id | bigint(19)
@@ -9901,7 +9857,145 @@ components:
       - originTime
       - quakeId
       - version
+    quake2kSchema_inner_allOf:
+      properties:
+        ewMessage:
+          $ref: '#/components/schemas/quake2kSchema_inner_allOf_ewMessage'
+    quake2kSchema_inner_allOf_1_ewLogo:
+      properties:
+        type:
+          description: Type description | ???
+          example: TYPE_QUAKE2K
+          type: string
+        module:
+          description: Module description | ???
+          example: MOD_BINDER_EW
+          type: string
+        installation:
+          description: Installation description | ???
+          example: INST_INGV
+          type: string
+        user:
+          description: User | ???
+          example: ew
+          type: string
+        hostname:
+          description: Hostname | ???
+          example: hew3.int.ingv.it
+          type: string
+        instance:
+          description: Instance description | ???
+          example: hew3_mole
+          type: string
+      required:
+      - installation
+      - instance
+      - module
+      - type
+    quake2kSchema_inner_allOf_1:
+      properties:
+        ewLogo:
+          $ref: '#/components/schemas/quake2kSchema_inner_allOf_1_ewLogo'
+    quake2kSchema_inner:
+      allOf:
+      - $ref: '#/components/schemas/quake2kSchema_inner_allOf'
+      - $ref: '#/components/schemas/quake2kSchema_inner_allOf_1'
     hyp2000arcSchema_allOf:
+      properties:
+        ewMessage:
+          properties:
+            quakeId:
+              $ref: '#/components/schemas/id_localspace'
+            version:
+              $ref: '#/components/schemas/type_origin__name'
+            originTime:
+              $ref: '#/components/schemas/origin__ot'
+            latitude:
+              $ref: '#/components/schemas/latitude'
+            longitude:
+              $ref: '#/components/schemas/longitude'
+            depth:
+              $ref: '#/components/schemas/depth'
+            nph:
+              $ref: '#/components/schemas/origin__nph'
+            nphS:
+              $ref: '#/components/schemas/origin__nph_s'
+            nphtot:
+              $ref: '#/components/schemas/origin__nph_tot'
+            nPfm:
+              $ref: '#/components/schemas/origin__nph_fm'
+            gap:
+              $ref: '#/components/schemas/azimutal_gap'
+            dmin:
+              description: dmin description | ???
+              format: double
+              type: number
+            rms:
+              $ref: '#/components/schemas/origin__rms'
+            e0az:
+              $ref: '#/components/schemas/origin__e0_az'
+            e0dp:
+              $ref: '#/components/schemas/origin__e0_dip'
+            e0:
+              $ref: '#/components/schemas/origin__e0'
+            e1az:
+              $ref: '#/components/schemas/origin__e1_az'
+            e1dp:
+              $ref: '#/components/schemas/origin__e1_dip'
+            e1:
+              $ref: '#/components/schemas/origin__e1'
+            e2:
+              $ref: '#/components/schemas/origin__e2'
+            erh:
+              $ref: '#/components/schemas/origin__err_h'
+            erz:
+              $ref: '#/components/schemas/origin__err_z'
+            Md:
+              description: Md description | ???
+              format: double
+              type: number
+            reg:
+              description: ingvQuality description | ???
+              example: ' '
+              type: string
+            labelpref:
+              description: ingvQuality description | ???
+              example: ' '
+              type: string
+            Mpref:
+              description: Mpref description | ???
+              format: double
+              type: number
+            wtpref:
+              description: wtpref description | ???
+              format: double
+              type: number
+            mdtype:
+              description: ingvQuality description | ???
+              example: D
+              type: string
+            mdmad:
+              description: mdmad description | ???
+              format: double
+              type: number
+            mdwt:
+              description: mdwt description | ???
+              format: double
+              type: number
+            ingvQuality:
+              description: ingvQuality description | ???
+              example: DD
+              type: string
+            phases:
+              $ref: '#/components/schemas/hyp2000arc__phases'
+          required:
+          - depth
+          - latitude
+          - longitude
+          - originTime
+          - quakeId
+          - version
+    hyp2000arcSchema_allOf_1:
       properties:
         ewLogo:
           properties:
@@ -9926,163 +10020,6 @@ components:
           - instance
           - module
           - type
-      type: object
-    hyp2000arc__base_ewMessage:
-      properties:
-        quakeId:
-          description: Localspace Id | bigint(19)
-          example: 182491
-          format: int64
-          type: integer
-        version:
-          $ref: '#/components/schemas/type_origin__name'
-        originTime:
-          description: Origin time | datetime(3)
-          example: 2016-06-22T16:52:06.26Z
-          format: date-time
-          type: string
-        latitude:
-          description: |-
-            Latitude of a point expressed in:
-
-            * the ETRS89 system for Italian and European territories
-            * and in WGS84 for the others.
-          example: 45.492599
-          externalDocs:
-            url: http://dati.gov.it/onto/clvapit#long
-          format: double
-          maximum: 90
-          minimum: -90
-          type: number
-        longitude:
-          description: |-
-            Longitude of a point expressed in:
-
-            * the ETRS89 system for Italian and European territories
-            * and in WGS84 for the others.
-          example: 9.19289
-          externalDocs:
-            url: http://dati.gov.it/onto/clvapit#long
-          format: double
-          maximum: 180
-          minimum: -180
-          type: number
-        depth:
-          description: Depth in Km | double
-          example: 0.02
-          format: double
-          type: number
-        nph:
-          description: '# arrivals (P&S) weight >0.1 | int(11)'
-          format: int64
-          type: integer
-        nphS:
-          description: '# S arrivals weight >0.1 | int(11)'
-          format: int64
-          type: integer
-        nphtot:
-          description: '# arrivals (P&S) weight >0.0 | int(11)'
-          format: int64
-          type: integer
-        nPfm:
-          description: '# P first motions | int(11)'
-          format: int64
-          type: integer
-        gap:
-          description: Azimutal gap | float4
-          format: float
-          type: number
-        dmin:
-          description: dmin description | ???
-          format: double
-          type: number
-        rms:
-          description: Root mean square | double
-          format: double
-          type: number
-        e0az:
-          description: azimuth of largest principal error | double
-          format: float
-          type: number
-        e0dp:
-          description: dip of largest principal error | double
-          format: double
-          type: number
-        e0:
-          description: largest principal error | double
-          format: double
-          type: number
-        e1az:
-          description: azimuth of intermediate principal error | double
-          format: float
-          type: number
-        e1dp:
-          description: dip of intermediate principal error | double
-          format: double
-          type: number
-        e1:
-          description: intermed principal error | double
-          format: double
-          type: number
-        e2:
-          description: smallest principal error | double
-          format: double
-          type: number
-        erh:
-          description: Depth error | double
-          format: double
-          type: number
-        erz:
-          description: Depth error | double
-          format: double
-          type: number
-        Md:
-          description: Md description | ???
-          format: double
-          type: number
-        reg:
-          description: ingvQuality description | ???
-          example: ' '
-          type: string
-        labelpref:
-          description: ingvQuality description | ???
-          example: ' '
-          type: string
-        Mpref:
-          description: Mpref description | ???
-          format: double
-          type: number
-        wtpref:
-          description: wtpref description | ???
-          format: double
-          type: number
-        mdtype:
-          description: ingvQuality description | ???
-          example: D
-          type: string
-        mdmad:
-          description: mdmad description | ???
-          format: double
-          type: number
-        mdwt:
-          description: mdwt description | ???
-          format: double
-          type: number
-        ingvQuality:
-          description: ingvQuality description | ???
-          example: DD
-          type: string
-        phases:
-          items:
-            $ref: '#/components/schemas/hyp2000arc__phases_inner'
-          type: array
-      required:
-      - depth
-      - latitude
-      - longitude
-      - originTime
-      - quakeId
-      - version
     hyp2000arc__phases_inner:
       properties:
         net:
@@ -10279,6 +10216,58 @@ components:
       - sta
     magnitudeSchema_allOf:
       properties:
+        ewMessage:
+          properties:
+            quakeId:
+              $ref: '#/components/schemas/id_localspace'
+            version:
+              $ref: '#/components/schemas/type_origin__name'
+            mag:
+              $ref: '#/components/schemas/magnitude__mag'
+            error:
+              description: Magnitude error | double
+              example: 0.52
+              format: double
+              type: number
+            quality:
+              $ref: '#/components/schemas/magnitude__quality'
+            minDist:
+              $ref: '#/components/schemas/magnitude__min_dist'
+            azimuth:
+              $ref: '#/components/schemas/azimutal_gap'
+            nStations:
+              $ref: '#/components/schemas/magnitude__nsta'
+            nChannels:
+              $ref: '#/components/schemas/magnitude__ncha'
+            qAuthor:
+              $ref: '#/components/schemas/qAuthor'
+            qddsVersion:
+              description: qddsVersion description
+              example: 0
+              format: double
+              type: number
+            iMagType:
+              description: iMagType description
+              example: 1
+              format: double
+              type: number
+            magType:
+              $ref: '#/components/schemas/type_magnitude__name'
+            algorithm:
+              description: algorithm description
+              example: MED
+              format: double
+              type: string
+            ingvQuality:
+              $ref: '#/components/schemas/magnitude__mag_quality'
+            phases:
+              $ref: '#/components/schemas/magnitude__phases'
+          required:
+          - mag
+          - quakeId
+          - version
+    magnitudeSchema_allOf_1:
+      properties:
         ewLogo:
           properties:
             type:
@@ -10302,82 +10291,6 @@ components:
           - instance
           - module
           - type
-      type: object
-    magnitude__base_ewMessage:
-      properties:
-        quakeId:
-          description: Localspace Id | bigint(19)
-          example: 182491
-          format: int64
-          type: integer
-        version:
-          $ref: '#/components/schemas/type_origin__name'
-        mag:
-          description: Magnitude value | double
-          example: 3.01
-          format: double
-          type: number
-        error:
-          description: Magnitude error | double
-          example: 0.52
-          format: double
-          type: number
-        quality:
-          description: quality | double
-          format: double
-          type: number
-        minDist:
-          description: Minimal distance from station to origin | double
-          format: double
-          type: number
-        azimuth:
-          description: Azimutal gap | float4
-          format: float
-          type: number
-        nStations:
-          description: Number of the stations on magnitudo calculation | int(11)
-          format: int64
-          type: integer
-        nChannels:
-          description: Number of the channel on magnitudo calculation | int(11)
-          format: int64
-          type: integer
-        qAuthor:
-          description: qAuthor description
-          example: 014101073:028130073
-          type: string
-        qddsVersion:
-          description: qddsVersion description
-          example: 0
-          format: double
-          type: number
-        iMagType:
-          description: iMagType description
-          example: 1
-          format: double
-          type: number
-        magType:
-          description: Type of the magnitude | varchar(255)
-          example: ML-VAX
-          type: string
-        algorithm:
-          description: algorithm description
-          example: MED
-          format: double
-          type: string
-        ingvQuality:
-          description: INGV quality code of the magnitude (computed by ew2moledb)
-            | char(2)
-          example: BB
-          type: string
-        phases:
-          items:
-            $ref: '#/components/schemas/magnitude__phases_inner'
-          type: array
-      required:
-      - mag
-      - quakeId
-      - version
     magnitude__phases_inner:
       properties:
         net:
@@ -10451,6 +10364,38 @@ components:
       - time2
     pick_scnlSchema_allOf:
       properties:
+        ewMessage:
+          properties:
+            pickId:
+              $ref: '#/components/schemas/id_localspace'
+            network:
+              $ref: '#/components/schemas/net'
+            station:
+              $ref: '#/components/schemas/sta'
+            component:
+              $ref: '#/components/schemas/cha'
+            location:
+              $ref: '#/components/schemas/loc'
+            firstMotion:
+              $ref: '#/components/schemas/pick__firstmotion'
+            pickWeight:
+              $ref: '#/components/schemas/pick__lower_uncertainty'
+            timeOfPick:
+              $ref: '#/components/schemas/pick__arrival_time'
+            pAmplitude:
+              example:
+              - 109
+              - 101
+              - 122
+              items:
+                description: peak P-wave half amplitude | ???
+                format: double
+                type: number
+              type: array
+          required:
+          - pickId
+    pick_scnlSchema_allOf_1:
+      properties:
         ewLogo:
           properties:
             type:
@@ -10474,57 +10419,60 @@ components:
           - instance
           - module
           - type
-      type: object
-    pick_scnl__base_ewMessage:
-      properties:
-        pickId:
-          description: Localspace Id | bigint(19)
-          example: 182491
-          format: int64
-          type: integer
-        network:
-          description: Channel net code | char(2)
-          example: IV
-          type: string
-        station:
-          description: Channel station code | varchar(5)
-          example: ACER
-          type: string
-        component:
-          description: Channel code | char(3)
-          example: HHZ
-          type: string
-        location:
-          default: --
-          description: Channel location | char(2)
-          example: "00"
-          type: string
-        firstMotion:
-          $ref: '#/components/schemas/pick__firstmotion'
-        pickWeight:
-          description: "Uncertainty as the absolute value of deviation from the mainvalue\
-            \ towards smaller values. | decimal(8,3)"
-          example: 0.52
-          format: float
-          type: number
-        timeOfPick:
-          description: Arrival time with microseconds | datetime(3)
-          example: 2017-04-12T08:46:30.93Z
-          format: date-time
-          type: string
-        pAmplitude:
-          example:
-          - 109
-          - 101
-          - 122
-          items:
-            description: peak P-wave half amplitude | ???
-            format: double
-            type: number
-          type: array
-      required:
-      - pickId
     strongmotioniiSchema_allOf:
+      properties:
+        ewMessage:
+          properties:
+            quakeId:
+              $ref: '#/components/schemas/id_localspace'
+            version:
+              $ref: '#/components/schemas/type_origin__name'
+            network:
+              $ref: '#/components/schemas/net'
+            station:
+              $ref: '#/components/schemas/sta'
+            component:
+              $ref: '#/components/schemas/cha'
+            location:
+              $ref: '#/components/schemas/loc'
+            qAuthor:
+              $ref: '#/components/schemas/qAuthor'
+            time:
+              $ref: '#/components/schemas/strongmotion__t_dt'
+            alternateTime:
+              $ref: '#/components/schemas/strongmotion_alt__t_alt_dt'
+            alternateCode:
+              $ref: '#/components/schemas/strongmotion_alt__altcode'
+            pga:
+              $ref: '#/components/schemas/strongmotion__pga'
+            pgaTime:
+              $ref: '#/components/schemas/strongmotion__tpga_dt'
+            pgv:
+              $ref: '#/components/schemas/strongmotion__pgv'
+            pgvTime:
+              $ref: '#/components/schemas/strongmotion__tpgv_dt'
+            pgd:
+              $ref: '#/components/schemas/strongmotion__pgd'
+            pgdTime:
+              $ref: '#/components/schemas/strongmotion__tpgd_dt'
+            RSA:
+              items:
+                properties:
+                  value:
+                    description: RSA(response spectrum accel) value for period
+                    example: 0.000724
+                    format: double
+                    type: number
+                  period:
+                    description: Period
+                    example: 0.3
+                    format: double
+                    type: number
+              type: array
+          required:
+          - quakeId
+          - version
+    strongmotioniiSchema_allOf_1:
       properties:
         ewLogo:
           properties:
@@ -10549,101 +10497,6 @@ components:
           - instance
           - module
           - type
-      type: object
-    strongmotionii__base_ewMessage_RSA_inner:
-      properties:
-        value:
-          description: RSA(response spectrum accel) value for period
-          example: 0.000724
-          format: double
-          type: number
-        period:
-          description: Period
-          example: 0.3
-          format: double
-          type: number
-    strongmotionii__base_ewMessage:
-      properties:
-        quakeId:
-          description: Localspace Id | bigint(19)
-          example: 182491
-          format: int64
-          type: integer
-        version:
-          $ref: '#/components/schemas/type_origin__name'
-        network:
-          description: Channel net code | char(2)
-          example: IV
-          type: string
-        station:
-          description: Channel station code | varchar(5)
-          example: ACER
-          type: string
-        component:
-          description: Channel code | char(3)
-          example: HHZ
-          type: string
-        location:
-          default: --
-          description: Channel location | char(2)
-          example: "00"
-          type: string
-        qAuthor:
-          description: qAuthor description
-          example: 014101073:028130073
-          type: string
-        time:
-          description: "time: trigger reported by SM box - datetime part | datetime(6)"
-          example: 2017-04-12T08:46:56.19Z
-          format: date-time
-          type: string
-        alternateTime:
-          description: "alternate time: trigger reported by SM box - time with microseconds\
-            \ | datetime(3)"
-          format: date-time
-          type: string
-        alternateCode:
-          description: code specifying the source of the alternate time field | int(11)
-          example: 0
-          format: int64
-          type: integer
-        pga:
-          description: "REQUIRED: peak ground acceleration (cm/s/s) | double"
-          example: 0.000162
-          format: float
-          type: number
-        pgaTime:
-          description: "OPTIONAL: time of pga - datetime part | datetime(3)"
-          example: 2017-04-12T08:47:06.99Z
-          format: date-time
-          type: string
-        pgv:
-          description: "REQUIRED: peak ground velocity (cm/s) | double"
-          example: 0.000034
-          format: float
-          type: number
-        pgvTime:
-          description: "OPTIONAL: time of pgv - datetime part | datetime(3)"
-          example: 2017-04-12T08:46:56.19Z
-          format: date-time
-          type: string
-        pgd:
-          description: "REQUIRED: peak ground displacement (cm) | double"
-          example: 0.000025
-          format: float
-          type: number
-        pgdTime:
-          description: "OPTIONAL: time of pgd - datetime part | datetime(3)"
-          example: 2017-04-12T08:46:59.989Z
-          format: date-time
-          type: string
-        RSA:
-          items:
-            $ref: '#/components/schemas/strongmotionii__base_ewMessage_RSA_inner'
-          type: array
-      required:
-      - quakeId
-      - version
   securitySchemes:
     BearerAuth:
       scheme: bearer

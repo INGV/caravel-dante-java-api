@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**ewMessage** | [**Hyp2000arcBaseEwMessage**](Hyp2000arcBaseEwMessage.md) |  |  [optional] |
+|**ewMessage** | [**Object**](Object.md) |  |  [optional] |
 |**ewLogo** | [**Object**](Object.md) |  |  [optional] |
 
 

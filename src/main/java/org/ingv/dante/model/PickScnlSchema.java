@@ -23,9 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.PickScnlBase;
-import org.ingv.dante.model.PickScnlBaseEwMessage;
 import org.ingv.dante.model.PickScnlSchemaAllOf;
+import org.ingv.dante.model.PickScnlSchemaAllOf1;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -51,11 +50,11 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-16T10:17:17.225510Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T07:30:34.030734Z[Etc/UTC]")
 public class PickScnlSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
-  private PickScnlBaseEwMessage ewMessage;
+  private Object ewMessage;
 
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
@@ -64,7 +63,7 @@ public class PickScnlSchema {
   public PickScnlSchema() { 
   }
 
-  public PickScnlSchema ewMessage(PickScnlBaseEwMessage ewMessage) {
+  public PickScnlSchema ewMessage(Object ewMessage) {
     
     this.ewMessage = ewMessage;
     return this;
@@ -77,12 +76,12 @@ public class PickScnlSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public PickScnlBaseEwMessage getEwMessage() {
+  public Object getEwMessage() {
     return ewMessage;
   }
 
 
-  public void setEwMessage(PickScnlBaseEwMessage ewMessage) {
+  public void setEwMessage(Object ewMessage) {
     this.ewMessage = ewMessage;
   }
 
@@ -199,7 +198,7 @@ public class PickScnlSchema {
       }
       // validate the optional field `ewMessage`
       if (jsonObj.getAsJsonObject("ewMessage") != null) {
-        PickScnlBaseEwMessage.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
+        Object.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
       }
       // validate the optional field `ewLogo`
       if (jsonObj.getAsJsonObject("ewLogo") != null) {

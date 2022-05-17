@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**ewMessage** | [**PickScnlBaseEwMessage**](PickScnlBaseEwMessage.md) |  |  [optional] |
+|**ewMessage** | [**Object**](Object.md) |  |  [optional] |
 |**ewLogo** | [**Object**](Object.md) |  |  [optional] |
 
 

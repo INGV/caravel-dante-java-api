@@ -23,9 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.MagnitudeBase;
-import org.ingv.dante.model.MagnitudeBaseEwMessage;
 import org.ingv.dante.model.MagnitudeSchemaAllOf;
+import org.ingv.dante.model.MagnitudeSchemaAllOf1;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -51,11 +50,11 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-16T10:17:17.225510Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T07:30:34.030734Z[Etc/UTC]")
 public class MagnitudeSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
-  private MagnitudeBaseEwMessage ewMessage;
+  private Object ewMessage;
 
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
@@ -64,7 +63,7 @@ public class MagnitudeSchema {
   public MagnitudeSchema() { 
   }
 
-  public MagnitudeSchema ewMessage(MagnitudeBaseEwMessage ewMessage) {
+  public MagnitudeSchema ewMessage(Object ewMessage) {
     
     this.ewMessage = ewMessage;
     return this;
@@ -77,12 +76,12 @@ public class MagnitudeSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public MagnitudeBaseEwMessage getEwMessage() {
+  public Object getEwMessage() {
     return ewMessage;
   }
 
 
-  public void setEwMessage(MagnitudeBaseEwMessage ewMessage) {
+  public void setEwMessage(Object ewMessage) {
     this.ewMessage = ewMessage;
   }
 
@@ -199,7 +198,7 @@ public class MagnitudeSchema {
       }
       // validate the optional field `ewMessage`
       if (jsonObj.getAsJsonObject("ewMessage") != null) {
-        MagnitudeBaseEwMessage.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
+        Object.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
       }
       // validate the optional field `ewLogo`
       if (jsonObj.getAsJsonObject("ewLogo") != null) {

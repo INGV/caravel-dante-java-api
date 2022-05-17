@@ -48,35 +48,35 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchemaAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-16T10:17:17.225510Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T07:30:34.030734Z[Etc/UTC]")
 public class MagnitudeSchemaAllOf {
-  public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
-  @SerializedName(SERIALIZED_NAME_EW_LOGO)
-  private Object ewLogo;
+  public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
+  @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
+  private Object ewMessage;
 
   public MagnitudeSchemaAllOf() { 
   }
 
-  public MagnitudeSchemaAllOf ewLogo(Object ewLogo) {
+  public MagnitudeSchemaAllOf ewMessage(Object ewMessage) {
     
-    this.ewLogo = ewLogo;
+    this.ewMessage = ewMessage;
     return this;
   }
 
    /**
-   * Get ewLogo
-   * @return ewLogo
+   * Get ewMessage
+   * @return ewMessage
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getEwLogo() {
-    return ewLogo;
+  public Object getEwMessage() {
+    return ewMessage;
   }
 
 
-  public void setEwLogo(Object ewLogo) {
-    this.ewLogo = ewLogo;
+  public void setEwMessage(Object ewMessage) {
+    this.ewMessage = ewMessage;
   }
 
 
@@ -90,7 +90,7 @@ public class MagnitudeSchemaAllOf {
       return false;
     }
     MagnitudeSchemaAllOf magnitudeSchemaAllOf = (MagnitudeSchemaAllOf) o;
-    return Objects.equals(this.ewLogo, magnitudeSchemaAllOf.ewLogo);
+    return Objects.equals(this.ewMessage, magnitudeSchemaAllOf.ewMessage);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -99,7 +99,7 @@ public class MagnitudeSchemaAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(ewLogo);
+    return Objects.hash(ewMessage);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -113,7 +113,7 @@ public class MagnitudeSchemaAllOf {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class MagnitudeSchemaAllOf {\n");
-    sb.append("    ewLogo: ").append(toIndentedString(ewLogo)).append("\n");
+    sb.append("    ewMessage: ").append(toIndentedString(ewMessage)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -136,7 +136,7 @@ public class MagnitudeSchemaAllOf {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("ewLogo");
+    openapiFields.add("ewMessage");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -164,9 +164,9 @@ public class MagnitudeSchemaAllOf {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MagnitudeSchemaAllOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      // validate the optional field `ewLogo`
-      if (jsonObj.getAsJsonObject("ewLogo") != null) {
-        Object.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
+      // validate the optional field `ewMessage`
+      if (jsonObj.getAsJsonObject("ewMessage") != null) {
+        Object.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
       }
   }
 
