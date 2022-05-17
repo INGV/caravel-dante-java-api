@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchemaAllOf1
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T09:46:39.699359Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T09:57:55.454258Z[Etc/UTC]")
 public class MagnitudeSchemaAllOf1 {
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
