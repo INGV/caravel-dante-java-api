@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.44.0
-  - Build date: 2022-05-16T10:17:38.852243Z[Etc/UTC]
+  - Build date: 2022-05-17T07:31:03.861483Z[Etc/UTC]
 
   
 
@@ -218,17 +218,15 @@ Class | Method | HTTP request | Description
  - [GetToken201Response](docs/GetToken201Response.md)
  - [GetToken201ResponseUser](docs/GetToken201ResponseUser.md)
  - [GetTokenRequest](docs/GetTokenRequest.md)
- - [Hyp2000arcBase](docs/Hyp2000arcBase.md)
- - [Hyp2000arcBaseEwMessage](docs/Hyp2000arcBaseEwMessage.md)
  - [Hyp2000arcPhasesInner](docs/Hyp2000arcPhasesInner.md)
  - [Hyp2000arcSchema](docs/Hyp2000arcSchema.md)
  - [Hyp2000arcSchemaAllOf](docs/Hyp2000arcSchemaAllOf.md)
+ - [Hyp2000arcSchemaAllOf1](docs/Hyp2000arcSchemaAllOf1.md)
  - [LinksDefinition](docs/LinksDefinition.md)
- - [MagnitudeBase](docs/MagnitudeBase.md)
- - [MagnitudeBaseEwMessage](docs/MagnitudeBaseEwMessage.md)
  - [MagnitudePhasesInner](docs/MagnitudePhasesInner.md)
  - [MagnitudeSchema](docs/MagnitudeSchema.md)
  - [MagnitudeSchemaAllOf](docs/MagnitudeSchemaAllOf.md)
+ - [MagnitudeSchemaAllOf1](docs/MagnitudeSchemaAllOf1.md)
  - [MetaDefinition](docs/MetaDefinition.md)
  - [MetaDefinitionLinksInner](docs/MetaDefinitionLinksInner.md)
  - [ObjectArrival](docs/ObjectArrival.md)
@@ -263,20 +261,18 @@ Class | Method | HTTP request | Description
  - [ObjectTypeOrigin](docs/ObjectTypeOrigin.md)
  - [PickEmersio](docs/PickEmersio.md)
  - [PickFirstmotion](docs/PickFirstmotion.md)
- - [PickScnlBase](docs/PickScnlBase.md)
- - [PickScnlBaseEwMessage](docs/PickScnlBaseEwMessage.md)
  - [PickScnlSchema](docs/PickScnlSchema.md)
  - [PickScnlSchemaAllOf](docs/PickScnlSchemaAllOf.md)
+ - [PickScnlSchemaAllOf1](docs/PickScnlSchemaAllOf1.md)
  - [Problem](docs/Problem.md)
- - [Quake2kBase](docs/Quake2kBase.md)
- - [Quake2kBaseEwMessage](docs/Quake2kBaseEwMessage.md)
- - [Quake2kSchema](docs/Quake2kSchema.md)
- - [Quake2kSchemaAllOf](docs/Quake2kSchemaAllOf.md)
- - [StrongmotioniiBase](docs/StrongmotioniiBase.md)
- - [StrongmotioniiBaseEwMessage](docs/StrongmotioniiBaseEwMessage.md)
- - [StrongmotioniiBaseEwMessageRSAInner](docs/StrongmotioniiBaseEwMessageRSAInner.md)
+ - [Quake2kSchemaInner](docs/Quake2kSchemaInner.md)
+ - [Quake2kSchemaInnerAllOf](docs/Quake2kSchemaInnerAllOf.md)
+ - [Quake2kSchemaInnerAllOf1](docs/Quake2kSchemaInnerAllOf1.md)
+ - [Quake2kSchemaInnerAllOf1EwLogo](docs/Quake2kSchemaInnerAllOf1EwLogo.md)
+ - [Quake2kSchemaInnerAllOfEwMessage](docs/Quake2kSchemaInnerAllOfEwMessage.md)
  - [StrongmotioniiSchema](docs/StrongmotioniiSchema.md)
  - [StrongmotioniiSchemaAllOf](docs/StrongmotioniiSchemaAllOf.md)
+ - [StrongmotioniiSchemaAllOf1](docs/StrongmotioniiSchemaAllOf1.md)
  - [TypeOriginName](docs/TypeOriginName.md)
  - [UpdateEventRequest](docs/UpdateEventRequest.md)
  - [UpdateEventRequestData](docs/UpdateEventRequestData.md)

@@ -23,9 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.StrongmotioniiBase;
-import org.ingv.dante.model.StrongmotioniiBaseEwMessage;
 import org.ingv.dante.model.StrongmotioniiSchemaAllOf;
+import org.ingv.dante.model.StrongmotioniiSchemaAllOf1;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -51,11 +50,11 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-16T10:17:38.852243Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T07:31:03.861483Z[Etc/UTC]")
 public class StrongmotioniiSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
-  private StrongmotioniiBaseEwMessage ewMessage;
+  private Object ewMessage;
 
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
@@ -64,7 +63,7 @@ public class StrongmotioniiSchema {
   public StrongmotioniiSchema() { 
   }
 
-  public StrongmotioniiSchema ewMessage(StrongmotioniiBaseEwMessage ewMessage) {
+  public StrongmotioniiSchema ewMessage(Object ewMessage) {
     
     this.ewMessage = ewMessage;
     return this;
@@ -77,12 +76,12 @@ public class StrongmotioniiSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public StrongmotioniiBaseEwMessage getEwMessage() {
+  public Object getEwMessage() {
     return ewMessage;
   }
 
 
-  public void setEwMessage(StrongmotioniiBaseEwMessage ewMessage) {
+  public void setEwMessage(Object ewMessage) {
     this.ewMessage = ewMessage;
   }
 
@@ -199,7 +198,7 @@ public class StrongmotioniiSchema {
       }
       // validate the optional field `ewMessage`
       if (jsonObj.getAsJsonObject("ewMessage") != null) {
-        StrongmotioniiBaseEwMessage.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
+        Object.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
       }
       // validate the optional field `ewLogo`
       if (jsonObj.getAsJsonObject("ewLogo") != null) {

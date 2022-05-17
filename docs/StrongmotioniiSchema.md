@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**ewMessage** | [**StrongmotioniiBaseEwMessage**](StrongmotioniiBaseEwMessage.md) |  |  [optional] |
+|**ewMessage** | [**Object**](Object.md) |  |  [optional] |
 |**ewLogo** | [**Object**](Object.md) |  |  [optional] |
 
 

@@ -41,11 +41,11 @@ public class Hyp2000arcSchemaAllOfTest {
     }
 
     /**
-     * Test the property 'ewLogo'
+     * Test the property 'ewMessage'
      */
     @Test
-    public void ewLogoTest() {
-        // TODO: test ewLogo
+    public void ewMessageTest() {
+        // TODO: test ewMessage
     }
 
 }

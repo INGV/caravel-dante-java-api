@@ -23,7 +23,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.Quake2kSchema;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.Quake2kSchemaInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,18 +50,26 @@ import org.ingv.dante.JSON;
 /**
  * AddEwQuake2kRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-16T10:17:38.852243Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T07:31:03.861483Z[Etc/UTC]")
 public class AddEwQuake2kRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private Quake2kSchema data;
+  private List<Quake2kSchemaInner> data = null;
 
   public AddEwQuake2kRequest() { 
   }
 
-  public AddEwQuake2kRequest data(Quake2kSchema data) {
+  public AddEwQuake2kRequest data(List<Quake2kSchemaInner> data) {
     
     this.data = data;
+    return this;
+  }
+
+  public AddEwQuake2kRequest addDataItem(Quake2kSchemaInner dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<>();
+    }
+    this.data.add(dataItem);
     return this;
   }
 
@@ -70,12 +80,12 @@ public class AddEwQuake2kRequest {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Quake2kSchema getData() {
+  public List<Quake2kSchemaInner> getData() {
     return data;
   }
 
 
-  public void setData(Quake2kSchema data) {
+  public void setData(List<Quake2kSchemaInner> data) {
     this.data = data;
   }
 
@@ -153,9 +163,17 @@ public class AddEwQuake2kRequest {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AddEwQuake2kRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      // validate the optional field `data`
-      if (jsonObj.getAsJsonObject("data") != null) {
-        Quake2kSchema.validateJsonObject(jsonObj.getAsJsonObject("data"));
+      JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+      if (jsonArraydata != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("data").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
+        }
+
+        // validate the optional field `data` (array)
+        for (int i = 0; i < jsonArraydata.size(); i++) {
+          Quake2kSchemaInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+        };
       }
   }
 

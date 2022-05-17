@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**data** | [**Quake2kSchema**](Quake2kSchema.md) |  |  [optional] |
+|**data** | [**List&lt;Quake2kSchemaInner&gt;**](Quake2kSchemaInner.md) |  |  [optional] |
 
 
 

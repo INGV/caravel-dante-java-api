@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**ewLogo** | [**Object**](Object.md) |  |  [optional] |
+|**ewMessage** | [**Object**](Object.md) |  |  [optional] |
 
 
 

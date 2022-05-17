@@ -48,35 +48,35 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-16T10:17:38.852243Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T07:31:03.861483Z[Etc/UTC]")
 public class StrongmotioniiSchemaAllOf {
-  public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
-  @SerializedName(SERIALIZED_NAME_EW_LOGO)
-  private Object ewLogo;
+  public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
+  @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
+  private Object ewMessage;
 
   public StrongmotioniiSchemaAllOf() { 
   }
 
-  public StrongmotioniiSchemaAllOf ewLogo(Object ewLogo) {
+  public StrongmotioniiSchemaAllOf ewMessage(Object ewMessage) {
     
-    this.ewLogo = ewLogo;
+    this.ewMessage = ewMessage;
     return this;
   }
 
    /**
-   * Get ewLogo
-   * @return ewLogo
+   * Get ewMessage
+   * @return ewMessage
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getEwLogo() {
-    return ewLogo;
+  public Object getEwMessage() {
+    return ewMessage;
   }
 
 
-  public void setEwLogo(Object ewLogo) {
-    this.ewLogo = ewLogo;
+  public void setEwMessage(Object ewMessage) {
+    this.ewMessage = ewMessage;
   }
 
 
@@ -90,7 +90,7 @@ public class StrongmotioniiSchemaAllOf {
       return false;
     }
     StrongmotioniiSchemaAllOf strongmotioniiSchemaAllOf = (StrongmotioniiSchemaAllOf) o;
-    return Objects.equals(this.ewLogo, strongmotioniiSchemaAllOf.ewLogo);
+    return Objects.equals(this.ewMessage, strongmotioniiSchemaAllOf.ewMessage);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -99,7 +99,7 @@ public class StrongmotioniiSchemaAllOf {
 
   @Override
   public int hashCode() {
-    return Objects.hash(ewLogo);
+    return Objects.hash(ewMessage);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -113,7 +113,7 @@ public class StrongmotioniiSchemaAllOf {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class StrongmotioniiSchemaAllOf {\n");
-    sb.append("    ewLogo: ").append(toIndentedString(ewLogo)).append("\n");
+    sb.append("    ewMessage: ").append(toIndentedString(ewMessage)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -136,7 +136,7 @@ public class StrongmotioniiSchemaAllOf {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("ewLogo");
+    openapiFields.add("ewMessage");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -164,9 +164,9 @@ public class StrongmotioniiSchemaAllOf {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `StrongmotioniiSchemaAllOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      // validate the optional field `ewLogo`
-      if (jsonObj.getAsJsonObject("ewLogo") != null) {
-        Object.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
+      // validate the optional field `ewMessage`
+      if (jsonObj.getAsJsonObject("ewMessage") != null) {
+        Object.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
       }
   }
 
