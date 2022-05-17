@@ -21,9 +21,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.Hyp2000arcSchemaAllOf;
-import org.ingv.dante.model.Hyp2000arcSchemaAllOf1;
-import org.openapitools.jackson.nullable.JsonNullable;
+import org.ingv.dante.model.Hyp2000arcSchemaEwLogo;
+import org.ingv.dante.model.Hyp2000arcSchemaEwMessage;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
