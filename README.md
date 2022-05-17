@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.45.0-dev
-  - Build date: 2022-05-17T07:30:34.030734Z[Etc/UTC]
+  - Build date: 2022-05-17T09:46:39.699359Z[Etc/UTC]
 
   
 
@@ -262,8 +262,8 @@ Class | Method | HTTP request | Description
  - [PickEmersio](docs/PickEmersio.md)
  - [PickFirstmotion](docs/PickFirstmotion.md)
  - [PickScnlSchema](docs/PickScnlSchema.md)
- - [PickScnlSchemaAllOf](docs/PickScnlSchemaAllOf.md)
- - [PickScnlSchemaAllOf1](docs/PickScnlSchemaAllOf1.md)
+ - [PickScnlSchemaEwLogo](docs/PickScnlSchemaEwLogo.md)
+ - [PickScnlSchemaEwMessage](docs/PickScnlSchemaEwMessage.md)
  - [Problem](docs/Problem.md)
  - [Quake2kSchemaInner](docs/Quake2kSchemaInner.md)
  - [Quake2kSchemaInnerAllOf](docs/Quake2kSchemaInnerAllOf.md)

@@ -6215,9 +6215,11 @@ components:
       format: double
       type: number
     pick_scnlSchema:
-      allOf:
-      - $ref: '#/components/schemas/pick_scnlSchema_allOf'
-      - $ref: '#/components/schemas/pick_scnlSchema_allOf_1'
+      properties:
+        ewMessage:
+          $ref: '#/components/schemas/pick_scnlSchema_ewMessage'
+        ewLogo:
+          $ref: '#/components/schemas/pick_scnlSchema_ewLogo'
     pick__firstmotion:
       description: First motion polarity associated with the pick | varchar(1)
       enum:
@@ -10362,63 +10364,86 @@ components:
       - sta
       - time1
       - time2
-    pick_scnlSchema_allOf:
+    pick_scnlSchema_ewMessage:
       properties:
-        ewMessage:
-          properties:
-            pickId:
-              $ref: '#/components/schemas/id_localspace'
-            network:
-              $ref: '#/components/schemas/net'
-            station:
-              $ref: '#/components/schemas/sta'
-            component:
-              $ref: '#/components/schemas/cha'
-            location:
-              $ref: '#/components/schemas/loc'
-            firstMotion:
-              $ref: '#/components/schemas/pick__firstmotion'
-            pickWeight:
-              $ref: '#/components/schemas/pick__lower_uncertainty'
-            timeOfPick:
-              $ref: '#/components/schemas/pick__arrival_time'
-            pAmplitude:
-              example:
-              - 109
-              - 101
-              - 122
-              items:
-                description: peak P-wave half amplitude | ???
-                format: double
-                type: number
-              type: array
-          required:
-          - pickId
-    pick_scnlSchema_allOf_1:
+        pickId:
+          description: Localspace Id | bigint(19)
+          example: 182491
+          format: int64
+          type: integer
+        network:
+          description: Channel net code | char(2)
+          example: IV
+          type: string
+        station:
+          description: Channel station code | varchar(5)
+          example: ACER
+          type: string
+        component:
+          description: Channel code | char(3)
+          example: HHZ
+          type: string
+        location:
+          default: --
+          description: Channel location | char(2)
+          example: "00"
+          type: string
+        firstMotion:
+          $ref: '#/components/schemas/pick__firstmotion'
+        pickWeight:
+          description: "Uncertainty as the absolute value of deviation from the mainvalue\
+            \ towards smaller values. | decimal(8,3)"
+          example: 0.52
+          format: float
+          type: number
+        timeOfPick:
+          description: Arrival time with microseconds | datetime(3)
+          example: 2017-04-12T08:46:30.93Z
+          format: date-time
+          type: string
+        pAmplitude:
+          example:
+          - 109
+          - 101
+          - 122
+          items:
+            description: peak P-wave half amplitude | ???
+            format: double
+            type: number
+          type: array
+      required:
+      - pickId
+    pick_scnlSchema_ewLogo:
       properties:
-        ewLogo:
-          properties:
-            type:
-              description: Type description | ???
-              example: TYPE_PICK_SCNL
-              type: string
-            module:
-              description: Module description | ???
-              example: MOD_PICK_EW
-              type: string
-            installation:
-              $ref: '#/components/schemas/ewLogo__installation'
-            user:
-              $ref: '#/components/schemas/ewLogo__user'
-            hostname:
-              $ref: '#/components/schemas/ewLogo__hostname'
-            instance:
-              $ref: '#/components/schemas/ewLogo__instance'
-          required:
-          - installation
-          - instance
-          - module
-          - type
+        type:
+          description: Type description | ???
+          example: TYPE_PICK_SCNL
+          type: string
+        module:
+          description: Module description | ???
+          example: MOD_PICK_EW
+          type: string
+        installation:
+          description: Installation description | ???
+          example: INST_INGV
+          type: string
+        user:
+          description: User | ???
+          example: ew
+          type: string
+        hostname:
+          description: Hostname | ???
+          example: hew3.int.ingv.it
+          type: string
+        instance:
+          description: Instance description | ???
+          example: hew3_mole
+          type: string
+      required:
+      - installation
+      - instance
+      - module
+      - type
     strongmotioniiSchema_allOf:
       properties:
         ewMessage:

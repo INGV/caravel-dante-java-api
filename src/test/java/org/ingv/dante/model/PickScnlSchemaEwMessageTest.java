@@ -21,40 +21,99 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.PickScnlSchemaEwLogo;
-import org.ingv.dante.model.PickScnlSchemaEwMessage;
+import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.PickFirstmotion;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for PickScnlSchema
+ * Model tests for PickScnlSchemaEwMessage
  */
-public class PickScnlSchemaTest {
-    private final PickScnlSchema model = new PickScnlSchema();
+public class PickScnlSchemaEwMessageTest {
+    private final PickScnlSchemaEwMessage model = new PickScnlSchemaEwMessage();
 
     /**
-     * Model tests for PickScnlSchema
+     * Model tests for PickScnlSchemaEwMessage
      */
     @Test
-    public void testPickScnlSchema() {
-        // TODO: test PickScnlSchema
+    public void testPickScnlSchemaEwMessage() {
+        // TODO: test PickScnlSchemaEwMessage
     }
 
     /**
-     * Test the property 'ewMessage'
+     * Test the property 'pickId'
      */
     @Test
-    public void ewMessageTest() {
-        // TODO: test ewMessage
+    public void pickIdTest() {
+        // TODO: test pickId
     }
 
     /**
-     * Test the property 'ewLogo'
+     * Test the property 'network'
      */
     @Test
-    public void ewLogoTest() {
-        // TODO: test ewLogo
+    public void networkTest() {
+        // TODO: test network
+    }
+
+    /**
+     * Test the property 'station'
+     */
+    @Test
+    public void stationTest() {
+        // TODO: test station
+    }
+
+    /**
+     * Test the property 'component'
+     */
+    @Test
+    public void componentTest() {
+        // TODO: test component
+    }
+
+    /**
+     * Test the property 'location'
+     */
+    @Test
+    public void locationTest() {
+        // TODO: test location
+    }
+
+    /**
+     * Test the property 'firstMotion'
+     */
+    @Test
+    public void firstMotionTest() {
+        // TODO: test firstMotion
+    }
+
+    /**
+     * Test the property 'pickWeight'
+     */
+    @Test
+    public void pickWeightTest() {
+        // TODO: test pickWeight
+    }
+
+    /**
+     * Test the property 'timeOfPick'
+     */
+    @Test
+    public void timeOfPickTest() {
+        // TODO: test timeOfPick
+    }
+
+    /**
+     * Test the property 'pAmplitude'
+     */
+    @Test
+    public void pAmplitudeTest() {
+        // TODO: test pAmplitude
     }
 
 }
