@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.44.0
-  - Build date: 2022-05-17T09:58:20.631465Z[Etc/UTC]
+  - Build date: 2022-05-17T10:11:45.282833Z[Etc/UTC]
 
   
 
@@ -220,13 +220,13 @@ Class | Method | HTTP request | Description
  - [GetTokenRequest](docs/GetTokenRequest.md)
  - [Hyp2000arcPhasesInner](docs/Hyp2000arcPhasesInner.md)
  - [Hyp2000arcSchema](docs/Hyp2000arcSchema.md)
- - [Hyp2000arcSchemaAllOf](docs/Hyp2000arcSchemaAllOf.md)
- - [Hyp2000arcSchemaAllOf1](docs/Hyp2000arcSchemaAllOf1.md)
+ - [Hyp2000arcSchemaEwLogo](docs/Hyp2000arcSchemaEwLogo.md)
+ - [Hyp2000arcSchemaEwMessage](docs/Hyp2000arcSchemaEwMessage.md)
  - [LinksDefinition](docs/LinksDefinition.md)
  - [MagnitudePhasesInner](docs/MagnitudePhasesInner.md)
  - [MagnitudeSchema](docs/MagnitudeSchema.md)
- - [MagnitudeSchemaAllOf](docs/MagnitudeSchemaAllOf.md)
- - [MagnitudeSchemaAllOf1](docs/MagnitudeSchemaAllOf1.md)
+ - [MagnitudeSchemaEwLogo](docs/MagnitudeSchemaEwLogo.md)
+ - [MagnitudeSchemaEwMessage](docs/MagnitudeSchemaEwMessage.md)
  - [MetaDefinition](docs/MetaDefinition.md)
  - [MetaDefinitionLinksInner](docs/MetaDefinitionLinksInner.md)
  - [ObjectArrival](docs/ObjectArrival.md)
@@ -265,14 +265,13 @@ Class | Method | HTTP request | Description
  - [PickScnlSchemaEwLogo](docs/PickScnlSchemaEwLogo.md)
  - [PickScnlSchemaEwMessage](docs/PickScnlSchemaEwMessage.md)
  - [Problem](docs/Problem.md)
- - [Quake2kSchemaInner](docs/Quake2kSchemaInner.md)
- - [Quake2kSchemaInnerAllOf](docs/Quake2kSchemaInnerAllOf.md)
- - [Quake2kSchemaInnerAllOf1](docs/Quake2kSchemaInnerAllOf1.md)
- - [Quake2kSchemaInnerAllOf1EwLogo](docs/Quake2kSchemaInnerAllOf1EwLogo.md)
- - [Quake2kSchemaInnerAllOfEwMessage](docs/Quake2kSchemaInnerAllOfEwMessage.md)
+ - [Quake2kSchema](docs/Quake2kSchema.md)
+ - [Quake2kSchemaEwLogo](docs/Quake2kSchemaEwLogo.md)
+ - [Quake2kSchemaEwMessage](docs/Quake2kSchemaEwMessage.md)
  - [StrongmotioniiSchema](docs/StrongmotioniiSchema.md)
- - [StrongmotioniiSchemaAllOf](docs/StrongmotioniiSchemaAllOf.md)
- - [StrongmotioniiSchemaAllOf1](docs/StrongmotioniiSchemaAllOf1.md)
+ - [StrongmotioniiSchemaEwLogo](docs/StrongmotioniiSchemaEwLogo.md)
+ - [StrongmotioniiSchemaEwMessage](docs/StrongmotioniiSchemaEwMessage.md)
+ - [StrongmotioniiSchemaEwMessageRSAInner](docs/StrongmotioniiSchemaEwMessageRSAInner.md)
  - [TypeOriginName](docs/TypeOriginName.md)
  - [UpdateEventRequest](docs/UpdateEventRequest.md)
  - [UpdateEventRequestData](docs/UpdateEventRequestData.md)

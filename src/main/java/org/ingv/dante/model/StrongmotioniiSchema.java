@@ -23,9 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.StrongmotioniiSchemaAllOf;
-import org.ingv.dante.model.StrongmotioniiSchemaAllOf1;
-import org.openapitools.jackson.nullable.JsonNullable;
+import org.ingv.dante.model.StrongmotioniiSchemaEwLogo;
+import org.ingv.dante.model.StrongmotioniiSchemaEwMessage;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,20 +49,20 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T09:58:20.631465Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T10:11:45.282833Z[Etc/UTC]")
 public class StrongmotioniiSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
-  private Object ewMessage;
+  private StrongmotioniiSchemaEwMessage ewMessage;
 
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
-  private Object ewLogo;
+  private StrongmotioniiSchemaEwLogo ewLogo;
 
   public StrongmotioniiSchema() { 
   }
 
-  public StrongmotioniiSchema ewMessage(Object ewMessage) {
+  public StrongmotioniiSchema ewMessage(StrongmotioniiSchemaEwMessage ewMessage) {
     
     this.ewMessage = ewMessage;
     return this;
@@ -76,17 +75,17 @@ public class StrongmotioniiSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getEwMessage() {
+  public StrongmotioniiSchemaEwMessage getEwMessage() {
     return ewMessage;
   }
 
 
-  public void setEwMessage(Object ewMessage) {
+  public void setEwMessage(StrongmotioniiSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
   }
 
 
-  public StrongmotioniiSchema ewLogo(Object ewLogo) {
+  public StrongmotioniiSchema ewLogo(StrongmotioniiSchemaEwLogo ewLogo) {
     
     this.ewLogo = ewLogo;
     return this;
@@ -99,12 +98,12 @@ public class StrongmotioniiSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getEwLogo() {
+  public StrongmotioniiSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
 
 
-  public void setEwLogo(Object ewLogo) {
+  public void setEwLogo(StrongmotioniiSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
   }
 
@@ -123,20 +122,9 @@ public class StrongmotioniiSchema {
         Objects.equals(this.ewLogo, strongmotioniiSchema.ewLogo);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
     return Objects.hash(ewMessage, ewLogo);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -198,11 +186,11 @@ public class StrongmotioniiSchema {
       }
       // validate the optional field `ewMessage`
       if (jsonObj.getAsJsonObject("ewMessage") != null) {
-        Object.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
+        StrongmotioniiSchemaEwMessage.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
       }
       // validate the optional field `ewLogo`
       if (jsonObj.getAsJsonObject("ewLogo") != null) {
-        Object.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
+        StrongmotioniiSchemaEwLogo.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
       }
   }
 
