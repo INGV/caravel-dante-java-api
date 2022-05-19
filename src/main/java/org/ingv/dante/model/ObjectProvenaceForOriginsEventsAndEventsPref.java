@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectProvenaceForOriginsEventsAndEventsPref
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-17T16:28:51.576545Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-19T14:23:34.613929Z[Etc/UTC]")
 public class ObjectProvenaceForOriginsEventsAndEventsPref {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
