@@ -16,9 +16,13 @@ package org.ingv.dante.api;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.model.GetEvent200Response;
 import org.ingv.dante.model.GetEventsPref200Response;
+import org.ingv.dante.model.GetLocalspace200Response;
 import org.ingv.dante.model.GetMunicipiDistanceKmPopolazione200Response;
 import org.ingv.dante.model.GetOriginFlag200Response;
 import org.ingv.dante.model.GetRegionName200Response;
+import org.ingv.dante.model.GetTypeEvent200Response;
+import org.ingv.dante.model.GetTypeMagnitude200Response;
+import org.ingv.dante.model.GetTypeOrigin200Response;
 import org.ingv.dante.model.ObjectStatus;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.Problem;
@@ -120,6 +124,19 @@ public class GetApiTest {
     }
 
     /**
+     * This API returns all the localspace(s).
+     *
+     * This API returns all the localspace(s).
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getLocalspaceTest() throws ApiException {
+        GetLocalspace200Response response = api.getLocalspace();
+        // TODO: test validations
+    }
+
+    /**
      * This API returns the municipi-distance-km-popolazione used at INGV.
      *
      * This API returns the municipi-distance-km-popolazione.
@@ -209,6 +226,45 @@ public class GetApiTest {
     @Test
     public void getStatusTest() throws ApiException {
         ObjectStatus response = api.getStatus();
+        // TODO: test validations
+    }
+
+    /**
+     * This API returns all the type_event(s).
+     *
+     * This API returns all the type_event(s).
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getTypeEventTest() throws ApiException {
+        GetTypeEvent200Response response = api.getTypeEvent();
+        // TODO: test validations
+    }
+
+    /**
+     * This API returns all the type_magnitude(s).
+     *
+     * This API returns all the type_magnitude(s).
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getTypeMagnitudeTest() throws ApiException {
+        GetTypeMagnitude200Response response = api.getTypeMagnitude();
+        // TODO: test validations
+    }
+
+    /**
+     * This API returns all the type_origin(s).
+     *
+     * This API returns all the type_origin(s).
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getTypeOriginTest() throws ApiException {
+        GetTypeOrigin200Response response = api.getTypeOrigin();
         // TODO: test validations
     }
 

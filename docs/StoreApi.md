@@ -6,11 +6,15 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 |------------- | ------------- | -------------|
 | [**addEvent**](StoreApi.md#addEvent) | **POST** /quakedb/v1/event | Add a new event to the DB |
 | [**addFocalmechanism**](StoreApi.md#addFocalmechanism) | **POST** /quakedb/v1/focalmechanism | Add a new focalmechanism(s) to the DB |
+| [**addLocalspace**](StoreApi.md#addLocalspace) | **POST** /quakedb/_table/v1/localspace | Add a new localspace to the DB |
 | [**addMagnitude**](StoreApi.md#addMagnitude) | **POST** /quakedb/v1/magnitude | Add a new magnitude(s) to the DB |
 | [**addMomenttensor**](StoreApi.md#addMomenttensor) | **POST** /quakedb/v1/momenttensor | Add a new momenttensor(s) to the DB |
 | [**addOrigin**](StoreApi.md#addOrigin) | **POST** /quakedb/v1/origin | Add a new origin(s) to the DB |
 | [**addOriginFlag**](StoreApi.md#addOriginFlag) | **POST** /quakedb/v1/origin-flag | Add one or more flags to origin |
 | [**addStrongmotion**](StoreApi.md#addStrongmotion) | **POST** /quakedb/v1/strongmotion | Add a new strongmotion(s) to the DB |
+| [**addTypeEvent**](StoreApi.md#addTypeEvent) | **POST** /quakedb/_table/v1/type_event | Add a new type_event to the DB |
+| [**addTypeMagnitude**](StoreApi.md#addTypeMagnitude) | **POST** /quakedb/_table/v1/type_magnitude | Add a new type_magnitude to the DB |
+| [**addTypeOrigin**](StoreApi.md#addTypeOrigin) | **POST** /quakedb/_table/v1/type_origin | Add a new type_origin to the DB |
 
 
 <a name="addEvent"></a>
@@ -128,6 +132,74 @@ public class Example {
 ### Return type
 
 [**AddFocalmechanism201Response**](AddFocalmechanism201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **201** | record inserted |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
+<a name="addLocalspace"></a>
+# **addLocalspace**
+> AddLocalspace201Response addLocalspace(addLocalspaceRequest)
+
+Add a new localspace to the DB
+
+This API is used to add an localspace object.
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.StoreApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    StoreApi apiInstance = new StoreApi(defaultClient);
+    AddLocalspaceRequest addLocalspaceRequest = new AddLocalspaceRequest(); // AddLocalspaceRequest | JSON to store
+    try {
+      AddLocalspace201Response result = apiInstance.addLocalspace(addLocalspaceRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling StoreApi#addLocalspace");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **addLocalspaceRequest** | [**AddLocalspaceRequest**](AddLocalspaceRequest.md)| JSON to store | |
+
+### Return type
+
+[**AddLocalspace201Response**](AddLocalspace201Response.md)
 
 ### Authorization
 
@@ -468,6 +540,210 @@ public class Example {
 ### Return type
 
 [**AddStrongmotion201Response**](AddStrongmotion201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **201** | record inserted |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
+<a name="addTypeEvent"></a>
+# **addTypeEvent**
+> AddTypeEvent201Response addTypeEvent(addTypeEventRequest)
+
+Add a new type_event to the DB
+
+This API is used to add an type_event object.
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.StoreApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    StoreApi apiInstance = new StoreApi(defaultClient);
+    AddTypeEventRequest addTypeEventRequest = new AddTypeEventRequest(); // AddTypeEventRequest | JSON to store
+    try {
+      AddTypeEvent201Response result = apiInstance.addTypeEvent(addTypeEventRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling StoreApi#addTypeEvent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **addTypeEventRequest** | [**AddTypeEventRequest**](AddTypeEventRequest.md)| JSON to store | |
+
+### Return type
+
+[**AddTypeEvent201Response**](AddTypeEvent201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **201** | record inserted |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
+<a name="addTypeMagnitude"></a>
+# **addTypeMagnitude**
+> AddTypeMagnitude201Response addTypeMagnitude(addTypeMagnitudeRequest)
+
+Add a new type_magnitude to the DB
+
+This API is used to add an type_magnitude object.
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.StoreApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    StoreApi apiInstance = new StoreApi(defaultClient);
+    AddTypeMagnitudeRequest addTypeMagnitudeRequest = new AddTypeMagnitudeRequest(); // AddTypeMagnitudeRequest | JSON to store
+    try {
+      AddTypeMagnitude201Response result = apiInstance.addTypeMagnitude(addTypeMagnitudeRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling StoreApi#addTypeMagnitude");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **addTypeMagnitudeRequest** | [**AddTypeMagnitudeRequest**](AddTypeMagnitudeRequest.md)| JSON to store | |
+
+### Return type
+
+[**AddTypeMagnitude201Response**](AddTypeMagnitude201Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **201** | record inserted |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
+<a name="addTypeOrigin"></a>
+# **addTypeOrigin**
+> AddTypeOrigin201Response addTypeOrigin(addTypeOriginRequest)
+
+Add a new type_origin to the DB
+
+This API is used to add an type_origin object.
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.StoreApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    StoreApi apiInstance = new StoreApi(defaultClient);
+    AddTypeOriginRequest addTypeOriginRequest = new AddTypeOriginRequest(); // AddTypeOriginRequest | JSON to store
+    try {
+      AddTypeOrigin201Response result = apiInstance.addTypeOrigin(addTypeOriginRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling StoreApi#addTypeOrigin");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **addTypeOriginRequest** | [**AddTypeOriginRequest**](AddTypeOriginRequest.md)| JSON to store | |
+
+### Return type
+
+[**AddTypeOrigin201Response**](AddTypeOrigin201Response.md)
 
 ### Authorization
 

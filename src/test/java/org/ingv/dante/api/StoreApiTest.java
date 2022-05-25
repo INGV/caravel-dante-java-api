@@ -17,6 +17,8 @@ import org.ingv.dante.ApiException;
 import org.ingv.dante.model.AddEvent201Response;
 import org.ingv.dante.model.AddFocalmechanism201Response;
 import org.ingv.dante.model.AddFocalmechanismRequest;
+import org.ingv.dante.model.AddLocalspace201Response;
+import org.ingv.dante.model.AddLocalspaceRequest;
 import org.ingv.dante.model.AddMagnitude201Response;
 import org.ingv.dante.model.AddMagnitudeRequest;
 import org.ingv.dante.model.AddMomenttensor201Response;
@@ -27,6 +29,12 @@ import org.ingv.dante.model.AddOriginFlagRequest;
 import org.ingv.dante.model.AddOriginRequest;
 import org.ingv.dante.model.AddStrongmotion201Response;
 import org.ingv.dante.model.AddStrongmotionRequest;
+import org.ingv.dante.model.AddTypeEvent201Response;
+import org.ingv.dante.model.AddTypeEventRequest;
+import org.ingv.dante.model.AddTypeMagnitude201Response;
+import org.ingv.dante.model.AddTypeMagnitudeRequest;
+import org.ingv.dante.model.AddTypeOrigin201Response;
+import org.ingv.dante.model.AddTypeOriginRequest;
 import org.ingv.dante.model.GetEvent200Response;
 import org.ingv.dante.model.Problem;
 import org.junit.jupiter.api.Disabled;
@@ -70,6 +78,20 @@ public class StoreApiTest {
     public void addFocalmechanismTest() throws ApiException {
         AddFocalmechanismRequest addFocalmechanismRequest = null;
         AddFocalmechanism201Response response = api.addFocalmechanism(addFocalmechanismRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Add a new localspace to the DB
+     *
+     * This API is used to add an localspace object.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void addLocalspaceTest() throws ApiException {
+        AddLocalspaceRequest addLocalspaceRequest = null;
+        AddLocalspace201Response response = api.addLocalspace(addLocalspaceRequest);
         // TODO: test validations
     }
 
@@ -140,6 +162,48 @@ public class StoreApiTest {
     public void addStrongmotionTest() throws ApiException {
         AddStrongmotionRequest addStrongmotionRequest = null;
         AddStrongmotion201Response response = api.addStrongmotion(addStrongmotionRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Add a new type_event to the DB
+     *
+     * This API is used to add an type_event object.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void addTypeEventTest() throws ApiException {
+        AddTypeEventRequest addTypeEventRequest = null;
+        AddTypeEvent201Response response = api.addTypeEvent(addTypeEventRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Add a new type_magnitude to the DB
+     *
+     * This API is used to add an type_magnitude object.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void addTypeMagnitudeTest() throws ApiException {
+        AddTypeMagnitudeRequest addTypeMagnitudeRequest = null;
+        AddTypeMagnitude201Response response = api.addTypeMagnitude(addTypeMagnitudeRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Add a new type_origin to the DB
+     *
+     * This API is used to add an type_origin object.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void addTypeOriginTest() throws ApiException {
+        AddTypeOriginRequest addTypeOriginRequest = null;
+        AddTypeOrigin201Response response = api.addTypeOrigin(addTypeOriginRequest);
         // TODO: test validations
     }
 

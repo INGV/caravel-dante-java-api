@@ -14,6 +14,10 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
+import org.ingv.dante.model.AddLocalspaceRequest;
+import org.ingv.dante.model.AddTypeEventRequest;
+import org.ingv.dante.model.AddTypeMagnitudeRequest;
+import org.ingv.dante.model.AddTypeOriginRequest;
 import org.ingv.dante.model.Problem;
 import org.ingv.dante.model.UpdateEventRequest;
 import org.ingv.dante.model.UpdateOriginFlagRequest;
@@ -49,6 +53,21 @@ public class UpdateApiTest {
     }
 
     /**
+     * Update an existing localspace
+     *
+     * Update an existing localspace.&lt;/br&gt; To use this API you must be authenticated.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateLocalspaceTest() throws ApiException {
+        Long id = null;
+        AddLocalspaceRequest addLocalspaceRequest = null;
+        api.updateLocalspace(id, addLocalspaceRequest);
+        // TODO: test validations
+    }
+
+    /**
      * Update an existing origin-flag
      *
      * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
@@ -60,6 +79,51 @@ public class UpdateApiTest {
         Long id = null;
         UpdateOriginFlagRequest updateOriginFlagRequest = null;
         api.updateOriginFlag(id, updateOriginFlagRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Update an existing type_event
+     *
+     * Update an existing type_event.&lt;/br&gt; To use this API you must be authenticated.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateTypeEventTest() throws ApiException {
+        Long id = null;
+        AddTypeEventRequest addTypeEventRequest = null;
+        api.updateTypeEvent(id, addTypeEventRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Update an existing type_magnitude
+     *
+     * Update an existing type_magnitude.&lt;/br&gt; To use this API you must be authenticated.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateTypeMagnitudeTest() throws ApiException {
+        Long id = null;
+        AddTypeMagnitudeRequest addTypeMagnitudeRequest = null;
+        api.updateTypeMagnitude(id, addTypeMagnitudeRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Update an existing type_origin
+     *
+     * Update an existing type_origin.&lt;/br&gt; To use this API you must be authenticated.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateTypeOriginTest() throws ApiException {
+        Long id = null;
+        AddTypeOriginRequest addTypeOriginRequest = null;
+        api.updateTypeOrigin(id, addTypeOriginRequest);
         // TODO: test validations
     }
 

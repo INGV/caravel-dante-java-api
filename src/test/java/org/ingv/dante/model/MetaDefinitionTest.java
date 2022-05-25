@@ -51,6 +51,14 @@ public class MetaDefinitionTest {
     }
 
     /**
+     * Test the property 'firstPageUrl'
+     */
+    @Test
+    public void firstPageUrlTest() {
+        // TODO: test firstPageUrl
+    }
+
+    /**
      * Test the property 'from'
      */
     @Test
@@ -67,11 +75,27 @@ public class MetaDefinitionTest {
     }
 
     /**
+     * Test the property 'lastPageUrl'
+     */
+    @Test
+    public void lastPageUrlTest() {
+        // TODO: test lastPageUrl
+    }
+
+    /**
      * Test the property 'links'
      */
     @Test
     public void linksTest() {
         // TODO: test links
+    }
+
+    /**
+     * Test the property 'nextPageUrl'
+     */
+    @Test
+    public void nextPageUrlTest() {
+        // TODO: test nextPageUrl
     }
 
     /**
@@ -88,6 +112,14 @@ public class MetaDefinitionTest {
     @Test
     public void perPageTest() {
         // TODO: test perPage
+    }
+
+    /**
+     * Test the property 'prevPageUrl'
+     */
+    @Test
+    public void prevPageUrlTest() {
+        // TODO: test prevPageUrl
     }
 
     /**

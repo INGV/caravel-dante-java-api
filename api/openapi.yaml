@@ -857,6 +857,1302 @@ paths:
       tags:
       - get
       x-accepts: application/json
+  /quakedb/_table/v1/type_event:
+    get:
+      description: This API returns all the type_event(s).
+      operationId: getTypeEvent
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getTypeEvent_200_response'
+          description: Operation successful
+          headers:
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: This API returns all the type_event(s).
+      tags:
+      - get
+      x-accepts: application/json
+    post:
+      description: This API is used to add an type_event object.
+      operationId: addTypeEvent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/addTypeEvent_request'
+        description: JSON to store
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/addTypeEvent_201_response'
+          description: record inserted
+          headers:
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: Add a new type_event to the DB
+      tags:
+      - store
+      x-content-type: application/json
+      x-accepts: application/json
+  /quakedb/_table/v1/type_event/{id}:
+    delete:
+      description: Delete an existing type_event.</br> To use this API you must be
+        authenticated.
+      operationId: deleteTypeEvent
+      parameters:
+      - description: INGV type_event id that need to be deleted.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "204":
+          description: record deleted
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Delete an existing type_event
+      tags:
+      - delete
+      x-accepts: application/problem+json
+    patch:
+      description: Update an existing type_event.</br> To use this API you must be
+        authenticated.
+      operationId: updateTypeEvent
+      parameters:
+      - description: INGV type_event id that need to be updated.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/merge-patch+json:
+            schema:
+              $ref: '#/components/schemas/addTypeEvent_request'
+        description: JSON to update
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          description: record updated
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Update an existing type_event
+      tags:
+      - update
+      x-content-type: application/merge-patch+json
+      x-accepts: application/problem+json
+  /quakedb/_table/v1/type_origin:
+    get:
+      description: This API returns all the type_origin(s).
+      operationId: getTypeOrigin
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getTypeOrigin_200_response'
+          description: Operation successful
+          headers:
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: This API returns all the type_origin(s).
+      tags:
+      - get
+      x-accepts: application/json
+    post:
+      description: This API is used to add an type_origin object.
+      operationId: addTypeOrigin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/addTypeOrigin_request'
+        description: JSON to store
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/addTypeOrigin_201_response'
+          description: record inserted
+          headers:
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: Add a new type_origin to the DB
+      tags:
+      - store
+      x-content-type: application/json
+      x-accepts: application/json
+  /quakedb/_table/v1/type_origin/{id}:
+    delete:
+      description: Delete an existing type_origin.</br> To use this API you must be
+        authenticated.
+      operationId: deleteTypeOrigin
+      parameters:
+      - description: INGV type_origin id that need to be deleted.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "204":
+          description: record deleted
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Delete an existing type_origin
+      tags:
+      - delete
+      x-accepts: application/problem+json
+    patch:
+      description: Update an existing type_origin.</br> To use this API you must be
+        authenticated.
+      operationId: updateTypeOrigin
+      parameters:
+      - description: INGV type_origin id that need to be updated.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/merge-patch+json:
+            schema:
+              $ref: '#/components/schemas/addTypeOrigin_request'
+        description: JSON to update
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          description: record updated
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Update an existing type_origin
+      tags:
+      - update
+      x-content-type: application/merge-patch+json
+      x-accepts: application/problem+json
+  /quakedb/_table/v1/type_magnitude:
+    get:
+      description: This API returns all the type_magnitude(s).
+      operationId: getTypeMagnitude
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getTypeMagnitude_200_response'
+          description: Operation successful
+          headers:
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: This API returns all the type_magnitude(s).
+      tags:
+      - get
+      x-accepts: application/json
+    post:
+      description: This API is used to add an type_magnitude object.
+      operationId: addTypeMagnitude
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/addTypeMagnitude_request'
+        description: JSON to store
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/addTypeMagnitude_201_response'
+          description: record inserted
+          headers:
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: Add a new type_magnitude to the DB
+      tags:
+      - store
+      x-content-type: application/json
+      x-accepts: application/json
+  /quakedb/_table/v1/type_magnitude/{id}:
+    delete:
+      description: Delete an existing type_magnitude.</br> To use this API you must
+        be authenticated.
+      operationId: deleteTypeMagnitude
+      parameters:
+      - description: INGV type_magnitude id that need to be deleted.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "204":
+          description: record deleted
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Delete an existing type_magnitude
+      tags:
+      - delete
+      x-accepts: application/problem+json
+    patch:
+      description: Update an existing type_magnitude.</br> To use this API you must
+        be authenticated.
+      operationId: updateTypeMagnitude
+      parameters:
+      - description: INGV type_magnitude id that need to be updated.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/merge-patch+json:
+            schema:
+              $ref: '#/components/schemas/addTypeMagnitude_request'
+        description: JSON to update
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          description: record updated
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Update an existing type_magnitude
+      tags:
+      - update
+      x-content-type: application/merge-patch+json
+      x-accepts: application/problem+json
+  /quakedb/_table/v1/localspace:
+    get:
+      description: This API returns all the localspace(s).
+      operationId: getLocalspace
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getLocalspace_200_response'
+          description: Operation successful
+          headers:
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: This API returns all the localspace(s).
+      tags:
+      - get
+      x-accepts: application/json
+    post:
+      description: This API is used to add an localspace object.
+      operationId: addLocalspace
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/addLocalspace_request'
+        description: JSON to store
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/addLocalspace_201_response'
+          description: record inserted
+          headers:
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: Add a new localspace to the DB
+      tags:
+      - store
+      x-content-type: application/json
+      x-accepts: application/json
+  /quakedb/_table/v1/localspace/{id}:
+    delete:
+      description: Delete an existing localspace.</br> To use this API you must be
+        authenticated.
+      operationId: deleteLocalspace
+      parameters:
+      - description: INGV localspace id that need to be deleted.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "204":
+          description: record deleted
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Delete an existing localspace
+      tags:
+      - delete
+      x-accepts: application/problem+json
+    patch:
+      description: Update an existing localspace.</br> To use this API you must be
+        authenticated.
+      operationId: updateLocalspace
+      parameters:
+      - description: INGV localspace id that need to be updated.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/merge-patch+json:
+            schema:
+              $ref: '#/components/schemas/addLocalspace_request'
+        description: JSON to update
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          description: record updated
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Update an existing localspace
+      tags:
+      - update
+      x-content-type: application/merge-patch+json
+      x-accepts: application/problem+json
   /quakedb/v1/event:
     get:
       description: This API returns the preferred origin and the preferred magnitude
@@ -2332,7 +3628,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/addHEwStrongmotionii_201_response'
-          description: record insertedd
+          description: record inserted
           headers:
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
@@ -6038,24 +7334,32 @@ components:
       type: object
     MetaDefinition:
       example:
+        first_page_url: http://localhost:8087/page=1
         path: http://localhost:8087
         per_page: "4000"
-        total: "50"
-        last_page: "967"
+        total: "10000"
+        last_page: "3"
+        last_page_url: http://localhost:8087/page=3
+        next_page_url: http://localhost:8087/page=3
         from: "1"
         links:
-        - active: "false"
-          label: "5"
+        - active: "true"
+          label: "2"
           url: http://localhost:8087
-        - active: "false"
-          label: "5"
+        - active: "true"
+          label: "2"
           url: http://localhost:8087
         to: "4000"
-        current_page: "1"
+        prev_page_url: http://localhost:8087/page=1
+        current_page: "2"
       properties:
         current_page:
           description: Current page.
-          example: "1"
+          example: "2"
+          type: string
+        first_page_url:
+          description: URL base path.
+          example: http://localhost:8087/page=1
           type: string
         from:
           description: Showed record from.
@@ -6063,12 +7367,20 @@ components:
           type: string
         last_page:
           description: Last page.
-          example: "967"
+          example: "3"
+          type: string
+        last_page_url:
+          description: URL base path.
+          example: http://localhost:8087/page=3
           type: string
         links:
           items:
             $ref: '#/components/schemas/MetaDefinition_links_inner'
           type: array
+        next_page_url:
+          description: URL base path.
+          example: http://localhost:8087/page=3
+          type: string
         path:
           description: URL base path.
           example: http://localhost:8087
@@ -6077,13 +7389,17 @@ components:
           description: Record per page.
           example: "4000"
           type: string
+        prev_page_url:
+          description: URL base path.
+          example: http://localhost:8087/page=1
+          type: string
         to:
           description: Showed record to.
           example: "4000"
           type: string
         total:
           description: Total records.
-          example: "50"
+          example: "10000"
           type: string
       type: object
     LinksDefinition:
@@ -6200,23 +7516,99 @@ components:
       example: 14932631
       format: int64
       type: integer
-    id_localspace:
-      description: Localspace Id | bigint(19)
-      example: 182491
+    type_event__name:
+      description: Name | varchar(255)
+      example: earthquake
+      type: string
+    modified:
+      description: Last Review | timestamp
+      example: 2016-06-22T16:52:06.26Z
+      format: date-time
+      readOnly: true
+      type: string
+    inserted:
+      description: Insert time | timestamp
+      example: 2016-06-22T16:52:06.26Z
+      format: date-time
+      readOnly: true
+      type: string
+    description:
+      description: Additional information | char(255)
+      example: Auto added
+      type: string
+    type_origin__name:
+      default: hypocenter
+      description: "type_origin by QuakeML definition (es:hypocenter,centroid,macroseismic,..)\
+        \ | varchar(255)"
+      enum:
+      - hypocenter
+      - centroid
+      - amplitude
+      - macroseismic
+      - rupture start
+      - rupture end
+      example: hypocenter
+      type: string
+    type_origin__version_name:
+      description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
+      example: ew prelim
+      type: string
+    type_origin__version_value__READONLY:
+      description: Define a numeric value for type origin. < 100 is automatic location
+        | bigint(20)
+      example: 2
       format: int64
+      readOnly: true
+      type: integer
+    type_origin__priority:
+      default: 0
+      description: Type origin priority | tinyint(4)
+      example: 100
+      format: int64
+      type: integer
+    type_origin__version_value:
+      description: Define a numeric value for type origin. < 100 is automatic location
+        | bigint(20)
+      example: 2
+      format: int64
+      type: integer
+    type_magnitude__name:
+      description: Type of the magnitude | varchar(255)
+      example: ML-VAX
+      type: string
+    type_magnitude__priority:
+      default: 0
+      description: Type magnitude priority | int(8)
+      example: 1
+      format: int64
+      type: integer
+    type_magnitude__minmag:
+      description: Minimum magnitude value | float(4)
+      example: 1.2
+      format: float
+      type: number
+    type_magnitude__maxmag:
+      description: Maximum magnitude value | float(4)
+      example: 2.2
+      format: float
+      type: number
+    type_magnitude__minreadings:
+      description: Minimum number of readings | int(8)
+      format: int32
       type: integer
     localspace__name:
       description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
       example: hew1_mole
       type: string
+    id_localspace:
+      description: Localspace Id | bigint(19)
+      example: 182491
+      format: int64
+      type: integer
     azimutal_gap:
       description: Azimutal gap | float4
       format: float
       type: number
-    type_event__name:
-      description: Name | varchar(255)
-      example: earthquake
-      type: string
     event__fk_event_group:
       default: 0
       description: Link event group | bigint(20)
@@ -6240,19 +7632,6 @@ components:
           $ref: '#/components/schemas/quake2kSchema_ewMessage'
         ewLogo:
           $ref: '#/components/schemas/quake2kSchema_ewLogo'
-    type_origin__name:
-      default: hypocenter
-      description: "type_origin by QuakeML definition (es:hypocenter,centroid,macroseismic,..)\
-        \ | varchar(255)"
-      enum:
-      - hypocenter
-      - centroid
-      - amplitude
-      - macroseismic
-      - rupture start
-      - rupture end
-      example: hypocenter
-      type: string
     origin__ot:
       description: Origin time | datetime(3)
       example: 2016-06-22T16:52:06.26Z
@@ -6392,10 +7771,6 @@ components:
     qAuthor:
       description: qAuthor description
       example: 014101073:028130073
-      type: string
-    type_magnitude__name:
-      description: Type of the magnitude | varchar(255)
-      example: ML-VAX
       type: string
     magnitude__mag_quality:
       description: INGV quality code of the magnitude (computed by ew2moledb) | char(2)
@@ -6601,10 +7976,6 @@ components:
       description: Hostname | char(255)
       example: hew10.ingv.it
       type: string
-    description:
-      description: Additional information | char(255)
-      example: Auto added
-      type: string
     event__fk_event_group__READONLY:
       default: 0
       description: Link event group | bigint(20)
@@ -6632,18 +8003,6 @@ components:
       format: int64
       readOnly: true
       type: integer
-    modified:
-      description: Last Review | timestamp
-      example: 2016-06-22T16:52:06.26Z
-      format: date-time
-      readOnly: true
-      type: string
-    inserted:
-      description: Insert time | timestamp
-      example: 2016-06-22T16:52:06.26Z
-      format: date-time
-      readOnly: true
-      type: string
     pickew__pamp:
       description: peak P-wave half amplitude | double(22)
       example: 283
@@ -6739,17 +8098,6 @@ components:
       example: 1
       format: float
       type: number
-    type_origin__version_name:
-      description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
-      example: ew prelim
-      type: string
-    type_origin__version_value__READONLY:
-      description: Define a numeric value for type origin. < 100 is automatic location
-        | bigint(20)
-      example: 2
-      format: int64
-      readOnly: true
-      type: integer
     magnitude__lower_uncertainty:
       description: Magnitude lower_uncertainty | double
       example: 0.52
@@ -7176,20 +8524,24 @@ components:
           id: 14932631
           event_group_id: 0
         meta:
+          first_page_url: http://localhost:8087/page=1
           path: http://localhost:8087
           per_page: "4000"
-          total: "50"
-          last_page: "967"
+          total: "10000"
+          last_page: "3"
+          last_page_url: http://localhost:8087/page=3
+          next_page_url: http://localhost:8087/page=3
           from: "1"
           links:
-          - active: "false"
-            label: "5"
+          - active: "true"
+            label: "2"
             url: http://localhost:8087
-          - active: "false"
-            label: "5"
+          - active: "true"
+            label: "2"
             url: http://localhost:8087
           to: "4000"
-          current_page: "1"
+          prev_page_url: http://localhost:8087/page=1
+          current_page: "2"
         links:
           next: http://localhost:8087/api/quakedb/v1/events_pref/?page=3
           last: http://localhost:8087/api/quakedb/v1/events_pref/?page=4
@@ -7205,6 +8557,436 @@ components:
             $ref: '#/components/schemas/ObjectOriginsEventsAndEventsPref'
           type: array
       type: object
+    getTypeEvent_200_response_allOf_data_inner:
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        name:
+          description: Name | varchar(255)
+          example: earthquake
+          type: string
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+      type: object
+    getTypeEvent_200_response_allOf:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/getTypeEvent_200_response_allOf_data_inner'
+          type: array
+    getTypeEvent_200_response:
+      allOf:
+      - $ref: '#/components/schemas/MetaDefinition'
+      - $ref: '#/components/schemas/getTypeEvent_200_response_allOf'
+    addTypeEvent_request:
+      properties:
+        name:
+          description: Name | varchar(255)
+          example: earthquake
+          type: string
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+    addTypeEvent_201_response:
+      example:
+        inserted: 2016-06-22T16:52:06.26Z
+        name: earthquake
+        description: Auto added
+        modified: 2016-06-22T16:52:06.26Z
+        id: 14932631
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        name:
+          description: Name | varchar(255)
+          example: earthquake
+          type: string
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+    getTypeOrigin_200_response_allOf_data_inner:
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        name:
+          $ref: '#/components/schemas/type_origin__name'
+        version_name:
+          description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
+          example: ew prelim
+          type: string
+        version_value:
+          description: Define a numeric value for type origin. < 100 is automatic
+            location | bigint(20)
+          example: 2
+          format: int64
+          readOnly: true
+          type: integer
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+        priority:
+          default: 0
+          description: Type origin priority | tinyint(4)
+          example: 100
+          format: int64
+          type: integer
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+      type: object
+    getTypeOrigin_200_response_allOf:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/getTypeOrigin_200_response_allOf_data_inner'
+          type: array
+    getTypeOrigin_200_response:
+      allOf:
+      - $ref: '#/components/schemas/MetaDefinition'
+      - $ref: '#/components/schemas/getTypeOrigin_200_response_allOf'
+    addTypeOrigin_request:
+      properties:
+        name:
+          $ref: '#/components/schemas/type_origin__name'
+        version_name:
+          description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
+          example: ew prelim
+          type: string
+        version_value:
+          description: Define a numeric value for type origin. < 100 is automatic
+            location | bigint(20)
+          example: 2
+          format: int64
+          type: integer
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+        priority:
+          default: 0
+          description: Type origin priority | tinyint(4)
+          example: 100
+          format: int64
+          type: integer
+    addTypeOrigin_201_response:
+      example:
+        version_value: 2
+        version_name: ew prelim
+        inserted: 2016-06-22T16:52:06.26Z
+        name: hypocenter
+        description: Auto added
+        modified: 2016-06-22T16:52:06.26Z
+        id: 14932631
+        priority: 100
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        name:
+          $ref: '#/components/schemas/type_origin__name'
+        version_name:
+          description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
+          example: ew prelim
+          type: string
+        version_value:
+          description: Define a numeric value for type origin. < 100 is automatic
+            location | bigint(20)
+          example: 2
+          format: int64
+          type: integer
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+        priority:
+          default: 0
+          description: Type origin priority | tinyint(4)
+          example: 100
+          format: int64
+          type: integer
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+    getTypeMagnitude_200_response_allOf_data_inner:
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        name:
+          description: Type of the magnitude | varchar(255)
+          example: ML-VAX
+          type: string
+        priority:
+          default: 0
+          description: Type magnitude priority | int(8)
+          example: 1
+          format: int64
+          type: integer
+        minmag:
+          description: Minimum magnitude value | float(4)
+          example: 1.2
+          format: float
+          type: number
+        maxmag:
+          description: Maximum magnitude value | float(4)
+          example: 2.2
+          format: float
+          type: number
+        minreadings:
+          description: Minimum number of readings | int(8)
+          format: int32
+          type: integer
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+      type: object
+    getTypeMagnitude_200_response_allOf:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/getTypeMagnitude_200_response_allOf_data_inner'
+          type: array
+    getTypeMagnitude_200_response:
+      allOf:
+      - $ref: '#/components/schemas/MetaDefinition'
+      - $ref: '#/components/schemas/getTypeMagnitude_200_response_allOf'
+    addTypeMagnitude_request:
+      properties:
+        name:
+          description: Type of the magnitude | varchar(255)
+          example: ML-VAX
+          type: string
+        priority:
+          default: 0
+          description: Type magnitude priority | int(8)
+          example: 1
+          format: int64
+          type: integer
+        minmag:
+          description: Minimum magnitude value | float(4)
+          example: 1.2
+          format: float
+          type: number
+        maxmag:
+          description: Maximum magnitude value | float(4)
+          example: 2.2
+          format: float
+          type: number
+        minreadings:
+          description: Minimum number of readings | int(8)
+          format: int32
+          type: integer
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+    addTypeMagnitude_201_response:
+      example:
+        maxmag: 2.2
+        minreadings: 0
+        inserted: 2016-06-22T16:52:06.26Z
+        name: ML-VAX
+        description: Auto added
+        modified: 2016-06-22T16:52:06.26Z
+        minmag: 1.2
+        id: 14932631
+        priority: 1
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        name:
+          description: Type of the magnitude | varchar(255)
+          example: ML-VAX
+          type: string
+        priority:
+          default: 0
+          description: Type magnitude priority | int(8)
+          example: 1
+          format: int64
+          type: integer
+        minmag:
+          description: Minimum magnitude value | float(4)
+          example: 1.2
+          format: float
+          type: number
+        maxmag:
+          description: Maximum magnitude value | float(4)
+          example: 2.2
+          format: float
+          type: number
+        minreadings:
+          description: Minimum number of readings | int(8)
+          format: int32
+          type: integer
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+    getLocalspace_200_response_allOf_data_inner:
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        name:
+          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
+          example: hew1_mole
+          type: string
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+      type: object
+    getLocalspace_200_response_allOf:
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/getLocalspace_200_response_allOf_data_inner'
+          type: array
+    getLocalspace_200_response:
+      allOf:
+      - $ref: '#/components/schemas/MetaDefinition'
+      - $ref: '#/components/schemas/getLocalspace_200_response_allOf'
+    addLocalspace_request:
+      properties:
+        name:
+          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
+          example: hew1_mole
+          type: string
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+    addLocalspace_201_response:
+      example:
+        inserted: 2016-06-22T16:52:06.26Z
+        name: hew1_mole
+        description: Auto added
+        modified: 2016-06-22T16:52:06.26Z
+        id: 14932631
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        name:
+          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
+          example: hew1_mole
+          type: string
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          type: string
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
     getEvent_200_response_data:
       example:
         event:
@@ -10111,8 +11893,8 @@ components:
       type: object
     MetaDefinition_links_inner:
       example:
-        active: "false"
-        label: "5"
+        active: "true"
+        label: "2"
         url: http://localhost:8087
       properties:
         url:
@@ -10121,10 +11903,10 @@ components:
           type: string
         label:
           description: Page label.
-          example: "5"
+          example: "2"
           type: string
         active:
-          example: "false"
+          example: "true"
           type: string
     quake2kSchema_ewMessage:
       properties:

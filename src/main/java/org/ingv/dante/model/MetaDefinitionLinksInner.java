@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * MetaDefinitionLinksInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-24T16:17:21.340252Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:58:43.855491Z[Etc/UTC]")
 public class MetaDefinitionLinksInner {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
@@ -98,7 +98,7 @@ public class MetaDefinitionLinksInner {
    * @return label
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "5", value = "Page label.")
+  @ApiModelProperty(example = "2", value = "Page label.")
 
   public String getLabel() {
     return label;
@@ -121,7 +121,7 @@ public class MetaDefinitionLinksInner {
    * @return active
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "")
+  @ApiModelProperty(example = "true", value = "")
 
   public String getActive() {
     return active;

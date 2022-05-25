@@ -50,11 +50,15 @@ import org.ingv.dante.JSON;
 /**
  * MetaDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-24T16:17:21.340252Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:58:43.855491Z[Etc/UTC]")
 public class MetaDefinition {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
   private String currentPage;
+
+  public static final String SERIALIZED_NAME_FIRST_PAGE_URL = "first_page_url";
+  @SerializedName(SERIALIZED_NAME_FIRST_PAGE_URL)
+  private String firstPageUrl;
 
   public static final String SERIALIZED_NAME_FROM = "from";
   @SerializedName(SERIALIZED_NAME_FROM)
@@ -64,9 +68,17 @@ public class MetaDefinition {
   @SerializedName(SERIALIZED_NAME_LAST_PAGE)
   private String lastPage;
 
+  public static final String SERIALIZED_NAME_LAST_PAGE_URL = "last_page_url";
+  @SerializedName(SERIALIZED_NAME_LAST_PAGE_URL)
+  private String lastPageUrl;
+
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
   private List<MetaDefinitionLinksInner> links = null;
+
+  public static final String SERIALIZED_NAME_NEXT_PAGE_URL = "next_page_url";
+  @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URL)
+  private String nextPageUrl;
 
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
@@ -75,6 +87,10 @@ public class MetaDefinition {
   public static final String SERIALIZED_NAME_PER_PAGE = "per_page";
   @SerializedName(SERIALIZED_NAME_PER_PAGE)
   private String perPage;
+
+  public static final String SERIALIZED_NAME_PREV_PAGE_URL = "prev_page_url";
+  @SerializedName(SERIALIZED_NAME_PREV_PAGE_URL)
+  private String prevPageUrl;
 
   public static final String SERIALIZED_NAME_TO = "to";
   @SerializedName(SERIALIZED_NAME_TO)
@@ -98,7 +114,7 @@ public class MetaDefinition {
    * @return currentPage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "Current page.")
+  @ApiModelProperty(example = "2", value = "Current page.")
 
   public String getCurrentPage() {
     return currentPage;
@@ -107,6 +123,29 @@ public class MetaDefinition {
 
   public void setCurrentPage(String currentPage) {
     this.currentPage = currentPage;
+  }
+
+
+  public MetaDefinition firstPageUrl(String firstPageUrl) {
+    
+    this.firstPageUrl = firstPageUrl;
+    return this;
+  }
+
+   /**
+   * URL base path.
+   * @return firstPageUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "http://localhost:8087/page=1", value = "URL base path.")
+
+  public String getFirstPageUrl() {
+    return firstPageUrl;
+  }
+
+
+  public void setFirstPageUrl(String firstPageUrl) {
+    this.firstPageUrl = firstPageUrl;
   }
 
 
@@ -144,7 +183,7 @@ public class MetaDefinition {
    * @return lastPage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "967", value = "Last page.")
+  @ApiModelProperty(example = "3", value = "Last page.")
 
   public String getLastPage() {
     return lastPage;
@@ -153,6 +192,29 @@ public class MetaDefinition {
 
   public void setLastPage(String lastPage) {
     this.lastPage = lastPage;
+  }
+
+
+  public MetaDefinition lastPageUrl(String lastPageUrl) {
+    
+    this.lastPageUrl = lastPageUrl;
+    return this;
+  }
+
+   /**
+   * URL base path.
+   * @return lastPageUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "http://localhost:8087/page=3", value = "URL base path.")
+
+  public String getLastPageUrl() {
+    return lastPageUrl;
+  }
+
+
+  public void setLastPageUrl(String lastPageUrl) {
+    this.lastPageUrl = lastPageUrl;
   }
 
 
@@ -184,6 +246,29 @@ public class MetaDefinition {
 
   public void setLinks(List<MetaDefinitionLinksInner> links) {
     this.links = links;
+  }
+
+
+  public MetaDefinition nextPageUrl(String nextPageUrl) {
+    
+    this.nextPageUrl = nextPageUrl;
+    return this;
+  }
+
+   /**
+   * URL base path.
+   * @return nextPageUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "http://localhost:8087/page=3", value = "URL base path.")
+
+  public String getNextPageUrl() {
+    return nextPageUrl;
+  }
+
+
+  public void setNextPageUrl(String nextPageUrl) {
+    this.nextPageUrl = nextPageUrl;
   }
 
 
@@ -233,6 +318,29 @@ public class MetaDefinition {
   }
 
 
+  public MetaDefinition prevPageUrl(String prevPageUrl) {
+    
+    this.prevPageUrl = prevPageUrl;
+    return this;
+  }
+
+   /**
+   * URL base path.
+   * @return prevPageUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "http://localhost:8087/page=1", value = "URL base path.")
+
+  public String getPrevPageUrl() {
+    return prevPageUrl;
+  }
+
+
+  public void setPrevPageUrl(String prevPageUrl) {
+    this.prevPageUrl = prevPageUrl;
+  }
+
+
   public MetaDefinition to(String to) {
     
     this.to = to;
@@ -267,7 +375,7 @@ public class MetaDefinition {
    * @return total
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "50", value = "Total records.")
+  @ApiModelProperty(example = "10000", value = "Total records.")
 
   public String getTotal() {
     return total;
@@ -290,18 +398,22 @@ public class MetaDefinition {
     }
     MetaDefinition metaDefinition = (MetaDefinition) o;
     return Objects.equals(this.currentPage, metaDefinition.currentPage) &&
+        Objects.equals(this.firstPageUrl, metaDefinition.firstPageUrl) &&
         Objects.equals(this.from, metaDefinition.from) &&
         Objects.equals(this.lastPage, metaDefinition.lastPage) &&
+        Objects.equals(this.lastPageUrl, metaDefinition.lastPageUrl) &&
         Objects.equals(this.links, metaDefinition.links) &&
+        Objects.equals(this.nextPageUrl, metaDefinition.nextPageUrl) &&
         Objects.equals(this.path, metaDefinition.path) &&
         Objects.equals(this.perPage, metaDefinition.perPage) &&
+        Objects.equals(this.prevPageUrl, metaDefinition.prevPageUrl) &&
         Objects.equals(this.to, metaDefinition.to) &&
         Objects.equals(this.total, metaDefinition.total);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(currentPage, from, lastPage, links, path, perPage, to, total);
+    return Objects.hash(currentPage, firstPageUrl, from, lastPage, lastPageUrl, links, nextPageUrl, path, perPage, prevPageUrl, to, total);
   }
 
   @Override
@@ -309,11 +421,15 @@ public class MetaDefinition {
     StringBuilder sb = new StringBuilder();
     sb.append("class MetaDefinition {\n");
     sb.append("    currentPage: ").append(toIndentedString(currentPage)).append("\n");
+    sb.append("    firstPageUrl: ").append(toIndentedString(firstPageUrl)).append("\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    lastPage: ").append(toIndentedString(lastPage)).append("\n");
+    sb.append("    lastPageUrl: ").append(toIndentedString(lastPageUrl)).append("\n");
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    nextPageUrl: ").append(toIndentedString(nextPageUrl)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    perPage: ").append(toIndentedString(perPage)).append("\n");
+    sb.append("    prevPageUrl: ").append(toIndentedString(prevPageUrl)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("}");
@@ -339,11 +455,15 @@ public class MetaDefinition {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("current_page");
+    openapiFields.add("first_page_url");
     openapiFields.add("from");
     openapiFields.add("last_page");
+    openapiFields.add("last_page_url");
     openapiFields.add("links");
+    openapiFields.add("next_page_url");
     openapiFields.add("path");
     openapiFields.add("per_page");
+    openapiFields.add("prev_page_url");
     openapiFields.add("to");
     openapiFields.add("total");
 
@@ -376,11 +496,17 @@ public class MetaDefinition {
       if (jsonObj.get("current_page") != null && !jsonObj.get("current_page").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `current_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("current_page").toString()));
       }
+      if (jsonObj.get("first_page_url") != null && !jsonObj.get("first_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `first_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("first_page_url").toString()));
+      }
       if (jsonObj.get("from") != null && !jsonObj.get("from").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `from` to be a primitive type in the JSON string but got `%s`", jsonObj.get("from").toString()));
       }
       if (jsonObj.get("last_page") != null && !jsonObj.get("last_page").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `last_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_page").toString()));
+      }
+      if (jsonObj.get("last_page_url") != null && !jsonObj.get("last_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `last_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_page_url").toString()));
       }
       JsonArray jsonArraylinks = jsonObj.getAsJsonArray("links");
       if (jsonArraylinks != null) {
@@ -394,11 +520,17 @@ public class MetaDefinition {
           MetaDefinitionLinksInner.validateJsonObject(jsonArraylinks.get(i).getAsJsonObject());
         };
       }
+      if (jsonObj.get("next_page_url") != null && !jsonObj.get("next_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `next_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("next_page_url").toString()));
+      }
       if (jsonObj.get("path") != null && !jsonObj.get("path").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
       }
       if (jsonObj.get("per_page") != null && !jsonObj.get("per_page").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `per_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("per_page").toString()));
+      }
+      if (jsonObj.get("prev_page_url") != null && !jsonObj.get("prev_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `prev_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("prev_page_url").toString()));
       }
       if (jsonObj.get("to") != null && !jsonObj.get("to").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("to").toString()));
