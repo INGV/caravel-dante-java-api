@@ -24,7 +24,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import org.ingv.dante.model.TypeOriginName;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -49,15 +48,11 @@ import org.ingv.dante.JSON;
 /**
  * Quake2kSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:58:43.855491Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-13T17:31:17.617956Z[Etc/UTC]")
 public class Quake2kSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
   private Long quakeId;
-
-  public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION)
-  private TypeOriginName version = TypeOriginName.HYPOCENTER;
 
   public static final String SERIALIZED_NAME_ORIGIN_TIME = "originTime";
   @SerializedName(SERIALIZED_NAME_ORIGIN_TIME)
@@ -118,29 +113,6 @@ public class Quake2kSchemaEwMessage {
 
   public void setQuakeId(Long quakeId) {
     this.quakeId = quakeId;
-  }
-
-
-  public Quake2kSchemaEwMessage version(TypeOriginName version) {
-    
-    this.version = version;
-    return this;
-  }
-
-   /**
-   * Get version
-   * @return version
-  **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
-  public TypeOriginName getVersion() {
-    return version;
-  }
-
-
-  public void setVersion(TypeOriginName version) {
-    this.version = version;
   }
 
 
@@ -366,7 +338,6 @@ public class Quake2kSchemaEwMessage {
     }
     Quake2kSchemaEwMessage quake2kSchemaEwMessage = (Quake2kSchemaEwMessage) o;
     return Objects.equals(this.quakeId, quake2kSchemaEwMessage.quakeId) &&
-        Objects.equals(this.version, quake2kSchemaEwMessage.version) &&
         Objects.equals(this.originTime, quake2kSchemaEwMessage.originTime) &&
         Objects.equals(this.latitude, quake2kSchemaEwMessage.latitude) &&
         Objects.equals(this.longitude, quake2kSchemaEwMessage.longitude) &&
@@ -380,7 +351,7 @@ public class Quake2kSchemaEwMessage {
 
   @Override
   public int hashCode() {
-    return Objects.hash(quakeId, version, originTime, latitude, longitude, depth, rms, dmin, ravg, gap, nph);
+    return Objects.hash(quakeId, originTime, latitude, longitude, depth, rms, dmin, ravg, gap, nph);
   }
 
   @Override
@@ -388,7 +359,6 @@ public class Quake2kSchemaEwMessage {
     StringBuilder sb = new StringBuilder();
     sb.append("class Quake2kSchemaEwMessage {\n");
     sb.append("    quakeId: ").append(toIndentedString(quakeId)).append("\n");
-    sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    originTime: ").append(toIndentedString(originTime)).append("\n");
     sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
     sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
@@ -421,7 +391,6 @@ public class Quake2kSchemaEwMessage {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("quakeId");
-    openapiFields.add("version");
     openapiFields.add("originTime");
     openapiFields.add("latitude");
     openapiFields.add("longitude");
@@ -435,7 +404,6 @@ public class Quake2kSchemaEwMessage {
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("quakeId");
-    openapiRequiredFields.add("version");
     openapiRequiredFields.add("originTime");
     openapiRequiredFields.add("latitude");
     openapiRequiredFields.add("longitude");

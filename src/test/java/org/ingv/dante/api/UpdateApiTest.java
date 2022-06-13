@@ -14,11 +14,14 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
-import org.ingv.dante.model.AddLocalspaceRequest;
-import org.ingv.dante.model.AddTypeEventRequest;
-import org.ingv.dante.model.AddTypeMagnitudeRequest;
-import org.ingv.dante.model.AddTypeOriginRequest;
+import org.ingv.dante.model.AddOriginFlag201Response;
+import org.ingv.dante.model.ObjectTableLocalspace;
+import org.ingv.dante.model.ObjectTableProvenance;
+import org.ingv.dante.model.ObjectTableTypeEvent;
+import org.ingv.dante.model.ObjectTableTypeMagnitude;
+import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.ingv.dante.model.Problem;
+import org.ingv.dante.model.UpdateEvent200Response;
 import org.ingv.dante.model.UpdateEventRequest;
 import org.ingv.dante.model.UpdateOriginFlagRequest;
 import org.junit.jupiter.api.Disabled;
@@ -48,7 +51,7 @@ public class UpdateApiTest {
     public void updateEventTest() throws ApiException {
         Long id = null;
         UpdateEventRequest updateEventRequest = null;
-        api.updateEvent(id, updateEventRequest);
+        UpdateEvent200Response response = api.updateEvent(id, updateEventRequest);
         // TODO: test validations
     }
 
@@ -62,8 +65,8 @@ public class UpdateApiTest {
     @Test
     public void updateLocalspaceTest() throws ApiException {
         Long id = null;
-        AddLocalspaceRequest addLocalspaceRequest = null;
-        api.updateLocalspace(id, addLocalspaceRequest);
+        ObjectTableLocalspace objectTableLocalspace = null;
+        ObjectTableLocalspace response = api.updateLocalspace(id, objectTableLocalspace);
         // TODO: test validations
     }
 
@@ -78,7 +81,22 @@ public class UpdateApiTest {
     public void updateOriginFlagTest() throws ApiException {
         Long id = null;
         UpdateOriginFlagRequest updateOriginFlagRequest = null;
-        api.updateOriginFlag(id, updateOriginFlagRequest);
+        AddOriginFlag201Response response = api.updateOriginFlag(id, updateOriginFlagRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Update an existing provenance
+     *
+     * Update an existing provenance.&lt;/br&gt; To use this API you must be authenticated.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateProvenanceTest() throws ApiException {
+        Long id = null;
+        ObjectTableProvenance objectTableProvenance = null;
+        ObjectTableProvenance response = api.updateProvenance(id, objectTableProvenance);
         // TODO: test validations
     }
 
@@ -92,8 +110,8 @@ public class UpdateApiTest {
     @Test
     public void updateTypeEventTest() throws ApiException {
         Long id = null;
-        AddTypeEventRequest addTypeEventRequest = null;
-        api.updateTypeEvent(id, addTypeEventRequest);
+        ObjectTableTypeEvent objectTableTypeEvent = null;
+        ObjectTableTypeEvent response = api.updateTypeEvent(id, objectTableTypeEvent);
         // TODO: test validations
     }
 
@@ -107,8 +125,8 @@ public class UpdateApiTest {
     @Test
     public void updateTypeMagnitudeTest() throws ApiException {
         Long id = null;
-        AddTypeMagnitudeRequest addTypeMagnitudeRequest = null;
-        api.updateTypeMagnitude(id, addTypeMagnitudeRequest);
+        ObjectTableTypeMagnitude objectTableTypeMagnitude = null;
+        ObjectTableTypeMagnitude response = api.updateTypeMagnitude(id, objectTableTypeMagnitude);
         // TODO: test validations
     }
 
@@ -122,8 +140,8 @@ public class UpdateApiTest {
     @Test
     public void updateTypeOriginTest() throws ApiException {
         Long id = null;
-        AddTypeOriginRequest addTypeOriginRequest = null;
-        api.updateTypeOrigin(id, addTypeOriginRequest);
+        ObjectTableTypeOrigin objectTableTypeOrigin = null;
+        ObjectTableTypeOrigin response = api.updateTypeOrigin(id, objectTableTypeOrigin);
         // TODO: test validations
     }
 

@@ -30,8 +30,6 @@ import java.io.IOException;
 import org.ingv.dante.model.AddEvent201Response;
 import org.ingv.dante.model.AddFocalmechanism201Response;
 import org.ingv.dante.model.AddFocalmechanismRequest;
-import org.ingv.dante.model.AddLocalspace201Response;
-import org.ingv.dante.model.AddLocalspaceRequest;
 import org.ingv.dante.model.AddMagnitude201Response;
 import org.ingv.dante.model.AddMagnitudeRequest;
 import org.ingv.dante.model.AddMomenttensor201Response;
@@ -42,13 +40,12 @@ import org.ingv.dante.model.AddOriginFlagRequest;
 import org.ingv.dante.model.AddOriginRequest;
 import org.ingv.dante.model.AddStrongmotion201Response;
 import org.ingv.dante.model.AddStrongmotionRequest;
-import org.ingv.dante.model.AddTypeEvent201Response;
-import org.ingv.dante.model.AddTypeEventRequest;
-import org.ingv.dante.model.AddTypeMagnitude201Response;
-import org.ingv.dante.model.AddTypeMagnitudeRequest;
-import org.ingv.dante.model.AddTypeOrigin201Response;
-import org.ingv.dante.model.AddTypeOriginRequest;
 import org.ingv.dante.model.GetEvent200Response;
+import org.ingv.dante.model.ObjectTableLocalspace;
+import org.ingv.dante.model.ObjectTableProvenance;
+import org.ingv.dante.model.ObjectTableTypeEvent;
+import org.ingv.dante.model.ObjectTableTypeMagnitude;
+import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.ingv.dante.model.Problem;
 
 import java.lang.reflect.Type;
@@ -397,7 +394,7 @@ public class StoreApi {
     }
     /**
      * Build call for addLocalspace
-     * @param addLocalspaceRequest JSON to store (required)
+     * @param objectTableLocalspace JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -413,7 +410,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addLocalspaceCall(AddLocalspaceRequest addLocalspaceRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addLocalspaceCall(ObjectTableLocalspace objectTableLocalspace, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -427,10 +424,10 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = addLocalspaceRequest;
+        Object localVarPostBody = objectTableLocalspace;
 
         // create path and map variables
-        String localVarPath = "/quakedb/_table/v1/localspace";
+        String localVarPath = "/quakedb/table/v1/localspace";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -459,15 +456,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addLocalspaceValidateBeforeCall(AddLocalspaceRequest addLocalspaceRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addLocalspaceValidateBeforeCall(ObjectTableLocalspace objectTableLocalspace, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'addLocalspaceRequest' is set
-        if (addLocalspaceRequest == null) {
-            throw new ApiException("Missing the required parameter 'addLocalspaceRequest' when calling addLocalspace(Async)");
+        // verify the required parameter 'objectTableLocalspace' is set
+        if (objectTableLocalspace == null) {
+            throw new ApiException("Missing the required parameter 'objectTableLocalspace' when calling addLocalspace(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addLocalspaceCall(addLocalspaceRequest, _callback);
+        okhttp3.Call localVarCall = addLocalspaceCall(objectTableLocalspace, _callback);
         return localVarCall;
 
     }
@@ -475,8 +472,8 @@ public class StoreApi {
     /**
      * Add a new localspace to the DB
      * This API is used to add an localspace object.
-     * @param addLocalspaceRequest JSON to store (required)
-     * @return AddLocalspace201Response
+     * @param objectTableLocalspace JSON to store (required)
+     * @return ObjectTableLocalspace
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -490,16 +487,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public AddLocalspace201Response addLocalspace(AddLocalspaceRequest addLocalspaceRequest) throws ApiException {
-        ApiResponse<AddLocalspace201Response> localVarResp = addLocalspaceWithHttpInfo(addLocalspaceRequest);
+    public ObjectTableLocalspace addLocalspace(ObjectTableLocalspace objectTableLocalspace) throws ApiException {
+        ApiResponse<ObjectTableLocalspace> localVarResp = addLocalspaceWithHttpInfo(objectTableLocalspace);
         return localVarResp.getData();
     }
 
     /**
      * Add a new localspace to the DB
      * This API is used to add an localspace object.
-     * @param addLocalspaceRequest JSON to store (required)
-     * @return ApiResponse&lt;AddLocalspace201Response&gt;
+     * @param objectTableLocalspace JSON to store (required)
+     * @return ApiResponse&lt;ObjectTableLocalspace&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -513,16 +510,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AddLocalspace201Response> addLocalspaceWithHttpInfo(AddLocalspaceRequest addLocalspaceRequest) throws ApiException {
-        okhttp3.Call localVarCall = addLocalspaceValidateBeforeCall(addLocalspaceRequest, null);
-        Type localVarReturnType = new TypeToken<AddLocalspace201Response>(){}.getType();
+    public ApiResponse<ObjectTableLocalspace> addLocalspaceWithHttpInfo(ObjectTableLocalspace objectTableLocalspace) throws ApiException {
+        okhttp3.Call localVarCall = addLocalspaceValidateBeforeCall(objectTableLocalspace, null);
+        Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new localspace to the DB (asynchronously)
      * This API is used to add an localspace object.
-     * @param addLocalspaceRequest JSON to store (required)
+     * @param objectTableLocalspace JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -538,10 +535,10 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addLocalspaceAsync(AddLocalspaceRequest addLocalspaceRequest, final ApiCallback<AddLocalspace201Response> _callback) throws ApiException {
+    public okhttp3.Call addLocalspaceAsync(ObjectTableLocalspace objectTableLocalspace, final ApiCallback<ObjectTableLocalspace> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addLocalspaceValidateBeforeCall(addLocalspaceRequest, _callback);
-        Type localVarReturnType = new TypeToken<AddLocalspace201Response>(){}.getType();
+        okhttp3.Call localVarCall = addLocalspaceValidateBeforeCall(objectTableLocalspace, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1146,6 +1143,156 @@ public class StoreApi {
         return localVarCall;
     }
     /**
+     * Build call for addProvenance
+     * @param objectTableProvenance JSON to store (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call addProvenanceCall(ObjectTableProvenance objectTableProvenance, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = objectTableProvenance;
+
+        // create path and map variables
+        String localVarPath = "/quakedb/table/v1/provenance";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/problem+json", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call addProvenanceValidateBeforeCall(ObjectTableProvenance objectTableProvenance, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'objectTableProvenance' is set
+        if (objectTableProvenance == null) {
+            throw new ApiException("Missing the required parameter 'objectTableProvenance' when calling addProvenance(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = addProvenanceCall(objectTableProvenance, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Add a new provenance to the DB
+     * This API is used to add an provenance object.
+     * @param objectTableProvenance JSON to store (required)
+     * @return ObjectTableProvenance
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ObjectTableProvenance addProvenance(ObjectTableProvenance objectTableProvenance) throws ApiException {
+        ApiResponse<ObjectTableProvenance> localVarResp = addProvenanceWithHttpInfo(objectTableProvenance);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Add a new provenance to the DB
+     * This API is used to add an provenance object.
+     * @param objectTableProvenance JSON to store (required)
+     * @return ApiResponse&lt;ObjectTableProvenance&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ObjectTableProvenance> addProvenanceWithHttpInfo(ObjectTableProvenance objectTableProvenance) throws ApiException {
+        okhttp3.Call localVarCall = addProvenanceValidateBeforeCall(objectTableProvenance, null);
+        Type localVarReturnType = new TypeToken<ObjectTableProvenance>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Add a new provenance to the DB (asynchronously)
+     * This API is used to add an provenance object.
+     * @param objectTableProvenance JSON to store (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call addProvenanceAsync(ObjectTableProvenance objectTableProvenance, final ApiCallback<ObjectTableProvenance> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = addProvenanceValidateBeforeCall(objectTableProvenance, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableProvenance>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for addStrongmotion
      * @param addStrongmotionRequest JSON to store (required)
      * @param _callback Callback for upload/download progress
@@ -1297,7 +1444,7 @@ public class StoreApi {
     }
     /**
      * Build call for addTypeEvent
-     * @param addTypeEventRequest JSON to store (required)
+     * @param objectTableTypeEvent JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1313,7 +1460,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addTypeEventCall(AddTypeEventRequest addTypeEventRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addTypeEventCall(ObjectTableTypeEvent objectTableTypeEvent, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1327,10 +1474,10 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = addTypeEventRequest;
+        Object localVarPostBody = objectTableTypeEvent;
 
         // create path and map variables
-        String localVarPath = "/quakedb/_table/v1/type_event";
+        String localVarPath = "/quakedb/table/v1/type-event";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1359,15 +1506,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addTypeEventValidateBeforeCall(AddTypeEventRequest addTypeEventRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addTypeEventValidateBeforeCall(ObjectTableTypeEvent objectTableTypeEvent, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'addTypeEventRequest' is set
-        if (addTypeEventRequest == null) {
-            throw new ApiException("Missing the required parameter 'addTypeEventRequest' when calling addTypeEvent(Async)");
+        // verify the required parameter 'objectTableTypeEvent' is set
+        if (objectTableTypeEvent == null) {
+            throw new ApiException("Missing the required parameter 'objectTableTypeEvent' when calling addTypeEvent(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addTypeEventCall(addTypeEventRequest, _callback);
+        okhttp3.Call localVarCall = addTypeEventCall(objectTableTypeEvent, _callback);
         return localVarCall;
 
     }
@@ -1375,8 +1522,8 @@ public class StoreApi {
     /**
      * Add a new type_event to the DB
      * This API is used to add an type_event object.
-     * @param addTypeEventRequest JSON to store (required)
-     * @return AddTypeEvent201Response
+     * @param objectTableTypeEvent JSON to store (required)
+     * @return ObjectTableTypeEvent
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1390,16 +1537,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public AddTypeEvent201Response addTypeEvent(AddTypeEventRequest addTypeEventRequest) throws ApiException {
-        ApiResponse<AddTypeEvent201Response> localVarResp = addTypeEventWithHttpInfo(addTypeEventRequest);
+    public ObjectTableTypeEvent addTypeEvent(ObjectTableTypeEvent objectTableTypeEvent) throws ApiException {
+        ApiResponse<ObjectTableTypeEvent> localVarResp = addTypeEventWithHttpInfo(objectTableTypeEvent);
         return localVarResp.getData();
     }
 
     /**
      * Add a new type_event to the DB
      * This API is used to add an type_event object.
-     * @param addTypeEventRequest JSON to store (required)
-     * @return ApiResponse&lt;AddTypeEvent201Response&gt;
+     * @param objectTableTypeEvent JSON to store (required)
+     * @return ApiResponse&lt;ObjectTableTypeEvent&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1413,16 +1560,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AddTypeEvent201Response> addTypeEventWithHttpInfo(AddTypeEventRequest addTypeEventRequest) throws ApiException {
-        okhttp3.Call localVarCall = addTypeEventValidateBeforeCall(addTypeEventRequest, null);
-        Type localVarReturnType = new TypeToken<AddTypeEvent201Response>(){}.getType();
+    public ApiResponse<ObjectTableTypeEvent> addTypeEventWithHttpInfo(ObjectTableTypeEvent objectTableTypeEvent) throws ApiException {
+        okhttp3.Call localVarCall = addTypeEventValidateBeforeCall(objectTableTypeEvent, null);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeEvent>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new type_event to the DB (asynchronously)
      * This API is used to add an type_event object.
-     * @param addTypeEventRequest JSON to store (required)
+     * @param objectTableTypeEvent JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1438,16 +1585,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addTypeEventAsync(AddTypeEventRequest addTypeEventRequest, final ApiCallback<AddTypeEvent201Response> _callback) throws ApiException {
+    public okhttp3.Call addTypeEventAsync(ObjectTableTypeEvent objectTableTypeEvent, final ApiCallback<ObjectTableTypeEvent> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addTypeEventValidateBeforeCall(addTypeEventRequest, _callback);
-        Type localVarReturnType = new TypeToken<AddTypeEvent201Response>(){}.getType();
+        okhttp3.Call localVarCall = addTypeEventValidateBeforeCall(objectTableTypeEvent, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeEvent>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for addTypeMagnitude
-     * @param addTypeMagnitudeRequest JSON to store (required)
+     * @param objectTableTypeMagnitude JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1463,7 +1610,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addTypeMagnitudeCall(AddTypeMagnitudeRequest addTypeMagnitudeRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addTypeMagnitudeCall(ObjectTableTypeMagnitude objectTableTypeMagnitude, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1477,10 +1624,10 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = addTypeMagnitudeRequest;
+        Object localVarPostBody = objectTableTypeMagnitude;
 
         // create path and map variables
-        String localVarPath = "/quakedb/_table/v1/type_magnitude";
+        String localVarPath = "/quakedb/table/v1/type-magnitude";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1509,15 +1656,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addTypeMagnitudeValidateBeforeCall(AddTypeMagnitudeRequest addTypeMagnitudeRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addTypeMagnitudeValidateBeforeCall(ObjectTableTypeMagnitude objectTableTypeMagnitude, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'addTypeMagnitudeRequest' is set
-        if (addTypeMagnitudeRequest == null) {
-            throw new ApiException("Missing the required parameter 'addTypeMagnitudeRequest' when calling addTypeMagnitude(Async)");
+        // verify the required parameter 'objectTableTypeMagnitude' is set
+        if (objectTableTypeMagnitude == null) {
+            throw new ApiException("Missing the required parameter 'objectTableTypeMagnitude' when calling addTypeMagnitude(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addTypeMagnitudeCall(addTypeMagnitudeRequest, _callback);
+        okhttp3.Call localVarCall = addTypeMagnitudeCall(objectTableTypeMagnitude, _callback);
         return localVarCall;
 
     }
@@ -1525,8 +1672,8 @@ public class StoreApi {
     /**
      * Add a new type_magnitude to the DB
      * This API is used to add an type_magnitude object.
-     * @param addTypeMagnitudeRequest JSON to store (required)
-     * @return AddTypeMagnitude201Response
+     * @param objectTableTypeMagnitude JSON to store (required)
+     * @return ObjectTableTypeMagnitude
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1540,16 +1687,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public AddTypeMagnitude201Response addTypeMagnitude(AddTypeMagnitudeRequest addTypeMagnitudeRequest) throws ApiException {
-        ApiResponse<AddTypeMagnitude201Response> localVarResp = addTypeMagnitudeWithHttpInfo(addTypeMagnitudeRequest);
+    public ObjectTableTypeMagnitude addTypeMagnitude(ObjectTableTypeMagnitude objectTableTypeMagnitude) throws ApiException {
+        ApiResponse<ObjectTableTypeMagnitude> localVarResp = addTypeMagnitudeWithHttpInfo(objectTableTypeMagnitude);
         return localVarResp.getData();
     }
 
     /**
      * Add a new type_magnitude to the DB
      * This API is used to add an type_magnitude object.
-     * @param addTypeMagnitudeRequest JSON to store (required)
-     * @return ApiResponse&lt;AddTypeMagnitude201Response&gt;
+     * @param objectTableTypeMagnitude JSON to store (required)
+     * @return ApiResponse&lt;ObjectTableTypeMagnitude&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1563,16 +1710,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AddTypeMagnitude201Response> addTypeMagnitudeWithHttpInfo(AddTypeMagnitudeRequest addTypeMagnitudeRequest) throws ApiException {
-        okhttp3.Call localVarCall = addTypeMagnitudeValidateBeforeCall(addTypeMagnitudeRequest, null);
-        Type localVarReturnType = new TypeToken<AddTypeMagnitude201Response>(){}.getType();
+    public ApiResponse<ObjectTableTypeMagnitude> addTypeMagnitudeWithHttpInfo(ObjectTableTypeMagnitude objectTableTypeMagnitude) throws ApiException {
+        okhttp3.Call localVarCall = addTypeMagnitudeValidateBeforeCall(objectTableTypeMagnitude, null);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeMagnitude>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new type_magnitude to the DB (asynchronously)
      * This API is used to add an type_magnitude object.
-     * @param addTypeMagnitudeRequest JSON to store (required)
+     * @param objectTableTypeMagnitude JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1588,16 +1735,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addTypeMagnitudeAsync(AddTypeMagnitudeRequest addTypeMagnitudeRequest, final ApiCallback<AddTypeMagnitude201Response> _callback) throws ApiException {
+    public okhttp3.Call addTypeMagnitudeAsync(ObjectTableTypeMagnitude objectTableTypeMagnitude, final ApiCallback<ObjectTableTypeMagnitude> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addTypeMagnitudeValidateBeforeCall(addTypeMagnitudeRequest, _callback);
-        Type localVarReturnType = new TypeToken<AddTypeMagnitude201Response>(){}.getType();
+        okhttp3.Call localVarCall = addTypeMagnitudeValidateBeforeCall(objectTableTypeMagnitude, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeMagnitude>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for addTypeOrigin
-     * @param addTypeOriginRequest JSON to store (required)
+     * @param objectTableTypeOrigin JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1613,7 +1760,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addTypeOriginCall(AddTypeOriginRequest addTypeOriginRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addTypeOriginCall(ObjectTableTypeOrigin objectTableTypeOrigin, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1627,10 +1774,10 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = addTypeOriginRequest;
+        Object localVarPostBody = objectTableTypeOrigin;
 
         // create path and map variables
-        String localVarPath = "/quakedb/_table/v1/type_origin";
+        String localVarPath = "/quakedb/table/v1/type-origin";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1659,15 +1806,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addTypeOriginValidateBeforeCall(AddTypeOriginRequest addTypeOriginRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addTypeOriginValidateBeforeCall(ObjectTableTypeOrigin objectTableTypeOrigin, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'addTypeOriginRequest' is set
-        if (addTypeOriginRequest == null) {
-            throw new ApiException("Missing the required parameter 'addTypeOriginRequest' when calling addTypeOrigin(Async)");
+        // verify the required parameter 'objectTableTypeOrigin' is set
+        if (objectTableTypeOrigin == null) {
+            throw new ApiException("Missing the required parameter 'objectTableTypeOrigin' when calling addTypeOrigin(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addTypeOriginCall(addTypeOriginRequest, _callback);
+        okhttp3.Call localVarCall = addTypeOriginCall(objectTableTypeOrigin, _callback);
         return localVarCall;
 
     }
@@ -1675,8 +1822,8 @@ public class StoreApi {
     /**
      * Add a new type_origin to the DB
      * This API is used to add an type_origin object.
-     * @param addTypeOriginRequest JSON to store (required)
-     * @return AddTypeOrigin201Response
+     * @param objectTableTypeOrigin JSON to store (required)
+     * @return ObjectTableTypeOrigin
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1690,16 +1837,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public AddTypeOrigin201Response addTypeOrigin(AddTypeOriginRequest addTypeOriginRequest) throws ApiException {
-        ApiResponse<AddTypeOrigin201Response> localVarResp = addTypeOriginWithHttpInfo(addTypeOriginRequest);
+    public ObjectTableTypeOrigin addTypeOrigin(ObjectTableTypeOrigin objectTableTypeOrigin) throws ApiException {
+        ApiResponse<ObjectTableTypeOrigin> localVarResp = addTypeOriginWithHttpInfo(objectTableTypeOrigin);
         return localVarResp.getData();
     }
 
     /**
      * Add a new type_origin to the DB
      * This API is used to add an type_origin object.
-     * @param addTypeOriginRequest JSON to store (required)
-     * @return ApiResponse&lt;AddTypeOrigin201Response&gt;
+     * @param objectTableTypeOrigin JSON to store (required)
+     * @return ApiResponse&lt;ObjectTableTypeOrigin&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1713,16 +1860,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AddTypeOrigin201Response> addTypeOriginWithHttpInfo(AddTypeOriginRequest addTypeOriginRequest) throws ApiException {
-        okhttp3.Call localVarCall = addTypeOriginValidateBeforeCall(addTypeOriginRequest, null);
-        Type localVarReturnType = new TypeToken<AddTypeOrigin201Response>(){}.getType();
+    public ApiResponse<ObjectTableTypeOrigin> addTypeOriginWithHttpInfo(ObjectTableTypeOrigin objectTableTypeOrigin) throws ApiException {
+        okhttp3.Call localVarCall = addTypeOriginValidateBeforeCall(objectTableTypeOrigin, null);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeOrigin>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new type_origin to the DB (asynchronously)
      * This API is used to add an type_origin object.
-     * @param addTypeOriginRequest JSON to store (required)
+     * @param objectTableTypeOrigin JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1738,10 +1885,10 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addTypeOriginAsync(AddTypeOriginRequest addTypeOriginRequest, final ApiCallback<AddTypeOrigin201Response> _callback) throws ApiException {
+    public okhttp3.Call addTypeOriginAsync(ObjectTableTypeOrigin objectTableTypeOrigin, final ApiCallback<ObjectTableTypeOrigin> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addTypeOriginValidateBeforeCall(addTypeOriginRequest, _callback);
-        Type localVarReturnType = new TypeToken<AddTypeOrigin201Response>(){}.getType();
+        okhttp3.Call localVarCall = addTypeOriginValidateBeforeCall(objectTableTypeOrigin, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeOrigin>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

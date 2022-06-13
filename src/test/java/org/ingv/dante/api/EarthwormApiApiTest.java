@@ -16,7 +16,6 @@ package org.ingv.dante.api;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.model.AddEwHyp2000arc201Response;
 import org.ingv.dante.model.AddEwHyp2000arcRequest;
-import org.ingv.dante.model.AddEwQuake2k201Response;
 import org.ingv.dante.model.AddEwQuake2kRequest;
 import org.ingv.dante.model.AddHEwMagnitudeRequest;
 import org.ingv.dante.model.AddHEwPickScnl201Response;
@@ -25,6 +24,7 @@ import org.ingv.dante.model.AddHEwStrongmotionii201Response;
 import org.ingv.dante.model.AddHEwStrongmotioniiRequest;
 import org.ingv.dante.model.AddMagnitude201Response;
 import org.ingv.dante.model.Problem;
+import org.ingv.dante.model.UpdateEvent200Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -65,7 +65,7 @@ public class EarthwormApiApiTest {
     @Test
     public void addEwQuake2kTest() throws ApiException {
         AddEwQuake2kRequest addEwQuake2kRequest = null;
-        AddEwQuake2k201Response response = api.addEwQuake2k(addEwQuake2kRequest);
+        UpdateEvent200Response response = api.addEwQuake2k(addEwQuake2kRequest);
         // TODO: test validations
     }
 

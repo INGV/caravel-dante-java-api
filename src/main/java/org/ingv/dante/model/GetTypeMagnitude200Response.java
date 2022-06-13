@@ -26,9 +26,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.GetTypeMagnitude200ResponseAllOf;
-import org.ingv.dante.model.GetTypeMagnitude200ResponseAllOfDataInner;
 import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.MetaDefinitionLinksInner;
+import org.ingv.dante.model.ObjectTableTypeMagnitude;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeMagnitude200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:58:43.855491Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-13T17:31:17.617956Z[Etc/UTC]")
 public class GetTypeMagnitude200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -105,7 +105,7 @@ public class GetTypeMagnitude200Response {
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<GetTypeMagnitude200ResponseAllOfDataInner> data = null;
+  private List<ObjectTableTypeMagnitude> data = null;
 
   public GetTypeMagnitude200Response() { 
   }
@@ -394,13 +394,13 @@ public class GetTypeMagnitude200Response {
   }
 
 
-  public GetTypeMagnitude200Response data(List<GetTypeMagnitude200ResponseAllOfDataInner> data) {
+  public GetTypeMagnitude200Response data(List<ObjectTableTypeMagnitude> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetTypeMagnitude200Response addDataItem(GetTypeMagnitude200ResponseAllOfDataInner dataItem) {
+  public GetTypeMagnitude200Response addDataItem(ObjectTableTypeMagnitude dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -415,12 +415,12 @@ public class GetTypeMagnitude200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<GetTypeMagnitude200ResponseAllOfDataInner> getData() {
+  public List<ObjectTableTypeMagnitude> getData() {
     return data;
   }
 
 
-  public void setData(List<GetTypeMagnitude200ResponseAllOfDataInner> data) {
+  public void setData(List<ObjectTableTypeMagnitude> data) {
     this.data = data;
   }
 
@@ -588,7 +588,7 @@ public class GetTypeMagnitude200Response {
 
         // validate the optional field `data` (array)
         for (int i = 0; i < jsonArraydata.size(); i++) {
-          GetTypeMagnitude200ResponseAllOfDataInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+          ObjectTableTypeMagnitude.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
         };
       }
   }

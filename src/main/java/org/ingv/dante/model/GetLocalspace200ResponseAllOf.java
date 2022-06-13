@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.GetLocalspace200ResponseAllOfDataInner;
+import org.ingv.dante.model.ObjectTableLocalspace;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,22 +50,22 @@ import org.ingv.dante.JSON;
 /**
  * GetLocalspace200ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:58:43.855491Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-13T17:31:17.617956Z[Etc/UTC]")
 public class GetLocalspace200ResponseAllOf {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<GetLocalspace200ResponseAllOfDataInner> data = null;
+  private List<ObjectTableLocalspace> data = null;
 
   public GetLocalspace200ResponseAllOf() { 
   }
 
-  public GetLocalspace200ResponseAllOf data(List<GetLocalspace200ResponseAllOfDataInner> data) {
+  public GetLocalspace200ResponseAllOf data(List<ObjectTableLocalspace> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetLocalspace200ResponseAllOf addDataItem(GetLocalspace200ResponseAllOfDataInner dataItem) {
+  public GetLocalspace200ResponseAllOf addDataItem(ObjectTableLocalspace dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -80,12 +80,12 @@ public class GetLocalspace200ResponseAllOf {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<GetLocalspace200ResponseAllOfDataInner> getData() {
+  public List<ObjectTableLocalspace> getData() {
     return data;
   }
 
 
-  public void setData(List<GetLocalspace200ResponseAllOfDataInner> data) {
+  public void setData(List<ObjectTableLocalspace> data) {
     this.data = data;
   }
 
@@ -172,7 +172,7 @@ public class GetLocalspace200ResponseAllOf {
 
         // validate the optional field `data` (array)
         for (int i = 0; i < jsonArraydata.size(); i++) {
-          GetLocalspace200ResponseAllOfDataInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+          ObjectTableLocalspace.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
         };
       }
   }

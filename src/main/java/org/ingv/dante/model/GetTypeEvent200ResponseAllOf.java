@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.GetTypeEvent200ResponseAllOfDataInner;
+import org.ingv.dante.model.ObjectTableTypeEvent;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,22 +50,22 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeEvent200ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:58:43.855491Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-13T17:31:17.617956Z[Etc/UTC]")
 public class GetTypeEvent200ResponseAllOf {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<GetTypeEvent200ResponseAllOfDataInner> data = null;
+  private List<ObjectTableTypeEvent> data = null;
 
   public GetTypeEvent200ResponseAllOf() { 
   }
 
-  public GetTypeEvent200ResponseAllOf data(List<GetTypeEvent200ResponseAllOfDataInner> data) {
+  public GetTypeEvent200ResponseAllOf data(List<ObjectTableTypeEvent> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetTypeEvent200ResponseAllOf addDataItem(GetTypeEvent200ResponseAllOfDataInner dataItem) {
+  public GetTypeEvent200ResponseAllOf addDataItem(ObjectTableTypeEvent dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -80,12 +80,12 @@ public class GetTypeEvent200ResponseAllOf {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<GetTypeEvent200ResponseAllOfDataInner> getData() {
+  public List<ObjectTableTypeEvent> getData() {
     return data;
   }
 
 
-  public void setData(List<GetTypeEvent200ResponseAllOfDataInner> data) {
+  public void setData(List<ObjectTableTypeEvent> data) {
     this.data = data;
   }
 
@@ -172,7 +172,7 @@ public class GetTypeEvent200ResponseAllOf {
 
         // validate the optional field `data` (array)
         for (int i = 0; i < jsonArraydata.size(); i++) {
-          GetTypeEvent200ResponseAllOfDataInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+          ObjectTableTypeEvent.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
         };
       }
   }

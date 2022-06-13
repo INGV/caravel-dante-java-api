@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**data** | [**List&lt;GetTypeEvent200ResponseAllOfDataInner&gt;**](GetTypeEvent200ResponseAllOfDataInner.md) |  |  [optional] |
+|**data** | [**List&lt;ObjectTableTypeEvent&gt;**](ObjectTableTypeEvent.md) |  |  [optional] |
 
 
 

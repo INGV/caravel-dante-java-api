@@ -26,9 +26,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.GetTypeOrigin200ResponseAllOf;
-import org.ingv.dante.model.GetTypeOrigin200ResponseAllOfDataInner;
 import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.MetaDefinitionLinksInner;
+import org.ingv.dante.model.ObjectTableTypeOrigin;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeOrigin200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:58:43.855491Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-13T17:31:17.617956Z[Etc/UTC]")
 public class GetTypeOrigin200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -105,7 +105,7 @@ public class GetTypeOrigin200Response {
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<GetTypeOrigin200ResponseAllOfDataInner> data = null;
+  private List<ObjectTableTypeOrigin> data = null;
 
   public GetTypeOrigin200Response() { 
   }
@@ -394,13 +394,13 @@ public class GetTypeOrigin200Response {
   }
 
 
-  public GetTypeOrigin200Response data(List<GetTypeOrigin200ResponseAllOfDataInner> data) {
+  public GetTypeOrigin200Response data(List<ObjectTableTypeOrigin> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetTypeOrigin200Response addDataItem(GetTypeOrigin200ResponseAllOfDataInner dataItem) {
+  public GetTypeOrigin200Response addDataItem(ObjectTableTypeOrigin dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -415,12 +415,12 @@ public class GetTypeOrigin200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<GetTypeOrigin200ResponseAllOfDataInner> getData() {
+  public List<ObjectTableTypeOrigin> getData() {
     return data;
   }
 
 
-  public void setData(List<GetTypeOrigin200ResponseAllOfDataInner> data) {
+  public void setData(List<ObjectTableTypeOrigin> data) {
     this.data = data;
   }
 
@@ -588,7 +588,7 @@ public class GetTypeOrigin200Response {
 
         // validate the optional field `data` (array)
         for (int i = 0; i < jsonArraydata.size(); i++) {
-          GetTypeOrigin200ResponseAllOfDataInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+          ObjectTableTypeOrigin.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
         };
       }
   }

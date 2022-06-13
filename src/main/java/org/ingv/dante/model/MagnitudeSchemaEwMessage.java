@@ -26,7 +26,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.MagnitudePhasesInner;
-import org.ingv.dante.model.TypeOriginName;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:58:43.855491Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-13T17:31:17.617956Z[Etc/UTC]")
 public class MagnitudeSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -59,7 +58,7 @@ public class MagnitudeSchemaEwMessage {
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
-  private TypeOriginName version = TypeOriginName.HYPOCENTER;
+  private String version;
 
   public static final String SERIALIZED_NAME_MAG = "mag";
   @SerializedName(SERIALIZED_NAME_MAG)
@@ -143,25 +142,25 @@ public class MagnitudeSchemaEwMessage {
   }
 
 
-  public MagnitudeSchemaEwMessage version(TypeOriginName version) {
+  public MagnitudeSchemaEwMessage version(String version) {
     
     this.version = version;
     return this;
   }
 
    /**
-   * Get version
+   * Localization name (es:ew prelim,XX,WW,..) | varchar(255)
    * @return version
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "ew prelim", required = true, value = "Localization name (es:ew prelim,XX,WW,..) | varchar(255)")
 
-  public TypeOriginName getVersion() {
+  public String getVersion() {
     return version;
   }
 
 
-  public void setVersion(TypeOriginName version) {
+  public void setVersion(String version) {
     this.version = version;
   }
 
@@ -623,6 +622,9 @@ public class MagnitudeSchemaEwMessage {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("version") != null && !jsonObj.get("version").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
       if (jsonObj.get("qAuthor") != null && !jsonObj.get("qAuthor").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `qAuthor` to be a primitive type in the JSON string but got `%s`", jsonObj.get("qAuthor").toString()));

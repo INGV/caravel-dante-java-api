@@ -26,9 +26,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.GetTypeEvent200ResponseAllOf;
-import org.ingv.dante.model.GetTypeEvent200ResponseAllOfDataInner;
 import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.MetaDefinitionLinksInner;
+import org.ingv.dante.model.ObjectTableTypeEvent;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeEvent200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:58:43.855491Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-13T17:31:17.617956Z[Etc/UTC]")
 public class GetTypeEvent200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -105,7 +105,7 @@ public class GetTypeEvent200Response {
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<GetTypeEvent200ResponseAllOfDataInner> data = null;
+  private List<ObjectTableTypeEvent> data = null;
 
   public GetTypeEvent200Response() { 
   }
@@ -394,13 +394,13 @@ public class GetTypeEvent200Response {
   }
 
 
-  public GetTypeEvent200Response data(List<GetTypeEvent200ResponseAllOfDataInner> data) {
+  public GetTypeEvent200Response data(List<ObjectTableTypeEvent> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetTypeEvent200Response addDataItem(GetTypeEvent200ResponseAllOfDataInner dataItem) {
+  public GetTypeEvent200Response addDataItem(ObjectTableTypeEvent dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -415,12 +415,12 @@ public class GetTypeEvent200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<GetTypeEvent200ResponseAllOfDataInner> getData() {
+  public List<ObjectTableTypeEvent> getData() {
     return data;
   }
 
 
-  public void setData(List<GetTypeEvent200ResponseAllOfDataInner> data) {
+  public void setData(List<ObjectTableTypeEvent> data) {
     this.data = data;
   }
 
@@ -588,7 +588,7 @@ public class GetTypeEvent200Response {
 
         // validate the optional field `data` (array)
         for (int i = 0; i < jsonArraydata.size(); i++) {
-          GetTypeEvent200ResponseAllOfDataInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+          ObjectTableTypeEvent.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
         };
       }
   }

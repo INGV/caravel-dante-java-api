@@ -19,7 +19,7 @@
 |**prevPageUrl** | **String** | URL base path. |  [optional] |
 |**to** | **String** | Showed record to. |  [optional] |
 |**total** | **String** | Total records. |  [optional] |
-|**data** | [**List&lt;GetTypeEvent200ResponseAllOfDataInner&gt;**](GetTypeEvent200ResponseAllOfDataInner.md) |  |  [optional] |
+|**data** | [**List&lt;ObjectTableTypeEvent&gt;**](ObjectTableTypeEvent.md) |  |  [optional] |
 
 
 

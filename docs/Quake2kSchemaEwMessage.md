@@ -8,7 +8,6 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**quakeId** | **Long** | Localspace Id | bigint(19) |  |
-|**version** | **TypeOriginName** |  |  |
 |**originTime** | **OffsetDateTime** | Origin time | datetime(3) |  |
 |**latitude** | **Double** | Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  |
 |**longitude** | **Double** | Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  |

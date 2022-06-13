@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**data** | [**List&lt;GetTypeOrigin200ResponseAllOfDataInner&gt;**](GetTypeOrigin200ResponseAllOfDataInner.md) |  |  [optional] |
+|**data** | [**List&lt;ObjectTableTypeOrigin&gt;**](ObjectTableTypeOrigin.md) |  |  [optional] |
 
 
 

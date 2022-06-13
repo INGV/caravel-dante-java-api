@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.45.0-dev
-  - Build date: 2022-05-25T13:58:43.855491Z[Etc/UTC]
+  - Build date: 2022-06-13T17:31:17.617956Z[Etc/UTC]
 
   
 
@@ -139,10 +139,11 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DeleteApi* | [**deleteLocalspace**](docs/DeleteApi.md#deleteLocalspace) | **DELETE** /quakedb/_table/v1/localspace/{id} | Delete an existing localspace
-*DeleteApi* | [**deleteTypeEvent**](docs/DeleteApi.md#deleteTypeEvent) | **DELETE** /quakedb/_table/v1/type_event/{id} | Delete an existing type_event
-*DeleteApi* | [**deleteTypeMagnitude**](docs/DeleteApi.md#deleteTypeMagnitude) | **DELETE** /quakedb/_table/v1/type_magnitude/{id} | Delete an existing type_magnitude
-*DeleteApi* | [**deleteTypeOrigin**](docs/DeleteApi.md#deleteTypeOrigin) | **DELETE** /quakedb/_table/v1/type_origin/{id} | Delete an existing type_origin
+*DeleteApi* | [**deleteLocalspace**](docs/DeleteApi.md#deleteLocalspace) | **DELETE** /quakedb/table/v1/localspace/{id} | Delete an existing localspace
+*DeleteApi* | [**deleteProvenance**](docs/DeleteApi.md#deleteProvenance) | **DELETE** /quakedb/table/v1/provenance/{id} | Delete an existing provenance
+*DeleteApi* | [**deleteTypeEvent**](docs/DeleteApi.md#deleteTypeEvent) | **DELETE** /quakedb/table/v1/type-event/{id} | Delete an existing type_event
+*DeleteApi* | [**deleteTypeMagnitude**](docs/DeleteApi.md#deleteTypeMagnitude) | **DELETE** /quakedb/table/v1/type-magnitude/{id} | Delete an existing type_magnitude
+*DeleteApi* | [**deleteTypeOrigin**](docs/DeleteApi.md#deleteTypeOrigin) | **DELETE** /quakedb/table/v1/type-origin/{id} | Delete an existing type_origin
 *EarthwormApiApi* | [**addEwHyp2000arc**](docs/EarthwormApiApi.md#addEwHyp2000arc) | **POST** /quakedb/ew/v1/hyp2000arc | Insert a new hyp2000arc message to the DB using ew2openapi module
 *EarthwormApiApi* | [**addEwQuake2k**](docs/EarthwormApiApi.md#addEwQuake2k) | **POST** /quakedb/ew/v1/quake2k | Insert a new quake2k message to the DB using ew2openapi module
 *EarthwormApiApi* | [**addHEwMagnitude**](docs/EarthwormApiApi.md#addHEwMagnitude) | **POST** /quakedb/ew/v1/magnitude | Insert a new magnitude message to the DB using ew2openapi module
@@ -151,32 +152,35 @@ Class | Method | HTTP request | Description
 *GetApi* | [**getEvent**](docs/GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events.
 *GetApi* | [**getEvents**](docs/GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance.
 *GetApi* | [**getEventsPref**](docs/GetApi.md#getEventsPref) | **GET** /quakedb/v1/events-pref | This API returns the preferred origin and the preferred magnitude from all clusterd events.
-*GetApi* | [**getLocalspace**](docs/GetApi.md#getLocalspace) | **GET** /quakedb/_table/v1/localspace | This API returns all the localspace(s).
+*GetApi* | [**getLocalspace**](docs/GetApi.md#getLocalspace) | **GET** /quakedb/table/v1/localspace | This API returns all the localspace(s).
 *GetApi* | [**getMunicipiDistanceKmPopolazione**](docs/GetApi.md#getMunicipiDistanceKmPopolazione) | **GET** /boundaries/v1/municipi-distance-km-popolazione | This API returns the municipi-distance-km-popolazione used at INGV.
 *GetApi* | [**getOriginFlag**](docs/GetApi.md#getOriginFlag) | **GET** /quakedb/v1/origin-flag | This API returns the all the flags assosiated to the originid.
 *GetApi* | [**getOrigins**](docs/GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all origins and magnitudes.
+*GetApi* | [**getProvenance**](docs/GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s).
 *GetApi* | [**getRegionName**](docs/GetApi.md#getRegionName) | **GET** /boundaries/v1/region-name | This API returns the region name used at INGV.
 *GetApi* | [**getStatus**](docs/GetApi.md#getStatus) | **GET** /status | Return the application status
-*GetApi* | [**getTypeEvent**](docs/GetApi.md#getTypeEvent) | **GET** /quakedb/_table/v1/type_event | This API returns all the type_event(s).
-*GetApi* | [**getTypeMagnitude**](docs/GetApi.md#getTypeMagnitude) | **GET** /quakedb/_table/v1/type_magnitude | This API returns all the type_magnitude(s).
-*GetApi* | [**getTypeOrigin**](docs/GetApi.md#getTypeOrigin) | **GET** /quakedb/_table/v1/type_origin | This API returns all the type_origin(s).
+*GetApi* | [**getTypeEvent**](docs/GetApi.md#getTypeEvent) | **GET** /quakedb/table/v1/type-event | This API returns all the type_event(s).
+*GetApi* | [**getTypeMagnitude**](docs/GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s).
+*GetApi* | [**getTypeOrigin**](docs/GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s).
 *StoreApi* | [**addEvent**](docs/StoreApi.md#addEvent) | **POST** /quakedb/v1/event | Add a new event to the DB
 *StoreApi* | [**addFocalmechanism**](docs/StoreApi.md#addFocalmechanism) | **POST** /quakedb/v1/focalmechanism | Add a new focalmechanism(s) to the DB
-*StoreApi* | [**addLocalspace**](docs/StoreApi.md#addLocalspace) | **POST** /quakedb/_table/v1/localspace | Add a new localspace to the DB
+*StoreApi* | [**addLocalspace**](docs/StoreApi.md#addLocalspace) | **POST** /quakedb/table/v1/localspace | Add a new localspace to the DB
 *StoreApi* | [**addMagnitude**](docs/StoreApi.md#addMagnitude) | **POST** /quakedb/v1/magnitude | Add a new magnitude(s) to the DB
 *StoreApi* | [**addMomenttensor**](docs/StoreApi.md#addMomenttensor) | **POST** /quakedb/v1/momenttensor | Add a new momenttensor(s) to the DB
 *StoreApi* | [**addOrigin**](docs/StoreApi.md#addOrigin) | **POST** /quakedb/v1/origin | Add a new origin(s) to the DB
 *StoreApi* | [**addOriginFlag**](docs/StoreApi.md#addOriginFlag) | **POST** /quakedb/v1/origin-flag | Add one or more flags to origin
+*StoreApi* | [**addProvenance**](docs/StoreApi.md#addProvenance) | **POST** /quakedb/table/v1/provenance | Add a new provenance to the DB
 *StoreApi* | [**addStrongmotion**](docs/StoreApi.md#addStrongmotion) | **POST** /quakedb/v1/strongmotion | Add a new strongmotion(s) to the DB
-*StoreApi* | [**addTypeEvent**](docs/StoreApi.md#addTypeEvent) | **POST** /quakedb/_table/v1/type_event | Add a new type_event to the DB
-*StoreApi* | [**addTypeMagnitude**](docs/StoreApi.md#addTypeMagnitude) | **POST** /quakedb/_table/v1/type_magnitude | Add a new type_magnitude to the DB
-*StoreApi* | [**addTypeOrigin**](docs/StoreApi.md#addTypeOrigin) | **POST** /quakedb/_table/v1/type_origin | Add a new type_origin to the DB
+*StoreApi* | [**addTypeEvent**](docs/StoreApi.md#addTypeEvent) | **POST** /quakedb/table/v1/type-event | Add a new type_event to the DB
+*StoreApi* | [**addTypeMagnitude**](docs/StoreApi.md#addTypeMagnitude) | **POST** /quakedb/table/v1/type-magnitude | Add a new type_magnitude to the DB
+*StoreApi* | [**addTypeOrigin**](docs/StoreApi.md#addTypeOrigin) | **POST** /quakedb/table/v1/type-origin | Add a new type_origin to the DB
 *UpdateApi* | [**updateEvent**](docs/UpdateApi.md#updateEvent) | **PATCH** /quakedb/v1/event/{id} | Update an existing event
-*UpdateApi* | [**updateLocalspace**](docs/UpdateApi.md#updateLocalspace) | **PATCH** /quakedb/_table/v1/localspace/{id} | Update an existing localspace
+*UpdateApi* | [**updateLocalspace**](docs/UpdateApi.md#updateLocalspace) | **PATCH** /quakedb/table/v1/localspace/{id} | Update an existing localspace
 *UpdateApi* | [**updateOriginFlag**](docs/UpdateApi.md#updateOriginFlag) | **PATCH** /quakedb/v1/origin-flag/{id} | Update an existing origin-flag
-*UpdateApi* | [**updateTypeEvent**](docs/UpdateApi.md#updateTypeEvent) | **PATCH** /quakedb/_table/v1/type_event/{id} | Update an existing type_event
-*UpdateApi* | [**updateTypeMagnitude**](docs/UpdateApi.md#updateTypeMagnitude) | **PATCH** /quakedb/_table/v1/type_magnitude/{id} | Update an existing type_magnitude
-*UpdateApi* | [**updateTypeOrigin**](docs/UpdateApi.md#updateTypeOrigin) | **PATCH** /quakedb/_table/v1/type_origin/{id} | Update an existing type_origin
+*UpdateApi* | [**updateProvenance**](docs/UpdateApi.md#updateProvenance) | **PATCH** /quakedb/table/v1/provenance/{id} | Update an existing provenance
+*UpdateApi* | [**updateTypeEvent**](docs/UpdateApi.md#updateTypeEvent) | **PATCH** /quakedb/table/v1/type-event/{id} | Update an existing type_event
+*UpdateApi* | [**updateTypeMagnitude**](docs/UpdateApi.md#updateTypeMagnitude) | **PATCH** /quakedb/table/v1/type-magnitude/{id} | Update an existing type_magnitude
+*UpdateApi* | [**updateTypeOrigin**](docs/UpdateApi.md#updateTypeOrigin) | **PATCH** /quakedb/table/v1/type-origin/{id} | Update an existing type_origin
 *UserApi* | [**getToken**](docs/UserApi.md#getToken) | **POST** /login | Logs user into the system
 
 
@@ -193,8 +197,6 @@ Class | Method | HTTP request | Description
  - [AddEwHyp2000arc201ResponseDataEvent](docs/AddEwHyp2000arc201ResponseDataEvent.md)
  - [AddEwHyp2000arc201ResponseDataEventAllOf](docs/AddEwHyp2000arc201ResponseDataEventAllOf.md)
  - [AddEwHyp2000arcRequest](docs/AddEwHyp2000arcRequest.md)
- - [AddEwQuake2k201Response](docs/AddEwQuake2k201Response.md)
- - [AddEwQuake2k201ResponseData](docs/AddEwQuake2k201ResponseData.md)
  - [AddEwQuake2kRequest](docs/AddEwQuake2kRequest.md)
  - [AddFocalmechanism201Response](docs/AddFocalmechanism201Response.md)
  - [AddFocalmechanismRequest](docs/AddFocalmechanismRequest.md)
@@ -208,8 +210,6 @@ Class | Method | HTTP request | Description
  - [AddHEwStrongmotionii201Response](docs/AddHEwStrongmotionii201Response.md)
  - [AddHEwStrongmotionii201ResponseData](docs/AddHEwStrongmotionii201ResponseData.md)
  - [AddHEwStrongmotioniiRequest](docs/AddHEwStrongmotioniiRequest.md)
- - [AddLocalspace201Response](docs/AddLocalspace201Response.md)
- - [AddLocalspaceRequest](docs/AddLocalspaceRequest.md)
  - [AddMagnitude201Response](docs/AddMagnitude201Response.md)
  - [AddMagnitudeRequest](docs/AddMagnitudeRequest.md)
  - [AddMagnitudeRequestData](docs/AddMagnitudeRequestData.md)
@@ -228,21 +228,16 @@ Class | Method | HTTP request | Description
  - [AddStrongmotion201Response](docs/AddStrongmotion201Response.md)
  - [AddStrongmotionRequest](docs/AddStrongmotionRequest.md)
  - [AddStrongmotionRequestData](docs/AddStrongmotionRequestData.md)
- - [AddTypeEvent201Response](docs/AddTypeEvent201Response.md)
- - [AddTypeEventRequest](docs/AddTypeEventRequest.md)
- - [AddTypeMagnitude201Response](docs/AddTypeMagnitude201Response.md)
- - [AddTypeMagnitudeRequest](docs/AddTypeMagnitudeRequest.md)
- - [AddTypeOrigin201Response](docs/AddTypeOrigin201Response.md)
- - [AddTypeOriginRequest](docs/AddTypeOriginRequest.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)
  - [GetEvent200ResponseData](docs/GetEvent200ResponseData.md)
  - [GetEventsPref200Response](docs/GetEventsPref200Response.md)
  - [GetLocalspace200Response](docs/GetLocalspace200Response.md)
  - [GetLocalspace200ResponseAllOf](docs/GetLocalspace200ResponseAllOf.md)
- - [GetLocalspace200ResponseAllOfDataInner](docs/GetLocalspace200ResponseAllOfDataInner.md)
  - [GetMunicipiDistanceKmPopolazione200Response](docs/GetMunicipiDistanceKmPopolazione200Response.md)
  - [GetMunicipiDistanceKmPopolazione200ResponseDataInner](docs/GetMunicipiDistanceKmPopolazione200ResponseDataInner.md)
  - [GetOriginFlag200Response](docs/GetOriginFlag200Response.md)
+ - [GetProvenance200Response](docs/GetProvenance200Response.md)
+ - [GetProvenance200ResponseAllOf](docs/GetProvenance200ResponseAllOf.md)
  - [GetRegionName200Response](docs/GetRegionName200Response.md)
  - [GetRegionName200ResponseData](docs/GetRegionName200ResponseData.md)
  - [GetToken201Response](docs/GetToken201Response.md)
@@ -250,13 +245,10 @@ Class | Method | HTTP request | Description
  - [GetTokenRequest](docs/GetTokenRequest.md)
  - [GetTypeEvent200Response](docs/GetTypeEvent200Response.md)
  - [GetTypeEvent200ResponseAllOf](docs/GetTypeEvent200ResponseAllOf.md)
- - [GetTypeEvent200ResponseAllOfDataInner](docs/GetTypeEvent200ResponseAllOfDataInner.md)
  - [GetTypeMagnitude200Response](docs/GetTypeMagnitude200Response.md)
  - [GetTypeMagnitude200ResponseAllOf](docs/GetTypeMagnitude200ResponseAllOf.md)
- - [GetTypeMagnitude200ResponseAllOfDataInner](docs/GetTypeMagnitude200ResponseAllOfDataInner.md)
  - [GetTypeOrigin200Response](docs/GetTypeOrigin200Response.md)
  - [GetTypeOrigin200ResponseAllOf](docs/GetTypeOrigin200ResponseAllOf.md)
- - [GetTypeOrigin200ResponseAllOfDataInner](docs/GetTypeOrigin200ResponseAllOfDataInner.md)
  - [Hyp2000arcPhasesInner](docs/Hyp2000arcPhasesInner.md)
  - [Hyp2000arcSchema](docs/Hyp2000arcSchema.md)
  - [Hyp2000arcSchemaEwLogo](docs/Hyp2000arcSchemaEwLogo.md)
@@ -297,6 +289,11 @@ Class | Method | HTTP request | Description
  - [ObjectStrongmotionAlternative](docs/ObjectStrongmotionAlternative.md)
  - [ObjectStrongmotionPostOutput](docs/ObjectStrongmotionPostOutput.md)
  - [ObjectStrongmotionRsaInner](docs/ObjectStrongmotionRsaInner.md)
+ - [ObjectTableLocalspace](docs/ObjectTableLocalspace.md)
+ - [ObjectTableProvenance](docs/ObjectTableProvenance.md)
+ - [ObjectTableTypeEvent](docs/ObjectTableTypeEvent.md)
+ - [ObjectTableTypeMagnitude](docs/ObjectTableTypeMagnitude.md)
+ - [ObjectTableTypeOrigin](docs/ObjectTableTypeOrigin.md)
  - [ObjectTypeOrigin](docs/ObjectTypeOrigin.md)
  - [PickEmersio](docs/PickEmersio.md)
  - [PickFirstmotion](docs/PickFirstmotion.md)
@@ -312,6 +309,8 @@ Class | Method | HTTP request | Description
  - [StrongmotioniiSchemaEwMessage](docs/StrongmotioniiSchemaEwMessage.md)
  - [StrongmotioniiSchemaEwMessageRSAInner](docs/StrongmotioniiSchemaEwMessageRSAInner.md)
  - [TypeOriginName](docs/TypeOriginName.md)
+ - [UpdateEvent200Response](docs/UpdateEvent200Response.md)
+ - [UpdateEvent200ResponseData](docs/UpdateEvent200ResponseData.md)
  - [UpdateEventRequest](docs/UpdateEventRequest.md)
  - [UpdateEventRequestData](docs/UpdateEventRequestData.md)
  - [UpdateEventRequestDataEvent](docs/UpdateEventRequestDataEvent.md)

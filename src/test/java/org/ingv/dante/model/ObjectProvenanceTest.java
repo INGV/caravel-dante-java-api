@@ -40,6 +40,14 @@ public class ObjectProvenanceTest {
     }
 
     /**
+     * Test the property 'formerId'
+     */
+    @Test
+    public void formerIdTest() {
+        // TODO: test formerId
+    }
+
+    /**
      * Test the property 'name'
      */
     @Test
@@ -117,6 +125,14 @@ public class ObjectProvenanceTest {
     @Test
     public void descriptionTest() {
         // TODO: test description
+    }
+
+    /**
+     * Test the property 'priority'
+     */
+    @Test
+    public void priorityTest() {
+        // TODO: test priority
     }
 
 }

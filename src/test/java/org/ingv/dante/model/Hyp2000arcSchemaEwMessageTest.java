@@ -25,7 +25,6 @@ import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.Hyp2000arcPhasesInner;
-import org.ingv.dante.model.TypeOriginName;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -58,6 +57,14 @@ public class Hyp2000arcSchemaEwMessageTest {
     @Test
     public void versionTest() {
         // TODO: test version
+    }
+
+    /**
+     * Test the property 'originId'
+     */
+    @Test
+    public void originIdTest() {
+        // TODO: test originId
     }
 
     /**
@@ -290,6 +297,54 @@ public class Hyp2000arcSchemaEwMessageTest {
     @Test
     public void ingvQualityTest() {
         // TODO: test ingvQuality
+    }
+
+    /**
+     * Test the property 'amplitudeMagnitude'
+     */
+    @Test
+    public void amplitudeMagnitudeTest() {
+        // TODO: test amplitudeMagnitude
+    }
+
+    /**
+     * Test the property 'numberOfAmpMagWeightCode'
+     */
+    @Test
+    public void numberOfAmpMagWeightCodeTest() {
+        // TODO: test numberOfAmpMagWeightCode
+    }
+
+    /**
+     * Test the property 'medianAbsDiffAmpMag'
+     */
+    @Test
+    public void medianAbsDiffAmpMagTest() {
+        // TODO: test medianAbsDiffAmpMag
+    }
+
+    /**
+     * Test the property 'preferredMagLabel'
+     */
+    @Test
+    public void preferredMagLabelTest() {
+        // TODO: test preferredMagLabel
+    }
+
+    /**
+     * Test the property 'preferredMag'
+     */
+    @Test
+    public void preferredMagTest() {
+        // TODO: test preferredMag
+    }
+
+    /**
+     * Test the property 'numberOfPreferredMags'
+     */
+    @Test
+    public void numberOfPreferredMagsTest() {
+        // TODO: test numberOfPreferredMags
     }
 
     /**

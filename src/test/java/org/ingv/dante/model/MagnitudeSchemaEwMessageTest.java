@@ -24,7 +24,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.MagnitudePhasesInner;
-import org.ingv.dante.model.TypeOriginName;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 

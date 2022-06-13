@@ -47,8 +47,12 @@ import org.ingv.dante.JSON;
 /**
  * ObjectProvenance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:58:43.855491Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-13T17:31:17.617956Z[Etc/UTC]")
 public class ObjectProvenance {
+  public static final String SERIALIZED_NAME_FORMER_ID = "former_id";
+  @SerializedName(SERIALIZED_NAME_FORMER_ID)
+  private Long formerId = 0l;
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name = "INGV";
@@ -89,8 +93,35 @@ public class ObjectProvenance {
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
+  public static final String SERIALIZED_NAME_PRIORITY = "priority";
+  @SerializedName(SERIALIZED_NAME_PRIORITY)
+  private Long priority = 0l;
+
   public ObjectProvenance() { 
   }
+
+  public ObjectProvenance formerId(Long formerId) {
+    
+    this.formerId = formerId;
+    return this;
+  }
+
+   /**
+   * ToDo | int(8)
+   * @return formerId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "1", value = "ToDo | int(8)")
+
+  public Long getFormerId() {
+    return formerId;
+  }
+
+
+  public void setFormerId(Long formerId) {
+    this.formerId = formerId;
+  }
+
 
   public ObjectProvenance name(String name) {
     
@@ -102,8 +133,8 @@ public class ObjectProvenance {
    * Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)
    * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "INGV", value = "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "INGV", required = true, value = "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)")
 
   public String getName() {
     return name;
@@ -125,8 +156,8 @@ public class ObjectProvenance {
    * Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)
    * @return softwarename
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "software", required = true, value = "Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "software", value = "Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)")
 
   public String getSoftwarename() {
     return softwarename;
@@ -148,8 +179,8 @@ public class ObjectProvenance {
    * Version name | varchar(255)
    * @return version
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "hew1_mole", required = true, value = "Version name | varchar(255)")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "hew1_mole", value = "Version name | varchar(255)")
 
   public String getVersion() {
     return version;
@@ -322,6 +353,29 @@ public class ObjectProvenance {
   }
 
 
+  public ObjectProvenance priority(Long priority) {
+    
+    this.priority = priority;
+    return this;
+  }
+
+   /**
+   * Former provenance id | int(11)
+   * @return priority
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "0", value = "Former provenance id | int(11)")
+
+  public Long getPriority() {
+    return priority;
+  }
+
+
+  public void setPriority(Long priority) {
+    this.priority = priority;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -332,7 +386,8 @@ public class ObjectProvenance {
       return false;
     }
     ObjectProvenance objectProvenance = (ObjectProvenance) o;
-    return Objects.equals(this.name, objectProvenance.name) &&
+    return Objects.equals(this.formerId, objectProvenance.formerId) &&
+        Objects.equals(this.name, objectProvenance.name) &&
         Objects.equals(this.softwarename, objectProvenance.softwarename) &&
         Objects.equals(this.version, objectProvenance.version) &&
         Objects.equals(this.model, objectProvenance.model) &&
@@ -341,18 +396,20 @@ public class ObjectProvenance {
         Objects.equals(this.program, objectProvenance.program) &&
         Objects.equals(this.username, objectProvenance.username) &&
         Objects.equals(this.hostname, objectProvenance.hostname) &&
-        Objects.equals(this.description, objectProvenance.description);
+        Objects.equals(this.description, objectProvenance.description) &&
+        Objects.equals(this.priority, objectProvenance.priority);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, softwarename, version, model, method, parameters, program, username, hostname, description);
+    return Objects.hash(formerId, name, softwarename, version, model, method, parameters, program, username, hostname, description, priority);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ObjectProvenance {\n");
+    sb.append("    formerId: ").append(toIndentedString(formerId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    softwarename: ").append(toIndentedString(softwarename)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
@@ -363,6 +420,7 @@ public class ObjectProvenance {
     sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("    hostname: ").append(toIndentedString(hostname)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -385,6 +443,7 @@ public class ObjectProvenance {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("former_id");
     openapiFields.add("name");
     openapiFields.add("softwarename");
     openapiFields.add("version");
@@ -395,11 +454,11 @@ public class ObjectProvenance {
     openapiFields.add("username");
     openapiFields.add("hostname");
     openapiFields.add("description");
+    openapiFields.add("priority");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("softwarename");
-    openapiRequiredFields.add("version");
+    openapiRequiredFields.add("name");
   }
 
  /**

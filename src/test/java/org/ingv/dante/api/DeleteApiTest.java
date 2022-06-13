@@ -46,6 +46,20 @@ public class DeleteApiTest {
     }
 
     /**
+     * Delete an existing provenance
+     *
+     * Delete an existing provenance.&lt;/br&gt; To use this API you must be authenticated.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void deleteProvenanceTest() throws ApiException {
+        Long id = null;
+        api.deleteProvenance(id);
+        // TODO: test validations
+    }
+
+    /**
      * Delete an existing type_event
      *
      * Delete an existing type_event.&lt;/br&gt; To use this API you must be authenticated.

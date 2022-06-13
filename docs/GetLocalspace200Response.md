@@ -19,7 +19,7 @@
 |**prevPageUrl** | **String** | URL base path. |  [optional] |
 |**to** | **String** | Showed record to. |  [optional] |
 |**total** | **String** | Total records. |  [optional] |
-|**data** | [**List&lt;GetLocalspace200ResponseAllOfDataInner&gt;**](GetLocalspace200ResponseAllOfDataInner.md) |  |  [optional] |
+|**data** | [**List&lt;ObjectTableLocalspace&gt;**](ObjectTableLocalspace.md) |  |  [optional] |
 
 
 

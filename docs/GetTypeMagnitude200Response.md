@@ -19,7 +19,7 @@
 |**prevPageUrl** | **String** | URL base path. |  [optional] |
 |**to** | **String** | Showed record to. |  [optional] |
 |**total** | **String** | Total records. |  [optional] |
-|**data** | [**List&lt;GetTypeMagnitude200ResponseAllOfDataInner&gt;**](GetTypeMagnitude200ResponseAllOfDataInner.md) |  |  [optional] |
+|**data** | [**List&lt;ObjectTableTypeMagnitude&gt;**](ObjectTableTypeMagnitude.md) |  |  [optional] |
 
 
 

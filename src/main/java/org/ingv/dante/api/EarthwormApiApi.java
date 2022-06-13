@@ -29,7 +29,6 @@ import java.io.IOException;
 
 import org.ingv.dante.model.AddEwHyp2000arc201Response;
 import org.ingv.dante.model.AddEwHyp2000arcRequest;
-import org.ingv.dante.model.AddEwQuake2k201Response;
 import org.ingv.dante.model.AddEwQuake2kRequest;
 import org.ingv.dante.model.AddHEwMagnitudeRequest;
 import org.ingv.dante.model.AddHEwPickScnl201Response;
@@ -38,6 +37,7 @@ import org.ingv.dante.model.AddHEwStrongmotionii201Response;
 import org.ingv.dante.model.AddHEwStrongmotioniiRequest;
 import org.ingv.dante.model.AddMagnitude201Response;
 import org.ingv.dante.model.Problem;
+import org.ingv.dante.model.UpdateEvent200Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -314,7 +314,7 @@ public class EarthwormApiApi {
      * Insert a new quake2k message to the DB using ew2openapi module
      * This API is used to add an Earthworm quake2k object.
      * @param addEwQuake2kRequest JSON to store (required)
-     * @return AddEwQuake2k201Response
+     * @return UpdateEvent200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -328,8 +328,8 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public AddEwQuake2k201Response addEwQuake2k(AddEwQuake2kRequest addEwQuake2kRequest) throws ApiException {
-        ApiResponse<AddEwQuake2k201Response> localVarResp = addEwQuake2kWithHttpInfo(addEwQuake2kRequest);
+    public UpdateEvent200Response addEwQuake2k(AddEwQuake2kRequest addEwQuake2kRequest) throws ApiException {
+        ApiResponse<UpdateEvent200Response> localVarResp = addEwQuake2kWithHttpInfo(addEwQuake2kRequest);
         return localVarResp.getData();
     }
 
@@ -337,7 +337,7 @@ public class EarthwormApiApi {
      * Insert a new quake2k message to the DB using ew2openapi module
      * This API is used to add an Earthworm quake2k object.
      * @param addEwQuake2kRequest JSON to store (required)
-     * @return ApiResponse&lt;AddEwQuake2k201Response&gt;
+     * @return ApiResponse&lt;UpdateEvent200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -351,9 +351,9 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AddEwQuake2k201Response> addEwQuake2kWithHttpInfo(AddEwQuake2kRequest addEwQuake2kRequest) throws ApiException {
+    public ApiResponse<UpdateEvent200Response> addEwQuake2kWithHttpInfo(AddEwQuake2kRequest addEwQuake2kRequest) throws ApiException {
         okhttp3.Call localVarCall = addEwQuake2kValidateBeforeCall(addEwQuake2kRequest, null);
-        Type localVarReturnType = new TypeToken<AddEwQuake2k201Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<UpdateEvent200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -376,10 +376,10 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addEwQuake2kAsync(AddEwQuake2kRequest addEwQuake2kRequest, final ApiCallback<AddEwQuake2k201Response> _callback) throws ApiException {
+    public okhttp3.Call addEwQuake2kAsync(AddEwQuake2kRequest addEwQuake2kRequest, final ApiCallback<UpdateEvent200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = addEwQuake2kValidateBeforeCall(addEwQuake2kRequest, _callback);
-        Type localVarReturnType = new TypeToken<AddEwQuake2k201Response>(){}.getType();
+        Type localVarReturnType = new TypeToken<UpdateEvent200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

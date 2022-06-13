@@ -17,8 +17,6 @@ import org.ingv.dante.ApiException;
 import org.ingv.dante.model.AddEvent201Response;
 import org.ingv.dante.model.AddFocalmechanism201Response;
 import org.ingv.dante.model.AddFocalmechanismRequest;
-import org.ingv.dante.model.AddLocalspace201Response;
-import org.ingv.dante.model.AddLocalspaceRequest;
 import org.ingv.dante.model.AddMagnitude201Response;
 import org.ingv.dante.model.AddMagnitudeRequest;
 import org.ingv.dante.model.AddMomenttensor201Response;
@@ -29,13 +27,12 @@ import org.ingv.dante.model.AddOriginFlagRequest;
 import org.ingv.dante.model.AddOriginRequest;
 import org.ingv.dante.model.AddStrongmotion201Response;
 import org.ingv.dante.model.AddStrongmotionRequest;
-import org.ingv.dante.model.AddTypeEvent201Response;
-import org.ingv.dante.model.AddTypeEventRequest;
-import org.ingv.dante.model.AddTypeMagnitude201Response;
-import org.ingv.dante.model.AddTypeMagnitudeRequest;
-import org.ingv.dante.model.AddTypeOrigin201Response;
-import org.ingv.dante.model.AddTypeOriginRequest;
 import org.ingv.dante.model.GetEvent200Response;
+import org.ingv.dante.model.ObjectTableLocalspace;
+import org.ingv.dante.model.ObjectTableProvenance;
+import org.ingv.dante.model.ObjectTableTypeEvent;
+import org.ingv.dante.model.ObjectTableTypeMagnitude;
+import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.ingv.dante.model.Problem;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -90,8 +87,8 @@ public class StoreApiTest {
      */
     @Test
     public void addLocalspaceTest() throws ApiException {
-        AddLocalspaceRequest addLocalspaceRequest = null;
-        AddLocalspace201Response response = api.addLocalspace(addLocalspaceRequest);
+        ObjectTableLocalspace objectTableLocalspace = null;
+        ObjectTableLocalspace response = api.addLocalspace(objectTableLocalspace);
         // TODO: test validations
     }
 
@@ -152,6 +149,20 @@ public class StoreApiTest {
     }
 
     /**
+     * Add a new provenance to the DB
+     *
+     * This API is used to add an provenance object.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void addProvenanceTest() throws ApiException {
+        ObjectTableProvenance objectTableProvenance = null;
+        ObjectTableProvenance response = api.addProvenance(objectTableProvenance);
+        // TODO: test validations
+    }
+
+    /**
      * Add a new strongmotion(s) to the DB
      *
      * This API is used to add a strongmotion object.
@@ -174,8 +185,8 @@ public class StoreApiTest {
      */
     @Test
     public void addTypeEventTest() throws ApiException {
-        AddTypeEventRequest addTypeEventRequest = null;
-        AddTypeEvent201Response response = api.addTypeEvent(addTypeEventRequest);
+        ObjectTableTypeEvent objectTableTypeEvent = null;
+        ObjectTableTypeEvent response = api.addTypeEvent(objectTableTypeEvent);
         // TODO: test validations
     }
 
@@ -188,8 +199,8 @@ public class StoreApiTest {
      */
     @Test
     public void addTypeMagnitudeTest() throws ApiException {
-        AddTypeMagnitudeRequest addTypeMagnitudeRequest = null;
-        AddTypeMagnitude201Response response = api.addTypeMagnitude(addTypeMagnitudeRequest);
+        ObjectTableTypeMagnitude objectTableTypeMagnitude = null;
+        ObjectTableTypeMagnitude response = api.addTypeMagnitude(objectTableTypeMagnitude);
         // TODO: test validations
     }
 
@@ -202,8 +213,8 @@ public class StoreApiTest {
      */
     @Test
     public void addTypeOriginTest() throws ApiException {
-        AddTypeOriginRequest addTypeOriginRequest = null;
-        AddTypeOrigin201Response response = api.addTypeOrigin(addTypeOriginRequest);
+        ObjectTableTypeOrigin objectTableTypeOrigin = null;
+        ObjectTableTypeOrigin response = api.addTypeOrigin(objectTableTypeOrigin);
         // TODO: test validations
     }
 

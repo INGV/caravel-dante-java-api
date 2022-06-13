@@ -19,6 +19,7 @@ import org.ingv.dante.model.GetEventsPref200Response;
 import org.ingv.dante.model.GetLocalspace200Response;
 import org.ingv.dante.model.GetMunicipiDistanceKmPopolazione200Response;
 import org.ingv.dante.model.GetOriginFlag200Response;
+import org.ingv.dante.model.GetProvenance200Response;
 import org.ingv.dante.model.GetRegionName200Response;
 import org.ingv.dante.model.GetTypeEvent200Response;
 import org.ingv.dante.model.GetTypeMagnitude200Response;
@@ -198,6 +199,19 @@ public class GetApiTest {
         String wherelocalspacenamein = null;
         Integer limit = null;
         GetEventsPref200Response response = api.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit);
+        // TODO: test validations
+    }
+
+    /**
+     * This API returns all the provenance(s).
+     *
+     * This API returns all the provenance(s).
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getProvenanceTest() throws ApiException {
+        GetProvenance200Response response = api.getProvenance();
         // TODO: test validations
     }
 

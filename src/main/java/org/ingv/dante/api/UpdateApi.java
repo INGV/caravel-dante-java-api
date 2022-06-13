@@ -27,11 +27,14 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.ingv.dante.model.AddLocalspaceRequest;
-import org.ingv.dante.model.AddTypeEventRequest;
-import org.ingv.dante.model.AddTypeMagnitudeRequest;
-import org.ingv.dante.model.AddTypeOriginRequest;
+import org.ingv.dante.model.AddOriginFlag201Response;
+import org.ingv.dante.model.ObjectTableLocalspace;
+import org.ingv.dante.model.ObjectTableProvenance;
+import org.ingv.dante.model.ObjectTableTypeEvent;
+import org.ingv.dante.model.ObjectTableTypeMagnitude;
+import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.ingv.dante.model.Problem;
+import org.ingv.dante.model.UpdateEvent200Response;
 import org.ingv.dante.model.UpdateEventRequest;
 import org.ingv.dante.model.UpdateOriginFlagRequest;
 
@@ -94,7 +97,7 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
@@ -127,7 +130,7 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -170,6 +173,7 @@ public class UpdateApi {
      * Update an existing event.&lt;/br&gt; To use this API you must be authenticated and \&quot;event.localspace_name\&quot; owner.&lt;/br&gt; More info about &#x60;event_group_id&#x60; &lt;b&gt;https://gitlab.rm.ingv.it/caravel/dante8/-/issues/69#note_60479&lt;/b&gt;
      * @param id INGV eventid that need to be updated. (required)
      * @param updateEventRequest JSON to update (required)
+     * @return UpdateEvent200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -179,14 +183,15 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public void updateEvent(Long id, UpdateEventRequest updateEventRequest) throws ApiException {
-        updateEventWithHttpInfo(id, updateEventRequest);
+    public UpdateEvent200Response updateEvent(Long id, UpdateEventRequest updateEventRequest) throws ApiException {
+        ApiResponse<UpdateEvent200Response> localVarResp = updateEventWithHttpInfo(id, updateEventRequest);
+        return localVarResp.getData();
     }
 
     /**
@@ -194,7 +199,7 @@ public class UpdateApi {
      * Update an existing event.&lt;/br&gt; To use this API you must be authenticated and \&quot;event.localspace_name\&quot; owner.&lt;/br&gt; More info about &#x60;event_group_id&#x60; &lt;b&gt;https://gitlab.rm.ingv.it/caravel/dante8/-/issues/69#note_60479&lt;/b&gt;
      * @param id INGV eventid that need to be updated. (required)
      * @param updateEventRequest JSON to update (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;UpdateEvent200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -204,15 +209,16 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> updateEventWithHttpInfo(Long id, UpdateEventRequest updateEventRequest) throws ApiException {
+    public ApiResponse<UpdateEvent200Response> updateEventWithHttpInfo(Long id, UpdateEventRequest updateEventRequest) throws ApiException {
         okhttp3.Call localVarCall = updateEventValidateBeforeCall(id, updateEventRequest, null);
-        return localVarApiClient.execute(localVarCall);
+        Type localVarReturnType = new TypeToken<UpdateEvent200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -231,22 +237,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateEventAsync(Long id, UpdateEventRequest updateEventRequest, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call updateEventAsync(Long id, UpdateEventRequest updateEventRequest, final ApiCallback<UpdateEvent200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateEventValidateBeforeCall(id, updateEventRequest, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        Type localVarReturnType = new TypeToken<UpdateEvent200Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateLocalspace
      * @param id INGV localspace id that need to be updated. (required)
-     * @param addLocalspaceRequest JSON to update (required)
+     * @param objectTableLocalspace JSON to update (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -258,13 +265,13 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateLocalspaceCall(Long id, AddLocalspaceRequest addLocalspaceRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateLocalspaceCall(Long id, ObjectTableLocalspace objectTableLocalspace, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -278,10 +285,10 @@ public class UpdateApi {
             basePath = null;
         }
 
-        Object localVarPostBody = addLocalspaceRequest;
+        Object localVarPostBody = objectTableLocalspace;
 
         // create path and map variables
-        String localVarPath = "/quakedb/_table/v1/localspace/{id}"
+        String localVarPath = "/quakedb/table/v1/localspace/{id}"
             .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -291,7 +298,7 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -311,20 +318,20 @@ public class UpdateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateLocalspaceValidateBeforeCall(Long id, AddLocalspaceRequest addLocalspaceRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateLocalspaceValidateBeforeCall(Long id, ObjectTableLocalspace objectTableLocalspace, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateLocalspace(Async)");
         }
         
-        // verify the required parameter 'addLocalspaceRequest' is set
-        if (addLocalspaceRequest == null) {
-            throw new ApiException("Missing the required parameter 'addLocalspaceRequest' when calling updateLocalspace(Async)");
+        // verify the required parameter 'objectTableLocalspace' is set
+        if (objectTableLocalspace == null) {
+            throw new ApiException("Missing the required parameter 'objectTableLocalspace' when calling updateLocalspace(Async)");
         }
         
 
-        okhttp3.Call localVarCall = updateLocalspaceCall(id, addLocalspaceRequest, _callback);
+        okhttp3.Call localVarCall = updateLocalspaceCall(id, objectTableLocalspace, _callback);
         return localVarCall;
 
     }
@@ -333,7 +340,8 @@ public class UpdateApi {
      * Update an existing localspace
      * Update an existing localspace.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV localspace id that need to be updated. (required)
-     * @param addLocalspaceRequest JSON to update (required)
+     * @param objectTableLocalspace JSON to update (required)
+     * @return ObjectTableLocalspace
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -343,22 +351,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public void updateLocalspace(Long id, AddLocalspaceRequest addLocalspaceRequest) throws ApiException {
-        updateLocalspaceWithHttpInfo(id, addLocalspaceRequest);
+    public ObjectTableLocalspace updateLocalspace(Long id, ObjectTableLocalspace objectTableLocalspace) throws ApiException {
+        ApiResponse<ObjectTableLocalspace> localVarResp = updateLocalspaceWithHttpInfo(id, objectTableLocalspace);
+        return localVarResp.getData();
     }
 
     /**
      * Update an existing localspace
      * Update an existing localspace.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV localspace id that need to be updated. (required)
-     * @param addLocalspaceRequest JSON to update (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @param objectTableLocalspace JSON to update (required)
+     * @return ApiResponse&lt;ObjectTableLocalspace&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -368,22 +377,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> updateLocalspaceWithHttpInfo(Long id, AddLocalspaceRequest addLocalspaceRequest) throws ApiException {
-        okhttp3.Call localVarCall = updateLocalspaceValidateBeforeCall(id, addLocalspaceRequest, null);
-        return localVarApiClient.execute(localVarCall);
+    public ApiResponse<ObjectTableLocalspace> updateLocalspaceWithHttpInfo(Long id, ObjectTableLocalspace objectTableLocalspace) throws ApiException {
+        okhttp3.Call localVarCall = updateLocalspaceValidateBeforeCall(id, objectTableLocalspace, null);
+        Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Update an existing localspace (asynchronously)
      * Update an existing localspace.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV localspace id that need to be updated. (required)
-     * @param addLocalspaceRequest JSON to update (required)
+     * @param objectTableLocalspace JSON to update (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -395,16 +405,17 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateLocalspaceAsync(Long id, AddLocalspaceRequest addLocalspaceRequest, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call updateLocalspaceAsync(Long id, ObjectTableLocalspace objectTableLocalspace, final ApiCallback<ObjectTableLocalspace> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateLocalspaceValidateBeforeCall(id, addLocalspaceRequest, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = updateLocalspaceValidateBeforeCall(id, objectTableLocalspace, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
@@ -422,7 +433,7 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
@@ -455,7 +466,7 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -498,6 +509,7 @@ public class UpdateApi {
      * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
      * @param id INGV origin-flag id that need to be updated. (required)
      * @param updateOriginFlagRequest JSON to update (required)
+     * @return AddOriginFlag201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -507,14 +519,15 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public void updateOriginFlag(Long id, UpdateOriginFlagRequest updateOriginFlagRequest) throws ApiException {
-        updateOriginFlagWithHttpInfo(id, updateOriginFlagRequest);
+    public AddOriginFlag201Response updateOriginFlag(Long id, UpdateOriginFlagRequest updateOriginFlagRequest) throws ApiException {
+        ApiResponse<AddOriginFlag201Response> localVarResp = updateOriginFlagWithHttpInfo(id, updateOriginFlagRequest);
+        return localVarResp.getData();
     }
 
     /**
@@ -522,7 +535,7 @@ public class UpdateApi {
      * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
      * @param id INGV origin-flag id that need to be updated. (required)
      * @param updateOriginFlagRequest JSON to update (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @return ApiResponse&lt;AddOriginFlag201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -532,15 +545,16 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> updateOriginFlagWithHttpInfo(Long id, UpdateOriginFlagRequest updateOriginFlagRequest) throws ApiException {
+    public ApiResponse<AddOriginFlag201Response> updateOriginFlagWithHttpInfo(Long id, UpdateOriginFlagRequest updateOriginFlagRequest) throws ApiException {
         okhttp3.Call localVarCall = updateOriginFlagValidateBeforeCall(id, updateOriginFlagRequest, null);
-        return localVarApiClient.execute(localVarCall);
+        Type localVarReturnType = new TypeToken<AddOriginFlag201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -559,22 +573,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateOriginFlagAsync(Long id, UpdateOriginFlagRequest updateOriginFlagRequest, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call updateOriginFlagAsync(Long id, UpdateOriginFlagRequest updateOriginFlagRequest, final ApiCallback<AddOriginFlag201Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = updateOriginFlagValidateBeforeCall(id, updateOriginFlagRequest, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        Type localVarReturnType = new TypeToken<AddOriginFlag201Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for updateTypeEvent
-     * @param id INGV type_event id that need to be updated. (required)
-     * @param addTypeEventRequest JSON to update (required)
+     * Build call for updateProvenance
+     * @param id INGV provenance id that need to be updated. (required)
+     * @param objectTableProvenance JSON to update (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -586,13 +601,13 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateTypeEventCall(Long id, AddTypeEventRequest addTypeEventRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateProvenanceCall(Long id, ObjectTableProvenance objectTableProvenance, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -606,10 +621,10 @@ public class UpdateApi {
             basePath = null;
         }
 
-        Object localVarPostBody = addTypeEventRequest;
+        Object localVarPostBody = objectTableProvenance;
 
         // create path and map variables
-        String localVarPath = "/quakedb/_table/v1/type_event/{id}"
+        String localVarPath = "/quakedb/table/v1/provenance/{id}"
             .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -619,7 +634,7 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -639,20 +654,188 @@ public class UpdateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateTypeEventValidateBeforeCall(Long id, AddTypeEventRequest addTypeEventRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateProvenanceValidateBeforeCall(Long id, ObjectTableProvenance objectTableProvenance, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling updateProvenance(Async)");
+        }
+        
+        // verify the required parameter 'objectTableProvenance' is set
+        if (objectTableProvenance == null) {
+            throw new ApiException("Missing the required parameter 'objectTableProvenance' when calling updateProvenance(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = updateProvenanceCall(id, objectTableProvenance, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Update an existing provenance
+     * Update an existing provenance.&lt;/br&gt; To use this API you must be authenticated.
+     * @param id INGV provenance id that need to be updated. (required)
+     * @param objectTableProvenance JSON to update (required)
+     * @return ObjectTableProvenance
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ObjectTableProvenance updateProvenance(Long id, ObjectTableProvenance objectTableProvenance) throws ApiException {
+        ApiResponse<ObjectTableProvenance> localVarResp = updateProvenanceWithHttpInfo(id, objectTableProvenance);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Update an existing provenance
+     * Update an existing provenance.&lt;/br&gt; To use this API you must be authenticated.
+     * @param id INGV provenance id that need to be updated. (required)
+     * @param objectTableProvenance JSON to update (required)
+     * @return ApiResponse&lt;ObjectTableProvenance&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ObjectTableProvenance> updateProvenanceWithHttpInfo(Long id, ObjectTableProvenance objectTableProvenance) throws ApiException {
+        okhttp3.Call localVarCall = updateProvenanceValidateBeforeCall(id, objectTableProvenance, null);
+        Type localVarReturnType = new TypeToken<ObjectTableProvenance>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Update an existing provenance (asynchronously)
+     * Update an existing provenance.&lt;/br&gt; To use this API you must be authenticated.
+     * @param id INGV provenance id that need to be updated. (required)
+     * @param objectTableProvenance JSON to update (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateProvenanceAsync(Long id, ObjectTableProvenance objectTableProvenance, final ApiCallback<ObjectTableProvenance> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = updateProvenanceValidateBeforeCall(id, objectTableProvenance, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableProvenance>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for updateTypeEvent
+     * @param id INGV type_event id that need to be updated. (required)
+     * @param objectTableTypeEvent JSON to update (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateTypeEventCall(Long id, ObjectTableTypeEvent objectTableTypeEvent, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = objectTableTypeEvent;
+
+        // create path and map variables
+        String localVarPath = "/quakedb/table/v1/type-event/{id}"
+            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/problem+json", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/merge-patch+json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateTypeEventValidateBeforeCall(Long id, ObjectTableTypeEvent objectTableTypeEvent, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateTypeEvent(Async)");
         }
         
-        // verify the required parameter 'addTypeEventRequest' is set
-        if (addTypeEventRequest == null) {
-            throw new ApiException("Missing the required parameter 'addTypeEventRequest' when calling updateTypeEvent(Async)");
+        // verify the required parameter 'objectTableTypeEvent' is set
+        if (objectTableTypeEvent == null) {
+            throw new ApiException("Missing the required parameter 'objectTableTypeEvent' when calling updateTypeEvent(Async)");
         }
         
 
-        okhttp3.Call localVarCall = updateTypeEventCall(id, addTypeEventRequest, _callback);
+        okhttp3.Call localVarCall = updateTypeEventCall(id, objectTableTypeEvent, _callback);
         return localVarCall;
 
     }
@@ -661,7 +844,8 @@ public class UpdateApi {
      * Update an existing type_event
      * Update an existing type_event.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV type_event id that need to be updated. (required)
-     * @param addTypeEventRequest JSON to update (required)
+     * @param objectTableTypeEvent JSON to update (required)
+     * @return ObjectTableTypeEvent
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -671,22 +855,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public void updateTypeEvent(Long id, AddTypeEventRequest addTypeEventRequest) throws ApiException {
-        updateTypeEventWithHttpInfo(id, addTypeEventRequest);
+    public ObjectTableTypeEvent updateTypeEvent(Long id, ObjectTableTypeEvent objectTableTypeEvent) throws ApiException {
+        ApiResponse<ObjectTableTypeEvent> localVarResp = updateTypeEventWithHttpInfo(id, objectTableTypeEvent);
+        return localVarResp.getData();
     }
 
     /**
      * Update an existing type_event
      * Update an existing type_event.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV type_event id that need to be updated. (required)
-     * @param addTypeEventRequest JSON to update (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @param objectTableTypeEvent JSON to update (required)
+     * @return ApiResponse&lt;ObjectTableTypeEvent&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -696,22 +881,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> updateTypeEventWithHttpInfo(Long id, AddTypeEventRequest addTypeEventRequest) throws ApiException {
-        okhttp3.Call localVarCall = updateTypeEventValidateBeforeCall(id, addTypeEventRequest, null);
-        return localVarApiClient.execute(localVarCall);
+    public ApiResponse<ObjectTableTypeEvent> updateTypeEventWithHttpInfo(Long id, ObjectTableTypeEvent objectTableTypeEvent) throws ApiException {
+        okhttp3.Call localVarCall = updateTypeEventValidateBeforeCall(id, objectTableTypeEvent, null);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeEvent>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Update an existing type_event (asynchronously)
      * Update an existing type_event.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV type_event id that need to be updated. (required)
-     * @param addTypeEventRequest JSON to update (required)
+     * @param objectTableTypeEvent JSON to update (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -723,22 +909,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateTypeEventAsync(Long id, AddTypeEventRequest addTypeEventRequest, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call updateTypeEventAsync(Long id, ObjectTableTypeEvent objectTableTypeEvent, final ApiCallback<ObjectTableTypeEvent> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateTypeEventValidateBeforeCall(id, addTypeEventRequest, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = updateTypeEventValidateBeforeCall(id, objectTableTypeEvent, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeEvent>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateTypeMagnitude
      * @param id INGV type_magnitude id that need to be updated. (required)
-     * @param addTypeMagnitudeRequest JSON to update (required)
+     * @param objectTableTypeMagnitude JSON to update (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -750,13 +937,13 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateTypeMagnitudeCall(Long id, AddTypeMagnitudeRequest addTypeMagnitudeRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateTypeMagnitudeCall(Long id, ObjectTableTypeMagnitude objectTableTypeMagnitude, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -770,10 +957,10 @@ public class UpdateApi {
             basePath = null;
         }
 
-        Object localVarPostBody = addTypeMagnitudeRequest;
+        Object localVarPostBody = objectTableTypeMagnitude;
 
         // create path and map variables
-        String localVarPath = "/quakedb/_table/v1/type_magnitude/{id}"
+        String localVarPath = "/quakedb/table/v1/type-magnitude/{id}"
             .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -783,7 +970,7 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -803,20 +990,20 @@ public class UpdateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateTypeMagnitudeValidateBeforeCall(Long id, AddTypeMagnitudeRequest addTypeMagnitudeRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateTypeMagnitudeValidateBeforeCall(Long id, ObjectTableTypeMagnitude objectTableTypeMagnitude, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateTypeMagnitude(Async)");
         }
         
-        // verify the required parameter 'addTypeMagnitudeRequest' is set
-        if (addTypeMagnitudeRequest == null) {
-            throw new ApiException("Missing the required parameter 'addTypeMagnitudeRequest' when calling updateTypeMagnitude(Async)");
+        // verify the required parameter 'objectTableTypeMagnitude' is set
+        if (objectTableTypeMagnitude == null) {
+            throw new ApiException("Missing the required parameter 'objectTableTypeMagnitude' when calling updateTypeMagnitude(Async)");
         }
         
 
-        okhttp3.Call localVarCall = updateTypeMagnitudeCall(id, addTypeMagnitudeRequest, _callback);
+        okhttp3.Call localVarCall = updateTypeMagnitudeCall(id, objectTableTypeMagnitude, _callback);
         return localVarCall;
 
     }
@@ -825,7 +1012,8 @@ public class UpdateApi {
      * Update an existing type_magnitude
      * Update an existing type_magnitude.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV type_magnitude id that need to be updated. (required)
-     * @param addTypeMagnitudeRequest JSON to update (required)
+     * @param objectTableTypeMagnitude JSON to update (required)
+     * @return ObjectTableTypeMagnitude
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -835,22 +1023,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public void updateTypeMagnitude(Long id, AddTypeMagnitudeRequest addTypeMagnitudeRequest) throws ApiException {
-        updateTypeMagnitudeWithHttpInfo(id, addTypeMagnitudeRequest);
+    public ObjectTableTypeMagnitude updateTypeMagnitude(Long id, ObjectTableTypeMagnitude objectTableTypeMagnitude) throws ApiException {
+        ApiResponse<ObjectTableTypeMagnitude> localVarResp = updateTypeMagnitudeWithHttpInfo(id, objectTableTypeMagnitude);
+        return localVarResp.getData();
     }
 
     /**
      * Update an existing type_magnitude
      * Update an existing type_magnitude.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV type_magnitude id that need to be updated. (required)
-     * @param addTypeMagnitudeRequest JSON to update (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @param objectTableTypeMagnitude JSON to update (required)
+     * @return ApiResponse&lt;ObjectTableTypeMagnitude&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -860,22 +1049,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> updateTypeMagnitudeWithHttpInfo(Long id, AddTypeMagnitudeRequest addTypeMagnitudeRequest) throws ApiException {
-        okhttp3.Call localVarCall = updateTypeMagnitudeValidateBeforeCall(id, addTypeMagnitudeRequest, null);
-        return localVarApiClient.execute(localVarCall);
+    public ApiResponse<ObjectTableTypeMagnitude> updateTypeMagnitudeWithHttpInfo(Long id, ObjectTableTypeMagnitude objectTableTypeMagnitude) throws ApiException {
+        okhttp3.Call localVarCall = updateTypeMagnitudeValidateBeforeCall(id, objectTableTypeMagnitude, null);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeMagnitude>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Update an existing type_magnitude (asynchronously)
      * Update an existing type_magnitude.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV type_magnitude id that need to be updated. (required)
-     * @param addTypeMagnitudeRequest JSON to update (required)
+     * @param objectTableTypeMagnitude JSON to update (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -887,22 +1077,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateTypeMagnitudeAsync(Long id, AddTypeMagnitudeRequest addTypeMagnitudeRequest, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call updateTypeMagnitudeAsync(Long id, ObjectTableTypeMagnitude objectTableTypeMagnitude, final ApiCallback<ObjectTableTypeMagnitude> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateTypeMagnitudeValidateBeforeCall(id, addTypeMagnitudeRequest, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = updateTypeMagnitudeValidateBeforeCall(id, objectTableTypeMagnitude, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeMagnitude>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for updateTypeOrigin
      * @param id INGV type_origin id that need to be updated. (required)
-     * @param addTypeOriginRequest JSON to update (required)
+     * @param objectTableTypeOrigin JSON to update (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -914,13 +1105,13 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateTypeOriginCall(Long id, AddTypeOriginRequest addTypeOriginRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateTypeOriginCall(Long id, ObjectTableTypeOrigin objectTableTypeOrigin, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -934,10 +1125,10 @@ public class UpdateApi {
             basePath = null;
         }
 
-        Object localVarPostBody = addTypeOriginRequest;
+        Object localVarPostBody = objectTableTypeOrigin;
 
         // create path and map variables
-        String localVarPath = "/quakedb/_table/v1/type_origin/{id}"
+        String localVarPath = "/quakedb/table/v1/type-origin/{id}"
             .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -947,7 +1138,7 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -967,20 +1158,20 @@ public class UpdateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateTypeOriginValidateBeforeCall(Long id, AddTypeOriginRequest addTypeOriginRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateTypeOriginValidateBeforeCall(Long id, ObjectTableTypeOrigin objectTableTypeOrigin, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateTypeOrigin(Async)");
         }
         
-        // verify the required parameter 'addTypeOriginRequest' is set
-        if (addTypeOriginRequest == null) {
-            throw new ApiException("Missing the required parameter 'addTypeOriginRequest' when calling updateTypeOrigin(Async)");
+        // verify the required parameter 'objectTableTypeOrigin' is set
+        if (objectTableTypeOrigin == null) {
+            throw new ApiException("Missing the required parameter 'objectTableTypeOrigin' when calling updateTypeOrigin(Async)");
         }
         
 
-        okhttp3.Call localVarCall = updateTypeOriginCall(id, addTypeOriginRequest, _callback);
+        okhttp3.Call localVarCall = updateTypeOriginCall(id, objectTableTypeOrigin, _callback);
         return localVarCall;
 
     }
@@ -989,7 +1180,8 @@ public class UpdateApi {
      * Update an existing type_origin
      * Update an existing type_origin.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV type_origin id that need to be updated. (required)
-     * @param addTypeOriginRequest JSON to update (required)
+     * @param objectTableTypeOrigin JSON to update (required)
+     * @return ObjectTableTypeOrigin
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -999,22 +1191,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public void updateTypeOrigin(Long id, AddTypeOriginRequest addTypeOriginRequest) throws ApiException {
-        updateTypeOriginWithHttpInfo(id, addTypeOriginRequest);
+    public ObjectTableTypeOrigin updateTypeOrigin(Long id, ObjectTableTypeOrigin objectTableTypeOrigin) throws ApiException {
+        ApiResponse<ObjectTableTypeOrigin> localVarResp = updateTypeOriginWithHttpInfo(id, objectTableTypeOrigin);
+        return localVarResp.getData();
     }
 
     /**
      * Update an existing type_origin
      * Update an existing type_origin.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV type_origin id that need to be updated. (required)
-     * @param addTypeOriginRequest JSON to update (required)
-     * @return ApiResponse&lt;Void&gt;
+     * @param objectTableTypeOrigin JSON to update (required)
+     * @return ApiResponse&lt;ObjectTableTypeOrigin&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1024,22 +1217,23 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Void> updateTypeOriginWithHttpInfo(Long id, AddTypeOriginRequest addTypeOriginRequest) throws ApiException {
-        okhttp3.Call localVarCall = updateTypeOriginValidateBeforeCall(id, addTypeOriginRequest, null);
-        return localVarApiClient.execute(localVarCall);
+    public ApiResponse<ObjectTableTypeOrigin> updateTypeOriginWithHttpInfo(Long id, ObjectTableTypeOrigin objectTableTypeOrigin) throws ApiException {
+        okhttp3.Call localVarCall = updateTypeOriginValidateBeforeCall(id, objectTableTypeOrigin, null);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeOrigin>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Update an existing type_origin (asynchronously)
      * Update an existing type_origin.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV type_origin id that need to be updated. (required)
-     * @param addTypeOriginRequest JSON to update (required)
+     * @param objectTableTypeOrigin JSON to update (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1051,16 +1245,17 @@ public class UpdateApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> record updated </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
         <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateTypeOriginAsync(Long id, AddTypeOriginRequest addTypeOriginRequest, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call updateTypeOriginAsync(Long id, ObjectTableTypeOrigin objectTableTypeOrigin, final ApiCallback<ObjectTableTypeOrigin> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateTypeOriginValidateBeforeCall(id, addTypeOriginRequest, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = updateTypeOriginValidateBeforeCall(id, objectTableTypeOrigin, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeOrigin>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
 }

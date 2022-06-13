@@ -8,7 +8,8 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**quakeId** | **Long** | Localspace Id | bigint(19) |  |
-|**version** | **TypeOriginName** |  |  |
+|**version** | **String** | Localization name (es:ew prelim,XX,WW,..) | varchar(255) |  |
+|**originId** | **Long** | Unique incremental id | bigint(20) |  [optional] |
 |**originTime** | **OffsetDateTime** | Origin time | datetime(3) |  |
 |**latitude** | **Double** | Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  |
 |**longitude** | **Double** | Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  |
@@ -38,6 +39,12 @@
 |**mdmad** | **Double** | mdmad description | ??? |  [optional] |
 |**mdwt** | **Double** | mdwt description | ??? |  [optional] |
 |**ingvQuality** | **String** | ingvQuality description | ??? |  [optional] |
+|**amplitudeMagnitude** | **Double** | amplitudeMagnitude description | col37 F3.2 |  [optional] |
+|**numberOfAmpMagWeightCode** | **Double** | numberOfAmpMagWeightCode description | col97 F4.1 |  [optional] |
+|**medianAbsDiffAmpMag** | **Double** | medianAbsDiffAmpMag description | col105 F3.2 |  [optional] |
+|**preferredMagLabel** | **String** | preferredMagLabel description | ??? |  [optional] |
+|**preferredMag** | **Double** | preferredMag description | ??? |  [optional] |
+|**numberOfPreferredMags** | **Double** | numberOfPreferredMags description | ??? |  [optional] |
 |**phases** | [**List&lt;Hyp2000arcPhasesInner&gt;**](Hyp2000arcPhasesInner.md) |  |  [optional] |
 
 
