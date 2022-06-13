@@ -7,11 +7,16 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 | [**getEvent**](GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events. |
 | [**getEvents**](GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance. |
 | [**getEventsPref**](GetApi.md#getEventsPref) | **GET** /quakedb/v1/events-pref | This API returns the preferred origin and the preferred magnitude from all clusterd events. |
+| [**getLocalspace**](GetApi.md#getLocalspace) | **GET** /quakedb/table/v1/localspace | This API returns all the localspace(s). |
 | [**getMunicipiDistanceKmPopolazione**](GetApi.md#getMunicipiDistanceKmPopolazione) | **GET** /boundaries/v1/municipi-distance-km-popolazione | This API returns the municipi-distance-km-popolazione used at INGV. |
 | [**getOriginFlag**](GetApi.md#getOriginFlag) | **GET** /quakedb/v1/origin-flag | This API returns the all the flags assosiated to the originid. |
 | [**getOrigins**](GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all origins and magnitudes. |
+| [**getProvenance**](GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s). |
 | [**getRegionName**](GetApi.md#getRegionName) | **GET** /boundaries/v1/region-name | This API returns the region name used at INGV. |
 | [**getStatus**](GetApi.md#getStatus) | **GET** /status | Return the application status |
+| [**getTypeEvent**](GetApi.md#getTypeEvent) | **GET** /quakedb/table/v1/type-event | This API returns all the type_event(s). |
+| [**getTypeMagnitude**](GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s). |
+| [**getTypeOrigin**](GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s). |
 
 
 <a name="getEvent"></a>
@@ -296,6 +301,70 @@ No authorization required
 | **200** | Operation successful |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
+<a name="getLocalspace"></a>
+# **getLocalspace**
+> GetLocalspace200Response getLocalspace()
+
+This API returns all the localspace(s).
+
+This API returns all the localspace(s).
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.GetApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    GetApi apiInstance = new GetApi(defaultClient);
+    try {
+      GetLocalspace200Response result = apiInstance.getLocalspace();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GetApi#getLocalspace");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetLocalspace200Response**](GetLocalspace200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | Operation successful |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
 <a name="getMunicipiDistanceKmPopolazione"></a>
 # **getMunicipiDistanceKmPopolazione**
 > GetMunicipiDistanceKmPopolazione200Response getMunicipiDistanceKmPopolazione(mindistance, maxdistance, minpopolazione, lat, lon)
@@ -546,6 +615,70 @@ No authorization required
 | **200** | Operation successful |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
+<a name="getProvenance"></a>
+# **getProvenance**
+> GetProvenance200Response getProvenance()
+
+This API returns all the provenance(s).
+
+This API returns all the provenance(s).
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.GetApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    GetApi apiInstance = new GetApi(defaultClient);
+    try {
+      GetProvenance200Response result = apiInstance.getProvenance();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GetApi#getProvenance");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetProvenance200Response**](GetProvenance200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | Operation successful |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
 <a name="getRegionName"></a>
 # **getRegionName**
 > GetRegionName200Response getRegionName(lat, lon)
@@ -678,5 +811,197 @@ No authorization required
 | **503** | Service Unavailable |  * Retry-After -  <br>  |
 | **500** | Internal Server Error |  -  |
 | **200** | Operation successful |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  * Cache-Control -  <br>  |
+| **0** | Unexpected error |  -  |
+
+<a name="getTypeEvent"></a>
+# **getTypeEvent**
+> GetTypeEvent200Response getTypeEvent()
+
+This API returns all the type_event(s).
+
+This API returns all the type_event(s).
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.GetApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    GetApi apiInstance = new GetApi(defaultClient);
+    try {
+      GetTypeEvent200Response result = apiInstance.getTypeEvent();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GetApi#getTypeEvent");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetTypeEvent200Response**](GetTypeEvent200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | Operation successful |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
+<a name="getTypeMagnitude"></a>
+# **getTypeMagnitude**
+> GetTypeMagnitude200Response getTypeMagnitude()
+
+This API returns all the type_magnitude(s).
+
+This API returns all the type_magnitude(s).
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.GetApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    GetApi apiInstance = new GetApi(defaultClient);
+    try {
+      GetTypeMagnitude200Response result = apiInstance.getTypeMagnitude();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GetApi#getTypeMagnitude");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetTypeMagnitude200Response**](GetTypeMagnitude200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | Operation successful |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
+<a name="getTypeOrigin"></a>
+# **getTypeOrigin**
+> GetTypeOrigin200Response getTypeOrigin()
+
+This API returns all the type_origin(s).
+
+This API returns all the type_origin(s).
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.GetApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    GetApi apiInstance = new GetApi(defaultClient);
+    try {
+      GetTypeOrigin200Response result = apiInstance.getTypeOrigin();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GetApi#getTypeOrigin");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**GetTypeOrigin200Response**](GetTypeOrigin200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | Operation successful |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 

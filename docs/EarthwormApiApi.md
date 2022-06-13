@@ -81,7 +81,7 @@ No authorization required
 
 <a name="addEwQuake2k"></a>
 # **addEwQuake2k**
-> AddEwQuake2k201Response addEwQuake2k(addEwQuake2kRequest)
+> UpdateEvent200Response addEwQuake2k(addEwQuake2kRequest)
 
 Insert a new quake2k message to the DB using ew2openapi module
 
@@ -104,7 +104,7 @@ public class Example {
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
     AddEwQuake2kRequest addEwQuake2kRequest = new AddEwQuake2kRequest(); // AddEwQuake2kRequest | JSON to store
     try {
-      AddEwQuake2k201Response result = apiInstance.addEwQuake2k(addEwQuake2kRequest);
+      UpdateEvent200Response result = apiInstance.addEwQuake2k(addEwQuake2kRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EarthwormApiApi#addEwQuake2k");
@@ -125,7 +125,7 @@ public class Example {
 
 ### Return type
 
-[**AddEwQuake2k201Response**](AddEwQuake2k201Response.md)
+[**UpdateEvent200Response**](UpdateEvent200Response.md)
 
 ### Authorization
 
@@ -348,6 +348,6 @@ No authorization required
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **503** | Service Unavailable |  * Retry-After -  <br>  |
 | **500** | Internal Server Error |  -  |
-| **201** | record insertedd |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **201** | record inserted |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 

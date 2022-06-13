@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**strongmotions** | [**List&lt;ObjectStrongmotionPostOutputStrongmotionsInner&gt;**](ObjectStrongmotionPostOutputStrongmotionsInner.md) |  |  [optional] |
+|**strongmotions** | [**List&lt;AddEvent201ResponseDataEventOriginsInnerAllOf&gt;**](AddEvent201ResponseDataEventOriginsInnerAllOf.md) |  |  [optional] |
 
 
 
