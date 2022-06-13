@@ -125,7 +125,7 @@ public class Example {
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
-    String orderby = "origin_ot-asc"; // String | Select order
+    String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
@@ -164,7 +164,7 @@ public class Example {
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
-| **orderby** | **String**| Select order | [optional] [enum: origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
@@ -233,7 +233,7 @@ public class Example {
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
-    String orderby = "origin_ot-asc"; // String | Select order
+    String orderby = "event_id-asc"; // String | Select order
     Integer limit = 56; // Integer | Limit the results to the specified number of events.
     try {
       GetEventsPref200Response result = apiInstance.getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit);
@@ -269,7 +269,7 @@ public class Example {
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
-| **orderby** | **String**| Select order | [optional] [enum: origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **limit** | **Integer**| Limit the results to the specified number of events. | [optional] |
 
 ### Return type
@@ -479,7 +479,7 @@ public class Example {
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
-    String orderby = "origin_ot-asc"; // String | Select order
+    String orderby = "event_id-asc"; // String | Select order
     Long idLocalspace = 56L; // Long | Localspace Id.
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
     Integer limit = 56; // Integer | Limit the results to the specified number of events.
@@ -517,7 +517,7 @@ public class Example {
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
-| **orderby** | **String**| Select order | [optional] [enum: origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of events. | [optional] |

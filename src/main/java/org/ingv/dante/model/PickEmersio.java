@@ -32,9 +32,7 @@ public enum PickEmersio {
   
   E("E"),
   
-  I("I"),
-  
-  NULL("null");
+  I("I");
 
   private String value;
 

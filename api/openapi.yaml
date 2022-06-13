@@ -331,6 +331,8 @@ paths:
         required: false
         schema:
           enum:
+          - event_id-asc
+          - event_id-desc
           - origin_ot-asc
           - origin_ot-desc
           - magnitude_mag-asc
@@ -538,6 +540,8 @@ paths:
         required: false
         schema:
           enum:
+          - event_id-asc
+          - event_id-desc
           - origin_ot-asc
           - origin_ot-desc
           - magnitude_mag-asc
@@ -765,6 +769,8 @@ paths:
         required: false
         schema:
           enum:
+          - event_id-asc
+          - event_id-desc
           - origin_ot-asc
           - origin_ot-desc
           - magnitude_mag-asc
@@ -6016,19 +6022,6 @@ components:
           $ref: '#/components/schemas/quake2kSchema_ewMessage'
         ewLogo:
           $ref: '#/components/schemas/quake2kSchema_ewLogo'
-    type_origin__name:
-      default: hypocenter
-      description: "type_origin by QuakeML definition (es:hypocenter,centroid,macroseismic,..)\
-        \ | varchar(255)"
-      enum:
-      - hypocenter
-      - centroid
-      - amplitude
-      - macroseismic
-      - rupture start
-      - rupture end
-      example: hypocenter
-      type: string
     origin__ot:
       description: Origin time | datetime(3)
       example: 2016-06-22T16:52:06.26Z
@@ -6069,6 +6062,10 @@ components:
           $ref: '#/components/schemas/hyp2000arcSchema_ewMessage'
         ewLogo:
           $ref: '#/components/schemas/hyp2000arcSchema_ewLogo'
+    type_origin__version_name:
+      description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
+      example: ew prelim
+      type: string
     origin__nph_s:
       description: '# S arrivals weight >0.1 | int(11)'
       format: int64
@@ -6231,7 +6228,6 @@ components:
       enum:
       - U
       - D
-      - null
       example: D
       nullable: true
       type: string
@@ -6252,6 +6248,19 @@ components:
           $ref: '#/components/schemas/strongmotioniiSchema_ewMessage'
         ewLogo:
           $ref: '#/components/schemas/strongmotioniiSchema_ewLogo'
+    type_origin__name:
+      default: hypocenter
+      description: "type_origin by QuakeML definition (es:hypocenter,centroid,macroseismic,..)\
+        \ | varchar(255)"
+      enum:
+      - hypocenter
+      - centroid
+      - amplitude
+      - macroseismic
+      - rupture start
+      - rupture end
+      example: hypocenter
+      type: string
     strongmotion__t_dt:
       description: "time: trigger reported by SM box - datetime part | datetime(6)"
       example: 2017-04-12T08:46:56.19Z
@@ -6515,10 +6524,6 @@ components:
       example: 1
       format: float
       type: number
-    type_origin__version_name:
-      description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
-      example: ew prelim
-      type: string
     type_origin__version_value__READONLY:
       description: Define a numeric value for type origin. < 100 is automatic location
         | bigint(20)
@@ -6772,7 +6777,6 @@ components:
       enum:
       - E
       - I
-      - null
       example: E
       nullable: true
       type: string
@@ -9800,8 +9804,6 @@ components:
           example: 182491
           format: int64
           type: integer
-        version:
-          $ref: '#/components/schemas/type_origin__name'
         originTime:
           description: Origin time | datetime(3)
           example: 2016-06-22T16:52:06.26Z
@@ -9904,7 +9906,14 @@ components:
           format: int64
           type: integer
         version:
-          $ref: '#/components/schemas/type_origin__name'
+          description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
+          example: ew prelim
+          type: string
+        originId:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
         originTime:
           description: Origin time | datetime(3)
           example: 2016-06-22T16:52:06.26Z
@@ -10041,6 +10050,29 @@ components:
           description: ingvQuality description | ???
           example: DD
           type: string
+        amplitudeMagnitude:
+          description: amplitudeMagnitude description | col37 F3.2
+          format: double
+          type: number
+        numberOfAmpMagWeightCode:
+          description: numberOfAmpMagWeightCode description | col97 F4.1
+          format: double
+          type: number
+        medianAbsDiffAmpMag:
+          description: medianAbsDiffAmpMag description | col105 F3.2
+          format: double
+          type: number
+        preferredMagLabel:
+          description: preferredMagLabel description | ???
+          type: string
+        preferredMag:
+          description: preferredMag description | ???
+          format: double
+          type: number
+        numberOfPreferredMags:
+          description: numberOfPreferredMags description | ???
+          format: double
+          type: number
         phases:
           items:
             $ref: '#/components/schemas/hyp2000arc__phases_inner'
@@ -10285,7 +10317,9 @@ components:
           format: int64
           type: integer
         version:
-          $ref: '#/components/schemas/type_origin__name'
+          description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
+          example: ew prelim
+          type: string
         mag:
           description: Magnitude value | double
           example: 3.01

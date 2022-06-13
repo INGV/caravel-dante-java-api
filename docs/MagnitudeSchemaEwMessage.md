@@ -8,7 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**quakeId** | **Long** | Localspace Id | bigint(19) |  |
-|**version** | **TypeOriginName** |  |  |
+|**version** | **String** | Localization name (es:ew prelim,XX,WW,..) | varchar(255) |  |
 |**mag** | **Double** | Magnitude value | double |  |
 |**error** | **Double** | Magnitude error | double |  [optional] |
 |**quality** | **Double** | quality | double |  [optional] |

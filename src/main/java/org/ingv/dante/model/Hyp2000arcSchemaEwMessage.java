@@ -27,7 +27,6 @@ import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.Hyp2000arcPhasesInner;
-import org.ingv.dante.model.TypeOriginName;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-25T13:59:10.427555Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-13T17:32:06.904905Z[Etc/UTC]")
 public class Hyp2000arcSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -60,7 +59,11 @@ public class Hyp2000arcSchemaEwMessage {
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
-  private TypeOriginName version = TypeOriginName.HYPOCENTER;
+  private String version;
+
+  public static final String SERIALIZED_NAME_ORIGIN_ID = "originId";
+  @SerializedName(SERIALIZED_NAME_ORIGIN_ID)
+  private Long originId;
 
   public static final String SERIALIZED_NAME_ORIGIN_TIME = "originTime";
   @SerializedName(SERIALIZED_NAME_ORIGIN_TIME)
@@ -178,6 +181,30 @@ public class Hyp2000arcSchemaEwMessage {
   @SerializedName(SERIALIZED_NAME_INGV_QUALITY)
   private String ingvQuality;
 
+  public static final String SERIALIZED_NAME_AMPLITUDE_MAGNITUDE = "amplitudeMagnitude";
+  @SerializedName(SERIALIZED_NAME_AMPLITUDE_MAGNITUDE)
+  private Double amplitudeMagnitude;
+
+  public static final String SERIALIZED_NAME_NUMBER_OF_AMP_MAG_WEIGHT_CODE = "numberOfAmpMagWeightCode";
+  @SerializedName(SERIALIZED_NAME_NUMBER_OF_AMP_MAG_WEIGHT_CODE)
+  private Double numberOfAmpMagWeightCode;
+
+  public static final String SERIALIZED_NAME_MEDIAN_ABS_DIFF_AMP_MAG = "medianAbsDiffAmpMag";
+  @SerializedName(SERIALIZED_NAME_MEDIAN_ABS_DIFF_AMP_MAG)
+  private Double medianAbsDiffAmpMag;
+
+  public static final String SERIALIZED_NAME_PREFERRED_MAG_LABEL = "preferredMagLabel";
+  @SerializedName(SERIALIZED_NAME_PREFERRED_MAG_LABEL)
+  private String preferredMagLabel;
+
+  public static final String SERIALIZED_NAME_PREFERRED_MAG = "preferredMag";
+  @SerializedName(SERIALIZED_NAME_PREFERRED_MAG)
+  private Double preferredMag;
+
+  public static final String SERIALIZED_NAME_NUMBER_OF_PREFERRED_MAGS = "numberOfPreferredMags";
+  @SerializedName(SERIALIZED_NAME_NUMBER_OF_PREFERRED_MAGS)
+  private Double numberOfPreferredMags;
+
   public static final String SERIALIZED_NAME_PHASES = "phases";
   @SerializedName(SERIALIZED_NAME_PHASES)
   private List<Hyp2000arcPhasesInner> phases = null;
@@ -208,26 +235,49 @@ public class Hyp2000arcSchemaEwMessage {
   }
 
 
-  public Hyp2000arcSchemaEwMessage version(TypeOriginName version) {
+  public Hyp2000arcSchemaEwMessage version(String version) {
     
     this.version = version;
     return this;
   }
 
    /**
-   * Get version
+   * Localization name (es:ew prelim,XX,WW,..) | varchar(255)
    * @return version
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "ew prelim", required = true, value = "Localization name (es:ew prelim,XX,WW,..) | varchar(255)")
 
-  public TypeOriginName getVersion() {
+  public String getVersion() {
     return version;
   }
 
 
-  public void setVersion(TypeOriginName version) {
+  public void setVersion(String version) {
     this.version = version;
+  }
+
+
+  public Hyp2000arcSchemaEwMessage originId(Long originId) {
+    
+    this.originId = originId;
+    return this;
+  }
+
+   /**
+   * Unique incremental id | bigint(20)
+   * @return originId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
+  public Long getOriginId() {
+    return originId;
+  }
+
+
+  public void setOriginId(Long originId) {
+    this.originId = originId;
   }
 
 
@@ -902,6 +952,144 @@ public class Hyp2000arcSchemaEwMessage {
   }
 
 
+  public Hyp2000arcSchemaEwMessage amplitudeMagnitude(Double amplitudeMagnitude) {
+    
+    this.amplitudeMagnitude = amplitudeMagnitude;
+    return this;
+  }
+
+   /**
+   * amplitudeMagnitude description | col37 F3.2
+   * @return amplitudeMagnitude
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "amplitudeMagnitude description | col37 F3.2")
+
+  public Double getAmplitudeMagnitude() {
+    return amplitudeMagnitude;
+  }
+
+
+  public void setAmplitudeMagnitude(Double amplitudeMagnitude) {
+    this.amplitudeMagnitude = amplitudeMagnitude;
+  }
+
+
+  public Hyp2000arcSchemaEwMessage numberOfAmpMagWeightCode(Double numberOfAmpMagWeightCode) {
+    
+    this.numberOfAmpMagWeightCode = numberOfAmpMagWeightCode;
+    return this;
+  }
+
+   /**
+   * numberOfAmpMagWeightCode description | col97 F4.1
+   * @return numberOfAmpMagWeightCode
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "numberOfAmpMagWeightCode description | col97 F4.1")
+
+  public Double getNumberOfAmpMagWeightCode() {
+    return numberOfAmpMagWeightCode;
+  }
+
+
+  public void setNumberOfAmpMagWeightCode(Double numberOfAmpMagWeightCode) {
+    this.numberOfAmpMagWeightCode = numberOfAmpMagWeightCode;
+  }
+
+
+  public Hyp2000arcSchemaEwMessage medianAbsDiffAmpMag(Double medianAbsDiffAmpMag) {
+    
+    this.medianAbsDiffAmpMag = medianAbsDiffAmpMag;
+    return this;
+  }
+
+   /**
+   * medianAbsDiffAmpMag description | col105 F3.2
+   * @return medianAbsDiffAmpMag
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "medianAbsDiffAmpMag description | col105 F3.2")
+
+  public Double getMedianAbsDiffAmpMag() {
+    return medianAbsDiffAmpMag;
+  }
+
+
+  public void setMedianAbsDiffAmpMag(Double medianAbsDiffAmpMag) {
+    this.medianAbsDiffAmpMag = medianAbsDiffAmpMag;
+  }
+
+
+  public Hyp2000arcSchemaEwMessage preferredMagLabel(String preferredMagLabel) {
+    
+    this.preferredMagLabel = preferredMagLabel;
+    return this;
+  }
+
+   /**
+   * preferredMagLabel description | ???
+   * @return preferredMagLabel
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "preferredMagLabel description | ???")
+
+  public String getPreferredMagLabel() {
+    return preferredMagLabel;
+  }
+
+
+  public void setPreferredMagLabel(String preferredMagLabel) {
+    this.preferredMagLabel = preferredMagLabel;
+  }
+
+
+  public Hyp2000arcSchemaEwMessage preferredMag(Double preferredMag) {
+    
+    this.preferredMag = preferredMag;
+    return this;
+  }
+
+   /**
+   * preferredMag description | ???
+   * @return preferredMag
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "preferredMag description | ???")
+
+  public Double getPreferredMag() {
+    return preferredMag;
+  }
+
+
+  public void setPreferredMag(Double preferredMag) {
+    this.preferredMag = preferredMag;
+  }
+
+
+  public Hyp2000arcSchemaEwMessage numberOfPreferredMags(Double numberOfPreferredMags) {
+    
+    this.numberOfPreferredMags = numberOfPreferredMags;
+    return this;
+  }
+
+   /**
+   * numberOfPreferredMags description | ???
+   * @return numberOfPreferredMags
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "numberOfPreferredMags description | ???")
+
+  public Double getNumberOfPreferredMags() {
+    return numberOfPreferredMags;
+  }
+
+
+  public void setNumberOfPreferredMags(Double numberOfPreferredMags) {
+    this.numberOfPreferredMags = numberOfPreferredMags;
+  }
+
+
   public Hyp2000arcSchemaEwMessage phases(List<Hyp2000arcPhasesInner> phases) {
     
     this.phases = phases;
@@ -945,6 +1133,7 @@ public class Hyp2000arcSchemaEwMessage {
     Hyp2000arcSchemaEwMessage hyp2000arcSchemaEwMessage = (Hyp2000arcSchemaEwMessage) o;
     return Objects.equals(this.quakeId, hyp2000arcSchemaEwMessage.quakeId) &&
         Objects.equals(this.version, hyp2000arcSchemaEwMessage.version) &&
+        Objects.equals(this.originId, hyp2000arcSchemaEwMessage.originId) &&
         Objects.equals(this.originTime, hyp2000arcSchemaEwMessage.originTime) &&
         Objects.equals(this.latitude, hyp2000arcSchemaEwMessage.latitude) &&
         Objects.equals(this.longitude, hyp2000arcSchemaEwMessage.longitude) &&
@@ -974,12 +1163,18 @@ public class Hyp2000arcSchemaEwMessage {
         Objects.equals(this.mdmad, hyp2000arcSchemaEwMessage.mdmad) &&
         Objects.equals(this.mdwt, hyp2000arcSchemaEwMessage.mdwt) &&
         Objects.equals(this.ingvQuality, hyp2000arcSchemaEwMessage.ingvQuality) &&
+        Objects.equals(this.amplitudeMagnitude, hyp2000arcSchemaEwMessage.amplitudeMagnitude) &&
+        Objects.equals(this.numberOfAmpMagWeightCode, hyp2000arcSchemaEwMessage.numberOfAmpMagWeightCode) &&
+        Objects.equals(this.medianAbsDiffAmpMag, hyp2000arcSchemaEwMessage.medianAbsDiffAmpMag) &&
+        Objects.equals(this.preferredMagLabel, hyp2000arcSchemaEwMessage.preferredMagLabel) &&
+        Objects.equals(this.preferredMag, hyp2000arcSchemaEwMessage.preferredMag) &&
+        Objects.equals(this.numberOfPreferredMags, hyp2000arcSchemaEwMessage.numberOfPreferredMags) &&
         Objects.equals(this.phases, hyp2000arcSchemaEwMessage.phases);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(quakeId, version, originTime, latitude, longitude, depth, nph, nphS, nphtot, nPfm, gap, dmin, rms, e0az, e0dp, e0, e1az, e1dp, e1, e2, erh, erz, md, reg, labelpref, mpref, wtpref, mdtype, mdmad, mdwt, ingvQuality, phases);
+    return Objects.hash(quakeId, version, originId, originTime, latitude, longitude, depth, nph, nphS, nphtot, nPfm, gap, dmin, rms, e0az, e0dp, e0, e1az, e1dp, e1, e2, erh, erz, md, reg, labelpref, mpref, wtpref, mdtype, mdmad, mdwt, ingvQuality, amplitudeMagnitude, numberOfAmpMagWeightCode, medianAbsDiffAmpMag, preferredMagLabel, preferredMag, numberOfPreferredMags, phases);
   }
 
   @Override
@@ -988,6 +1183,7 @@ public class Hyp2000arcSchemaEwMessage {
     sb.append("class Hyp2000arcSchemaEwMessage {\n");
     sb.append("    quakeId: ").append(toIndentedString(quakeId)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("    originId: ").append(toIndentedString(originId)).append("\n");
     sb.append("    originTime: ").append(toIndentedString(originTime)).append("\n");
     sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
     sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
@@ -1017,6 +1213,12 @@ public class Hyp2000arcSchemaEwMessage {
     sb.append("    mdmad: ").append(toIndentedString(mdmad)).append("\n");
     sb.append("    mdwt: ").append(toIndentedString(mdwt)).append("\n");
     sb.append("    ingvQuality: ").append(toIndentedString(ingvQuality)).append("\n");
+    sb.append("    amplitudeMagnitude: ").append(toIndentedString(amplitudeMagnitude)).append("\n");
+    sb.append("    numberOfAmpMagWeightCode: ").append(toIndentedString(numberOfAmpMagWeightCode)).append("\n");
+    sb.append("    medianAbsDiffAmpMag: ").append(toIndentedString(medianAbsDiffAmpMag)).append("\n");
+    sb.append("    preferredMagLabel: ").append(toIndentedString(preferredMagLabel)).append("\n");
+    sb.append("    preferredMag: ").append(toIndentedString(preferredMag)).append("\n");
+    sb.append("    numberOfPreferredMags: ").append(toIndentedString(numberOfPreferredMags)).append("\n");
     sb.append("    phases: ").append(toIndentedString(phases)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -1042,6 +1244,7 @@ public class Hyp2000arcSchemaEwMessage {
     openapiFields = new HashSet<String>();
     openapiFields.add("quakeId");
     openapiFields.add("version");
+    openapiFields.add("originId");
     openapiFields.add("originTime");
     openapiFields.add("latitude");
     openapiFields.add("longitude");
@@ -1071,6 +1274,12 @@ public class Hyp2000arcSchemaEwMessage {
     openapiFields.add("mdmad");
     openapiFields.add("mdwt");
     openapiFields.add("ingvQuality");
+    openapiFields.add("amplitudeMagnitude");
+    openapiFields.add("numberOfAmpMagWeightCode");
+    openapiFields.add("medianAbsDiffAmpMag");
+    openapiFields.add("preferredMagLabel");
+    openapiFields.add("preferredMag");
+    openapiFields.add("numberOfPreferredMags");
     openapiFields.add("phases");
 
     // a set of required properties/fields (JSON key names)
@@ -1112,6 +1321,9 @@ public class Hyp2000arcSchemaEwMessage {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("version") != null && !jsonObj.get("version").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
+      }
       if (jsonObj.get("reg") != null && !jsonObj.get("reg").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `reg` to be a primitive type in the JSON string but got `%s`", jsonObj.get("reg").toString()));
       }
@@ -1123,6 +1335,9 @@ public class Hyp2000arcSchemaEwMessage {
       }
       if (jsonObj.get("ingvQuality") != null && !jsonObj.get("ingvQuality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `ingvQuality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ingvQuality").toString()));
+      }
+      if (jsonObj.get("preferredMagLabel") != null && !jsonObj.get("preferredMagLabel").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `preferredMagLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("preferredMagLabel").toString()));
       }
       JsonArray jsonArrayphases = jsonObj.getAsJsonArray("phases");
       if (jsonArrayphases != null) {

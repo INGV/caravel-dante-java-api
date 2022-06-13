@@ -22,7 +22,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import org.ingv.dante.model.TypeOriginName;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -47,14 +46,6 @@ public class Quake2kSchemaEwMessageTest {
     @Test
     public void quakeIdTest() {
         // TODO: test quakeId
-    }
-
-    /**
-     * Test the property 'version'
-     */
-    @Test
-    public void versionTest() {
-        // TODO: test version
     }
 
     /**
