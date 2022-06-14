@@ -56,7 +56,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T06:25:04.907414Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:27:25.491845Z[Etc/UTC]")
 public class ObjectOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -1535,12 +1535,6 @@ public class ObjectOrigin {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));
-      }
-      if (jsonObj.get("region") != null && !jsonObj.get("region").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
-      }
       // validate the optional field `type_origin`
       if (jsonObj.getAsJsonObject("type_origin") != null) {
         ObjectTypeOrigin.validateJsonObject(jsonObj.getAsJsonObject("type_origin"));
@@ -1554,37 +1548,22 @@ public class ObjectOrigin {
         ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
       JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
+      // validate the optional field `magnitudes` (array)
       if (jsonArraymagnitudes != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("magnitudes").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `magnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("magnitudes").toString()));
-        }
-
-        // validate the optional field `magnitudes` (array)
         for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
           ObjectMagnitude.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayarrivals = jsonObj.getAsJsonArray("arrivals");
+      // validate the optional field `arrivals` (array)
       if (jsonArrayarrivals != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("arrivals").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `arrivals` to be an array in the JSON string but got `%s`", jsonObj.get("arrivals").toString()));
-        }
-
-        // validate the optional field `arrivals` (array)
         for (int i = 0; i < jsonArrayarrivals.size(); i++) {
           ObjectArrival.validateJsonObject(jsonArrayarrivals.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArrayfocalmechanisms = jsonObj.getAsJsonArray("focalmechanisms");
+      // validate the optional field `focalmechanisms` (array)
       if (jsonArrayfocalmechanisms != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("focalmechanisms").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `focalmechanisms` to be an array in the JSON string but got `%s`", jsonObj.get("focalmechanisms").toString()));
-        }
-
-        // validate the optional field `focalmechanisms` (array)
         for (int i = 0; i < jsonArrayfocalmechanisms.size(); i++) {
           ObjectFocalmechanism.validateJsonObject(jsonArrayfocalmechanisms.get(i).getAsJsonObject());
         };

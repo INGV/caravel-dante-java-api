@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**originFlag** | [**List&lt;ObjectOriginFlagPostOutputOriginFlagInner&gt;**](ObjectOriginFlagPostOutputOriginFlagInner.md) |  |  [optional] |
+|**originFlag** | [**List&lt;Object&gt;**](Object.md) |  |  [optional] |
 
 
 

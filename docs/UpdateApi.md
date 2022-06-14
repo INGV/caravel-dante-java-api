@@ -15,7 +15,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="updateEvent"></a>
 # **updateEvent**
-> UpdateEvent200Response updateEvent(id, updateEventRequest)
+> Object updateEvent(id, UNKNOWN_BASE_TYPE)
 
 Update an existing event
 
@@ -42,9 +42,9 @@ public class Example {
 
     UpdateApi apiInstance = new UpdateApi(defaultClient);
     Long id = 56L; // Long | INGV eventid that need to be updated.
-    UpdateEventRequest updateEventRequest = new UpdateEventRequest(); // UpdateEventRequest | JSON to update
+    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to update
     try {
-      UpdateEvent200Response result = apiInstance.updateEvent(id, updateEventRequest);
+      Object result = apiInstance.updateEvent(id, UNKNOWN_BASE_TYPE);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UpdateApi#updateEvent");
@@ -62,11 +62,11 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **Long**| INGV eventid that need to be updated. | |
-| **updateEventRequest** | [**UpdateEventRequest**](UpdateEventRequest.md)| JSON to update | |
+| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to update | |
 
 ### Return type
 
-[**UpdateEvent200Response**](UpdateEvent200Response.md)
+**Object**
 
 ### Authorization
 
@@ -169,7 +169,7 @@ public class Example {
 
 <a name="updateOriginFlag"></a>
 # **updateOriginFlag**
-> AddOriginFlag201Response updateOriginFlag(id, updateOriginFlagRequest)
+> Object updateOriginFlag(id, UNKNOWN_BASE_TYPE)
 
 Update an existing origin-flag
 
@@ -196,9 +196,9 @@ public class Example {
 
     UpdateApi apiInstance = new UpdateApi(defaultClient);
     Long id = 56L; // Long | INGV origin-flag id that need to be updated.
-    UpdateOriginFlagRequest updateOriginFlagRequest = new UpdateOriginFlagRequest(); // UpdateOriginFlagRequest | JSON to update
+    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to update
     try {
-      AddOriginFlag201Response result = apiInstance.updateOriginFlag(id, updateOriginFlagRequest);
+      Object result = apiInstance.updateOriginFlag(id, UNKNOWN_BASE_TYPE);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UpdateApi#updateOriginFlag");
@@ -216,11 +216,11 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **Long**| INGV origin-flag id that need to be updated. | |
-| **updateOriginFlagRequest** | [**UpdateOriginFlagRequest**](UpdateOriginFlagRequest.md)| JSON to update | |
+| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to update | |
 
 ### Return type
 
-[**AddOriginFlag201Response**](AddOriginFlag201Response.md)
+**Object**
 
 ### Authorization
 

@@ -20,7 +20,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="addEvent"></a>
 # **addEvent**
-> AddEvent201Response addEvent(getEvent200Response)
+> Object addEvent(UNKNOWN_BASE_TYPE)
 
 Add a new event to the DB
 
@@ -41,9 +41,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    GetEvent200Response getEvent200Response = new GetEvent200Response(); // GetEvent200Response | JSON to store
+    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to store
     try {
-      AddEvent201Response result = apiInstance.addEvent(getEvent200Response);
+      Object result = apiInstance.addEvent(UNKNOWN_BASE_TYPE);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addEvent");
@@ -60,11 +60,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **getEvent200Response** | [**GetEvent200Response**](GetEvent200Response.md)| JSON to store | |
+| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to store | |
 
 ### Return type
 
-[**AddEvent201Response**](AddEvent201Response.md)
+**Object**
 
 ### Authorization
 
@@ -88,7 +88,7 @@ No authorization required
 
 <a name="addFocalmechanism"></a>
 # **addFocalmechanism**
-> AddFocalmechanism201Response addFocalmechanism(addFocalmechanismRequest)
+> Object addFocalmechanism(UNKNOWN_BASE_TYPE)
 
 Add a new focalmechanism(s) to the DB
 
@@ -109,9 +109,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    AddFocalmechanismRequest addFocalmechanismRequest = new AddFocalmechanismRequest(); // AddFocalmechanismRequest | JSON to store
+    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to store
     try {
-      AddFocalmechanism201Response result = apiInstance.addFocalmechanism(addFocalmechanismRequest);
+      Object result = apiInstance.addFocalmechanism(UNKNOWN_BASE_TYPE);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addFocalmechanism");
@@ -128,11 +128,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **addFocalmechanismRequest** | [**AddFocalmechanismRequest**](AddFocalmechanismRequest.md)| JSON to store | |
+| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to store | |
 
 ### Return type
 
-[**AddFocalmechanism201Response**](AddFocalmechanism201Response.md)
+**Object**
 
 ### Authorization
 
@@ -224,7 +224,7 @@ No authorization required
 
 <a name="addMagnitude"></a>
 # **addMagnitude**
-> AddMagnitude201Response addMagnitude(addMagnitudeRequest)
+> Object addMagnitude(UNKNOWN_BASE_TYPE)
 
 Add a new magnitude(s) to the DB
 
@@ -245,9 +245,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    AddMagnitudeRequest addMagnitudeRequest = new AddMagnitudeRequest(); // AddMagnitudeRequest | JSON to store
+    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to store
     try {
-      AddMagnitude201Response result = apiInstance.addMagnitude(addMagnitudeRequest);
+      Object result = apiInstance.addMagnitude(UNKNOWN_BASE_TYPE);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addMagnitude");
@@ -264,11 +264,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **addMagnitudeRequest** | [**AddMagnitudeRequest**](AddMagnitudeRequest.md)| JSON to store | |
+| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to store | |
 
 ### Return type
 
-[**AddMagnitude201Response**](AddMagnitude201Response.md)
+**Object**
 
 ### Authorization
 
@@ -292,7 +292,7 @@ No authorization required
 
 <a name="addMomenttensor"></a>
 # **addMomenttensor**
-> AddMomenttensor201Response addMomenttensor(addMomenttensorRequest)
+> Object addMomenttensor(UNKNOWN_BASE_TYPE)
 
 Add a new momenttensor(s) to the DB
 
@@ -313,9 +313,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    AddMomenttensorRequest addMomenttensorRequest = new AddMomenttensorRequest(); // AddMomenttensorRequest | JSON to store
+    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to store
     try {
-      AddMomenttensor201Response result = apiInstance.addMomenttensor(addMomenttensorRequest);
+      Object result = apiInstance.addMomenttensor(UNKNOWN_BASE_TYPE);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addMomenttensor");
@@ -332,11 +332,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **addMomenttensorRequest** | [**AddMomenttensorRequest**](AddMomenttensorRequest.md)| JSON to store | |
+| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to store | |
 
 ### Return type
 
-[**AddMomenttensor201Response**](AddMomenttensor201Response.md)
+**Object**
 
 ### Authorization
 
@@ -360,7 +360,7 @@ No authorization required
 
 <a name="addOrigin"></a>
 # **addOrigin**
-> AddOrigin201Response addOrigin(addOriginRequest)
+> Object addOrigin(UNKNOWN_BASE_TYPE)
 
 Add a new origin(s) to the DB
 
@@ -381,9 +381,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    AddOriginRequest addOriginRequest = new AddOriginRequest(); // AddOriginRequest | JSON to store
+    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to store
     try {
-      AddOrigin201Response result = apiInstance.addOrigin(addOriginRequest);
+      Object result = apiInstance.addOrigin(UNKNOWN_BASE_TYPE);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addOrigin");
@@ -400,11 +400,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **addOriginRequest** | [**AddOriginRequest**](AddOriginRequest.md)| JSON to store | |
+| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to store | |
 
 ### Return type
 
-[**AddOrigin201Response**](AddOrigin201Response.md)
+**Object**
 
 ### Authorization
 
@@ -428,7 +428,7 @@ No authorization required
 
 <a name="addOriginFlag"></a>
 # **addOriginFlag**
-> AddOriginFlag201Response addOriginFlag(addOriginFlagRequest)
+> Object addOriginFlag(UNKNOWN_BASE_TYPE)
 
 Add one or more flags to origin
 
@@ -449,9 +449,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    AddOriginFlagRequest addOriginFlagRequest = new AddOriginFlagRequest(); // AddOriginFlagRequest | JSON to store
+    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to store
     try {
-      AddOriginFlag201Response result = apiInstance.addOriginFlag(addOriginFlagRequest);
+      Object result = apiInstance.addOriginFlag(UNKNOWN_BASE_TYPE);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addOriginFlag");
@@ -468,11 +468,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **addOriginFlagRequest** | [**AddOriginFlagRequest**](AddOriginFlagRequest.md)| JSON to store | |
+| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to store | |
 
 ### Return type
 
-[**AddOriginFlag201Response**](AddOriginFlag201Response.md)
+**Object**
 
 ### Authorization
 
@@ -564,7 +564,7 @@ No authorization required
 
 <a name="addStrongmotion"></a>
 # **addStrongmotion**
-> AddStrongmotion201Response addStrongmotion(addStrongmotionRequest)
+> Object addStrongmotion(UNKNOWN_BASE_TYPE)
 
 Add a new strongmotion(s) to the DB
 
@@ -585,9 +585,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    AddStrongmotionRequest addStrongmotionRequest = new AddStrongmotionRequest(); // AddStrongmotionRequest | JSON to store
+    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to store
     try {
-      AddStrongmotion201Response result = apiInstance.addStrongmotion(addStrongmotionRequest);
+      Object result = apiInstance.addStrongmotion(UNKNOWN_BASE_TYPE);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addStrongmotion");
@@ -604,11 +604,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **addStrongmotionRequest** | [**AddStrongmotionRequest**](AddStrongmotionRequest.md)| JSON to store | |
+| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to store | |
 
 ### Return type
 
-[**AddStrongmotion201Response**](AddStrongmotion201Response.md)
+**Object**
 
 ### Authorization
 

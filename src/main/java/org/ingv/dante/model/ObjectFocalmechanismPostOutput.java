@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.ObjectFocalmechanismPostOutputFocalmechanismsInner;
+import org.ingv.dante.model.ObjectMomenttensorPostOutput;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,22 +50,22 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanismPostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T06:25:04.907414Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:27:25.491845Z[Etc/UTC]")
 public class ObjectFocalmechanismPostOutput {
   public static final String SERIALIZED_NAME_FOCALMECHANISMS = "focalmechanisms";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)
-  private List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms = null;
+  private List<Object> focalmechanisms = null;
 
   public ObjectFocalmechanismPostOutput() { 
   }
 
-  public ObjectFocalmechanismPostOutput focalmechanisms(List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
+  public ObjectFocalmechanismPostOutput focalmechanisms(List<Object> focalmechanisms) {
     
     this.focalmechanisms = focalmechanisms;
     return this;
   }
 
-  public ObjectFocalmechanismPostOutput addFocalmechanismsItem(ObjectFocalmechanismPostOutputFocalmechanismsInner focalmechanismsItem) {
+  public ObjectFocalmechanismPostOutput addFocalmechanismsItem(Object focalmechanismsItem) {
     if (this.focalmechanisms == null) {
       this.focalmechanisms = new ArrayList<>();
     }
@@ -80,12 +80,12 @@ public class ObjectFocalmechanismPostOutput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<ObjectFocalmechanismPostOutputFocalmechanismsInner> getFocalmechanisms() {
+  public List<Object> getFocalmechanisms() {
     return focalmechanisms;
   }
 
 
-  public void setFocalmechanisms(List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
+  public void setFocalmechanisms(List<Object> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
   }
 
@@ -164,15 +164,10 @@ public class ObjectFocalmechanismPostOutput {
         }
       }
       JsonArray jsonArrayfocalmechanisms = jsonObj.getAsJsonArray("focalmechanisms");
+      // validate the optional field `focalmechanisms` (array)
       if (jsonArrayfocalmechanisms != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("focalmechanisms").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `focalmechanisms` to be an array in the JSON string but got `%s`", jsonObj.get("focalmechanisms").toString()));
-        }
-
-        // validate the optional field `focalmechanisms` (array)
         for (int i = 0; i < jsonArrayfocalmechanisms.size(); i++) {
-          ObjectFocalmechanismPostOutputFocalmechanismsInner.validateJsonObject(jsonArrayfocalmechanisms.get(i).getAsJsonObject());
+          Object.validateJsonObject(jsonArrayfocalmechanisms.get(i).getAsJsonObject());
         };
       }
   }

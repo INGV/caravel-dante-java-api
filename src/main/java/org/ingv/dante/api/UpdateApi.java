@@ -27,16 +27,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.ingv.dante.model.AddOriginFlag201Response;
 import org.ingv.dante.model.ObjectTableLocalspace;
 import org.ingv.dante.model.ObjectTableProvenance;
 import org.ingv.dante.model.ObjectTableTypeEvent;
 import org.ingv.dante.model.ObjectTableTypeMagnitude;
 import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.ingv.dante.model.Problem;
-import org.ingv.dante.model.UpdateEvent200Response;
-import org.ingv.dante.model.UpdateEventRequest;
-import org.ingv.dante.model.UpdateOriginFlagRequest;
+import org.ingv.dante.model.UNKNOWN_BASE_TYPE;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -85,7 +82,7 @@ public class UpdateApi {
     /**
      * Build call for updateEvent
      * @param id INGV eventid that need to be updated. (required)
-     * @param updateEventRequest JSON to update (required)
+     * @param UNKNOWN_BASE_TYPE JSON to update (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -103,7 +100,7 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateEventCall(Long id, UpdateEventRequest updateEventRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateEventCall(Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -117,7 +114,7 @@ public class UpdateApi {
             basePath = null;
         }
 
-        Object localVarPostBody = updateEventRequest;
+        Object localVarPostBody = UNKNOWN_BASE_TYPE;
 
         // create path and map variables
         String localVarPath = "/quakedb/v1/event/{id}"
@@ -150,20 +147,20 @@ public class UpdateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateEventValidateBeforeCall(Long id, UpdateEventRequest updateEventRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateEventValidateBeforeCall(Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateEvent(Async)");
         }
         
-        // verify the required parameter 'updateEventRequest' is set
-        if (updateEventRequest == null) {
-            throw new ApiException("Missing the required parameter 'updateEventRequest' when calling updateEvent(Async)");
+        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
+        if (UNKNOWN_BASE_TYPE == null) {
+            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling updateEvent(Async)");
         }
         
 
-        okhttp3.Call localVarCall = updateEventCall(id, updateEventRequest, _callback);
+        okhttp3.Call localVarCall = updateEventCall(id, UNKNOWN_BASE_TYPE, _callback);
         return localVarCall;
 
     }
@@ -172,8 +169,8 @@ public class UpdateApi {
      * Update an existing event
      * Update an existing event.&lt;/br&gt; To use this API you must be authenticated and \&quot;event.localspace_name\&quot; owner.&lt;/br&gt; More info about &#x60;event_group_id&#x60; &lt;b&gt;https://gitlab.rm.ingv.it/caravel/dante8/-/issues/69#note_60479&lt;/b&gt;
      * @param id INGV eventid that need to be updated. (required)
-     * @param updateEventRequest JSON to update (required)
-     * @return UpdateEvent200Response
+     * @param UNKNOWN_BASE_TYPE JSON to update (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -189,8 +186,8 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public UpdateEvent200Response updateEvent(Long id, UpdateEventRequest updateEventRequest) throws ApiException {
-        ApiResponse<UpdateEvent200Response> localVarResp = updateEventWithHttpInfo(id, updateEventRequest);
+    public Object updateEvent(Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
+        ApiResponse<Object> localVarResp = updateEventWithHttpInfo(id, UNKNOWN_BASE_TYPE);
         return localVarResp.getData();
     }
 
@@ -198,8 +195,8 @@ public class UpdateApi {
      * Update an existing event
      * Update an existing event.&lt;/br&gt; To use this API you must be authenticated and \&quot;event.localspace_name\&quot; owner.&lt;/br&gt; More info about &#x60;event_group_id&#x60; &lt;b&gt;https://gitlab.rm.ingv.it/caravel/dante8/-/issues/69#note_60479&lt;/b&gt;
      * @param id INGV eventid that need to be updated. (required)
-     * @param updateEventRequest JSON to update (required)
-     * @return ApiResponse&lt;UpdateEvent200Response&gt;
+     * @param UNKNOWN_BASE_TYPE JSON to update (required)
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -215,17 +212,23 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<UpdateEvent200Response> updateEventWithHttpInfo(Long id, UpdateEventRequest updateEventRequest) throws ApiException {
-        okhttp3.Call localVarCall = updateEventValidateBeforeCall(id, updateEventRequest, null);
-        Type localVarReturnType = new TypeToken<UpdateEvent200Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    public ApiResponse<Object> updateEventWithHttpInfo(Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
+        okhttp3.Call localVarCall = updateEventValidateBeforeCall(id, UNKNOWN_BASE_TYPE, null);
+        try {
+            Type localVarReturnType = new TypeToken<Object>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Object>(){});
+            throw e;
+        }
     }
 
     /**
      * Update an existing event (asynchronously)
      * Update an existing event.&lt;/br&gt; To use this API you must be authenticated and \&quot;event.localspace_name\&quot; owner.&lt;/br&gt; More info about &#x60;event_group_id&#x60; &lt;b&gt;https://gitlab.rm.ingv.it/caravel/dante8/-/issues/69#note_60479&lt;/b&gt;
      * @param id INGV eventid that need to be updated. (required)
-     * @param updateEventRequest JSON to update (required)
+     * @param UNKNOWN_BASE_TYPE JSON to update (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -243,10 +246,10 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateEventAsync(Long id, UpdateEventRequest updateEventRequest, final ApiCallback<UpdateEvent200Response> _callback) throws ApiException {
+    public okhttp3.Call updateEventAsync(Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateEventValidateBeforeCall(id, updateEventRequest, _callback);
-        Type localVarReturnType = new TypeToken<UpdateEvent200Response>(){}.getType();
+        okhttp3.Call localVarCall = updateEventValidateBeforeCall(id, UNKNOWN_BASE_TYPE, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -385,8 +388,14 @@ public class UpdateApi {
      */
     public ApiResponse<ObjectTableLocalspace> updateLocalspaceWithHttpInfo(Long id, ObjectTableLocalspace objectTableLocalspace) throws ApiException {
         okhttp3.Call localVarCall = updateLocalspaceValidateBeforeCall(id, objectTableLocalspace, null);
-        Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectTableLocalspace>(){}.getType()));
+            e.setErrorObjectType(new GenericType<ObjectTableLocalspace>(){});
+            throw e;
+        }
     }
 
     /**
@@ -421,7 +430,7 @@ public class UpdateApi {
     /**
      * Build call for updateOriginFlag
      * @param id INGV origin-flag id that need to be updated. (required)
-     * @param updateOriginFlagRequest JSON to update (required)
+     * @param UNKNOWN_BASE_TYPE JSON to update (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -439,7 +448,7 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateOriginFlagCall(Long id, UpdateOriginFlagRequest updateOriginFlagRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateOriginFlagCall(Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -453,7 +462,7 @@ public class UpdateApi {
             basePath = null;
         }
 
-        Object localVarPostBody = updateOriginFlagRequest;
+        Object localVarPostBody = UNKNOWN_BASE_TYPE;
 
         // create path and map variables
         String localVarPath = "/quakedb/v1/origin-flag/{id}"
@@ -486,20 +495,20 @@ public class UpdateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateOriginFlagValidateBeforeCall(Long id, UpdateOriginFlagRequest updateOriginFlagRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateOriginFlagValidateBeforeCall(Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateOriginFlag(Async)");
         }
         
-        // verify the required parameter 'updateOriginFlagRequest' is set
-        if (updateOriginFlagRequest == null) {
-            throw new ApiException("Missing the required parameter 'updateOriginFlagRequest' when calling updateOriginFlag(Async)");
+        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
+        if (UNKNOWN_BASE_TYPE == null) {
+            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling updateOriginFlag(Async)");
         }
         
 
-        okhttp3.Call localVarCall = updateOriginFlagCall(id, updateOriginFlagRequest, _callback);
+        okhttp3.Call localVarCall = updateOriginFlagCall(id, UNKNOWN_BASE_TYPE, _callback);
         return localVarCall;
 
     }
@@ -508,8 +517,8 @@ public class UpdateApi {
      * Update an existing origin-flag
      * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
      * @param id INGV origin-flag id that need to be updated. (required)
-     * @param updateOriginFlagRequest JSON to update (required)
-     * @return AddOriginFlag201Response
+     * @param UNKNOWN_BASE_TYPE JSON to update (required)
+     * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -525,8 +534,8 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public AddOriginFlag201Response updateOriginFlag(Long id, UpdateOriginFlagRequest updateOriginFlagRequest) throws ApiException {
-        ApiResponse<AddOriginFlag201Response> localVarResp = updateOriginFlagWithHttpInfo(id, updateOriginFlagRequest);
+    public Object updateOriginFlag(Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
+        ApiResponse<Object> localVarResp = updateOriginFlagWithHttpInfo(id, UNKNOWN_BASE_TYPE);
         return localVarResp.getData();
     }
 
@@ -534,8 +543,8 @@ public class UpdateApi {
      * Update an existing origin-flag
      * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
      * @param id INGV origin-flag id that need to be updated. (required)
-     * @param updateOriginFlagRequest JSON to update (required)
-     * @return ApiResponse&lt;AddOriginFlag201Response&gt;
+     * @param UNKNOWN_BASE_TYPE JSON to update (required)
+     * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -551,17 +560,23 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AddOriginFlag201Response> updateOriginFlagWithHttpInfo(Long id, UpdateOriginFlagRequest updateOriginFlagRequest) throws ApiException {
-        okhttp3.Call localVarCall = updateOriginFlagValidateBeforeCall(id, updateOriginFlagRequest, null);
-        Type localVarReturnType = new TypeToken<AddOriginFlag201Response>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    public ApiResponse<Object> updateOriginFlagWithHttpInfo(Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
+        okhttp3.Call localVarCall = updateOriginFlagValidateBeforeCall(id, UNKNOWN_BASE_TYPE, null);
+        try {
+            Type localVarReturnType = new TypeToken<Object>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
+            e.setErrorObjectType(new GenericType<Object>(){});
+            throw e;
+        }
     }
 
     /**
      * Update an existing origin-flag (asynchronously)
      * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
      * @param id INGV origin-flag id that need to be updated. (required)
-     * @param updateOriginFlagRequest JSON to update (required)
+     * @param UNKNOWN_BASE_TYPE JSON to update (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -579,10 +594,10 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateOriginFlagAsync(Long id, UpdateOriginFlagRequest updateOriginFlagRequest, final ApiCallback<AddOriginFlag201Response> _callback) throws ApiException {
+    public okhttp3.Call updateOriginFlagAsync(Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateOriginFlagValidateBeforeCall(id, updateOriginFlagRequest, _callback);
-        Type localVarReturnType = new TypeToken<AddOriginFlag201Response>(){}.getType();
+        okhttp3.Call localVarCall = updateOriginFlagValidateBeforeCall(id, UNKNOWN_BASE_TYPE, _callback);
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -721,8 +736,14 @@ public class UpdateApi {
      */
     public ApiResponse<ObjectTableProvenance> updateProvenanceWithHttpInfo(Long id, ObjectTableProvenance objectTableProvenance) throws ApiException {
         okhttp3.Call localVarCall = updateProvenanceValidateBeforeCall(id, objectTableProvenance, null);
-        Type localVarReturnType = new TypeToken<ObjectTableProvenance>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<ObjectTableProvenance>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectTableProvenance>(){}.getType()));
+            e.setErrorObjectType(new GenericType<ObjectTableProvenance>(){});
+            throw e;
+        }
     }
 
     /**
@@ -889,8 +910,14 @@ public class UpdateApi {
      */
     public ApiResponse<ObjectTableTypeEvent> updateTypeEventWithHttpInfo(Long id, ObjectTableTypeEvent objectTableTypeEvent) throws ApiException {
         okhttp3.Call localVarCall = updateTypeEventValidateBeforeCall(id, objectTableTypeEvent, null);
-        Type localVarReturnType = new TypeToken<ObjectTableTypeEvent>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<ObjectTableTypeEvent>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectTableTypeEvent>(){}.getType()));
+            e.setErrorObjectType(new GenericType<ObjectTableTypeEvent>(){});
+            throw e;
+        }
     }
 
     /**
@@ -1057,8 +1084,14 @@ public class UpdateApi {
      */
     public ApiResponse<ObjectTableTypeMagnitude> updateTypeMagnitudeWithHttpInfo(Long id, ObjectTableTypeMagnitude objectTableTypeMagnitude) throws ApiException {
         okhttp3.Call localVarCall = updateTypeMagnitudeValidateBeforeCall(id, objectTableTypeMagnitude, null);
-        Type localVarReturnType = new TypeToken<ObjectTableTypeMagnitude>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<ObjectTableTypeMagnitude>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectTableTypeMagnitude>(){}.getType()));
+            e.setErrorObjectType(new GenericType<ObjectTableTypeMagnitude>(){});
+            throw e;
+        }
     }
 
     /**
@@ -1225,8 +1258,14 @@ public class UpdateApi {
      */
     public ApiResponse<ObjectTableTypeOrigin> updateTypeOriginWithHttpInfo(Long id, ObjectTableTypeOrigin objectTableTypeOrigin) throws ApiException {
         okhttp3.Call localVarCall = updateTypeOriginValidateBeforeCall(id, objectTableTypeOrigin, null);
-        Type localVarReturnType = new TypeToken<ObjectTableTypeOrigin>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        try {
+            Type localVarReturnType = new TypeToken<ObjectTableTypeOrigin>(){}.getType();
+            return localVarApiClient.execute(localVarCall, localVarReturnType);
+        } catch (ApiException e) {
+            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectTableTypeOrigin>(){}.getType()));
+            e.setErrorObjectType(new GenericType<ObjectTableTypeOrigin>(){});
+            throw e;
+        }
     }
 
     /**

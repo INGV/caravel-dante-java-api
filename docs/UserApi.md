@@ -9,7 +9,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="getToken"></a>
 # **getToken**
-> GetToken201Response getToken(getTokenRequest)
+> Object getToken(UNKNOWN_BASE_TYPE)
 
 Logs user into the system
 
@@ -30,9 +30,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     UserApi apiInstance = new UserApi(defaultClient);
-    GetTokenRequest getTokenRequest = new GetTokenRequest(); // GetTokenRequest | JSON to update
+    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to update
     try {
-      GetToken201Response result = apiInstance.getToken(getTokenRequest);
+      Object result = apiInstance.getToken(UNKNOWN_BASE_TYPE);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserApi#getToken");
@@ -49,11 +49,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **getTokenRequest** | [**GetTokenRequest**](GetTokenRequest.md)| JSON to update | |
+| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to update | |
 
 ### Return type
 
-[**GetToken201Response**](GetToken201Response.md)
+**Object**
 
 ### Authorization
 
