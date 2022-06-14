@@ -23,7 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
+import org.ingv.dante.model.Quake2kSchemaEwLogo;
+import org.ingv.dante.model.Quake2kSchemaEwMessage;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,20 +49,20 @@ import org.ingv.dante.JSON;
 /**
  * Quake2kSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:26:38.388681Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T13:53:07.752394Z[Etc/UTC]")
 public class Quake2kSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
-  private Object ewMessage;
+  private Quake2kSchemaEwMessage ewMessage;
 
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
-  private Object ewLogo;
+  private Quake2kSchemaEwLogo ewLogo;
 
   public Quake2kSchema() { 
   }
 
-  public Quake2kSchema ewMessage(Object ewMessage) {
+  public Quake2kSchema ewMessage(Quake2kSchemaEwMessage ewMessage) {
     
     this.ewMessage = ewMessage;
     return this;
@@ -74,17 +75,17 @@ public class Quake2kSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getEwMessage() {
+  public Quake2kSchemaEwMessage getEwMessage() {
     return ewMessage;
   }
 
 
-  public void setEwMessage(Object ewMessage) {
+  public void setEwMessage(Quake2kSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
   }
 
 
-  public Quake2kSchema ewLogo(Object ewLogo) {
+  public Quake2kSchema ewLogo(Quake2kSchemaEwLogo ewLogo) {
     
     this.ewLogo = ewLogo;
     return this;
@@ -97,12 +98,12 @@ public class Quake2kSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getEwLogo() {
+  public Quake2kSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
 
 
-  public void setEwLogo(Object ewLogo) {
+  public void setEwLogo(Quake2kSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
   }
 
@@ -121,20 +122,9 @@ public class Quake2kSchema {
         Objects.equals(this.ewLogo, quake2kSchema.ewLogo);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
     return Objects.hash(ewMessage, ewLogo);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -196,11 +186,11 @@ public class Quake2kSchema {
       }
       // validate the optional field `ewMessage`
       if (jsonObj.getAsJsonObject("ewMessage") != null) {
-        Object.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
+        Quake2kSchemaEwMessage.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
       }
       // validate the optional field `ewLogo`
       if (jsonObj.getAsJsonObject("ewLogo") != null) {
-        Object.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
+        Quake2kSchemaEwLogo.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
       }
   }
 

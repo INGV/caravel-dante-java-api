@@ -12,7 +12,7 @@
 |**from** | **String** | Showed record from. |  [optional] |
 |**lastPage** | **String** | Last page. |  [optional] |
 |**lastPageUrl** | **String** | URL base path. |  [optional] |
-|**links** | [**List&lt;Object&gt;**](Object.md) |  |  [optional] |
+|**links** | [**List&lt;MetaDefinitionLinksInner&gt;**](MetaDefinitionLinksInner.md) |  |  [optional] |
 |**nextPageUrl** | **String** | URL base path. |  [optional] |
 |**path** | **String** | URL base path. |  [optional] |
 |**perPage** | **String** | Record per page. |  [optional] |

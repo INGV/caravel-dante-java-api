@@ -27,8 +27,9 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.ingv.dante.model.GetToken201Response;
+import org.ingv.dante.model.GetTokenRequest;
 import org.ingv.dante.model.Problem;
-import org.ingv.dante.model.UNKNOWN_BASE_TYPE;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -76,7 +77,7 @@ public class UserApi {
 
     /**
      * Build call for getToken
-     * @param UNKNOWN_BASE_TYPE JSON to update (required)
+     * @param getTokenRequest JSON to update (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -92,7 +93,7 @@ public class UserApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTokenCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getTokenCall(GetTokenRequest getTokenRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -106,7 +107,7 @@ public class UserApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = getTokenRequest;
 
         // create path and map variables
         String localVarPath = "/login";
@@ -138,15 +139,15 @@ public class UserApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getTokenValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getTokenValidateBeforeCall(GetTokenRequest getTokenRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling getToken(Async)");
+        // verify the required parameter 'getTokenRequest' is set
+        if (getTokenRequest == null) {
+            throw new ApiException("Missing the required parameter 'getTokenRequest' when calling getToken(Async)");
         }
         
 
-        okhttp3.Call localVarCall = getTokenCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = getTokenCall(getTokenRequest, _callback);
         return localVarCall;
 
     }
@@ -154,8 +155,8 @@ public class UserApi {
     /**
      * Logs user into the system
      * Logs user into the system and retrieve Bearer Token
-     * @param UNKNOWN_BASE_TYPE JSON to update (required)
-     * @return Object
+     * @param getTokenRequest JSON to update (required)
+     * @return GetToken201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -169,16 +170,16 @@ public class UserApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object getToken(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = getTokenWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public GetToken201Response getToken(GetTokenRequest getTokenRequest) throws ApiException {
+        ApiResponse<GetToken201Response> localVarResp = getTokenWithHttpInfo(getTokenRequest);
         return localVarResp.getData();
     }
 
     /**
      * Logs user into the system
      * Logs user into the system and retrieve Bearer Token
-     * @param UNKNOWN_BASE_TYPE JSON to update (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param getTokenRequest JSON to update (required)
+     * @return ApiResponse&lt;GetToken201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -192,22 +193,16 @@ public class UserApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getTokenWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = getTokenValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<GetToken201Response> getTokenWithHttpInfo(GetTokenRequest getTokenRequest) throws ApiException {
+        okhttp3.Call localVarCall = getTokenValidateBeforeCall(getTokenRequest, null);
+        Type localVarReturnType = new TypeToken<GetToken201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Logs user into the system (asynchronously)
      * Logs user into the system and retrieve Bearer Token
-     * @param UNKNOWN_BASE_TYPE JSON to update (required)
+     * @param getTokenRequest JSON to update (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -223,10 +218,10 @@ public class UserApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTokenAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getTokenAsync(GetTokenRequest getTokenRequest, final ApiCallback<GetToken201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getTokenValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = getTokenValidateBeforeCall(getTokenRequest, _callback);
+        Type localVarReturnType = new TypeToken<GetToken201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

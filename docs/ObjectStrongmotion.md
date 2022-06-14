@@ -27,8 +27,8 @@
 |**rsa300** | **Float** | RSA(response spectrum accel) value for period 3.00 | double |  [optional] |
 |**localspace** | [**ObjectLocalspace**](ObjectLocalspace.md) |  |  [optional] |
 |**provenance** | [**ObjectProvenance**](ObjectProvenance.md) |  |  [optional] |
-|**alternative** | [**Object**](Object.md) |  |  [optional] |
-|**rsa** | [**List&lt;Object&gt;**](Object.md) |  |  [optional] |
+|**alternative** | [**ObjectStrongmotionAlternative**](ObjectStrongmotionAlternative.md) |  |  [optional] |
+|**rsa** | [**List&lt;ObjectStrongmotionRsaInner&gt;**](ObjectStrongmotionRsaInner.md) |  |  [optional] |
 
 
 

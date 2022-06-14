@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:26:38.388681Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T13:53:07.752394Z[Etc/UTC]")
 public class ObjectMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -729,6 +729,12 @@ public class ObjectMagnitude {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("mag_quality") != null && !jsonObj.get("mag_quality").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `mag_quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mag_quality").toString()));
+      }
+      if (jsonObj.get("type_magnitude") != null && !jsonObj.get("type_magnitude").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `type_magnitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_magnitude").toString()));
+      }
       // validate the optional field `localspace`
       if (jsonObj.getAsJsonObject("localspace") != null) {
         ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
@@ -738,8 +744,13 @@ public class ObjectMagnitude {
         ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
       JsonArray jsonArraystationmagnitudes = jsonObj.getAsJsonArray("stationmagnitudes");
-      // validate the optional field `stationmagnitudes` (array)
       if (jsonArraystationmagnitudes != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("stationmagnitudes").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `stationmagnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("stationmagnitudes").toString()));
+        }
+
+        // validate the optional field `stationmagnitudes` (array)
         for (int i = 0; i < jsonArraystationmagnitudes.size(); i++) {
           ObjectStationmagnitude.validateJsonObject(jsonArraystationmagnitudes.get(i).getAsJsonObject());
         };

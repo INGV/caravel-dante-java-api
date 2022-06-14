@@ -25,6 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -49,22 +50,22 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudePostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:26:38.388681Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T13:53:07.752394Z[Etc/UTC]")
 public class ObjectMagnitudePostOutput {
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
-  private List<Object> magnitudes = null;
+  private List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes = null;
 
   public ObjectMagnitudePostOutput() { 
   }
 
-  public ObjectMagnitudePostOutput magnitudes(List<Object> magnitudes) {
+  public ObjectMagnitudePostOutput magnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {
     
     this.magnitudes = magnitudes;
     return this;
   }
 
-  public ObjectMagnitudePostOutput addMagnitudesItem(Object magnitudesItem) {
+  public ObjectMagnitudePostOutput addMagnitudesItem(AddEvent201ResponseDataEventOriginsInnerAllOf magnitudesItem) {
     if (this.magnitudes == null) {
       this.magnitudes = new ArrayList<>();
     }
@@ -79,12 +80,12 @@ public class ObjectMagnitudePostOutput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Object> getMagnitudes() {
+  public List<AddEvent201ResponseDataEventOriginsInnerAllOf> getMagnitudes() {
     return magnitudes;
   }
 
 
-  public void setMagnitudes(List<Object> magnitudes) {
+  public void setMagnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {
     this.magnitudes = magnitudes;
   }
 
@@ -163,10 +164,15 @@ public class ObjectMagnitudePostOutput {
         }
       }
       JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
-      // validate the optional field `magnitudes` (array)
       if (jsonArraymagnitudes != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("magnitudes").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `magnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("magnitudes").toString()));
+        }
+
+        // validate the optional field `magnitudes` (array)
         for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
-          Object.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
+          AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
         };
       }
   }

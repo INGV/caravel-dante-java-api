@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:26:38.388681Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T13:53:07.752394Z[Etc/UTC]")
 public class ObjectEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -523,6 +523,9 @@ public class ObjectEvent {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      if (jsonObj.get("type_event") != null && !jsonObj.get("type_event").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `type_event` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_event").toString()));
+      }
       // validate the optional field `provenance`
       if (jsonObj.getAsJsonObject("provenance") != null) {
         ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
@@ -532,15 +535,25 @@ public class ObjectEvent {
         ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
-      // validate the optional field `origins` (array)
       if (jsonArrayorigins != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("origins").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
+        }
+
+        // validate the optional field `origins` (array)
         for (int i = 0; i < jsonArrayorigins.size(); i++) {
           ObjectOrigin.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
         };
       }
       JsonArray jsonArraystrongmotions = jsonObj.getAsJsonArray("strongmotions");
-      // validate the optional field `strongmotions` (array)
       if (jsonArraystrongmotions != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("strongmotions").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `strongmotions` to be an array in the JSON string but got `%s`", jsonObj.get("strongmotions").toString()));
+        }
+
+        // validate the optional field `strongmotions` (array)
         for (int i = 0; i < jsonArraystrongmotions.size(); i++) {
           ObjectStrongmotion.validateJsonObject(jsonArraystrongmotions.get(i).getAsJsonObject());
         };

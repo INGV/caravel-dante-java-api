@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**ewMessage** | [**Object**](Object.md) |  |  [optional] |
-|**ewLogo** | [**Object**](Object.md) |  |  [optional] |
+|**ewMessage** | [**PickScnlSchemaEwMessage**](PickScnlSchemaEwMessage.md) |  |  [optional] |
+|**ewLogo** | [**PickScnlSchemaEwLogo**](PickScnlSchemaEwLogo.md) |  |  [optional] |
 
 
 

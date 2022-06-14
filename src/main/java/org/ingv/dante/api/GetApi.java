@@ -27,10 +27,16 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.ingv.dante.model.InlineResponse200;
-import org.ingv.dante.model.InlineResponse2001;
-import org.ingv.dante.model.InlineResponse2002;
-import org.ingv.dante.model.MetaDefinition;
+import org.ingv.dante.model.GetEvent200Response;
+import org.ingv.dante.model.GetEventsPref200Response;
+import org.ingv.dante.model.GetLocalspace200Response;
+import org.ingv.dante.model.GetMunicipiDistanceKmPopolazione200Response;
+import org.ingv.dante.model.GetOriginFlag200Response;
+import org.ingv.dante.model.GetProvenance200Response;
+import org.ingv.dante.model.GetRegionName200Response;
+import org.ingv.dante.model.GetTypeEvent200Response;
+import org.ingv.dante.model.GetTypeMagnitude200Response;
+import org.ingv.dante.model.GetTypeOrigin200Response;
 import org.ingv.dante.model.ObjectStatus;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.Problem;
@@ -171,7 +177,7 @@ public class GetApi {
      * @param originid Select by origin id. (optional)
      * @param eventid Retrieve an event based on the unique INGV event id. (optional)
      * @param level Select deep level (optional, default to all)
-     * @return Object
+     * @return GetEvent200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -185,8 +191,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object getEvent(Long originid, Long eventid, String level) throws ApiException {
-        ApiResponse<Object> localVarResp = getEventWithHttpInfo(originid, eventid, level);
+    public GetEvent200Response getEvent(Long originid, Long eventid, String level) throws ApiException {
+        ApiResponse<GetEvent200Response> localVarResp = getEventWithHttpInfo(originid, eventid, level);
         return localVarResp.getData();
     }
 
@@ -196,7 +202,7 @@ public class GetApi {
      * @param originid Select by origin id. (optional)
      * @param eventid Retrieve an event based on the unique INGV event id. (optional)
      * @param level Select deep level (optional, default to all)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;GetEvent200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -210,16 +216,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getEventWithHttpInfo(Long originid, Long eventid, String level) throws ApiException {
+    public ApiResponse<GetEvent200Response> getEventWithHttpInfo(Long originid, Long eventid, String level) throws ApiException {
         okhttp3.Call localVarCall = getEventValidateBeforeCall(originid, eventid, level, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetEvent200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -243,10 +243,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventAsync(Long originid, Long eventid, String level, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getEventAsync(Long originid, Long eventid, String level, final ApiCallback<GetEvent200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getEventValidateBeforeCall(originid, eventid, level, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetEvent200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -450,7 +450,7 @@ public class GetApi {
      * @param idLocalspace Localspace Id. (optional)
      * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
-     * @return InlineResponse200
+     * @return GetEventsPref200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -464,8 +464,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse200 getEvents(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
-        ApiResponse<InlineResponse200> localVarResp = getEventsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit);
+    public GetEventsPref200Response getEvents(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
+        ApiResponse<GetEventsPref200Response> localVarResp = getEventsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit);
         return localVarResp.getData();
     }
 
@@ -493,7 +493,7 @@ public class GetApi {
      * @param idLocalspace Localspace Id. (optional)
      * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
-     * @return ApiResponse&lt;InlineResponse200&gt;
+     * @return ApiResponse&lt;GetEventsPref200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -507,16 +507,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse200> getEventsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
+    public ApiResponse<GetEventsPref200Response> getEventsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
         okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit, null);
-        try {
-            Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<InlineResponse200>(){}.getType()));
-            e.setErrorObjectType(new GenericType<InlineResponse200>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -558,10 +552,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit, final ApiCallback<InlineResponse200> _callback) throws ApiException {
+    public okhttp3.Call getEventsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit, final ApiCallback<GetEventsPref200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -747,7 +741,7 @@ public class GetApi {
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
      * @param orderby Select order (optional)
      * @param limit Limit the results to the specified number of events. (optional)
-     * @return InlineResponse200
+     * @return GetEventsPref200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -761,8 +755,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse200 getEventsPref(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit) throws ApiException {
-        ApiResponse<InlineResponse200> localVarResp = getEventsPrefWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit);
+    public GetEventsPref200Response getEventsPref(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit) throws ApiException {
+        ApiResponse<GetEventsPref200Response> localVarResp = getEventsPrefWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit);
         return localVarResp.getData();
     }
 
@@ -787,7 +781,7 @@ public class GetApi {
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
      * @param orderby Select order (optional)
      * @param limit Limit the results to the specified number of events. (optional)
-     * @return ApiResponse&lt;InlineResponse200&gt;
+     * @return ApiResponse&lt;GetEventsPref200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -801,16 +795,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse200> getEventsPrefWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit) throws ApiException {
+    public ApiResponse<GetEventsPref200Response> getEventsPrefWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit) throws ApiException {
         okhttp3.Call localVarCall = getEventsPrefValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit, null);
-        try {
-            Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<InlineResponse200>(){}.getType()));
-            e.setErrorObjectType(new GenericType<InlineResponse200>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -849,10 +837,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsPrefAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit, final ApiCallback<InlineResponse200> _callback) throws ApiException {
+    public okhttp3.Call getEventsPrefAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit, final ApiCallback<GetEventsPref200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getEventsPrefValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -930,7 +918,7 @@ public class GetApi {
     /**
      * This API returns all the localspace(s).
      * This API returns all the localspace(s).
-     * @return MetaDefinition
+     * @return GetLocalspace200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -944,15 +932,15 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public MetaDefinition getLocalspace() throws ApiException {
-        ApiResponse<MetaDefinition> localVarResp = getLocalspaceWithHttpInfo();
+    public GetLocalspace200Response getLocalspace() throws ApiException {
+        ApiResponse<GetLocalspace200Response> localVarResp = getLocalspaceWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * This API returns all the localspace(s).
      * This API returns all the localspace(s).
-     * @return ApiResponse&lt;MetaDefinition&gt;
+     * @return ApiResponse&lt;GetLocalspace200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -966,16 +954,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<MetaDefinition> getLocalspaceWithHttpInfo() throws ApiException {
+    public ApiResponse<GetLocalspace200Response> getLocalspaceWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getLocalspaceValidateBeforeCall(null);
-        try {
-            Type localVarReturnType = new TypeToken<MetaDefinition>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<MetaDefinition>(){}.getType()));
-            e.setErrorObjectType(new GenericType<MetaDefinition>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetLocalspace200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -996,10 +978,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getLocalspaceAsync(final ApiCallback<MetaDefinition> _callback) throws ApiException {
+    public okhttp3.Call getLocalspaceAsync(final ApiCallback<GetLocalspace200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getLocalspaceValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<MetaDefinition>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetLocalspace200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1122,7 +1104,7 @@ public class GetApi {
      * @param minpopolazione Specify minimum popolazione. (required)
      * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
      * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
-     * @return InlineResponse2002
+     * @return GetMunicipiDistanceKmPopolazione200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1136,8 +1118,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2002 getMunicipiDistanceKmPopolazione(Double mindistance, Double maxdistance, Long minpopolazione, Double lat, Double lon) throws ApiException {
-        ApiResponse<InlineResponse2002> localVarResp = getMunicipiDistanceKmPopolazioneWithHttpInfo(mindistance, maxdistance, minpopolazione, lat, lon);
+    public GetMunicipiDistanceKmPopolazione200Response getMunicipiDistanceKmPopolazione(Double mindistance, Double maxdistance, Long minpopolazione, Double lat, Double lon) throws ApiException {
+        ApiResponse<GetMunicipiDistanceKmPopolazione200Response> localVarResp = getMunicipiDistanceKmPopolazioneWithHttpInfo(mindistance, maxdistance, minpopolazione, lat, lon);
         return localVarResp.getData();
     }
 
@@ -1149,7 +1131,7 @@ public class GetApi {
      * @param minpopolazione Specify minimum popolazione. (required)
      * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
      * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
-     * @return ApiResponse&lt;InlineResponse2002&gt;
+     * @return ApiResponse&lt;GetMunicipiDistanceKmPopolazione200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1163,16 +1145,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2002> getMunicipiDistanceKmPopolazioneWithHttpInfo(Double mindistance, Double maxdistance, Long minpopolazione, Double lat, Double lon) throws ApiException {
+    public ApiResponse<GetMunicipiDistanceKmPopolazione200Response> getMunicipiDistanceKmPopolazioneWithHttpInfo(Double mindistance, Double maxdistance, Long minpopolazione, Double lat, Double lon) throws ApiException {
         okhttp3.Call localVarCall = getMunicipiDistanceKmPopolazioneValidateBeforeCall(mindistance, maxdistance, minpopolazione, lat, lon, null);
-        try {
-            Type localVarReturnType = new TypeToken<InlineResponse2002>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<InlineResponse2002>(){}.getType()));
-            e.setErrorObjectType(new GenericType<InlineResponse2002>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetMunicipiDistanceKmPopolazione200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1198,10 +1174,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMunicipiDistanceKmPopolazioneAsync(Double mindistance, Double maxdistance, Long minpopolazione, Double lat, Double lon, final ApiCallback<InlineResponse2002> _callback) throws ApiException {
+    public okhttp3.Call getMunicipiDistanceKmPopolazioneAsync(Double mindistance, Double maxdistance, Long minpopolazione, Double lat, Double lon, final ApiCallback<GetMunicipiDistanceKmPopolazione200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getMunicipiDistanceKmPopolazioneValidateBeforeCall(mindistance, maxdistance, minpopolazione, lat, lon, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2002>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetMunicipiDistanceKmPopolazione200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1285,7 +1261,7 @@ public class GetApi {
      * This API returns the all the flags assosiated to the originid.
      * This API returns the all the flags assosiated to the originid.
      * @param originid Select by origin id. (optional)
-     * @return Object
+     * @return GetOriginFlag200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1299,8 +1275,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object getOriginFlag(Long originid) throws ApiException {
-        ApiResponse<Object> localVarResp = getOriginFlagWithHttpInfo(originid);
+    public GetOriginFlag200Response getOriginFlag(Long originid) throws ApiException {
+        ApiResponse<GetOriginFlag200Response> localVarResp = getOriginFlagWithHttpInfo(originid);
         return localVarResp.getData();
     }
 
@@ -1308,7 +1284,7 @@ public class GetApi {
      * This API returns the all the flags assosiated to the originid.
      * This API returns the all the flags assosiated to the originid.
      * @param originid Select by origin id. (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * @return ApiResponse&lt;GetOriginFlag200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1322,16 +1298,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> getOriginFlagWithHttpInfo(Long originid) throws ApiException {
+    public ApiResponse<GetOriginFlag200Response> getOriginFlagWithHttpInfo(Long originid) throws ApiException {
         okhttp3.Call localVarCall = getOriginFlagValidateBeforeCall(originid, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetOriginFlag200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1353,10 +1323,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOriginFlagAsync(Long originid, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call getOriginFlagAsync(Long originid, final ApiCallback<GetOriginFlag200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getOriginFlagValidateBeforeCall(originid, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetOriginFlag200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1554,7 +1524,7 @@ public class GetApi {
      * @param idLocalspace Localspace Id. (optional)
      * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
-     * @return InlineResponse200
+     * @return GetEventsPref200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1568,8 +1538,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse200 getOrigins(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
-        ApiResponse<InlineResponse200> localVarResp = getOriginsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit);
+    public GetEventsPref200Response getOrigins(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
+        ApiResponse<GetEventsPref200Response> localVarResp = getOriginsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit);
         return localVarResp.getData();
     }
 
@@ -1596,7 +1566,7 @@ public class GetApi {
      * @param idLocalspace Localspace Id. (optional)
      * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
-     * @return ApiResponse&lt;InlineResponse200&gt;
+     * @return ApiResponse&lt;GetEventsPref200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1610,16 +1580,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse200> getOriginsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
+    public ApiResponse<GetEventsPref200Response> getOriginsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
         okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit, null);
-        try {
-            Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<InlineResponse200>(){}.getType()));
-            e.setErrorObjectType(new GenericType<InlineResponse200>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1660,10 +1624,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOriginsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit, final ApiCallback<InlineResponse200> _callback) throws ApiException {
+    public okhttp3.Call getOriginsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit, final ApiCallback<GetEventsPref200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1741,7 +1705,7 @@ public class GetApi {
     /**
      * This API returns all the provenance(s).
      * This API returns all the provenance(s).
-     * @return MetaDefinition
+     * @return GetProvenance200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1755,15 +1719,15 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public MetaDefinition getProvenance() throws ApiException {
-        ApiResponse<MetaDefinition> localVarResp = getProvenanceWithHttpInfo();
+    public GetProvenance200Response getProvenance() throws ApiException {
+        ApiResponse<GetProvenance200Response> localVarResp = getProvenanceWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * This API returns all the provenance(s).
      * This API returns all the provenance(s).
-     * @return ApiResponse&lt;MetaDefinition&gt;
+     * @return ApiResponse&lt;GetProvenance200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1777,16 +1741,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<MetaDefinition> getProvenanceWithHttpInfo() throws ApiException {
+    public ApiResponse<GetProvenance200Response> getProvenanceWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getProvenanceValidateBeforeCall(null);
-        try {
-            Type localVarReturnType = new TypeToken<MetaDefinition>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<MetaDefinition>(){}.getType()));
-            e.setErrorObjectType(new GenericType<MetaDefinition>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetProvenance200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1807,10 +1765,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getProvenanceAsync(final ApiCallback<MetaDefinition> _callback) throws ApiException {
+    public okhttp3.Call getProvenanceAsync(final ApiCallback<GetProvenance200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getProvenanceValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<MetaDefinition>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetProvenance200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1900,7 +1858,7 @@ public class GetApi {
      * This API returns the region name.
      * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
      * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
-     * @return InlineResponse2001
+     * @return GetRegionName200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1914,8 +1872,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2001 getRegionName(Double lat, Double lon) throws ApiException {
-        ApiResponse<InlineResponse2001> localVarResp = getRegionNameWithHttpInfo(lat, lon);
+    public GetRegionName200Response getRegionName(Double lat, Double lon) throws ApiException {
+        ApiResponse<GetRegionName200Response> localVarResp = getRegionNameWithHttpInfo(lat, lon);
         return localVarResp.getData();
     }
 
@@ -1924,7 +1882,7 @@ public class GetApi {
      * This API returns the region name.
      * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
      * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
-     * @return ApiResponse&lt;InlineResponse2001&gt;
+     * @return ApiResponse&lt;GetRegionName200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1938,16 +1896,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2001> getRegionNameWithHttpInfo(Double lat, Double lon) throws ApiException {
+    public ApiResponse<GetRegionName200Response> getRegionNameWithHttpInfo(Double lat, Double lon) throws ApiException {
         okhttp3.Call localVarCall = getRegionNameValidateBeforeCall(lat, lon, null);
-        try {
-            Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<InlineResponse2001>(){}.getType()));
-            e.setErrorObjectType(new GenericType<InlineResponse2001>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetRegionName200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1970,10 +1922,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getRegionNameAsync(Double lat, Double lon, final ApiCallback<InlineResponse2001> _callback) throws ApiException {
+    public okhttp3.Call getRegionNameAsync(Double lat, Double lon, final ApiCallback<GetRegionName200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getRegionNameValidateBeforeCall(lat, lon, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetRegionName200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2089,14 +2041,8 @@ public class GetApi {
      */
     public ApiResponse<ObjectStatus> getStatusWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getStatusValidateBeforeCall(null);
-        try {
-            Type localVarReturnType = new TypeToken<ObjectStatus>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectStatus>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ObjectStatus>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ObjectStatus>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2198,7 +2144,7 @@ public class GetApi {
     /**
      * This API returns all the type_event(s).
      * This API returns all the type_event(s).
-     * @return MetaDefinition
+     * @return GetTypeEvent200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2212,15 +2158,15 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public MetaDefinition getTypeEvent() throws ApiException {
-        ApiResponse<MetaDefinition> localVarResp = getTypeEventWithHttpInfo();
+    public GetTypeEvent200Response getTypeEvent() throws ApiException {
+        ApiResponse<GetTypeEvent200Response> localVarResp = getTypeEventWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * This API returns all the type_event(s).
      * This API returns all the type_event(s).
-     * @return ApiResponse&lt;MetaDefinition&gt;
+     * @return ApiResponse&lt;GetTypeEvent200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2234,16 +2180,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<MetaDefinition> getTypeEventWithHttpInfo() throws ApiException {
+    public ApiResponse<GetTypeEvent200Response> getTypeEventWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getTypeEventValidateBeforeCall(null);
-        try {
-            Type localVarReturnType = new TypeToken<MetaDefinition>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<MetaDefinition>(){}.getType()));
-            e.setErrorObjectType(new GenericType<MetaDefinition>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetTypeEvent200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2264,10 +2204,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTypeEventAsync(final ApiCallback<MetaDefinition> _callback) throws ApiException {
+    public okhttp3.Call getTypeEventAsync(final ApiCallback<GetTypeEvent200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTypeEventValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<MetaDefinition>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetTypeEvent200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2345,7 +2285,7 @@ public class GetApi {
     /**
      * This API returns all the type_magnitude(s).
      * This API returns all the type_magnitude(s).
-     * @return MetaDefinition
+     * @return GetTypeMagnitude200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2359,15 +2299,15 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public MetaDefinition getTypeMagnitude() throws ApiException {
-        ApiResponse<MetaDefinition> localVarResp = getTypeMagnitudeWithHttpInfo();
+    public GetTypeMagnitude200Response getTypeMagnitude() throws ApiException {
+        ApiResponse<GetTypeMagnitude200Response> localVarResp = getTypeMagnitudeWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * This API returns all the type_magnitude(s).
      * This API returns all the type_magnitude(s).
-     * @return ApiResponse&lt;MetaDefinition&gt;
+     * @return ApiResponse&lt;GetTypeMagnitude200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2381,16 +2321,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<MetaDefinition> getTypeMagnitudeWithHttpInfo() throws ApiException {
+    public ApiResponse<GetTypeMagnitude200Response> getTypeMagnitudeWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getTypeMagnitudeValidateBeforeCall(null);
-        try {
-            Type localVarReturnType = new TypeToken<MetaDefinition>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<MetaDefinition>(){}.getType()));
-            e.setErrorObjectType(new GenericType<MetaDefinition>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetTypeMagnitude200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2411,10 +2345,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTypeMagnitudeAsync(final ApiCallback<MetaDefinition> _callback) throws ApiException {
+    public okhttp3.Call getTypeMagnitudeAsync(final ApiCallback<GetTypeMagnitude200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTypeMagnitudeValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<MetaDefinition>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetTypeMagnitude200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -2492,7 +2426,7 @@ public class GetApi {
     /**
      * This API returns all the type_origin(s).
      * This API returns all the type_origin(s).
-     * @return MetaDefinition
+     * @return GetTypeOrigin200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2506,15 +2440,15 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public MetaDefinition getTypeOrigin() throws ApiException {
-        ApiResponse<MetaDefinition> localVarResp = getTypeOriginWithHttpInfo();
+    public GetTypeOrigin200Response getTypeOrigin() throws ApiException {
+        ApiResponse<GetTypeOrigin200Response> localVarResp = getTypeOriginWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
      * This API returns all the type_origin(s).
      * This API returns all the type_origin(s).
-     * @return ApiResponse&lt;MetaDefinition&gt;
+     * @return ApiResponse&lt;GetTypeOrigin200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2528,16 +2462,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<MetaDefinition> getTypeOriginWithHttpInfo() throws ApiException {
+    public ApiResponse<GetTypeOrigin200Response> getTypeOriginWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getTypeOriginValidateBeforeCall(null);
-        try {
-            Type localVarReturnType = new TypeToken<MetaDefinition>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<MetaDefinition>(){}.getType()));
-            e.setErrorObjectType(new GenericType<MetaDefinition>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetTypeOrigin200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2558,10 +2486,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getTypeOriginAsync(final ApiCallback<MetaDefinition> _callback) throws ApiException {
+    public okhttp3.Call getTypeOriginAsync(final ApiCallback<GetTypeOrigin200Response> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = getTypeOriginValidateBeforeCall(_callback);
-        Type localVarReturnType = new TypeToken<MetaDefinition>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetTypeOrigin200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

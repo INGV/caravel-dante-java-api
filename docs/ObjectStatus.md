@@ -14,7 +14,7 @@
 |**type** | **URI** | An absolute URI that identifies the problem type.  When dereferenced, it SHOULD provide human-readable documentation for the problem type (e.g., using HTML).  |  [optional] |
 |**version** | **String** | Webservice version |  [optional] |
 |**dbConnection** | **String** | DB Connection type |  [optional] |
-|**dbHost** | [**Object**](Object.md) | DB Connection host(s) |  [optional] |
+|**dbHost** | [**ObjectStatusDbHost**](ObjectStatusDbHost.md) |  |  [optional] |
 |**dbPort** | **Long** | DB Connection port |  [optional] |
 |**dbName** | **String** | DB Connection name |  [optional] |
 |**dbSchema** | **String** | DB Schema |  [optional] |

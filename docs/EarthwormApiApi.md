@@ -13,7 +13,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="addEwHyp2000arc"></a>
 # **addEwHyp2000arc**
-> Object addEwHyp2000arc(UNKNOWN_BASE_TYPE)
+> AddEwHyp2000arc201Response addEwHyp2000arc(addEwHyp2000arcRequest)
 
 Insert a new hyp2000arc message to the DB using ew2openapi module
 
@@ -34,9 +34,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
-    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to store
+    AddEwHyp2000arcRequest addEwHyp2000arcRequest = new AddEwHyp2000arcRequest(); // AddEwHyp2000arcRequest | JSON to store
     try {
-      Object result = apiInstance.addEwHyp2000arc(UNKNOWN_BASE_TYPE);
+      AddEwHyp2000arc201Response result = apiInstance.addEwHyp2000arc(addEwHyp2000arcRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EarthwormApiApi#addEwHyp2000arc");
@@ -53,11 +53,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to store | |
+| **addEwHyp2000arcRequest** | [**AddEwHyp2000arcRequest**](AddEwHyp2000arcRequest.md)| JSON to store | |
 
 ### Return type
 
-**Object**
+[**AddEwHyp2000arc201Response**](AddEwHyp2000arc201Response.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ No authorization required
 
 <a name="addEwQuake2k"></a>
 # **addEwQuake2k**
-> Object addEwQuake2k(UNKNOWN_BASE_TYPE)
+> UpdateEvent200Response addEwQuake2k(addEwQuake2kRequest)
 
 Insert a new quake2k message to the DB using ew2openapi module
 
@@ -102,9 +102,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
-    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to store
+    AddEwQuake2kRequest addEwQuake2kRequest = new AddEwQuake2kRequest(); // AddEwQuake2kRequest | JSON to store
     try {
-      Object result = apiInstance.addEwQuake2k(UNKNOWN_BASE_TYPE);
+      UpdateEvent200Response result = apiInstance.addEwQuake2k(addEwQuake2kRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EarthwormApiApi#addEwQuake2k");
@@ -121,11 +121,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to store | |
+| **addEwQuake2kRequest** | [**AddEwQuake2kRequest**](AddEwQuake2kRequest.md)| JSON to store | |
 
 ### Return type
 
-**Object**
+[**UpdateEvent200Response**](UpdateEvent200Response.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ No authorization required
 
 <a name="addHEwMagnitude"></a>
 # **addHEwMagnitude**
-> Object addHEwMagnitude(UNKNOWN_BASE_TYPE)
+> AddMagnitude201Response addHEwMagnitude(addHEwMagnitudeRequest)
 
 Insert a new magnitude message to the DB using ew2openapi module
 
@@ -170,9 +170,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
-    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to store
+    AddHEwMagnitudeRequest addHEwMagnitudeRequest = new AddHEwMagnitudeRequest(); // AddHEwMagnitudeRequest | JSON to store
     try {
-      Object result = apiInstance.addHEwMagnitude(UNKNOWN_BASE_TYPE);
+      AddMagnitude201Response result = apiInstance.addHEwMagnitude(addHEwMagnitudeRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EarthwormApiApi#addHEwMagnitude");
@@ -189,11 +189,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to store | |
+| **addHEwMagnitudeRequest** | [**AddHEwMagnitudeRequest**](AddHEwMagnitudeRequest.md)| JSON to store | |
 
 ### Return type
 
-**Object**
+[**AddMagnitude201Response**](AddMagnitude201Response.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ No authorization required
 
 <a name="addHEwPickScnl"></a>
 # **addHEwPickScnl**
-> Object addHEwPickScnl(UNKNOWN_BASE_TYPE)
+> AddHEwPickScnl201Response addHEwPickScnl(addHEwPickScnlRequest)
 
 Insert a new pick-scnl message to the DB using ew2openapi module
 
@@ -238,9 +238,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
-    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to send
+    AddHEwPickScnlRequest addHEwPickScnlRequest = new AddHEwPickScnlRequest(); // AddHEwPickScnlRequest | JSON to send
     try {
-      Object result = apiInstance.addHEwPickScnl(UNKNOWN_BASE_TYPE);
+      AddHEwPickScnl201Response result = apiInstance.addHEwPickScnl(addHEwPickScnlRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EarthwormApiApi#addHEwPickScnl");
@@ -257,11 +257,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to send | |
+| **addHEwPickScnlRequest** | [**AddHEwPickScnlRequest**](AddHEwPickScnlRequest.md)| JSON to send | |
 
 ### Return type
 
-**Object**
+[**AddHEwPickScnl201Response**](AddHEwPickScnl201Response.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ No authorization required
 
 <a name="addHEwStrongmotionii"></a>
 # **addHEwStrongmotionii**
-> Object addHEwStrongmotionii(UNKNOWN_BASE_TYPE)
+> AddHEwStrongmotionii201Response addHEwStrongmotionii(addHEwStrongmotioniiRequest)
 
 Insert a new strongmotionii message to the DB using ew2openapi module
 
@@ -306,9 +306,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
-    UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = new UNKNOWN_BASE_TYPE(); // UNKNOWN_BASE_TYPE | JSON to send
+    AddHEwStrongmotioniiRequest addHEwStrongmotioniiRequest = new AddHEwStrongmotioniiRequest(); // AddHEwStrongmotioniiRequest | JSON to send
     try {
-      Object result = apiInstance.addHEwStrongmotionii(UNKNOWN_BASE_TYPE);
+      AddHEwStrongmotionii201Response result = apiInstance.addHEwStrongmotionii(addHEwStrongmotioniiRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling EarthwormApiApi#addHEwStrongmotionii");
@@ -325,11 +325,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)| JSON to send | |
+| **addHEwStrongmotioniiRequest** | [**AddHEwStrongmotioniiRequest**](AddHEwStrongmotioniiRequest.md)| JSON to send | |
 
 ### Return type
 
-**Object**
+[**AddHEwStrongmotionii201Response**](AddHEwStrongmotionii201Response.md)
 
 ### Authorization
 
