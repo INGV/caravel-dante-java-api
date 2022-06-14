@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:27:25.491845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T13:53:33.113567Z[Etc/UTC]")
 public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -709,6 +709,9 @@ public class ObjectMomenttensor {
         if (!ObjectMomenttensor.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectMomenttensor` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+      if (jsonObj.get("type_momenttensor") != null && !jsonObj.get("type_momenttensor").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `type_momenttensor` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_momenttensor").toString()));
       }
       // validate the optional field `localspace`
       if (jsonObj.getAsJsonObject("localspace") != null) {

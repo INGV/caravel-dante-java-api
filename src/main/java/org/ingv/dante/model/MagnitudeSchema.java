@@ -23,7 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
+import org.ingv.dante.model.MagnitudeSchemaEwLogo;
+import org.ingv.dante.model.MagnitudeSchemaEwMessage;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,20 +49,20 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:27:25.491845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T13:53:33.113567Z[Etc/UTC]")
 public class MagnitudeSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
-  private Object ewMessage;
+  private MagnitudeSchemaEwMessage ewMessage;
 
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
-  private Object ewLogo;
+  private MagnitudeSchemaEwLogo ewLogo;
 
   public MagnitudeSchema() { 
   }
 
-  public MagnitudeSchema ewMessage(Object ewMessage) {
+  public MagnitudeSchema ewMessage(MagnitudeSchemaEwMessage ewMessage) {
     
     this.ewMessage = ewMessage;
     return this;
@@ -74,17 +75,17 @@ public class MagnitudeSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getEwMessage() {
+  public MagnitudeSchemaEwMessage getEwMessage() {
     return ewMessage;
   }
 
 
-  public void setEwMessage(Object ewMessage) {
+  public void setEwMessage(MagnitudeSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
   }
 
 
-  public MagnitudeSchema ewLogo(Object ewLogo) {
+  public MagnitudeSchema ewLogo(MagnitudeSchemaEwLogo ewLogo) {
     
     this.ewLogo = ewLogo;
     return this;
@@ -97,12 +98,12 @@ public class MagnitudeSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getEwLogo() {
+  public MagnitudeSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
 
 
-  public void setEwLogo(Object ewLogo) {
+  public void setEwLogo(MagnitudeSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
   }
 
@@ -121,20 +122,9 @@ public class MagnitudeSchema {
         Objects.equals(this.ewLogo, magnitudeSchema.ewLogo);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
     return Objects.hash(ewMessage, ewLogo);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -196,11 +186,11 @@ public class MagnitudeSchema {
       }
       // validate the optional field `ewMessage`
       if (jsonObj.getAsJsonObject("ewMessage") != null) {
-        Object.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
+        MagnitudeSchemaEwMessage.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
       }
       // validate the optional field `ewLogo`
       if (jsonObj.getAsJsonObject("ewLogo") != null) {
-        Object.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
+        MagnitudeSchemaEwLogo.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
       }
   }
 

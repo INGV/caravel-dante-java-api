@@ -21,7 +21,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="getEvent"></a>
 # **getEvent**
-> Object getEvent(originid, eventid, level)
+> GetEvent200Response getEvent(originid, eventid, level)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -46,7 +46,7 @@ public class Example {
     Long eventid = 56L; // Long | Retrieve an event based on the unique INGV event id.
     String level = "event"; // String | Select deep level
     try {
-      Object result = apiInstance.getEvent(originid, eventid, level);
+      GetEvent200Response result = apiInstance.getEvent(originid, eventid, level);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvent");
@@ -69,7 +69,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+[**GetEvent200Response**](GetEvent200Response.md)
 
 ### Authorization
 
@@ -93,7 +93,7 @@ No authorization required
 
 <a name="getEvents"></a>
 # **getEvents**
-> InlineResponse200 getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit)
+> GetEventsPref200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit)
 
 This API returns the preferred origin and the preferred magnitude from the same instance.
 
@@ -136,7 +136,7 @@ public class Example {
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
     Integer limit = 56; // Integer | Limit the results to the specified number of events.
     try {
-      InlineResponse200 result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit);
+      GetEventsPref200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvents");
@@ -177,7 +177,7 @@ public class Example {
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**GetEventsPref200Response**](GetEventsPref200Response.md)
 
 ### Authorization
 
@@ -201,7 +201,7 @@ No authorization required
 
 <a name="getEventsPref"></a>
 # **getEventsPref**
-> InlineResponse200 getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit)
+> GetEventsPref200Response getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -241,7 +241,7 @@ public class Example {
     String orderby = "event_id-asc"; // String | Select order
     Integer limit = 56; // Integer | Limit the results to the specified number of events.
     try {
-      InlineResponse200 result = apiInstance.getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit);
+      GetEventsPref200Response result = apiInstance.getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEventsPref");
@@ -279,7 +279,7 @@ public class Example {
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**GetEventsPref200Response**](GetEventsPref200Response.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ No authorization required
 
 <a name="getLocalspace"></a>
 # **getLocalspace**
-> MetaDefinition getLocalspace()
+> GetLocalspace200Response getLocalspace()
 
 This API returns all the localspace(s).
 
@@ -325,7 +325,7 @@ public class Example {
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {
-      MetaDefinition result = apiInstance.getLocalspace();
+      GetLocalspace200Response result = apiInstance.getLocalspace();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getLocalspace");
@@ -343,7 +343,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MetaDefinition**](MetaDefinition.md)
+[**GetLocalspace200Response**](GetLocalspace200Response.md)
 
 ### Authorization
 
@@ -367,7 +367,7 @@ No authorization required
 
 <a name="getMunicipiDistanceKmPopolazione"></a>
 # **getMunicipiDistanceKmPopolazione**
-> InlineResponse2002 getMunicipiDistanceKmPopolazione(mindistance, maxdistance, minpopolazione, lat, lon)
+> GetMunicipiDistanceKmPopolazione200Response getMunicipiDistanceKmPopolazione(mindistance, maxdistance, minpopolazione, lat, lon)
 
 This API returns the municipi-distance-km-popolazione used at INGV.
 
@@ -394,7 +394,7 @@ public class Example {
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     try {
-      InlineResponse2002 result = apiInstance.getMunicipiDistanceKmPopolazione(mindistance, maxdistance, minpopolazione, lat, lon);
+      GetMunicipiDistanceKmPopolazione200Response result = apiInstance.getMunicipiDistanceKmPopolazione(mindistance, maxdistance, minpopolazione, lat, lon);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getMunicipiDistanceKmPopolazione");
@@ -419,7 +419,7 @@ public class Example {
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**GetMunicipiDistanceKmPopolazione200Response**](GetMunicipiDistanceKmPopolazione200Response.md)
 
 ### Authorization
 
@@ -443,7 +443,7 @@ No authorization required
 
 <a name="getOriginFlag"></a>
 # **getOriginFlag**
-> Object getOriginFlag(originid)
+> GetOriginFlag200Response getOriginFlag(originid)
 
 This API returns the all the flags assosiated to the originid.
 
@@ -466,7 +466,7 @@ public class Example {
     GetApi apiInstance = new GetApi(defaultClient);
     Long originid = 56L; // Long | Select by origin id.
     try {
-      Object result = apiInstance.getOriginFlag(originid);
+      GetOriginFlag200Response result = apiInstance.getOriginFlag(originid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOriginFlag");
@@ -487,7 +487,7 @@ public class Example {
 
 ### Return type
 
-**Object**
+[**GetOriginFlag200Response**](GetOriginFlag200Response.md)
 
 ### Authorization
 
@@ -511,7 +511,7 @@ No authorization required
 
 <a name="getOrigins"></a>
 # **getOrigins**
-> InlineResponse200 getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit)
+> GetEventsPref200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit)
 
 This API returns all origins and magnitudes.
 
@@ -553,7 +553,7 @@ public class Example {
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
     Integer limit = 56; // Integer | Limit the results to the specified number of events.
     try {
-      InlineResponse200 result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit);
+      GetEventsPref200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOrigins");
@@ -593,7 +593,7 @@ public class Example {
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**GetEventsPref200Response**](GetEventsPref200Response.md)
 
 ### Authorization
 
@@ -617,7 +617,7 @@ No authorization required
 
 <a name="getProvenance"></a>
 # **getProvenance**
-> MetaDefinition getProvenance()
+> GetProvenance200Response getProvenance()
 
 This API returns all the provenance(s).
 
@@ -639,7 +639,7 @@ public class Example {
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {
-      MetaDefinition result = apiInstance.getProvenance();
+      GetProvenance200Response result = apiInstance.getProvenance();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getProvenance");
@@ -657,7 +657,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MetaDefinition**](MetaDefinition.md)
+[**GetProvenance200Response**](GetProvenance200Response.md)
 
 ### Authorization
 
@@ -681,7 +681,7 @@ No authorization required
 
 <a name="getRegionName"></a>
 # **getRegionName**
-> InlineResponse2001 getRegionName(lat, lon)
+> GetRegionName200Response getRegionName(lat, lon)
 
 This API returns the region name used at INGV.
 
@@ -705,7 +705,7 @@ public class Example {
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     try {
-      InlineResponse2001 result = apiInstance.getRegionName(lat, lon);
+      GetRegionName200Response result = apiInstance.getRegionName(lat, lon);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getRegionName");
@@ -727,7 +727,7 @@ public class Example {
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**GetRegionName200Response**](GetRegionName200Response.md)
 
 ### Authorization
 
@@ -815,7 +815,7 @@ No authorization required
 
 <a name="getTypeEvent"></a>
 # **getTypeEvent**
-> MetaDefinition getTypeEvent()
+> GetTypeEvent200Response getTypeEvent()
 
 This API returns all the type_event(s).
 
@@ -837,7 +837,7 @@ public class Example {
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {
-      MetaDefinition result = apiInstance.getTypeEvent();
+      GetTypeEvent200Response result = apiInstance.getTypeEvent();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getTypeEvent");
@@ -855,7 +855,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MetaDefinition**](MetaDefinition.md)
+[**GetTypeEvent200Response**](GetTypeEvent200Response.md)
 
 ### Authorization
 
@@ -879,7 +879,7 @@ No authorization required
 
 <a name="getTypeMagnitude"></a>
 # **getTypeMagnitude**
-> MetaDefinition getTypeMagnitude()
+> GetTypeMagnitude200Response getTypeMagnitude()
 
 This API returns all the type_magnitude(s).
 
@@ -901,7 +901,7 @@ public class Example {
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {
-      MetaDefinition result = apiInstance.getTypeMagnitude();
+      GetTypeMagnitude200Response result = apiInstance.getTypeMagnitude();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getTypeMagnitude");
@@ -919,7 +919,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MetaDefinition**](MetaDefinition.md)
+[**GetTypeMagnitude200Response**](GetTypeMagnitude200Response.md)
 
 ### Authorization
 
@@ -943,7 +943,7 @@ No authorization required
 
 <a name="getTypeOrigin"></a>
 # **getTypeOrigin**
-> MetaDefinition getTypeOrigin()
+> GetTypeOrigin200Response getTypeOrigin()
 
 This API returns all the type_origin(s).
 
@@ -965,7 +965,7 @@ public class Example {
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {
-      MetaDefinition result = apiInstance.getTypeOrigin();
+      GetTypeOrigin200Response result = apiInstance.getTypeOrigin();
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getTypeOrigin");
@@ -983,7 +983,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MetaDefinition**](MetaDefinition.md)
+[**GetTypeOrigin200Response**](GetTypeOrigin200Response.md)
 
 ### Authorization
 

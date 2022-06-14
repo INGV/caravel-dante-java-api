@@ -23,7 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
+import org.ingv.dante.model.PickScnlSchemaEwLogo;
+import org.ingv.dante.model.PickScnlSchemaEwMessage;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,20 +49,20 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:27:25.491845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T13:53:33.113567Z[Etc/UTC]")
 public class PickScnlSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
-  private Object ewMessage;
+  private PickScnlSchemaEwMessage ewMessage;
 
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
-  private Object ewLogo;
+  private PickScnlSchemaEwLogo ewLogo;
 
   public PickScnlSchema() { 
   }
 
-  public PickScnlSchema ewMessage(Object ewMessage) {
+  public PickScnlSchema ewMessage(PickScnlSchemaEwMessage ewMessage) {
     
     this.ewMessage = ewMessage;
     return this;
@@ -74,17 +75,17 @@ public class PickScnlSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getEwMessage() {
+  public PickScnlSchemaEwMessage getEwMessage() {
     return ewMessage;
   }
 
 
-  public void setEwMessage(Object ewMessage) {
+  public void setEwMessage(PickScnlSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
   }
 
 
-  public PickScnlSchema ewLogo(Object ewLogo) {
+  public PickScnlSchema ewLogo(PickScnlSchemaEwLogo ewLogo) {
     
     this.ewLogo = ewLogo;
     return this;
@@ -97,12 +98,12 @@ public class PickScnlSchema {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Object getEwLogo() {
+  public PickScnlSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
 
 
-  public void setEwLogo(Object ewLogo) {
+  public void setEwLogo(PickScnlSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
   }
 
@@ -121,20 +122,9 @@ public class PickScnlSchema {
         Objects.equals(this.ewLogo, pickScnlSchema.ewLogo);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
     return Objects.hash(ewMessage, ewLogo);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -196,11 +186,11 @@ public class PickScnlSchema {
       }
       // validate the optional field `ewMessage`
       if (jsonObj.getAsJsonObject("ewMessage") != null) {
-        Object.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
+        PickScnlSchemaEwMessage.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
       }
       // validate the optional field `ewLogo`
       if (jsonObj.getAsJsonObject("ewLogo") != null) {
-        Object.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
+        PickScnlSchemaEwLogo.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
       }
   }
 

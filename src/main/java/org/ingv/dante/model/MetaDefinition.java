@@ -25,6 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.ingv.dante.model.MetaDefinitionLinksInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -49,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * MetaDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:27:25.491845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T13:53:33.113567Z[Etc/UTC]")
 public class MetaDefinition {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -73,7 +74,7 @@ public class MetaDefinition {
 
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
-  private List<Object> links = null;
+  private List<MetaDefinitionLinksInner> links = null;
 
   public static final String SERIALIZED_NAME_NEXT_PAGE_URL = "next_page_url";
   @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URL)
@@ -217,13 +218,13 @@ public class MetaDefinition {
   }
 
 
-  public MetaDefinition links(List<Object> links) {
+  public MetaDefinition links(List<MetaDefinitionLinksInner> links) {
     
     this.links = links;
     return this;
   }
 
-  public MetaDefinition addLinksItem(Object linksItem) {
+  public MetaDefinition addLinksItem(MetaDefinitionLinksInner linksItem) {
     if (this.links == null) {
       this.links = new ArrayList<>();
     }
@@ -238,12 +239,12 @@ public class MetaDefinition {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<Object> getLinks() {
+  public List<MetaDefinitionLinksInner> getLinks() {
     return links;
   }
 
 
-  public void setLinks(List<Object> links) {
+  public void setLinks(List<MetaDefinitionLinksInner> links) {
     this.links = links;
   }
 
@@ -492,12 +493,50 @@ public class MetaDefinition {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MetaDefinition` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
+      if (jsonObj.get("current_page") != null && !jsonObj.get("current_page").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `current_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("current_page").toString()));
+      }
+      if (jsonObj.get("first_page_url") != null && !jsonObj.get("first_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `first_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("first_page_url").toString()));
+      }
+      if (jsonObj.get("from") != null && !jsonObj.get("from").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `from` to be a primitive type in the JSON string but got `%s`", jsonObj.get("from").toString()));
+      }
+      if (jsonObj.get("last_page") != null && !jsonObj.get("last_page").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `last_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_page").toString()));
+      }
+      if (jsonObj.get("last_page_url") != null && !jsonObj.get("last_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `last_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_page_url").toString()));
+      }
       JsonArray jsonArraylinks = jsonObj.getAsJsonArray("links");
-      // validate the optional field `links` (array)
       if (jsonArraylinks != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("links").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `links` to be an array in the JSON string but got `%s`", jsonObj.get("links").toString()));
+        }
+
+        // validate the optional field `links` (array)
         for (int i = 0; i < jsonArraylinks.size(); i++) {
-          Object.validateJsonObject(jsonArraylinks.get(i).getAsJsonObject());
+          MetaDefinitionLinksInner.validateJsonObject(jsonArraylinks.get(i).getAsJsonObject());
         };
+      }
+      if (jsonObj.get("next_page_url") != null && !jsonObj.get("next_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `next_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("next_page_url").toString()));
+      }
+      if (jsonObj.get("path") != null && !jsonObj.get("path").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
+      }
+      if (jsonObj.get("per_page") != null && !jsonObj.get("per_page").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `per_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("per_page").toString()));
+      }
+      if (jsonObj.get("prev_page_url") != null && !jsonObj.get("prev_page_url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `prev_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("prev_page_url").toString()));
+      }
+      if (jsonObj.get("to") != null && !jsonObj.get("to").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("to").toString()));
+      }
+      if (jsonObj.get("total") != null && !jsonObj.get("total").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `total` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total").toString()));
       }
   }
 

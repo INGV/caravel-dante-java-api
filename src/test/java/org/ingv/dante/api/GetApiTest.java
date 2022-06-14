@@ -14,10 +14,16 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
-import org.ingv.dante.model.InlineResponse200;
-import org.ingv.dante.model.InlineResponse2001;
-import org.ingv.dante.model.InlineResponse2002;
-import org.ingv.dante.model.MetaDefinition;
+import org.ingv.dante.model.GetEvent200Response;
+import org.ingv.dante.model.GetEventsPref200Response;
+import org.ingv.dante.model.GetLocalspace200Response;
+import org.ingv.dante.model.GetMunicipiDistanceKmPopolazione200Response;
+import org.ingv.dante.model.GetOriginFlag200Response;
+import org.ingv.dante.model.GetProvenance200Response;
+import org.ingv.dante.model.GetRegionName200Response;
+import org.ingv.dante.model.GetTypeEvent200Response;
+import org.ingv.dante.model.GetTypeMagnitude200Response;
+import org.ingv.dante.model.GetTypeOrigin200Response;
 import org.ingv.dante.model.ObjectStatus;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.Problem;
@@ -49,7 +55,7 @@ public class GetApiTest {
         Long originid = null;
         Long eventid = null;
         String level = null;
-        Object response = api.getEvent(originid, eventid, level);
+        GetEvent200Response response = api.getEvent(originid, eventid, level);
         // TODO: test validations
     }
 
@@ -83,7 +89,7 @@ public class GetApiTest {
         Long idLocalspace = null;
         String wherelocalspacenamein = null;
         Integer limit = null;
-        InlineResponse200 response = api.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit);
+        GetEventsPref200Response response = api.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit);
         // TODO: test validations
     }
 
@@ -114,7 +120,7 @@ public class GetApiTest {
         Double maxdepth = null;
         String orderby = null;
         Integer limit = null;
-        InlineResponse200 response = api.getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit);
+        GetEventsPref200Response response = api.getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit);
         // TODO: test validations
     }
 
@@ -127,7 +133,7 @@ public class GetApiTest {
      */
     @Test
     public void getLocalspaceTest() throws ApiException {
-        MetaDefinition response = api.getLocalspace();
+        GetLocalspace200Response response = api.getLocalspace();
         // TODO: test validations
     }
 
@@ -145,7 +151,7 @@ public class GetApiTest {
         Long minpopolazione = null;
         Double lat = null;
         Double lon = null;
-        InlineResponse2002 response = api.getMunicipiDistanceKmPopolazione(mindistance, maxdistance, minpopolazione, lat, lon);
+        GetMunicipiDistanceKmPopolazione200Response response = api.getMunicipiDistanceKmPopolazione(mindistance, maxdistance, minpopolazione, lat, lon);
         // TODO: test validations
     }
 
@@ -159,7 +165,7 @@ public class GetApiTest {
     @Test
     public void getOriginFlagTest() throws ApiException {
         Long originid = null;
-        Object response = api.getOriginFlag(originid);
+        GetOriginFlag200Response response = api.getOriginFlag(originid);
         // TODO: test validations
     }
 
@@ -192,7 +198,7 @@ public class GetApiTest {
         Long idLocalspace = null;
         String wherelocalspacenamein = null;
         Integer limit = null;
-        InlineResponse200 response = api.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit);
+        GetEventsPref200Response response = api.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit);
         // TODO: test validations
     }
 
@@ -205,7 +211,7 @@ public class GetApiTest {
      */
     @Test
     public void getProvenanceTest() throws ApiException {
-        MetaDefinition response = api.getProvenance();
+        GetProvenance200Response response = api.getProvenance();
         // TODO: test validations
     }
 
@@ -220,7 +226,7 @@ public class GetApiTest {
     public void getRegionNameTest() throws ApiException {
         Double lat = null;
         Double lon = null;
-        InlineResponse2001 response = api.getRegionName(lat, lon);
+        GetRegionName200Response response = api.getRegionName(lat, lon);
         // TODO: test validations
     }
 
@@ -246,7 +252,7 @@ public class GetApiTest {
      */
     @Test
     public void getTypeEventTest() throws ApiException {
-        MetaDefinition response = api.getTypeEvent();
+        GetTypeEvent200Response response = api.getTypeEvent();
         // TODO: test validations
     }
 
@@ -259,7 +265,7 @@ public class GetApiTest {
      */
     @Test
     public void getTypeMagnitudeTest() throws ApiException {
-        MetaDefinition response = api.getTypeMagnitude();
+        GetTypeMagnitude200Response response = api.getTypeMagnitude();
         // TODO: test validations
     }
 
@@ -272,7 +278,7 @@ public class GetApiTest {
      */
     @Test
     public void getTypeOriginTest() throws ApiException {
-        MetaDefinition response = api.getTypeOrigin();
+        GetTypeOrigin200Response response = api.getTypeOrigin();
         // TODO: test validations
     }
 

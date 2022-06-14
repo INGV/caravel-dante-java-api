@@ -14,8 +14,17 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
+import org.ingv.dante.model.AddEwHyp2000arc201Response;
+import org.ingv.dante.model.AddEwHyp2000arcRequest;
+import org.ingv.dante.model.AddEwQuake2kRequest;
+import org.ingv.dante.model.AddHEwMagnitudeRequest;
+import org.ingv.dante.model.AddHEwPickScnl201Response;
+import org.ingv.dante.model.AddHEwPickScnlRequest;
+import org.ingv.dante.model.AddHEwStrongmotionii201Response;
+import org.ingv.dante.model.AddHEwStrongmotioniiRequest;
+import org.ingv.dante.model.AddMagnitude201Response;
 import org.ingv.dante.model.Problem;
-import org.ingv.dante.model.UNKNOWN_BASE_TYPE;
+import org.ingv.dante.model.UpdateEvent200Response;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -41,8 +50,8 @@ public class EarthwormApiApiTest {
      */
     @Test
     public void addEwHyp2000arcTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addEwHyp2000arc(UNKNOWN_BASE_TYPE);
+        AddEwHyp2000arcRequest addEwHyp2000arcRequest = null;
+        AddEwHyp2000arc201Response response = api.addEwHyp2000arc(addEwHyp2000arcRequest);
         // TODO: test validations
     }
 
@@ -55,8 +64,8 @@ public class EarthwormApiApiTest {
      */
     @Test
     public void addEwQuake2kTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addEwQuake2k(UNKNOWN_BASE_TYPE);
+        AddEwQuake2kRequest addEwQuake2kRequest = null;
+        UpdateEvent200Response response = api.addEwQuake2k(addEwQuake2kRequest);
         // TODO: test validations
     }
 
@@ -69,8 +78,8 @@ public class EarthwormApiApiTest {
      */
     @Test
     public void addHEwMagnitudeTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addHEwMagnitude(UNKNOWN_BASE_TYPE);
+        AddHEwMagnitudeRequest addHEwMagnitudeRequest = null;
+        AddMagnitude201Response response = api.addHEwMagnitude(addHEwMagnitudeRequest);
         // TODO: test validations
     }
 
@@ -83,8 +92,8 @@ public class EarthwormApiApiTest {
      */
     @Test
     public void addHEwPickScnlTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addHEwPickScnl(UNKNOWN_BASE_TYPE);
+        AddHEwPickScnlRequest addHEwPickScnlRequest = null;
+        AddHEwPickScnl201Response response = api.addHEwPickScnl(addHEwPickScnlRequest);
         // TODO: test validations
     }
 
@@ -97,8 +106,8 @@ public class EarthwormApiApiTest {
      */
     @Test
     public void addHEwStrongmotioniiTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addHEwStrongmotionii(UNKNOWN_BASE_TYPE);
+        AddHEwStrongmotioniiRequest addHEwStrongmotioniiRequest = null;
+        AddHEwStrongmotionii201Response response = api.addHEwStrongmotionii(addHEwStrongmotioniiRequest);
         // TODO: test validations
     }
 

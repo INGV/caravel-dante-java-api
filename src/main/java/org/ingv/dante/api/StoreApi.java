@@ -27,13 +27,26 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.ingv.dante.model.AddEvent201Response;
+import org.ingv.dante.model.AddFocalmechanism201Response;
+import org.ingv.dante.model.AddFocalmechanismRequest;
+import org.ingv.dante.model.AddMagnitude201Response;
+import org.ingv.dante.model.AddMagnitudeRequest;
+import org.ingv.dante.model.AddMomenttensor201Response;
+import org.ingv.dante.model.AddMomenttensorRequest;
+import org.ingv.dante.model.AddOrigin201Response;
+import org.ingv.dante.model.AddOriginFlag201Response;
+import org.ingv.dante.model.AddOriginFlagRequest;
+import org.ingv.dante.model.AddOriginRequest;
+import org.ingv.dante.model.AddStrongmotion201Response;
+import org.ingv.dante.model.AddStrongmotionRequest;
+import org.ingv.dante.model.GetEvent200Response;
 import org.ingv.dante.model.ObjectTableLocalspace;
 import org.ingv.dante.model.ObjectTableProvenance;
 import org.ingv.dante.model.ObjectTableTypeEvent;
 import org.ingv.dante.model.ObjectTableTypeMagnitude;
 import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.ingv.dante.model.Problem;
-import org.ingv.dante.model.UNKNOWN_BASE_TYPE;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -81,7 +94,7 @@ public class StoreApi {
 
     /**
      * Build call for addEvent
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param getEvent200Response JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -97,7 +110,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addEventCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addEventCall(GetEvent200Response getEvent200Response, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -111,7 +124,7 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = getEvent200Response;
 
         // create path and map variables
         String localVarPath = "/quakedb/v1/event";
@@ -143,15 +156,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addEventValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addEventValidateBeforeCall(GetEvent200Response getEvent200Response, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addEvent(Async)");
+        // verify the required parameter 'getEvent200Response' is set
+        if (getEvent200Response == null) {
+            throw new ApiException("Missing the required parameter 'getEvent200Response' when calling addEvent(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addEventCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addEventCall(getEvent200Response, _callback);
         return localVarCall;
 
     }
@@ -159,8 +172,8 @@ public class StoreApi {
     /**
      * Add a new event to the DB
      * This API is used to add an event object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return Object
+     * @param getEvent200Response JSON to store (required)
+     * @return AddEvent201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -174,16 +187,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addEvent(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addEventWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddEvent201Response addEvent(GetEvent200Response getEvent200Response) throws ApiException {
+        ApiResponse<AddEvent201Response> localVarResp = addEventWithHttpInfo(getEvent200Response);
         return localVarResp.getData();
     }
 
     /**
      * Add a new event to the DB
      * This API is used to add an event object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param getEvent200Response JSON to store (required)
+     * @return ApiResponse&lt;AddEvent201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -197,22 +210,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addEventWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addEventValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddEvent201Response> addEventWithHttpInfo(GetEvent200Response getEvent200Response) throws ApiException {
+        okhttp3.Call localVarCall = addEventValidateBeforeCall(getEvent200Response, null);
+        Type localVarReturnType = new TypeToken<AddEvent201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new event to the DB (asynchronously)
      * This API is used to add an event object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param getEvent200Response JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -228,16 +235,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addEventAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addEventAsync(GetEvent200Response getEvent200Response, final ApiCallback<AddEvent201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addEventValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addEventValidateBeforeCall(getEvent200Response, _callback);
+        Type localVarReturnType = new TypeToken<AddEvent201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for addFocalmechanism
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addFocalmechanismRequest JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -253,7 +260,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addFocalmechanismCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addFocalmechanismCall(AddFocalmechanismRequest addFocalmechanismRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -267,7 +274,7 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addFocalmechanismRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/v1/focalmechanism";
@@ -299,15 +306,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addFocalmechanismValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addFocalmechanismValidateBeforeCall(AddFocalmechanismRequest addFocalmechanismRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addFocalmechanism(Async)");
+        // verify the required parameter 'addFocalmechanismRequest' is set
+        if (addFocalmechanismRequest == null) {
+            throw new ApiException("Missing the required parameter 'addFocalmechanismRequest' when calling addFocalmechanism(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addFocalmechanismCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addFocalmechanismCall(addFocalmechanismRequest, _callback);
         return localVarCall;
 
     }
@@ -315,8 +322,8 @@ public class StoreApi {
     /**
      * Add a new focalmechanism(s) to the DB
      * This API is used to add a focalmechanism object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return Object
+     * @param addFocalmechanismRequest JSON to store (required)
+     * @return AddFocalmechanism201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -330,16 +337,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addFocalmechanism(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addFocalmechanismWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddFocalmechanism201Response addFocalmechanism(AddFocalmechanismRequest addFocalmechanismRequest) throws ApiException {
+        ApiResponse<AddFocalmechanism201Response> localVarResp = addFocalmechanismWithHttpInfo(addFocalmechanismRequest);
         return localVarResp.getData();
     }
 
     /**
      * Add a new focalmechanism(s) to the DB
      * This API is used to add a focalmechanism object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addFocalmechanismRequest JSON to store (required)
+     * @return ApiResponse&lt;AddFocalmechanism201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -353,22 +360,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addFocalmechanismWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addFocalmechanismValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddFocalmechanism201Response> addFocalmechanismWithHttpInfo(AddFocalmechanismRequest addFocalmechanismRequest) throws ApiException {
+        okhttp3.Call localVarCall = addFocalmechanismValidateBeforeCall(addFocalmechanismRequest, null);
+        Type localVarReturnType = new TypeToken<AddFocalmechanism201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new focalmechanism(s) to the DB (asynchronously)
      * This API is used to add a focalmechanism object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addFocalmechanismRequest JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -384,10 +385,10 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addFocalmechanismAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addFocalmechanismAsync(AddFocalmechanismRequest addFocalmechanismRequest, final ApiCallback<AddFocalmechanism201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addFocalmechanismValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addFocalmechanismValidateBeforeCall(addFocalmechanismRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddFocalmechanism201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -511,14 +512,8 @@ public class StoreApi {
      */
     public ApiResponse<ObjectTableLocalspace> addLocalspaceWithHttpInfo(ObjectTableLocalspace objectTableLocalspace) throws ApiException {
         okhttp3.Call localVarCall = addLocalspaceValidateBeforeCall(objectTableLocalspace, null);
-        try {
-            Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectTableLocalspace>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ObjectTableLocalspace>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -549,7 +544,7 @@ public class StoreApi {
     }
     /**
      * Build call for addMagnitude
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addMagnitudeRequest JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -565,7 +560,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addMagnitudeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addMagnitudeCall(AddMagnitudeRequest addMagnitudeRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -579,7 +574,7 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addMagnitudeRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/v1/magnitude";
@@ -611,15 +606,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addMagnitudeValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addMagnitudeValidateBeforeCall(AddMagnitudeRequest addMagnitudeRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addMagnitude(Async)");
+        // verify the required parameter 'addMagnitudeRequest' is set
+        if (addMagnitudeRequest == null) {
+            throw new ApiException("Missing the required parameter 'addMagnitudeRequest' when calling addMagnitude(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addMagnitudeCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addMagnitudeCall(addMagnitudeRequest, _callback);
         return localVarCall;
 
     }
@@ -627,8 +622,8 @@ public class StoreApi {
     /**
      * Add a new magnitude(s) to the DB
      * This API is used to add a magnitude object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return Object
+     * @param addMagnitudeRequest JSON to store (required)
+     * @return AddMagnitude201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -642,16 +637,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addMagnitude(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addMagnitudeWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddMagnitude201Response addMagnitude(AddMagnitudeRequest addMagnitudeRequest) throws ApiException {
+        ApiResponse<AddMagnitude201Response> localVarResp = addMagnitudeWithHttpInfo(addMagnitudeRequest);
         return localVarResp.getData();
     }
 
     /**
      * Add a new magnitude(s) to the DB
      * This API is used to add a magnitude object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addMagnitudeRequest JSON to store (required)
+     * @return ApiResponse&lt;AddMagnitude201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -665,22 +660,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addMagnitudeWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addMagnitudeValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddMagnitude201Response> addMagnitudeWithHttpInfo(AddMagnitudeRequest addMagnitudeRequest) throws ApiException {
+        okhttp3.Call localVarCall = addMagnitudeValidateBeforeCall(addMagnitudeRequest, null);
+        Type localVarReturnType = new TypeToken<AddMagnitude201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new magnitude(s) to the DB (asynchronously)
      * This API is used to add a magnitude object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addMagnitudeRequest JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -696,16 +685,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addMagnitudeAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addMagnitudeAsync(AddMagnitudeRequest addMagnitudeRequest, final ApiCallback<AddMagnitude201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addMagnitudeValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addMagnitudeValidateBeforeCall(addMagnitudeRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddMagnitude201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for addMomenttensor
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addMomenttensorRequest JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -721,7 +710,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addMomenttensorCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addMomenttensorCall(AddMomenttensorRequest addMomenttensorRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -735,7 +724,7 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addMomenttensorRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/v1/momenttensor";
@@ -767,15 +756,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addMomenttensorValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addMomenttensorValidateBeforeCall(AddMomenttensorRequest addMomenttensorRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addMomenttensor(Async)");
+        // verify the required parameter 'addMomenttensorRequest' is set
+        if (addMomenttensorRequest == null) {
+            throw new ApiException("Missing the required parameter 'addMomenttensorRequest' when calling addMomenttensor(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addMomenttensorCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addMomenttensorCall(addMomenttensorRequest, _callback);
         return localVarCall;
 
     }
@@ -783,8 +772,8 @@ public class StoreApi {
     /**
      * Add a new momenttensor(s) to the DB
      * This API is used to add a momenttensor object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return Object
+     * @param addMomenttensorRequest JSON to store (required)
+     * @return AddMomenttensor201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -798,16 +787,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addMomenttensor(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addMomenttensorWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddMomenttensor201Response addMomenttensor(AddMomenttensorRequest addMomenttensorRequest) throws ApiException {
+        ApiResponse<AddMomenttensor201Response> localVarResp = addMomenttensorWithHttpInfo(addMomenttensorRequest);
         return localVarResp.getData();
     }
 
     /**
      * Add a new momenttensor(s) to the DB
      * This API is used to add a momenttensor object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addMomenttensorRequest JSON to store (required)
+     * @return ApiResponse&lt;AddMomenttensor201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -821,22 +810,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addMomenttensorWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addMomenttensorValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddMomenttensor201Response> addMomenttensorWithHttpInfo(AddMomenttensorRequest addMomenttensorRequest) throws ApiException {
+        okhttp3.Call localVarCall = addMomenttensorValidateBeforeCall(addMomenttensorRequest, null);
+        Type localVarReturnType = new TypeToken<AddMomenttensor201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new momenttensor(s) to the DB (asynchronously)
      * This API is used to add a momenttensor object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addMomenttensorRequest JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -852,16 +835,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addMomenttensorAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addMomenttensorAsync(AddMomenttensorRequest addMomenttensorRequest, final ApiCallback<AddMomenttensor201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addMomenttensorValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addMomenttensorValidateBeforeCall(addMomenttensorRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddMomenttensor201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for addOrigin
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addOriginRequest JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -877,7 +860,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addOriginCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addOriginCall(AddOriginRequest addOriginRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -891,7 +874,7 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addOriginRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/v1/origin";
@@ -923,15 +906,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addOriginValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addOriginValidateBeforeCall(AddOriginRequest addOriginRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addOrigin(Async)");
+        // verify the required parameter 'addOriginRequest' is set
+        if (addOriginRequest == null) {
+            throw new ApiException("Missing the required parameter 'addOriginRequest' when calling addOrigin(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addOriginCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addOriginCall(addOriginRequest, _callback);
         return localVarCall;
 
     }
@@ -939,8 +922,8 @@ public class StoreApi {
     /**
      * Add a new origin(s) to the DB
      * This API is used to add an origin object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return Object
+     * @param addOriginRequest JSON to store (required)
+     * @return AddOrigin201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -954,16 +937,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addOrigin(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addOriginWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddOrigin201Response addOrigin(AddOriginRequest addOriginRequest) throws ApiException {
+        ApiResponse<AddOrigin201Response> localVarResp = addOriginWithHttpInfo(addOriginRequest);
         return localVarResp.getData();
     }
 
     /**
      * Add a new origin(s) to the DB
      * This API is used to add an origin object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addOriginRequest JSON to store (required)
+     * @return ApiResponse&lt;AddOrigin201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -977,22 +960,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addOriginWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addOriginValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddOrigin201Response> addOriginWithHttpInfo(AddOriginRequest addOriginRequest) throws ApiException {
+        okhttp3.Call localVarCall = addOriginValidateBeforeCall(addOriginRequest, null);
+        Type localVarReturnType = new TypeToken<AddOrigin201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new origin(s) to the DB (asynchronously)
      * This API is used to add an origin object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addOriginRequest JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1008,16 +985,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addOriginAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addOriginAsync(AddOriginRequest addOriginRequest, final ApiCallback<AddOrigin201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addOriginValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addOriginValidateBeforeCall(addOriginRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddOrigin201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for addOriginFlag
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addOriginFlagRequest JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1033,7 +1010,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addOriginFlagCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addOriginFlagCall(AddOriginFlagRequest addOriginFlagRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1047,7 +1024,7 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addOriginFlagRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/v1/origin-flag";
@@ -1079,15 +1056,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addOriginFlagValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addOriginFlagValidateBeforeCall(AddOriginFlagRequest addOriginFlagRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addOriginFlag(Async)");
+        // verify the required parameter 'addOriginFlagRequest' is set
+        if (addOriginFlagRequest == null) {
+            throw new ApiException("Missing the required parameter 'addOriginFlagRequest' when calling addOriginFlag(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addOriginFlagCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addOriginFlagCall(addOriginFlagRequest, _callback);
         return localVarCall;
 
     }
@@ -1095,8 +1072,8 @@ public class StoreApi {
     /**
      * Add one or more flags to origin
      * This API is used to add one or more flags to origin.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return Object
+     * @param addOriginFlagRequest JSON to store (required)
+     * @return AddOriginFlag201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1110,16 +1087,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addOriginFlag(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addOriginFlagWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddOriginFlag201Response addOriginFlag(AddOriginFlagRequest addOriginFlagRequest) throws ApiException {
+        ApiResponse<AddOriginFlag201Response> localVarResp = addOriginFlagWithHttpInfo(addOriginFlagRequest);
         return localVarResp.getData();
     }
 
     /**
      * Add one or more flags to origin
      * This API is used to add one or more flags to origin.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addOriginFlagRequest JSON to store (required)
+     * @return ApiResponse&lt;AddOriginFlag201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1133,22 +1110,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addOriginFlagWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addOriginFlagValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddOriginFlag201Response> addOriginFlagWithHttpInfo(AddOriginFlagRequest addOriginFlagRequest) throws ApiException {
+        okhttp3.Call localVarCall = addOriginFlagValidateBeforeCall(addOriginFlagRequest, null);
+        Type localVarReturnType = new TypeToken<AddOriginFlag201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add one or more flags to origin (asynchronously)
      * This API is used to add one or more flags to origin.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addOriginFlagRequest JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1164,10 +1135,10 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addOriginFlagAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addOriginFlagAsync(AddOriginFlagRequest addOriginFlagRequest, final ApiCallback<AddOriginFlag201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addOriginFlagValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addOriginFlagValidateBeforeCall(addOriginFlagRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddOriginFlag201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1291,14 +1262,8 @@ public class StoreApi {
      */
     public ApiResponse<ObjectTableProvenance> addProvenanceWithHttpInfo(ObjectTableProvenance objectTableProvenance) throws ApiException {
         okhttp3.Call localVarCall = addProvenanceValidateBeforeCall(objectTableProvenance, null);
-        try {
-            Type localVarReturnType = new TypeToken<ObjectTableProvenance>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectTableProvenance>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ObjectTableProvenance>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ObjectTableProvenance>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1329,7 +1294,7 @@ public class StoreApi {
     }
     /**
      * Build call for addStrongmotion
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addStrongmotionRequest JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1345,7 +1310,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addStrongmotionCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addStrongmotionCall(AddStrongmotionRequest addStrongmotionRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1359,7 +1324,7 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addStrongmotionRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/v1/strongmotion";
@@ -1391,15 +1356,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addStrongmotionValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addStrongmotionValidateBeforeCall(AddStrongmotionRequest addStrongmotionRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addStrongmotion(Async)");
+        // verify the required parameter 'addStrongmotionRequest' is set
+        if (addStrongmotionRequest == null) {
+            throw new ApiException("Missing the required parameter 'addStrongmotionRequest' when calling addStrongmotion(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addStrongmotionCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addStrongmotionCall(addStrongmotionRequest, _callback);
         return localVarCall;
 
     }
@@ -1407,8 +1372,8 @@ public class StoreApi {
     /**
      * Add a new strongmotion(s) to the DB
      * This API is used to add a strongmotion object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return Object
+     * @param addStrongmotionRequest JSON to store (required)
+     * @return AddStrongmotion201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1422,16 +1387,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addStrongmotion(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addStrongmotionWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddStrongmotion201Response addStrongmotion(AddStrongmotionRequest addStrongmotionRequest) throws ApiException {
+        ApiResponse<AddStrongmotion201Response> localVarResp = addStrongmotionWithHttpInfo(addStrongmotionRequest);
         return localVarResp.getData();
     }
 
     /**
      * Add a new strongmotion(s) to the DB
      * This API is used to add a strongmotion object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addStrongmotionRequest JSON to store (required)
+     * @return ApiResponse&lt;AddStrongmotion201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1445,22 +1410,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addStrongmotionWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addStrongmotionValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddStrongmotion201Response> addStrongmotionWithHttpInfo(AddStrongmotionRequest addStrongmotionRequest) throws ApiException {
+        okhttp3.Call localVarCall = addStrongmotionValidateBeforeCall(addStrongmotionRequest, null);
+        Type localVarReturnType = new TypeToken<AddStrongmotion201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new strongmotion(s) to the DB (asynchronously)
      * This API is used to add a strongmotion object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addStrongmotionRequest JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1476,10 +1435,10 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addStrongmotionAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addStrongmotionAsync(AddStrongmotionRequest addStrongmotionRequest, final ApiCallback<AddStrongmotion201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addStrongmotionValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addStrongmotionValidateBeforeCall(addStrongmotionRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddStrongmotion201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1603,14 +1562,8 @@ public class StoreApi {
      */
     public ApiResponse<ObjectTableTypeEvent> addTypeEventWithHttpInfo(ObjectTableTypeEvent objectTableTypeEvent) throws ApiException {
         okhttp3.Call localVarCall = addTypeEventValidateBeforeCall(objectTableTypeEvent, null);
-        try {
-            Type localVarReturnType = new TypeToken<ObjectTableTypeEvent>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectTableTypeEvent>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ObjectTableTypeEvent>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ObjectTableTypeEvent>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1759,14 +1712,8 @@ public class StoreApi {
      */
     public ApiResponse<ObjectTableTypeMagnitude> addTypeMagnitudeWithHttpInfo(ObjectTableTypeMagnitude objectTableTypeMagnitude) throws ApiException {
         okhttp3.Call localVarCall = addTypeMagnitudeValidateBeforeCall(objectTableTypeMagnitude, null);
-        try {
-            Type localVarReturnType = new TypeToken<ObjectTableTypeMagnitude>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectTableTypeMagnitude>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ObjectTableTypeMagnitude>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ObjectTableTypeMagnitude>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1915,14 +1862,8 @@ public class StoreApi {
      */
     public ApiResponse<ObjectTableTypeOrigin> addTypeOriginWithHttpInfo(ObjectTableTypeOrigin objectTableTypeOrigin) throws ApiException {
         okhttp3.Call localVarCall = addTypeOriginValidateBeforeCall(objectTableTypeOrigin, null);
-        try {
-            Type localVarReturnType = new TypeToken<ObjectTableTypeOrigin>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<ObjectTableTypeOrigin>(){}.getType()));
-            e.setErrorObjectType(new GenericType<ObjectTableTypeOrigin>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ObjectTableTypeOrigin>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

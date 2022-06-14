@@ -14,13 +14,26 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
+import org.ingv.dante.model.AddEvent201Response;
+import org.ingv.dante.model.AddFocalmechanism201Response;
+import org.ingv.dante.model.AddFocalmechanismRequest;
+import org.ingv.dante.model.AddMagnitude201Response;
+import org.ingv.dante.model.AddMagnitudeRequest;
+import org.ingv.dante.model.AddMomenttensor201Response;
+import org.ingv.dante.model.AddMomenttensorRequest;
+import org.ingv.dante.model.AddOrigin201Response;
+import org.ingv.dante.model.AddOriginFlag201Response;
+import org.ingv.dante.model.AddOriginFlagRequest;
+import org.ingv.dante.model.AddOriginRequest;
+import org.ingv.dante.model.AddStrongmotion201Response;
+import org.ingv.dante.model.AddStrongmotionRequest;
+import org.ingv.dante.model.GetEvent200Response;
 import org.ingv.dante.model.ObjectTableLocalspace;
 import org.ingv.dante.model.ObjectTableProvenance;
 import org.ingv.dante.model.ObjectTableTypeEvent;
 import org.ingv.dante.model.ObjectTableTypeMagnitude;
 import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.ingv.dante.model.Problem;
-import org.ingv.dante.model.UNKNOWN_BASE_TYPE;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -46,8 +59,8 @@ public class StoreApiTest {
      */
     @Test
     public void addEventTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addEvent(UNKNOWN_BASE_TYPE);
+        GetEvent200Response getEvent200Response = null;
+        AddEvent201Response response = api.addEvent(getEvent200Response);
         // TODO: test validations
     }
 
@@ -60,8 +73,8 @@ public class StoreApiTest {
      */
     @Test
     public void addFocalmechanismTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addFocalmechanism(UNKNOWN_BASE_TYPE);
+        AddFocalmechanismRequest addFocalmechanismRequest = null;
+        AddFocalmechanism201Response response = api.addFocalmechanism(addFocalmechanismRequest);
         // TODO: test validations
     }
 
@@ -88,8 +101,8 @@ public class StoreApiTest {
      */
     @Test
     public void addMagnitudeTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addMagnitude(UNKNOWN_BASE_TYPE);
+        AddMagnitudeRequest addMagnitudeRequest = null;
+        AddMagnitude201Response response = api.addMagnitude(addMagnitudeRequest);
         // TODO: test validations
     }
 
@@ -102,8 +115,8 @@ public class StoreApiTest {
      */
     @Test
     public void addMomenttensorTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addMomenttensor(UNKNOWN_BASE_TYPE);
+        AddMomenttensorRequest addMomenttensorRequest = null;
+        AddMomenttensor201Response response = api.addMomenttensor(addMomenttensorRequest);
         // TODO: test validations
     }
 
@@ -116,8 +129,8 @@ public class StoreApiTest {
      */
     @Test
     public void addOriginTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addOrigin(UNKNOWN_BASE_TYPE);
+        AddOriginRequest addOriginRequest = null;
+        AddOrigin201Response response = api.addOrigin(addOriginRequest);
         // TODO: test validations
     }
 
@@ -130,8 +143,8 @@ public class StoreApiTest {
      */
     @Test
     public void addOriginFlagTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addOriginFlag(UNKNOWN_BASE_TYPE);
+        AddOriginFlagRequest addOriginFlagRequest = null;
+        AddOriginFlag201Response response = api.addOriginFlag(addOriginFlagRequest);
         // TODO: test validations
     }
 
@@ -158,8 +171,8 @@ public class StoreApiTest {
      */
     @Test
     public void addStrongmotionTest() throws ApiException {
-        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
-        Object response = api.addStrongmotion(UNKNOWN_BASE_TYPE);
+        AddStrongmotionRequest addStrongmotionRequest = null;
+        AddStrongmotion201Response response = api.addStrongmotion(addStrongmotionRequest);
         // TODO: test validations
     }
 

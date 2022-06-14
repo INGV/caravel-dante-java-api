@@ -27,8 +27,17 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.ingv.dante.model.AddEwHyp2000arc201Response;
+import org.ingv.dante.model.AddEwHyp2000arcRequest;
+import org.ingv.dante.model.AddEwQuake2kRequest;
+import org.ingv.dante.model.AddHEwMagnitudeRequest;
+import org.ingv.dante.model.AddHEwPickScnl201Response;
+import org.ingv.dante.model.AddHEwPickScnlRequest;
+import org.ingv.dante.model.AddHEwStrongmotionii201Response;
+import org.ingv.dante.model.AddHEwStrongmotioniiRequest;
+import org.ingv.dante.model.AddMagnitude201Response;
 import org.ingv.dante.model.Problem;
-import org.ingv.dante.model.UNKNOWN_BASE_TYPE;
+import org.ingv.dante.model.UpdateEvent200Response;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -76,7 +85,7 @@ public class EarthwormApiApi {
 
     /**
      * Build call for addEwHyp2000arc
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addEwHyp2000arcRequest JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -92,7 +101,7 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addEwHyp2000arcCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addEwHyp2000arcCall(AddEwHyp2000arcRequest addEwHyp2000arcRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -106,7 +115,7 @@ public class EarthwormApiApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addEwHyp2000arcRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/ew/v1/hyp2000arc";
@@ -138,15 +147,15 @@ public class EarthwormApiApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addEwHyp2000arcValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addEwHyp2000arcValidateBeforeCall(AddEwHyp2000arcRequest addEwHyp2000arcRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addEwHyp2000arc(Async)");
+        // verify the required parameter 'addEwHyp2000arcRequest' is set
+        if (addEwHyp2000arcRequest == null) {
+            throw new ApiException("Missing the required parameter 'addEwHyp2000arcRequest' when calling addEwHyp2000arc(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addEwHyp2000arcCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addEwHyp2000arcCall(addEwHyp2000arcRequest, _callback);
         return localVarCall;
 
     }
@@ -154,8 +163,8 @@ public class EarthwormApiApi {
     /**
      * Insert a new hyp2000arc message to the DB using ew2openapi module
      * This API is used to add an Earthworm hyp2000arc object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return Object
+     * @param addEwHyp2000arcRequest JSON to store (required)
+     * @return AddEwHyp2000arc201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -169,16 +178,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addEwHyp2000arc(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addEwHyp2000arcWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddEwHyp2000arc201Response addEwHyp2000arc(AddEwHyp2000arcRequest addEwHyp2000arcRequest) throws ApiException {
+        ApiResponse<AddEwHyp2000arc201Response> localVarResp = addEwHyp2000arcWithHttpInfo(addEwHyp2000arcRequest);
         return localVarResp.getData();
     }
 
     /**
      * Insert a new hyp2000arc message to the DB using ew2openapi module
      * This API is used to add an Earthworm hyp2000arc object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addEwHyp2000arcRequest JSON to store (required)
+     * @return ApiResponse&lt;AddEwHyp2000arc201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -192,22 +201,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addEwHyp2000arcWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addEwHyp2000arcValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddEwHyp2000arc201Response> addEwHyp2000arcWithHttpInfo(AddEwHyp2000arcRequest addEwHyp2000arcRequest) throws ApiException {
+        okhttp3.Call localVarCall = addEwHyp2000arcValidateBeforeCall(addEwHyp2000arcRequest, null);
+        Type localVarReturnType = new TypeToken<AddEwHyp2000arc201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Insert a new hyp2000arc message to the DB using ew2openapi module (asynchronously)
      * This API is used to add an Earthworm hyp2000arc object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addEwHyp2000arcRequest JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -223,16 +226,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addEwHyp2000arcAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addEwHyp2000arcAsync(AddEwHyp2000arcRequest addEwHyp2000arcRequest, final ApiCallback<AddEwHyp2000arc201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addEwHyp2000arcValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addEwHyp2000arcValidateBeforeCall(addEwHyp2000arcRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddEwHyp2000arc201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for addEwQuake2k
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addEwQuake2kRequest JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -248,7 +251,7 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addEwQuake2kCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addEwQuake2kCall(AddEwQuake2kRequest addEwQuake2kRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -262,7 +265,7 @@ public class EarthwormApiApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addEwQuake2kRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/ew/v1/quake2k";
@@ -294,15 +297,15 @@ public class EarthwormApiApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addEwQuake2kValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addEwQuake2kValidateBeforeCall(AddEwQuake2kRequest addEwQuake2kRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addEwQuake2k(Async)");
+        // verify the required parameter 'addEwQuake2kRequest' is set
+        if (addEwQuake2kRequest == null) {
+            throw new ApiException("Missing the required parameter 'addEwQuake2kRequest' when calling addEwQuake2k(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addEwQuake2kCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addEwQuake2kCall(addEwQuake2kRequest, _callback);
         return localVarCall;
 
     }
@@ -310,8 +313,8 @@ public class EarthwormApiApi {
     /**
      * Insert a new quake2k message to the DB using ew2openapi module
      * This API is used to add an Earthworm quake2k object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return Object
+     * @param addEwQuake2kRequest JSON to store (required)
+     * @return UpdateEvent200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -325,16 +328,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addEwQuake2k(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addEwQuake2kWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public UpdateEvent200Response addEwQuake2k(AddEwQuake2kRequest addEwQuake2kRequest) throws ApiException {
+        ApiResponse<UpdateEvent200Response> localVarResp = addEwQuake2kWithHttpInfo(addEwQuake2kRequest);
         return localVarResp.getData();
     }
 
     /**
      * Insert a new quake2k message to the DB using ew2openapi module
      * This API is used to add an Earthworm quake2k object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addEwQuake2kRequest JSON to store (required)
+     * @return ApiResponse&lt;UpdateEvent200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -348,22 +351,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addEwQuake2kWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addEwQuake2kValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<UpdateEvent200Response> addEwQuake2kWithHttpInfo(AddEwQuake2kRequest addEwQuake2kRequest) throws ApiException {
+        okhttp3.Call localVarCall = addEwQuake2kValidateBeforeCall(addEwQuake2kRequest, null);
+        Type localVarReturnType = new TypeToken<UpdateEvent200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Insert a new quake2k message to the DB using ew2openapi module (asynchronously)
      * This API is used to add an Earthworm quake2k object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addEwQuake2kRequest JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -379,16 +376,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addEwQuake2kAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addEwQuake2kAsync(AddEwQuake2kRequest addEwQuake2kRequest, final ApiCallback<UpdateEvent200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addEwQuake2kValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addEwQuake2kValidateBeforeCall(addEwQuake2kRequest, _callback);
+        Type localVarReturnType = new TypeToken<UpdateEvent200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for addHEwMagnitude
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addHEwMagnitudeRequest JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -404,7 +401,7 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addHEwMagnitudeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addHEwMagnitudeCall(AddHEwMagnitudeRequest addHEwMagnitudeRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -418,7 +415,7 @@ public class EarthwormApiApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addHEwMagnitudeRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/ew/v1/magnitude";
@@ -450,15 +447,15 @@ public class EarthwormApiApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addHEwMagnitudeValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addHEwMagnitudeValidateBeforeCall(AddHEwMagnitudeRequest addHEwMagnitudeRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addHEwMagnitude(Async)");
+        // verify the required parameter 'addHEwMagnitudeRequest' is set
+        if (addHEwMagnitudeRequest == null) {
+            throw new ApiException("Missing the required parameter 'addHEwMagnitudeRequest' when calling addHEwMagnitude(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addHEwMagnitudeCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addHEwMagnitudeCall(addHEwMagnitudeRequest, _callback);
         return localVarCall;
 
     }
@@ -466,8 +463,8 @@ public class EarthwormApiApi {
     /**
      * Insert a new magnitude message to the DB using ew2openapi module
      * This API is used to add an Earthworm magnitude object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return Object
+     * @param addHEwMagnitudeRequest JSON to store (required)
+     * @return AddMagnitude201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -481,16 +478,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addHEwMagnitude(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addHEwMagnitudeWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddMagnitude201Response addHEwMagnitude(AddHEwMagnitudeRequest addHEwMagnitudeRequest) throws ApiException {
+        ApiResponse<AddMagnitude201Response> localVarResp = addHEwMagnitudeWithHttpInfo(addHEwMagnitudeRequest);
         return localVarResp.getData();
     }
 
     /**
      * Insert a new magnitude message to the DB using ew2openapi module
      * This API is used to add an Earthworm magnitude object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addHEwMagnitudeRequest JSON to store (required)
+     * @return ApiResponse&lt;AddMagnitude201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -504,22 +501,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addHEwMagnitudeWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addHEwMagnitudeValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddMagnitude201Response> addHEwMagnitudeWithHttpInfo(AddHEwMagnitudeRequest addHEwMagnitudeRequest) throws ApiException {
+        okhttp3.Call localVarCall = addHEwMagnitudeValidateBeforeCall(addHEwMagnitudeRequest, null);
+        Type localVarReturnType = new TypeToken<AddMagnitude201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Insert a new magnitude message to the DB using ew2openapi module (asynchronously)
      * This API is used to add an Earthworm magnitude object.
-     * @param UNKNOWN_BASE_TYPE JSON to store (required)
+     * @param addHEwMagnitudeRequest JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -535,16 +526,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addHEwMagnitudeAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addHEwMagnitudeAsync(AddHEwMagnitudeRequest addHEwMagnitudeRequest, final ApiCallback<AddMagnitude201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addHEwMagnitudeValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addHEwMagnitudeValidateBeforeCall(addHEwMagnitudeRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddMagnitude201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for addHEwPickScnl
-     * @param UNKNOWN_BASE_TYPE JSON to send (required)
+     * @param addHEwPickScnlRequest JSON to send (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -560,7 +551,7 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addHEwPickScnlCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addHEwPickScnlCall(AddHEwPickScnlRequest addHEwPickScnlRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -574,7 +565,7 @@ public class EarthwormApiApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addHEwPickScnlRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/ew/v1/pick-scnl";
@@ -606,15 +597,15 @@ public class EarthwormApiApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addHEwPickScnlValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addHEwPickScnlValidateBeforeCall(AddHEwPickScnlRequest addHEwPickScnlRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addHEwPickScnl(Async)");
+        // verify the required parameter 'addHEwPickScnlRequest' is set
+        if (addHEwPickScnlRequest == null) {
+            throw new ApiException("Missing the required parameter 'addHEwPickScnlRequest' when calling addHEwPickScnl(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addHEwPickScnlCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addHEwPickScnlCall(addHEwPickScnlRequest, _callback);
         return localVarCall;
 
     }
@@ -622,8 +613,8 @@ public class EarthwormApiApi {
     /**
      * Insert a new pick-scnl message to the DB using ew2openapi module
      * This API is used to add an Earthworm pick_scnl object.
-     * @param UNKNOWN_BASE_TYPE JSON to send (required)
-     * @return Object
+     * @param addHEwPickScnlRequest JSON to send (required)
+     * @return AddHEwPickScnl201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -637,16 +628,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addHEwPickScnl(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addHEwPickScnlWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddHEwPickScnl201Response addHEwPickScnl(AddHEwPickScnlRequest addHEwPickScnlRequest) throws ApiException {
+        ApiResponse<AddHEwPickScnl201Response> localVarResp = addHEwPickScnlWithHttpInfo(addHEwPickScnlRequest);
         return localVarResp.getData();
     }
 
     /**
      * Insert a new pick-scnl message to the DB using ew2openapi module
      * This API is used to add an Earthworm pick_scnl object.
-     * @param UNKNOWN_BASE_TYPE JSON to send (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addHEwPickScnlRequest JSON to send (required)
+     * @return ApiResponse&lt;AddHEwPickScnl201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -660,22 +651,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addHEwPickScnlWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addHEwPickScnlValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddHEwPickScnl201Response> addHEwPickScnlWithHttpInfo(AddHEwPickScnlRequest addHEwPickScnlRequest) throws ApiException {
+        okhttp3.Call localVarCall = addHEwPickScnlValidateBeforeCall(addHEwPickScnlRequest, null);
+        Type localVarReturnType = new TypeToken<AddHEwPickScnl201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Insert a new pick-scnl message to the DB using ew2openapi module (asynchronously)
      * This API is used to add an Earthworm pick_scnl object.
-     * @param UNKNOWN_BASE_TYPE JSON to send (required)
+     * @param addHEwPickScnlRequest JSON to send (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -691,16 +676,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addHEwPickScnlAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addHEwPickScnlAsync(AddHEwPickScnlRequest addHEwPickScnlRequest, final ApiCallback<AddHEwPickScnl201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addHEwPickScnlValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addHEwPickScnlValidateBeforeCall(addHEwPickScnlRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddHEwPickScnl201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for addHEwStrongmotionii
-     * @param UNKNOWN_BASE_TYPE JSON to send (required)
+     * @param addHEwStrongmotioniiRequest JSON to send (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -716,7 +701,7 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addHEwStrongmotioniiCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addHEwStrongmotioniiCall(AddHEwStrongmotioniiRequest addHEwStrongmotioniiRequest, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -730,7 +715,7 @@ public class EarthwormApiApi {
             basePath = null;
         }
 
-        Object localVarPostBody = UNKNOWN_BASE_TYPE;
+        Object localVarPostBody = addHEwStrongmotioniiRequest;
 
         // create path and map variables
         String localVarPath = "/quakedb/ew/v1/strongmotionii";
@@ -762,15 +747,15 @@ public class EarthwormApiApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addHEwStrongmotioniiValidateBeforeCall(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addHEwStrongmotioniiValidateBeforeCall(AddHEwStrongmotioniiRequest addHEwStrongmotioniiRequest, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'UNKNOWN_BASE_TYPE' is set
-        if (UNKNOWN_BASE_TYPE == null) {
-            throw new ApiException("Missing the required parameter 'UNKNOWN_BASE_TYPE' when calling addHEwStrongmotionii(Async)");
+        // verify the required parameter 'addHEwStrongmotioniiRequest' is set
+        if (addHEwStrongmotioniiRequest == null) {
+            throw new ApiException("Missing the required parameter 'addHEwStrongmotioniiRequest' when calling addHEwStrongmotionii(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addHEwStrongmotioniiCall(UNKNOWN_BASE_TYPE, _callback);
+        okhttp3.Call localVarCall = addHEwStrongmotioniiCall(addHEwStrongmotioniiRequest, _callback);
         return localVarCall;
 
     }
@@ -778,8 +763,8 @@ public class EarthwormApiApi {
     /**
      * Insert a new strongmotionii message to the DB using ew2openapi module
      * This API is used to add an Earthworm strongmotionii object.
-     * @param UNKNOWN_BASE_TYPE JSON to send (required)
-     * @return Object
+     * @param addHEwStrongmotioniiRequest JSON to send (required)
+     * @return AddHEwStrongmotionii201Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -793,16 +778,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public Object addHEwStrongmotionii(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        ApiResponse<Object> localVarResp = addHEwStrongmotioniiWithHttpInfo(UNKNOWN_BASE_TYPE);
+    public AddHEwStrongmotionii201Response addHEwStrongmotionii(AddHEwStrongmotioniiRequest addHEwStrongmotioniiRequest) throws ApiException {
+        ApiResponse<AddHEwStrongmotionii201Response> localVarResp = addHEwStrongmotioniiWithHttpInfo(addHEwStrongmotioniiRequest);
         return localVarResp.getData();
     }
 
     /**
      * Insert a new strongmotionii message to the DB using ew2openapi module
      * This API is used to add an Earthworm strongmotionii object.
-     * @param UNKNOWN_BASE_TYPE JSON to send (required)
-     * @return ApiResponse&lt;Object&gt;
+     * @param addHEwStrongmotioniiRequest JSON to send (required)
+     * @return ApiResponse&lt;AddHEwStrongmotionii201Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -816,22 +801,16 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> addHEwStrongmotioniiWithHttpInfo(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE) throws ApiException {
-        okhttp3.Call localVarCall = addHEwStrongmotioniiValidateBeforeCall(UNKNOWN_BASE_TYPE, null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<Object>(){}.getType()));
-            e.setErrorObjectType(new GenericType<Object>(){});
-            throw e;
-        }
+    public ApiResponse<AddHEwStrongmotionii201Response> addHEwStrongmotioniiWithHttpInfo(AddHEwStrongmotioniiRequest addHEwStrongmotioniiRequest) throws ApiException {
+        okhttp3.Call localVarCall = addHEwStrongmotioniiValidateBeforeCall(addHEwStrongmotioniiRequest, null);
+        Type localVarReturnType = new TypeToken<AddHEwStrongmotionii201Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Insert a new strongmotionii message to the DB using ew2openapi module (asynchronously)
      * This API is used to add an Earthworm strongmotionii object.
-     * @param UNKNOWN_BASE_TYPE JSON to send (required)
+     * @param addHEwStrongmotioniiRequest JSON to send (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -847,10 +826,10 @@ public class EarthwormApiApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addHEwStrongmotioniiAsync(UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call addHEwStrongmotioniiAsync(AddHEwStrongmotioniiRequest addHEwStrongmotioniiRequest, final ApiCallback<AddHEwStrongmotionii201Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addHEwStrongmotioniiValidateBeforeCall(UNKNOWN_BASE_TYPE, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        okhttp3.Call localVarCall = addHEwStrongmotioniiValidateBeforeCall(addHEwStrongmotioniiRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddHEwStrongmotionii201Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
