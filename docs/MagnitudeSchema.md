@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**ewMessage** | [**MagnitudeSchemaEwMessage**](MagnitudeSchemaEwMessage.md) |  |  [optional] |
-|**ewLogo** | [**MagnitudeSchemaEwLogo**](MagnitudeSchemaEwLogo.md) |  |  [optional] |
+|**ewMessage** | [**Object**](Object.md) |  |  [optional] |
+|**ewLogo** | [**Object**](Object.md) |  |  [optional] |
 
 
 

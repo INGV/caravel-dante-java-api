@@ -28,8 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
-import org.ingv.dante.model.ObjectStrongmotionAlternative;
-import org.ingv.dante.model.ObjectStrongmotionRsaInner;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -54,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T06:24:43.005236Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:26:38.388681Z[Etc/UTC]")
 public class ObjectStrongmotion {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -138,11 +137,11 @@ public class ObjectStrongmotion {
 
   public static final String SERIALIZED_NAME_ALTERNATIVE = "alternative";
   @SerializedName(SERIALIZED_NAME_ALTERNATIVE)
-  private ObjectStrongmotionAlternative alternative;
+  private Object alternative;
 
   public static final String SERIALIZED_NAME_RSA = "rsa";
   @SerializedName(SERIALIZED_NAME_RSA)
-  private List<ObjectStrongmotionRsaInner> rsa = null;
+  private List<Object> rsa = null;
 
   public ObjectStrongmotion() { 
   }
@@ -592,7 +591,7 @@ public class ObjectStrongmotion {
   }
 
 
-  public ObjectStrongmotion alternative(ObjectStrongmotionAlternative alternative) {
+  public ObjectStrongmotion alternative(Object alternative) {
     
     this.alternative = alternative;
     return this;
@@ -605,23 +604,23 @@ public class ObjectStrongmotion {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public ObjectStrongmotionAlternative getAlternative() {
+  public Object getAlternative() {
     return alternative;
   }
 
 
-  public void setAlternative(ObjectStrongmotionAlternative alternative) {
+  public void setAlternative(Object alternative) {
     this.alternative = alternative;
   }
 
 
-  public ObjectStrongmotion rsa(List<ObjectStrongmotionRsaInner> rsa) {
+  public ObjectStrongmotion rsa(List<Object> rsa) {
     
     this.rsa = rsa;
     return this;
   }
 
-  public ObjectStrongmotion addRsaItem(ObjectStrongmotionRsaInner rsaItem) {
+  public ObjectStrongmotion addRsaItem(Object rsaItem) {
     if (this.rsa == null) {
       this.rsa = new ArrayList<>();
     }
@@ -636,12 +635,12 @@ public class ObjectStrongmotion {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<ObjectStrongmotionRsaInner> getRsa() {
+  public List<Object> getRsa() {
     return rsa;
   }
 
 
-  public void setRsa(List<ObjectStrongmotionRsaInner> rsa) {
+  public void setRsa(List<Object> rsa) {
     this.rsa = rsa;
   }
 
@@ -680,9 +679,20 @@ public class ObjectStrongmotion {
         Objects.equals(this.rsa, objectStrongmotion.rsa);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(net, sta, cha, loc, id, modified, inserted, idLocalspace, tDt, pga, tpgaDt, pgv, tpgvDt, pgd, tpgdDt, rsa030, rsa100, rsa300, localspace, provenance, alternative, rsa);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -790,18 +800,6 @@ public class ObjectStrongmotion {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (jsonObj.get("net") != null && !jsonObj.get("net").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
-      }
-      if (jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
-      }
-      if (jsonObj.get("cha") != null && !jsonObj.get("cha").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cha` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cha").toString()));
-      }
-      if (jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
-      }
       // validate the optional field `localspace`
       if (jsonObj.getAsJsonObject("localspace") != null) {
         ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
@@ -812,18 +810,13 @@ public class ObjectStrongmotion {
       }
       // validate the optional field `alternative`
       if (jsonObj.getAsJsonObject("alternative") != null) {
-        ObjectStrongmotionAlternative.validateJsonObject(jsonObj.getAsJsonObject("alternative"));
+        Object.validateJsonObject(jsonObj.getAsJsonObject("alternative"));
       }
       JsonArray jsonArrayrsa = jsonObj.getAsJsonArray("rsa");
+      // validate the optional field `rsa` (array)
       if (jsonArrayrsa != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("rsa").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `rsa` to be an array in the JSON string but got `%s`", jsonObj.get("rsa").toString()));
-        }
-
-        // validate the optional field `rsa` (array)
         for (int i = 0; i < jsonArrayrsa.size(); i++) {
-          ObjectStrongmotionRsaInner.validateJsonObject(jsonArrayrsa.get(i).getAsJsonObject());
+          Object.validateJsonObject(jsonArrayrsa.get(i).getAsJsonObject());
         };
       }
   }

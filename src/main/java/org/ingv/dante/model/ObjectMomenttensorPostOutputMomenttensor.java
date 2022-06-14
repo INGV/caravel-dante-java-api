@@ -23,7 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorPostOutputMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T06:24:43.005236Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:26:38.388681Z[Etc/UTC]")
 public class ObjectMomenttensorPostOutputMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -60,7 +60,7 @@ public class ObjectMomenttensorPostOutputMomenttensor {
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
-  private AddEvent201ResponseDataEventLocalspace localspace;
+  private Object localspace;
 
   public ObjectMomenttensorPostOutputMomenttensor() { 
   }
@@ -111,7 +111,7 @@ public class ObjectMomenttensorPostOutputMomenttensor {
   }
 
 
-  public ObjectMomenttensorPostOutputMomenttensor localspace(AddEvent201ResponseDataEventLocalspace localspace) {
+  public ObjectMomenttensorPostOutputMomenttensor localspace(Object localspace) {
     
     this.localspace = localspace;
     return this;
@@ -124,12 +124,12 @@ public class ObjectMomenttensorPostOutputMomenttensor {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AddEvent201ResponseDataEventLocalspace getLocalspace() {
+  public Object getLocalspace() {
     return localspace;
   }
 
 
-  public void setLocalspace(AddEvent201ResponseDataEventLocalspace localspace) {
+  public void setLocalspace(Object localspace) {
     this.localspace = localspace;
   }
 
@@ -149,9 +149,20 @@ public class ObjectMomenttensorPostOutputMomenttensor {
         Objects.equals(this.localspace, objectMomenttensorPostOutputMomenttensor.localspace);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(id, idLocalspace, localspace);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -215,7 +226,7 @@ public class ObjectMomenttensorPostOutputMomenttensor {
       }
       // validate the optional field `localspace`
       if (jsonObj.getAsJsonObject("localspace") != null) {
-        AddEvent201ResponseDataEventLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        Object.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
   }
 

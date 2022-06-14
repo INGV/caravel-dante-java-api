@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**focalmechanisms** | [**List&lt;ObjectFocalmechanismPostOutputFocalmechanismsInner&gt;**](ObjectFocalmechanismPostOutputFocalmechanismsInner.md) |  |  [optional] |
+|**focalmechanisms** | [**List&lt;Object&gt;**](Object.md) |  |  [optional] |
 
 
 

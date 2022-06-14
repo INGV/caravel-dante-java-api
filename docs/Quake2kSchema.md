@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**ewMessage** | [**Quake2kSchemaEwMessage**](Quake2kSchemaEwMessage.md) |  |  [optional] |
-|**ewLogo** | [**Quake2kSchemaEwLogo**](Quake2kSchemaEwLogo.md) |  |  [optional] |
+|**ewMessage** | [**Object**](Object.md) |  |  [optional] |
+|**ewLogo** | [**Object**](Object.md) |  |  [optional] |
 
 
 

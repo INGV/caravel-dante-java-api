@@ -7,8 +7,8 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**ewMessage** | [**StrongmotioniiSchemaEwMessage**](StrongmotioniiSchemaEwMessage.md) |  |  [optional] |
-|**ewLogo** | [**StrongmotioniiSchemaEwLogo**](StrongmotioniiSchemaEwLogo.md) |  |  [optional] |
+|**ewMessage** | [**Object**](Object.md) |  |  [optional] |
+|**ewLogo** | [**Object**](Object.md) |  |  [optional] |
 
 
 

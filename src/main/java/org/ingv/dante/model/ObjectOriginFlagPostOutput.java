@@ -25,7 +25,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.ObjectOriginFlagPostOutputOriginFlagInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,22 +49,22 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginFlagPostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T06:24:43.005236Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:26:38.388681Z[Etc/UTC]")
 public class ObjectOriginFlagPostOutput {
   public static final String SERIALIZED_NAME_ORIGIN_FLAG = "origin-flag";
   @SerializedName(SERIALIZED_NAME_ORIGIN_FLAG)
-  private List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag = null;
+  private List<Object> originFlag = null;
 
   public ObjectOriginFlagPostOutput() { 
   }
 
-  public ObjectOriginFlagPostOutput originFlag(List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag) {
+  public ObjectOriginFlagPostOutput originFlag(List<Object> originFlag) {
     
     this.originFlag = originFlag;
     return this;
   }
 
-  public ObjectOriginFlagPostOutput addOriginFlagItem(ObjectOriginFlagPostOutputOriginFlagInner originFlagItem) {
+  public ObjectOriginFlagPostOutput addOriginFlagItem(Object originFlagItem) {
     if (this.originFlag == null) {
       this.originFlag = new ArrayList<>();
     }
@@ -80,12 +79,12 @@ public class ObjectOriginFlagPostOutput {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<ObjectOriginFlagPostOutputOriginFlagInner> getOriginFlag() {
+  public List<Object> getOriginFlag() {
     return originFlag;
   }
 
 
-  public void setOriginFlag(List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag) {
+  public void setOriginFlag(List<Object> originFlag) {
     this.originFlag = originFlag;
   }
 
@@ -164,15 +163,10 @@ public class ObjectOriginFlagPostOutput {
         }
       }
       JsonArray jsonArrayoriginFlag = jsonObj.getAsJsonArray("origin-flag");
+      // validate the optional field `origin-flag` (array)
       if (jsonArrayoriginFlag != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("origin-flag").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `origin-flag` to be an array in the JSON string but got `%s`", jsonObj.get("origin-flag").toString()));
-        }
-
-        // validate the optional field `origin-flag` (array)
         for (int i = 0; i < jsonArrayoriginFlag.size(); i++) {
-          ObjectOriginFlagPostOutputOriginFlagInner.validateJsonObject(jsonArrayoriginFlag.get(i).getAsJsonObject());
+          Object.validateJsonObject(jsonArrayoriginFlag.get(i).getAsJsonObject());
         };
       }
   }

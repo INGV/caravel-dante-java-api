@@ -14,9 +14,8 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
-import org.ingv.dante.model.GetToken201Response;
-import org.ingv.dante.model.GetTokenRequest;
 import org.ingv.dante.model.Problem;
+import org.ingv.dante.model.UNKNOWN_BASE_TYPE;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -42,8 +41,8 @@ public class UserApiTest {
      */
     @Test
     public void getTokenTest() throws ApiException {
-        GetTokenRequest getTokenRequest = null;
-        GetToken201Response response = api.getToken(getTokenRequest);
+        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
+        Object response = api.getToken(UNKNOWN_BASE_TYPE);
         // TODO: test validations
     }
 

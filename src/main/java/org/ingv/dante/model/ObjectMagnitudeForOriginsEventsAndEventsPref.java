@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudeForOriginsEventsAndEventsPref
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T06:24:43.005236Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T10:26:38.388681Z[Etc/UTC]")
 public class ObjectMagnitudeForOriginsEventsAndEventsPref {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -452,15 +452,6 @@ public class ObjectMagnitudeForOriginsEventsAndEventsPref {
         if (!ObjectMagnitudeForOriginsEventsAndEventsPref.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectMagnitudeForOriginsEventsAndEventsPref` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
-      }
-      if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `localspace` to be a primitive type in the JSON string but got `%s`", jsonObj.get("localspace").toString()));
-      }
-      if (jsonObj.get("type_magnitude") != null && !jsonObj.get("type_magnitude").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type_magnitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_magnitude").toString()));
-      }
-      if (jsonObj.get("mag_quality") != null && !jsonObj.get("mag_quality").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `mag_quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mag_quality").toString()));
       }
       // validate the optional field `provenance`
       if (jsonObj.getAsJsonObject("provenance") != null) {

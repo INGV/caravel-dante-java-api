@@ -14,16 +14,13 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
-import org.ingv.dante.model.AddOriginFlag201Response;
 import org.ingv.dante.model.ObjectTableLocalspace;
 import org.ingv.dante.model.ObjectTableProvenance;
 import org.ingv.dante.model.ObjectTableTypeEvent;
 import org.ingv.dante.model.ObjectTableTypeMagnitude;
 import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.ingv.dante.model.Problem;
-import org.ingv.dante.model.UpdateEvent200Response;
-import org.ingv.dante.model.UpdateEventRequest;
-import org.ingv.dante.model.UpdateOriginFlagRequest;
+import org.ingv.dante.model.UNKNOWN_BASE_TYPE;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -50,8 +47,8 @@ public class UpdateApiTest {
     @Test
     public void updateEventTest() throws ApiException {
         Long id = null;
-        UpdateEventRequest updateEventRequest = null;
-        UpdateEvent200Response response = api.updateEvent(id, updateEventRequest);
+        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
+        Object response = api.updateEvent(id, UNKNOWN_BASE_TYPE);
         // TODO: test validations
     }
 
@@ -80,8 +77,8 @@ public class UpdateApiTest {
     @Test
     public void updateOriginFlagTest() throws ApiException {
         Long id = null;
-        UpdateOriginFlagRequest updateOriginFlagRequest = null;
-        AddOriginFlag201Response response = api.updateOriginFlag(id, updateOriginFlagRequest);
+        UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE = null;
+        Object response = api.updateOriginFlag(id, UNKNOWN_BASE_TYPE);
         // TODO: test validations
     }
 
