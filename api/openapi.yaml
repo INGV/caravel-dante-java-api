@@ -4447,7 +4447,7 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           type_origin:
-            version_value: 2
+            version_value: 4
             version_name: ew prelim
             name: hypocenter
           region: Norcia
@@ -4478,7 +4478,7 @@ components:
           upper_uncertainty: 0.53
           mag_quality: BB
           lower_uncertainty: 0.52
-          quality: 4.145608029883936
+          quality: 7.386281948385884
         id: 14932631
         event_group_id: 0
       properties:
@@ -5260,7 +5260,7 @@ components:
             name: hew1_mole
             description: Auto added
           type_origin:
-            version_value: 2
+            version_value: 4
             version_name: ew prelim
             name: hypocenter
           region: Norcia
@@ -5791,7 +5791,7 @@ components:
             name: hew1_mole
             description: Auto added
           type_origin:
-            version_value: 2
+            version_value: 4
             version_name: ew prelim
             name: hypocenter
           region: Norcia
@@ -6396,7 +6396,7 @@ components:
           name: hew1_mole
           description: Auto added
         type_origin:
-          version_value: 2
+          version_value: 4
           version_name: ew prelim
           name: hypocenter
         region: Norcia
@@ -6676,7 +6676,7 @@ components:
           type: array
     ObjectTypeOrigin:
       example:
-        version_value: 2
+        version_value: 4
         version_name: ew prelim
         name: hypocenter
       properties:
@@ -6689,7 +6689,6 @@ components:
         version_value:
           description: Define a numeric value for type origin. < 100 is automatic
             location | bigint(20)
-          example: 2
           format: int64
           readOnly: true
           type: integer
@@ -6698,7 +6697,7 @@ components:
       type: object
     ObjectTableTypeOrigin:
       example:
-        version_value: 2
+        version_value: 0
         version_name: ew prelim
         inserted: 2016-06-22T16:52:06.26Z
         name: hypocenter
@@ -6722,7 +6721,6 @@ components:
         version_value:
           description: Define a numeric value for type origin. < 100 is automatic
             location | bigint(20)
-          example: 2
           format: int64
           type: integer
         description:
@@ -7947,7 +7945,7 @@ components:
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
         type_origin:
-          version_value: 2
+          version_value: 4
           version_name: ew prelim
           name: hypocenter
         region: Norcia
@@ -8083,7 +8081,7 @@ components:
         upper_uncertainty: 0.53
         mag_quality: BB
         lower_uncertainty: 0.52
-        quality: 4.145608029883936
+        quality: 7.386281948385884
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -8876,14 +8874,12 @@ components:
     type_origin__version_value__READONLY:
       description: Define a numeric value for type origin. < 100 is automatic location
         | bigint(20)
-      example: 2
       format: int64
       readOnly: true
       type: integer
     type_origin__version_value:
       description: Define a numeric value for type origin. < 100 is automatic location
         | bigint(20)
-      example: 2
       format: int64
       type: integer
     type_origin__priority:
@@ -9247,7 +9243,7 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             type_origin:
-              version_value: 2
+              version_value: 4
               version_name: ew prelim
               name: hypocenter
             region: Norcia
@@ -9278,7 +9274,7 @@ components:
             upper_uncertainty: 0.53
             mag_quality: BB
             lower_uncertainty: 0.52
-            quality: 4.145608029883936
+            quality: 7.386281948385884
           id: 14932631
           event_group_id: 0
         - preferred_focalmechanism_id: 5
@@ -9302,7 +9298,7 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             type_origin:
-              version_value: 2
+              version_value: 4
               version_name: ew prelim
               name: hypocenter
             region: Norcia
@@ -9333,7 +9329,7 @@ components:
             upper_uncertainty: 0.53
             mag_quality: BB
             lower_uncertainty: 0.52
-            quality: 4.145608029883936
+            quality: 7.386281948385884
           id: 14932631
           event_group_id: 0
         meta:
@@ -10058,7 +10054,7 @@ components:
               name: hew1_mole
               description: Auto added
             type_origin:
-              version_value: 2
+              version_value: 4
               version_name: ew prelim
               name: hypocenter
             region: Norcia
@@ -10589,7 +10585,7 @@ components:
               name: hew1_mole
               description: Auto added
             type_origin:
-              version_value: 2
+              version_value: 4
               version_name: ew prelim
               name: hypocenter
             region: Norcia
@@ -11239,7 +11235,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               type_origin:
-                version_value: 2
+                version_value: 4
                 version_name: ew prelim
                 name: hypocenter
               region: Norcia
@@ -11770,7 +11766,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               type_origin:
-                version_value: 2
+                version_value: 4
                 version_name: ew prelim
                 name: hypocenter
               region: Norcia
