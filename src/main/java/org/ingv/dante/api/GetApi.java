@@ -101,7 +101,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -187,7 +187,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -212,7 +212,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -239,7 +239,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -268,10 +268,13 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -284,11 +287,11 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -377,6 +380,22 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxdepth", maxdepth));
         }
 
+        if (mintypeoriginvalue != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("mintypeoriginvalue", mintypeoriginvalue));
+        }
+
+        if (maxtypeoriginvalue != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxtypeoriginvalue", maxtypeoriginvalue));
+        }
+
+        if (wheretypeoriginvaluein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheretypeoriginvaluein", wheretypeoriginvaluein));
+        }
+
+        if (wherelocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
+        }
+
         if (orderby != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderby", orderby));
         }
@@ -387,10 +406,6 @@ public class GetApi {
 
         if (idLocalspace != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("id_localspace", idLocalspace));
-        }
-
-        if (wherelocalspacenamein != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
         }
 
         if (limit != null) {
@@ -418,10 +433,10 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getEventsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit, _callback);
+        okhttp3.Call localVarCall = getEventsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, _callback);
         return localVarCall;
 
     }
@@ -445,10 +460,13 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @return GetEventsPref200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -460,12 +478,12 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsPref200Response getEvents(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
-        ApiResponse<GetEventsPref200Response> localVarResp = getEventsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit);
+    public GetEventsPref200Response getEvents(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit) throws ApiException {
+        ApiResponse<GetEventsPref200Response> localVarResp = getEventsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit);
         return localVarResp.getData();
     }
 
@@ -488,10 +506,13 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @return ApiResponse&lt;GetEventsPref200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -503,12 +524,12 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsPref200Response> getEventsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit, null);
+    public ApiResponse<GetEventsPref200Response> getEventsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit) throws ApiException {
+        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, null);
         Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -532,10 +553,13 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -548,13 +572,13 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long eventGroupId, Long idLocalspace, String wherelocalspacenamein, Integer limit, final ApiCallback<GetEventsPref200Response> _callback) throws ApiException {
+    public okhttp3.Call getEventsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, final ApiCallback<GetEventsPref200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, eventGroupId, idLocalspace, wherelocalspacenamein, limit, _callback);
+        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, _callback);
         Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -577,6 +601,9 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
      * @param orderby Select order (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @param _callback Callback for upload/download progress
@@ -590,11 +617,11 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsPrefCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventsPrefCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String orderby, Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -683,6 +710,18 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxdepth", maxdepth));
         }
 
+        if (mintypeoriginvalue != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("mintypeoriginvalue", mintypeoriginvalue));
+        }
+
+        if (maxtypeoriginvalue != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxtypeoriginvalue", maxtypeoriginvalue));
+        }
+
+        if (wheretypeoriginvaluein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheretypeoriginvaluein", wheretypeoriginvaluein));
+        }
+
         if (orderby != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderby", orderby));
         }
@@ -712,10 +751,10 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventsPrefValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventsPrefValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String orderby, Integer limit, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getEventsPrefCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit, _callback);
+        okhttp3.Call localVarCall = getEventsPrefCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, orderby, limit, _callback);
         return localVarCall;
 
     }
@@ -739,6 +778,9 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
      * @param orderby Select order (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @return GetEventsPref200Response
@@ -751,12 +793,12 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsPref200Response getEventsPref(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit) throws ApiException {
-        ApiResponse<GetEventsPref200Response> localVarResp = getEventsPrefWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit);
+    public GetEventsPref200Response getEventsPref(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String orderby, Integer limit) throws ApiException {
+        ApiResponse<GetEventsPref200Response> localVarResp = getEventsPrefWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, orderby, limit);
         return localVarResp.getData();
     }
 
@@ -779,6 +821,9 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
      * @param orderby Select order (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @return ApiResponse&lt;GetEventsPref200Response&gt;
@@ -791,12 +836,12 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsPref200Response> getEventsPrefWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = getEventsPrefValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit, null);
+    public ApiResponse<GetEventsPref200Response> getEventsPrefWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String orderby, Integer limit) throws ApiException {
+        okhttp3.Call localVarCall = getEventsPrefValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, orderby, limit, null);
         Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -820,6 +865,9 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
      * @param orderby Select order (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @param _callback The callback to be executed when the API call finishes
@@ -833,13 +881,13 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsPrefAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Integer limit, final ApiCallback<GetEventsPref200Response> _callback) throws ApiException {
+    public okhttp3.Call getEventsPrefAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String orderby, Integer limit, final ApiCallback<GetEventsPref200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventsPrefValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, limit, _callback);
+        okhttp3.Call localVarCall = getEventsPrefValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, orderby, limit, _callback);
         Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -857,7 +905,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -928,7 +976,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -950,7 +998,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -974,7 +1022,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1003,7 +1051,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1114,7 +1162,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1141,7 +1189,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1170,7 +1218,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1195,7 +1243,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1271,7 +1319,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1294,7 +1342,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1319,7 +1367,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1348,9 +1396,12 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param orderby Select order (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -1363,11 +1414,11 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOriginsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOriginsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long idLocalspace, Integer limit, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1456,16 +1507,28 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxdepth", maxdepth));
         }
 
+        if (mintypeoriginvalue != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("mintypeoriginvalue", mintypeoriginvalue));
+        }
+
+        if (maxtypeoriginvalue != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxtypeoriginvalue", maxtypeoriginvalue));
+        }
+
+        if (wheretypeoriginvaluein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheretypeoriginvaluein", wheretypeoriginvaluein));
+        }
+
+        if (wherelocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
+        }
+
         if (orderby != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderby", orderby));
         }
 
         if (idLocalspace != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("id_localspace", idLocalspace));
-        }
-
-        if (wherelocalspacenamein != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
         }
 
         if (limit != null) {
@@ -1493,10 +1556,10 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOriginsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getOriginsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long idLocalspace, Integer limit, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getOriginsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit, _callback);
+        okhttp3.Call localVarCall = getOriginsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, idLocalspace, limit, _callback);
         return localVarCall;
 
     }
@@ -1520,9 +1583,12 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param orderby Select order (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @return GetEventsPref200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1534,12 +1600,12 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsPref200Response getOrigins(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
-        ApiResponse<GetEventsPref200Response> localVarResp = getOriginsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit);
+    public GetEventsPref200Response getOrigins(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long idLocalspace, Integer limit) throws ApiException {
+        ApiResponse<GetEventsPref200Response> localVarResp = getOriginsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, idLocalspace, limit);
         return localVarResp.getData();
     }
 
@@ -1562,9 +1628,12 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param orderby Select order (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @return ApiResponse&lt;GetEventsPref200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -1576,12 +1645,12 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsPref200Response> getOriginsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit, null);
+    public ApiResponse<GetEventsPref200Response> getOriginsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long idLocalspace, Integer limit) throws ApiException {
+        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, idLocalspace, limit, null);
         Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1605,9 +1674,12 @@ public class GetApi {
      * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
      * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
      * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param orderby Select order (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
      * @param limit Limit the results to the specified number of events. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -1620,13 +1692,13 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOriginsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, String orderby, Long idLocalspace, String wherelocalspacenamein, Integer limit, final ApiCallback<GetEventsPref200Response> _callback) throws ApiException {
+    public okhttp3.Call getOriginsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long idLocalspace, Integer limit, final ApiCallback<GetEventsPref200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, orderby, idLocalspace, wherelocalspacenamein, limit, _callback);
+        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, idLocalspace, limit, _callback);
         Type localVarReturnType = new TypeToken<GetEventsPref200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1644,7 +1716,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1715,7 +1787,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1737,7 +1809,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1761,7 +1833,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1787,7 +1859,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1868,7 +1940,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1892,7 +1964,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1918,7 +1990,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -1942,7 +2014,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  * Cache-Control -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2013,7 +2085,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  * Cache-Control -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2035,7 +2107,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  * Cache-Control -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2059,7 +2131,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  * Cache-Control -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2083,7 +2155,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2154,7 +2226,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2176,7 +2248,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2200,7 +2272,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2224,7 +2296,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2295,7 +2367,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2317,7 +2389,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2341,7 +2413,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2365,7 +2437,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2436,7 +2508,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2458,7 +2530,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
@@ -2482,7 +2554,7 @@ public class GetApi {
         <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
         <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
-        <tr><td> 200 </td><td> Operation successful </td><td>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */

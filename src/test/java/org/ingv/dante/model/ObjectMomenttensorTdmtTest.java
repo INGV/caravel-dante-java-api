@@ -21,110 +21,58 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.ObjectMomenttensorTdmtStationsInner;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectProvenance
+ * Model tests for ObjectMomenttensorTdmt
  */
-public class ObjectProvenanceTest {
-    private final ObjectProvenance model = new ObjectProvenance();
+public class ObjectMomenttensorTdmtTest {
+    private final ObjectMomenttensorTdmt model = new ObjectMomenttensorTdmt();
 
     /**
-     * Model tests for ObjectProvenance
+     * Model tests for ObjectMomenttensorTdmt
      */
     @Test
-    public void testObjectProvenance() {
-        // TODO: test ObjectProvenance
+    public void testObjectMomenttensorTdmt() {
+        // TODO: test ObjectMomenttensorTdmt
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'id'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void idTest() {
+        // TODO: test id
     }
 
     /**
-     * Test the property 'softwarename'
+     * Test the property 'modified'
      */
     @Test
-    public void softwarenameTest() {
-        // TODO: test softwarename
+    public void modifiedTest() {
+        // TODO: test modified
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'inserted'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void insertedTest() {
+        // TODO: test inserted
     }
 
     /**
-     * Test the property 'model'
+     * Test the property 'stations'
      */
     @Test
-    public void modelTest() {
-        // TODO: test model
-    }
-
-    /**
-     * Test the property 'method'
-     */
-    @Test
-    public void methodTest() {
-        // TODO: test method
-    }
-
-    /**
-     * Test the property 'parameters'
-     */
-    @Test
-    public void parametersTest() {
-        // TODO: test parameters
-    }
-
-    /**
-     * Test the property 'program'
-     */
-    @Test
-    public void programTest() {
-        // TODO: test program
-    }
-
-    /**
-     * Test the property 'username'
-     */
-    @Test
-    public void usernameTest() {
-        // TODO: test username
-    }
-
-    /**
-     * Test the property 'hostname'
-     */
-    @Test
-    public void hostnameTest() {
-        // TODO: test hostname
-    }
-
-    /**
-     * Test the property 'description'
-     */
-    @Test
-    public void descriptionTest() {
-        // TODO: test description
-    }
-
-    /**
-     * Test the property 'priority'
-     */
-    @Test
-    public void priorityTest() {
-        // TODO: test priority
+    public void stationsTest() {
+        // TODO: test stations
     }
 
 }

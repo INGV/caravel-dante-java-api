@@ -25,6 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
+import org.ingv.dante.model.ObjectMomenttensorTdmt;
 import org.ingv.dante.model.ObjectProvenance;
 
 import com.google.gson.Gson;
@@ -50,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T15:51:37.818934Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T12:22:56.738620Z[Etc/UTC]")
 public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -131,6 +132,10 @@ public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
   private ObjectProvenance provenance;
+
+  public static final String SERIALIZED_NAME_TDMT = "tdmt";
+  @SerializedName(SERIALIZED_NAME_TDMT)
+  private ObjectMomenttensorTdmt tdmt;
 
   public ObjectMomenttensor() { 
   }
@@ -580,6 +585,29 @@ public class ObjectMomenttensor {
   }
 
 
+  public ObjectMomenttensor tdmt(ObjectMomenttensorTdmt tdmt) {
+    
+    this.tdmt = tdmt;
+    return this;
+  }
+
+   /**
+   * Get tdmt
+   * @return tdmt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ObjectMomenttensorTdmt getTdmt() {
+    return tdmt;
+  }
+
+
+  public void setTdmt(ObjectMomenttensorTdmt tdmt) {
+    this.tdmt = tdmt;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -609,12 +637,13 @@ public class ObjectMomenttensor {
         Objects.equals(this.doubleCouple, objectMomenttensor.doubleCouple) &&
         Objects.equals(this.typeMomenttensor, objectMomenttensor.typeMomenttensor) &&
         Objects.equals(this.localspace, objectMomenttensor.localspace) &&
-        Objects.equals(this.provenance, objectMomenttensor.provenance);
+        Objects.equals(this.provenance, objectMomenttensor.provenance) &&
+        Objects.equals(this.tdmt, objectMomenttensor.tdmt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, idLocalspace, originidOut, magnitudeidOut, scalarmoment, mrr, mtt, mpp, mrt, mrp, mtp, clvd, iso, varianceReduction, doubleCouple, typeMomenttensor, localspace, provenance);
+    return Objects.hash(id, modified, inserted, idLocalspace, originidOut, magnitudeidOut, scalarmoment, mrr, mtt, mpp, mrt, mrp, mtp, clvd, iso, varianceReduction, doubleCouple, typeMomenttensor, localspace, provenance, tdmt);
   }
 
   @Override
@@ -641,6 +670,7 @@ public class ObjectMomenttensor {
     sb.append("    typeMomenttensor: ").append(toIndentedString(typeMomenttensor)).append("\n");
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
+    sb.append("    tdmt: ").append(toIndentedString(tdmt)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -683,6 +713,7 @@ public class ObjectMomenttensor {
     openapiFields.add("type_momenttensor");
     openapiFields.add("localspace");
     openapiFields.add("provenance");
+    openapiFields.add("tdmt");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

@@ -50,6 +50,8 @@ tags:
   name: store
 - description: Update data
   name: update
+- description: Delete data
+  name: delete
 - description: Earthworm API to store data
   name: earthworm api
 paths:
@@ -120,6 +122,8 @@ paths:
                 $ref: '#/components/schemas/get_token_201_response'
           description: successful operation
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -191,14 +195,14 @@ paths:
                 $ref: '#/components/schemas/ObjectStatus'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
-            Cache-Control:
-              $ref: '#/components/headers/Cache-Control'
       summary: Return the application status
       tags:
       - get
@@ -325,6 +329,25 @@ paths:
         schema:
           format: double
           type: number
+      - description: Filter the output to type_origin.version_value (i.e. 0).
+        in: query
+        name: mintypeoriginvalue
+        required: false
+        schema:
+          $ref: '#/components/schemas/type_origin__version_value'
+      - description: Filter the output to type_origin.version_value (i.e. 1000).
+        in: query
+        name: maxtypeoriginvalue
+        required: false
+        schema:
+          $ref: '#/components/schemas/type_origin__version_value'
+      - description: "Filter type_origin.version_value (i.e. 0,1,200)."
+        in: query
+        name: wheretypeoriginvaluein
+        required: false
+        schema:
+          format: string
+          type: string
       - description: Select order
         in: query
         name: orderby
@@ -401,6 +424,8 @@ paths:
                 $ref: '#/components/schemas/getEventsPref_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -534,6 +559,32 @@ paths:
         schema:
           format: double
           type: number
+      - description: Filter the output to type_origin.version_value (i.e. 0).
+        in: query
+        name: mintypeoriginvalue
+        required: false
+        schema:
+          $ref: '#/components/schemas/type_origin__version_value'
+      - description: Filter the output to type_origin.version_value (i.e. 1000).
+        in: query
+        name: maxtypeoriginvalue
+        required: false
+        schema:
+          $ref: '#/components/schemas/type_origin__version_value'
+      - description: "Filter type_origin.version_value (i.e. 0,1,200)."
+        in: query
+        name: wheretypeoriginvaluein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+        in: query
+        name: wherelocalspacenamein
+        required: false
+        schema:
+          format: string
+          type: string
       - description: Select order
         in: query
         name: orderby
@@ -561,13 +612,6 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
-        in: query
-        name: wherelocalspacenamein
-        required: false
-        schema:
-          format: string
-          type: string
       - description: Limit the results to the specified number of events.
         in: query
         name: limit
@@ -631,6 +675,8 @@ paths:
                 $ref: '#/components/schemas/getEventsPref_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -763,6 +809,32 @@ paths:
         schema:
           format: double
           type: number
+      - description: Filter the output to type_origin.version_value (i.e. 0).
+        in: query
+        name: mintypeoriginvalue
+        required: false
+        schema:
+          $ref: '#/components/schemas/type_origin__version_value'
+      - description: Filter the output to type_origin.version_value (i.e. 1000).
+        in: query
+        name: maxtypeoriginvalue
+        required: false
+        schema:
+          $ref: '#/components/schemas/type_origin__version_value'
+      - description: "Filter type_origin.version_value (i.e. 0,1,200)."
+        in: query
+        name: wheretypeoriginvaluein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+        in: query
+        name: wherelocalspacenamein
+        required: false
+        schema:
+          format: string
+          type: string
       - description: Select order
         in: query
         name: orderby
@@ -783,13 +855,6 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
-        in: query
-        name: wherelocalspacenamein
-        required: false
-        schema:
-          format: string
-          type: string
       - description: Limit the results to the specified number of events.
         in: query
         name: limit
@@ -853,6 +918,8 @@ paths:
                 $ref: '#/components/schemas/getEventsPref_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -923,6 +990,8 @@ paths:
                 $ref: '#/components/schemas/getTypeEvent_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -999,6 +1068,8 @@ paths:
                 $ref: '#/components/schemas/ObjectTableTypeEvent'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -1172,6 +1243,8 @@ paths:
                 $ref: '#/components/schemas/ObjectTableTypeEvent'
           description: record updated
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -1258,6 +1331,8 @@ paths:
                 $ref: '#/components/schemas/getTypeOrigin_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -1334,6 +1409,8 @@ paths:
                 $ref: '#/components/schemas/ObjectTableTypeOrigin'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -1507,6 +1584,8 @@ paths:
                 $ref: '#/components/schemas/ObjectTableTypeOrigin'
           description: record updated
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -1593,6 +1672,8 @@ paths:
                 $ref: '#/components/schemas/getTypeMagnitude_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -1669,6 +1750,8 @@ paths:
                 $ref: '#/components/schemas/ObjectTableTypeMagnitude'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -1842,6 +1925,8 @@ paths:
                 $ref: '#/components/schemas/ObjectTableTypeMagnitude'
           description: record updated
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -1928,6 +2013,8 @@ paths:
                 $ref: '#/components/schemas/getLocalspace_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -2004,6 +2091,8 @@ paths:
                 $ref: '#/components/schemas/ObjectTableLocalspace'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -2177,6 +2266,8 @@ paths:
                 $ref: '#/components/schemas/ObjectTableLocalspace'
           description: record updated
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -2263,6 +2354,8 @@ paths:
                 $ref: '#/components/schemas/getProvenance_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -2339,6 +2432,8 @@ paths:
                 $ref: '#/components/schemas/ObjectTableProvenance'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -2512,6 +2607,8 @@ paths:
                 $ref: '#/components/schemas/ObjectTableProvenance'
           description: record updated
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -2626,6 +2723,8 @@ paths:
                 $ref: '#/components/schemas/getEvent_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -2703,6 +2802,8 @@ paths:
                 $ref: '#/components/schemas/addEvent_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -2782,6 +2883,8 @@ paths:
                 $ref: '#/components/schemas/getOriginFlag_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -2858,6 +2961,8 @@ paths:
                 $ref: '#/components/schemas/addOriginFlag_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -2947,6 +3052,8 @@ paths:
                 $ref: '#/components/schemas/addOriginFlag_201_response'
           description: record updated
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3048,6 +3155,8 @@ paths:
                 $ref: '#/components/schemas/getRegionName_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3154,6 +3263,8 @@ paths:
                 $ref: '#/components/schemas/getMunicipiDistanceKmPopolazione_200_response'
           description: Operation successful
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3242,6 +3353,8 @@ paths:
                 $ref: '#/components/schemas/updateEvent_200_response'
           description: record updated
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3335,6 +3448,8 @@ paths:
                 $ref: '#/components/schemas/addOrigin_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3413,6 +3528,8 @@ paths:
                 $ref: '#/components/schemas/addMagnitude_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3491,6 +3608,8 @@ paths:
                 $ref: '#/components/schemas/addStrongmotion_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3569,6 +3688,8 @@ paths:
                 $ref: '#/components/schemas/addFocalmechanism_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3647,6 +3768,8 @@ paths:
                 $ref: '#/components/schemas/addMomenttensor_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3725,6 +3848,8 @@ paths:
                 $ref: '#/components/schemas/updateEvent_200_response'
           description: record insertedd
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3803,6 +3928,8 @@ paths:
                 $ref: '#/components/schemas/addEwHyp2000arc_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3881,6 +4008,8 @@ paths:
                 $ref: '#/components/schemas/addMagnitude_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -3959,6 +4088,8 @@ paths:
                 $ref: '#/components/schemas/addHEwPickScnl_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -4037,6 +4168,8 @@ paths:
                 $ref: '#/components/schemas/addHEwStrongmotionii_201_response'
           description: record inserted
           headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
             X-RateLimit-Limit:
               $ref: '#/components/headers/X-RateLimit-Limit'
             X-RateLimit-Remaining:
@@ -4050,6 +4183,10 @@ paths:
       x-accepts: application/json
 components:
   headers:
+    Cache-Control:
+      description: no-store
+      schema:
+        type: string
     X-RateLimit-Limit:
       description: The number of allowed requests in the current period
       schema:
@@ -4080,10 +4217,6 @@ components:
         maximum: 186400
         minimum: 0
         type: integer
-    Cache-Control:
-      description: no-store
-      schema:
-        type: string
   responses:
     "204NoContent":
       description: Request was properly formatted and submitted but no data matches
@@ -4157,6 +4290,8 @@ components:
             $ref: '#/components/schemas/getEvent_200_response'
       description: Operation successful
       headers:
+        Cache-Control:
+          $ref: '#/components/headers/Cache-Control'
         X-RateLimit-Limit:
           $ref: '#/components/headers/X-RateLimit-Limit'
         X-RateLimit-Remaining:
@@ -4170,6 +4305,8 @@ components:
             $ref: '#/components/schemas/getOriginFlag_200_response'
       description: Operation successful
       headers:
+        Cache-Control:
+          $ref: '#/components/headers/Cache-Control'
         X-RateLimit-Limit:
           $ref: '#/components/headers/X-RateLimit-Limit'
         X-RateLimit-Remaining:
@@ -4183,6 +4320,8 @@ components:
             $ref: '#/components/schemas/getEventsPref_200_response'
       description: Operation successful
       headers:
+        Cache-Control:
+          $ref: '#/components/headers/Cache-Control'
         X-RateLimit-Limit:
           $ref: '#/components/headers/X-RateLimit-Limit'
         X-RateLimit-Remaining:
@@ -4264,7 +4403,6 @@ components:
       example:
         hostname: hew10.ingv.it
         method: ToDo
-        former_id: 1
         name: INGV
         description: Auto added
         model: prem
@@ -4275,12 +4413,6 @@ components:
         parameters: ToDo
         username: ew
       properties:
-        former_id:
-          default: 0
-          description: ToDo | int(8)
-          example: 1
-          format: int64
-          type: integer
         name:
           default: INGV
           description: "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)"
@@ -4340,7 +4472,6 @@ components:
         version: hew1_mole
         hostname: hew10.ingv.it
         inserted: 2016-06-22T16:52:06.26Z
-        former_id: 1
         name: INGV
         modified: 2016-06-22T16:52:06.26Z
         model: prem
@@ -4354,12 +4485,6 @@ components:
           example: 14932631
           format: int64
           readOnly: true
-          type: integer
-        former_id:
-          default: 0
-          description: ToDo | int(8)
-          example: 1
-          format: int64
           type: integer
         name:
           default: INGV
@@ -4430,12 +4555,14 @@ components:
           err_lon: 2.027123023002322
           err_z: 9.301444243932576
           ot: 2016-06-22T16:52:06.26Z
+          associatedStationCount: 7
           lon: 9.19289
           err_ot: 2.3021358869347655
           err_h: 7.061401241503109
           quality: AB
           id_localspace: 182491
           depth: 0.02
+          usedPhaseCount: 1
           inserted: 2016-06-22T16:52:06.26Z
           provenance:
             name: INGV
@@ -4444,13 +4571,15 @@ components:
           err_lat: 3.616076749251911
           localspace: hew1_mole
           modified: 2016-06-22T16:52:06.26Z
+          usedStationCount: 1
           id: 14932631
           type_origin:
-            version_value: 2
+            version_value: 1
             version_name: ew prelim
             name: hypocenter
           region: Norcia
           lat: 45.492599
+          associatedPhaseCount: 4
         preferred_origin_id: 6
         type_group: 5
         type_event: earthquake
@@ -4477,7 +4606,7 @@ components:
           upper_uncertainty: 0.53
           mag_quality: BB
           lower_uncertainty: 0.52
-          quality: 4.145608029883936
+          quality: 6.84685269835264
         id: 14932631
         event_group_id: 0
       properties:
@@ -4634,7 +4763,6 @@ components:
         provenance:
           hostname: hew10.ingv.it
           method: ToDo
-          former_id: 1
           name: INGV
           description: Auto added
           model: prem
@@ -4667,7 +4795,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -4709,7 +4836,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -4752,7 +4878,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -4797,7 +4922,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -4839,7 +4963,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -4877,7 +5000,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -4920,7 +5042,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -4959,7 +5080,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -4997,7 +5117,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -5040,7 +5159,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -5079,7 +5197,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -5110,6 +5227,27 @@ components:
           e0_az: 9.301444
           focalmechanisms:
           - momenttensor:
+              tdmt:
+                inserted: 2016-06-22T16:52:06.26Z
+                modified: 2016-06-22T16:52:06.26Z
+                id: 14932631
+                stations:
+                - sta: ACER
+                  azi: 3.0205798
+                  r: 223.3
+                  inserted: 2016-06-22T16:52:06.26Z
+                  zcor: 0.88
+                  w: 0.88
+                  modified: 2016-06-22T16:52:06.26Z
+                  vr: 0.88
+                - sta: ACER
+                  azi: 3.0205798
+                  r: 223.3
+                  inserted: 2016-06-22T16:52:06.26Z
+                  zcor: 0.88
+                  w: 0.88
+                  modified: 2016-06-22T16:52:06.26Z
+                  vr: 0.88
               iso: 0
               variance_reduction: 41.15
               mtp: -49.466
@@ -5124,7 +5262,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -5157,7 +5294,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -5179,6 +5315,27 @@ components:
             rake2: 93
             nsta_polarity: 6
           - momenttensor:
+              tdmt:
+                inserted: 2016-06-22T16:52:06.26Z
+                modified: 2016-06-22T16:52:06.26Z
+                id: 14932631
+                stations:
+                - sta: ACER
+                  azi: 3.0205798
+                  r: 223.3
+                  inserted: 2016-06-22T16:52:06.26Z
+                  zcor: 0.88
+                  w: 0.88
+                  modified: 2016-06-22T16:52:06.26Z
+                  vr: 0.88
+                - sta: ACER
+                  azi: 3.0205798
+                  r: 223.3
+                  inserted: 2016-06-22T16:52:06.26Z
+                  zcor: 0.88
+                  w: 0.88
+                  modified: 2016-06-22T16:52:06.26Z
+                  vr: 0.88
               iso: 0
               variance_reduction: 41.15
               mtp: -49.466
@@ -5193,7 +5350,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -5226,7 +5382,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -5259,7 +5414,7 @@ components:
             name: hew1_mole
             description: Auto added
           type_origin:
-            version_value: 2
+            version_value: 1
             version_name: ew prelim
             name: hypocenter
           region: Norcia
@@ -5283,7 +5438,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -5328,7 +5482,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -5370,7 +5523,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -5408,7 +5560,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -5451,7 +5602,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -5490,7 +5640,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -5528,7 +5677,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -5571,7 +5719,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -5610,7 +5757,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -5641,6 +5787,27 @@ components:
           e0_az: 9.301444
           focalmechanisms:
           - momenttensor:
+              tdmt:
+                inserted: 2016-06-22T16:52:06.26Z
+                modified: 2016-06-22T16:52:06.26Z
+                id: 14932631
+                stations:
+                - sta: ACER
+                  azi: 3.0205798
+                  r: 223.3
+                  inserted: 2016-06-22T16:52:06.26Z
+                  zcor: 0.88
+                  w: 0.88
+                  modified: 2016-06-22T16:52:06.26Z
+                  vr: 0.88
+                - sta: ACER
+                  azi: 3.0205798
+                  r: 223.3
+                  inserted: 2016-06-22T16:52:06.26Z
+                  zcor: 0.88
+                  w: 0.88
+                  modified: 2016-06-22T16:52:06.26Z
+                  vr: 0.88
               iso: 0
               variance_reduction: 41.15
               mtp: -49.466
@@ -5655,7 +5822,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -5688,7 +5854,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -5710,6 +5875,27 @@ components:
             rake2: 93
             nsta_polarity: 6
           - momenttensor:
+              tdmt:
+                inserted: 2016-06-22T16:52:06.26Z
+                modified: 2016-06-22T16:52:06.26Z
+                id: 14932631
+                stations:
+                - sta: ACER
+                  azi: 3.0205798
+                  r: 223.3
+                  inserted: 2016-06-22T16:52:06.26Z
+                  zcor: 0.88
+                  w: 0.88
+                  modified: 2016-06-22T16:52:06.26Z
+                  vr: 0.88
+                - sta: ACER
+                  azi: 3.0205798
+                  r: 223.3
+                  inserted: 2016-06-22T16:52:06.26Z
+                  zcor: 0.88
+                  w: 0.88
+                  modified: 2016-06-22T16:52:06.26Z
+                  vr: 0.88
               iso: 0
               variance_reduction: 41.15
               mtp: -49.466
@@ -5724,7 +5910,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -5757,7 +5942,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -5790,7 +5974,7 @@ components:
             name: hew1_mole
             description: Auto added
           type_origin:
-            version_value: 2
+            version_value: 1
             version_name: ew prelim
             name: hypocenter
           region: Norcia
@@ -5888,7 +6072,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -5933,7 +6116,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -5975,7 +6157,6 @@ components:
         provenance:
           hostname: hew10.ingv.it
           method: ToDo
-          former_id: 1
           name: INGV
           description: Auto added
           model: prem
@@ -6013,7 +6194,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -6056,7 +6236,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -6095,7 +6274,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -6133,7 +6311,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -6176,7 +6353,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -6215,7 +6391,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -6246,6 +6421,27 @@ components:
         e0_az: 9.301444
         focalmechanisms:
         - momenttensor:
+            tdmt:
+              inserted: 2016-06-22T16:52:06.26Z
+              modified: 2016-06-22T16:52:06.26Z
+              id: 14932631
+              stations:
+              - sta: ACER
+                azi: 3.0205798
+                r: 223.3
+                inserted: 2016-06-22T16:52:06.26Z
+                zcor: 0.88
+                w: 0.88
+                modified: 2016-06-22T16:52:06.26Z
+                vr: 0.88
+              - sta: ACER
+                azi: 3.0205798
+                r: 223.3
+                inserted: 2016-06-22T16:52:06.26Z
+                zcor: 0.88
+                w: 0.88
+                modified: 2016-06-22T16:52:06.26Z
+                vr: 0.88
             iso: 0
             variance_reduction: 41.15
             mtp: -49.466
@@ -6260,7 +6456,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -6293,7 +6488,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -6315,6 +6509,27 @@ components:
           rake2: 93
           nsta_polarity: 6
         - momenttensor:
+            tdmt:
+              inserted: 2016-06-22T16:52:06.26Z
+              modified: 2016-06-22T16:52:06.26Z
+              id: 14932631
+              stations:
+              - sta: ACER
+                azi: 3.0205798
+                r: 223.3
+                inserted: 2016-06-22T16:52:06.26Z
+                zcor: 0.88
+                w: 0.88
+                modified: 2016-06-22T16:52:06.26Z
+                vr: 0.88
+              - sta: ACER
+                azi: 3.0205798
+                r: 223.3
+                inserted: 2016-06-22T16:52:06.26Z
+                zcor: 0.88
+                w: 0.88
+                modified: 2016-06-22T16:52:06.26Z
+                vr: 0.88
             iso: 0
             variance_reduction: 41.15
             mtp: -49.466
@@ -6329,7 +6544,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -6362,7 +6576,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -6395,7 +6608,7 @@ components:
           name: hew1_mole
           description: Auto added
         type_origin:
-          version_value: 2
+          version_value: 1
           version_name: ew prelim
           name: hypocenter
         region: Norcia
@@ -6675,7 +6888,7 @@ components:
           type: array
     ObjectTypeOrigin:
       example:
-        version_value: 2
+        version_value: 1
         version_name: ew prelim
         name: hypocenter
       properties:
@@ -6688,7 +6901,6 @@ components:
         version_value:
           description: Define a numeric value for type origin. < 100 is automatic
             location | bigint(20)
-          example: 2
           format: int64
           readOnly: true
           type: integer
@@ -6697,7 +6909,7 @@ components:
       type: object
     ObjectTableTypeOrigin:
       example:
-        version_value: 2
+        version_value: 0
         version_name: ew prelim
         inserted: 2016-06-22T16:52:06.26Z
         name: hypocenter
@@ -6721,7 +6933,6 @@ components:
         version_value:
           description: Define a numeric value for type origin. < 100 is automatic
             location | bigint(20)
-          example: 2
           format: int64
           type: integer
         description:
@@ -6868,7 +7079,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -6911,7 +7121,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -6950,7 +7159,6 @@ components:
         provenance:
           hostname: hew10.ingv.it
           method: ToDo
-          former_id: 1
           name: INGV
           description: Auto added
           model: prem
@@ -7084,6 +7292,27 @@ components:
     ObjectFocalmechanism:
       example:
         momenttensor:
+          tdmt:
+            inserted: 2016-06-22T16:52:06.26Z
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            stations:
+            - sta: ACER
+              azi: 3.0205798
+              r: 223.3
+              inserted: 2016-06-22T16:52:06.26Z
+              zcor: 0.88
+              w: 0.88
+              modified: 2016-06-22T16:52:06.26Z
+              vr: 0.88
+            - sta: ACER
+              azi: 3.0205798
+              r: 223.3
+              inserted: 2016-06-22T16:52:06.26Z
+              zcor: 0.88
+              w: 0.88
+              modified: 2016-06-22T16:52:06.26Z
+              vr: 0.88
           iso: 0
           variance_reduction: 41.15
           mtp: -49.466
@@ -7098,7 +7327,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -7131,7 +7359,6 @@ components:
         provenance:
           hostname: hew10.ingv.it
           method: ToDo
-          former_id: 1
           name: INGV
           description: Auto added
           model: prem
@@ -7257,6 +7484,27 @@ components:
           type: array
     ObjectMomenttensor:
       example:
+        tdmt:
+          inserted: 2016-06-22T16:52:06.26Z
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          stations:
+          - sta: ACER
+            azi: 3.0205798
+            r: 223.3
+            inserted: 2016-06-22T16:52:06.26Z
+            zcor: 0.88
+            w: 0.88
+            modified: 2016-06-22T16:52:06.26Z
+            vr: 0.88
+          - sta: ACER
+            azi: 3.0205798
+            r: 223.3
+            inserted: 2016-06-22T16:52:06.26Z
+            zcor: 0.88
+            w: 0.88
+            modified: 2016-06-22T16:52:06.26Z
+            vr: 0.88
         iso: 0
         variance_reduction: 41.15
         mtp: -49.466
@@ -7271,7 +7519,6 @@ components:
         provenance:
           hostname: hew10.ingv.it
           method: ToDo
-          former_id: 1
           name: INGV
           description: Auto added
           model: prem
@@ -7393,6 +7640,8 @@ components:
           $ref: '#/components/schemas/ObjectLocalspace'
         provenance:
           $ref: '#/components/schemas/ObjectProvenance'
+        tdmt:
+          $ref: '#/components/schemas/ObjectMomenttensor_tdmt'
       required:
       - version
       type: object
@@ -7430,7 +7679,6 @@ components:
         provenance:
           hostname: hew10.ingv.it
           method: ToDo
-          former_id: 1
           name: INGV
           description: Auto added
           model: prem
@@ -7587,7 +7835,6 @@ components:
         provenance:
           hostname: hew10.ingv.it
           method: ToDo
-          former_id: 1
           name: INGV
           description: Auto added
           model: prem
@@ -7759,7 +8006,6 @@ components:
         provenance:
           hostname: hew10.ingv.it
           method: ToDo
-          former_id: 1
           name: INGV
           description: Auto added
           model: prem
@@ -7930,12 +8176,14 @@ components:
         err_lon: 2.027123023002322
         err_z: 9.301444243932576
         ot: 2016-06-22T16:52:06.26Z
+        associatedStationCount: 7
         lon: 9.19289
         err_ot: 2.3021358869347655
         err_h: 7.061401241503109
         quality: AB
         id_localspace: 182491
         depth: 0.02
+        usedPhaseCount: 1
         inserted: 2016-06-22T16:52:06.26Z
         provenance:
           name: INGV
@@ -7944,13 +8192,15 @@ components:
         err_lat: 3.616076749251911
         localspace: hew1_mole
         modified: 2016-06-22T16:52:06.26Z
+        usedStationCount: 1
         id: 14932631
         type_origin:
-          version_value: 2
+          version_value: 1
           version_name: ew prelim
           name: hypocenter
         region: Norcia
         lat: 45.492599
+        associatedPhaseCount: 4
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -8026,6 +8276,25 @@ components:
           description: Quality of the localization | char(2)
           example: AB
           type: string
+        associatedPhaseCount:
+          description: "Number of associated phases, regardless of their use for origin\
+            \ computation | int(8)'"
+          format: int64
+          type: integer
+        associatedStationCount:
+          description: Number of stations at which the event was observed | int(8)'
+          format: int64
+          type: integer
+        usedPhaseCount:
+          description: "Number of defining phases, i.e., phase observations that were\
+            \ actually used for computing the origin | int(8)'"
+          format: int64
+          type: integer
+        usedStationCount:
+          description: Number of stations from which data was used for origin computation
+            | int(8)'
+          format: int64
+          type: integer
         region:
           description: Event location remark region | varchar(255)
           example: Norcia
@@ -8082,7 +8351,7 @@ components:
         upper_uncertainty: 0.53
         mag_quality: BB
         lower_uncertainty: 0.52
-        quality: 4.145608029883936
+        quality: 6.84685269835264
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -8313,6 +8582,11 @@ components:
       example: 3.2
       format: double
       type: number
+    type_origin__version_value:
+      description: Define a numeric value for type origin. < 100 is automatic location
+        | bigint(20)
+      format: int64
+      type: integer
     id:
       description: Unique incremental id | bigint(20)
       example: 14932631
@@ -8685,12 +8959,6 @@ components:
       format: uri
       maxLength: 2048
       type: string
-    provenance__former_id:
-      default: 0
-      description: ToDo | int(8)
-      example: 1
-      format: int64
-      type: integer
     provenance__name:
       default: INGV
       description: "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)"
@@ -8875,15 +9143,8 @@ components:
     type_origin__version_value__READONLY:
       description: Define a numeric value for type origin. < 100 is automatic location
         | bigint(20)
-      example: 2
       format: int64
       readOnly: true
-      type: integer
-    type_origin__version_value:
-      description: Define a numeric value for type origin. < 100 is automatic location
-        | bigint(20)
-      example: 2
-      format: int64
       type: integer
     type_origin__priority:
       default: 0
@@ -9057,13 +9318,18 @@ components:
       description: Type of Moment Tensor | varchar(50)
       example: TDMT
       type: string
-    scnl__net:
-      description: Channel net code | char(2)
-      example: IV
-      type: string
     scnl__sta:
       description: Channel station code | varchar(5)
       example: ACER
+      type: string
+    weight:
+      description: Weight | double
+      example: 0.88
+      format: double
+      type: number
+    scnl__net:
+      description: Channel net code | char(2)
+      example: IV
       type: string
     scnl__cha:
       description: Channel code | char(3)
@@ -9127,11 +9393,6 @@ components:
       description: magnitude error | double
       format: double
       type: number
-    weight:
-      description: Weight | double
-      example: 0.88
-      format: double
-      type: number
     stationmagnitude-st_dur_mag__polarity_is_used:
       default: false
       description: true if used | boolean
@@ -9183,6 +9444,25 @@ components:
       example: 6.19
       format: double
       type: number
+    associatedPhaseCount:
+      description: "Number of associated phases, regardless of their use for origin\
+        \ computation | int(8)'"
+      format: int64
+      type: integer
+    associatedStationCount:
+      description: Number of stations at which the event was observed | int(8)'
+      format: int64
+      type: integer
+    usedPhaseCount:
+      description: "Number of defining phases, i.e., phase observations that were\
+        \ actually used for computing the origin | int(8)'"
+      format: int64
+      type: integer
+    usedStationCount:
+      description: Number of stations from which data was used for origin computation
+        | int(8)'
+      format: int64
+      type: integer
     get_token_request:
       properties:
         email:
@@ -9230,12 +9510,14 @@ components:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
+            associatedStationCount: 7
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
             quality: AB
             id_localspace: 182491
             depth: 0.02
+            usedPhaseCount: 1
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
               name: INGV
@@ -9244,13 +9526,15 @@ components:
             err_lat: 3.616076749251911
             localspace: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
+            usedStationCount: 1
             id: 14932631
             type_origin:
-              version_value: 2
+              version_value: 1
               version_name: ew prelim
               name: hypocenter
             region: Norcia
             lat: 45.492599
+            associatedPhaseCount: 4
           preferred_origin_id: 6
           type_group: 5
           type_event: earthquake
@@ -9277,7 +9561,7 @@ components:
             upper_uncertainty: 0.53
             mag_quality: BB
             lower_uncertainty: 0.52
-            quality: 4.145608029883936
+            quality: 6.84685269835264
           id: 14932631
           event_group_id: 0
         - preferred_focalmechanism_id: 5
@@ -9285,12 +9569,14 @@ components:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
+            associatedStationCount: 7
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
             quality: AB
             id_localspace: 182491
             depth: 0.02
+            usedPhaseCount: 1
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
               name: INGV
@@ -9299,13 +9585,15 @@ components:
             err_lat: 3.616076749251911
             localspace: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
+            usedStationCount: 1
             id: 14932631
             type_origin:
-              version_value: 2
+              version_value: 1
               version_name: ew prelim
               name: hypocenter
             region: Norcia
             lat: 45.492599
+            associatedPhaseCount: 4
           preferred_origin_id: 6
           type_group: 5
           type_event: earthquake
@@ -9332,7 +9620,7 @@ components:
             upper_uncertainty: 0.53
             mag_quality: BB
             lower_uncertainty: 0.52
-            quality: 4.145608029883936
+            quality: 6.84685269835264
           id: 14932631
           event_group_id: 0
         meta:
@@ -9432,7 +9720,6 @@ components:
           provenance:
             hostname: hew10.ingv.it
             method: ToDo
-            former_id: 1
             name: INGV
             description: Auto added
             model: prem
@@ -9465,7 +9752,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -9507,7 +9793,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -9550,7 +9835,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -9595,7 +9879,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -9637,7 +9920,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -9675,7 +9957,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -9718,7 +9999,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -9757,7 +10037,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -9795,7 +10074,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -9838,7 +10116,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -9877,7 +10154,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -9908,6 +10184,27 @@ components:
             e0_az: 9.301444
             focalmechanisms:
             - momenttensor:
+                tdmt:
+                  inserted: 2016-06-22T16:52:06.26Z
+                  modified: 2016-06-22T16:52:06.26Z
+                  id: 14932631
+                  stations:
+                  - sta: ACER
+                    azi: 3.0205798
+                    r: 223.3
+                    inserted: 2016-06-22T16:52:06.26Z
+                    zcor: 0.88
+                    w: 0.88
+                    modified: 2016-06-22T16:52:06.26Z
+                    vr: 0.88
+                  - sta: ACER
+                    azi: 3.0205798
+                    r: 223.3
+                    inserted: 2016-06-22T16:52:06.26Z
+                    zcor: 0.88
+                    w: 0.88
+                    modified: 2016-06-22T16:52:06.26Z
+                    vr: 0.88
                 iso: 0
                 variance_reduction: 41.15
                 mtp: -49.466
@@ -9922,7 +10219,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -9955,7 +10251,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -9977,6 +10272,27 @@ components:
               rake2: 93
               nsta_polarity: 6
             - momenttensor:
+                tdmt:
+                  inserted: 2016-06-22T16:52:06.26Z
+                  modified: 2016-06-22T16:52:06.26Z
+                  id: 14932631
+                  stations:
+                  - sta: ACER
+                    azi: 3.0205798
+                    r: 223.3
+                    inserted: 2016-06-22T16:52:06.26Z
+                    zcor: 0.88
+                    w: 0.88
+                    modified: 2016-06-22T16:52:06.26Z
+                    vr: 0.88
+                  - sta: ACER
+                    azi: 3.0205798
+                    r: 223.3
+                    inserted: 2016-06-22T16:52:06.26Z
+                    zcor: 0.88
+                    w: 0.88
+                    modified: 2016-06-22T16:52:06.26Z
+                    vr: 0.88
                 iso: 0
                 variance_reduction: 41.15
                 mtp: -49.466
@@ -9991,7 +10307,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -10024,7 +10339,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -10057,7 +10371,7 @@ components:
               name: hew1_mole
               description: Auto added
             type_origin:
-              version_value: 2
+              version_value: 1
               version_name: ew prelim
               name: hypocenter
             region: Norcia
@@ -10081,7 +10395,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -10126,7 +10439,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -10168,7 +10480,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -10206,7 +10517,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -10249,7 +10559,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -10288,7 +10597,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -10326,7 +10634,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -10369,7 +10676,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -10408,7 +10714,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -10439,6 +10744,27 @@ components:
             e0_az: 9.301444
             focalmechanisms:
             - momenttensor:
+                tdmt:
+                  inserted: 2016-06-22T16:52:06.26Z
+                  modified: 2016-06-22T16:52:06.26Z
+                  id: 14932631
+                  stations:
+                  - sta: ACER
+                    azi: 3.0205798
+                    r: 223.3
+                    inserted: 2016-06-22T16:52:06.26Z
+                    zcor: 0.88
+                    w: 0.88
+                    modified: 2016-06-22T16:52:06.26Z
+                    vr: 0.88
+                  - sta: ACER
+                    azi: 3.0205798
+                    r: 223.3
+                    inserted: 2016-06-22T16:52:06.26Z
+                    zcor: 0.88
+                    w: 0.88
+                    modified: 2016-06-22T16:52:06.26Z
+                    vr: 0.88
                 iso: 0
                 variance_reduction: 41.15
                 mtp: -49.466
@@ -10453,7 +10779,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -10486,7 +10811,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -10508,6 +10832,27 @@ components:
               rake2: 93
               nsta_polarity: 6
             - momenttensor:
+                tdmt:
+                  inserted: 2016-06-22T16:52:06.26Z
+                  modified: 2016-06-22T16:52:06.26Z
+                  id: 14932631
+                  stations:
+                  - sta: ACER
+                    azi: 3.0205798
+                    r: 223.3
+                    inserted: 2016-06-22T16:52:06.26Z
+                    zcor: 0.88
+                    w: 0.88
+                    modified: 2016-06-22T16:52:06.26Z
+                    vr: 0.88
+                  - sta: ACER
+                    azi: 3.0205798
+                    r: 223.3
+                    inserted: 2016-06-22T16:52:06.26Z
+                    zcor: 0.88
+                    w: 0.88
+                    modified: 2016-06-22T16:52:06.26Z
+                    vr: 0.88
                 iso: 0
                 variance_reduction: 41.15
                 mtp: -49.466
@@ -10522,7 +10867,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -10555,7 +10899,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -10588,7 +10931,7 @@ components:
               name: hew1_mole
               description: Auto added
             type_origin:
-              version_value: 2
+              version_value: 1
               version_name: ew prelim
               name: hypocenter
             region: Norcia
@@ -10613,7 +10956,6 @@ components:
             provenance:
               hostname: hew10.ingv.it
               method: ToDo
-              former_id: 1
               name: INGV
               description: Auto added
               model: prem
@@ -10646,7 +10988,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -10688,7 +11029,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -10731,7 +11071,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -10776,7 +11115,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -10818,7 +11156,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -10856,7 +11193,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -10899,7 +11235,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -10938,7 +11273,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -10976,7 +11310,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -11019,7 +11352,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -11058,7 +11390,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -11089,6 +11420,27 @@ components:
               e0_az: 9.301444
               focalmechanisms:
               - momenttensor:
+                  tdmt:
+                    inserted: 2016-06-22T16:52:06.26Z
+                    modified: 2016-06-22T16:52:06.26Z
+                    id: 14932631
+                    stations:
+                    - sta: ACER
+                      azi: 3.0205798
+                      r: 223.3
+                      inserted: 2016-06-22T16:52:06.26Z
+                      zcor: 0.88
+                      w: 0.88
+                      modified: 2016-06-22T16:52:06.26Z
+                      vr: 0.88
+                    - sta: ACER
+                      azi: 3.0205798
+                      r: 223.3
+                      inserted: 2016-06-22T16:52:06.26Z
+                      zcor: 0.88
+                      w: 0.88
+                      modified: 2016-06-22T16:52:06.26Z
+                      vr: 0.88
                   iso: 0
                   variance_reduction: 41.15
                   mtp: -49.466
@@ -11103,7 +11455,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -11136,7 +11487,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -11158,6 +11508,27 @@ components:
                 rake2: 93
                 nsta_polarity: 6
               - momenttensor:
+                  tdmt:
+                    inserted: 2016-06-22T16:52:06.26Z
+                    modified: 2016-06-22T16:52:06.26Z
+                    id: 14932631
+                    stations:
+                    - sta: ACER
+                      azi: 3.0205798
+                      r: 223.3
+                      inserted: 2016-06-22T16:52:06.26Z
+                      zcor: 0.88
+                      w: 0.88
+                      modified: 2016-06-22T16:52:06.26Z
+                      vr: 0.88
+                    - sta: ACER
+                      azi: 3.0205798
+                      r: 223.3
+                      inserted: 2016-06-22T16:52:06.26Z
+                      zcor: 0.88
+                      w: 0.88
+                      modified: 2016-06-22T16:52:06.26Z
+                      vr: 0.88
                   iso: 0
                   variance_reduction: 41.15
                   mtp: -49.466
@@ -11172,7 +11543,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -11205,7 +11575,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -11238,7 +11607,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               type_origin:
-                version_value: 2
+                version_value: 1
                 version_name: ew prelim
                 name: hypocenter
               region: Norcia
@@ -11262,7 +11631,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -11307,7 +11675,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -11349,7 +11716,6 @@ components:
               provenance:
                 hostname: hew10.ingv.it
                 method: ToDo
-                former_id: 1
                 name: INGV
                 description: Auto added
                 model: prem
@@ -11387,7 +11753,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -11430,7 +11795,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -11469,7 +11833,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -11507,7 +11870,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -11550,7 +11912,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -11589,7 +11950,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -11620,6 +11980,27 @@ components:
               e0_az: 9.301444
               focalmechanisms:
               - momenttensor:
+                  tdmt:
+                    inserted: 2016-06-22T16:52:06.26Z
+                    modified: 2016-06-22T16:52:06.26Z
+                    id: 14932631
+                    stations:
+                    - sta: ACER
+                      azi: 3.0205798
+                      r: 223.3
+                      inserted: 2016-06-22T16:52:06.26Z
+                      zcor: 0.88
+                      w: 0.88
+                      modified: 2016-06-22T16:52:06.26Z
+                      vr: 0.88
+                    - sta: ACER
+                      azi: 3.0205798
+                      r: 223.3
+                      inserted: 2016-06-22T16:52:06.26Z
+                      zcor: 0.88
+                      w: 0.88
+                      modified: 2016-06-22T16:52:06.26Z
+                      vr: 0.88
                   iso: 0
                   variance_reduction: 41.15
                   mtp: -49.466
@@ -11634,7 +12015,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -11667,7 +12047,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -11689,6 +12068,27 @@ components:
                 rake2: 93
                 nsta_polarity: 6
               - momenttensor:
+                  tdmt:
+                    inserted: 2016-06-22T16:52:06.26Z
+                    modified: 2016-06-22T16:52:06.26Z
+                    id: 14932631
+                    stations:
+                    - sta: ACER
+                      azi: 3.0205798
+                      r: 223.3
+                      inserted: 2016-06-22T16:52:06.26Z
+                      zcor: 0.88
+                      w: 0.88
+                      modified: 2016-06-22T16:52:06.26Z
+                      vr: 0.88
+                    - sta: ACER
+                      azi: 3.0205798
+                      r: 223.3
+                      inserted: 2016-06-22T16:52:06.26Z
+                      zcor: 0.88
+                      w: 0.88
+                      modified: 2016-06-22T16:52:06.26Z
+                      vr: 0.88
                   iso: 0
                   variance_reduction: 41.15
                   mtp: -49.466
@@ -11703,7 +12103,6 @@ components:
                   provenance:
                     hostname: hew10.ingv.it
                     method: ToDo
-                    former_id: 1
                     name: INGV
                     description: Auto added
                     model: prem
@@ -11736,7 +12135,6 @@ components:
                 provenance:
                   hostname: hew10.ingv.it
                   method: ToDo
-                  former_id: 1
                   name: INGV
                   description: Auto added
                   model: prem
@@ -11769,7 +12167,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               type_origin:
-                version_value: 2
+                version_value: 1
                 version_name: ew prelim
                 name: hypocenter
               region: Norcia
@@ -12373,6 +12771,106 @@ components:
       allOf:
       - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
       - $ref: '#/components/schemas/ObjectMomenttensorPostOutput'
+    ObjectMomenttensor_tdmt_stations_inner:
+      example:
+        sta: ACER
+        azi: 3.0205798
+        r: 223.3
+        inserted: 2016-06-22T16:52:06.26Z
+        zcor: 0.88
+        w: 0.88
+        modified: 2016-06-22T16:52:06.26Z
+        vr: 0.88
+      properties:
+        sta:
+          description: Channel station code | varchar(5)
+          example: ACER
+          type: string
+        r:
+          description: epicenter distance
+          example: 223.3
+          format: float
+          type: number
+        azi:
+          description: Azimutal gap | float4
+          format: float
+          type: number
+        w:
+          description: Weight | double
+          example: 0.88
+          format: double
+          type: number
+        vr:
+          description: vr
+          example: 0.88
+          format: double
+          type: number
+        zcor:
+          description: zcor
+          example: 0.88
+          format: double
+          type: number
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+    ObjectMomenttensor_tdmt:
+      additionalProperties:
+        type: string
+      example:
+        inserted: 2016-06-22T16:52:06.26Z
+        modified: 2016-06-22T16:52:06.26Z
+        id: 14932631
+        stations:
+        - sta: ACER
+          azi: 3.0205798
+          r: 223.3
+          inserted: 2016-06-22T16:52:06.26Z
+          zcor: 0.88
+          w: 0.88
+          modified: 2016-06-22T16:52:06.26Z
+          vr: 0.88
+        - sta: ACER
+          azi: 3.0205798
+          r: 223.3
+          inserted: 2016-06-22T16:52:06.26Z
+          zcor: 0.88
+          w: 0.88
+          modified: 2016-06-22T16:52:06.26Z
+          vr: 0.88
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          readOnly: true
+          type: integer
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        stations:
+          items:
+            $ref: '#/components/schemas/ObjectMomenttensor_tdmt_stations_inner'
+          type: array
+      readOnly: true
+      type: object
     ObjectMomenttensorPostOutput_momenttensor:
       example:
         id_localspace: 182491

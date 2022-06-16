@@ -179,6 +179,8 @@ public class JSON {
             .registerTypeAdapterFactory(new org.ingv.dante.model.ObjectMomenttensor.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.ingv.dante.model.ObjectMomenttensorPostOutput.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.ingv.dante.model.ObjectMomenttensorPostOutputMomenttensor.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new org.ingv.dante.model.ObjectMomenttensorTdmt.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new org.ingv.dante.model.ObjectMomenttensorTdmtStationsInner.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.ingv.dante.model.ObjectOrigin.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.ingv.dante.model.ObjectOriginFlag.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.ingv.dante.model.ObjectOriginFlagPostOutput.CustomTypeAdapterFactory())

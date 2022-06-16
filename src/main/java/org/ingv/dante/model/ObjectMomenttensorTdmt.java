@@ -23,7 +23,10 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
+import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.ObjectMomenttensorTdmtStationsInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -46,29 +49,39 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * ObjectMomenttensorPostOutputMomenttensor
+ * ObjectMomenttensorTdmt
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T12:22:56.738620Z[Etc/UTC]")
-public class ObjectMomenttensorPostOutputMomenttensor {
+public class ObjectMomenttensorTdmt {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Long id;
 
-  public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
-  @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
-  private Long idLocalspace;
+  public static final String SERIALIZED_NAME_MODIFIED = "modified";
+  @SerializedName(SERIALIZED_NAME_MODIFIED)
+  private OffsetDateTime modified;
 
-  public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
-  @SerializedName(SERIALIZED_NAME_LOCALSPACE)
-  private AddEvent201ResponseDataEventLocalspace localspace;
+  public static final String SERIALIZED_NAME_INSERTED = "inserted";
+  @SerializedName(SERIALIZED_NAME_INSERTED)
+  private OffsetDateTime inserted;
 
-  public ObjectMomenttensorPostOutputMomenttensor() { 
+  public static final String SERIALIZED_NAME_STATIONS = "stations";
+  @SerializedName(SERIALIZED_NAME_STATIONS)
+  private List<ObjectMomenttensorTdmtStationsInner> stations = null;
+
+  public ObjectMomenttensorTdmt() { 
   }
 
-  public ObjectMomenttensorPostOutputMomenttensor id(Long id) {
-    
+  
+  public ObjectMomenttensorTdmt(
+     Long id, 
+     OffsetDateTime modified, 
+     OffsetDateTime inserted
+  ) {
+    this();
     this.id = id;
-    return this;
+    this.modified = modified;
+    this.inserted = inserted;
   }
 
    /**
@@ -83,54 +96,64 @@ public class ObjectMomenttensorPostOutputMomenttensor {
   }
 
 
-  public void setId(Long id) {
-    this.id = id;
-  }
 
-
-  public ObjectMomenttensorPostOutputMomenttensor idLocalspace(Long idLocalspace) {
-    
-    this.idLocalspace = idLocalspace;
-    return this;
-  }
 
    /**
-   * Localspace Id | bigint(19)
-   * @return idLocalspace
+   * Last Review | timestamp
+   * @return modified
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
 
-  public Long getIdLocalspace() {
-    return idLocalspace;
+  public OffsetDateTime getModified() {
+    return modified;
   }
 
 
-  public void setIdLocalspace(Long idLocalspace) {
-    this.idLocalspace = idLocalspace;
+
+
+   /**
+   * Insert time | timestamp
+   * @return inserted
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
+  public OffsetDateTime getInserted() {
+    return inserted;
   }
 
 
-  public ObjectMomenttensorPostOutputMomenttensor localspace(AddEvent201ResponseDataEventLocalspace localspace) {
+
+
+  public ObjectMomenttensorTdmt stations(List<ObjectMomenttensorTdmtStationsInner> stations) {
     
-    this.localspace = localspace;
+    this.stations = stations;
+    return this;
+  }
+
+  public ObjectMomenttensorTdmt addStationsItem(ObjectMomenttensorTdmtStationsInner stationsItem) {
+    if (this.stations == null) {
+      this.stations = new ArrayList<>();
+    }
+    this.stations.add(stationsItem);
     return this;
   }
 
    /**
-   * Get localspace
-   * @return localspace
+   * Get stations
+   * @return stations
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AddEvent201ResponseDataEventLocalspace getLocalspace() {
-    return localspace;
+  public List<ObjectMomenttensorTdmtStationsInner> getStations() {
+    return stations;
   }
 
 
-  public void setLocalspace(AddEvent201ResponseDataEventLocalspace localspace) {
-    this.localspace = localspace;
+  public void setStations(List<ObjectMomenttensorTdmtStationsInner> stations) {
+    this.stations = stations;
   }
 
 
@@ -143,24 +166,26 @@ public class ObjectMomenttensorPostOutputMomenttensor {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectMomenttensorPostOutputMomenttensor objectMomenttensorPostOutputMomenttensor = (ObjectMomenttensorPostOutputMomenttensor) o;
-    return Objects.equals(this.id, objectMomenttensorPostOutputMomenttensor.id) &&
-        Objects.equals(this.idLocalspace, objectMomenttensorPostOutputMomenttensor.idLocalspace) &&
-        Objects.equals(this.localspace, objectMomenttensorPostOutputMomenttensor.localspace);
+    ObjectMomenttensorTdmt objectMomenttensorTdmt = (ObjectMomenttensorTdmt) o;
+    return Objects.equals(this.id, objectMomenttensorTdmt.id) &&
+        Objects.equals(this.modified, objectMomenttensorTdmt.modified) &&
+        Objects.equals(this.inserted, objectMomenttensorTdmt.inserted) &&
+        Objects.equals(this.stations, objectMomenttensorTdmt.stations);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idLocalspace, localspace);
+    return Objects.hash(id, modified, inserted, stations);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectMomenttensorPostOutputMomenttensor {\n");
+    sb.append("class ObjectMomenttensorTdmt {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    idLocalspace: ").append(toIndentedString(idLocalspace)).append("\n");
-    sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
+    sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
+    sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
+    sb.append("    stations: ").append(toIndentedString(stations)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -184,8 +209,9 @@ public class ObjectMomenttensorPostOutputMomenttensor {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
-    openapiFields.add("id_localspace");
-    openapiFields.add("localspace");
+    openapiFields.add("modified");
+    openapiFields.add("inserted");
+    openapiFields.add("stations");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -195,27 +221,35 @@ public class ObjectMomenttensorPostOutputMomenttensor {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectMomenttensorPostOutputMomenttensor
+  * @throws IOException if the JSON Object is invalid with respect to ObjectMomenttensorTdmt
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectMomenttensorPostOutputMomenttensor.openapiRequiredFields.isEmpty()) {
+        if (ObjectMomenttensorTdmt.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMomenttensorPostOutputMomenttensor is not found in the empty JSON string", ObjectMomenttensorPostOutputMomenttensor.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMomenttensorTdmt is not found in the empty JSON string", ObjectMomenttensorTdmt.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!ObjectMomenttensorPostOutputMomenttensor.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectMomenttensorPostOutputMomenttensor` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!ObjectMomenttensorTdmt.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectMomenttensorTdmt` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      // validate the optional field `localspace`
-      if (jsonObj.getAsJsonObject("localspace") != null) {
-        AddEvent201ResponseDataEventLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+      JsonArray jsonArraystations = jsonObj.getAsJsonArray("stations");
+      if (jsonArraystations != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("stations").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `stations` to be an array in the JSON string but got `%s`", jsonObj.get("stations").toString()));
+        }
+
+        // validate the optional field `stations` (array)
+        for (int i = 0; i < jsonArraystations.size(); i++) {
+          ObjectMomenttensorTdmtStationsInner.validateJsonObject(jsonArraystations.get(i).getAsJsonObject());
+        };
       }
   }
 
@@ -223,22 +257,22 @@ public class ObjectMomenttensorPostOutputMomenttensor {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectMomenttensorPostOutputMomenttensor.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectMomenttensorPostOutputMomenttensor' and its subtypes
+       if (!ObjectMomenttensorTdmt.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectMomenttensorTdmt' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectMomenttensorPostOutputMomenttensor> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectMomenttensorPostOutputMomenttensor.class));
+       final TypeAdapter<ObjectMomenttensorTdmt> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectMomenttensorTdmt.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectMomenttensorPostOutputMomenttensor>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectMomenttensorTdmt>() {
            @Override
-           public void write(JsonWriter out, ObjectMomenttensorPostOutputMomenttensor value) throws IOException {
+           public void write(JsonWriter out, ObjectMomenttensorTdmt value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ObjectMomenttensorPostOutputMomenttensor read(JsonReader in) throws IOException {
+           public ObjectMomenttensorTdmt read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -249,18 +283,18 @@ public class ObjectMomenttensorPostOutputMomenttensor {
   }
 
  /**
-  * Create an instance of ObjectMomenttensorPostOutputMomenttensor given an JSON string
+  * Create an instance of ObjectMomenttensorTdmt given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectMomenttensorPostOutputMomenttensor
-  * @throws IOException if the JSON string is invalid with respect to ObjectMomenttensorPostOutputMomenttensor
+  * @return An instance of ObjectMomenttensorTdmt
+  * @throws IOException if the JSON string is invalid with respect to ObjectMomenttensorTdmt
   */
-  public static ObjectMomenttensorPostOutputMomenttensor fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectMomenttensorPostOutputMomenttensor.class);
+  public static ObjectMomenttensorTdmt fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectMomenttensorTdmt.class);
   }
 
  /**
-  * Convert an instance of ObjectMomenttensorPostOutputMomenttensor to an JSON string
+  * Convert an instance of ObjectMomenttensorTdmt to an JSON string
   *
   * @return JSON string
   */

@@ -21,110 +21,87 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectProvenance
+ * Model tests for ObjectMomenttensorTdmtStationsInner
  */
-public class ObjectProvenanceTest {
-    private final ObjectProvenance model = new ObjectProvenance();
+public class ObjectMomenttensorTdmtStationsInnerTest {
+    private final ObjectMomenttensorTdmtStationsInner model = new ObjectMomenttensorTdmtStationsInner();
 
     /**
-     * Model tests for ObjectProvenance
+     * Model tests for ObjectMomenttensorTdmtStationsInner
      */
     @Test
-    public void testObjectProvenance() {
-        // TODO: test ObjectProvenance
+    public void testObjectMomenttensorTdmtStationsInner() {
+        // TODO: test ObjectMomenttensorTdmtStationsInner
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'sta'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void staTest() {
+        // TODO: test sta
     }
 
     /**
-     * Test the property 'softwarename'
+     * Test the property 'r'
      */
     @Test
-    public void softwarenameTest() {
-        // TODO: test softwarename
+    public void rTest() {
+        // TODO: test r
     }
 
     /**
-     * Test the property 'version'
+     * Test the property 'azi'
      */
     @Test
-    public void versionTest() {
-        // TODO: test version
+    public void aziTest() {
+        // TODO: test azi
     }
 
     /**
-     * Test the property 'model'
+     * Test the property 'w'
      */
     @Test
-    public void modelTest() {
-        // TODO: test model
+    public void wTest() {
+        // TODO: test w
     }
 
     /**
-     * Test the property 'method'
+     * Test the property 'vr'
      */
     @Test
-    public void methodTest() {
-        // TODO: test method
+    public void vrTest() {
+        // TODO: test vr
     }
 
     /**
-     * Test the property 'parameters'
+     * Test the property 'zcor'
      */
     @Test
-    public void parametersTest() {
-        // TODO: test parameters
+    public void zcorTest() {
+        // TODO: test zcor
     }
 
     /**
-     * Test the property 'program'
+     * Test the property 'modified'
      */
     @Test
-    public void programTest() {
-        // TODO: test program
+    public void modifiedTest() {
+        // TODO: test modified
     }
 
     /**
-     * Test the property 'username'
+     * Test the property 'inserted'
      */
     @Test
-    public void usernameTest() {
-        // TODO: test username
-    }
-
-    /**
-     * Test the property 'hostname'
-     */
-    @Test
-    public void hostnameTest() {
-        // TODO: test hostname
-    }
-
-    /**
-     * Test the property 'description'
-     */
-    @Test
-    public void descriptionTest() {
-        // TODO: test description
-    }
-
-    /**
-     * Test the property 'priority'
-     */
-    @Test
-    public void priorityTest() {
-        // TODO: test priority
+    public void insertedTest() {
+        // TODO: test inserted
     }
 
 }

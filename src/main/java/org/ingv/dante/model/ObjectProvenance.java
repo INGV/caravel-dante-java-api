@@ -47,12 +47,8 @@ import org.ingv.dante.JSON;
 /**
  * ObjectProvenance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T15:51:37.818934Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T12:22:56.738620Z[Etc/UTC]")
 public class ObjectProvenance {
-  public static final String SERIALIZED_NAME_FORMER_ID = "former_id";
-  @SerializedName(SERIALIZED_NAME_FORMER_ID)
-  private Long formerId = 0l;
-
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name = "INGV";
@@ -99,29 +95,6 @@ public class ObjectProvenance {
 
   public ObjectProvenance() { 
   }
-
-  public ObjectProvenance formerId(Long formerId) {
-    
-    this.formerId = formerId;
-    return this;
-  }
-
-   /**
-   * ToDo | int(8)
-   * @return formerId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "ToDo | int(8)")
-
-  public Long getFormerId() {
-    return formerId;
-  }
-
-
-  public void setFormerId(Long formerId) {
-    this.formerId = formerId;
-  }
-
 
   public ObjectProvenance name(String name) {
     
@@ -386,8 +359,7 @@ public class ObjectProvenance {
       return false;
     }
     ObjectProvenance objectProvenance = (ObjectProvenance) o;
-    return Objects.equals(this.formerId, objectProvenance.formerId) &&
-        Objects.equals(this.name, objectProvenance.name) &&
+    return Objects.equals(this.name, objectProvenance.name) &&
         Objects.equals(this.softwarename, objectProvenance.softwarename) &&
         Objects.equals(this.version, objectProvenance.version) &&
         Objects.equals(this.model, objectProvenance.model) &&
@@ -402,14 +374,13 @@ public class ObjectProvenance {
 
   @Override
   public int hashCode() {
-    return Objects.hash(formerId, name, softwarename, version, model, method, parameters, program, username, hostname, description, priority);
+    return Objects.hash(name, softwarename, version, model, method, parameters, program, username, hostname, description, priority);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ObjectProvenance {\n");
-    sb.append("    formerId: ").append(toIndentedString(formerId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    softwarename: ").append(toIndentedString(softwarename)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
@@ -443,7 +414,6 @@ public class ObjectProvenance {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("former_id");
     openapiFields.add("name");
     openapiFields.add("softwarename");
     openapiFields.add("version");

@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginForOriginsEventsAndEventsPref
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-14T15:51:37.818934Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T12:22:56.738620Z[Etc/UTC]")
 public class ObjectOriginForOriginsEventsAndEventsPref {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -103,6 +103,22 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   public static final String SERIALIZED_NAME_QUALITY = "quality";
   @SerializedName(SERIALIZED_NAME_QUALITY)
   private String quality;
+
+  public static final String SERIALIZED_NAME_ASSOCIATED_PHASE_COUNT = "associatedPhaseCount";
+  @SerializedName(SERIALIZED_NAME_ASSOCIATED_PHASE_COUNT)
+  private Long associatedPhaseCount;
+
+  public static final String SERIALIZED_NAME_ASSOCIATED_STATION_COUNT = "associatedStationCount";
+  @SerializedName(SERIALIZED_NAME_ASSOCIATED_STATION_COUNT)
+  private Long associatedStationCount;
+
+  public static final String SERIALIZED_NAME_USED_PHASE_COUNT = "usedPhaseCount";
+  @SerializedName(SERIALIZED_NAME_USED_PHASE_COUNT)
+  private Long usedPhaseCount;
+
+  public static final String SERIALIZED_NAME_USED_STATION_COUNT = "usedStationCount";
+  @SerializedName(SERIALIZED_NAME_USED_STATION_COUNT)
+  private Long usedStationCount;
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
@@ -440,6 +456,98 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
+  public ObjectOriginForOriginsEventsAndEventsPref associatedPhaseCount(Long associatedPhaseCount) {
+    
+    this.associatedPhaseCount = associatedPhaseCount;
+    return this;
+  }
+
+   /**
+   * Number of associated phases, regardless of their use for origin computation | int(8)&#39;
+   * @return associatedPhaseCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of associated phases, regardless of their use for origin computation | int(8)'")
+
+  public Long getAssociatedPhaseCount() {
+    return associatedPhaseCount;
+  }
+
+
+  public void setAssociatedPhaseCount(Long associatedPhaseCount) {
+    this.associatedPhaseCount = associatedPhaseCount;
+  }
+
+
+  public ObjectOriginForOriginsEventsAndEventsPref associatedStationCount(Long associatedStationCount) {
+    
+    this.associatedStationCount = associatedStationCount;
+    return this;
+  }
+
+   /**
+   * Number of stations at which the event was observed | int(8)&#39;
+   * @return associatedStationCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of stations at which the event was observed | int(8)'")
+
+  public Long getAssociatedStationCount() {
+    return associatedStationCount;
+  }
+
+
+  public void setAssociatedStationCount(Long associatedStationCount) {
+    this.associatedStationCount = associatedStationCount;
+  }
+
+
+  public ObjectOriginForOriginsEventsAndEventsPref usedPhaseCount(Long usedPhaseCount) {
+    
+    this.usedPhaseCount = usedPhaseCount;
+    return this;
+  }
+
+   /**
+   * Number of defining phases, i.e., phase observations that were actually used for computing the origin | int(8)&#39;
+   * @return usedPhaseCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of defining phases, i.e., phase observations that were actually used for computing the origin | int(8)'")
+
+  public Long getUsedPhaseCount() {
+    return usedPhaseCount;
+  }
+
+
+  public void setUsedPhaseCount(Long usedPhaseCount) {
+    this.usedPhaseCount = usedPhaseCount;
+  }
+
+
+  public ObjectOriginForOriginsEventsAndEventsPref usedStationCount(Long usedStationCount) {
+    
+    this.usedStationCount = usedStationCount;
+    return this;
+  }
+
+   /**
+   * Number of stations from which data was used for origin computation | int(8)&#39;
+   * @return usedStationCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of stations from which data was used for origin computation | int(8)'")
+
+  public Long getUsedStationCount() {
+    return usedStationCount;
+  }
+
+
+  public void setUsedStationCount(Long usedStationCount) {
+    this.usedStationCount = usedStationCount;
+  }
+
+
   public ObjectOriginForOriginsEventsAndEventsPref region(String region) {
     
     this.region = region;
@@ -560,6 +668,10 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
         Objects.equals(this.errLat, objectOriginForOriginsEventsAndEventsPref.errLat) &&
         Objects.equals(this.errLon, objectOriginForOriginsEventsAndEventsPref.errLon) &&
         Objects.equals(this.quality, objectOriginForOriginsEventsAndEventsPref.quality) &&
+        Objects.equals(this.associatedPhaseCount, objectOriginForOriginsEventsAndEventsPref.associatedPhaseCount) &&
+        Objects.equals(this.associatedStationCount, objectOriginForOriginsEventsAndEventsPref.associatedStationCount) &&
+        Objects.equals(this.usedPhaseCount, objectOriginForOriginsEventsAndEventsPref.usedPhaseCount) &&
+        Objects.equals(this.usedStationCount, objectOriginForOriginsEventsAndEventsPref.usedStationCount) &&
         Objects.equals(this.region, objectOriginForOriginsEventsAndEventsPref.region) &&
         Objects.equals(this.modified, objectOriginForOriginsEventsAndEventsPref.modified) &&
         Objects.equals(this.inserted, objectOriginForOriginsEventsAndEventsPref.inserted) &&
@@ -569,7 +681,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idLocalspace, localspace, ot, lat, lon, depth, errOt, errH, errZ, errLat, errLon, quality, region, modified, inserted, typeOrigin, provenance);
+    return Objects.hash(id, idLocalspace, localspace, ot, lat, lon, depth, errOt, errH, errZ, errLat, errLon, quality, associatedPhaseCount, associatedStationCount, usedPhaseCount, usedStationCount, region, modified, inserted, typeOrigin, provenance);
   }
 
   @Override
@@ -589,6 +701,10 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
     sb.append("    errLat: ").append(toIndentedString(errLat)).append("\n");
     sb.append("    errLon: ").append(toIndentedString(errLon)).append("\n");
     sb.append("    quality: ").append(toIndentedString(quality)).append("\n");
+    sb.append("    associatedPhaseCount: ").append(toIndentedString(associatedPhaseCount)).append("\n");
+    sb.append("    associatedStationCount: ").append(toIndentedString(associatedStationCount)).append("\n");
+    sb.append("    usedPhaseCount: ").append(toIndentedString(usedPhaseCount)).append("\n");
+    sb.append("    usedStationCount: ").append(toIndentedString(usedStationCount)).append("\n");
     sb.append("    region: ").append(toIndentedString(region)).append("\n");
     sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
@@ -629,6 +745,10 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
     openapiFields.add("err_lat");
     openapiFields.add("err_lon");
     openapiFields.add("quality");
+    openapiFields.add("associatedPhaseCount");
+    openapiFields.add("associatedStationCount");
+    openapiFields.add("usedPhaseCount");
+    openapiFields.add("usedStationCount");
     openapiFields.add("region");
     openapiFields.add("modified");
     openapiFields.add("inserted");

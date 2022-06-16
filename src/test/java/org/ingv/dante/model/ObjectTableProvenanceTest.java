@@ -49,14 +49,6 @@ public class ObjectTableProvenanceTest {
     }
 
     /**
-     * Test the property 'formerId'
-     */
-    @Test
-    public void formerIdTest() {
-        // TODO: test formerId
-    }
-
-    /**
      * Test the property 'name'
      */
     @Test

@@ -147,6 +147,38 @@ public class ObjectOriginForOriginsEventsAndEventsPrefTest {
     }
 
     /**
+     * Test the property 'associatedPhaseCount'
+     */
+    @Test
+    public void associatedPhaseCountTest() {
+        // TODO: test associatedPhaseCount
+    }
+
+    /**
+     * Test the property 'associatedStationCount'
+     */
+    @Test
+    public void associatedStationCountTest() {
+        // TODO: test associatedStationCount
+    }
+
+    /**
+     * Test the property 'usedPhaseCount'
+     */
+    @Test
+    public void usedPhaseCountTest() {
+        // TODO: test usedPhaseCount
+    }
+
+    /**
+     * Test the property 'usedStationCount'
+     */
+    @Test
+    public void usedStationCountTest() {
+        // TODO: test usedStationCount
+    }
+
+    /**
      * Test the property 'region'
      */
     @Test

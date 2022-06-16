@@ -7,7 +7,6 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**formerId** | **Long** | ToDo | int(8) |  [optional] |
 |**name** | **String** | Name of Provenance. i.e. INGV, ETH, USGS | varchar(255) |  |
 |**softwarename** | **String** | Software name. i.e. SisPick, eqassemble, hypoinverse | char(255) |  [optional] |
 |**version** | **String** | Version name | varchar(255) |  [optional] |
