@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.46.0-dev
-  - Build date: 2022-06-16T14:17:54.270445Z[Etc/UTC]
+  - Build date: 2022-06-20T14:25:15.529346Z[Etc/UTC]
 
   
 
@@ -272,6 +272,7 @@ Class | Method | HTTP request | Description
  - [ObjectMomenttensor](docs/ObjectMomenttensor.md)
  - [ObjectMomenttensorPostOutput](docs/ObjectMomenttensorPostOutput.md)
  - [ObjectMomenttensorPostOutputMomenttensor](docs/ObjectMomenttensorPostOutputMomenttensor.md)
+ - [ObjectMomenttensorRcmt](docs/ObjectMomenttensorRcmt.md)
  - [ObjectMomenttensorTdmt](docs/ObjectMomenttensorTdmt.md)
  - [ObjectMomenttensorTdmtStationsInner](docs/ObjectMomenttensorTdmtStationsInner.md)
  - [ObjectOrigin](docs/ObjectOrigin.md)

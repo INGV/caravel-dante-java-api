@@ -23,6 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
+import org.ingv.dante.model.ObjectMomenttensorRcmt;
 import org.ingv.dante.model.ObjectMomenttensorTdmt;
 import org.ingv.dante.model.ObjectProvenance;
 import org.junit.jupiter.api.Disabled;
@@ -209,6 +210,14 @@ public class ObjectMomenttensorTest {
     @Test
     public void tdmtTest() {
         // TODO: test tdmt
+    }
+
+    /**
+     * Test the property 'rcmt'
+     */
+    @Test
+    public void rcmtTest() {
+        // TODO: test rcmt
     }
 
 }

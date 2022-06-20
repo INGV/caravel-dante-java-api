@@ -11,47 +11,57 @@
  */
 
 
-package org.ingv.dante;
+package org.ingv.dante.model;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T14:25:15.529346Z[Etc/UTC]")
-public class Pair {
-    private String name = "";
-    private String value = "";
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-    public Pair (String name, String value) {
-        setName(name);
-        setValue(value);
+
+/**
+ * Model tests for ObjectMomenttensorRcmt
+ */
+public class ObjectMomenttensorRcmtTest {
+    private final ObjectMomenttensorRcmt model = new ObjectMomenttensorRcmt();
+
+    /**
+     * Model tests for ObjectMomenttensorRcmt
+     */
+    @Test
+    public void testObjectMomenttensorRcmt() {
+        // TODO: test ObjectMomenttensorRcmt
     }
 
-    private void setName(String name) {
-        if (!isValidString(name)) {
-            return;
-        }
-
-        this.name = name;
+    /**
+     * Test the property 'region'
+     */
+    @Test
+    public void regionTest() {
+        // TODO: test region
     }
 
-    private void setValue(String value) {
-        if (!isValidString(value)) {
-            return;
-        }
-
-        this.value = value;
+    /**
+     * Test the property 'modified'
+     */
+    @Test
+    public void modifiedTest() {
+        // TODO: test modified
     }
 
-    public String getName() {
-        return this.name;
+    /**
+     * Test the property 'inserted'
+     */
+    @Test
+    public void insertedTest() {
+        // TODO: test inserted
     }
 
-    public String getValue() {
-        return this.value;
-    }
-
-    private boolean isValidString(String arg) {
-        if (arg == null) {
-            return false;
-        }
-
-        return true;
-    }
 }

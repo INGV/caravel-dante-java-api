@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStationmagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T14:17:54.270445Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T14:25:15.529346Z[Etc/UTC]")
 public class ObjectStationmagnitude {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -68,6 +68,14 @@ public class ObjectStationmagnitude {
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
   private String loc = "--";
+
+  public static final String SERIALIZED_NAME_CATEGORY = "category";
+  @SerializedName(SERIALIZED_NAME_CATEGORY)
+  private String category;
+
+  public static final String SERIALIZED_NAME_TIMEWINDOW_REFERENCE = "timewindow_reference";
+  @SerializedName(SERIALIZED_NAME_TIMEWINDOW_REFERENCE)
+  private OffsetDateTime timewindowReference;
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -265,6 +273,52 @@ public class ObjectStationmagnitude {
 
   public void setLoc(String loc) {
     this.loc = loc;
+  }
+
+
+  public ObjectStationmagnitude category(String category) {
+    
+    this.category = category;
+    return this;
+  }
+
+   /**
+   * The way the waveform trace is evaluated to derive an amplitude value.
+   * @return category
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "Other", value = "The way the waveform trace is evaluated to derive an amplitude value.")
+
+  public String getCategory() {
+    return category;
+  }
+
+
+  public void setCategory(String category) {
+    this.category = category;
+  }
+
+
+  public ObjectStationmagnitude timewindowReference(OffsetDateTime timewindowReference) {
+    
+    this.timewindowReference = timewindowReference;
+    return this;
+  }
+
+   /**
+   * Describes a time window for amplitude measurements, given by a central point in time
+   * @return timewindowReference
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Describes a time window for amplitude measurements, given by a central point in time")
+
+  public OffsetDateTime getTimewindowReference() {
+    return timewindowReference;
+  }
+
+
+  public void setTimewindowReference(OffsetDateTime timewindowReference) {
+    this.timewindowReference = timewindowReference;
   }
 
 
@@ -784,6 +838,8 @@ public class ObjectStationmagnitude {
         Objects.equals(this.sta, objectStationmagnitude.sta) &&
         Objects.equals(this.cha, objectStationmagnitude.cha) &&
         Objects.equals(this.loc, objectStationmagnitude.loc) &&
+        Objects.equals(this.category, objectStationmagnitude.category) &&
+        Objects.equals(this.timewindowReference, objectStationmagnitude.timewindowReference) &&
         Objects.equals(this.id, objectStationmagnitude.id) &&
         Objects.equals(this.modified, objectStationmagnitude.modified) &&
         Objects.equals(this.inserted, objectStationmagnitude.inserted) &&
@@ -811,7 +867,7 @@ public class ObjectStationmagnitude {
 
   @Override
   public int hashCode() {
-    return Objects.hash(net, sta, cha, loc, id, modified, inserted, idLocalspace, pickId, time1, amp1, period, time2, amp2, revised, typeAmplitude, epDistance, origDistance, azimut, mag, errMag, weight, magCorrection, isUsed, typeMagnitude, localspace, provenance);
+    return Objects.hash(net, sta, cha, loc, category, timewindowReference, id, modified, inserted, idLocalspace, pickId, time1, amp1, period, time2, amp2, revised, typeAmplitude, epDistance, origDistance, azimut, mag, errMag, weight, magCorrection, isUsed, typeMagnitude, localspace, provenance);
   }
 
   @Override
@@ -822,6 +878,8 @@ public class ObjectStationmagnitude {
     sb.append("    sta: ").append(toIndentedString(sta)).append("\n");
     sb.append("    cha: ").append(toIndentedString(cha)).append("\n");
     sb.append("    loc: ").append(toIndentedString(loc)).append("\n");
+    sb.append("    category: ").append(toIndentedString(category)).append("\n");
+    sb.append("    timewindowReference: ").append(toIndentedString(timewindowReference)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
@@ -871,6 +929,8 @@ public class ObjectStationmagnitude {
     openapiFields.add("sta");
     openapiFields.add("cha");
     openapiFields.add("loc");
+    openapiFields.add("category");
+    openapiFields.add("timewindow_reference");
     openapiFields.add("id");
     openapiFields.add("modified");
     openapiFields.add("inserted");
@@ -941,6 +1001,9 @@ public class ObjectStationmagnitude {
       }
       if (jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
+      }
+      if (jsonObj.get("category") != null && !jsonObj.get("category").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
       }
       // validate the optional field `type_amplitude`
       if (jsonObj.getAsJsonObject("type_amplitude") != null) {

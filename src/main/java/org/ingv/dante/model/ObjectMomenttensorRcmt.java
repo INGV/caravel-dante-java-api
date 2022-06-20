@@ -23,9 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import org.ingv.dante.model.ObjectStrongmotion;
+import java.time.OffsetDateTime;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,73 +46,84 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * AddStrongmotionRequestData
+ * ObjectMomenttensorRcmt
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T14:25:15.529346Z[Etc/UTC]")
-public class AddStrongmotionRequestData {
-  public static final String SERIALIZED_NAME_EVENTID = "eventid";
-  @SerializedName(SERIALIZED_NAME_EVENTID)
-  private Long eventid;
+public class ObjectMomenttensorRcmt {
+  public static final String SERIALIZED_NAME_REGION = "region";
+  @SerializedName(SERIALIZED_NAME_REGION)
+  private String region;
 
-  public static final String SERIALIZED_NAME_STRONGMOTIONS = "strongmotions";
-  @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
-  private List<ObjectStrongmotion> strongmotions = null;
+  public static final String SERIALIZED_NAME_MODIFIED = "modified";
+  @SerializedName(SERIALIZED_NAME_MODIFIED)
+  private OffsetDateTime modified;
 
-  public AddStrongmotionRequestData() { 
+  public static final String SERIALIZED_NAME_INSERTED = "inserted";
+  @SerializedName(SERIALIZED_NAME_INSERTED)
+  private OffsetDateTime inserted;
+
+  public ObjectMomenttensorRcmt() { 
   }
 
-  public AddStrongmotionRequestData eventid(Long eventid) {
+  
+  public ObjectMomenttensorRcmt(
+     OffsetDateTime modified, 
+     OffsetDateTime inserted
+  ) {
+    this();
+    this.modified = modified;
+    this.inserted = inserted;
+  }
+
+  public ObjectMomenttensorRcmt region(String region) {
     
-    this.eventid = eventid;
+    this.region = region;
     return this;
   }
 
    /**
-   * Unique incremental id | bigint(20)
-   * @return eventid
+   * Event location remark region | varchar(255)
+   * @return region
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+  @ApiModelProperty(example = "Norcia", value = "Event location remark region | varchar(255)")
 
-  public Long getEventid() {
-    return eventid;
+  public String getRegion() {
+    return region;
   }
 
 
-  public void setEventid(Long eventid) {
-    this.eventid = eventid;
+  public void setRegion(String region) {
+    this.region = region;
   }
 
-
-  public AddStrongmotionRequestData strongmotions(List<ObjectStrongmotion> strongmotions) {
-    
-    this.strongmotions = strongmotions;
-    return this;
-  }
-
-  public AddStrongmotionRequestData addStrongmotionsItem(ObjectStrongmotion strongmotionsItem) {
-    if (this.strongmotions == null) {
-      this.strongmotions = new ArrayList<>();
-    }
-    this.strongmotions.add(strongmotionsItem);
-    return this;
-  }
 
    /**
-   * Get strongmotions
-   * @return strongmotions
+   * Last Review | timestamp
+   * @return modified
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
 
-  public List<ObjectStrongmotion> getStrongmotions() {
-    return strongmotions;
+  public OffsetDateTime getModified() {
+    return modified;
   }
 
 
-  public void setStrongmotions(List<ObjectStrongmotion> strongmotions) {
-    this.strongmotions = strongmotions;
+
+
+   /**
+   * Insert time | timestamp
+   * @return inserted
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
+  public OffsetDateTime getInserted() {
+    return inserted;
   }
+
+
 
 
 
@@ -126,22 +135,24 @@ public class AddStrongmotionRequestData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AddStrongmotionRequestData addStrongmotionRequestData = (AddStrongmotionRequestData) o;
-    return Objects.equals(this.eventid, addStrongmotionRequestData.eventid) &&
-        Objects.equals(this.strongmotions, addStrongmotionRequestData.strongmotions);
+    ObjectMomenttensorRcmt objectMomenttensorRcmt = (ObjectMomenttensorRcmt) o;
+    return Objects.equals(this.region, objectMomenttensorRcmt.region) &&
+        Objects.equals(this.modified, objectMomenttensorRcmt.modified) &&
+        Objects.equals(this.inserted, objectMomenttensorRcmt.inserted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventid, strongmotions);
+    return Objects.hash(region, modified, inserted);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AddStrongmotionRequestData {\n");
-    sb.append("    eventid: ").append(toIndentedString(eventid)).append("\n");
-    sb.append("    strongmotions: ").append(toIndentedString(strongmotions)).append("\n");
+    sb.append("class ObjectMomenttensorRcmt {\n");
+    sb.append("    region: ").append(toIndentedString(region)).append("\n");
+    sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
+    sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -164,8 +175,9 @@ public class AddStrongmotionRequestData {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("eventid");
-    openapiFields.add("strongmotions");
+    openapiFields.add("region");
+    openapiFields.add("modified");
+    openapiFields.add("inserted");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -175,35 +187,26 @@ public class AddStrongmotionRequestData {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddStrongmotionRequestData
+  * @throws IOException if the JSON Object is invalid with respect to ObjectMomenttensorRcmt
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (AddStrongmotionRequestData.openapiRequiredFields.isEmpty()) {
+        if (ObjectMomenttensorRcmt.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AddStrongmotionRequestData is not found in the empty JSON string", AddStrongmotionRequestData.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMomenttensorRcmt is not found in the empty JSON string", ObjectMomenttensorRcmt.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!AddStrongmotionRequestData.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AddStrongmotionRequestData` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!ObjectMomenttensorRcmt.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectMomenttensorRcmt` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      JsonArray jsonArraystrongmotions = jsonObj.getAsJsonArray("strongmotions");
-      if (jsonArraystrongmotions != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("strongmotions").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `strongmotions` to be an array in the JSON string but got `%s`", jsonObj.get("strongmotions").toString()));
-        }
-
-        // validate the optional field `strongmotions` (array)
-        for (int i = 0; i < jsonArraystrongmotions.size(); i++) {
-          ObjectStrongmotion.validateJsonObject(jsonArraystrongmotions.get(i).getAsJsonObject());
-        };
+      if (jsonObj.get("region") != null && !jsonObj.get("region").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
       }
   }
 
@@ -211,22 +214,22 @@ public class AddStrongmotionRequestData {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!AddStrongmotionRequestData.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'AddStrongmotionRequestData' and its subtypes
+       if (!ObjectMomenttensorRcmt.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectMomenttensorRcmt' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<AddStrongmotionRequestData> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(AddStrongmotionRequestData.class));
+       final TypeAdapter<ObjectMomenttensorRcmt> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectMomenttensorRcmt.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<AddStrongmotionRequestData>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectMomenttensorRcmt>() {
            @Override
-           public void write(JsonWriter out, AddStrongmotionRequestData value) throws IOException {
+           public void write(JsonWriter out, ObjectMomenttensorRcmt value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public AddStrongmotionRequestData read(JsonReader in) throws IOException {
+           public ObjectMomenttensorRcmt read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -237,18 +240,18 @@ public class AddStrongmotionRequestData {
   }
 
  /**
-  * Create an instance of AddStrongmotionRequestData given an JSON string
+  * Create an instance of ObjectMomenttensorRcmt given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of AddStrongmotionRequestData
-  * @throws IOException if the JSON string is invalid with respect to AddStrongmotionRequestData
+  * @return An instance of ObjectMomenttensorRcmt
+  * @throws IOException if the JSON string is invalid with respect to ObjectMomenttensorRcmt
   */
-  public static AddStrongmotionRequestData fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, AddStrongmotionRequestData.class);
+  public static ObjectMomenttensorRcmt fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectMomenttensorRcmt.class);
   }
 
  /**
-  * Convert an instance of AddStrongmotionRequestData to an JSON string
+  * Convert an instance of ObjectMomenttensorRcmt to an JSON string
   *
   * @return JSON string
   */

@@ -25,6 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
+import org.ingv.dante.model.ObjectMomenttensorRcmt;
 import org.ingv.dante.model.ObjectMomenttensorTdmt;
 import org.ingv.dante.model.ObjectProvenance;
 
@@ -51,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T14:17:54.270445Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-20T14:25:15.529346Z[Etc/UTC]")
 public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -136,6 +137,10 @@ public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_TDMT = "tdmt";
   @SerializedName(SERIALIZED_NAME_TDMT)
   private ObjectMomenttensorTdmt tdmt;
+
+  public static final String SERIALIZED_NAME_RCMT = "rcmt";
+  @SerializedName(SERIALIZED_NAME_RCMT)
+  private ObjectMomenttensorRcmt rcmt;
 
   public ObjectMomenttensor() { 
   }
@@ -608,6 +613,29 @@ public class ObjectMomenttensor {
   }
 
 
+  public ObjectMomenttensor rcmt(ObjectMomenttensorRcmt rcmt) {
+    
+    this.rcmt = rcmt;
+    return this;
+  }
+
+   /**
+   * Get rcmt
+   * @return rcmt
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ObjectMomenttensorRcmt getRcmt() {
+    return rcmt;
+  }
+
+
+  public void setRcmt(ObjectMomenttensorRcmt rcmt) {
+    this.rcmt = rcmt;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -638,12 +666,13 @@ public class ObjectMomenttensor {
         Objects.equals(this.typeMomenttensor, objectMomenttensor.typeMomenttensor) &&
         Objects.equals(this.localspace, objectMomenttensor.localspace) &&
         Objects.equals(this.provenance, objectMomenttensor.provenance) &&
-        Objects.equals(this.tdmt, objectMomenttensor.tdmt);
+        Objects.equals(this.tdmt, objectMomenttensor.tdmt) &&
+        Objects.equals(this.rcmt, objectMomenttensor.rcmt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, idLocalspace, originidOut, magnitudeidOut, scalarmoment, mrr, mtt, mpp, mrt, mrp, mtp, clvd, iso, varianceReduction, doubleCouple, typeMomenttensor, localspace, provenance, tdmt);
+    return Objects.hash(id, modified, inserted, idLocalspace, originidOut, magnitudeidOut, scalarmoment, mrr, mtt, mpp, mrt, mrp, mtp, clvd, iso, varianceReduction, doubleCouple, typeMomenttensor, localspace, provenance, tdmt, rcmt);
   }
 
   @Override
@@ -671,6 +700,7 @@ public class ObjectMomenttensor {
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
     sb.append("    tdmt: ").append(toIndentedString(tdmt)).append("\n");
+    sb.append("    rcmt: ").append(toIndentedString(rcmt)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -714,6 +744,7 @@ public class ObjectMomenttensor {
     openapiFields.add("localspace");
     openapiFields.add("provenance");
     openapiFields.add("tdmt");
+    openapiFields.add("rcmt");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -751,6 +782,14 @@ public class ObjectMomenttensor {
       // validate the optional field `provenance`
       if (jsonObj.getAsJsonObject("provenance") != null) {
         ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+      }
+      // validate the optional field `tdmt`
+      if (jsonObj.getAsJsonObject("tdmt") != null) {
+        ObjectMomenttensorTdmt.validateJsonObject(jsonObj.getAsJsonObject("tdmt"));
+      }
+      // validate the optional field `rcmt`
+      if (jsonObj.getAsJsonObject("rcmt") != null) {
+        ObjectMomenttensorRcmt.validateJsonObject(jsonObj.getAsJsonObject("rcmt"));
       }
   }
 

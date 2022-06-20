@@ -27,7 +27,8 @@
 |**typeMomenttensor** | **String** | Type of Moment Tensor | varchar(50) |  [optional] |
 |**localspace** | [**ObjectLocalspace**](ObjectLocalspace.md) |  |  [optional] |
 |**provenance** | [**ObjectProvenance**](ObjectProvenance.md) |  |  [optional] |
-|**tdmt** | **ObjectMomenttensorTdmt** |  |  [optional] |
+|**tdmt** | [**ObjectMomenttensorTdmt**](ObjectMomenttensorTdmt.md) |  |  [optional] |
+|**rcmt** | [**ObjectMomenttensorRcmt**](ObjectMomenttensorRcmt.md) |  |  [optional] |
 
 
 

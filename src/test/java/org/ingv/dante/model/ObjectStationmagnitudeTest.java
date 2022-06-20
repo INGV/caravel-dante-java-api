@@ -76,6 +76,22 @@ public class ObjectStationmagnitudeTest {
     }
 
     /**
+     * Test the property 'category'
+     */
+    @Test
+    public void categoryTest() {
+        // TODO: test category
+    }
+
+    /**
+     * Test the property 'timewindowReference'
+     */
+    @Test
+    public void timewindowReferenceTest() {
+        // TODO: test timewindowReference
+    }
+
+    /**
      * Test the property 'id'
      */
     @Test
