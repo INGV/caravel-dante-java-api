@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * AddMomenttensorRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-21T14:24:20.225934Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-21T14:44:22.137808Z[Etc/UTC]")
 public class AddMomenttensorRequestData {
   public static final String SERIALIZED_NAME_FOCALMECHANISMID = "focalmechanismid";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMID)
