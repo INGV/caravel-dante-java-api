@@ -76,7 +76,7 @@ No authorization required
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **503** | Service Unavailable |  * Retry-After -  <br>  |
 | **500** | Internal Server Error |  -  |
-| **201** | record inserted |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
 <a name="addEwQuake2k"></a>
@@ -144,7 +144,7 @@ No authorization required
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **503** | Service Unavailable |  * Retry-After -  <br>  |
 | **500** | Internal Server Error |  -  |
-| **201** | record insertedd |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **201** | record insertedd |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
 <a name="addHEwMagnitude"></a>
@@ -212,7 +212,7 @@ No authorization required
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **503** | Service Unavailable |  * Retry-After -  <br>  |
 | **500** | Internal Server Error |  -  |
-| **201** | record inserted |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
 <a name="addHEwPickScnl"></a>
@@ -280,7 +280,7 @@ No authorization required
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **503** | Service Unavailable |  * Retry-After -  <br>  |
 | **500** | Internal Server Error |  -  |
-| **201** | record inserted |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
 <a name="addHEwStrongmotionii"></a>
@@ -348,6 +348,6 @@ No authorization required
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **503** | Service Unavailable |  * Retry-After -  <br>  |
 | **500** | Internal Server Error |  -  |
-| **201** | record inserted |  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 

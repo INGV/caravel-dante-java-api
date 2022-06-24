@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 2.45.0
-  - Build date: 2022-06-21T15:28:37.198131Z[Etc/UTC]
+- API version: 2.46.0
+  - Build date: 2022-06-24T07:36:58.258077Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>2.45.0</version>
+  <version>2.46.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.45.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.46.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-2.45.0.jar`
+* `target/java-openapi-generator-cli-dante-2.46.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -272,6 +272,9 @@ Class | Method | HTTP request | Description
  - [ObjectMomenttensor](docs/ObjectMomenttensor.md)
  - [ObjectMomenttensorPostOutput](docs/ObjectMomenttensorPostOutput.md)
  - [ObjectMomenttensorPostOutputMomenttensor](docs/ObjectMomenttensorPostOutputMomenttensor.md)
+ - [ObjectMomenttensorRcmt](docs/ObjectMomenttensorRcmt.md)
+ - [ObjectMomenttensorTdmt](docs/ObjectMomenttensorTdmt.md)
+ - [ObjectMomenttensorTdmtStationsInner](docs/ObjectMomenttensorTdmtStationsInner.md)
  - [ObjectOrigin](docs/ObjectOrigin.md)
  - [ObjectOriginFlag](docs/ObjectOriginFlag.md)
  - [ObjectOriginFlagPostOutput](docs/ObjectOriginFlagPostOutput.md)

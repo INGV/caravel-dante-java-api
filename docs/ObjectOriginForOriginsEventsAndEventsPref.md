@@ -20,6 +20,10 @@
 |**errLat** | **Double** | Latitude error | double |  [optional] |
 |**errLon** | **Double** | Longitude error | double |  [optional] |
 |**quality** | **String** | Quality of the localization | char(2) |  [optional] |
+|**associatedPhaseCount** | **Long** | Number of associated phases, regardless of their use for origin computation | int(8)&#39; |  [optional] |
+|**associatedStationCount** | **Long** | Number of stations at which the event was observed | int(8)&#39; |  [optional] |
+|**usedPhaseCount** | **Long** | Number of defining phases, i.e., phase observations that were actually used for computing the origin | int(8)&#39; |  [optional] |
+|**usedStationCount** | **Long** | Number of stations from which data was used for origin computation | int(8)&#39; |  [optional] |
 |**region** | **String** | Event location remark region | varchar(255) |  [optional] |
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
