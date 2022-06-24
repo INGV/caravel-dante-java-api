@@ -40,6 +40,14 @@ public class GetTokenRequestTest {
     }
 
     /**
+     * Test the property 'name'
+     */
+    @Test
+    public void nameTest() {
+        // TODO: test name
+    }
+
+    /**
      * Test the property 'email'
      */
     @Test

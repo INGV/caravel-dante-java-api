@@ -9539,6 +9539,8 @@ components:
       type: integer
     get_token_request:
       properties:
+        name:
+          type: string
         email:
           format: email
           type: string
