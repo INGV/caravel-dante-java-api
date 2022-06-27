@@ -54,6 +54,7 @@ build:
           cd .. &&
           cd test-java-api &&
           mvn clean install &&
+          cd target &&
           java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getRegionName -p 'lat=42&lon=12'"
 
     artifacts:
