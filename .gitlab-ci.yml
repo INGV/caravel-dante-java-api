@@ -49,9 +49,9 @@ build:
         - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd date-java && mvn clean install"
         - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l && ls -l target"
         - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l"
-        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "mvn clean install"
+        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd test-java-api && mvn clean install"
         - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l && ls -l target"
-        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven/test-java-api/target maven:3.3-jdk-8 java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getRegionName -p 'lat=42&lon=12'"
+        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd test-java-api/target && java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getRegionName -p 'lat=42&lon=12'"
 
 
 #        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "
