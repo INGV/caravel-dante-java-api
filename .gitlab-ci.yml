@@ -46,25 +46,25 @@ build:
         - apk add --no-cache bash vim git
         - cd .. 
         - git clone --recursive https://gitlab+deploy-token-122:5Qq-KEqyHKZ1ku5GYGBb@gitlab.rm.ingv.it/caravel/test-java-api.git 
-        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l"
-        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd dante-java && mvn clean install"
-        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l"
-        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd test-java-api && mvn clean install"
-        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l && ls -l target"
-        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd test-java-api/target && java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getRegionName -p 'lat=42&lon=12'"
 
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd dante-java && mvn clean install"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd test-java-api && mvn clean install"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l && ls -l target"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd test-java-api/target && java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getRegionName -p 'lat=42&lon=12'"
 
-#        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "
-#          ls -l &&
-#          pwd &&
-#          cd dante-java &&
-#          pwd &&
-#          mvn clean install &&
-#          cd .. &&
-#          cd test-java-api &&
-#          mvn clean install &&
-#          cd target &&
-#          java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getRegionName -p 'lat=42&lon=12'"
+        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "
+          ls -l &&
+          pwd &&
+          cd dante-java &&
+          pwd &&
+          mvn clean install &&
+          cd .. &&
+          cd test-java-api &&
+          mvn clean install &&
+          cd target &&
+          java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getRegionName -p 'lat=42&lon=12'"
 
     artifacts:
         when: always
