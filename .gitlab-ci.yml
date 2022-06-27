@@ -38,17 +38,6 @@ services:
 stages:
   - build
 
-before_script:   
-    # Print project name
-    - echo ${CI_PROJECT_NAME}
-    #
-    - date
-    - uname -a
-    # Update repo
-    - apk update
-    # Set HTTP PORT variable
-    - docker -v
-
 build:
     stage: build
 
@@ -57,6 +46,7 @@ build:
         - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn clean install
         - ls -l
         - ls -l $(pwd)/target
+        - pwd
     artifacts:
         when: always
         paths:
