@@ -1,0 +1,130 @@
+###image: docker:stable
+#image: docker:19.03.1
+image: docker:20.10.12
+
+# When using dind, it's wise to use the overlayfs driver for
+# improved performance.
+variables:
+    # WARNING: this script use secret variables
+    # $CI_QUAKEDB_DBNAME
+    # $CI_QUAKEDB_DBUSER
+    # $CI_QUAKEDB_PGSQL_RO_DBUSER
+    # $CI_QUAKEDB_PGSQL_RO_DBPASS
+    # $CI_QUAKEDB_PGSQL_RW_DBUSER
+    # $CI_QUAKEDB_PGSQL_RW_DBPASS
+    # $CI_QUAKEDB_DBHOST
+    # $CI_QUAKEDB_DBPORT
+    # $CI_QUAKEDB_DBTYPE
+    GIT_SUBMODULE_STRATEGY: normal
+    GIT_SUBMODULES: recursive
+    #CI_QUAKEDB_DBNAME_COMMIT_REF: ${CI_QUAKEDB_DBNAME}_${CI_COMMIT_REF_NAME}
+    # This is used to connect the docker-client intalled into 'php:latest' image, to docker daemon
+    DOCKER_HOST: tcp://docker:2375/
+    # https://gitlab.rm.ingv.it/help/ci/pipelines/settings.md
+    GIT_STRATEGY: clone
+    # BUG!!! - Remove this (DOCKER_TLS_CERTDIR: "") when solved!!! - https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_CERTDIR: ""
+    #DOCKER_DRIVER: overlay
+    OAS_BASEDIR: "public/api/0.0.3"
+    OAS_FILENAME: "openapi.yaml"
+    DOCKER_TLS_CERTDIR: ""
+
+services:
+    # Remeber to set 'privileged = true' into the runner 'config.toml' file (es on hgp5: /srv/gitlab-runner/config/config.toml)
+    #- docker:dind
+    #- docker:19.03.1-dind
+    - docker:20.10.12-dind
+    - command:["--registry-mirror", "https://mirror.gcr.io"]
+###image: docker:stable
+#image: docker:19.03.1
+image: docker:20.10.12
+
+# When using dind, it's wise to use the overlayfs driver for
+# improved performance.
+variables:
+    # WARNING: this script use secret variables
+    # $CI_QUAKEDB_DBNAME
+    # $CI_QUAKEDB_DBUSER
+    # $CI_QUAKEDB_PGSQL_RO_DBUSER
+    # $CI_QUAKEDB_PGSQL_RO_DBPASS
+    # $CI_QUAKEDB_PGSQL_RW_DBUSER
+    # $CI_QUAKEDB_PGSQL_RW_DBPASS
+    # $CI_QUAKEDB_DBHOST
+    # $CI_QUAKEDB_DBPORT
+    # $CI_QUAKEDB_DBTYPE
+    GIT_SUBMODULE_STRATEGY: normal
+    GIT_SUBMODULES: recursive
+    #CI_QUAKEDB_DBNAME_COMMIT_REF: ${CI_QUAKEDB_DBNAME}_${CI_COMMIT_REF_NAME}
+    # This is used to connect the docker-client intalled into 'php:latest' image, to docker daemon
+    DOCKER_HOST: tcp://docker:2375/
+    # https://gitlab.rm.ingv.it/help/ci/pipelines/settings.md
+    GIT_STRATEGY: clone
+    # BUG!!! - Remove this (DOCKER_TLS_CERTDIR: "") when solved!!! - https://gitlab.com/gitlab-org/gitlab-runner/issues/4501
+    DOCKER_TLS_CERTDIR: ""
+    #DOCKER_DRIVER: overlay
+    OAS_BASEDIR: "public/api/0.0.3"
+    OAS_FILENAME: "openapi.yaml"
+
+services:
+    # Remeber to set 'privileged = true' into the runner 'config.toml' file (es on hgp5: /srv/gitlab-runner/config/config.toml)
+    #- docker:dind
+    #- docker:19.03.1-dind
+    - docker:20.10.12-dind
+    - command:["--registry-mirror", "https://mirror.gcr.io"]
+
+stages:
+  - build
+
+build:
+    stage: build
+
+    script:
+        - apk update
+        - apk add --no-cache bash vim git
+        - cd ..
+        - git clone --recursive https://gitlab+deploy-token-122:5Qq-KEqyHKZ1ku5GYGBb@gitlab.rm.ingv.it/caravel/test-java-api.git
+
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd dante-java && mvn clean install"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l"
+".gitlab-ci.yml" 77L, 3184B
+
+stages:
+  - build
+
+build:
+    stage: build
+
+    script:
+        - apk update
+        - apk add --no-cache bash vim git
+        - cd ..
+        - git clone --recursive https://gitlab+deploy-token-122:5Qq-KEqyHKZ1ku5GYGBb@gitlab.rm.ingv.it/caravel/test-java-api.git
+
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd dante-java && mvn clean install"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd test-java-api && mvn clean install"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "pwd && ls -l && ls -l target"
+        #- docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "cd test-java-api/target && java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getRegionName -p 'lat=42&lon=12'"
+
+        - docker run --rm -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 bash -c "
+          ls -l &&
+          pwd &&
+          cd dante-java &&
+          pwd &&
+          mvn clean install &&
+          cd .. &&
+          cd test-java-api &&
+          mvn clean install &&
+          cd target &&
+          java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getRegionName -p 'lat=42&lon=12'"
+
+    artifacts:
+        when: always
+        paths:
+            - taget
+        expire_in: 1 day
+    only:
+      - main
+      - develop
