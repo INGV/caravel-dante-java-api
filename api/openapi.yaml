@@ -348,6 +348,13 @@ paths:
         schema:
           format: string
           type: string
+      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+        in: query
+        name: wherelocalspacenamein
+        required: false
+        schema:
+          format: string
+          type: string
       - description: Select order
         in: query
         name: orderby
@@ -361,6 +368,20 @@ paths:
           - magnitude_mag-asc
           - magnitude_mag-desc
           type: string
+      - description: Select events with same event_group_id.
+        in: query
+        name: event_group_id
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Localspace Id.
+        in: query
+        name: id_localspace
+        required: false
+        schema:
+          format: int64
+          type: integer
       - description: Limit the results to the specified number of events.
         in: query
         name: limit
@@ -848,6 +869,13 @@ paths:
           - magnitude_mag-asc
           - magnitude_mag-desc
           type: string
+      - description: Select events with same event_group_id.
+        in: query
+        name: event_group_id
+        required: false
+        schema:
+          format: int64
+          type: integer
       - description: Localspace Id.
         in: query
         name: id_localspace

@@ -207,7 +207,7 @@ No authorization required
 
 <a name="getEventsPref"></a>
 # **getEventsPref**
-> GetEventsPref200Response getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, orderby, limit)
+> GetEventsPref200Response getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -247,10 +247,13 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
     String orderby = "event_id-asc"; // String | Select order
+    Long eventGroupId = 56L; // Long | Select events with same event_group_id.
+    Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of events.
     try {
-      GetEventsPref200Response result = apiInstance.getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, orderby, limit);
+      GetEventsPref200Response result = apiInstance.getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEventsPref");
@@ -286,7 +289,10 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
+| **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of events. | [optional] |
 
 ### Return type
@@ -523,7 +529,7 @@ No authorization required
 
 <a name="getOrigins"></a>
 # **getOrigins**
-> GetEventsPref200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, idLocalspace, limit)
+> GetEventsPref200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit)
 
 This API returns all origins and magnitudes.
 
@@ -565,10 +571,11 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
     String orderby = "event_id-asc"; // String | Select order
+    Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of events.
     try {
-      GetEventsPref200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, idLocalspace, limit);
+      GetEventsPref200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOrigins");
@@ -606,6 +613,7 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of events. | [optional] |
 
