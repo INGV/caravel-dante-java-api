@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: http://terremoti.ingv.it/webservices_and_software
   title: Dante Web Services
-  version: 2.46.0
+  version: 2.47.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -348,6 +348,13 @@ paths:
         schema:
           format: string
           type: string
+      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+        in: query
+        name: wherelocalspacenamein
+        required: false
+        schema:
+          format: string
+          type: string
       - description: Select order
         in: query
         name: orderby
@@ -361,6 +368,20 @@ paths:
           - magnitude_mag-asc
           - magnitude_mag-desc
           type: string
+      - description: Select events with same event_group_id.
+        in: query
+        name: event_group_id
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Localspace Id.
+        in: query
+        name: id_localspace
+        required: false
+        schema:
+          format: int64
+          type: integer
       - description: Limit the results to the specified number of events.
         in: query
         name: limit
@@ -848,6 +869,13 @@ paths:
           - magnitude_mag-asc
           - magnitude_mag-desc
           type: string
+      - description: Select events with same event_group_id.
+        in: query
+        name: event_group_id
+        required: false
+        schema:
+          format: int64
+          type: integer
       - description: Localspace Id.
         in: query
         name: id_localspace
@@ -9539,6 +9567,8 @@ components:
       type: integer
     get_token_request:
       properties:
+        name:
+          type: string
         email:
           format: email
           type: string
