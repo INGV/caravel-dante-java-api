@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotionRsaInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-06T12:03:31.867345Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-06T12:50:20.730289Z[Etc/UTC]")
 public class ObjectStrongmotionRsaInner {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
