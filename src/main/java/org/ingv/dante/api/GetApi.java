@@ -275,7 +275,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -467,7 +467,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @return GetEventsPref200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -513,7 +513,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @return ApiResponse&lt;GetEventsPref200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -560,7 +560,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -608,7 +608,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -800,7 +800,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @return GetEventsPref200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -846,7 +846,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @return ApiResponse&lt;GetEventsPref200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -893,7 +893,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1427,7 +1427,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1619,7 +1619,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @return GetEventsPref200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1665,7 +1665,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @return ApiResponse&lt;GetEventsPref200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1712,7 +1712,7 @@ public class GetApi {
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
-     * @param limit Limit the results to the specified number of events. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

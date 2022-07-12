@@ -382,7 +382,7 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: Limit the results to the specified number of events.
+      - description: Limit the results to the specified number of records.
         in: query
         name: limit
         required: false
@@ -633,7 +633,7 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: Limit the results to the specified number of events.
+      - description: Limit the results to the specified number of records.
         in: query
         name: limit
         required: false
@@ -883,7 +883,7 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: Limit the results to the specified number of events.
+      - description: Limit the results to the specified number of records.
         in: query
         name: limit
         required: false

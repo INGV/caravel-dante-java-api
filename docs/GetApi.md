@@ -137,7 +137,7 @@ public class Example {
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
-    Integer limit = 56; // Integer | Limit the results to the specified number of events.
+    Integer limit = 56; // Integer | Limit the results to the specified number of records.
     try {
       GetEventsPref200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit);
       System.out.println(result);
@@ -179,7 +179,7 @@ public class Example {
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
-| **limit** | **Integer**| Limit the results to the specified number of events. | [optional] |
+| **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
 
 ### Return type
 
@@ -251,7 +251,7 @@ public class Example {
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
-    Integer limit = 56; // Integer | Limit the results to the specified number of events.
+    Integer limit = 56; // Integer | Limit the results to the specified number of records.
     try {
       GetEventsPref200Response result = apiInstance.getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit);
       System.out.println(result);
@@ -293,7 +293,7 @@ public class Example {
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
-| **limit** | **Integer**| Limit the results to the specified number of events. | [optional] |
+| **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
 
 ### Return type
 
@@ -573,7 +573,7 @@ public class Example {
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
-    Integer limit = 56; // Integer | Limit the results to the specified number of events.
+    Integer limit = 56; // Integer | Limit the results to the specified number of records.
     try {
       GetEventsPref200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit);
       System.out.println(result);
@@ -615,7 +615,7 @@ public class Example {
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
-| **limit** | **Integer**| Limit the results to the specified number of events. | [optional] |
+| **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
 
 ### Return type
 
