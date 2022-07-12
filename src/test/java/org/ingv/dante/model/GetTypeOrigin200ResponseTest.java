@@ -23,8 +23,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.GetTypeOrigin200ResponseAllOf;
-import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.MetaDefinitionLinksInner;
 import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.junit.jupiter.api.Disabled;

@@ -24,8 +24,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
-import org.ingv.dante.model.AddOrigin201ResponseDataOriginsInnerAllOf;
-import org.ingv.dante.model.ObjectMagnitudePostOutput;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
