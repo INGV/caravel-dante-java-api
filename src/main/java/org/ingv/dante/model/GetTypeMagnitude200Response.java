@@ -51,35 +51,23 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeMagnitude200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-12T09:17:57.050628Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-12T14:35:18.622509Z[Etc/UTC]")
 public class GetTypeMagnitude200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
-  private String currentPage;
-
-  public static final String SERIALIZED_NAME_FIRST_PAGE_URL = "first_page_url";
-  @SerializedName(SERIALIZED_NAME_FIRST_PAGE_URL)
-  private String firstPageUrl;
+  private Integer currentPage;
 
   public static final String SERIALIZED_NAME_FROM = "from";
   @SerializedName(SERIALIZED_NAME_FROM)
-  private String from;
+  private Integer from;
 
   public static final String SERIALIZED_NAME_LAST_PAGE = "last_page";
   @SerializedName(SERIALIZED_NAME_LAST_PAGE)
-  private String lastPage;
-
-  public static final String SERIALIZED_NAME_LAST_PAGE_URL = "last_page_url";
-  @SerializedName(SERIALIZED_NAME_LAST_PAGE_URL)
-  private String lastPageUrl;
+  private Integer lastPage;
 
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
   private List<MetaDefinitionLinksInner> links = null;
-
-  public static final String SERIALIZED_NAME_NEXT_PAGE_URL = "next_page_url";
-  @SerializedName(SERIALIZED_NAME_NEXT_PAGE_URL)
-  private String nextPageUrl;
 
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
@@ -87,19 +75,15 @@ public class GetTypeMagnitude200Response {
 
   public static final String SERIALIZED_NAME_PER_PAGE = "per_page";
   @SerializedName(SERIALIZED_NAME_PER_PAGE)
-  private String perPage;
-
-  public static final String SERIALIZED_NAME_PREV_PAGE_URL = "prev_page_url";
-  @SerializedName(SERIALIZED_NAME_PREV_PAGE_URL)
-  private String prevPageUrl;
+  private Integer perPage;
 
   public static final String SERIALIZED_NAME_TO = "to";
   @SerializedName(SERIALIZED_NAME_TO)
-  private String to;
+  private Integer to;
 
   public static final String SERIALIZED_NAME_TOTAL = "total";
   @SerializedName(SERIALIZED_NAME_TOTAL)
-  private String total;
+  private Integer total;
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -108,7 +92,7 @@ public class GetTypeMagnitude200Response {
   public GetTypeMagnitude200Response() { 
   }
 
-  public GetTypeMagnitude200Response currentPage(String currentPage) {
+  public GetTypeMagnitude200Response currentPage(Integer currentPage) {
     
     this.currentPage = currentPage;
     return this;
@@ -121,40 +105,17 @@ public class GetTypeMagnitude200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "2", value = "Current page.")
 
-  public String getCurrentPage() {
+  public Integer getCurrentPage() {
     return currentPage;
   }
 
 
-  public void setCurrentPage(String currentPage) {
+  public void setCurrentPage(Integer currentPage) {
     this.currentPage = currentPage;
   }
 
 
-  public GetTypeMagnitude200Response firstPageUrl(String firstPageUrl) {
-    
-    this.firstPageUrl = firstPageUrl;
-    return this;
-  }
-
-   /**
-   * URL base path.
-   * @return firstPageUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8087/page=1", value = "URL base path.")
-
-  public String getFirstPageUrl() {
-    return firstPageUrl;
-  }
-
-
-  public void setFirstPageUrl(String firstPageUrl) {
-    this.firstPageUrl = firstPageUrl;
-  }
-
-
-  public GetTypeMagnitude200Response from(String from) {
+  public GetTypeMagnitude200Response from(Integer from) {
     
     this.from = from;
     return this;
@@ -167,17 +128,17 @@ public class GetTypeMagnitude200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "1", value = "Showed record from.")
 
-  public String getFrom() {
+  public Integer getFrom() {
     return from;
   }
 
 
-  public void setFrom(String from) {
+  public void setFrom(Integer from) {
     this.from = from;
   }
 
 
-  public GetTypeMagnitude200Response lastPage(String lastPage) {
+  public GetTypeMagnitude200Response lastPage(Integer lastPage) {
     
     this.lastPage = lastPage;
     return this;
@@ -190,36 +151,13 @@ public class GetTypeMagnitude200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "3", value = "Last page.")
 
-  public String getLastPage() {
+  public Integer getLastPage() {
     return lastPage;
   }
 
 
-  public void setLastPage(String lastPage) {
+  public void setLastPage(Integer lastPage) {
     this.lastPage = lastPage;
-  }
-
-
-  public GetTypeMagnitude200Response lastPageUrl(String lastPageUrl) {
-    
-    this.lastPageUrl = lastPageUrl;
-    return this;
-  }
-
-   /**
-   * URL base path.
-   * @return lastPageUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8087/page=3", value = "URL base path.")
-
-  public String getLastPageUrl() {
-    return lastPageUrl;
-  }
-
-
-  public void setLastPageUrl(String lastPageUrl) {
-    this.lastPageUrl = lastPageUrl;
   }
 
 
@@ -254,29 +192,6 @@ public class GetTypeMagnitude200Response {
   }
 
 
-  public GetTypeMagnitude200Response nextPageUrl(String nextPageUrl) {
-    
-    this.nextPageUrl = nextPageUrl;
-    return this;
-  }
-
-   /**
-   * URL base path.
-   * @return nextPageUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8087/page=3", value = "URL base path.")
-
-  public String getNextPageUrl() {
-    return nextPageUrl;
-  }
-
-
-  public void setNextPageUrl(String nextPageUrl) {
-    this.nextPageUrl = nextPageUrl;
-  }
-
-
   public GetTypeMagnitude200Response path(String path) {
     
     this.path = path;
@@ -300,7 +215,7 @@ public class GetTypeMagnitude200Response {
   }
 
 
-  public GetTypeMagnitude200Response perPage(String perPage) {
+  public GetTypeMagnitude200Response perPage(Integer perPage) {
     
     this.perPage = perPage;
     return this;
@@ -313,40 +228,17 @@ public class GetTypeMagnitude200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "4000", value = "Record per page.")
 
-  public String getPerPage() {
+  public Integer getPerPage() {
     return perPage;
   }
 
 
-  public void setPerPage(String perPage) {
+  public void setPerPage(Integer perPage) {
     this.perPage = perPage;
   }
 
 
-  public GetTypeMagnitude200Response prevPageUrl(String prevPageUrl) {
-    
-    this.prevPageUrl = prevPageUrl;
-    return this;
-  }
-
-   /**
-   * URL base path.
-   * @return prevPageUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8087/page=1", value = "URL base path.")
-
-  public String getPrevPageUrl() {
-    return prevPageUrl;
-  }
-
-
-  public void setPrevPageUrl(String prevPageUrl) {
-    this.prevPageUrl = prevPageUrl;
-  }
-
-
-  public GetTypeMagnitude200Response to(String to) {
+  public GetTypeMagnitude200Response to(Integer to) {
     
     this.to = to;
     return this;
@@ -359,17 +251,17 @@ public class GetTypeMagnitude200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "4000", value = "Showed record to.")
 
-  public String getTo() {
+  public Integer getTo() {
     return to;
   }
 
 
-  public void setTo(String to) {
+  public void setTo(Integer to) {
     this.to = to;
   }
 
 
-  public GetTypeMagnitude200Response total(String total) {
+  public GetTypeMagnitude200Response total(Integer total) {
     
     this.total = total;
     return this;
@@ -382,12 +274,12 @@ public class GetTypeMagnitude200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "10000", value = "Total records.")
 
-  public String getTotal() {
+  public Integer getTotal() {
     return total;
   }
 
 
-  public void setTotal(String total) {
+  public void setTotal(Integer total) {
     this.total = total;
   }
 
@@ -434,15 +326,11 @@ public class GetTypeMagnitude200Response {
     }
     GetTypeMagnitude200Response getTypeMagnitude200Response = (GetTypeMagnitude200Response) o;
     return Objects.equals(this.currentPage, getTypeMagnitude200Response.currentPage) &&
-        Objects.equals(this.firstPageUrl, getTypeMagnitude200Response.firstPageUrl) &&
         Objects.equals(this.from, getTypeMagnitude200Response.from) &&
         Objects.equals(this.lastPage, getTypeMagnitude200Response.lastPage) &&
-        Objects.equals(this.lastPageUrl, getTypeMagnitude200Response.lastPageUrl) &&
         Objects.equals(this.links, getTypeMagnitude200Response.links) &&
-        Objects.equals(this.nextPageUrl, getTypeMagnitude200Response.nextPageUrl) &&
         Objects.equals(this.path, getTypeMagnitude200Response.path) &&
         Objects.equals(this.perPage, getTypeMagnitude200Response.perPage) &&
-        Objects.equals(this.prevPageUrl, getTypeMagnitude200Response.prevPageUrl) &&
         Objects.equals(this.to, getTypeMagnitude200Response.to) &&
         Objects.equals(this.total, getTypeMagnitude200Response.total) &&
         Objects.equals(this.data, getTypeMagnitude200Response.data);
@@ -450,7 +338,7 @@ public class GetTypeMagnitude200Response {
 
   @Override
   public int hashCode() {
-    return Objects.hash(currentPage, firstPageUrl, from, lastPage, lastPageUrl, links, nextPageUrl, path, perPage, prevPageUrl, to, total, data);
+    return Objects.hash(currentPage, from, lastPage, links, path, perPage, to, total, data);
   }
 
   @Override
@@ -458,15 +346,11 @@ public class GetTypeMagnitude200Response {
     StringBuilder sb = new StringBuilder();
     sb.append("class GetTypeMagnitude200Response {\n");
     sb.append("    currentPage: ").append(toIndentedString(currentPage)).append("\n");
-    sb.append("    firstPageUrl: ").append(toIndentedString(firstPageUrl)).append("\n");
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    lastPage: ").append(toIndentedString(lastPage)).append("\n");
-    sb.append("    lastPageUrl: ").append(toIndentedString(lastPageUrl)).append("\n");
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    nextPageUrl: ").append(toIndentedString(nextPageUrl)).append("\n");
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
     sb.append("    perPage: ").append(toIndentedString(perPage)).append("\n");
-    sb.append("    prevPageUrl: ").append(toIndentedString(prevPageUrl)).append("\n");
     sb.append("    to: ").append(toIndentedString(to)).append("\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
@@ -493,15 +377,11 @@ public class GetTypeMagnitude200Response {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("current_page");
-    openapiFields.add("first_page_url");
     openapiFields.add("from");
     openapiFields.add("last_page");
-    openapiFields.add("last_page_url");
     openapiFields.add("links");
-    openapiFields.add("next_page_url");
     openapiFields.add("path");
     openapiFields.add("per_page");
-    openapiFields.add("prev_page_url");
     openapiFields.add("to");
     openapiFields.add("total");
     openapiFields.add("data");
@@ -532,21 +412,6 @@ public class GetTypeMagnitude200Response {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetTypeMagnitude200Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("current_page") != null && !jsonObj.get("current_page").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `current_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("current_page").toString()));
-      }
-      if (jsonObj.get("first_page_url") != null && !jsonObj.get("first_page_url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `first_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("first_page_url").toString()));
-      }
-      if (jsonObj.get("from") != null && !jsonObj.get("from").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `from` to be a primitive type in the JSON string but got `%s`", jsonObj.get("from").toString()));
-      }
-      if (jsonObj.get("last_page") != null && !jsonObj.get("last_page").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_page").toString()));
-      }
-      if (jsonObj.get("last_page_url") != null && !jsonObj.get("last_page_url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `last_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_page_url").toString()));
-      }
       JsonArray jsonArraylinks = jsonObj.getAsJsonArray("links");
       if (jsonArraylinks != null) {
         // ensure the json data is an array
@@ -559,23 +424,8 @@ public class GetTypeMagnitude200Response {
           MetaDefinitionLinksInner.validateJsonObject(jsonArraylinks.get(i).getAsJsonObject());
         };
       }
-      if (jsonObj.get("next_page_url") != null && !jsonObj.get("next_page_url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `next_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("next_page_url").toString()));
-      }
       if (jsonObj.get("path") != null && !jsonObj.get("path").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
-      }
-      if (jsonObj.get("per_page") != null && !jsonObj.get("per_page").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `per_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("per_page").toString()));
-      }
-      if (jsonObj.get("prev_page_url") != null && !jsonObj.get("prev_page_url").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `prev_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("prev_page_url").toString()));
-      }
-      if (jsonObj.get("to") != null && !jsonObj.get("to").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("to").toString()));
-      }
-      if (jsonObj.get("total") != null && !jsonObj.get("total").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `total` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total").toString()));
       }
       JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
       if (jsonArraydata != null) {

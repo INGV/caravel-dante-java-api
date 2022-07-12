@@ -382,9 +382,16 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: Limit the results to the specified number of events.
+      - description: Limit the results to the specified number of records.
         in: query
         name: limit
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Pagination.
+        in: query
+        name: page
         required: false
         schema:
           format: int32
@@ -633,9 +640,16 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: Limit the results to the specified number of events.
+      - description: Limit the results to the specified number of records.
         in: query
         name: limit
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Pagination.
+        in: query
+        name: page
         required: false
         schema:
           format: int32
@@ -883,9 +897,16 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: Limit the results to the specified number of events.
+      - description: Limit the results to the specified number of records.
         in: query
         name: limit
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Pagination.
+        in: query
+        name: page
         required: false
         schema:
           format: int32
@@ -8507,14 +8528,11 @@ components:
       type: object
     MetaDefinition:
       example:
-        first_page_url: http://localhost:8087/page=1
         path: http://localhost:8087
-        per_page: "4000"
-        total: "10000"
-        last_page: "3"
-        last_page_url: http://localhost:8087/page=3
-        next_page_url: http://localhost:8087/page=3
-        from: "1"
+        per_page: 4000
+        total: 10000
+        last_page: 3
+        from: 1
         links:
         - active: "true"
           label: "2"
@@ -8522,58 +8540,47 @@ components:
         - active: "true"
           label: "2"
           url: http://localhost:8087
-        to: "4000"
-        prev_page_url: http://localhost:8087/page=1
-        current_page: "2"
+        to: 4000
+        current_page: 2
       properties:
         current_page:
           description: Current page.
-          example: "2"
-          type: string
-        first_page_url:
-          description: URL base path.
-          example: http://localhost:8087/page=1
-          type: string
+          example: 2
+          format: int32
+          type: integer
         from:
           description: Showed record from.
-          example: "1"
-          type: string
+          example: 1
+          format: int32
+          type: integer
         last_page:
           description: Last page.
-          example: "3"
-          type: string
-        last_page_url:
-          description: URL base path.
-          example: http://localhost:8087/page=3
-          type: string
+          example: 3
+          format: int32
+          type: integer
         links:
           items:
             $ref: '#/components/schemas/MetaDefinition_links_inner'
           type: array
-        next_page_url:
-          description: URL base path.
-          example: http://localhost:8087/page=3
-          type: string
         path:
           description: URL base path.
           example: http://localhost:8087
           type: string
         per_page:
           description: Record per page.
-          example: "4000"
-          type: string
-        prev_page_url:
-          description: URL base path.
-          example: http://localhost:8087/page=1
-          type: string
+          example: 4000
+          format: int32
+          type: integer
         to:
           description: Showed record to.
-          example: "4000"
-          type: string
+          example: 4000
+          format: int32
+          type: integer
         total:
           description: Total records.
-          example: "10000"
-          type: string
+          example: 10000
+          format: int32
+          type: integer
       type: object
     LinksDefinition:
       example:
@@ -8589,10 +8596,12 @@ components:
         last:
           description: URL last page.
           example: http://localhost:8087/api/quakedb/v1/events_pref/?page=4
+          nullable: true
           type: string
         prev:
           description: URL previous page.
           example: http://localhost:8087/api/quakedb/v1/events_pref/?page=1
+          nullable: true
           type: string
         next:
           description: URL next page.
@@ -9728,14 +9737,11 @@ components:
           id: 14932631
           event_group_id: 0
         meta:
-          first_page_url: http://localhost:8087/page=1
           path: http://localhost:8087
-          per_page: "4000"
-          total: "10000"
-          last_page: "3"
-          last_page_url: http://localhost:8087/page=3
-          next_page_url: http://localhost:8087/page=3
-          from: "1"
+          per_page: 4000
+          total: 10000
+          last_page: 3
+          from: 1
           links:
           - active: "true"
             label: "2"
@@ -9743,9 +9749,8 @@ components:
           - active: "true"
             label: "2"
             url: http://localhost:8087
-          to: "4000"
-          prev_page_url: http://localhost:8087/page=1
-          current_page: "2"
+          to: 4000
+          current_page: 2
         links:
           next: http://localhost:8087/api/quakedb/v1/events_pref/?page=3
           last: http://localhost:8087/api/quakedb/v1/events_pref/?page=4
