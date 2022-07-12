@@ -24,8 +24,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
-import org.ingv.dante.model.ObjectMomenttensorPostOutput;
 import org.ingv.dante.model.ObjectMomenttensorPostOutputMomenttensor;
 
 import com.google.gson.Gson;
@@ -51,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanismPostOutputFocalmechanismsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-11T09:24:42.819010Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-12T09:17:57.050628Z[Etc/UTC]")
 public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

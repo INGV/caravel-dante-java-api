@@ -22,8 +22,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
-import org.ingv.dante.model.AddHEwPickScnl201ResponseDataPicksInnerAllOf;
 import org.ingv.dante.model.AddOrigin201ResponseDataOriginsInnerAllOf;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

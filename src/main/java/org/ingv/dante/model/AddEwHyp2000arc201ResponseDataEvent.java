@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
 import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
-import org.ingv.dante.model.AddEwHyp2000arc201ResponseDataEventAllOf;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEwHyp2000arc201ResponseDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-11T09:24:42.819010Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-12T09:17:57.050628Z[Etc/UTC]")
 public class AddEwHyp2000arc201ResponseDataEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

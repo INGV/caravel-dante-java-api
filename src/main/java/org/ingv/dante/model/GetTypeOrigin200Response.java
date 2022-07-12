@@ -25,8 +25,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.GetTypeOrigin200ResponseAllOf;
-import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.MetaDefinitionLinksInner;
 import org.ingv.dante.model.ObjectTableTypeOrigin;
 
@@ -53,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeOrigin200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-11T09:24:42.819010Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-12T09:17:57.050628Z[Etc/UTC]")
 public class GetTypeOrigin200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)

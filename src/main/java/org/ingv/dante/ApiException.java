@@ -22,7 +22,7 @@ import javax.ws.rs.core.GenericType;
  * <p>ApiException class.</p>
  */
 @SuppressWarnings("serial")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-11T09:24:42.819010Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-12T09:17:57.050628Z[Etc/UTC]")
 public class ApiException extends Exception {
     private int code = 0;
     private Map<String, List<String>> responseHeaders = null;
@@ -161,6 +161,6 @@ public class ApiException extends Exception {
      */
     public String getMessage() {
         return String.format("Message: %s%nHTTP response code: %s%nHTTP response body: %s%nHTTP response headers: %s",
-                super.getMessage(), this.getCode(), this.getResponseBody(), this.getResponseHeaders().toString());
+                super.getMessage(), this.getCode(), this.getResponseBody(), this.getResponseHeaders());
     }
 }
