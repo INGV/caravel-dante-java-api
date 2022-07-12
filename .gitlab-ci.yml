@@ -65,7 +65,7 @@ build:
           mvn clean install &&
           cd target &&
           java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getRegionName -p 'lat=42&lon=12' &&
-          java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getOrigins -p 'originid=110139'"
+          java -jar test-1.0-jar-with-dependencies.jar -h caravel.int.ingv.it -t getOrigins -p 'starttime=2019-06-15T00:00:00Z&page=2&endtime=2020-06-29T23:59:59Z&orderby=origin_ot-asc&typeoriginvaluein=0,1000'"
  
 
     artifacts:
