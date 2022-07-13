@@ -8606,6 +8606,7 @@ components:
         next:
           description: URL next page.
           example: http://localhost:8087/api/quakedb/v1/events_pref/?page=3
+          nullable: true
           type: string
       type: object
     Problem:
