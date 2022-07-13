@@ -13141,6 +13141,7 @@ components:
         url:
           description: URL base path.
           example: http://localhost:8087
+          nullable: true
           type: string
         label:
           description: Page label.
