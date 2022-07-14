@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorRcmt
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class ObjectMomenttensorRcmt {
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
@@ -205,7 +205,7 @@ public class ObjectMomenttensorRcmt {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectMomenttensorRcmt` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("region") != null && !jsonObj.get("region").isJsonPrimitive()) {
+      if ((jsonObj.get("region") != null && !jsonObj.get("region").isJsonNull()) && !jsonObj.get("region").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `region` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region").toString()));
       }
   }

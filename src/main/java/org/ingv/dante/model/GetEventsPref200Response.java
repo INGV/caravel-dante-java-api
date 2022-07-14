@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * GetEventsPref200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class GetEventsPref200Response {
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -226,11 +226,11 @@ public class GetEventsPref200Response {
         }
       }
       // validate the optional field `links`
-      if (jsonObj.getAsJsonObject("links") != null) {
+      if (jsonObj.get("links") != null && !jsonObj.get("links").isJsonNull()) {
         LinksDefinition.validateJsonObject(jsonObj.getAsJsonObject("links"));
       }
       // validate the optional field `meta`
-      if (jsonObj.getAsJsonObject("meta") != null) {
+      if (jsonObj.get("meta") != null && !jsonObj.get("meta").isJsonNull()) {
         MetaDefinition.validateJsonObject(jsonObj.getAsJsonObject("meta"));
       }
       JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");

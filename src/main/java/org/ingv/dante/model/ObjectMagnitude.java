@@ -29,6 +29,7 @@ import java.util.List;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
 import org.ingv.dante.model.ObjectStationmagnitude;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -53,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class ObjectMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -623,9 +624,20 @@ public class ObjectMagnitude {
         Objects.equals(this.stationmagnitudes, objectMagnitude.stationmagnitudes);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(id, modified, inserted, idLocalspace, mag, lowerUncertainty, upperUncertainty, confidenceLevel, quality, minDist, azimut, nsta, ncha, nstaUsed, nchaUsed, magQuality, typeMagnitude, localspace, provenance, stationmagnitudes);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -729,18 +741,18 @@ public class ObjectMagnitude {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (jsonObj.get("mag_quality") != null && !jsonObj.get("mag_quality").isJsonPrimitive()) {
+      if ((jsonObj.get("mag_quality") != null && !jsonObj.get("mag_quality").isJsonNull()) && !jsonObj.get("mag_quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `mag_quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mag_quality").toString()));
       }
-      if (jsonObj.get("type_magnitude") != null && !jsonObj.get("type_magnitude").isJsonPrimitive()) {
+      if ((jsonObj.get("type_magnitude") != null && !jsonObj.get("type_magnitude").isJsonNull()) && !jsonObj.get("type_magnitude").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_magnitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_magnitude").toString()));
       }
       // validate the optional field `localspace`
-      if (jsonObj.getAsJsonObject("localspace") != null) {
+      if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
         ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       // validate the optional field `provenance`
-      if (jsonObj.getAsJsonObject("provenance") != null) {
+      if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
         ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
       JsonArray jsonArraystationmagnitudes = jsonObj.getAsJsonArray("stationmagnitudes");

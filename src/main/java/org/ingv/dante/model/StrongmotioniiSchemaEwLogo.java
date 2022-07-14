@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaEwLogo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class StrongmotioniiSchemaEwLogo {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -313,22 +313,22 @@ public class StrongmotioniiSchemaEwLogo {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonPrimitive()) {
+      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
-      if (jsonObj.get("module") != null && !jsonObj.get("module").isJsonPrimitive()) {
+      if ((jsonObj.get("module") != null && !jsonObj.get("module").isJsonNull()) && !jsonObj.get("module").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `module` to be a primitive type in the JSON string but got `%s`", jsonObj.get("module").toString()));
       }
-      if (jsonObj.get("installation") != null && !jsonObj.get("installation").isJsonPrimitive()) {
+      if ((jsonObj.get("installation") != null && !jsonObj.get("installation").isJsonNull()) && !jsonObj.get("installation").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `installation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installation").toString()));
       }
-      if (jsonObj.get("user") != null && !jsonObj.get("user").isJsonPrimitive()) {
+      if ((jsonObj.get("user") != null && !jsonObj.get("user").isJsonNull()) && !jsonObj.get("user").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user").toString()));
       }
-      if (jsonObj.get("hostname") != null && !jsonObj.get("hostname").isJsonPrimitive()) {
+      if ((jsonObj.get("hostname") != null && !jsonObj.get("hostname").isJsonNull()) && !jsonObj.get("hostname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `hostname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hostname").toString()));
       }
-      if (jsonObj.get("instance") != null && !jsonObj.get("instance").isJsonPrimitive()) {
+      if ((jsonObj.get("instance") != null && !jsonObj.get("instance").isJsonNull()) && !jsonObj.get("instance").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `instance` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instance").toString()));
       }
   }

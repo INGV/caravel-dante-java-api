@@ -25,6 +25,7 @@ import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
 import org.ingv.dante.model.ObjectStationmagnitudeTypeAmplitude;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 

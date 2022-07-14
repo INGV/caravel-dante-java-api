@@ -25,6 +25,7 @@ import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectMagnitudeForOriginsEventsAndEventsPref;
 import org.ingv.dante.model.ObjectOriginForOriginsEventsAndEventsPref;
 import org.ingv.dante.model.ObjectProvenaceForOriginsEventsAndEventsPref;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 

@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorTdmtStationsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class ObjectMomenttensorTdmtStationsInner {
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
@@ -355,7 +355,7 @@ public class ObjectMomenttensorTdmtStationsInner {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectMomenttensorTdmtStationsInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonPrimitive()) {
+      if ((jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonNull()) && !jsonObj.get("sta").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
       }
   }

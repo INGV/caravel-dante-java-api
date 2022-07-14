@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class Hyp2000arcSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -222,7 +222,7 @@ public class Hyp2000arcSchemaEwMessage {
    * Localspace Id | bigint(19)
    * @return quakeId
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
   @ApiModelProperty(example = "182491", required = true, value = "Localspace Id | bigint(19)")
 
   public Long getQuakeId() {
@@ -1321,22 +1321,22 @@ public class Hyp2000arcSchemaEwMessage {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (jsonObj.get("version") != null && !jsonObj.get("version").isJsonPrimitive()) {
+      if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
-      if (jsonObj.get("reg") != null && !jsonObj.get("reg").isJsonPrimitive()) {
+      if ((jsonObj.get("reg") != null && !jsonObj.get("reg").isJsonNull()) && !jsonObj.get("reg").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `reg` to be a primitive type in the JSON string but got `%s`", jsonObj.get("reg").toString()));
       }
-      if (jsonObj.get("labelpref") != null && !jsonObj.get("labelpref").isJsonPrimitive()) {
+      if ((jsonObj.get("labelpref") != null && !jsonObj.get("labelpref").isJsonNull()) && !jsonObj.get("labelpref").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `labelpref` to be a primitive type in the JSON string but got `%s`", jsonObj.get("labelpref").toString()));
       }
-      if (jsonObj.get("mdtype") != null && !jsonObj.get("mdtype").isJsonPrimitive()) {
+      if ((jsonObj.get("mdtype") != null && !jsonObj.get("mdtype").isJsonNull()) && !jsonObj.get("mdtype").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `mdtype` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mdtype").toString()));
       }
-      if (jsonObj.get("ingvQuality") != null && !jsonObj.get("ingvQuality").isJsonPrimitive()) {
+      if ((jsonObj.get("ingvQuality") != null && !jsonObj.get("ingvQuality").isJsonNull()) && !jsonObj.get("ingvQuality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `ingvQuality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ingvQuality").toString()));
       }
-      if (jsonObj.get("preferredMagLabel") != null && !jsonObj.get("preferredMagLabel").isJsonPrimitive()) {
+      if ((jsonObj.get("preferredMagLabel") != null && !jsonObj.get("preferredMagLabel").isJsonNull()) && !jsonObj.get("preferredMagLabel").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `preferredMagLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("preferredMagLabel").toString()));
       }
       JsonArray jsonArrayphases = jsonObj.getAsJsonArray("phases");

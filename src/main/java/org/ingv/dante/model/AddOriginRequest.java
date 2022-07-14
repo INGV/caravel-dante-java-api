@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * AddOriginRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class AddOriginRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -154,7 +154,7 @@ public class AddOriginRequest {
         }
       }
       // validate the optional field `data`
-      if (jsonObj.getAsJsonObject("data") != null) {
+      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
         AddOriginRequestData.validateJsonObject(jsonObj.getAsJsonObject("data"));
       }
   }

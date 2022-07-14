@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
  * This schema describes RFC7807 Problem Details for HTTP APIs. The specification is intentionally flexible, and allows to adapt the schema adding further properties, or not enforcing any of the properties below.  To make this schema safe by default, additionalProperties are forbidden though. In case you need them, you can either re-define Problem or extend it using &#x60;allOf&#x60;.
  */
 @ApiModel(description = "This schema describes RFC7807 Problem Details for HTTP APIs. The specification is intentionally flexible, and allows to adapt the schema adding further properties, or not enforcing any of the properties below.  To make this schema safe by default, additionalProperties are forbidden though. In case you need them, you can either re-define Problem or extend it using `allOf`.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class Problem {
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
@@ -276,16 +276,16 @@ public class Problem {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Problem` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("detail") != null && !jsonObj.get("detail").isJsonPrimitive()) {
+      if ((jsonObj.get("detail") != null && !jsonObj.get("detail").isJsonNull()) && !jsonObj.get("detail").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detail").toString()));
       }
-      if (jsonObj.get("instance") != null && !jsonObj.get("instance").isJsonPrimitive()) {
+      if ((jsonObj.get("instance") != null && !jsonObj.get("instance").isJsonNull()) && !jsonObj.get("instance").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `instance` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instance").toString()));
       }
-      if (jsonObj.get("title") != null && !jsonObj.get("title").isJsonPrimitive()) {
+      if ((jsonObj.get("title") != null && !jsonObj.get("title").isJsonNull()) && !jsonObj.get("title").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `title` to be a primitive type in the JSON string but got `%s`", jsonObj.get("title").toString()));
       }
-      if (jsonObj.get("type") != null && !jsonObj.get("type").isJsonPrimitive()) {
+      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
   }

@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
 import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInner;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 

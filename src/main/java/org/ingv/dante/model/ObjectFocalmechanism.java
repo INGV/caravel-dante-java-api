@@ -27,6 +27,7 @@ import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectMomenttensor;
 import org.ingv.dante.model.ObjectProvenance;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanism
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class ObjectFocalmechanism {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -641,9 +642,20 @@ public class ObjectFocalmechanism {
         Objects.equals(this.provenance, objectFocalmechanism.provenance);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(id, modified, inserted, idLocalspace, strike1, dip1, rake1, strike2, dip2, rake2, azimGap, nstaPolarity, misfit, stdr, rmsAngDiffAccPref, fracAcc30degPref, quality, url, momenttensor, localspace, provenance);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -741,22 +753,22 @@ public class ObjectFocalmechanism {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectFocalmechanism` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonPrimitive()) {
+      if ((jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonNull()) && !jsonObj.get("quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));
       }
-      if (jsonObj.get("url") != null && !jsonObj.get("url").isJsonPrimitive()) {
+      if ((jsonObj.get("url") != null && !jsonObj.get("url").isJsonNull()) && !jsonObj.get("url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
       }
       // validate the optional field `momenttensor`
-      if (jsonObj.getAsJsonObject("momenttensor") != null) {
+      if (jsonObj.get("momenttensor") != null && !jsonObj.get("momenttensor").isJsonNull()) {
         ObjectMomenttensor.validateJsonObject(jsonObj.getAsJsonObject("momenttensor"));
       }
       // validate the optional field `localspace`
-      if (jsonObj.getAsJsonObject("localspace") != null) {
+      if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
         ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       // validate the optional field `provenance`
-      if (jsonObj.getAsJsonObject("provenance") != null) {
+      if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
         ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
   }

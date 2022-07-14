@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * MetaDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class MetaDefinition {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -385,7 +385,7 @@ public class MetaDefinition {
           MetaDefinitionLinksInner.validateJsonObject(jsonArraylinks.get(i).getAsJsonObject());
         };
       }
-      if (jsonObj.get("path") != null && !jsonObj.get("path").isJsonPrimitive()) {
+      if ((jsonObj.get("path") != null && !jsonObj.get("path").isJsonNull()) && !jsonObj.get("path").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
       }
   }

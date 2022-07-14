@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * GetRegionName200ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class GetRegionName200ResponseData {
   public static final String SERIALIZED_NAME_REGION_NAME = "region_name";
   @SerializedName(SERIALIZED_NAME_REGION_NAME)
@@ -152,7 +152,7 @@ public class GetRegionName200ResponseData {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetRegionName200ResponseData` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("region_name") != null && !jsonObj.get("region_name").isJsonPrimitive()) {
+      if ((jsonObj.get("region_name") != null && !jsonObj.get("region_name").isJsonNull()) && !jsonObj.get("region_name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `region_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("region_name").toString()));
       }
   }

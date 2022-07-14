@@ -9,5 +9,7 @@
 
 * `D` (value: `"D"`)
 
+* `NULL` (value: `"null"`)
+
 
 

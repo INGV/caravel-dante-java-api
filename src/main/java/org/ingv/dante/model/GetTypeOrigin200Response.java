@@ -25,6 +25,8 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.ingv.dante.model.GetTypeOrigin200ResponseAllOf;
+import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.MetaDefinitionLinksInner;
 import org.ingv.dante.model.ObjectTableTypeOrigin;
 
@@ -51,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeOrigin200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class GetTypeOrigin200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -424,7 +426,7 @@ public class GetTypeOrigin200Response {
           MetaDefinitionLinksInner.validateJsonObject(jsonArraylinks.get(i).getAsJsonObject());
         };
       }
-      if (jsonObj.get("path") != null && !jsonObj.get("path").isJsonPrimitive()) {
+      if ((jsonObj.get("path") != null && !jsonObj.get("path").isJsonNull()) && !jsonObj.get("path").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
       }
       JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");

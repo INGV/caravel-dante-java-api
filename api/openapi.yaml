@@ -4478,14 +4478,17 @@ components:
         model:
           description: Name/URI/DOI of the model | varchar(255)
           example: prem
+          nullable: true
           type: string
         method:
           description: Name/URI/DOI of the method | varchar(255)
           example: ToDo
+          nullable: true
           type: string
         parameters:
           description: Name/URI/DOI of the parameters | varchar(255)
           example: ToDo
+          nullable: true
           type: string
         program:
           description: Name/URI/DOI of the program | varchar(255)
@@ -4494,14 +4497,17 @@ components:
         username:
           description: User name | char(255)
           example: ew
+          nullable: true
           type: string
         hostname:
           description: Hostname | char(255)
           example: hew10.ingv.it
+          nullable: true
           type: string
         description:
           description: Additional information | char(255)
           example: Auto added
+          nullable: true
           type: string
         priority:
           default: 0
@@ -4551,14 +4557,17 @@ components:
         model:
           description: Name/URI/DOI of the model | varchar(255)
           example: prem
+          nullable: true
           type: string
         method:
           description: Name/URI/DOI of the method | varchar(255)
           example: ToDo
+          nullable: true
           type: string
         parameters:
           description: Name/URI/DOI of the parameters | varchar(255)
           example: ToDo
+          nullable: true
           type: string
         program:
           description: Name/URI/DOI of the program | varchar(255)
@@ -4567,14 +4576,17 @@ components:
         username:
           description: User name | char(255)
           example: ew
+          nullable: true
           type: string
         hostname:
           description: Hostname | char(255)
           example: hew10.ingv.it
+          nullable: true
           type: string
         description:
           description: Additional information | char(255)
           example: Auto added
+          nullable: true
           type: string
         priority:
           default: 0
@@ -4668,10 +4680,12 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         localspace:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
+          nullable: true
           type: string
         event_group_id:
           default: 0
@@ -4682,16 +4696,19 @@ components:
         preferred_origin_id:
           description: "Link: preferred origin. It can be NULL. | bigint(20)"
           format: int64
+          nullable: true
           readOnly: true
           type: integer
         preferred_magnitude_id:
           description: "Link: preferred magnitude. It can be NULL. | bigint(20)"
           format: int64
+          nullable: true
           readOnly: true
           type: integer
         preferred_focalmechanism_id:
           description: "Link: preferred focalmechanism. It can be NULL. | bigint(20)"
           format: int64
+          nullable: true
           readOnly: true
           type: integer
         type_group:
@@ -4731,10 +4748,12 @@ components:
         name:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
+          nullable: true
           type: string
         description:
           description: Additional information | char(255)
           example: Auto added
+          nullable: true
           type: string
       required:
       - name
@@ -4756,10 +4775,12 @@ components:
         name:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
+          nullable: true
           type: string
         description:
           description: Additional information | char(255)
           example: Auto added
+          nullable: true
           type: string
         modified:
           description: Last Review | timestamp
@@ -4786,16 +4807,19 @@ components:
           description: peak P-wave half amplitude | double(22)
           example: 283
           format: float
+          nullable: true
           type: number
         pamp2:
           description: peak P-wave half amplitude | double(22)
           example: 283
           format: float
+          nullable: true
           type: number
         pamp3:
           description: peak P-wave half amplitude | double(22)
           example: 283
           format: float
+          nullable: true
           type: number
       required:
       - pamp1
@@ -6086,6 +6110,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         type_event:
           description: Name | varchar(255)
@@ -6100,16 +6125,19 @@ components:
         preferred_origin_id:
           description: "Link: preferred origin. It can be NULL. | bigint(20)"
           format: int64
+          nullable: true
           readOnly: true
           type: integer
         preferred_magnitude_id:
           description: "Link: preferred magnitude. It can be NULL. | bigint(20)"
           format: int64
+          nullable: true
           readOnly: true
           type: integer
         preferred_focalmechanism_id:
           description: "Link: preferred focalmechanism. It can be NULL. | bigint(20)"
           format: int64
+          nullable: true
           readOnly: true
           type: integer
         type_group:
@@ -6734,6 +6762,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         azim_gap:
           description: Azimutal gap | float4
@@ -7035,6 +7064,7 @@ components:
         description:
           description: Additional information | char(255)
           example: Auto added
+          nullable: true
           type: string
         priority:
           default: 0
@@ -7078,6 +7108,7 @@ components:
         description:
           description: Additional information | char(255)
           example: Auto added
+          nullable: true
           type: string
         modified:
           description: Last Review | timestamp
@@ -7139,6 +7170,7 @@ components:
         description:
           description: Additional information | char(255)
           example: Auto added
+          nullable: true
           type: string
         modified:
           description: Last Review | timestamp
@@ -7301,6 +7333,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         mag:
           description: Magnitude value | double
@@ -7507,52 +7540,63 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         strike1:
           description: strike focal plane n.1 | int(10)
           example: 34
           format: int32
+          nullable: true
           type: integer
         dip1:
           description: dip focal plane n.1 | int(10)
           example: 50
           format: int32
+          nullable: true
           type: integer
         rake1:
           description: rake focal plane n.1 | int(10)
           example: 88
           format: int32
+          nullable: true
           type: integer
         strike2:
           description: strike focal plane n.2 | int(10)
           example: 218
           format: int32
+          nullable: true
           type: integer
         dip2:
           description: dip focal plane n.2 | int(10)
           example: 40
           format: int32
+          nullable: true
           type: integer
         rake2:
           description: rake focal plane n.2 | int(10)
           example: 93
           format: int32
+          nullable: true
           type: integer
         azim_gap:
           description: Largest azim gap as seen from epicenter | double(22)
           format: float
+          nullable: true
           type: number
         nsta_polarity:
           description: Number of station polarities used for determination | int(10)
           format: int32
+          nullable: true
           type: integer
         misfit:
           description: "Fraction of misfit polarities [0,1] | double(22)"
           format: double
+          nullable: true
           type: number
         stdr:
           description: "Station distribution ratio parameter [0,1] | double(22)"
           format: double
+          nullable: true
           type: number
         rms_ang_diff_acc_pref:
           description: rms_ang_diff_acc_pref | double(22)
@@ -7561,14 +7605,17 @@ components:
         frac_acc_30deg_pref:
           description: frac_acc_30deg_pref | double(22)
           format: double
+          nullable: true
           type: number
         quality:
           description: quality | char(2)
           example: Ba
+          nullable: true
           type: string
         url:
           description: url pdf file | varchar(255)
           example: http://mysite
+          nullable: true
           type: string
         momenttensor:
           $ref: '#/components/schemas/ObjectMomenttensor'
@@ -7670,6 +7717,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         originid_out:
           description: Unique incremental id | bigint(20)
@@ -7686,60 +7734,71 @@ components:
             \ Nm | double(22)"
           example: 16607495309062.705
           format: double
+          nullable: true
           type: number
         mrr:
           description: mrr moment tensor component | double(22)
           example: 80.956
           format: double
+          nullable: true
           type: number
         mtt:
           description: mtt moment tensor component | double(22)
           example: -25.017
           format: double
+          nullable: true
           type: number
         mpp:
           description: mpp moment tensor component | double(22)
           example: -55.939
           format: double
+          nullable: true
           type: number
         mrt:
           description: mrt moment tensor component | double(22)
           example: 7.048
           format: double
+          nullable: true
           type: number
         mrp:
           description: mrp moment tensor component | double(22)
           example: 13.494
           format: double
+          nullable: true
           type: number
         mtp:
           description: mtp moment tensor component | double(22)
           example: -49.466
           format: double
+          nullable: true
           type: number
         clvd:
           description: CLVD (compensated linear vector dipole) parameter obtained
             from moment tensor inversion (decimal fraction between 0 and 1) | double(22)
           example: 0.24
           format: double
+          nullable: true
           type: number
         iso:
           description: Isotropic part obtained from moment tensor inversion (decimal
             fraction between 0 and 1) | double(22)
           example: 0
           format: double
+          nullable: true
           type: number
         variance_reduction:
           description: "Variance reduction of moment tensor inversion, given in percent\
             \ (Dreger 2003). This is a goodness-of-fit measure | double(22)"
           example: 41.15
           format: double
+          nullable: true
           type: number
         double_couple:
           description: Double couple parameter obtained from moment tensor inversion
             (decimal fraction between 0 and 1) | double(22)
           example: 0.76
           format: double
+          nullable: true
           type: number
         type_momenttensor:
           description: Type of Moment Tensor | varchar(50)
@@ -7849,6 +7908,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         t_dt:
           description: "time: trigger reported by SM box - datetime part | datetime(6)"
@@ -8024,6 +8084,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         pick_id:
           description: Unique incremental id | bigint(20)
@@ -8071,6 +8132,7 @@ components:
           description: Distance from origin of the station | double
           example: 161
           format: double
+          nullable: true
           type: number
         azimut:
           description: Station origin azimut | double
@@ -8199,6 +8261,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         isc_code:
           description: ISC arrival code | varchar(8)
@@ -8214,12 +8277,14 @@ components:
             \ towards smaller values. | decimal(8,3)"
           example: 0.52
           format: float
+          nullable: true
           type: number
         upper_uncertainty:
           description: "Uncertainty as the absolute value of deviation from the mainvalue\
             \ towards larger values. | decimal(8,3)"
           example: 0.53
           format: float
+          nullable: true
           type: number
         confidence_level:
           default: 68.3
@@ -8252,6 +8317,7 @@ components:
           description: Distance from origin of the station | double
           example: 161
           format: double
+          nullable: true
           type: number
         azimut:
           description: Station origin azimut | double
@@ -8266,10 +8332,12 @@ components:
         polarity_is_used:
           description: 1 if it is used for polarity calculation | boolean
           example: false
+          nullable: true
           type: boolean
         arr_time_is_used:
           description: 1 if it is used for origin calculation | boolean
           example: false
+          nullable: true
           type: boolean
         residual:
           description: Residual | double
@@ -8334,10 +8402,12 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         localspace:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
+          nullable: true
           type: string
         ot:
           description: Origin time | datetime(3)
@@ -8485,10 +8555,12 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         localspace:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
+          nullable: true
           type: string
         mag:
           description: Magnitude value | double
@@ -8708,10 +8780,12 @@ components:
       description: Localspace Id | bigint(19)
       example: 182491
       format: int64
+      nullable: true
       type: integer
     localspace__name:
       description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
       example: hew1_mole
+      nullable: true
       type: string
     azimutal_gap:
       description: Azimutal gap | float4
@@ -8729,14 +8803,17 @@ components:
     event__fk_origin_preferred:
       description: "Link: preferred origin. It can be NULL. | bigint(20)"
       format: int64
+      nullable: true
       type: integer
     event__fk_magnitude_preferred:
       description: "Link: preferred magnitude. It can be NULL. | bigint(20)"
       format: int64
+      nullable: true
       type: integer
     event__fk_focalmechanism_preferred:
       description: "Link: preferred focalmechanism. It can be NULL. | bigint(20)"
       format: int64
+      nullable: true
       type: integer
     quake2kSchema:
       properties:
@@ -8950,6 +9027,7 @@ components:
       enum:
       - U
       - D
+      - null
       example: D
       nullable: true
       type: string
@@ -8958,6 +9036,7 @@ components:
         \ towards smaller values. | decimal(8,3)"
       example: 0.52
       format: float
+      nullable: true
       type: number
     pick__arrival_time:
       description: Arrival time with microseconds | datetime(3)
@@ -9087,14 +9166,17 @@ components:
     provenance__model:
       description: Name/URI/DOI of the model | varchar(255)
       example: prem
+      nullable: true
       type: string
     provenance__method:
       description: Name/URI/DOI of the method | varchar(255)
       example: ToDo
+      nullable: true
       type: string
     provenance__parameters:
       description: Name/URI/DOI of the parameters | varchar(255)
       example: ToDo
+      nullable: true
       type: string
     provenance__program:
       description: Name/URI/DOI of the program | varchar(255)
@@ -9103,14 +9185,17 @@ components:
     provenance__username:
       description: User name | char(255)
       example: ew
+      nullable: true
       type: string
     provenance__hostname:
       description: Hostname | char(255)
       example: hew10.ingv.it
+      nullable: true
       type: string
     description:
       description: Additional information | char(255)
       example: Auto added
+      nullable: true
       type: string
     provenance__priority:
       default: 0
@@ -9145,16 +9230,19 @@ components:
     event__fk_origin_preferred__READONLY:
       description: "Link: preferred origin. It can be NULL. | bigint(20)"
       format: int64
+      nullable: true
       readOnly: true
       type: integer
     event__fk_magnitude_preferred__READONLY:
       description: "Link: preferred magnitude. It can be NULL. | bigint(20)"
       format: int64
+      nullable: true
       readOnly: true
       type: integer
     event__fk_focalmechanism_preferred__READONLY:
       description: "Link: preferred focalmechanism. It can be NULL. | bigint(20)"
       format: int64
+      nullable: true
       readOnly: true
       type: integer
     event__type_group:
@@ -9167,6 +9255,7 @@ components:
       description: peak P-wave half amplitude | double(22)
       example: 283
       format: float
+      nullable: true
       type: number
     confidence_level:
       default: 68.3
@@ -9308,47 +9397,57 @@ components:
       description: strike focal plane n.1 | int(10)
       example: 34
       format: int32
+      nullable: true
       type: integer
     focalmechanism__dip1:
       description: dip focal plane n.1 | int(10)
       example: 50
       format: int32
+      nullable: true
       type: integer
     focalmechanism__rake1:
       description: rake focal plane n.1 | int(10)
       example: 88
       format: int32
+      nullable: true
       type: integer
     focalmechanism__strike2:
       description: strike focal plane n.2 | int(10)
       example: 218
       format: int32
+      nullable: true
       type: integer
     focalmechanism__dip2:
       description: dip focal plane n.2 | int(10)
       example: 40
       format: int32
+      nullable: true
       type: integer
     focalmechanism__rake2:
       description: rake focal plane n.2 | int(10)
       example: 93
       format: int32
+      nullable: true
       type: integer
     focalmechanism__azim_gap:
       description: Largest azim gap as seen from epicenter | double(22)
       format: float
+      nullable: true
       type: number
     focalmechanism__nsta_polarity:
       description: Number of station polarities used for determination | int(10)
       format: int32
+      nullable: true
       type: integer
     focalmechanism__misfit:
       description: "Fraction of misfit polarities [0,1] | double(22)"
       format: double
+      nullable: true
       type: number
     focalmechanism__stdr:
       description: "Station distribution ratio parameter [0,1] | double(22)"
       format: double
+      nullable: true
       type: number
     focalmechanism__rms_ang_diff_acc_pref:
       description: rms_ang_diff_acc_pref | double(22)
@@ -9357,74 +9456,88 @@ components:
     focalmechanism__frac_acc_30deg_pref:
       description: frac_acc_30deg_pref | double(22)
       format: double
+      nullable: true
       type: number
     focalmechanism__quality:
       description: quality | char(2)
       example: Ba
+      nullable: true
       type: string
     focalmechanism__url:
       description: url pdf file | varchar(255)
       example: http://mysite
+      nullable: true
       type: string
     momenttensor__scalarmoment:
       description: "Scalar moment as derived in moment tensor inversion. Unit, Nm\
         \ | double(22)"
       example: 16607495309062.705
       format: double
+      nullable: true
       type: number
     momenttensor__mrr:
       description: mrr moment tensor component | double(22)
       example: 80.956
       format: double
+      nullable: true
       type: number
     momenttensor__mtt:
       description: mtt moment tensor component | double(22)
       example: -25.017
       format: double
+      nullable: true
       type: number
     momenttensor__mpp:
       description: mpp moment tensor component | double(22)
       example: -55.939
       format: double
+      nullable: true
       type: number
     momenttensor__mrt:
       description: mrt moment tensor component | double(22)
       example: 7.048
       format: double
+      nullable: true
       type: number
     momenttensor__mrp:
       description: mrp moment tensor component | double(22)
       example: 13.494
       format: double
+      nullable: true
       type: number
     momenttensor__mtp:
       description: mtp moment tensor component | double(22)
       example: -49.466
       format: double
+      nullable: true
       type: number
     momenttensor__clvd:
       description: CLVD (compensated linear vector dipole) parameter obtained from
         moment tensor inversion (decimal fraction between 0 and 1) | double(22)
       example: 0.24
       format: double
+      nullable: true
       type: number
     momenttensor__iso:
       description: Isotropic part obtained from moment tensor inversion (decimal fraction
         between 0 and 1) | double(22)
       example: 0
       format: double
+      nullable: true
       type: number
     momenttensor__variance_reduction:
       description: "Variance reduction of moment tensor inversion, given in percent\
         \ (Dreger 2003). This is a goodness-of-fit measure | double(22)"
       example: 41.15
       format: double
+      nullable: true
       type: number
     momenttensor__double_couple:
       description: Double couple parameter obtained from moment tensor inversion (decimal
         fraction between 0 and 1) | double(22)
       example: 0.76
       format: double
+      nullable: true
       type: number
     type_momenttensor__name:
       description: Type of Moment Tensor | varchar(50)
@@ -9490,11 +9603,13 @@ components:
     type_amplitude__unit:
       description: Unit of measurement of type amplitude | varchar(255)
       example: m/s
+      nullable: true
       type: string
     arrival-stationmagnitude-st_dur_mag__orig_distance:
       description: Distance from origin of the station | double
       example: 161
       format: double
+      nullable: true
       type: number
     arrival-stationmagnitude-st_dur_mag__azimut:
       description: Station origin azimut | double
@@ -9524,12 +9639,14 @@ components:
         \ towards larger values. | decimal(8,3)"
       example: 0.53
       format: float
+      nullable: true
       type: number
     pick__emersio:
       description: "Impulsive or emersio, pamp description | varchar(1)"
       enum:
       - E
       - I
+      - null
       example: E
       nullable: true
       type: string
@@ -9546,10 +9663,12 @@ components:
     arrival__polarity_is_used:
       description: 1 if it is used for polarity calculation | boolean
       example: false
+      nullable: true
       type: boolean
     arrival__arr_time_is_used:
       description: 1 if it is used for origin calculation | boolean
       example: false
+      nullable: true
       type: boolean
     arrival__residual:
       description: Residual | double
@@ -12359,6 +12478,7 @@ components:
         name:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
+          nullable: true
           type: string
     addEvent_201_response_data_event_origins_inner_allOf:
       example:
@@ -12376,6 +12496,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         localspace:
           $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
@@ -12403,6 +12524,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         localspace:
           $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
@@ -12616,14 +12738,17 @@ components:
         preferred_origin_id:
           description: "Link: preferred origin. It can be NULL. | bigint(20)"
           format: int64
+          nullable: true
           type: integer
         preferred_magnitude_id:
           description: "Link: preferred magnitude. It can be NULL. | bigint(20)"
           format: int64
+          nullable: true
           type: integer
         preferred_focalmechanism_id:
           description: "Link: preferred focalmechanism. It can be NULL. | bigint(20)"
           format: int64
+          nullable: true
           type: integer
     updateEvent_request_data:
       properties:
@@ -12936,10 +13061,12 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         value:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
+          nullable: true
           type: string
     ObjectFocalmechanismPostOutput_focalmechanisms_inner:
       allOf:
@@ -13083,6 +13210,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         localspace:
           $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
@@ -13129,6 +13257,7 @@ components:
         unit:
           description: Unit of measurement of type amplitude | varchar(255)
           example: m/s
+          nullable: true
           type: string
       required:
       - name
@@ -13157,6 +13286,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         originTime:
           description: Origin time | datetime(3)
@@ -13258,6 +13388,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         version:
           description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
@@ -13669,6 +13800,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         version:
           description: "Localization name (es:ew prelim,XX,WW,..) | varchar(255)"
@@ -13848,6 +13980,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         network:
           description: Channel net code | char(2)
@@ -13873,6 +14006,7 @@ components:
             \ towards smaller values. | decimal(8,3)"
           example: 0.52
           format: float
+          nullable: true
           type: number
         timeOfPick:
           description: Arrival time with microseconds | datetime(3)
@@ -13940,6 +14074,7 @@ components:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
+          nullable: true
           type: integer
         version:
           $ref: '#/components/schemas/type_origin__name'

@@ -27,6 +27,7 @@ import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectMagnitudeForOriginsEventsAndEventsPref;
 import org.ingv.dante.model.ObjectOriginForOriginsEventsAndEventsPref;
 import org.ingv.dante.model.ObjectProvenaceForOriginsEventsAndEventsPref;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -51,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginsEventsAndEventsPref
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:41:34.861988Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
 public class ObjectOriginsEventsAndEventsPref {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -417,9 +418,20 @@ public class ObjectOriginsEventsAndEventsPref {
         Objects.equals(this.provenance, objectOriginsEventsAndEventsPref.provenance);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(id, idLocalspace, localspace, eventGroupId, preferredOriginId, preferredMagnitudeId, preferredFocalmechanismId, typeGroup, typeEvent, modified, inserted, origin, magnitude, provenance);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -503,22 +515,22 @@ public class ObjectOriginsEventsAndEventsPref {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectOriginsEventsAndEventsPref` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonPrimitive()) {
+      if ((jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) && !jsonObj.get("localspace").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `localspace` to be a primitive type in the JSON string but got `%s`", jsonObj.get("localspace").toString()));
       }
-      if (jsonObj.get("type_event") != null && !jsonObj.get("type_event").isJsonPrimitive()) {
+      if ((jsonObj.get("type_event") != null && !jsonObj.get("type_event").isJsonNull()) && !jsonObj.get("type_event").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_event` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_event").toString()));
       }
       // validate the optional field `origin`
-      if (jsonObj.getAsJsonObject("origin") != null) {
+      if (jsonObj.get("origin") != null && !jsonObj.get("origin").isJsonNull()) {
         ObjectOriginForOriginsEventsAndEventsPref.validateJsonObject(jsonObj.getAsJsonObject("origin"));
       }
       // validate the optional field `magnitude`
-      if (jsonObj.getAsJsonObject("magnitude") != null) {
+      if (jsonObj.get("magnitude") != null && !jsonObj.get("magnitude").isJsonNull()) {
         ObjectMagnitudeForOriginsEventsAndEventsPref.validateJsonObject(jsonObj.getAsJsonObject("magnitude"));
       }
       // validate the optional field `provenance`
-      if (jsonObj.getAsJsonObject("provenance") != null) {
+      if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
         ObjectProvenaceForOriginsEventsAndEventsPref.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
   }

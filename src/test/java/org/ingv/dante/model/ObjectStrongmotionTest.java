@@ -28,6 +28,7 @@ import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
 import org.ingv.dante.model.ObjectStrongmotionAlternative;
 import org.ingv.dante.model.ObjectStrongmotionRsaInner;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
