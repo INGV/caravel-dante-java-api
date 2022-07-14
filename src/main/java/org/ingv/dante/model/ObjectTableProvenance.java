@@ -24,6 +24,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableProvenance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class ObjectTableProvenance {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -442,9 +443,20 @@ public class ObjectTableProvenance {
         Objects.equals(this.inserted, objectTableProvenance.inserted);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(id, name, softwarename, version, model, method, parameters, program, username, hostname, description, priority, modified, inserted);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -536,34 +548,34 @@ public class ObjectTableProvenance {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonPrimitive()) {
+      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
-      if (jsonObj.get("softwarename") != null && !jsonObj.get("softwarename").isJsonPrimitive()) {
+      if ((jsonObj.get("softwarename") != null && !jsonObj.get("softwarename").isJsonNull()) && !jsonObj.get("softwarename").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `softwarename` to be a primitive type in the JSON string but got `%s`", jsonObj.get("softwarename").toString()));
       }
-      if (jsonObj.get("version") != null && !jsonObj.get("version").isJsonPrimitive()) {
+      if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
-      if (jsonObj.get("model") != null && !jsonObj.get("model").isJsonPrimitive()) {
+      if ((jsonObj.get("model") != null && !jsonObj.get("model").isJsonNull()) && !jsonObj.get("model").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `model` to be a primitive type in the JSON string but got `%s`", jsonObj.get("model").toString()));
       }
-      if (jsonObj.get("method") != null && !jsonObj.get("method").isJsonPrimitive()) {
+      if ((jsonObj.get("method") != null && !jsonObj.get("method").isJsonNull()) && !jsonObj.get("method").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `method` to be a primitive type in the JSON string but got `%s`", jsonObj.get("method").toString()));
       }
-      if (jsonObj.get("parameters") != null && !jsonObj.get("parameters").isJsonPrimitive()) {
+      if ((jsonObj.get("parameters") != null && !jsonObj.get("parameters").isJsonNull()) && !jsonObj.get("parameters").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `parameters` to be a primitive type in the JSON string but got `%s`", jsonObj.get("parameters").toString()));
       }
-      if (jsonObj.get("program") != null && !jsonObj.get("program").isJsonPrimitive()) {
+      if ((jsonObj.get("program") != null && !jsonObj.get("program").isJsonNull()) && !jsonObj.get("program").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `program` to be a primitive type in the JSON string but got `%s`", jsonObj.get("program").toString()));
       }
-      if (jsonObj.get("username") != null && !jsonObj.get("username").isJsonPrimitive()) {
+      if ((jsonObj.get("username") != null && !jsonObj.get("username").isJsonNull()) && !jsonObj.get("username").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `username` to be a primitive type in the JSON string but got `%s`", jsonObj.get("username").toString()));
       }
-      if (jsonObj.get("hostname") != null && !jsonObj.get("hostname").isJsonPrimitive()) {
+      if ((jsonObj.get("hostname") != null && !jsonObj.get("hostname").isJsonNull()) && !jsonObj.get("hostname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `hostname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hostname").toString()));
       }
-      if (jsonObj.get("description") != null && !jsonObj.get("description").isJsonPrimitive()) {
+      if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
   }

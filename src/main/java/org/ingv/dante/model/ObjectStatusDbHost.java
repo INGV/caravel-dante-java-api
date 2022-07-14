@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
  * DB Connection host(s)
  */
 @ApiModel(description = "DB Connection host(s)")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class ObjectStatusDbHost {
   public static final String SERIALIZED_NAME_READ = "read";
   @SerializedName(SERIALIZED_NAME_READ)
@@ -202,11 +202,11 @@ public class ObjectStatusDbHost {
         }
       }
       // ensure the json data is an array
-      if (jsonObj.get("read") != null && !jsonObj.get("read").isJsonArray()) {
+      if ((jsonObj.get("read") != null && !jsonObj.get("read").isJsonNull()) && !jsonObj.get("read").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `read` to be an array in the JSON string but got `%s`", jsonObj.get("read").toString()));
       }
       // ensure the json data is an array
-      if (jsonObj.get("write") != null && !jsonObj.get("write").isJsonArray()) {
+      if ((jsonObj.get("write") != null && !jsonObj.get("write").isJsonNull()) && !jsonObj.get("write").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `write` to be an array in the JSON string but got `%s`", jsonObj.get("write").toString()));
       }
   }

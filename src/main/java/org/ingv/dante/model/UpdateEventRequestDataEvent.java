@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -47,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventRequestDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class UpdateEventRequestDataEvent {
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
@@ -204,9 +205,20 @@ public class UpdateEventRequestDataEvent {
         Objects.equals(this.preferredFocalmechanismId, updateEventRequestDataEvent.preferredFocalmechanismId);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(typeEvent, eventGroupId, preferredOriginId, preferredMagnitudeId, preferredFocalmechanismId);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -272,7 +284,7 @@ public class UpdateEventRequestDataEvent {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UpdateEventRequestDataEvent` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("type_event") != null && !jsonObj.get("type_event").isJsonPrimitive()) {
+      if ((jsonObj.get("type_event") != null && !jsonObj.get("type_event").isJsonNull()) && !jsonObj.get("type_event").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_event` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_event").toString()));
       }
   }

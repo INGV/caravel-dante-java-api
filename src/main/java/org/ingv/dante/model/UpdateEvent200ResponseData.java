@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEvent200ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class UpdateEvent200ResponseData {
   public static final String SERIALIZED_NAME_EVENT = "event";
   @SerializedName(SERIALIZED_NAME_EVENT)
@@ -154,7 +154,7 @@ public class UpdateEvent200ResponseData {
         }
       }
       // validate the optional field `event`
-      if (jsonObj.getAsJsonObject("event") != null) {
+      if (jsonObj.get("event") != null && !jsonObj.get("event").isJsonNull()) {
         AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonObj.getAsJsonObject("event"));
       }
   }

@@ -27,7 +27,10 @@ import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
 import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
+import org.ingv.dante.model.ObjectFocalmechanismPostOutput;
 import org.ingv.dante.model.ObjectFocalmechanismPostOutputFocalmechanismsInner;
+import org.ingv.dante.model.ObjectMagnitudePostOutput;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,7 +55,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEvent201ResponseDataEventOriginsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class AddEvent201ResponseDataEventOriginsInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -225,9 +228,20 @@ public class AddEvent201ResponseDataEventOriginsInner {
         Objects.equals(this.focalmechanisms, addEvent201ResponseDataEventOriginsInner.focalmechanisms);
   }
 
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+  }
+
   @Override
   public int hashCode() {
     return Objects.hash(id, idLocalspace, localspace, magnitudes, focalmechanisms);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -294,7 +308,7 @@ public class AddEvent201ResponseDataEventOriginsInner {
         }
       }
       // validate the optional field `localspace`
-      if (jsonObj.getAsJsonObject("localspace") != null) {
+      if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
         AddEvent201ResponseDataEventLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");

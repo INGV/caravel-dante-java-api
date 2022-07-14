@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * GetToken201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class GetToken201Response {
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
@@ -214,13 +214,13 @@ public class GetToken201Response {
         }
       }
       // validate the optional field `user`
-      if (jsonObj.getAsJsonObject("user") != null) {
+      if (jsonObj.get("user") != null && !jsonObj.get("user").isJsonNull()) {
         GetToken201ResponseUser.validateJsonObject(jsonObj.getAsJsonObject("user"));
       }
-      if (jsonObj.get("token") != null && !jsonObj.get("token").isJsonPrimitive()) {
+      if ((jsonObj.get("token") != null && !jsonObj.get("token").isJsonNull()) && !jsonObj.get("token").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `token` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token").toString()));
       }
-      if (jsonObj.get("token_type") != null && !jsonObj.get("token_type").isJsonPrimitive()) {
+      if ((jsonObj.get("token_type") != null && !jsonObj.get("token_type").isJsonNull()) && !jsonObj.get("token_type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `token_type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("token_type").toString()));
       }
   }

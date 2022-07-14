@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectArrival
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class ObjectArrival {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -977,31 +977,31 @@ public class ObjectArrival {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (jsonObj.get("net") != null && !jsonObj.get("net").isJsonPrimitive()) {
+      if ((jsonObj.get("net") != null && !jsonObj.get("net").isJsonNull()) && !jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
-      if (jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonPrimitive()) {
+      if ((jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonNull()) && !jsonObj.get("sta").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
       }
-      if (jsonObj.get("cha") != null && !jsonObj.get("cha").isJsonPrimitive()) {
+      if ((jsonObj.get("cha") != null && !jsonObj.get("cha").isJsonNull()) && !jsonObj.get("cha").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `cha` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cha").toString()));
       }
-      if (jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonPrimitive()) {
+      if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
       }
-      if (jsonObj.get("isc_code") != null && !jsonObj.get("isc_code").isJsonPrimitive()) {
+      if ((jsonObj.get("isc_code") != null && !jsonObj.get("isc_code").isJsonNull()) && !jsonObj.get("isc_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `isc_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("isc_code").toString()));
       }
       // validate the optional field `localspace`
-      if (jsonObj.getAsJsonObject("localspace") != null) {
+      if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
         ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       // validate the optional field `provenance`
-      if (jsonObj.getAsJsonObject("provenance") != null) {
+      if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
         ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
       // validate the optional field `pick_ew`
-      if (jsonObj.getAsJsonObject("pick_ew") != null) {
+      if (jsonObj.get("pick_ew") != null && !jsonObj.get("pick_ew").isJsonNull()) {
         ObjectPickEw.validateJsonObject(jsonObj.getAsJsonObject("pick_ew"));
       }
   }

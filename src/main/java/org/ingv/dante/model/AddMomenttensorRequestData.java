@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * AddMomenttensorRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class AddMomenttensorRequestData {
   public static final String SERIALIZED_NAME_FOCALMECHANISMID = "focalmechanismid";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMID)
@@ -184,7 +184,7 @@ public class AddMomenttensorRequestData {
         }
       }
       // validate the optional field `momenttensor`
-      if (jsonObj.getAsJsonObject("momenttensor") != null) {
+      if (jsonObj.get("momenttensor") != null && !jsonObj.get("momenttensor").isJsonNull()) {
         ObjectMomenttensor.validateJsonObject(jsonObj.getAsJsonObject("momenttensor"));
       }
   }

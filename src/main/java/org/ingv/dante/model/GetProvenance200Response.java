@@ -25,6 +25,8 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.ingv.dante.model.GetProvenance200ResponseAllOf;
+import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.MetaDefinitionLinksInner;
 import org.ingv.dante.model.ObjectTableProvenance;
 
@@ -51,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * GetProvenance200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class GetProvenance200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -532,19 +534,19 @@ public class GetProvenance200Response {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetProvenance200Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      if (jsonObj.get("current_page") != null && !jsonObj.get("current_page").isJsonPrimitive()) {
+      if ((jsonObj.get("current_page") != null && !jsonObj.get("current_page").isJsonNull()) && !jsonObj.get("current_page").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `current_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("current_page").toString()));
       }
-      if (jsonObj.get("first_page_url") != null && !jsonObj.get("first_page_url").isJsonPrimitive()) {
+      if ((jsonObj.get("first_page_url") != null && !jsonObj.get("first_page_url").isJsonNull()) && !jsonObj.get("first_page_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `first_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("first_page_url").toString()));
       }
-      if (jsonObj.get("from") != null && !jsonObj.get("from").isJsonPrimitive()) {
+      if ((jsonObj.get("from") != null && !jsonObj.get("from").isJsonNull()) && !jsonObj.get("from").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `from` to be a primitive type in the JSON string but got `%s`", jsonObj.get("from").toString()));
       }
-      if (jsonObj.get("last_page") != null && !jsonObj.get("last_page").isJsonPrimitive()) {
+      if ((jsonObj.get("last_page") != null && !jsonObj.get("last_page").isJsonNull()) && !jsonObj.get("last_page").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `last_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_page").toString()));
       }
-      if (jsonObj.get("last_page_url") != null && !jsonObj.get("last_page_url").isJsonPrimitive()) {
+      if ((jsonObj.get("last_page_url") != null && !jsonObj.get("last_page_url").isJsonNull()) && !jsonObj.get("last_page_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `last_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("last_page_url").toString()));
       }
       JsonArray jsonArraylinks = jsonObj.getAsJsonArray("links");
@@ -559,22 +561,22 @@ public class GetProvenance200Response {
           MetaDefinitionLinksInner.validateJsonObject(jsonArraylinks.get(i).getAsJsonObject());
         };
       }
-      if (jsonObj.get("next_page_url") != null && !jsonObj.get("next_page_url").isJsonPrimitive()) {
+      if ((jsonObj.get("next_page_url") != null && !jsonObj.get("next_page_url").isJsonNull()) && !jsonObj.get("next_page_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `next_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("next_page_url").toString()));
       }
-      if (jsonObj.get("path") != null && !jsonObj.get("path").isJsonPrimitive()) {
+      if ((jsonObj.get("path") != null && !jsonObj.get("path").isJsonNull()) && !jsonObj.get("path").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
       }
-      if (jsonObj.get("per_page") != null && !jsonObj.get("per_page").isJsonPrimitive()) {
+      if ((jsonObj.get("per_page") != null && !jsonObj.get("per_page").isJsonNull()) && !jsonObj.get("per_page").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `per_page` to be a primitive type in the JSON string but got `%s`", jsonObj.get("per_page").toString()));
       }
-      if (jsonObj.get("prev_page_url") != null && !jsonObj.get("prev_page_url").isJsonPrimitive()) {
+      if ((jsonObj.get("prev_page_url") != null && !jsonObj.get("prev_page_url").isJsonNull()) && !jsonObj.get("prev_page_url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `prev_page_url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("prev_page_url").toString()));
       }
-      if (jsonObj.get("to") != null && !jsonObj.get("to").isJsonPrimitive()) {
+      if ((jsonObj.get("to") != null && !jsonObj.get("to").isJsonNull()) && !jsonObj.get("to").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `to` to be a primitive type in the JSON string but got `%s`", jsonObj.get("to").toString()));
       }
-      if (jsonObj.get("total") != null && !jsonObj.get("total").isJsonPrimitive()) {
+      if ((jsonObj.get("total") != null && !jsonObj.get("total").isJsonNull()) && !jsonObj.get("total").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `total` to be a primitive type in the JSON string but got `%s`", jsonObj.get("total").toString()));
       }
       JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");

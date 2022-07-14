@@ -26,6 +26,7 @@ import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectMomenttensorRcmt;
 import org.ingv.dante.model.ObjectMomenttensorTdmt;
 import org.ingv.dante.model.ObjectProvenance;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 

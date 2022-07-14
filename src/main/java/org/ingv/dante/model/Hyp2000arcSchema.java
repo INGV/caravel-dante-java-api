@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class Hyp2000arcSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
@@ -185,11 +185,11 @@ public class Hyp2000arcSchema {
         }
       }
       // validate the optional field `ewMessage`
-      if (jsonObj.getAsJsonObject("ewMessage") != null) {
+      if (jsonObj.get("ewMessage") != null && !jsonObj.get("ewMessage").isJsonNull()) {
         Hyp2000arcSchemaEwMessage.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
       }
       // validate the optional field `ewLogo`
-      if (jsonObj.getAsJsonObject("ewLogo") != null) {
+      if (jsonObj.get("ewLogo") != null && !jsonObj.get("ewLogo").isJsonNull()) {
         Hyp2000arcSchemaEwLogo.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
       }
   }

@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * AddHEwPickScnlRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-13T14:42:12.986827Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:57:14.873725135Z[GMT]")
 public class AddHEwPickScnlRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -154,7 +154,7 @@ public class AddHEwPickScnlRequest {
         }
       }
       // validate the optional field `data`
-      if (jsonObj.getAsJsonObject("data") != null) {
+      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
         PickScnlSchema.validateJsonObject(jsonObj.getAsJsonObject("data"));
       }
   }
