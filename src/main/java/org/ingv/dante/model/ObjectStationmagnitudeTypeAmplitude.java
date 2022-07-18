@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStationmagnitudeTypeAmplitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T12:56:27.378051420Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-18T09:25:03.973825676Z[GMT]")
 public class ObjectStationmagnitudeTypeAmplitude {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
