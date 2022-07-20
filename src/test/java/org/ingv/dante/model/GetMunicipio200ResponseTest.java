@@ -11,47 +11,43 @@
  */
 
 
-package org.ingv.dante;
+package org.ingv.dante.model;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-20T13:17:30.567177738Z[GMT]")
-public class Pair {
-    private String name = "";
-    private String value = "";
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.GetMunicipio200ResponseDataInner;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-    public Pair (String name, String value) {
-        setName(name);
-        setValue(value);
+
+/**
+ * Model tests for GetMunicipio200Response
+ */
+public class GetMunicipio200ResponseTest {
+    private final GetMunicipio200Response model = new GetMunicipio200Response();
+
+    /**
+     * Model tests for GetMunicipio200Response
+     */
+    @Test
+    public void testGetMunicipio200Response() {
+        // TODO: test GetMunicipio200Response
     }
 
-    private void setName(String name) {
-        if (!isValidString(name)) {
-            return;
-        }
-
-        this.name = name;
+    /**
+     * Test the property 'data'
+     */
+    @Test
+    public void dataTest() {
+        // TODO: test data
     }
 
-    private void setValue(String value) {
-        if (!isValidString(value)) {
-            return;
-        }
-
-        this.value = value;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public String getValue() {
-        return this.value;
-    }
-
-    private boolean isValidString(String arg) {
-        if (arg == null) {
-            return false;
-        }
-
-        return true;
-    }
 }

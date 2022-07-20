@@ -18,6 +18,7 @@ import org.ingv.dante.model.GetEvent200Response;
 import org.ingv.dante.model.GetEventsPref200Response;
 import org.ingv.dante.model.GetLocalspace200Response;
 import org.ingv.dante.model.GetMunicipiDistanceKmPopolazione200Response;
+import org.ingv.dante.model.GetMunicipio200Response;
 import org.ingv.dante.model.GetOriginFlag200Response;
 import org.ingv.dante.model.GetProvenance200Response;
 import org.ingv.dante.model.GetRegionName200Response;
@@ -163,6 +164,20 @@ public class GetApiTest {
         Double lat = null;
         Double lon = null;
         GetMunicipiDistanceKmPopolazione200Response response = api.getMunicipiDistanceKmPopolazione(mindistance, maxdistance, minpopolazione, lat, lon);
+        // TODO: test validations
+    }
+
+    /**
+     * This API returns the Italian \&quot;municipio\&quot; information by name.
+     *
+     * This API returns the Italian \&quot;municipio\&quot; information, by name.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getMunicipioTest() throws ApiException {
+        String name = null;
+        GetMunicipio200Response response = api.getMunicipio(name);
         // TODO: test validations
     }
 

@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipiDistanceKmPopolazione200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-20T11:42:53.094520229Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-20T13:17:30.567177738Z[GMT]")
 public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -95,11 +95,11 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   }
 
    /**
-   * Municipio name.
+   * Italian \&quot;municipio\&quot; name.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Ladispoli", value = "Municipio name.")
+  @ApiModelProperty(example = "Ladispoli", value = "Italian \"municipio\" name.")
 
   public String getName() {
     return name;
@@ -118,11 +118,11 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   }
 
    /**
-   * Sigla Provincia.
+   * Italian province abbreviation.
    * @return siglaPro
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "RM", value = "Sigla Provincia.")
+  @ApiModelProperty(example = "RM", value = "Italian province abbreviation.")
 
   public String getSiglaPro() {
     return siglaPro;
@@ -141,11 +141,11 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   }
 
    /**
-   * Nome Provincia.
+   * Italian province name.
    * @return nomePro
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Roma", value = "Nome Provincia.")
+  @ApiModelProperty(example = "Roma", value = "Italian province name.")
 
   public String getNomePro() {
     return nomePro;

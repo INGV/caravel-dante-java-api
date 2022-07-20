@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.AddOrigin201ResponseDataOriginsInner;
+import org.ingv.dante.model.GetMunicipio200ResponseDataInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,45 +48,45 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * AddOrigin201ResponseData
+ * GetMunicipio200Response
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-20T13:17:30.567177738Z[GMT]")
-public class AddOrigin201ResponseData {
-  public static final String SERIALIZED_NAME_ORIGINS = "origins";
-  @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<AddOrigin201ResponseDataOriginsInner> origins = null;
+public class GetMunicipio200Response {
+  public static final String SERIALIZED_NAME_DATA = "data";
+  @SerializedName(SERIALIZED_NAME_DATA)
+  private List<GetMunicipio200ResponseDataInner> data = null;
 
-  public AddOrigin201ResponseData() { 
+  public GetMunicipio200Response() { 
   }
 
-  public AddOrigin201ResponseData origins(List<AddOrigin201ResponseDataOriginsInner> origins) {
+  public GetMunicipio200Response data(List<GetMunicipio200ResponseDataInner> data) {
     
-    this.origins = origins;
+    this.data = data;
     return this;
   }
 
-  public AddOrigin201ResponseData addOriginsItem(AddOrigin201ResponseDataOriginsInner originsItem) {
-    if (this.origins == null) {
-      this.origins = new ArrayList<>();
+  public GetMunicipio200Response addDataItem(GetMunicipio200ResponseDataInner dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<>();
     }
-    this.origins.add(originsItem);
+    this.data.add(dataItem);
     return this;
   }
 
    /**
-   * Get origins
-   * @return origins
+   * Get data
+   * @return data
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<AddOrigin201ResponseDataOriginsInner> getOrigins() {
-    return origins;
+  public List<GetMunicipio200ResponseDataInner> getData() {
+    return data;
   }
 
 
-  public void setOrigins(List<AddOrigin201ResponseDataOriginsInner> origins) {
-    this.origins = origins;
+  public void setData(List<GetMunicipio200ResponseDataInner> data) {
+    this.data = data;
   }
 
 
@@ -99,20 +99,20 @@ public class AddOrigin201ResponseData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AddOrigin201ResponseData addOrigin201ResponseData = (AddOrigin201ResponseData) o;
-    return Objects.equals(this.origins, addOrigin201ResponseData.origins);
+    GetMunicipio200Response getMunicipio200Response = (GetMunicipio200Response) o;
+    return Objects.equals(this.data, getMunicipio200Response.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(origins);
+    return Objects.hash(data);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AddOrigin201ResponseData {\n");
-    sb.append("    origins: ").append(toIndentedString(origins)).append("\n");
+    sb.append("class GetMunicipio200Response {\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -135,7 +135,7 @@ public class AddOrigin201ResponseData {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("origins");
+    openapiFields.add("data");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -145,34 +145,34 @@ public class AddOrigin201ResponseData {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddOrigin201ResponseData
+  * @throws IOException if the JSON Object is invalid with respect to GetMunicipio200Response
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (AddOrigin201ResponseData.openapiRequiredFields.isEmpty()) {
+        if (GetMunicipio200Response.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AddOrigin201ResponseData is not found in the empty JSON string", AddOrigin201ResponseData.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in GetMunicipio200Response is not found in the empty JSON string", GetMunicipio200Response.openapiRequiredFields.toString()));
         }
       }
 
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
-        if (!AddOrigin201ResponseData.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `AddOrigin201ResponseData` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        if (!GetMunicipio200Response.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GetMunicipio200Response` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-      JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
-      if (jsonArrayorigins != null) {
+      JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+      if (jsonArraydata != null) {
         // ensure the json data is an array
-        if (!jsonObj.get("origins").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
+        if (!jsonObj.get("data").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
         }
 
-        // validate the optional field `origins` (array)
-        for (int i = 0; i < jsonArrayorigins.size(); i++) {
-          AddOrigin201ResponseDataOriginsInner.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
+        // validate the optional field `data` (array)
+        for (int i = 0; i < jsonArraydata.size(); i++) {
+          GetMunicipio200ResponseDataInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
         };
       }
   }
@@ -181,22 +181,22 @@ public class AddOrigin201ResponseData {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!AddOrigin201ResponseData.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'AddOrigin201ResponseData' and its subtypes
+       if (!GetMunicipio200Response.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'GetMunicipio200Response' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<AddOrigin201ResponseData> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(AddOrigin201ResponseData.class));
+       final TypeAdapter<GetMunicipio200Response> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(GetMunicipio200Response.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<AddOrigin201ResponseData>() {
+       return (TypeAdapter<T>) new TypeAdapter<GetMunicipio200Response>() {
            @Override
-           public void write(JsonWriter out, AddOrigin201ResponseData value) throws IOException {
+           public void write(JsonWriter out, GetMunicipio200Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public AddOrigin201ResponseData read(JsonReader in) throws IOException {
+           public GetMunicipio200Response read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
@@ -207,18 +207,18 @@ public class AddOrigin201ResponseData {
   }
 
  /**
-  * Create an instance of AddOrigin201ResponseData given an JSON string
+  * Create an instance of GetMunicipio200Response given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of AddOrigin201ResponseData
-  * @throws IOException if the JSON string is invalid with respect to AddOrigin201ResponseData
+  * @return An instance of GetMunicipio200Response
+  * @throws IOException if the JSON string is invalid with respect to GetMunicipio200Response
   */
-  public static AddOrigin201ResponseData fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, AddOrigin201ResponseData.class);
+  public static GetMunicipio200Response fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, GetMunicipio200Response.class);
   }
 
  /**
-  * Convert an instance of AddOrigin201ResponseData to an JSON string
+  * Convert an instance of GetMunicipio200Response to an JSON string
   *
   * @return JSON string
   */
