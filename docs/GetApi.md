@@ -9,6 +9,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 | [**getEventsPref**](GetApi.md#getEventsPref) | **GET** /quakedb/v1/events-pref | This API returns the preferred origin and the preferred magnitude from all clusterd events. |
 | [**getLocalspace**](GetApi.md#getLocalspace) | **GET** /quakedb/table/v1/localspace | This API returns all the localspace(s). |
 | [**getMunicipiDistanceKmPopolazione**](GetApi.md#getMunicipiDistanceKmPopolazione) | **GET** /boundaries/v1/municipi-distance-km-popolazione | This API returns the municipi-distance-km-popolazione used at INGV. |
+| [**getMunicipio**](GetApi.md#getMunicipio) | **GET** /boundaries/v1/municipio | This API returns the Italian \&quot;municipio\&quot; information by name. |
 | [**getOriginFlag**](GetApi.md#getOriginFlag) | **GET** /quakedb/v1/origin-flag | This API returns the all the flags assosiated to the originid. |
 | [**getOrigins**](GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all origins and magnitudes. |
 | [**getProvenance**](GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s). |
@@ -93,7 +94,7 @@ No authorization required
 
 <a name="getEvents"></a>
 # **getEvents**
-> GetEventsPref200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit)
+> GetEventsPref200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns the preferred origin and the preferred magnitude from the same instance.
 
@@ -138,8 +139,9 @@ public class Example {
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
+    Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsPref200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit);
+      GetEventsPref200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvents");
@@ -180,6 +182,7 @@ public class Example {
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
+| **page** | **Integer**| Pagination. | [optional] |
 
 ### Return type
 
@@ -207,7 +210,7 @@ No authorization required
 
 <a name="getEventsPref"></a>
 # **getEventsPref**
-> GetEventsPref200Response getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit)
+> GetEventsPref200Response getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -252,8 +255,9 @@ public class Example {
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
+    Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsPref200Response result = apiInstance.getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit);
+      GetEventsPref200Response result = apiInstance.getEventsPref(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEventsPref");
@@ -294,6 +298,7 @@ public class Example {
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
+| **page** | **Integer**| Pagination. | [optional] |
 
 ### Return type
 
@@ -459,6 +464,74 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
+<a name="getMunicipio"></a>
+# **getMunicipio**
+> GetMunicipio200Response getMunicipio(name)
+
+This API returns the Italian \&quot;municipio\&quot; information by name.
+
+This API returns the Italian \&quot;municipio\&quot; information, by name.
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.GetApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    GetApi apiInstance = new GetApi(defaultClient);
+    String name = "name_example"; // String | Specify the Italian \"municipio\" name.
+    try {
+      GetMunicipio200Response result = apiInstance.getMunicipio(name);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GetApi#getMunicipio");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **name** | **String**| Specify the Italian \&quot;municipio\&quot; name. | |
+
+### Return type
+
+[**GetMunicipio200Response**](GetMunicipio200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
 <a name="getOriginFlag"></a>
 # **getOriginFlag**
 > GetOriginFlag200Response getOriginFlag(originid)
@@ -529,7 +602,7 @@ No authorization required
 
 <a name="getOrigins"></a>
 # **getOrigins**
-> GetEventsPref200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit)
+> GetEventsPref200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all origins and magnitudes.
 
@@ -574,8 +647,9 @@ public class Example {
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
+    Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsPref200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit);
+      GetEventsPref200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOrigins");
@@ -616,6 +690,7 @@ public class Example {
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
+| **page** | **Integer**| Pagination. | [optional] |
 
 ### Return type
 

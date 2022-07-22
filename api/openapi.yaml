@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: http://terremoti.ingv.it/webservices_and_software
   title: Dante Web Services
-  version: 2.47.0
+  version: 2.48.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -389,6 +389,13 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: Pagination.
+        in: query
+        name: page
+        required: false
+        schema:
+          format: int32
+          type: integer
       responses:
         "400":
           content:
@@ -640,6 +647,13 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: Pagination.
+        in: query
+        name: page
+        required: false
+        schema:
+          format: int32
+          type: integer
       responses:
         "400":
           content:
@@ -886,6 +900,13 @@ paths:
       - description: Limit the results to the specified number of records.
         in: query
         name: limit
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Pagination.
+        in: query
+        name: page
         required: false
         schema:
           format: int32
@@ -3300,6 +3321,86 @@ paths:
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
       summary: This API returns the municipi-distance-km-popolazione used at INGV.
+      tags:
+      - get
+      x-accepts: application/json
+  /boundaries/v1/municipio:
+    get:
+      description: "This API returns the Italian \"municipio\" information, by name."
+      operationId: getMunicipio
+      parameters:
+      - description: Specify the Italian "municipio" name.
+        in: query
+        name: name
+        required: true
+        schema:
+          format: string
+          type: string
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getMunicipio_200_response'
+          description: Operation successful
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: This API returns the Italian "municipio" information by name.
       tags:
       - get
       x-accepts: application/json
@@ -8579,14 +8680,11 @@ components:
       type: object
     MetaDefinition:
       example:
-        first_page_url: http://localhost:8087/page=1
         path: http://localhost:8087
-        per_page: "4000"
-        total: "10000"
-        last_page: "3"
-        last_page_url: http://localhost:8087/page=3
-        next_page_url: http://localhost:8087/page=3
-        from: "1"
+        per_page: 4000
+        total: 10000
+        last_page: 3
+        from: 1
         links:
         - active: "true"
           label: "2"
@@ -8594,58 +8692,47 @@ components:
         - active: "true"
           label: "2"
           url: http://localhost:8087
-        to: "4000"
-        prev_page_url: http://localhost:8087/page=1
-        current_page: "2"
+        to: 4000
+        current_page: 2
       properties:
         current_page:
           description: Current page.
-          example: "2"
-          type: string
-        first_page_url:
-          description: URL base path.
-          example: http://localhost:8087/page=1
-          type: string
+          example: 2
+          format: int32
+          type: integer
         from:
           description: Showed record from.
-          example: "1"
-          type: string
+          example: 1
+          format: int32
+          type: integer
         last_page:
           description: Last page.
-          example: "3"
-          type: string
-        last_page_url:
-          description: URL base path.
-          example: http://localhost:8087/page=3
-          type: string
+          example: 3
+          format: int32
+          type: integer
         links:
           items:
             $ref: '#/components/schemas/MetaDefinition_links_inner'
           type: array
-        next_page_url:
-          description: URL base path.
-          example: http://localhost:8087/page=3
-          type: string
         path:
           description: URL base path.
           example: http://localhost:8087
           type: string
         per_page:
           description: Record per page.
-          example: "4000"
-          type: string
-        prev_page_url:
-          description: URL base path.
-          example: http://localhost:8087/page=1
-          type: string
+          example: 4000
+          format: int32
+          type: integer
         to:
           description: Showed record to.
-          example: "4000"
-          type: string
+          example: 4000
+          format: int32
+          type: integer
         total:
           description: Total records.
-          example: "10000"
-          type: string
+          example: 10000
+          format: int32
+          type: integer
       type: object
     LinksDefinition:
       example:
@@ -8661,14 +8748,17 @@ components:
         last:
           description: URL last page.
           example: http://localhost:8087/api/quakedb/v1/events_pref/?page=4
+          nullable: true
           type: string
         prev:
           description: URL previous page.
           example: http://localhost:8087/api/quakedb/v1/events_pref/?page=1
+          nullable: true
           type: string
         next:
           description: URL next page.
           example: http://localhost:8087/api/quakedb/v1/events_pref/?page=3
+          nullable: true
           type: string
       type: object
     Problem:
@@ -8777,10 +8867,31 @@ components:
       example: hew1_mole
       nullable: true
       type: string
+    municipio__name:
+      description: Italian "municipio" name.
+      example: Ladispoli
+      type: string
+    municipio__sigla_pro:
+      description: Italian province abbreviation.
+      example: RM
+      type: string
+    municipio__prov_name:
+      description: Italian province name.
+      example: Roma
+      type: string
+    municipio__population:
+      description: Popolazione.
+      example: 41078
+      format: int64
+      type: integer
     azimutal_gap:
       description: Azimutal gap | float4
       format: float
       type: number
+    municipio__region_name:
+      description: Italian region name.
+      example: Lazio
+      type: string
     type_event__name:
       description: Name | varchar(255)
       example: earthquake
@@ -9847,14 +9958,11 @@ components:
           id: 14932631
           event_group_id: 0
         meta:
-          first_page_url: http://localhost:8087/page=1
           path: http://localhost:8087
-          per_page: "4000"
-          total: "10000"
-          last_page: "3"
-          last_page_url: http://localhost:8087/page=3
-          next_page_url: http://localhost:8087/page=3
-          from: "1"
+          per_page: 4000
+          total: 10000
+          last_page: 3
+          from: 1
           links:
           - active: "true"
             label: "2"
@@ -9862,9 +9970,8 @@ components:
           - active: "true"
             label: "2"
             url: http://localhost:8087
-          to: "4000"
-          prev_page_url: http://localhost:8087/page=1
-          current_page: "2"
+          to: 4000
+          current_page: 2
         links:
           next: http://localhost:8087/api/quakedb/v1/events_pref/?page=3
           last: http://localhost:8087/api/quakedb/v1/events_pref/?page=4
@@ -12636,15 +12743,15 @@ components:
         lat: 45.492599
       properties:
         name:
-          description: Municipio name.
+          description: Italian "municipio" name.
           example: Ladispoli
           type: string
         sigla_pro:
-          description: Sigla Provincia.
+          description: Italian province abbreviation.
           example: RM
           type: string
         nome_pro:
-          description: Nome Provincia.
+          description: Italian province name.
           example: Roma
           type: string
         popolazione:
@@ -12716,6 +12823,86 @@ components:
         data:
           items:
             $ref: '#/components/schemas/getMunicipiDistanceKmPopolazione_200_response_data_inner'
+          type: array
+      type: object
+    getMunicipio_200_response_data_inner:
+      example:
+        prov_name: Roma
+        name: Ladispoli
+        prov_name_abbr: RM
+        region_name: Lazio
+        lon: 9.19289
+        lat: 45.492599
+        population: 41078
+      properties:
+        name:
+          description: Italian "municipio" name.
+          example: Ladispoli
+          type: string
+        prov_name_abbr:
+          description: Italian province abbreviation.
+          example: RM
+          type: string
+        prov_name:
+          description: Italian province name.
+          example: Roma
+          type: string
+        region_name:
+          description: Italian region name.
+          example: Lazio
+          type: string
+        population:
+          description: Popolazione.
+          example: 41078
+          format: int64
+          type: integer
+        lat:
+          description: |-
+            Latitude of a point expressed in:
+
+            * the ETRS89 system for Italian and European territories
+            * and in WGS84 for the others.
+          example: 45.492599
+          externalDocs:
+            url: http://dati.gov.it/onto/clvapit#long
+          format: double
+          maximum: 90
+          minimum: -90
+          type: number
+        lon:
+          description: |-
+            Longitude of a point expressed in:
+
+            * the ETRS89 system for Italian and European territories
+            * and in WGS84 for the others.
+          example: 9.19289
+          externalDocs:
+            url: http://dati.gov.it/onto/clvapit#long
+          format: double
+          maximum: 180
+          minimum: -180
+          type: number
+    getMunicipio_200_response:
+      example:
+        data:
+        - prov_name: Roma
+          name: Ladispoli
+          prov_name_abbr: RM
+          region_name: Lazio
+          lon: 9.19289
+          lat: 45.492599
+          population: 41078
+        - prov_name: Roma
+          name: Ladispoli
+          prov_name_abbr: RM
+          region_name: Lazio
+          lon: 9.19289
+          lat: 45.492599
+          population: 41078
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/getMunicipio_200_response_data_inner'
           type: array
       type: object
     updateEvent_request_data_event:
@@ -13265,6 +13452,7 @@ components:
         url:
           description: URL base path.
           example: http://localhost:8087
+          nullable: true
           type: string
         label:
           description: Page label.

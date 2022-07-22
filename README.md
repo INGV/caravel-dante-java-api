@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 2.47.0
-  - Build date: 2022-07-20T13:19:11.779000927Z[GMT]
+- API version: 2.48.0
+  - Build date: 2022-07-22T13:56:02.048254860Z[GMT]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>2.47.0</version>
+  <version>2.48.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.47.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.48.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-2.47.0.jar`
+* `target/java-openapi-generator-cli-dante-2.48.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -154,6 +154,7 @@ Class | Method | HTTP request | Description
 *GetApi* | [**getEventsPref**](docs/GetApi.md#getEventsPref) | **GET** /quakedb/v1/events-pref | This API returns the preferred origin and the preferred magnitude from all clusterd events.
 *GetApi* | [**getLocalspace**](docs/GetApi.md#getLocalspace) | **GET** /quakedb/table/v1/localspace | This API returns all the localspace(s).
 *GetApi* | [**getMunicipiDistanceKmPopolazione**](docs/GetApi.md#getMunicipiDistanceKmPopolazione) | **GET** /boundaries/v1/municipi-distance-km-popolazione | This API returns the municipi-distance-km-popolazione used at INGV.
+*GetApi* | [**getMunicipio**](docs/GetApi.md#getMunicipio) | **GET** /boundaries/v1/municipio | This API returns the Italian \&quot;municipio\&quot; information by name.
 *GetApi* | [**getOriginFlag**](docs/GetApi.md#getOriginFlag) | **GET** /quakedb/v1/origin-flag | This API returns the all the flags assosiated to the originid.
 *GetApi* | [**getOrigins**](docs/GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all origins and magnitudes.
 *GetApi* | [**getProvenance**](docs/GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s).
@@ -235,6 +236,8 @@ Class | Method | HTTP request | Description
  - [GetLocalspace200ResponseAllOf](docs/GetLocalspace200ResponseAllOf.md)
  - [GetMunicipiDistanceKmPopolazione200Response](docs/GetMunicipiDistanceKmPopolazione200Response.md)
  - [GetMunicipiDistanceKmPopolazione200ResponseDataInner](docs/GetMunicipiDistanceKmPopolazione200ResponseDataInner.md)
+ - [GetMunicipio200Response](docs/GetMunicipio200Response.md)
+ - [GetMunicipio200ResponseDataInner](docs/GetMunicipio200ResponseDataInner.md)
  - [GetOriginFlag200Response](docs/GetOriginFlag200Response.md)
  - [GetProvenance200Response](docs/GetProvenance200Response.md)
  - [GetProvenance200ResponseAllOf](docs/GetProvenance200ResponseAllOf.md)

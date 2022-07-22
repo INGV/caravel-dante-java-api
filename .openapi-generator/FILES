@@ -58,6 +58,8 @@ docs/GetLocalspace200Response.md
 docs/GetLocalspace200ResponseAllOf.md
 docs/GetMunicipiDistanceKmPopolazione200Response.md
 docs/GetMunicipiDistanceKmPopolazione200ResponseDataInner.md
+docs/GetMunicipio200Response.md
+docs/GetMunicipio200ResponseDataInner.md
 docs/GetOriginFlag200Response.md
 docs/GetProvenance200Response.md
 docs/GetProvenance200ResponseAllOf.md
@@ -227,6 +229,8 @@ src/main/java/org/ingv/dante/model/GetLocalspace200Response.java
 src/main/java/org/ingv/dante/model/GetLocalspace200ResponseAllOf.java
 src/main/java/org/ingv/dante/model/GetMunicipiDistanceKmPopolazione200Response.java
 src/main/java/org/ingv/dante/model/GetMunicipiDistanceKmPopolazione200ResponseDataInner.java
+src/main/java/org/ingv/dante/model/GetMunicipio200Response.java
+src/main/java/org/ingv/dante/model/GetMunicipio200ResponseDataInner.java
 src/main/java/org/ingv/dante/model/GetOriginFlag200Response.java
 src/main/java/org/ingv/dante/model/GetProvenance200Response.java
 src/main/java/org/ingv/dante/model/GetProvenance200ResponseAllOf.java
@@ -366,6 +370,8 @@ src/test/java/org/ingv/dante/model/GetLocalspace200ResponseAllOfTest.java
 src/test/java/org/ingv/dante/model/GetLocalspace200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetMunicipiDistanceKmPopolazione200ResponseDataInnerTest.java
 src/test/java/org/ingv/dante/model/GetMunicipiDistanceKmPopolazione200ResponseTest.java
+src/test/java/org/ingv/dante/model/GetMunicipio200ResponseDataInnerTest.java
+src/test/java/org/ingv/dante/model/GetMunicipio200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetOriginFlag200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetProvenance200ResponseAllOfTest.java
 src/test/java/org/ingv/dante/model/GetProvenance200ResponseTest.java
