@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStationmagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-22T13:55:05.929944844Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-22T14:37:08.859407145Z[GMT]")
 public class ObjectStationmagnitude {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -175,11 +175,15 @@ public class ObjectStationmagnitude {
 
   
   public ObjectStationmagnitude(
+     String category, 
+     OffsetDateTime timewindowReference, 
      Long id, 
      OffsetDateTime modified, 
      OffsetDateTime inserted
   ) {
     this();
+    this.category = category;
+    this.timewindowReference = timewindowReference;
     this.id = id;
     this.modified = modified;
     this.inserted = inserted;
@@ -277,12 +281,6 @@ public class ObjectStationmagnitude {
   }
 
 
-  public ObjectStationmagnitude category(String category) {
-    
-    this.category = category;
-    return this;
-  }
-
    /**
    * The way the waveform trace is evaluated to derive an amplitude value.
    * @return category
@@ -295,16 +293,7 @@ public class ObjectStationmagnitude {
   }
 
 
-  public void setCategory(String category) {
-    this.category = category;
-  }
 
-
-  public ObjectStationmagnitude timewindowReference(OffsetDateTime timewindowReference) {
-    
-    this.timewindowReference = timewindowReference;
-    return this;
-  }
 
    /**
    * Describes a time window for amplitude measurements, given by a central point in time
@@ -318,9 +307,6 @@ public class ObjectStationmagnitude {
   }
 
 
-  public void setTimewindowReference(OffsetDateTime timewindowReference) {
-    this.timewindowReference = timewindowReference;
-  }
 
 
    /**

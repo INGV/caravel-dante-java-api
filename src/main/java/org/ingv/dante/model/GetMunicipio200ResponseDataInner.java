@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipio200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-22T13:55:05.929944844Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-22T14:37:08.859407145Z[GMT]")
 public class GetMunicipio200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)

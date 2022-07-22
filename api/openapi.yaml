@@ -8136,11 +8136,13 @@ components:
           description: The way the waveform trace is evaluated to derive an amplitude
             value.
           example: Other
+          readOnly: true
           type: string
         timewindow_reference:
           description: "Describes a time window for amplitude measurements, given\
             \ by a central point in time"
           format: date-time
+          readOnly: true
           type: string
         id:
           description: Unique incremental id | bigint(20)
