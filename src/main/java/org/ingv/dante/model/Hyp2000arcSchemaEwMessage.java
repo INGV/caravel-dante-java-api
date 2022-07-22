@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-22T11:20:02.430147637Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-22T12:33:49.442978869Z[GMT]")
 public class Hyp2000arcSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
