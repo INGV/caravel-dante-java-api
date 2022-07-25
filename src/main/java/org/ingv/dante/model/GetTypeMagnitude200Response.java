@@ -25,8 +25,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.GetTypeMagnitude200ResponseAllOf;
-import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.MetaDefinitionLinksInner;
 import org.ingv.dante.model.ObjectTableTypeMagnitude;
 
@@ -53,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeMagnitude200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class GetTypeMagnitude200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -91,7 +89,7 @@ public class GetTypeMagnitude200Response {
   @SerializedName(SERIALIZED_NAME_DATA)
   private List<ObjectTableTypeMagnitude> data = null;
 
-  public GetTypeMagnitude200Response() { 
+  public GetTypeMagnitude200Response() {
   }
 
   public GetTypeMagnitude200Response currentPage(Integer currentPage) {

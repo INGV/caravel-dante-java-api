@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorTdmt
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class ObjectMomenttensorTdmt {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -69,7 +69,7 @@ public class ObjectMomenttensorTdmt {
   @SerializedName(SERIALIZED_NAME_STATIONS)
   private List<ObjectMomenttensorTdmtStationsInner> stations = null;
 
-  public ObjectMomenttensorTdmt() { 
+  public ObjectMomenttensorTdmt() {
   }
 
   

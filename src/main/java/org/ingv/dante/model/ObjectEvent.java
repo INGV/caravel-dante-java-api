@@ -55,7 +55,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class ObjectEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -113,7 +113,7 @@ public class ObjectEvent {
   @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
   private List<ObjectStrongmotion> strongmotions = null;
 
-  public ObjectEvent() { 
+  public ObjectEvent() {
   }
 
   

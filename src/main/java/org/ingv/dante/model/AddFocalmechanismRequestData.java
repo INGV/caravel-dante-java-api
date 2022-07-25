@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddFocalmechanismRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class AddFocalmechanismRequestData {
   public static final String SERIALIZED_NAME_ORIGINID = "originid";
   @SerializedName(SERIALIZED_NAME_ORIGINID)
@@ -60,7 +60,7 @@ public class AddFocalmechanismRequestData {
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)
   private List<ObjectFocalmechanism> focalmechanisms = null;
 
-  public AddFocalmechanismRequestData() { 
+  public AddFocalmechanismRequestData() {
   }
 
   public AddFocalmechanismRequestData originid(Long originid) {

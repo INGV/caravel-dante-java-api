@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class MagnitudeSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -116,7 +116,7 @@ public class MagnitudeSchemaEwMessage {
   @SerializedName(SERIALIZED_NAME_PHASES)
   private List<MagnitudePhasesInner> phases = null;
 
-  public MagnitudeSchemaEwMessage() { 
+  public MagnitudeSchemaEwMessage() {
   }
 
   public MagnitudeSchemaEwMessage quakeId(Long quakeId) {

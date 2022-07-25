@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginFlagPostOutputOriginFlagInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class ObjectOriginFlagPostOutputOriginFlagInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -62,7 +62,7 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
   @SerializedName(SERIALIZED_NAME_VALUE)
   private String value;
 
-  public ObjectOriginFlagPostOutputOriginFlagInner() { 
+  public ObjectOriginFlagPostOutputOriginFlagInner() {
   }
 
   public ObjectOriginFlagPostOutputOriginFlagInner id(Long id) {

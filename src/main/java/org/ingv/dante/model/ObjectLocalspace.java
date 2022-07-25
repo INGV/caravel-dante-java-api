@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectLocalspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class ObjectLocalspace {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -58,7 +58,7 @@ public class ObjectLocalspace {
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
-  public ObjectLocalspace() { 
+  public ObjectLocalspace() {
   }
 
   public ObjectLocalspace name(String name) {

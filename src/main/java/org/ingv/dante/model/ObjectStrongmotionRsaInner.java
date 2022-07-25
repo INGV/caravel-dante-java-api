@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotionRsaInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class ObjectStrongmotionRsaInner {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
@@ -57,7 +57,7 @@ public class ObjectStrongmotionRsaInner {
   @SerializedName(SERIALIZED_NAME_PERIOD)
   private Double period;
 
-  public ObjectStrongmotionRsaInner() { 
+  public ObjectStrongmotionRsaInner() {
   }
 
   public ObjectStrongmotionRsaInner value(Double value) {

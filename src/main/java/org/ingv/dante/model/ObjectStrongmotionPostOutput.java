@@ -50,13 +50,13 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotionPostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class ObjectStrongmotionPostOutput {
   public static final String SERIALIZED_NAME_STRONGMOTIONS = "strongmotions";
   @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
   private List<AddEvent201ResponseDataEventOriginsInnerAllOf> strongmotions = null;
 
-  public ObjectStrongmotionPostOutput() { 
+  public ObjectStrongmotionPostOutput() {
   }
 
   public ObjectStrongmotionPostOutput strongmotions(List<AddEvent201ResponseDataEventOriginsInnerAllOf> strongmotions) {

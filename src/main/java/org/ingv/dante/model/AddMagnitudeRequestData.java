@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddMagnitudeRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class AddMagnitudeRequestData {
   public static final String SERIALIZED_NAME_ORIGINID = "originid";
   @SerializedName(SERIALIZED_NAME_ORIGINID)
@@ -60,7 +60,7 @@ public class AddMagnitudeRequestData {
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
   private List<ObjectMagnitude> magnitudes = null;
 
-  public AddMagnitudeRequestData() { 
+  public AddMagnitudeRequestData() {
   }
 
   public AddMagnitudeRequestData originid(Long originid) {

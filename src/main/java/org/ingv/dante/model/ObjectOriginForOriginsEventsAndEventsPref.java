@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginForOriginsEventsAndEventsPref
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class ObjectOriginForOriginsEventsAndEventsPref {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -141,7 +141,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
   private ObjectProvenaceForOriginsEventsAndEventsPref provenance;
 
-  public ObjectOriginForOriginsEventsAndEventsPref() { 
+  public ObjectOriginForOriginsEventsAndEventsPref() {
   }
 
   

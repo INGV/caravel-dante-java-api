@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorPostOutputMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class ObjectMomenttensorPostOutputMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -63,7 +63,7 @@ public class ObjectMomenttensorPostOutputMomenttensor {
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
   private AddEvent201ResponseDataEventLocalspace localspace;
 
-  public ObjectMomenttensorPostOutputMomenttensor() { 
+  public ObjectMomenttensorPostOutputMomenttensor() {
   }
 
   public ObjectMomenttensorPostOutputMomenttensor id(Long id) {

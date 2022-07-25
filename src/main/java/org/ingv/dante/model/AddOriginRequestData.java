@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddOriginRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class AddOriginRequestData {
   public static final String SERIALIZED_NAME_EVENTID = "eventid";
   @SerializedName(SERIALIZED_NAME_EVENTID)
@@ -60,7 +60,7 @@ public class AddOriginRequestData {
   @SerializedName(SERIALIZED_NAME_ORIGINS)
   private List<ObjectOrigin> origins = null;
 
-  public AddOriginRequestData() { 
+  public AddOriginRequestData() {
   }
 
   public AddOriginRequestData eventid(Long eventid) {

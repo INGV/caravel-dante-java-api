@@ -27,9 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
 import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
-import org.ingv.dante.model.ObjectFocalmechanismPostOutput;
 import org.ingv.dante.model.ObjectFocalmechanismPostOutputFocalmechanismsInner;
-import org.ingv.dante.model.ObjectMagnitudePostOutput;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -55,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEvent201ResponseDataEventOriginsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class AddEvent201ResponseDataEventOriginsInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -77,7 +75,7 @@ public class AddEvent201ResponseDataEventOriginsInner {
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)
   private List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms = null;
 
-  public AddEvent201ResponseDataEventOriginsInner() { 
+  public AddEvent201ResponseDataEventOriginsInner() {
   }
 
   public AddEvent201ResponseDataEventOriginsInner id(Long id) {

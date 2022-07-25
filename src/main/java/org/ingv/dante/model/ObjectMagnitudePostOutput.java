@@ -50,13 +50,13 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudePostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class ObjectMagnitudePostOutput {
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
   private List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes = null;
 
-  public ObjectMagnitudePostOutput() { 
+  public ObjectMagnitudePostOutput() {
   }
 
   public ObjectMagnitudePostOutput magnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {

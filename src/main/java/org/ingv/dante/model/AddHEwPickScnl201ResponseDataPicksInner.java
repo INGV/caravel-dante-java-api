@@ -24,8 +24,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
-import org.ingv.dante.model.AddHEwPickScnl201ResponseDataPicksInnerAllOf;
 import org.ingv.dante.model.AddOrigin201ResponseDataOriginsInnerAllOf;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -52,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddHEwPickScnl201ResponseDataPicksInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class AddHEwPickScnl201ResponseDataPicksInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -70,7 +68,7 @@ public class AddHEwPickScnl201ResponseDataPicksInner {
   @SerializedName(SERIALIZED_NAME_PICK_EW)
   private AddOrigin201ResponseDataOriginsInnerAllOf pickEw;
 
-  public AddHEwPickScnl201ResponseDataPicksInner() { 
+  public AddHEwPickScnl201ResponseDataPicksInner() {
   }
 
   public AddHEwPickScnl201ResponseDataPicksInner id(Long id) {

@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class MagnitudeSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
@@ -59,7 +59,7 @@ public class MagnitudeSchema {
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
   private MagnitudeSchemaEwLogo ewLogo;
 
-  public MagnitudeSchema() { 
+  public MagnitudeSchema() {
   }
 
   public MagnitudeSchema ewMessage(MagnitudeSchemaEwMessage ewMessage) {

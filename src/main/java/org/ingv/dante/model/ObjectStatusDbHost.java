@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
  * DB Connection host(s)
  */
 @ApiModel(description = "DB Connection host(s)")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class ObjectStatusDbHost {
   public static final String SERIALIZED_NAME_READ = "read";
   @SerializedName(SERIALIZED_NAME_READ)
@@ -60,7 +60,7 @@ public class ObjectStatusDbHost {
   @SerializedName(SERIALIZED_NAME_WRITE)
   private List<String> write = null;
 
-  public ObjectStatusDbHost() { 
+  public ObjectStatusDbHost() {
   }
 
   public ObjectStatusDbHost read(List<String> read) {

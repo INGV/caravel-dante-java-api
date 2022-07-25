@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:11:46.727276059Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:31:29.394063Z[Etc/UTC]")
 public class Hyp2000arcSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -209,7 +209,7 @@ public class Hyp2000arcSchemaEwMessage {
   @SerializedName(SERIALIZED_NAME_PHASES)
   private List<Hyp2000arcPhasesInner> phases = null;
 
-  public Hyp2000arcSchemaEwMessage() { 
+  public Hyp2000arcSchemaEwMessage() {
   }
 
   public Hyp2000arcSchemaEwMessage quakeId(Long quakeId) {
