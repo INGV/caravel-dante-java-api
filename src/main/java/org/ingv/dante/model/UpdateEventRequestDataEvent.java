@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventRequestDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class UpdateEventRequestDataEvent {
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
@@ -70,7 +70,7 @@ public class UpdateEventRequestDataEvent {
   @SerializedName(SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID)
   private Long preferredFocalmechanismId;
 
-  public UpdateEventRequestDataEvent() { 
+  public UpdateEventRequestDataEvent() {
   }
 
   public UpdateEventRequestDataEvent typeEvent(String typeEvent) {

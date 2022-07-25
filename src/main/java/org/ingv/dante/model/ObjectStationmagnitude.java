@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStationmagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class ObjectStationmagnitude {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -170,7 +170,7 @@ public class ObjectStationmagnitude {
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
   private ObjectProvenance provenance;
 
-  public ObjectStationmagnitude() { 
+  public ObjectStationmagnitude() {
   }
 
   

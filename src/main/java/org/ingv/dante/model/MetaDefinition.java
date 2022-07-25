@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * MetaDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class MetaDefinition {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -84,7 +84,7 @@ public class MetaDefinition {
   @SerializedName(SERIALIZED_NAME_TOTAL)
   private Integer total;
 
-  public MetaDefinition() { 
+  public MetaDefinition() {
   }
 
   public MetaDefinition currentPage(Integer currentPage) {

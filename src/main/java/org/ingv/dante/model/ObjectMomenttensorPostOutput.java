@@ -48,13 +48,13 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorPostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class ObjectMomenttensorPostOutput {
   public static final String SERIALIZED_NAME_MOMENTTENSOR = "momenttensor";
   @SerializedName(SERIALIZED_NAME_MOMENTTENSOR)
   private ObjectMomenttensorPostOutputMomenttensor momenttensor;
 
-  public ObjectMomenttensorPostOutput() { 
+  public ObjectMomenttensorPostOutput() {
   }
 
   public ObjectMomenttensorPostOutput momenttensor(ObjectMomenttensorPostOutputMomenttensor momenttensor) {

@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * Quake2kSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class Quake2kSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -90,7 +90,7 @@ public class Quake2kSchemaEwMessage {
   @SerializedName(SERIALIZED_NAME_NPH)
   private Long nph;
 
-  public Quake2kSchemaEwMessage() { 
+  public Quake2kSchemaEwMessage() {
   }
 
   public Quake2kSchemaEwMessage quakeId(Long quakeId) {

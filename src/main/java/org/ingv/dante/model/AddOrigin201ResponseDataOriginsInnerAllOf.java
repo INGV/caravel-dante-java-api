@@ -47,13 +47,13 @@ import org.ingv.dante.JSON;
 /**
  * AddOrigin201ResponseDataOriginsInnerAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class AddOrigin201ResponseDataOriginsInnerAllOf {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Long id;
 
-  public AddOrigin201ResponseDataOriginsInnerAllOf() { 
+  public AddOrigin201ResponseDataOriginsInnerAllOf() {
   }
 
   public AddOrigin201ResponseDataOriginsInnerAllOf id(Long id) {

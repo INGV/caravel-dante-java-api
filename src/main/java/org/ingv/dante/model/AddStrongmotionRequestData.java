@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddStrongmotionRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class AddStrongmotionRequestData {
   public static final String SERIALIZED_NAME_EVENTID = "eventid";
   @SerializedName(SERIALIZED_NAME_EVENTID)
@@ -60,7 +60,7 @@ public class AddStrongmotionRequestData {
   @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
   private List<ObjectStrongmotion> strongmotions = null;
 
-  public AddStrongmotionRequestData() { 
+  public AddStrongmotionRequestData() {
   }
 
   public AddStrongmotionRequestData eventid(Long eventid) {

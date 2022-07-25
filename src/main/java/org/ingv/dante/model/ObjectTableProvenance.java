@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableProvenance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class ObjectTableProvenance {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -107,7 +107,7 @@ public class ObjectTableProvenance {
   @SerializedName(SERIALIZED_NAME_INSERTED)
   private OffsetDateTime inserted;
 
-  public ObjectTableProvenance() { 
+  public ObjectTableProvenance() {
   }
 
   

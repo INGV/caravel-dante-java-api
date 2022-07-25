@@ -50,13 +50,13 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeOrigin200ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class GetTypeOrigin200ResponseAllOf {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   private List<ObjectTableTypeOrigin> data = null;
 
-  public GetTypeOrigin200ResponseAllOf() { 
+  public GetTypeOrigin200ResponseAllOf() {
   }
 
   public GetTypeOrigin200ResponseAllOf data(List<ObjectTableTypeOrigin> data) {

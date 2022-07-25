@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcPhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class Hyp2000arcPhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -204,7 +204,7 @@ public class Hyp2000arcPhasesInner {
   @SerializedName(SERIALIZED_NAME_IMPORTANCE_S)
   private Float importanceS;
 
-  public Hyp2000arcPhasesInner() { 
+  public Hyp2000arcPhasesInner() {
   }
 
   public Hyp2000arcPhasesInner net(String net) {

@@ -26,8 +26,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
-import org.ingv.dante.model.AddOrigin201ResponseDataOriginsInnerAllOf;
-import org.ingv.dante.model.ObjectMagnitudePostOutput;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddOrigin201ResponseDataOriginsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class AddOrigin201ResponseDataOriginsInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -62,7 +60,7 @@ public class AddOrigin201ResponseDataOriginsInner {
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
   private List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes = null;
 
-  public AddOrigin201ResponseDataOriginsInner() { 
+  public AddOrigin201ResponseDataOriginsInner() {
   }
 
   public AddOrigin201ResponseDataOriginsInner id(Long id) {

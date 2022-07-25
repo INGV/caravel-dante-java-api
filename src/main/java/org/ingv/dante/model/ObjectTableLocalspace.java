@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableLocalspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class ObjectTableLocalspace {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -71,7 +71,7 @@ public class ObjectTableLocalspace {
   @SerializedName(SERIALIZED_NAME_INSERTED)
   private OffsetDateTime inserted;
 
-  public ObjectTableLocalspace() { 
+  public ObjectTableLocalspace() {
   }
 
   

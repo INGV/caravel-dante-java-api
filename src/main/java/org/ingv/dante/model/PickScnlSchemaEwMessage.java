@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class PickScnlSchemaEwMessage {
   public static final String SERIALIZED_NAME_PICK_ID = "pickId";
   @SerializedName(SERIALIZED_NAME_PICK_ID)
@@ -90,7 +90,7 @@ public class PickScnlSchemaEwMessage {
   @SerializedName(SERIALIZED_NAME_P_AMPLITUDE)
   private List<Double> pAmplitude = null;
 
-  public PickScnlSchemaEwMessage() { 
+  public PickScnlSchemaEwMessage() {
   }
 
   public PickScnlSchemaEwMessage pickId(Long pickId) {

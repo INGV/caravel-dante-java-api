@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class Hyp2000arcSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
@@ -59,7 +59,7 @@ public class Hyp2000arcSchema {
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
   private Hyp2000arcSchemaEwLogo ewLogo;
 
-  public Hyp2000arcSchema() { 
+  public Hyp2000arcSchema() {
   }
 
   public Hyp2000arcSchema ewMessage(Hyp2000arcSchemaEwMessage ewMessage) {

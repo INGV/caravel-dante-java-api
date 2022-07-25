@@ -24,8 +24,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
-import org.ingv.dante.model.ObjectMomenttensorPostOutput;
 import org.ingv.dante.model.ObjectMomenttensorPostOutputMomenttensor;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -52,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanismPostOutputFocalmechanismsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T10:12:36.505964336Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
 public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -70,7 +68,7 @@ public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
   @SerializedName(SERIALIZED_NAME_MOMENTTENSOR)
   private ObjectMomenttensorPostOutputMomenttensor momenttensor;
 
-  public ObjectFocalmechanismPostOutputFocalmechanismsInner() { 
+  public ObjectFocalmechanismPostOutputFocalmechanismsInner() {
   }
 
   public ObjectFocalmechanismPostOutputFocalmechanismsInner id(Long id) {
