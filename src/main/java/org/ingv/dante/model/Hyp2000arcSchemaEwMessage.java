@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-25T15:32:17.901870Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-26T12:32:56.568766Z[Etc/UTC]")
 public class Hyp2000arcSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -1120,6 +1120,41 @@ public class Hyp2000arcSchemaEwMessage {
     this.phases = phases;
   }
 
+  /**
+   * A container for additional, undeclared properties.
+   * This is a holder for any undeclared properties as specified with
+   * the 'additionalProperties' keyword in the OAS document.
+   */
+  private Map<String, Object> additionalProperties;
+
+  /**
+   * Set the additional (undeclared) property with the specified name and value.
+   * If the property does not already exist, create it otherwise replace it.
+   */
+  public Hyp2000arcSchemaEwMessage putAdditionalProperty(String key, Object value) {
+    if (this.additionalProperties == null) {
+        this.additionalProperties = new HashMap<String, Object>();
+    }
+    this.additionalProperties.put(key, value);
+    return this;
+  }
+
+  /**
+   * Return the additional (undeclared) property.
+   */
+  public Map<String, Object> getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  /**
+   * Return the additional (undeclared) property with the specified name.
+   */
+  public Object getAdditionalProperty(String key) {
+    if (this.additionalProperties == null) {
+        return null;
+    }
+    return this.additionalProperties.get(key);
+  }
 
 
   @Override
@@ -1169,12 +1204,13 @@ public class Hyp2000arcSchemaEwMessage {
         Objects.equals(this.preferredMagLabel, hyp2000arcSchemaEwMessage.preferredMagLabel) &&
         Objects.equals(this.preferredMag, hyp2000arcSchemaEwMessage.preferredMag) &&
         Objects.equals(this.numberOfPreferredMags, hyp2000arcSchemaEwMessage.numberOfPreferredMags) &&
-        Objects.equals(this.phases, hyp2000arcSchemaEwMessage.phases);
+        Objects.equals(this.phases, hyp2000arcSchemaEwMessage.phases)&&
+        Objects.equals(this.additionalProperties, hyp2000arcSchemaEwMessage.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(quakeId, version, originId, originTime, latitude, longitude, depth, nph, nphS, nphtot, nPfm, gap, dmin, rms, e0az, e0dp, e0, e1az, e1dp, e1, e2, erh, erz, md, reg, labelpref, mpref, wtpref, mdtype, mdmad, mdwt, ingvQuality, amplitudeMagnitude, numberOfAmpMagWeightCode, medianAbsDiffAmpMag, preferredMagLabel, preferredMag, numberOfPreferredMags, phases);
+    return Objects.hash(quakeId, version, originId, originTime, latitude, longitude, depth, nph, nphS, nphtot, nPfm, gap, dmin, rms, e0az, e0dp, e0, e1az, e1dp, e1, e2, erh, erz, md, reg, labelpref, mpref, wtpref, mdtype, mdmad, mdwt, ingvQuality, amplitudeMagnitude, numberOfAmpMagWeightCode, medianAbsDiffAmpMag, preferredMagLabel, preferredMag, numberOfPreferredMags, phases, additionalProperties);
   }
 
   @Override
@@ -1220,6 +1256,7 @@ public class Hyp2000arcSchemaEwMessage {
     sb.append("    preferredMag: ").append(toIndentedString(preferredMag)).append("\n");
     sb.append("    numberOfPreferredMags: ").append(toIndentedString(numberOfPreferredMags)).append("\n");
     sb.append("    phases: ").append(toIndentedString(phases)).append("\n");
+    sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -1307,14 +1344,6 @@ public class Hyp2000arcSchemaEwMessage {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!Hyp2000arcSchemaEwMessage.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Hyp2000arcSchemaEwMessage` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : Hyp2000arcSchemaEwMessage.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
@@ -1368,6 +1397,23 @@ public class Hyp2000arcSchemaEwMessage {
            @Override
            public void write(JsonWriter out, Hyp2000arcSchemaEwMessage value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             obj.remove("additionalProperties");
+             // serialize additonal properties
+             if (value.getAdditionalProperties() != null) {
+               for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
+                 if (entry.getValue() instanceof String)
+                   obj.addProperty(entry.getKey(), (String) entry.getValue());
+                 else if (entry.getValue() instanceof Number)
+                   obj.addProperty(entry.getKey(), (Number) entry.getValue());
+                 else if (entry.getValue() instanceof Boolean)
+                   obj.addProperty(entry.getKey(), (Boolean) entry.getValue());
+                 else if (entry.getValue() instanceof Character)
+                   obj.addProperty(entry.getKey(), (Character) entry.getValue());
+                 else {
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                 }
+               }
+             }
              elementAdapter.write(out, obj);
            }
 
@@ -1375,7 +1421,25 @@ public class Hyp2000arcSchemaEwMessage {
            public Hyp2000arcSchemaEwMessage read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             // store additional fields in the deserialized instance
+             Hyp2000arcSchemaEwMessage instance = thisAdapter.fromJsonTree(jsonObj);
+             for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
+               if (!openapiFields.contains(entry.getKey())) {
+                 if (entry.getValue().isJsonPrimitive()) { // primitive type
+                   if (entry.getValue().getAsJsonPrimitive().isString())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsString());
+                   else if (entry.getValue().getAsJsonPrimitive().isNumber())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsNumber());
+                   else if (entry.getValue().getAsJsonPrimitive().isBoolean())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
+                   else
+                     throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 }
+               }
+             }
+             return instance;
            }
 
        }.nullSafe();
