@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudePostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:21:18.431965Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-27T13:56:54.172028Z[Etc/UTC]")
 public class ObjectMagnitudePostOutput {
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
