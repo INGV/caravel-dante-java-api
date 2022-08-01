@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanism
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-01T09:25:56.214307Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-01T09:57:37.623465295Z[GMT]")
 public class ObjectFocalmechanism {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -138,7 +138,7 @@ public class ObjectFocalmechanism {
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
   private ObjectProvenance provenance;
 
-  public ObjectFocalmechanism() {
+  public ObjectFocalmechanism() { 
   }
 
   
@@ -608,41 +608,6 @@ public class ObjectFocalmechanism {
     this.provenance = provenance;
   }
 
-  /**
-   * A container for additional, undeclared properties.
-   * This is a holder for any undeclared properties as specified with
-   * the 'additionalProperties' keyword in the OAS document.
-   */
-  private Map<String, Object> additionalProperties;
-
-  /**
-   * Set the additional (undeclared) property with the specified name and value.
-   * If the property does not already exist, create it otherwise replace it.
-   */
-  public ObjectFocalmechanism putAdditionalProperty(String key, Object value) {
-    if (this.additionalProperties == null) {
-        this.additionalProperties = new HashMap<String, Object>();
-    }
-    this.additionalProperties.put(key, value);
-    return this;
-  }
-
-  /**
-   * Return the additional (undeclared) property.
-   */
-  public Map<String, Object> getAdditionalProperties() {
-    return additionalProperties;
-  }
-
-  /**
-   * Return the additional (undeclared) property with the specified name.
-   */
-  public Object getAdditionalProperty(String key) {
-    if (this.additionalProperties == null) {
-        return null;
-    }
-    return this.additionalProperties.get(key);
-  }
 
 
   @Override
@@ -674,8 +639,7 @@ public class ObjectFocalmechanism {
         Objects.equals(this.url, objectFocalmechanism.url) &&
         Objects.equals(this.momenttensor, objectFocalmechanism.momenttensor) &&
         Objects.equals(this.localspace, objectFocalmechanism.localspace) &&
-        Objects.equals(this.provenance, objectFocalmechanism.provenance)&&
-        Objects.equals(this.additionalProperties, objectFocalmechanism.additionalProperties);
+        Objects.equals(this.provenance, objectFocalmechanism.provenance);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -684,7 +648,7 @@ public class ObjectFocalmechanism {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, idLocalspace, strike1, dip1, rake1, strike2, dip2, rake2, azimGap, nstaPolarity, misfit, stdr, rmsAngDiffAccPref, fracAcc30degPref, quality, url, momenttensor, localspace, provenance, additionalProperties);
+    return Objects.hash(id, modified, inserted, idLocalspace, strike1, dip1, rake1, strike2, dip2, rake2, azimGap, nstaPolarity, misfit, stdr, rmsAngDiffAccPref, fracAcc30degPref, quality, url, momenttensor, localspace, provenance);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -719,7 +683,6 @@ public class ObjectFocalmechanism {
     sb.append("    momenttensor: ").append(toIndentedString(momenttensor)).append("\n");
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
-    sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -782,6 +745,14 @@ public class ObjectFocalmechanism {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectFocalmechanism is not found in the empty JSON string", ObjectFocalmechanism.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!ObjectFocalmechanism.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectFocalmechanism` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
       if ((jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonNull()) && !jsonObj.get("quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));
       }
@@ -817,23 +788,6 @@ public class ObjectFocalmechanism {
            @Override
            public void write(JsonWriter out, ObjectFocalmechanism value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             obj.remove("additionalProperties");
-             // serialize additonal properties
-             if (value.getAdditionalProperties() != null) {
-               for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
-                 if (entry.getValue() instanceof String)
-                   obj.addProperty(entry.getKey(), (String) entry.getValue());
-                 else if (entry.getValue() instanceof Number)
-                   obj.addProperty(entry.getKey(), (Number) entry.getValue());
-                 else if (entry.getValue() instanceof Boolean)
-                   obj.addProperty(entry.getKey(), (Boolean) entry.getValue());
-                 else if (entry.getValue() instanceof Character)
-                   obj.addProperty(entry.getKey(), (Character) entry.getValue());
-                 else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
-                 }
-               }
-             }
              elementAdapter.write(out, obj);
            }
 
@@ -841,25 +795,7 @@ public class ObjectFocalmechanism {
            public ObjectFocalmechanism read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
-             // store additional fields in the deserialized instance
-             ObjectFocalmechanism instance = thisAdapter.fromJsonTree(jsonObj);
-             for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
-               if (!openapiFields.contains(entry.getKey())) {
-                 if (entry.getValue().isJsonPrimitive()) { // primitive type
-                   if (entry.getValue().getAsJsonPrimitive().isString())
-                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsString());
-                   else if (entry.getValue().getAsJsonPrimitive().isNumber())
-                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsNumber());
-                   else if (entry.getValue().getAsJsonPrimitive().isBoolean())
-                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
-                   else
-                     throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
-                 }
-               }
-             }
-             return instance;
+             return thisAdapter.fromJsonTree(jsonObj);
            }
 
        }.nullSafe();
