@@ -24,6 +24,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
+import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
+import org.ingv.dante.model.ObjectMomenttensorPostOutput;
 import org.ingv.dante.model.ObjectMomenttensorPostOutputMomenttensor;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -50,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanismPostOutputFocalmechanismsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-08T09:25:28.262845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-08T09:58:03.100840960Z[GMT]")
 public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -68,7 +70,7 @@ public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
   @SerializedName(SERIALIZED_NAME_MOMENTTENSOR)
   private ObjectMomenttensorPostOutputMomenttensor momenttensor;
 
-  public ObjectFocalmechanismPostOutputFocalmechanismsInner() {
+  public ObjectFocalmechanismPostOutputFocalmechanismsInner() { 
   }
 
   public ObjectFocalmechanismPostOutputFocalmechanismsInner id(Long id) {
@@ -162,41 +164,6 @@ public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
     this.momenttensor = momenttensor;
   }
 
-  /**
-   * A container for additional, undeclared properties.
-   * This is a holder for any undeclared properties as specified with
-   * the 'additionalProperties' keyword in the OAS document.
-   */
-  private Map<String, Object> additionalProperties;
-
-  /**
-   * Set the additional (undeclared) property with the specified name and value.
-   * If the property does not already exist, create it otherwise replace it.
-   */
-  public ObjectFocalmechanismPostOutputFocalmechanismsInner putAdditionalProperty(String key, Object value) {
-    if (this.additionalProperties == null) {
-        this.additionalProperties = new HashMap<String, Object>();
-    }
-    this.additionalProperties.put(key, value);
-    return this;
-  }
-
-  /**
-   * Return the additional (undeclared) property.
-   */
-  public Map<String, Object> getAdditionalProperties() {
-    return additionalProperties;
-  }
-
-  /**
-   * Return the additional (undeclared) property with the specified name.
-   */
-  public Object getAdditionalProperty(String key) {
-    if (this.additionalProperties == null) {
-        return null;
-    }
-    return this.additionalProperties.get(key);
-  }
 
 
   @Override
@@ -211,8 +178,7 @@ public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
     return Objects.equals(this.id, objectFocalmechanismPostOutputFocalmechanismsInner.id) &&
         Objects.equals(this.idLocalspace, objectFocalmechanismPostOutputFocalmechanismsInner.idLocalspace) &&
         Objects.equals(this.localspace, objectFocalmechanismPostOutputFocalmechanismsInner.localspace) &&
-        Objects.equals(this.momenttensor, objectFocalmechanismPostOutputFocalmechanismsInner.momenttensor)&&
-        Objects.equals(this.additionalProperties, objectFocalmechanismPostOutputFocalmechanismsInner.additionalProperties);
+        Objects.equals(this.momenttensor, objectFocalmechanismPostOutputFocalmechanismsInner.momenttensor);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -221,7 +187,7 @@ public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idLocalspace, localspace, momenttensor, additionalProperties);
+    return Objects.hash(id, idLocalspace, localspace, momenttensor);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -239,7 +205,6 @@ public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
     sb.append("    idLocalspace: ").append(toIndentedString(idLocalspace)).append("\n");
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    momenttensor: ").append(toIndentedString(momenttensor)).append("\n");
-    sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -285,6 +250,14 @@ public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectFocalmechanismPostOutputFocalmechanismsInner is not found in the empty JSON string", ObjectFocalmechanismPostOutputFocalmechanismsInner.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!ObjectFocalmechanismPostOutputFocalmechanismsInner.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectFocalmechanismPostOutputFocalmechanismsInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
         AddEvent201ResponseDataEventLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
@@ -310,23 +283,6 @@ public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
            @Override
            public void write(JsonWriter out, ObjectFocalmechanismPostOutputFocalmechanismsInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             obj.remove("additionalProperties");
-             // serialize additonal properties
-             if (value.getAdditionalProperties() != null) {
-               for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
-                 if (entry.getValue() instanceof String)
-                   obj.addProperty(entry.getKey(), (String) entry.getValue());
-                 else if (entry.getValue() instanceof Number)
-                   obj.addProperty(entry.getKey(), (Number) entry.getValue());
-                 else if (entry.getValue() instanceof Boolean)
-                   obj.addProperty(entry.getKey(), (Boolean) entry.getValue());
-                 else if (entry.getValue() instanceof Character)
-                   obj.addProperty(entry.getKey(), (Character) entry.getValue());
-                 else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
-                 }
-               }
-             }
              elementAdapter.write(out, obj);
            }
 
@@ -334,25 +290,7 @@ public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
            public ObjectFocalmechanismPostOutputFocalmechanismsInner read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
-             // store additional fields in the deserialized instance
-             ObjectFocalmechanismPostOutputFocalmechanismsInner instance = thisAdapter.fromJsonTree(jsonObj);
-             for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
-               if (!openapiFields.contains(entry.getKey())) {
-                 if (entry.getValue().isJsonPrimitive()) { // primitive type
-                   if (entry.getValue().getAsJsonPrimitive().isString())
-                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsString());
-                   else if (entry.getValue().getAsJsonPrimitive().isNumber())
-                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsNumber());
-                   else if (entry.getValue().getAsJsonPrimitive().isBoolean())
-                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
-                   else
-                     throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
-                 }
-               }
-             }
-             return instance;
+             return thisAdapter.fromJsonTree(jsonObj);
            }
 
        }.nullSafe();
