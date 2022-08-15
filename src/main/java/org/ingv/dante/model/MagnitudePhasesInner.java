@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudePhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-08T09:58:03.100840960Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-15T09:26:47.146332Z[Etc/UTC]")
 public class MagnitudePhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -102,7 +102,7 @@ public class MagnitudePhasesInner {
   @SerializedName(SERIALIZED_NAME_PERIOD2)
   private Double period2;
 
-  public MagnitudePhasesInner() { 
+  public MagnitudePhasesInner() {
   }
 
   public MagnitudePhasesInner net(String net) {
@@ -403,6 +403,41 @@ public class MagnitudePhasesInner {
     this.period2 = period2;
   }
 
+  /**
+   * A container for additional, undeclared properties.
+   * This is a holder for any undeclared properties as specified with
+   * the 'additionalProperties' keyword in the OAS document.
+   */
+  private Map<String, Object> additionalProperties;
+
+  /**
+   * Set the additional (undeclared) property with the specified name and value.
+   * If the property does not already exist, create it otherwise replace it.
+   */
+  public MagnitudePhasesInner putAdditionalProperty(String key, Object value) {
+    if (this.additionalProperties == null) {
+        this.additionalProperties = new HashMap<String, Object>();
+    }
+    this.additionalProperties.put(key, value);
+    return this;
+  }
+
+  /**
+   * Return the additional (undeclared) property.
+   */
+  public Map<String, Object> getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  /**
+   * Return the additional (undeclared) property with the specified name.
+   */
+  public Object getAdditionalProperty(String key) {
+    if (this.additionalProperties == null) {
+        return null;
+    }
+    return this.additionalProperties.get(key);
+  }
 
 
   @Override
@@ -426,12 +461,13 @@ public class MagnitudePhasesInner {
         Objects.equals(this.period1, magnitudePhasesInner.period1) &&
         Objects.equals(this.time2, magnitudePhasesInner.time2) &&
         Objects.equals(this.amp2, magnitudePhasesInner.amp2) &&
-        Objects.equals(this.period2, magnitudePhasesInner.period2);
+        Objects.equals(this.period2, magnitudePhasesInner.period2)&&
+        Objects.equals(this.additionalProperties, magnitudePhasesInner.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(net, sta, comp, loc, mag, dist, corr, time1, amp1, period1, time2, amp2, period2);
+    return Objects.hash(net, sta, comp, loc, mag, dist, corr, time1, amp1, period1, time2, amp2, period2, additionalProperties);
   }
 
   @Override
@@ -451,6 +487,7 @@ public class MagnitudePhasesInner {
     sb.append("    time2: ").append(toIndentedString(time2)).append("\n");
     sb.append("    amp2: ").append(toIndentedString(amp2)).append("\n");
     sb.append("    period2: ").append(toIndentedString(period2)).append("\n");
+    sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -514,14 +551,6 @@ public class MagnitudePhasesInner {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!MagnitudePhasesInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MagnitudePhasesInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : MagnitudePhasesInner.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
@@ -557,6 +586,23 @@ public class MagnitudePhasesInner {
            @Override
            public void write(JsonWriter out, MagnitudePhasesInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             obj.remove("additionalProperties");
+             // serialize additonal properties
+             if (value.getAdditionalProperties() != null) {
+               for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
+                 if (entry.getValue() instanceof String)
+                   obj.addProperty(entry.getKey(), (String) entry.getValue());
+                 else if (entry.getValue() instanceof Number)
+                   obj.addProperty(entry.getKey(), (Number) entry.getValue());
+                 else if (entry.getValue() instanceof Boolean)
+                   obj.addProperty(entry.getKey(), (Boolean) entry.getValue());
+                 else if (entry.getValue() instanceof Character)
+                   obj.addProperty(entry.getKey(), (Character) entry.getValue());
+                 else {
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                 }
+               }
+             }
              elementAdapter.write(out, obj);
            }
 
@@ -564,7 +610,25 @@ public class MagnitudePhasesInner {
            public MagnitudePhasesInner read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             // store additional fields in the deserialized instance
+             MagnitudePhasesInner instance = thisAdapter.fromJsonTree(jsonObj);
+             for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
+               if (!openapiFields.contains(entry.getKey())) {
+                 if (entry.getValue().isJsonPrimitive()) { // primitive type
+                   if (entry.getValue().getAsJsonPrimitive().isString())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsString());
+                   else if (entry.getValue().getAsJsonPrimitive().isNumber())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsNumber());
+                   else if (entry.getValue().getAsJsonPrimitive().isBoolean())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
+                   else
+                     throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 }
+               }
+             }
+             return instance;
            }
 
        }.nullSafe();
