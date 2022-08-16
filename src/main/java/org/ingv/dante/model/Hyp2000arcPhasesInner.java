@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcPhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-15T09:57:49.945255729Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-16T10:57:11.873402Z[Etc/UTC]")
 public class Hyp2000arcPhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -204,7 +204,7 @@ public class Hyp2000arcPhasesInner {
   @SerializedName(SERIALIZED_NAME_IMPORTANCE_S)
   private Float importanceS;
 
-  public Hyp2000arcPhasesInner() { 
+  public Hyp2000arcPhasesInner() {
   }
 
   public Hyp2000arcPhasesInner net(String net) {
@@ -1100,6 +1100,41 @@ public class Hyp2000arcPhasesInner {
     this.importanceS = importanceS;
   }
 
+  /**
+   * A container for additional, undeclared properties.
+   * This is a holder for any undeclared properties as specified with
+   * the 'additionalProperties' keyword in the OAS document.
+   */
+  private Map<String, Object> additionalProperties;
+
+  /**
+   * Set the additional (undeclared) property with the specified name and value.
+   * If the property does not already exist, create it otherwise replace it.
+   */
+  public Hyp2000arcPhasesInner putAdditionalProperty(String key, Object value) {
+    if (this.additionalProperties == null) {
+        this.additionalProperties = new HashMap<String, Object>();
+    }
+    this.additionalProperties.put(key, value);
+    return this;
+  }
+
+  /**
+   * Return the additional (undeclared) property.
+   */
+  public Map<String, Object> getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  /**
+   * Return the additional (undeclared) property with the specified name.
+   */
+  public Object getAdditionalProperty(String key) {
+    if (this.additionalProperties == null) {
+        return null;
+    }
+    return this.additionalProperties.get(key);
+  }
 
 
   @Override
@@ -1148,12 +1183,13 @@ public class Hyp2000arcPhasesInner {
         Objects.equals(this.ampMag, hyp2000arcPhasesInner.ampMag) &&
         Objects.equals(this.ampMagWeightCode, hyp2000arcPhasesInner.ampMagWeightCode) &&
         Objects.equals(this.importanceP, hyp2000arcPhasesInner.importanceP) &&
-        Objects.equals(this.importanceS, hyp2000arcPhasesInner.importanceS);
+        Objects.equals(this.importanceS, hyp2000arcPhasesInner.importanceS)&&
+        Objects.equals(this.additionalProperties, hyp2000arcPhasesInner.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(net, sta, comp, loc, latitude, longitude, plabel, slabel, ponset, sonset, pat, sat, pres, sres, pqual, squal, codalen, codawt, pfm, sfm, datasrc, md, azm, takeoff, dist, pwt, swt, pamp, codalenObs, ccntr, caav, amplitude, ampUnitsCode, ampType, ampMag, ampMagWeightCode, importanceP, importanceS);
+    return Objects.hash(net, sta, comp, loc, latitude, longitude, plabel, slabel, ponset, sonset, pat, sat, pres, sres, pqual, squal, codalen, codawt, pfm, sfm, datasrc, md, azm, takeoff, dist, pwt, swt, pamp, codalenObs, ccntr, caav, amplitude, ampUnitsCode, ampType, ampMag, ampMagWeightCode, importanceP, importanceS, additionalProperties);
   }
 
   @Override
@@ -1198,6 +1234,7 @@ public class Hyp2000arcPhasesInner {
     sb.append("    ampMagWeightCode: ").append(toIndentedString(ampMagWeightCode)).append("\n");
     sb.append("    importanceP: ").append(toIndentedString(importanceP)).append("\n");
     sb.append("    importanceS: ").append(toIndentedString(importanceS)).append("\n");
+    sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -1282,14 +1319,6 @@ public class Hyp2000arcPhasesInner {
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!Hyp2000arcPhasesInner.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Hyp2000arcPhasesInner` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-        }
-      }
-
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : Hyp2000arcPhasesInner.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
@@ -1354,6 +1383,23 @@ public class Hyp2000arcPhasesInner {
            @Override
            public void write(JsonWriter out, Hyp2000arcPhasesInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             obj.remove("additionalProperties");
+             // serialize additonal properties
+             if (value.getAdditionalProperties() != null) {
+               for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
+                 if (entry.getValue() instanceof String)
+                   obj.addProperty(entry.getKey(), (String) entry.getValue());
+                 else if (entry.getValue() instanceof Number)
+                   obj.addProperty(entry.getKey(), (Number) entry.getValue());
+                 else if (entry.getValue() instanceof Boolean)
+                   obj.addProperty(entry.getKey(), (Boolean) entry.getValue());
+                 else if (entry.getValue() instanceof Character)
+                   obj.addProperty(entry.getKey(), (Character) entry.getValue());
+                 else {
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                 }
+               }
+             }
              elementAdapter.write(out, obj);
            }
 
@@ -1361,7 +1407,25 @@ public class Hyp2000arcPhasesInner {
            public Hyp2000arcPhasesInner read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             // store additional fields in the deserialized instance
+             Hyp2000arcPhasesInner instance = thisAdapter.fromJsonTree(jsonObj);
+             for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
+               if (!openapiFields.contains(entry.getKey())) {
+                 if (entry.getValue().isJsonPrimitive()) { // primitive type
+                   if (entry.getValue().getAsJsonPrimitive().isString())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsString());
+                   else if (entry.getValue().getAsJsonPrimitive().isNumber())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsNumber());
+                   else if (entry.getValue().getAsJsonPrimitive().isBoolean())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
+                   else
+                     throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 }
+               }
+             }
+             return instance;
            }
 
        }.nullSafe();
