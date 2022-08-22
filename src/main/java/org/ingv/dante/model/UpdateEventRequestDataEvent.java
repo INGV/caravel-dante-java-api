@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventRequestDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-16T10:57:11.873402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-22T09:56:33.640381347Z[GMT]")
 public class UpdateEventRequestDataEvent {
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
@@ -70,7 +70,7 @@ public class UpdateEventRequestDataEvent {
   @SerializedName(SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID)
   private Long preferredFocalmechanismId;
 
-  public UpdateEventRequestDataEvent() {
+  public UpdateEventRequestDataEvent() { 
   }
 
   public UpdateEventRequestDataEvent typeEvent(String typeEvent) {
@@ -187,41 +187,6 @@ public class UpdateEventRequestDataEvent {
     this.preferredFocalmechanismId = preferredFocalmechanismId;
   }
 
-  /**
-   * A container for additional, undeclared properties.
-   * This is a holder for any undeclared properties as specified with
-   * the 'additionalProperties' keyword in the OAS document.
-   */
-  private Map<String, Object> additionalProperties;
-
-  /**
-   * Set the additional (undeclared) property with the specified name and value.
-   * If the property does not already exist, create it otherwise replace it.
-   */
-  public UpdateEventRequestDataEvent putAdditionalProperty(String key, Object value) {
-    if (this.additionalProperties == null) {
-        this.additionalProperties = new HashMap<String, Object>();
-    }
-    this.additionalProperties.put(key, value);
-    return this;
-  }
-
-  /**
-   * Return the additional (undeclared) property.
-   */
-  public Map<String, Object> getAdditionalProperties() {
-    return additionalProperties;
-  }
-
-  /**
-   * Return the additional (undeclared) property with the specified name.
-   */
-  public Object getAdditionalProperty(String key) {
-    if (this.additionalProperties == null) {
-        return null;
-    }
-    return this.additionalProperties.get(key);
-  }
 
 
   @Override
@@ -237,8 +202,7 @@ public class UpdateEventRequestDataEvent {
         Objects.equals(this.eventGroupId, updateEventRequestDataEvent.eventGroupId) &&
         Objects.equals(this.preferredOriginId, updateEventRequestDataEvent.preferredOriginId) &&
         Objects.equals(this.preferredMagnitudeId, updateEventRequestDataEvent.preferredMagnitudeId) &&
-        Objects.equals(this.preferredFocalmechanismId, updateEventRequestDataEvent.preferredFocalmechanismId)&&
-        Objects.equals(this.additionalProperties, updateEventRequestDataEvent.additionalProperties);
+        Objects.equals(this.preferredFocalmechanismId, updateEventRequestDataEvent.preferredFocalmechanismId);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -247,7 +211,7 @@ public class UpdateEventRequestDataEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(typeEvent, eventGroupId, preferredOriginId, preferredMagnitudeId, preferredFocalmechanismId, additionalProperties);
+    return Objects.hash(typeEvent, eventGroupId, preferredOriginId, preferredMagnitudeId, preferredFocalmechanismId);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -266,7 +230,6 @@ public class UpdateEventRequestDataEvent {
     sb.append("    preferredOriginId: ").append(toIndentedString(preferredOriginId)).append("\n");
     sb.append("    preferredMagnitudeId: ").append(toIndentedString(preferredMagnitudeId)).append("\n");
     sb.append("    preferredFocalmechanismId: ").append(toIndentedString(preferredFocalmechanismId)).append("\n");
-    sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -313,6 +276,14 @@ public class UpdateEventRequestDataEvent {
           throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateEventRequestDataEvent is not found in the empty JSON string", UpdateEventRequestDataEvent.openapiRequiredFields.toString()));
         }
       }
+
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!UpdateEventRequestDataEvent.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UpdateEventRequestDataEvent` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
       if ((jsonObj.get("type_event") != null && !jsonObj.get("type_event").isJsonNull()) && !jsonObj.get("type_event").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_event` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_event").toString()));
       }
@@ -333,23 +304,6 @@ public class UpdateEventRequestDataEvent {
            @Override
            public void write(JsonWriter out, UpdateEventRequestDataEvent value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
-             obj.remove("additionalProperties");
-             // serialize additonal properties
-             if (value.getAdditionalProperties() != null) {
-               for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
-                 if (entry.getValue() instanceof String)
-                   obj.addProperty(entry.getKey(), (String) entry.getValue());
-                 else if (entry.getValue() instanceof Number)
-                   obj.addProperty(entry.getKey(), (Number) entry.getValue());
-                 else if (entry.getValue() instanceof Boolean)
-                   obj.addProperty(entry.getKey(), (Boolean) entry.getValue());
-                 else if (entry.getValue() instanceof Character)
-                   obj.addProperty(entry.getKey(), (Character) entry.getValue());
-                 else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
-                 }
-               }
-             }
              elementAdapter.write(out, obj);
            }
 
@@ -357,25 +311,7 @@ public class UpdateEventRequestDataEvent {
            public UpdateEventRequestDataEvent read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
-             // store additional fields in the deserialized instance
-             UpdateEventRequestDataEvent instance = thisAdapter.fromJsonTree(jsonObj);
-             for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
-               if (!openapiFields.contains(entry.getKey())) {
-                 if (entry.getValue().isJsonPrimitive()) { // primitive type
-                   if (entry.getValue().getAsJsonPrimitive().isString())
-                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsString());
-                   else if (entry.getValue().getAsJsonPrimitive().isNumber())
-                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsNumber());
-                   else if (entry.getValue().getAsJsonPrimitive().isBoolean())
-                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
-                   else
-                     throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
-                 }
-               }
-             }
-             return instance;
+             return thisAdapter.fromJsonTree(jsonObj);
            }
 
        }.nullSafe();
