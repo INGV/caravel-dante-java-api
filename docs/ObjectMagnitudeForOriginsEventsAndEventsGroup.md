@@ -1,6 +1,6 @@
 
 
-# ObjectMagnitudeForOriginsEventsAndEventsPref
+# ObjectMagnitudeForOriginsEventsAndEventsGroup
 
 
 ## Properties
@@ -17,7 +17,7 @@
 |**quality** | **Double** | quality | double |  [optional] |
 |**magQuality** | **String** | INGV quality code of the magnitude (computed by ew2moledb) | char(2) |  [optional] |
 |**originid** | **Long** | Unique incremental id | bigint(20) |  [optional] |
-|**provenance** | [**ObjectProvenaceForOriginsEventsAndEventsPref**](ObjectProvenaceForOriginsEventsAndEventsPref.md) |  |  [optional] |
+|**provenance** | [**ObjectProvenaceForOriginsEventsAndEventsGroup**](ObjectProvenaceForOriginsEventsAndEventsGroup.md) |  |  [optional] |
 
 
 

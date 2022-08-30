@@ -53,7 +53,7 @@ docs/EarthwormApiApi.md
 docs/GetApi.md
 docs/GetEvent200Response.md
 docs/GetEvent200ResponseData.md
-docs/GetEventsPref200Response.md
+docs/GetEventsGroup200Response.md
 docs/GetLocalspace200Response.md
 docs/GetLocalspace200ResponseAllOf.md
 docs/GetMunicipiDistanceKmPopolazione200Response.md
@@ -92,7 +92,7 @@ docs/ObjectFocalmechanismPostOutput.md
 docs/ObjectFocalmechanismPostOutputFocalmechanismsInner.md
 docs/ObjectLocalspace.md
 docs/ObjectMagnitude.md
-docs/ObjectMagnitudeForOriginsEventsAndEventsPref.md
+docs/ObjectMagnitudeForOriginsEventsAndEventsGroup.md
 docs/ObjectMagnitudePostOutput.md
 docs/ObjectMomenttensor.md
 docs/ObjectMomenttensorPostOutput.md
@@ -104,10 +104,10 @@ docs/ObjectOrigin.md
 docs/ObjectOriginFlag.md
 docs/ObjectOriginFlagPostOutput.md
 docs/ObjectOriginFlagPostOutputOriginFlagInner.md
-docs/ObjectOriginForOriginsEventsAndEventsPref.md
-docs/ObjectOriginsEventsAndEventsPref.md
+docs/ObjectOriginForOriginsEventsAndEventsGroup.md
+docs/ObjectOriginsEventsAndEventsGroup.md
 docs/ObjectPickEw.md
-docs/ObjectProvenaceForOriginsEventsAndEventsPref.md
+docs/ObjectProvenaceForOriginsEventsAndEventsGroup.md
 docs/ObjectProvenance.md
 docs/ObjectStationmagnitude.md
 docs/ObjectStationmagnitudeTypeAmplitude.md
@@ -224,7 +224,7 @@ src/main/java/org/ingv/dante/model/AddStrongmotionRequest.java
 src/main/java/org/ingv/dante/model/AddStrongmotionRequestData.java
 src/main/java/org/ingv/dante/model/GetEvent200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200ResponseData.java
-src/main/java/org/ingv/dante/model/GetEventsPref200Response.java
+src/main/java/org/ingv/dante/model/GetEventsGroup200Response.java
 src/main/java/org/ingv/dante/model/GetLocalspace200Response.java
 src/main/java/org/ingv/dante/model/GetLocalspace200ResponseAllOf.java
 src/main/java/org/ingv/dante/model/GetMunicipiDistanceKmPopolazione200Response.java
@@ -263,7 +263,7 @@ src/main/java/org/ingv/dante/model/ObjectFocalmechanismPostOutput.java
 src/main/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputFocalmechanismsInner.java
 src/main/java/org/ingv/dante/model/ObjectLocalspace.java
 src/main/java/org/ingv/dante/model/ObjectMagnitude.java
-src/main/java/org/ingv/dante/model/ObjectMagnitudeForOriginsEventsAndEventsPref.java
+src/main/java/org/ingv/dante/model/ObjectMagnitudeForOriginsEventsAndEventsGroup.java
 src/main/java/org/ingv/dante/model/ObjectMagnitudePostOutput.java
 src/main/java/org/ingv/dante/model/ObjectMomenttensor.java
 src/main/java/org/ingv/dante/model/ObjectMomenttensorPostOutput.java
@@ -275,10 +275,10 @@ src/main/java/org/ingv/dante/model/ObjectOrigin.java
 src/main/java/org/ingv/dante/model/ObjectOriginFlag.java
 src/main/java/org/ingv/dante/model/ObjectOriginFlagPostOutput.java
 src/main/java/org/ingv/dante/model/ObjectOriginFlagPostOutputOriginFlagInner.java
-src/main/java/org/ingv/dante/model/ObjectOriginForOriginsEventsAndEventsPref.java
-src/main/java/org/ingv/dante/model/ObjectOriginsEventsAndEventsPref.java
+src/main/java/org/ingv/dante/model/ObjectOriginForOriginsEventsAndEventsGroup.java
+src/main/java/org/ingv/dante/model/ObjectOriginsEventsAndEventsGroup.java
 src/main/java/org/ingv/dante/model/ObjectPickEw.java
-src/main/java/org/ingv/dante/model/ObjectProvenaceForOriginsEventsAndEventsPref.java
+src/main/java/org/ingv/dante/model/ObjectProvenaceForOriginsEventsAndEventsGroup.java
 src/main/java/org/ingv/dante/model/ObjectProvenance.java
 src/main/java/org/ingv/dante/model/ObjectStationmagnitude.java
 src/main/java/org/ingv/dante/model/ObjectStationmagnitudeTypeAmplitude.java
@@ -365,7 +365,7 @@ src/test/java/org/ingv/dante/model/AddStrongmotionRequestDataTest.java
 src/test/java/org/ingv/dante/model/AddStrongmotionRequestTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseDataTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseTest.java
-src/test/java/org/ingv/dante/model/GetEventsPref200ResponseTest.java
+src/test/java/org/ingv/dante/model/GetEventsGroup200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetLocalspace200ResponseAllOfTest.java
 src/test/java/org/ingv/dante/model/GetLocalspace200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetMunicipiDistanceKmPopolazione200ResponseDataInnerTest.java
@@ -403,7 +403,7 @@ src/test/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputFocalmechanisms
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputTest.java
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismTest.java
 src/test/java/org/ingv/dante/model/ObjectLocalspaceTest.java
-src/test/java/org/ingv/dante/model/ObjectMagnitudeForOriginsEventsAndEventsPrefTest.java
+src/test/java/org/ingv/dante/model/ObjectMagnitudeForOriginsEventsAndEventsGroupTest.java
 src/test/java/org/ingv/dante/model/ObjectMagnitudePostOutputTest.java
 src/test/java/org/ingv/dante/model/ObjectMagnitudeTest.java
 src/test/java/org/ingv/dante/model/ObjectMomenttensorPostOutputMomenttensorTest.java
@@ -415,11 +415,11 @@ src/test/java/org/ingv/dante/model/ObjectMomenttensorTest.java
 src/test/java/org/ingv/dante/model/ObjectOriginFlagPostOutputOriginFlagInnerTest.java
 src/test/java/org/ingv/dante/model/ObjectOriginFlagPostOutputTest.java
 src/test/java/org/ingv/dante/model/ObjectOriginFlagTest.java
-src/test/java/org/ingv/dante/model/ObjectOriginForOriginsEventsAndEventsPrefTest.java
+src/test/java/org/ingv/dante/model/ObjectOriginForOriginsEventsAndEventsGroupTest.java
 src/test/java/org/ingv/dante/model/ObjectOriginTest.java
-src/test/java/org/ingv/dante/model/ObjectOriginsEventsAndEventsPrefTest.java
+src/test/java/org/ingv/dante/model/ObjectOriginsEventsAndEventsGroupTest.java
 src/test/java/org/ingv/dante/model/ObjectPickEwTest.java
-src/test/java/org/ingv/dante/model/ObjectProvenaceForOriginsEventsAndEventsPrefTest.java
+src/test/java/org/ingv/dante/model/ObjectProvenaceForOriginsEventsAndEventsGroupTest.java
 src/test/java/org/ingv/dante/model/ObjectProvenanceTest.java
 src/test/java/org/ingv/dante/model/ObjectStationmagnitudeTest.java
 src/test/java/org/ingv/dante/model/ObjectStationmagnitudeTypeAmplitudeTest.java

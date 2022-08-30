@@ -1,6 +1,6 @@
 /*
  * Dante Web Services
- *       # Introduction   Dante is an API Web Service used for iteract with earthquake data stored in database (**quakedb**); the **quakedb** database schema is used at INGV.   Use other schema would require cration of specific `Model` and `Controller` but this is the potential of web services.      Dante provides a set of routes to store message **event**, **origin**, **magnitude**, **arrival**, **...**.      # Input   As input, Dante acept:   - A `json` message (view '**store**' spec below)    - An Eartworm `json` message (view '**earthworm api**' spec below) produced by **ew2openapi** module      # Output   As output, Dante has a RESTful api foreach database table and implement three specific routes:    - `events-pref`: returns the preferred origin and the preferred magnitude from all clusterd events.    - `events`: returns the preferred origin and the preferred magnitude from the same instance.    - `event`: returns the full event (event, origins, magnitudes, arrivals, amplitude, etc...) from an **eventid** or **originid**_/_**originid**.        
+ *       # Introduction   Dante is an API Web Service used for iteract with earthquake data stored in database (**quakedb**); the **quakedb** database schema is used at INGV.   Use other schema would require cration of specific `Model` and `Controller` but this is the potential of web services.      Dante provides a set of routes to store message **event**, **origin**, **magnitude**, **arrival**, **...**.      # Input   As input, Dante acept:   - A `json` message (view '**store**' spec below)    - An Eartworm `json` message (view '**earthworm api**' spec below) produced by **ew2openapi** module      # Output   As output, Dante has a RESTful api foreach database table and implement three specific routes:    - `events-group`: returns the preferred origin and the preferred magnitude from all clusterd events.    - `events`: returns the preferred origin and the preferred magnitude from the same instance.    - `event`: returns the full event (event, origins, magnitudes, arrivals, amplitude, etc...) from an **eventid** or **originid**_/_**originid**.        
  *
  * The version of the OpenAPI document: 2.49.0-dev
  * Contact: valentino.lauciani@ingv.it
@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import org.ingv.dante.model.ObjectProvenaceForOriginsEventsAndEventsPref;
+import org.ingv.dante.model.ObjectProvenaceForOriginsEventsAndEventsGroup;
 import org.ingv.dante.model.ObjectTypeOrigin;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -49,10 +49,10 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * ObjectOriginForOriginsEventsAndEventsPref
+ * ObjectOriginForOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-29T09:56:24.094240118Z[GMT]")
-public class ObjectOriginForOriginsEventsAndEventsPref {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-30T14:53:03.904335Z[Etc/UTC]")
+public class ObjectOriginForOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Long id;
@@ -139,13 +139,13 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
-  private ObjectProvenaceForOriginsEventsAndEventsPref provenance;
+  private ObjectProvenaceForOriginsEventsAndEventsGroup provenance;
 
-  public ObjectOriginForOriginsEventsAndEventsPref() { 
+  public ObjectOriginForOriginsEventsAndEventsGroup() {
   }
 
   
-  public ObjectOriginForOriginsEventsAndEventsPref(
+  public ObjectOriginForOriginsEventsAndEventsGroup(
      OffsetDateTime modified, 
      OffsetDateTime inserted
   ) {
@@ -154,7 +154,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
     this.inserted = inserted;
   }
 
-  public ObjectOriginForOriginsEventsAndEventsPref id(Long id) {
+  public ObjectOriginForOriginsEventsAndEventsGroup id(Long id) {
     
     this.id = id;
     return this;
@@ -177,7 +177,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref idLocalspace(Long idLocalspace) {
+  public ObjectOriginForOriginsEventsAndEventsGroup idLocalspace(Long idLocalspace) {
     
     this.idLocalspace = idLocalspace;
     return this;
@@ -200,7 +200,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref localspace(String localspace) {
+  public ObjectOriginForOriginsEventsAndEventsGroup localspace(String localspace) {
     
     this.localspace = localspace;
     return this;
@@ -223,7 +223,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref ot(OffsetDateTime ot) {
+  public ObjectOriginForOriginsEventsAndEventsGroup ot(OffsetDateTime ot) {
     
     this.ot = ot;
     return this;
@@ -246,7 +246,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref lat(Double lat) {
+  public ObjectOriginForOriginsEventsAndEventsGroup lat(Double lat) {
     
     this.lat = lat;
     return this;
@@ -271,7 +271,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref lon(Double lon) {
+  public ObjectOriginForOriginsEventsAndEventsGroup lon(Double lon) {
     
     this.lon = lon;
     return this;
@@ -296,7 +296,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref depth(Double depth) {
+  public ObjectOriginForOriginsEventsAndEventsGroup depth(Double depth) {
     
     this.depth = depth;
     return this;
@@ -319,7 +319,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref errOt(Double errOt) {
+  public ObjectOriginForOriginsEventsAndEventsGroup errOt(Double errOt) {
     
     this.errOt = errOt;
     return this;
@@ -342,7 +342,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref errH(Double errH) {
+  public ObjectOriginForOriginsEventsAndEventsGroup errH(Double errH) {
     
     this.errH = errH;
     return this;
@@ -365,7 +365,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref errZ(Double errZ) {
+  public ObjectOriginForOriginsEventsAndEventsGroup errZ(Double errZ) {
     
     this.errZ = errZ;
     return this;
@@ -388,7 +388,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref errLat(Double errLat) {
+  public ObjectOriginForOriginsEventsAndEventsGroup errLat(Double errLat) {
     
     this.errLat = errLat;
     return this;
@@ -411,7 +411,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref errLon(Double errLon) {
+  public ObjectOriginForOriginsEventsAndEventsGroup errLon(Double errLon) {
     
     this.errLon = errLon;
     return this;
@@ -434,7 +434,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref quality(String quality) {
+  public ObjectOriginForOriginsEventsAndEventsGroup quality(String quality) {
     
     this.quality = quality;
     return this;
@@ -457,7 +457,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref associatedPhaseCount(Long associatedPhaseCount) {
+  public ObjectOriginForOriginsEventsAndEventsGroup associatedPhaseCount(Long associatedPhaseCount) {
     
     this.associatedPhaseCount = associatedPhaseCount;
     return this;
@@ -480,7 +480,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref associatedStationCount(Long associatedStationCount) {
+  public ObjectOriginForOriginsEventsAndEventsGroup associatedStationCount(Long associatedStationCount) {
     
     this.associatedStationCount = associatedStationCount;
     return this;
@@ -503,7 +503,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref usedPhaseCount(Long usedPhaseCount) {
+  public ObjectOriginForOriginsEventsAndEventsGroup usedPhaseCount(Long usedPhaseCount) {
     
     this.usedPhaseCount = usedPhaseCount;
     return this;
@@ -526,7 +526,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref usedStationCount(Long usedStationCount) {
+  public ObjectOriginForOriginsEventsAndEventsGroup usedStationCount(Long usedStationCount) {
     
     this.usedStationCount = usedStationCount;
     return this;
@@ -549,7 +549,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref region(String region) {
+  public ObjectOriginForOriginsEventsAndEventsGroup region(String region) {
     
     this.region = region;
     return this;
@@ -600,7 +600,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
 
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref typeOrigin(ObjectTypeOrigin typeOrigin) {
+  public ObjectOriginForOriginsEventsAndEventsGroup typeOrigin(ObjectTypeOrigin typeOrigin) {
     
     this.typeOrigin = typeOrigin;
     return this;
@@ -623,7 +623,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
 
-  public ObjectOriginForOriginsEventsAndEventsPref provenance(ObjectProvenaceForOriginsEventsAndEventsPref provenance) {
+  public ObjectOriginForOriginsEventsAndEventsGroup provenance(ObjectProvenaceForOriginsEventsAndEventsGroup provenance) {
     
     this.provenance = provenance;
     return this;
@@ -636,15 +636,50 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public ObjectProvenaceForOriginsEventsAndEventsPref getProvenance() {
+  public ObjectProvenaceForOriginsEventsAndEventsGroup getProvenance() {
     return provenance;
   }
 
 
-  public void setProvenance(ObjectProvenaceForOriginsEventsAndEventsPref provenance) {
+  public void setProvenance(ObjectProvenaceForOriginsEventsAndEventsGroup provenance) {
     this.provenance = provenance;
   }
 
+  /**
+   * A container for additional, undeclared properties.
+   * This is a holder for any undeclared properties as specified with
+   * the 'additionalProperties' keyword in the OAS document.
+   */
+  private Map<String, Object> additionalProperties;
+
+  /**
+   * Set the additional (undeclared) property with the specified name and value.
+   * If the property does not already exist, create it otherwise replace it.
+   */
+  public ObjectOriginForOriginsEventsAndEventsGroup putAdditionalProperty(String key, Object value) {
+    if (this.additionalProperties == null) {
+        this.additionalProperties = new HashMap<String, Object>();
+    }
+    this.additionalProperties.put(key, value);
+    return this;
+  }
+
+  /**
+   * Return the additional (undeclared) property.
+   */
+  public Map<String, Object> getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  /**
+   * Return the additional (undeclared) property with the specified name.
+   */
+  public Object getAdditionalProperty(String key) {
+    if (this.additionalProperties == null) {
+        return null;
+    }
+    return this.additionalProperties.get(key);
+  }
 
 
   @Override
@@ -655,29 +690,30 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectOriginForOriginsEventsAndEventsPref objectOriginForOriginsEventsAndEventsPref = (ObjectOriginForOriginsEventsAndEventsPref) o;
-    return Objects.equals(this.id, objectOriginForOriginsEventsAndEventsPref.id) &&
-        Objects.equals(this.idLocalspace, objectOriginForOriginsEventsAndEventsPref.idLocalspace) &&
-        Objects.equals(this.localspace, objectOriginForOriginsEventsAndEventsPref.localspace) &&
-        Objects.equals(this.ot, objectOriginForOriginsEventsAndEventsPref.ot) &&
-        Objects.equals(this.lat, objectOriginForOriginsEventsAndEventsPref.lat) &&
-        Objects.equals(this.lon, objectOriginForOriginsEventsAndEventsPref.lon) &&
-        Objects.equals(this.depth, objectOriginForOriginsEventsAndEventsPref.depth) &&
-        Objects.equals(this.errOt, objectOriginForOriginsEventsAndEventsPref.errOt) &&
-        Objects.equals(this.errH, objectOriginForOriginsEventsAndEventsPref.errH) &&
-        Objects.equals(this.errZ, objectOriginForOriginsEventsAndEventsPref.errZ) &&
-        Objects.equals(this.errLat, objectOriginForOriginsEventsAndEventsPref.errLat) &&
-        Objects.equals(this.errLon, objectOriginForOriginsEventsAndEventsPref.errLon) &&
-        Objects.equals(this.quality, objectOriginForOriginsEventsAndEventsPref.quality) &&
-        Objects.equals(this.associatedPhaseCount, objectOriginForOriginsEventsAndEventsPref.associatedPhaseCount) &&
-        Objects.equals(this.associatedStationCount, objectOriginForOriginsEventsAndEventsPref.associatedStationCount) &&
-        Objects.equals(this.usedPhaseCount, objectOriginForOriginsEventsAndEventsPref.usedPhaseCount) &&
-        Objects.equals(this.usedStationCount, objectOriginForOriginsEventsAndEventsPref.usedStationCount) &&
-        Objects.equals(this.region, objectOriginForOriginsEventsAndEventsPref.region) &&
-        Objects.equals(this.modified, objectOriginForOriginsEventsAndEventsPref.modified) &&
-        Objects.equals(this.inserted, objectOriginForOriginsEventsAndEventsPref.inserted) &&
-        Objects.equals(this.typeOrigin, objectOriginForOriginsEventsAndEventsPref.typeOrigin) &&
-        Objects.equals(this.provenance, objectOriginForOriginsEventsAndEventsPref.provenance);
+    ObjectOriginForOriginsEventsAndEventsGroup objectOriginForOriginsEventsAndEventsGroup = (ObjectOriginForOriginsEventsAndEventsGroup) o;
+    return Objects.equals(this.id, objectOriginForOriginsEventsAndEventsGroup.id) &&
+        Objects.equals(this.idLocalspace, objectOriginForOriginsEventsAndEventsGroup.idLocalspace) &&
+        Objects.equals(this.localspace, objectOriginForOriginsEventsAndEventsGroup.localspace) &&
+        Objects.equals(this.ot, objectOriginForOriginsEventsAndEventsGroup.ot) &&
+        Objects.equals(this.lat, objectOriginForOriginsEventsAndEventsGroup.lat) &&
+        Objects.equals(this.lon, objectOriginForOriginsEventsAndEventsGroup.lon) &&
+        Objects.equals(this.depth, objectOriginForOriginsEventsAndEventsGroup.depth) &&
+        Objects.equals(this.errOt, objectOriginForOriginsEventsAndEventsGroup.errOt) &&
+        Objects.equals(this.errH, objectOriginForOriginsEventsAndEventsGroup.errH) &&
+        Objects.equals(this.errZ, objectOriginForOriginsEventsAndEventsGroup.errZ) &&
+        Objects.equals(this.errLat, objectOriginForOriginsEventsAndEventsGroup.errLat) &&
+        Objects.equals(this.errLon, objectOriginForOriginsEventsAndEventsGroup.errLon) &&
+        Objects.equals(this.quality, objectOriginForOriginsEventsAndEventsGroup.quality) &&
+        Objects.equals(this.associatedPhaseCount, objectOriginForOriginsEventsAndEventsGroup.associatedPhaseCount) &&
+        Objects.equals(this.associatedStationCount, objectOriginForOriginsEventsAndEventsGroup.associatedStationCount) &&
+        Objects.equals(this.usedPhaseCount, objectOriginForOriginsEventsAndEventsGroup.usedPhaseCount) &&
+        Objects.equals(this.usedStationCount, objectOriginForOriginsEventsAndEventsGroup.usedStationCount) &&
+        Objects.equals(this.region, objectOriginForOriginsEventsAndEventsGroup.region) &&
+        Objects.equals(this.modified, objectOriginForOriginsEventsAndEventsGroup.modified) &&
+        Objects.equals(this.inserted, objectOriginForOriginsEventsAndEventsGroup.inserted) &&
+        Objects.equals(this.typeOrigin, objectOriginForOriginsEventsAndEventsGroup.typeOrigin) &&
+        Objects.equals(this.provenance, objectOriginForOriginsEventsAndEventsGroup.provenance)&&
+        Objects.equals(this.additionalProperties, objectOriginForOriginsEventsAndEventsGroup.additionalProperties);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -686,7 +722,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idLocalspace, localspace, ot, lat, lon, depth, errOt, errH, errZ, errLat, errLon, quality, associatedPhaseCount, associatedStationCount, usedPhaseCount, usedStationCount, region, modified, inserted, typeOrigin, provenance);
+    return Objects.hash(id, idLocalspace, localspace, ot, lat, lon, depth, errOt, errH, errZ, errLat, errLon, quality, associatedPhaseCount, associatedStationCount, usedPhaseCount, usedStationCount, region, modified, inserted, typeOrigin, provenance, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -699,7 +735,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectOriginForOriginsEventsAndEventsPref {\n");
+    sb.append("class ObjectOriginForOriginsEventsAndEventsGroup {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idLocalspace: ").append(toIndentedString(idLocalspace)).append("\n");
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
@@ -722,6 +758,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
     sb.append("    typeOrigin: ").append(toIndentedString(typeOrigin)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
+    sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -775,22 +812,14 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectOriginForOriginsEventsAndEventsPref
+  * @throws IOException if the JSON Object is invalid with respect to ObjectOriginForOriginsEventsAndEventsGroup
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectOriginForOriginsEventsAndEventsPref.openapiRequiredFields.isEmpty()) {
+        if (ObjectOriginForOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectOriginForOriginsEventsAndEventsPref is not found in the empty JSON string", ObjectOriginForOriginsEventsAndEventsPref.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
-        if (!ObjectOriginForOriginsEventsAndEventsPref.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ObjectOriginForOriginsEventsAndEventsPref` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectOriginForOriginsEventsAndEventsGroup is not found in the empty JSON string", ObjectOriginForOriginsEventsAndEventsGroup.openapiRequiredFields.toString()));
         }
       }
       if ((jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) && !jsonObj.get("localspace").isJsonPrimitive()) {
@@ -808,7 +837,7 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenaceForOriginsEventsAndEventsPref.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenaceForOriginsEventsAndEventsGroup.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
   }
 
@@ -816,25 +845,60 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectOriginForOriginsEventsAndEventsPref.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectOriginForOriginsEventsAndEventsPref' and its subtypes
+       if (!ObjectOriginForOriginsEventsAndEventsGroup.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectOriginForOriginsEventsAndEventsGroup' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectOriginForOriginsEventsAndEventsPref> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectOriginForOriginsEventsAndEventsPref.class));
+       final TypeAdapter<ObjectOriginForOriginsEventsAndEventsGroup> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectOriginForOriginsEventsAndEventsGroup.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectOriginForOriginsEventsAndEventsPref>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectOriginForOriginsEventsAndEventsGroup>() {
            @Override
-           public void write(JsonWriter out, ObjectOriginForOriginsEventsAndEventsPref value) throws IOException {
+           public void write(JsonWriter out, ObjectOriginForOriginsEventsAndEventsGroup value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             obj.remove("additionalProperties");
+             // serialize additonal properties
+             if (value.getAdditionalProperties() != null) {
+               for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
+                 if (entry.getValue() instanceof String)
+                   obj.addProperty(entry.getKey(), (String) entry.getValue());
+                 else if (entry.getValue() instanceof Number)
+                   obj.addProperty(entry.getKey(), (Number) entry.getValue());
+                 else if (entry.getValue() instanceof Boolean)
+                   obj.addProperty(entry.getKey(), (Boolean) entry.getValue());
+                 else if (entry.getValue() instanceof Character)
+                   obj.addProperty(entry.getKey(), (Character) entry.getValue());
+                 else {
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                 }
+               }
+             }
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ObjectOriginForOriginsEventsAndEventsPref read(JsonReader in) throws IOException {
+           public ObjectOriginForOriginsEventsAndEventsGroup read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             // store additional fields in the deserialized instance
+             ObjectOriginForOriginsEventsAndEventsGroup instance = thisAdapter.fromJsonTree(jsonObj);
+             for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
+               if (!openapiFields.contains(entry.getKey())) {
+                 if (entry.getValue().isJsonPrimitive()) { // primitive type
+                   if (entry.getValue().getAsJsonPrimitive().isString())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsString());
+                   else if (entry.getValue().getAsJsonPrimitive().isNumber())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsNumber());
+                   else if (entry.getValue().getAsJsonPrimitive().isBoolean())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
+                   else
+                     throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 }
+               }
+             }
+             return instance;
            }
 
        }.nullSafe();
@@ -842,18 +906,18 @@ public class ObjectOriginForOriginsEventsAndEventsPref {
   }
 
  /**
-  * Create an instance of ObjectOriginForOriginsEventsAndEventsPref given an JSON string
+  * Create an instance of ObjectOriginForOriginsEventsAndEventsGroup given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectOriginForOriginsEventsAndEventsPref
-  * @throws IOException if the JSON string is invalid with respect to ObjectOriginForOriginsEventsAndEventsPref
+  * @return An instance of ObjectOriginForOriginsEventsAndEventsGroup
+  * @throws IOException if the JSON string is invalid with respect to ObjectOriginForOriginsEventsAndEventsGroup
   */
-  public static ObjectOriginForOriginsEventsAndEventsPref fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectOriginForOriginsEventsAndEventsPref.class);
+  public static ObjectOriginForOriginsEventsAndEventsGroup fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectOriginForOriginsEventsAndEventsGroup.class);
   }
 
  /**
-  * Convert an instance of ObjectOriginForOriginsEventsAndEventsPref to an JSON string
+  * Convert an instance of ObjectOriginForOriginsEventsAndEventsGroup to an JSON string
   *
   * @return JSON string
   */

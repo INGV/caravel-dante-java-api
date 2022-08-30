@@ -1,6 +1,6 @@
 
 
-# ObjectOriginForOriginsEventsAndEventsPref
+# ObjectOriginForOriginsEventsAndEventsGroup
 
 
 ## Properties
@@ -28,7 +28,7 @@
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
 |**typeOrigin** | [**ObjectTypeOrigin**](ObjectTypeOrigin.md) |  |  [optional] |
-|**provenance** | [**ObjectProvenaceForOriginsEventsAndEventsPref**](ObjectProvenaceForOriginsEventsAndEventsPref.md) |  |  [optional] |
+|**provenance** | [**ObjectProvenaceForOriginsEventsAndEventsGroup**](ObjectProvenaceForOriginsEventsAndEventsGroup.md) |  |  [optional] |
 
 
 

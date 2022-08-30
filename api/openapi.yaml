@@ -13,11 +13,11 @@ info:
     \ message (view '**store**' spec below) \n  - An Eartworm `json` message (view\
     \ '**earthworm api**' spec below) produced by **ew2openapi** module  \n\n  # Output\n\
     \  As output, Dante has a RESTful api foreach database table and implement three\
-    \ specific routes: \n  - `events-pref`: returns the preferred origin and the preferred\
-    \ magnitude from all clusterd events. \n  - `events`: returns the preferred origin\
-    \ and the preferred magnitude from the same instance. \n  - `event`: returns the\
-    \ full event (event, origins, magnitudes, arrivals, amplitude, etc...) from an\
-    \ **eventid** or **originid**/**originid**. \n  \n\n  "
+    \ specific routes: \n  - `events-group`: returns the preferred origin and the\
+    \ preferred magnitude from all clusterd events. \n  - `events`: returns the preferred\
+    \ origin and the preferred magnitude from the same instance. \n  - `event`: returns\
+    \ the full event (event, origins, magnitudes, arrivals, amplitude, etc...) from\
+    \ an **eventid** or **originid**/**originid**. \n  \n\n  "
   license:
     name: Creative Commons Attribution 4.0 International
     url: http://creativecommons.org/licenses/by/4.0/
@@ -207,11 +207,11 @@ paths:
       tags:
       - get
       x-accepts: application/problem+json
-  /quakedb/v1/events-pref:
+  /quakedb/v1/events-group:
     get:
       description: This API returns the preferred origin and the preferred magnitude
         from all clusterd events.
-      operationId: getEventsPref
+      operationId: getEventsGroup
       parameters:
       - description: Select date start (i.e. 2016-06-22T16:52:06.260Z).
         in: query
@@ -449,7 +449,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getEventsPref_200_response'
+                $ref: '#/components/schemas/getEventsGroup_200_response'
           description: Operation successful
           headers:
             Cache-Control:
@@ -707,7 +707,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getEventsPref_200_response'
+                $ref: '#/components/schemas/getEventsGroup_200_response'
           description: Operation successful
           headers:
             Cache-Control:
@@ -964,7 +964,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getEventsPref_200_response'
+                $ref: '#/components/schemas/getEventsGroup_200_response'
           description: Operation successful
           headers:
             Cache-Control:
@@ -4442,11 +4442,11 @@ components:
           $ref: '#/components/headers/X-RateLimit-Remaining'
         X-RateLimit-Reset:
           $ref: '#/components/headers/X-RateLimit-Reset'
-    "200OriginsEventsAndEventsPref":
+    "200OriginsEventsAndEventsGroup":
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/getEventsPref_200_response'
+            $ref: '#/components/schemas/getEventsGroup_200_response'
       description: Operation successful
       headers:
         Cache-Control:
@@ -4689,7 +4689,7 @@ components:
       required:
       - name
       type: object
-    ObjectOriginsEventsAndEventsPref:
+    ObjectOriginsEventsAndEventsGroup:
       example:
         preferred_focalmechanism_id: 5
         origin:
@@ -4814,11 +4814,11 @@ components:
           readOnly: true
           type: string
         origin:
-          $ref: '#/components/schemas/ObjectOriginForOriginsEventsAndEventsPref'
+          $ref: '#/components/schemas/ObjectOriginForOriginsEventsAndEventsGroup'
         magnitude:
-          $ref: '#/components/schemas/ObjectMagnitudeForOriginsEventsAndEventsPref'
+          $ref: '#/components/schemas/ObjectMagnitudeForOriginsEventsAndEventsGroup'
         provenance:
-          $ref: '#/components/schemas/ObjectProvenaceForOriginsEventsAndEventsPref'
+          $ref: '#/components/schemas/ObjectProvenaceForOriginsEventsAndEventsGroup'
       type: object
     ObjectLocalspace:
       example:
@@ -8444,7 +8444,7 @@ components:
       - net
       - sta
       type: object
-    ObjectOriginForOriginsEventsAndEventsPref:
+    ObjectOriginForOriginsEventsAndEventsGroup:
       example:
         err_lon: 2.027123023002322
         err_z: 9.301444243932576
@@ -8589,9 +8589,9 @@ components:
         type_origin:
           $ref: '#/components/schemas/ObjectTypeOrigin'
         provenance:
-          $ref: '#/components/schemas/ObjectProvenaceForOriginsEventsAndEventsPref'
+          $ref: '#/components/schemas/ObjectProvenaceForOriginsEventsAndEventsGroup'
       type: object
-    ObjectProvenaceForOriginsEventsAndEventsPref:
+    ObjectProvenaceForOriginsEventsAndEventsGroup:
       example:
         name: INGV
         version: hew1_mole
@@ -8611,7 +8611,7 @@ components:
           example: software
           type: string
       type: object
-    ObjectMagnitudeForOriginsEventsAndEventsPref:
+    ObjectMagnitudeForOriginsEventsAndEventsGroup:
       example:
         type_magnitude: ML-VAX
         id_localspace: 182491
@@ -8678,7 +8678,7 @@ components:
           format: int64
           type: integer
         provenance:
-          $ref: '#/components/schemas/ObjectProvenaceForOriginsEventsAndEventsPref'
+          $ref: '#/components/schemas/ObjectProvenaceForOriginsEventsAndEventsGroup'
       type: object
     MetaDefinition:
       example:
@@ -9838,7 +9838,7 @@ components:
         token_type:
           example: Bearer
           type: string
-    getEventsPref_200_response:
+    getEventsGroup_200_response:
       example:
         data:
         - preferred_focalmechanism_id: 5
@@ -9986,7 +9986,7 @@ components:
           $ref: '#/components/schemas/MetaDefinition'
         data:
           items:
-            $ref: '#/components/schemas/ObjectOriginsEventsAndEventsPref'
+            $ref: '#/components/schemas/ObjectOriginsEventsAndEventsGroup'
           type: array
       type: object
     getTypeEvent_200_response_allOf:

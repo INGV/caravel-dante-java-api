@@ -1,6 +1,6 @@
 /*
  * Dante Web Services
- *       # Introduction   Dante is an API Web Service used for iteract with earthquake data stored in database (**quakedb**); the **quakedb** database schema is used at INGV.   Use other schema would require cration of specific `Model` and `Controller` but this is the potential of web services.      Dante provides a set of routes to store message **event**, **origin**, **magnitude**, **arrival**, **...**.      # Input   As input, Dante acept:   - A `json` message (view '**store**' spec below)    - An Eartworm `json` message (view '**earthworm api**' spec below) produced by **ew2openapi** module      # Output   As output, Dante has a RESTful api foreach database table and implement three specific routes:    - `events-pref`: returns the preferred origin and the preferred magnitude from all clusterd events.    - `events`: returns the preferred origin and the preferred magnitude from the same instance.    - `event`: returns the full event (event, origins, magnitudes, arrivals, amplitude, etc...) from an **eventid** or **originid**_/_**originid**.        
+ *       # Introduction   Dante is an API Web Service used for iteract with earthquake data stored in database (**quakedb**); the **quakedb** database schema is used at INGV.   Use other schema would require cration of specific `Model` and `Controller` but this is the potential of web services.      Dante provides a set of routes to store message **event**, **origin**, **magnitude**, **arrival**, **...**.      # Input   As input, Dante acept:   - A `json` message (view '**store**' spec below)    - An Eartworm `json` message (view '**earthworm api**' spec below) produced by **ew2openapi** module      # Output   As output, Dante has a RESTful api foreach database table and implement three specific routes:    - `events-group`: returns the preferred origin and the preferred magnitude from all clusterd events.    - `events`: returns the preferred origin and the preferred magnitude from the same instance.    - `event`: returns the full event (event, origins, magnitudes, arrivals, amplitude, etc...) from an **eventid** or **originid**_/_**originid**.        
  *
  * The version of the OpenAPI document: 2.49.0-dev
  * Contact: valentino.lauciani@ingv.it
@@ -21,24 +21,24 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.ObjectProvenaceForOriginsEventsAndEventsPref;
+import org.ingv.dante.model.ObjectProvenaceForOriginsEventsAndEventsGroup;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectMagnitudeForOriginsEventsAndEventsPref
+ * Model tests for ObjectMagnitudeForOriginsEventsAndEventsGroup
  */
-public class ObjectMagnitudeForOriginsEventsAndEventsPrefTest {
-    private final ObjectMagnitudeForOriginsEventsAndEventsPref model = new ObjectMagnitudeForOriginsEventsAndEventsPref();
+public class ObjectMagnitudeForOriginsEventsAndEventsGroupTest {
+    private final ObjectMagnitudeForOriginsEventsAndEventsGroup model = new ObjectMagnitudeForOriginsEventsAndEventsGroup();
 
     /**
-     * Model tests for ObjectMagnitudeForOriginsEventsAndEventsPref
+     * Model tests for ObjectMagnitudeForOriginsEventsAndEventsGroup
      */
     @Test
-    public void testObjectMagnitudeForOriginsEventsAndEventsPref() {
-        // TODO: test ObjectMagnitudeForOriginsEventsAndEventsPref
+    public void testObjectMagnitudeForOriginsEventsAndEventsGroup() {
+        // TODO: test ObjectMagnitudeForOriginsEventsAndEventsGroup
     }
 
     /**
