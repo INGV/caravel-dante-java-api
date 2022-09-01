@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectArrival
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-01T12:22:38.975868Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-01T13:58:39.000157Z[Etc/UTC]")
 public class ObjectArrival {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
