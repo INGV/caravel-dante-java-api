@@ -13,22 +13,54 @@
 
 package org.ingv.dante.model;
 
-import io.swagger.annotations.ApiModel;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for TypeOriginName
+ * Model tests for ObjectProvenaceForOriginsEventsAndEventsGroup
  */
-public class TypeOriginNameTest {
+public class ObjectProvenaceForOriginsEventsAndEventsGroupTest {
+    private final ObjectProvenaceForOriginsEventsAndEventsGroup model = new ObjectProvenaceForOriginsEventsAndEventsGroup();
+
     /**
-     * Model tests for TypeOriginName
+     * Model tests for ObjectProvenaceForOriginsEventsAndEventsGroup
      */
     @Test
-    public void testTypeOriginName() {
-        // TODO: test TypeOriginName
+    public void testObjectProvenaceForOriginsEventsAndEventsGroup() {
+        // TODO: test ObjectProvenaceForOriginsEventsAndEventsGroup
+    }
+
+    /**
+     * Test the property 'name'
+     */
+    @Test
+    public void nameTest() {
+        // TODO: test name
+    }
+
+    /**
+     * Test the property 'version'
+     */
+    @Test
+    public void versionTest() {
+        // TODO: test version
+    }
+
+    /**
+     * Test the property 'softwarename'
+     */
+    @Test
+    public void softwarenameTest() {
+        // TODO: test softwarename
     }
 
 }

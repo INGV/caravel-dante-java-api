@@ -13,22 +13,59 @@
 
 package org.ingv.dante.model;
 
-import io.swagger.annotations.ApiModel;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.LinksDefinition;
+import org.ingv.dante.model.MetaDefinition;
+import org.ingv.dante.model.ObjectOriginsEventsAndEventsGroup;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for TypeOriginName
+ * Model tests for GetEventsGroup200Response
  */
-public class TypeOriginNameTest {
+public class GetEventsGroup200ResponseTest {
+    private final GetEventsGroup200Response model = new GetEventsGroup200Response();
+
     /**
-     * Model tests for TypeOriginName
+     * Model tests for GetEventsGroup200Response
      */
     @Test
-    public void testTypeOriginName() {
-        // TODO: test TypeOriginName
+    public void testGetEventsGroup200Response() {
+        // TODO: test GetEventsGroup200Response
+    }
+
+    /**
+     * Test the property 'links'
+     */
+    @Test
+    public void linksTest() {
+        // TODO: test links
+    }
+
+    /**
+     * Test the property 'meta'
+     */
+    @Test
+    public void metaTest() {
+        // TODO: test meta
+    }
+
+    /**
+     * Test the property 'data'
+     */
+    @Test
+    public void dataTest() {
+        // TODO: test data
     }
 
 }

@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 2.48.1
-  - Build date: 2022-08-30T14:53:51.101585Z[Etc/UTC]
+- API version: 2.49.0
+  - Build date: 2022-09-01T09:28:36.771661Z[Etc/UTC]
 
   
 
@@ -19,7 +19,7 @@ Dante Web Services
 
   # Output
   As output, Dante has a RESTful api foreach database table and implement three specific routes: 
-  - `events-pref`: returns the preferred origin and the preferred magnitude from all clusterd events. 
+  - `events-group`: returns the preferred origin and the preferred magnitude from all clusterd events. 
   - `events`: returns the preferred origin and the preferred magnitude from the same instance. 
   - `event`: returns the full event (event, origins, magnitudes, arrivals, amplitude, etc...) from an **eventid** or **originid**_/_**originid**. 
   
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>2.48.1</version>
+  <version>2.49.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.48.1"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.49.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-2.48.1.jar`
+* `target/java-openapi-generator-cli-dante-2.49.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -151,12 +151,13 @@ Class | Method | HTTP request | Description
 *EarthwormApiApi* | [**addHEwStrongmotionii**](docs/EarthwormApiApi.md#addHEwStrongmotionii) | **POST** /quakedb/ew/v1/strongmotionii | Insert a new strongmotionii message to the DB using ew2openapi module
 *GetApi* | [**getEvent**](docs/GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events.
 *GetApi* | [**getEvents**](docs/GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance.
-*GetApi* | [**getEventsPref**](docs/GetApi.md#getEventsPref) | **GET** /quakedb/v1/events-pref | This API returns the preferred origin and the preferred magnitude from all clusterd events.
+*GetApi* | [**getEventsGroup**](docs/GetApi.md#getEventsGroup) | **GET** /quakedb/v1/events-group | This API returns the preferred origin and the preferred magnitude from all clusterd events.
 *GetApi* | [**getLocalspace**](docs/GetApi.md#getLocalspace) | **GET** /quakedb/table/v1/localspace | This API returns all the localspace(s).
+*GetApi* | [**getMagnitudes**](docs/GetApi.md#getMagnitudes) | **GET** /quakedb/v1/magnitudes | This API returns all origins with own preferred magnitude.
 *GetApi* | [**getMunicipiDistanceKmPopolazione**](docs/GetApi.md#getMunicipiDistanceKmPopolazione) | **GET** /boundaries/v1/municipi-distance-km-popolazione | This API returns the municipi-distance-km-popolazione used at INGV.
 *GetApi* | [**getMunicipio**](docs/GetApi.md#getMunicipio) | **GET** /boundaries/v1/municipio | This API returns the Italian \&quot;municipio\&quot; information by name.
 *GetApi* | [**getOriginFlag**](docs/GetApi.md#getOriginFlag) | **GET** /quakedb/v1/origin-flag | This API returns the all the flags assosiated to the originid.
-*GetApi* | [**getOrigins**](docs/GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all origins and magnitudes.
+*GetApi* | [**getOrigins**](docs/GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all the preferred origins.
 *GetApi* | [**getProvenance**](docs/GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s).
 *GetApi* | [**getRegionName**](docs/GetApi.md#getRegionName) | **GET** /boundaries/v1/region-name | This API returns the region name used at INGV.
 *GetApi* | [**getStatus**](docs/GetApi.md#getStatus) | **GET** /status | Return the application status
@@ -231,7 +232,7 @@ Class | Method | HTTP request | Description
  - [AddStrongmotionRequestData](docs/AddStrongmotionRequestData.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)
  - [GetEvent200ResponseData](docs/GetEvent200ResponseData.md)
- - [GetEventsPref200Response](docs/GetEventsPref200Response.md)
+ - [GetEventsGroup200Response](docs/GetEventsGroup200Response.md)
  - [GetLocalspace200Response](docs/GetLocalspace200Response.md)
  - [GetLocalspace200ResponseAllOf](docs/GetLocalspace200ResponseAllOf.md)
  - [GetMunicipiDistanceKmPopolazione200Response](docs/GetMunicipiDistanceKmPopolazione200Response.md)
@@ -270,7 +271,7 @@ Class | Method | HTTP request | Description
  - [ObjectFocalmechanismPostOutputFocalmechanismsInner](docs/ObjectFocalmechanismPostOutputFocalmechanismsInner.md)
  - [ObjectLocalspace](docs/ObjectLocalspace.md)
  - [ObjectMagnitude](docs/ObjectMagnitude.md)
- - [ObjectMagnitudeForOriginsEventsAndEventsPref](docs/ObjectMagnitudeForOriginsEventsAndEventsPref.md)
+ - [ObjectMagnitudeForOriginsEventsAndEventsGroup](docs/ObjectMagnitudeForOriginsEventsAndEventsGroup.md)
  - [ObjectMagnitudePostOutput](docs/ObjectMagnitudePostOutput.md)
  - [ObjectMomenttensor](docs/ObjectMomenttensor.md)
  - [ObjectMomenttensorPostOutput](docs/ObjectMomenttensorPostOutput.md)
@@ -282,10 +283,10 @@ Class | Method | HTTP request | Description
  - [ObjectOriginFlag](docs/ObjectOriginFlag.md)
  - [ObjectOriginFlagPostOutput](docs/ObjectOriginFlagPostOutput.md)
  - [ObjectOriginFlagPostOutputOriginFlagInner](docs/ObjectOriginFlagPostOutputOriginFlagInner.md)
- - [ObjectOriginForOriginsEventsAndEventsPref](docs/ObjectOriginForOriginsEventsAndEventsPref.md)
- - [ObjectOriginsEventsAndEventsPref](docs/ObjectOriginsEventsAndEventsPref.md)
+ - [ObjectOriginForOriginsEventsAndEventsGroup](docs/ObjectOriginForOriginsEventsAndEventsGroup.md)
+ - [ObjectOriginsEventsAndEventsGroup](docs/ObjectOriginsEventsAndEventsGroup.md)
  - [ObjectPickEw](docs/ObjectPickEw.md)
- - [ObjectProvenaceForOriginsEventsAndEventsPref](docs/ObjectProvenaceForOriginsEventsAndEventsPref.md)
+ - [ObjectProvenaceForOriginsEventsAndEventsGroup](docs/ObjectProvenaceForOriginsEventsAndEventsGroup.md)
  - [ObjectProvenance](docs/ObjectProvenance.md)
  - [ObjectStationmagnitude](docs/ObjectStationmagnitude.md)
  - [ObjectStationmagnitudeTypeAmplitude](docs/ObjectStationmagnitudeTypeAmplitude.md)

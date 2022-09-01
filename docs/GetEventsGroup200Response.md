@@ -1,6 +1,6 @@
 
 
-# GetEventsPref200Response
+# GetEventsGroup200Response
 
 
 ## Properties
@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**links** | [**LinksDefinition**](LinksDefinition.md) |  |  [optional] |
 |**meta** | [**MetaDefinition**](MetaDefinition.md) |  |  [optional] |
-|**data** | [**List&lt;ObjectOriginsEventsAndEventsPref&gt;**](ObjectOriginsEventsAndEventsPref.md) |  |  [optional] |
+|**data** | [**List&lt;ObjectOriginsEventsAndEventsGroup&gt;**](ObjectOriginsEventsAndEventsGroup.md) |  |  [optional] |
 
 
 
