@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * GetLocalspace200ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-01T09:27:50.159222Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-01T09:47:39.081799Z[Etc/UTC]")
 public class GetLocalspace200ResponseAllOf {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
