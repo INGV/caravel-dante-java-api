@@ -150,6 +150,44 @@ public class GetApiTest {
     }
 
     /**
+     * This API returns all origins with own preferred magnitude.
+     *
+     * This API returns all the origins with own preferred magnitude
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getMagnitudesTest() throws ApiException {
+        OffsetDateTime starttime = null;
+        OffsetDateTime endtime = null;
+        Double minlat = null;
+        Double maxlat = null;
+        Double minlon = null;
+        Double maxlon = null;
+        Double lat = null;
+        Double lon = null;
+        Double minradius = null;
+        Double maxradius = null;
+        Double minradiuskm = null;
+        Double maxradiuskm = null;
+        Double minmag = null;
+        Double maxmag = null;
+        Double mindepth = null;
+        Double maxdepth = null;
+        Long mintypeoriginvalue = null;
+        Long maxtypeoriginvalue = null;
+        String wheretypeoriginvaluein = null;
+        String wherelocalspacenamein = null;
+        String orderby = null;
+        Long eventGroupId = null;
+        Long idLocalspace = null;
+        Integer limit = null;
+        Integer page = null;
+        GetEventsGroup200Response response = api.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
+        // TODO: test validations
+    }
+
+    /**
      * This API returns the municipi-distance-km-popolazione used at INGV.
      *
      * This API returns the municipi-distance-km-popolazione.
@@ -196,9 +234,9 @@ public class GetApiTest {
     }
 
     /**
-     * This API returns all origins and magnitudes.
+     * This API returns all the preferred origins.
      *
-     * This API returns all the origins and the magnitudes
+     * This API returns all the preferred origins
      *
      * @throws ApiException if the Api call fails
      */

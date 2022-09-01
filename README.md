@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.49.0-dev
-  - Build date: 2022-08-30T14:53:03.904335Z[Etc/UTC]
+  - Build date: 2022-09-01T08:00:00.759642Z[Etc/UTC]
 
   
 
@@ -153,10 +153,11 @@ Class | Method | HTTP request | Description
 *GetApi* | [**getEvents**](docs/GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance.
 *GetApi* | [**getEventsGroup**](docs/GetApi.md#getEventsGroup) | **GET** /quakedb/v1/events-group | This API returns the preferred origin and the preferred magnitude from all clusterd events.
 *GetApi* | [**getLocalspace**](docs/GetApi.md#getLocalspace) | **GET** /quakedb/table/v1/localspace | This API returns all the localspace(s).
+*GetApi* | [**getMagnitudes**](docs/GetApi.md#getMagnitudes) | **GET** /quakedb/v1/magnitudes | This API returns all origins with own preferred magnitude.
 *GetApi* | [**getMunicipiDistanceKmPopolazione**](docs/GetApi.md#getMunicipiDistanceKmPopolazione) | **GET** /boundaries/v1/municipi-distance-km-popolazione | This API returns the municipi-distance-km-popolazione used at INGV.
 *GetApi* | [**getMunicipio**](docs/GetApi.md#getMunicipio) | **GET** /boundaries/v1/municipio | This API returns the Italian \&quot;municipio\&quot; information by name.
 *GetApi* | [**getOriginFlag**](docs/GetApi.md#getOriginFlag) | **GET** /quakedb/v1/origin-flag | This API returns the all the flags assosiated to the originid.
-*GetApi* | [**getOrigins**](docs/GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all origins and magnitudes.
+*GetApi* | [**getOrigins**](docs/GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all the preferred origins.
 *GetApi* | [**getProvenance**](docs/GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s).
 *GetApi* | [**getRegionName**](docs/GetApi.md#getRegionName) | **GET** /boundaries/v1/region-name | This API returns the region name used at INGV.
 *GetApi* | [**getStatus**](docs/GetApi.md#getStatus) | **GET** /status | Return the application status

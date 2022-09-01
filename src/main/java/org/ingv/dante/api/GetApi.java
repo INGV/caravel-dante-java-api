@@ -1075,6 +1075,347 @@ public class GetApi {
         return localVarCall;
     }
     /**
+     * Build call for getMagnitudes
+     * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** (optional)
+     * @param minmag Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). (optional)
+     * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
+     * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
+     * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param orderby Select order (optional)
+     * @param eventGroupId Select events with same event_group_id. (optional)
+     * @param idLocalspace Localspace Id. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getMagnitudesCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/quakedb/v1/magnitudes";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (starttime != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("starttime", starttime));
+        }
+
+        if (endtime != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endtime", endtime));
+        }
+
+        if (minlat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minlat", minlat));
+        }
+
+        if (maxlat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxlat", maxlat));
+        }
+
+        if (minlon != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minlon", minlon));
+        }
+
+        if (maxlon != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxlon", maxlon));
+        }
+
+        if (lat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("lat", lat));
+        }
+
+        if (lon != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("lon", lon));
+        }
+
+        if (minradius != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minradius", minradius));
+        }
+
+        if (maxradius != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxradius", maxradius));
+        }
+
+        if (minradiuskm != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minradiuskm", minradiuskm));
+        }
+
+        if (maxradiuskm != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxradiuskm", maxradiuskm));
+        }
+
+        if (minmag != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minmag", minmag));
+        }
+
+        if (maxmag != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxmag", maxmag));
+        }
+
+        if (mindepth != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("mindepth", mindepth));
+        }
+
+        if (maxdepth != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxdepth", maxdepth));
+        }
+
+        if (mintypeoriginvalue != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("mintypeoriginvalue", mintypeoriginvalue));
+        }
+
+        if (maxtypeoriginvalue != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxtypeoriginvalue", maxtypeoriginvalue));
+        }
+
+        if (wheretypeoriginvaluein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheretypeoriginvaluein", wheretypeoriginvaluein));
+        }
+
+        if (wherelocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
+        }
+
+        if (orderby != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderby", orderby));
+        }
+
+        if (eventGroupId != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("event_group_id", eventGroupId));
+        }
+
+        if (idLocalspace != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("id_localspace", idLocalspace));
+        }
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
+        if (page != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page", page));
+        }
+
+        final String[] localVarAccepts = {
+            "application/problem+json", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getMagnitudesValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        
+
+        okhttp3.Call localVarCall = getMagnitudesCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * This API returns all origins with own preferred magnitude.
+     * This API returns all the origins with own preferred magnitude
+     * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** (optional)
+     * @param minmag Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). (optional)
+     * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
+     * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
+     * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param orderby Select order (optional)
+     * @param eventGroupId Select events with same event_group_id. (optional)
+     * @param idLocalspace Localspace Id. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @return GetEventsGroup200Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public GetEventsGroup200Response getMagnitudes(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetEventsGroup200Response> localVarResp = getMagnitudesWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
+        return localVarResp.getData();
+    }
+
+    /**
+     * This API returns all origins with own preferred magnitude.
+     * This API returns all the origins with own preferred magnitude
+     * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** (optional)
+     * @param minmag Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). (optional)
+     * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
+     * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
+     * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param orderby Select order (optional)
+     * @param eventGroupId Select events with same event_group_id. (optional)
+     * @param idLocalspace Localspace Id. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @return ApiResponse&lt;GetEventsGroup200Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<GetEventsGroup200Response> getMagnitudesWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getMagnitudesValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, null);
+        Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * This API returns all origins with own preferred magnitude. (asynchronously)
+     * This API returns all the origins with own preferred magnitude
+     * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** (optional)
+     * @param minmag Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). (optional)
+     * @param maxmag Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). (optional)
+     * @param mindepth Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). (optional)
+     * @param maxdepth Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). (optional)
+     * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
+     * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
+     * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param orderby Select order (optional)
+     * @param eventGroupId Select events with same event_group_id. (optional)
+     * @param idLocalspace Localspace Id. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getMagnitudesAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getMagnitudesValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for getMunicipiDistanceKmPopolazione
      * @param mindistance Specify minimum distance (kilometers). (required)
      * @param maxdistance Specify maximum distance (kilometers). (required)
@@ -1770,8 +2111,8 @@ public class GetApi {
     }
 
     /**
-     * This API returns all origins and magnitudes.
-     * This API returns all the origins and the magnitudes
+     * This API returns all the preferred origins.
+     * This API returns all the preferred origins
      * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
@@ -1817,8 +2158,8 @@ public class GetApi {
     }
 
     /**
-     * This API returns all origins and magnitudes.
-     * This API returns all the origins and the magnitudes
+     * This API returns all the preferred origins.
+     * This API returns all the preferred origins
      * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
@@ -1865,8 +2206,8 @@ public class GetApi {
     }
 
     /**
-     * This API returns all origins and magnitudes. (asynchronously)
-     * This API returns all the origins and the magnitudes
+     * This API returns all the preferred origins. (asynchronously)
+     * This API returns all the preferred origins
      * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
