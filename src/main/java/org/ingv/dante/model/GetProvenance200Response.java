@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * GetProvenance200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-05T09:55:33.173478Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-05T13:07:55.086014Z[Etc/UTC]")
 public class GetProvenance200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
