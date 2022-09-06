@@ -7337,12 +7337,12 @@ components:
     ObjectOriginFlagPostOutput:
       example:
         origin-flag:
-        - name: 182491
+        - name: DPC
           id: 14932631
-          value: hew1_mole
-        - name: 182491
+          value: 1
+        - name: DPC
           id: 14932631
-          value: hew1_mole
+          value: 1
       properties:
         origin-flag:
           items:
@@ -12955,12 +12955,12 @@ components:
       example:
         data:
           origin-flag:
-          - name: 182491
+          - name: DPC
             id: 14932631
-            value: hew1_mole
-          - name: 182491
+            value: 1
+          - name: DPC
             id: 14932631
-            value: hew1_mole
+            value: 1
       properties:
         data:
           $ref: '#/components/schemas/ObjectOriginFlagPostOutput'
@@ -13487,9 +13487,9 @@ components:
           type: array
     ObjectOriginFlagPostOutput_origin_flag_inner:
       example:
-        name: 182491
+        name: DPC
         id: 14932631
-        value: hew1_mole
+        value: 1
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -13497,16 +13497,14 @@ components:
           format: int64
           type: integer
         name:
-          description: Localspace Id | bigint(19)
-          example: 182491
-          format: int64
-          nullable: true
-          type: integer
-        value:
-          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
-          example: hew1_mole
-          nullable: true
+          description: Flag name | varchar(255)
+          example: DPC
           type: string
+        value:
+          description: Value associated to the flag | int
+          example: 1
+          format: float
+          type: number
     ObjectFocalmechanismPostOutput_focalmechanisms_inner:
       allOf:
       - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'

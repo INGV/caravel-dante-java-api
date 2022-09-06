@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginFlagPostOutputOriginFlagInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-05T13:07:55.086014Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-06T10:02:49.040874Z[Etc/UTC]")
 public class ObjectOriginFlagPostOutputOriginFlagInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -56,11 +55,11 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
-  private Long name;
+  private String name;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
-  private String value;
+  private Float value;
 
   public ObjectOriginFlagPostOutputOriginFlagInner() {
   }
@@ -88,48 +87,48 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
   }
 
 
-  public ObjectOriginFlagPostOutputOriginFlagInner name(Long name) {
+  public ObjectOriginFlagPostOutputOriginFlagInner name(String name) {
     
     this.name = name;
     return this;
   }
 
    /**
-   * Localspace Id | bigint(19)
+   * Flag name | varchar(255)
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
+  @ApiModelProperty(example = "DPC", value = "Flag name | varchar(255)")
 
-  public Long getName() {
+  public String getName() {
     return name;
   }
 
 
-  public void setName(Long name) {
+  public void setName(String name) {
     this.name = name;
   }
 
 
-  public ObjectOriginFlagPostOutputOriginFlagInner value(String value) {
+  public ObjectOriginFlagPostOutputOriginFlagInner value(Float value) {
     
     this.value = value;
     return this;
   }
 
    /**
-   * Localspace name. i.e. hew1_mole, endeavour_mole | char(255)
+   * Value associated to the flag | int
    * @return value
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "hew1_mole", value = "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)")
+  @ApiModelProperty(example = "1", value = "Value associated to the flag | int")
 
-  public String getValue() {
+  public Float getValue() {
     return value;
   }
 
 
-  public void setValue(String value) {
+  public void setValue(Float value) {
     this.value = value;
   }
 
@@ -185,20 +184,9 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
         Objects.equals(this.additionalProperties, objectOriginFlagPostOutputOriginFlagInner.additionalProperties);
   }
 
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
-  }
-
   @Override
   public int hashCode() {
     return Objects.hash(id, name, value, additionalProperties);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -253,8 +241,8 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectOriginFlagPostOutputOriginFlagInner is not found in the empty JSON string", ObjectOriginFlagPostOutputOriginFlagInner.openapiRequiredFields.toString()));
         }
       }
-      if ((jsonObj.get("value") != null && !jsonObj.get("value").isJsonNull()) && !jsonObj.get("value").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `value` to be a primitive type in the JSON string but got `%s`", jsonObj.get("value").toString()));
+      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 

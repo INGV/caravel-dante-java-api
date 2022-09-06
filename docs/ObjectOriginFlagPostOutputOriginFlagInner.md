@@ -8,8 +8,8 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] |
-|**name** | **Long** | Localspace Id | bigint(19) |  [optional] |
-|**value** | **String** | Localspace name. i.e. hew1_mole, endeavour_mole | char(255) |  [optional] |
+|**name** | **String** | Flag name | varchar(255) |  [optional] |
+|**value** | **Float** | Value associated to the flag | int |  [optional] |
 
 
 
