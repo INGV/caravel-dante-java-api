@@ -7297,6 +7297,7 @@ components:
       type: object
     ObjectOriginFlag:
       example:
+        note: my note
         inserted: 2016-06-22T16:52:06.26Z
         name: DPC
         modified: 2016-06-22T16:52:06.26Z
@@ -7325,6 +7326,11 @@ components:
           description: Flag name | varchar(255)
           example: DPC
           type: string
+        note:
+          description: Additional information | char(255)
+          example: my note
+          nullable: true
+          type: string
         value:
           description: Value associated to the flag | int
           example: 1
@@ -7337,10 +7343,12 @@ components:
     ObjectOriginFlagPostOutput:
       example:
         origin-flag:
-        - name: DPC
+        - note: my note
+          name: DPC
           id: 14932631
           value: 1
-        - name: DPC
+        - note: my note
+          name: DPC
           id: 14932631
           value: 1
       properties:
@@ -9694,6 +9702,11 @@ components:
     origin_flag__name:
       description: Flag name | varchar(255)
       example: DPC
+      type: string
+    note:
+      description: Additional information | char(255)
+      example: my note
+      nullable: true
       type: string
     origin_flag__value:
       description: Value associated to the flag | int
@@ -12921,12 +12934,14 @@ components:
     getOriginFlag_200_response:
       example:
         data:
-        - inserted: 2016-06-22T16:52:06.26Z
+        - note: my note
+          inserted: 2016-06-22T16:52:06.26Z
           name: DPC
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           value: 1
-        - inserted: 2016-06-22T16:52:06.26Z
+        - note: my note
+          inserted: 2016-06-22T16:52:06.26Z
           name: DPC
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
@@ -12955,10 +12970,12 @@ components:
       example:
         data:
           origin-flag:
-          - name: DPC
+          - note: my note
+            name: DPC
             id: 14932631
             value: 1
-          - name: DPC
+          - note: my note
+            name: DPC
             id: 14932631
             value: 1
       properties:
@@ -13487,6 +13504,7 @@ components:
           type: array
     ObjectOriginFlagPostOutput_origin_flag_inner:
       example:
+        note: my note
         name: DPC
         id: 14932631
         value: 1
@@ -13499,6 +13517,11 @@ components:
         name:
           description: Flag name | varchar(255)
           example: DPC
+          type: string
+        note:
+          description: Additional information | char(255)
+          example: my note
+          nullable: true
           type: string
         value:
           description: Value associated to the flag | int
