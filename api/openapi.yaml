@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: http://terremoti.ingv.it/webservices_and_software
   title: Dante Web Services
-  version: 2.49.0
+  version: 2.50.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -7297,6 +7297,7 @@ components:
       type: object
     ObjectOriginFlag:
       example:
+        note: my note
         inserted: 2016-06-22T16:52:06.26Z
         name: DPC
         modified: 2016-06-22T16:52:06.26Z
@@ -7325,6 +7326,11 @@ components:
           description: Flag name | varchar(255)
           example: DPC
           type: string
+        note:
+          description: Additional information | char(255)
+          example: my note
+          nullable: true
+          type: string
         value:
           description: Value associated to the flag | int
           example: 1
@@ -7337,12 +7343,14 @@ components:
     ObjectOriginFlagPostOutput:
       example:
         origin-flag:
-        - name: 182491
+        - note: my note
+          name: DPC
           id: 14932631
-          value: hew1_mole
-        - name: 182491
+          value: 1
+        - note: my note
+          name: DPC
           id: 14932631
-          value: hew1_mole
+          value: 1
       properties:
         origin-flag:
           items:
@@ -9694,6 +9702,11 @@ components:
     origin_flag__name:
       description: Flag name | varchar(255)
       example: DPC
+      type: string
+    note:
+      description: Additional information | char(255)
+      example: my note
+      nullable: true
       type: string
     origin_flag__value:
       description: Value associated to the flag | int
@@ -12921,12 +12934,14 @@ components:
     getOriginFlag_200_response:
       example:
         data:
-        - inserted: 2016-06-22T16:52:06.26Z
+        - note: my note
+          inserted: 2016-06-22T16:52:06.26Z
           name: DPC
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           value: 1
-        - inserted: 2016-06-22T16:52:06.26Z
+        - note: my note
+          inserted: 2016-06-22T16:52:06.26Z
           name: DPC
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
@@ -12955,12 +12970,14 @@ components:
       example:
         data:
           origin-flag:
-          - name: 182491
+          - note: my note
+            name: DPC
             id: 14932631
-            value: hew1_mole
-          - name: 182491
+            value: 1
+          - note: my note
+            name: DPC
             id: 14932631
-            value: hew1_mole
+            value: 1
       properties:
         data:
           $ref: '#/components/schemas/ObjectOriginFlagPostOutput'
@@ -13487,9 +13504,10 @@ components:
           type: array
     ObjectOriginFlagPostOutput_origin_flag_inner:
       example:
-        name: 182491
+        note: my note
+        name: DPC
         id: 14932631
-        value: hew1_mole
+        value: 1
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -13497,16 +13515,19 @@ components:
           format: int64
           type: integer
         name:
-          description: Localspace Id | bigint(19)
-          example: 182491
-          format: int64
-          nullable: true
-          type: integer
-        value:
-          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
-          example: hew1_mole
+          description: Flag name | varchar(255)
+          example: DPC
+          type: string
+        note:
+          description: Additional information | char(255)
+          example: my note
           nullable: true
           type: string
+        value:
+          description: Value associated to the flag | int
+          example: 1
+          format: float
+          type: number
     ObjectFocalmechanismPostOutput_focalmechanisms_inner:
       allOf:
       - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
