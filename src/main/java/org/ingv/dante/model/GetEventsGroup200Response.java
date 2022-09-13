@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.LinksDefinition;
 import org.ingv.dante.model.MetaDefinition;
-import org.ingv.dante.model.ObjectOriginsEventsAndEventsGroup;
+import org.ingv.dante.model.ObjectMagnitudesOriginsEventsAndEventsGroup;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * GetEventsGroup200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-12T12:56:31.093015Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-13T09:51:17.331702Z[Etc/UTC]")
 public class GetEventsGroup200Response {
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -64,7 +64,7 @@ public class GetEventsGroup200Response {
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<ObjectOriginsEventsAndEventsGroup> data = null;
+  private List<ObjectMagnitudesOriginsEventsAndEventsGroup> data = null;
 
   public GetEventsGroup200Response() {
   }
@@ -115,13 +115,13 @@ public class GetEventsGroup200Response {
   }
 
 
-  public GetEventsGroup200Response data(List<ObjectOriginsEventsAndEventsGroup> data) {
+  public GetEventsGroup200Response data(List<ObjectMagnitudesOriginsEventsAndEventsGroup> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetEventsGroup200Response addDataItem(ObjectOriginsEventsAndEventsGroup dataItem) {
+  public GetEventsGroup200Response addDataItem(ObjectMagnitudesOriginsEventsAndEventsGroup dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -136,12 +136,12 @@ public class GetEventsGroup200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<ObjectOriginsEventsAndEventsGroup> getData() {
+  public List<ObjectMagnitudesOriginsEventsAndEventsGroup> getData() {
     return data;
   }
 
 
-  public void setData(List<ObjectOriginsEventsAndEventsGroup> data) {
+  public void setData(List<ObjectMagnitudesOriginsEventsAndEventsGroup> data) {
     this.data = data;
   }
 
@@ -271,7 +271,7 @@ public class GetEventsGroup200Response {
 
         // validate the optional field `data` (array)
         for (int i = 0; i < jsonArraydata.size(); i++) {
-          ObjectOriginsEventsAndEventsGroup.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+          ObjectMagnitudesOriginsEventsAndEventsGroup.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
         };
       }
   }

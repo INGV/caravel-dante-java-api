@@ -57,7 +57,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-12T12:56:31.093015Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-13T09:51:17.331702Z[Etc/UTC]")
 public class ObjectOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -231,6 +231,10 @@ public class ObjectOrigin {
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
   private ObjectProvenance provenance;
 
+  public static final String SERIALIZED_NAME_FLAGS = "flags";
+  @SerializedName(SERIALIZED_NAME_FLAGS)
+  private String flags;
+
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
   private List<ObjectMagnitude> magnitudes = null;
@@ -250,12 +254,14 @@ public class ObjectOrigin {
   public ObjectOrigin(
      Long id, 
      OffsetDateTime modified, 
-     OffsetDateTime inserted
+     OffsetDateTime inserted, 
+     String flags
   ) {
     this();
     this.id = id;
     this.modified = modified;
     this.inserted = inserted;
+    this.flags = flags;
   }
 
    /**
@@ -1224,6 +1230,20 @@ public class ObjectOrigin {
   }
 
 
+   /**
+   * Flags for origin | varchar(255)
+   * @return flags
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "DPC,twitter,shakemap4,FM", value = "Flags for origin | varchar(255)")
+
+  public String getFlags() {
+    return flags;
+  }
+
+
+
+
   public ObjectOrigin magnitudes(List<ObjectMagnitude> magnitudes) {
     
     this.magnitudes = magnitudes;
@@ -1405,6 +1425,7 @@ public class ObjectOrigin {
         Objects.equals(this.typeOrigin, objectOrigin.typeOrigin) &&
         Objects.equals(this.localspace, objectOrigin.localspace) &&
         Objects.equals(this.provenance, objectOrigin.provenance) &&
+        Objects.equals(this.flags, objectOrigin.flags) &&
         Objects.equals(this.magnitudes, objectOrigin.magnitudes) &&
         Objects.equals(this.arrivals, objectOrigin.arrivals) &&
         Objects.equals(this.focalmechanisms, objectOrigin.focalmechanisms)&&
@@ -1417,7 +1438,7 @@ public class ObjectOrigin {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, idLocalspace, azimGap, confidenceLevel, depth, e0, e0Az, e0Dip, e1, e1Az, e1Dip, e2, e2Az, e2Dip, errDepth, errH, errLat, errLon, errOt, errZ, fixDepth, isCentroid, lat, lon, maxDistance, medDistance, minDistance, nph, nphFm, nphS, nphTot, ot, quality, qualityNumeric, region, rms, secAzimGap, wRms, typeOrigin, localspace, provenance, magnitudes, arrivals, focalmechanisms, additionalProperties);
+    return Objects.hash(id, modified, inserted, idLocalspace, azimGap, confidenceLevel, depth, e0, e0Az, e0Dip, e1, e1Az, e1Dip, e2, e2Az, e2Dip, errDepth, errH, errLat, errLon, errOt, errZ, fixDepth, isCentroid, lat, lon, maxDistance, medDistance, minDistance, nph, nphFm, nphS, nphTot, ot, quality, qualityNumeric, region, rms, secAzimGap, wRms, typeOrigin, localspace, provenance, flags, magnitudes, arrivals, focalmechanisms, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1474,6 +1495,7 @@ public class ObjectOrigin {
     sb.append("    typeOrigin: ").append(toIndentedString(typeOrigin)).append("\n");
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
+    sb.append("    flags: ").append(toIndentedString(flags)).append("\n");
     sb.append("    magnitudes: ").append(toIndentedString(magnitudes)).append("\n");
     sb.append("    arrivals: ").append(toIndentedString(arrivals)).append("\n");
     sb.append("    focalmechanisms: ").append(toIndentedString(focalmechanisms)).append("\n");
@@ -1543,6 +1565,7 @@ public class ObjectOrigin {
     openapiFields.add("type_origin");
     openapiFields.add("localspace");
     openapiFields.add("provenance");
+    openapiFields.add("flags");
     openapiFields.add("magnitudes");
     openapiFields.add("arrivals");
     openapiFields.add("focalmechanisms");
@@ -1593,6 +1616,9 @@ public class ObjectOrigin {
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
         ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+      }
+      if ((jsonObj.get("flags") != null && !jsonObj.get("flags").isJsonNull()) && !jsonObj.get("flags").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `flags` to be a primitive type in the JSON string but got `%s`", jsonObj.get("flags").toString()));
       }
       JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
       if (jsonArraymagnitudes != null) {

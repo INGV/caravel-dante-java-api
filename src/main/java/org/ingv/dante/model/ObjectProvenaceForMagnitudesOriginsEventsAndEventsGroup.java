@@ -45,10 +45,10 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * ObjectProvenaceForOriginsEventsAndEventsGroup
+ * ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-12T12:56:31.093015Z[Etc/UTC]")
-public class ObjectProvenaceForOriginsEventsAndEventsGroup {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-13T09:51:17.331702Z[Etc/UTC]")
+public class ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name = "INGV";
@@ -61,10 +61,10 @@ public class ObjectProvenaceForOriginsEventsAndEventsGroup {
   @SerializedName(SERIALIZED_NAME_SOFTWARENAME)
   private String softwarename;
 
-  public ObjectProvenaceForOriginsEventsAndEventsGroup() {
+  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup() {
   }
 
-  public ObjectProvenaceForOriginsEventsAndEventsGroup name(String name) {
+  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup name(String name) {
     
     this.name = name;
     return this;
@@ -87,7 +87,7 @@ public class ObjectProvenaceForOriginsEventsAndEventsGroup {
   }
 
 
-  public ObjectProvenaceForOriginsEventsAndEventsGroup version(String version) {
+  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup version(String version) {
     
     this.version = version;
     return this;
@@ -110,7 +110,7 @@ public class ObjectProvenaceForOriginsEventsAndEventsGroup {
   }
 
 
-  public ObjectProvenaceForOriginsEventsAndEventsGroup softwarename(String softwarename) {
+  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup softwarename(String softwarename) {
     
     this.softwarename = softwarename;
     return this;
@@ -143,7 +143,7 @@ public class ObjectProvenaceForOriginsEventsAndEventsGroup {
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
    */
-  public ObjectProvenaceForOriginsEventsAndEventsGroup putAdditionalProperty(String key, Object value) {
+  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -177,11 +177,11 @@ public class ObjectProvenaceForOriginsEventsAndEventsGroup {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectProvenaceForOriginsEventsAndEventsGroup objectProvenaceForOriginsEventsAndEventsGroup = (ObjectProvenaceForOriginsEventsAndEventsGroup) o;
-    return Objects.equals(this.name, objectProvenaceForOriginsEventsAndEventsGroup.name) &&
-        Objects.equals(this.version, objectProvenaceForOriginsEventsAndEventsGroup.version) &&
-        Objects.equals(this.softwarename, objectProvenaceForOriginsEventsAndEventsGroup.softwarename)&&
-        Objects.equals(this.additionalProperties, objectProvenaceForOriginsEventsAndEventsGroup.additionalProperties);
+    ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup objectProvenaceForMagnitudesOriginsEventsAndEventsGroup = (ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup) o;
+    return Objects.equals(this.name, objectProvenaceForMagnitudesOriginsEventsAndEventsGroup.name) &&
+        Objects.equals(this.version, objectProvenaceForMagnitudesOriginsEventsAndEventsGroup.version) &&
+        Objects.equals(this.softwarename, objectProvenaceForMagnitudesOriginsEventsAndEventsGroup.softwarename)&&
+        Objects.equals(this.additionalProperties, objectProvenaceForMagnitudesOriginsEventsAndEventsGroup.additionalProperties);
   }
 
   @Override
@@ -192,7 +192,7 @@ public class ObjectProvenaceForOriginsEventsAndEventsGroup {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectProvenaceForOriginsEventsAndEventsGroup {\n");
+    sb.append("class ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("    softwarename: ").append(toIndentedString(softwarename)).append("\n");
@@ -231,14 +231,14 @@ public class ObjectProvenaceForOriginsEventsAndEventsGroup {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectProvenaceForOriginsEventsAndEventsGroup
+  * @throws IOException if the JSON Object is invalid with respect to ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectProvenaceForOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) {
+        if (ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectProvenaceForOriginsEventsAndEventsGroup is not found in the empty JSON string", ObjectProvenaceForOriginsEventsAndEventsGroup.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup is not found in the empty JSON string", ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.toString()));
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
@@ -256,16 +256,16 @@ public class ObjectProvenaceForOriginsEventsAndEventsGroup {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectProvenaceForOriginsEventsAndEventsGroup.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectProvenaceForOriginsEventsAndEventsGroup' and its subtypes
+       if (!ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectProvenaceForOriginsEventsAndEventsGroup> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectProvenaceForOriginsEventsAndEventsGroup.class));
+       final TypeAdapter<ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectProvenaceForOriginsEventsAndEventsGroup>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup>() {
            @Override
-           public void write(JsonWriter out, ObjectProvenaceForOriginsEventsAndEventsGroup value) throws IOException {
+           public void write(JsonWriter out, ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additonal properties
@@ -288,11 +288,11 @@ public class ObjectProvenaceForOriginsEventsAndEventsGroup {
            }
 
            @Override
-           public ObjectProvenaceForOriginsEventsAndEventsGroup read(JsonReader in) throws IOException {
+           public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             ObjectProvenaceForOriginsEventsAndEventsGroup instance = thisAdapter.fromJsonTree(jsonObj);
+             ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -317,18 +317,18 @@ public class ObjectProvenaceForOriginsEventsAndEventsGroup {
   }
 
  /**
-  * Create an instance of ObjectProvenaceForOriginsEventsAndEventsGroup given an JSON string
+  * Create an instance of ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectProvenaceForOriginsEventsAndEventsGroup
-  * @throws IOException if the JSON string is invalid with respect to ObjectProvenaceForOriginsEventsAndEventsGroup
+  * @return An instance of ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
+  * @throws IOException if the JSON string is invalid with respect to ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
   */
-  public static ObjectProvenaceForOriginsEventsAndEventsGroup fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectProvenaceForOriginsEventsAndEventsGroup.class);
+  public static ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.class);
   }
 
  /**
-  * Convert an instance of ObjectProvenaceForOriginsEventsAndEventsGroup to an JSON string
+  * Convert an instance of ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup to an JSON string
   *
   * @return JSON string
   */

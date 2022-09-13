@@ -272,7 +272,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -293,7 +294,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -398,6 +399,10 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
         }
 
+        if (whereflagsin != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereflagsin", whereflagsin));
+        }
+
         if (orderby != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderby", orderby));
         }
@@ -439,10 +444,10 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getEventsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getEventsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         return localVarCall;
 
     }
@@ -469,7 +474,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -489,8 +495,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsGroup200Response getEvents(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        ApiResponse<GetEventsGroup200Response> localVarResp = getEventsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
+    public GetEventsGroup200Response getEvents(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetEventsGroup200Response> localVarResp = getEventsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         return localVarResp.getData();
     }
 
@@ -516,7 +522,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -536,8 +543,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsGroup200Response> getEventsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, null);
+    public ApiResponse<GetEventsGroup200Response> getEventsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -564,7 +571,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -585,9 +593,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+    public okhttp3.Call getEventsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -613,7 +621,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -634,7 +643,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsGroupCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventsGroupCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -739,6 +748,10 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
         }
 
+        if (whereflagsin != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereflagsin", whereflagsin));
+        }
+
         if (orderby != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderby", orderby));
         }
@@ -780,10 +793,10 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventsGroupValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getEventsGroupValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getEventsGroupCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getEventsGroupCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         return localVarCall;
 
     }
@@ -810,7 +823,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -830,8 +844,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsGroup200Response getEventsGroup(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        ApiResponse<GetEventsGroup200Response> localVarResp = getEventsGroupWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
+    public GetEventsGroup200Response getEventsGroup(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetEventsGroup200Response> localVarResp = getEventsGroupWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         return localVarResp.getData();
     }
 
@@ -857,7 +871,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -877,8 +892,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsGroup200Response> getEventsGroupWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        okhttp3.Call localVarCall = getEventsGroupValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, null);
+    public ApiResponse<GetEventsGroup200Response> getEventsGroupWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getEventsGroupValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -905,7 +920,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -926,9 +942,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsGroupAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+    public okhttp3.Call getEventsGroupAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventsGroupValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getEventsGroupValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1095,7 +1111,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -1116,7 +1133,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMagnitudesCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMagnitudesCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1221,6 +1238,10 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
         }
 
+        if (whereflagsin != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereflagsin", whereflagsin));
+        }
+
         if (orderby != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderby", orderby));
         }
@@ -1262,10 +1283,10 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMagnitudesValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getMagnitudesValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getMagnitudesCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getMagnitudesCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         return localVarCall;
 
     }
@@ -1292,7 +1313,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -1312,8 +1334,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsGroup200Response getMagnitudes(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        ApiResponse<GetEventsGroup200Response> localVarResp = getMagnitudesWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
+    public GetEventsGroup200Response getMagnitudes(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetEventsGroup200Response> localVarResp = getMagnitudesWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         return localVarResp.getData();
     }
 
@@ -1339,7 +1361,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -1359,8 +1382,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsGroup200Response> getMagnitudesWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        okhttp3.Call localVarCall = getMagnitudesValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, null);
+    public ApiResponse<GetEventsGroup200Response> getMagnitudesWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getMagnitudesValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1387,7 +1410,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -1408,9 +1432,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMagnitudesAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+    public okhttp3.Call getMagnitudesAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getMagnitudesValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getMagnitudesValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1935,7 +1959,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -1956,7 +1981,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOriginsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOriginsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2061,6 +2086,10 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
         }
 
+        if (whereflagsin != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereflagsin", whereflagsin));
+        }
+
         if (orderby != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderby", orderby));
         }
@@ -2102,10 +2131,10 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOriginsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call getOriginsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = getOriginsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getOriginsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         return localVarCall;
 
     }
@@ -2132,7 +2161,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -2152,8 +2182,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsGroup200Response getOrigins(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        ApiResponse<GetEventsGroup200Response> localVarResp = getOriginsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
+    public GetEventsGroup200Response getOrigins(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetEventsGroup200Response> localVarResp = getOriginsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         return localVarResp.getData();
     }
 
@@ -2179,7 +2209,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -2199,8 +2230,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsGroup200Response> getOriginsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, null);
+    public ApiResponse<GetEventsGroup200Response> getOriginsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2227,7 +2258,8 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wherelocalspacenamein Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select order (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
      * @param idLocalspace Localspace Id. (optional)
@@ -2248,9 +2280,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOriginsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+    public okhttp3.Call getOriginsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

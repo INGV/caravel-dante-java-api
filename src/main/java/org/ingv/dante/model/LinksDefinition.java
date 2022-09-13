@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * LinksDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-12T12:56:31.093015Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-13T09:51:17.331702Z[Etc/UTC]")
 public class LinksDefinition {
   public static final String SERIALIZED_NAME_FIRST = "first";
   @SerializedName(SERIALIZED_NAME_FIRST)
@@ -80,7 +80,7 @@ public class LinksDefinition {
    * @return first
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8087/api/quakedb/v1/events_pref/?page=2", value = "URL first page.")
+  @ApiModelProperty(example = "http://localhost:8087/api/quakedb/v1/events-group/?page=2", value = "URL first page.")
 
   public String getFirst() {
     return first;
@@ -103,7 +103,7 @@ public class LinksDefinition {
    * @return last
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8087/api/quakedb/v1/events_pref/?page=4", value = "URL last page.")
+  @ApiModelProperty(example = "http://localhost:8087/api/quakedb/v1/events-group/?page=4", value = "URL last page.")
 
   public String getLast() {
     return last;
@@ -126,7 +126,7 @@ public class LinksDefinition {
    * @return prev
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8087/api/quakedb/v1/events_pref/?page=1", value = "URL previous page.")
+  @ApiModelProperty(example = "http://localhost:8087/api/quakedb/v1/events-group/?page=1", value = "URL previous page.")
 
   public String getPrev() {
     return prev;
@@ -149,7 +149,7 @@ public class LinksDefinition {
    * @return next
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8087/api/quakedb/v1/events_pref/?page=3", value = "URL next page.")
+  @ApiModelProperty(example = "http://localhost:8087/api/quakedb/v1/events-group/?page=3", value = "URL next page.")
 
   public String getNext() {
     return next;

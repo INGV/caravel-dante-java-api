@@ -26,17 +26,17 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectProvenaceForOriginsEventsAndEventsGroup
+ * Model tests for ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
  */
-public class ObjectProvenaceForOriginsEventsAndEventsGroupTest {
-    private final ObjectProvenaceForOriginsEventsAndEventsGroup model = new ObjectProvenaceForOriginsEventsAndEventsGroup();
+public class ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroupTest {
+    private final ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup model = new ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup();
 
     /**
-     * Model tests for ObjectProvenaceForOriginsEventsAndEventsGroup
+     * Model tests for ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
      */
     @Test
-    public void testObjectProvenaceForOriginsEventsAndEventsGroup() {
-        // TODO: test ObjectProvenaceForOriginsEventsAndEventsGroup
+    public void testObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup() {
+        // TODO: test ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
     }
 
     /**

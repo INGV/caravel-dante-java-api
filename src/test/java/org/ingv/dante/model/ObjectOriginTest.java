@@ -394,6 +394,14 @@ public class ObjectOriginTest {
     }
 
     /**
+     * Test the property 'flags'
+     */
+    @Test
+    public void flagsTest() {
+        // TODO: test flags
+    }
+
+    /**
      * Test the property 'magnitudes'
      */
     @Test

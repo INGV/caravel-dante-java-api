@@ -50,6 +50,7 @@
 |**typeOrigin** | [**ObjectTypeOrigin**](ObjectTypeOrigin.md) |  |  [optional] |
 |**localspace** | [**ObjectLocalspace**](ObjectLocalspace.md) |  |  [optional] |
 |**provenance** | [**ObjectProvenance**](ObjectProvenance.md) |  |  [optional] |
+|**flags** | **String** | Flags for origin | varchar(255) |  [optional] [readonly] |
 |**magnitudes** | [**List&lt;ObjectMagnitude&gt;**](ObjectMagnitude.md) |  |  [optional] |
 |**arrivals** | [**List&lt;ObjectArrival&gt;**](ObjectArrival.md) |  |  [optional] |
 |**focalmechanisms** | [**List&lt;ObjectFocalmechanism&gt;**](ObjectFocalmechanism.md) |  |  [optional] |

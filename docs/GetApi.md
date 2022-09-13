@@ -95,7 +95,7 @@ No authorization required
 
 <a name="getEvents"></a>
 # **getEvents**
-> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns the preferred origin and the preferred magnitude from the same instance.
 
@@ -135,14 +135,15 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvents");
@@ -178,7 +179,8 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -211,7 +213,7 @@ No authorization required
 
 <a name="getEventsGroup"></a>
 # **getEventsGroup**
-> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -251,14 +253,15 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEventsGroup");
@@ -294,7 +297,8 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -391,7 +395,7 @@ No authorization required
 
 <a name="getMagnitudes"></a>
 # **getMagnitudes**
-> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all origins with own preferred magnitude.
 
@@ -431,14 +435,15 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getMagnitudes");
@@ -474,7 +479,8 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -719,7 +725,7 @@ No authorization required
 
 <a name="getOrigins"></a>
 # **getOrigins**
-> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all the preferred origins.
 
@@ -759,14 +765,15 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOrigins");
@@ -802,7 +809,8 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |

@@ -9,7 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**links** | [**LinksDefinition**](LinksDefinition.md) |  |  [optional] |
 |**meta** | [**MetaDefinition**](MetaDefinition.md) |  |  [optional] |
-|**data** | [**List&lt;ObjectOriginsEventsAndEventsGroup&gt;**](ObjectOriginsEventsAndEventsGroup.md) |  |  [optional] |
+|**data** | [**List&lt;ObjectMagnitudesOriginsEventsAndEventsGroup&gt;**](ObjectMagnitudesOriginsEventsAndEventsGroup.md) |  |  [optional] |
 
 
 

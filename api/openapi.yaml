@@ -348,9 +348,16 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole)."
         in: query
         name: wherelocalspacenamein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+        in: query
+        name: whereflagsin
         required: false
         schema:
           format: string
@@ -606,9 +613,16 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole)."
         in: query
         name: wherelocalspacenamein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+        in: query
+        name: whereflagsin
         required: false
         schema:
           format: string
@@ -863,9 +877,16 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole)."
         in: query
         name: wherelocalspacenamein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+        in: query
+        name: whereflagsin
         required: false
         schema:
           format: string
@@ -1119,9 +1140,16 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole)."
         in: query
         name: wherelocalspacenamein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+        in: query
+        name: whereflagsin
         required: false
         schema:
           format: string
@@ -4698,7 +4726,7 @@ components:
           $ref: '#/components/headers/X-RateLimit-Remaining'
         X-RateLimit-Reset:
           $ref: '#/components/headers/X-RateLimit-Reset'
-    "200OriginsEventsAndEventsGroup":
+    "200MagnitudesOriginsEventsAndEventsGroup":
       content:
         application/json:
           schema:
@@ -4945,7 +4973,7 @@ components:
       required:
       - name
       type: object
-    ObjectOriginsEventsAndEventsGroup:
+    ObjectMagnitudesOriginsEventsAndEventsGroup:
       example:
         preferred_focalmechanism_id: 5
         origin:
@@ -4953,6 +4981,7 @@ components:
           err_z: 9.301444243932576
           ot: 2016-06-22T16:52:06.26Z
           associatedStationCount: 7
+          flags: "DPC,twitter,shakemap4,FM"
           lon: 9.19289
           err_ot: 2.3021358869347655
           err_h: 7.061401241503109
@@ -5070,11 +5099,11 @@ components:
           readOnly: true
           type: string
         origin:
-          $ref: '#/components/schemas/ObjectOriginForOriginsEventsAndEventsGroup'
+          $ref: '#/components/schemas/ObjectOriginForMagnitudesOriginsEventsAndEventsGroup'
         magnitude:
-          $ref: '#/components/schemas/ObjectMagnitudeForOriginsEventsAndEventsGroup'
+          $ref: '#/components/schemas/ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup'
         provenance:
-          $ref: '#/components/schemas/ObjectProvenaceForOriginsEventsAndEventsGroup'
+          $ref: '#/components/schemas/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup'
       type: object
     ObjectLocalspace:
       example:
@@ -5362,6 +5391,7 @@ components:
             emersio: E
             lower_uncertainty: 0.52
           confidence_level: 68.3
+          flags: "DPC,twitter,shakemap4,FM"
           e1_az: 4.145608
           err_h: 7.457744773683766
           lon: 9.19289
@@ -5938,6 +5968,7 @@ components:
             emersio: E
             lower_uncertainty: 0.52
           confidence_level: 68.3
+          flags: "DPC,twitter,shakemap4,FM"
           e1_az: 4.145608
           err_h: 7.457744773683766
           lon: 9.19289
@@ -6592,6 +6623,7 @@ components:
           emersio: E
           lower_uncertainty: 0.52
         confidence_level: 68.3
+        flags: "DPC,twitter,shakemap4,FM"
         e1_az: 4.145608
         err_h: 7.457744773683766
         lon: 9.19289
@@ -7277,6 +7309,11 @@ components:
           $ref: '#/components/schemas/ObjectLocalspace'
         provenance:
           $ref: '#/components/schemas/ObjectProvenance'
+        flags:
+          description: Flags for origin | varchar(255)
+          example: "DPC,twitter,shakemap4,FM"
+          readOnly: true
+          type: string
         magnitudes:
           items:
             $ref: '#/components/schemas/ObjectMagnitude'
@@ -8708,12 +8745,13 @@ components:
       - net
       - sta
       type: object
-    ObjectOriginForOriginsEventsAndEventsGroup:
+    ObjectOriginForMagnitudesOriginsEventsAndEventsGroup:
       example:
         err_lon: 2.027123023002322
         err_z: 9.301444243932576
         ot: 2016-06-22T16:52:06.26Z
         associatedStationCount: 7
+        flags: "DPC,twitter,shakemap4,FM"
         lon: 9.19289
         err_ot: 2.3021358869347655
         err_h: 7.061401241503109
@@ -8838,6 +8876,11 @@ components:
           description: Event location remark region | varchar(255)
           example: Norcia
           type: string
+        flags:
+          description: Flags for origin | varchar(255)
+          example: "DPC,twitter,shakemap4,FM"
+          readOnly: true
+          type: string
         modified:
           description: Last Review | timestamp
           example: 2016-06-22T16:52:06.26Z
@@ -8853,9 +8896,9 @@ components:
         type_origin:
           $ref: '#/components/schemas/ObjectTypeOrigin'
         provenance:
-          $ref: '#/components/schemas/ObjectProvenaceForOriginsEventsAndEventsGroup'
+          $ref: '#/components/schemas/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup'
       type: object
-    ObjectProvenaceForOriginsEventsAndEventsGroup:
+    ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup:
       example:
         name: INGV
         version: hew1_mole
@@ -8875,7 +8918,7 @@ components:
           example: software
           type: string
       type: object
-    ObjectMagnitudeForOriginsEventsAndEventsGroup:
+    ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup:
       example:
         type_magnitude: ML-VAX
         id_localspace: 182491
@@ -8942,7 +8985,7 @@ components:
           format: int64
           type: integer
         provenance:
-          $ref: '#/components/schemas/ObjectProvenaceForOriginsEventsAndEventsGroup'
+          $ref: '#/components/schemas/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup'
       type: object
     MetaDefinition:
       example:
@@ -9002,28 +9045,28 @@ components:
       type: object
     LinksDefinition:
       example:
-        next: http://localhost:8087/api/quakedb/v1/events_pref/?page=3
-        last: http://localhost:8087/api/quakedb/v1/events_pref/?page=4
-        prev: http://localhost:8087/api/quakedb/v1/events_pref/?page=1
-        first: http://localhost:8087/api/quakedb/v1/events_pref/?page=2
+        next: http://localhost:8087/api/quakedb/v1/events-group/?page=3
+        last: http://localhost:8087/api/quakedb/v1/events-group/?page=4
+        prev: http://localhost:8087/api/quakedb/v1/events-group/?page=1
+        first: http://localhost:8087/api/quakedb/v1/events-group/?page=2
       properties:
         first:
           description: URL first page.
-          example: http://localhost:8087/api/quakedb/v1/events_pref/?page=2
+          example: http://localhost:8087/api/quakedb/v1/events-group/?page=2
           type: string
         last:
           description: URL last page.
-          example: http://localhost:8087/api/quakedb/v1/events_pref/?page=4
+          example: http://localhost:8087/api/quakedb/v1/events-group/?page=4
           nullable: true
           type: string
         prev:
           description: URL previous page.
-          example: http://localhost:8087/api/quakedb/v1/events_pref/?page=1
+          example: http://localhost:8087/api/quakedb/v1/events-group/?page=1
           nullable: true
           type: string
         next:
           description: URL next page.
-          example: http://localhost:8087/api/quakedb/v1/events_pref/?page=3
+          example: http://localhost:8087/api/quakedb/v1/events-group/?page=3
           nullable: true
           type: string
       type: object
@@ -9162,8 +9205,7 @@ components:
       description: Name | varchar(255)
       example: earthquake
       type: string
-    event__fk_event_group:
-      default: 0
+    event__fk_event_group__FOR_PATCH:
       description: Link event group | bigint(20)
       format: int64
       type: integer
@@ -9699,6 +9741,11 @@ components:
       description: Root mean square Weighted | double
       format: double
       type: number
+    flags:
+      description: Flags for origin | varchar(255)
+      example: "DPC,twitter,shakemap4,FM"
+      readOnly: true
+      type: string
     origin_flag__name:
       description: Flag name | varchar(255)
       example: DPC
@@ -10116,6 +10163,7 @@ components:
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
             associatedStationCount: 7
+            flags: "DPC,twitter,shakemap4,FM"
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
@@ -10175,6 +10223,7 @@ components:
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
             associatedStationCount: 7
+            flags: "DPC,twitter,shakemap4,FM"
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
@@ -10244,10 +10293,10 @@ components:
           to: 4000
           current_page: 2
         links:
-          next: http://localhost:8087/api/quakedb/v1/events_pref/?page=3
-          last: http://localhost:8087/api/quakedb/v1/events_pref/?page=4
-          prev: http://localhost:8087/api/quakedb/v1/events_pref/?page=1
-          first: http://localhost:8087/api/quakedb/v1/events_pref/?page=2
+          next: http://localhost:8087/api/quakedb/v1/events-group/?page=3
+          last: http://localhost:8087/api/quakedb/v1/events-group/?page=4
+          prev: http://localhost:8087/api/quakedb/v1/events-group/?page=1
+          first: http://localhost:8087/api/quakedb/v1/events-group/?page=2
       properties:
         links:
           $ref: '#/components/schemas/LinksDefinition'
@@ -10255,7 +10304,7 @@ components:
           $ref: '#/components/schemas/MetaDefinition'
         data:
           items:
-            $ref: '#/components/schemas/ObjectOriginsEventsAndEventsGroup'
+            $ref: '#/components/schemas/ObjectMagnitudesOriginsEventsAndEventsGroup'
           type: array
       type: object
     getTypeEvent_200_response_allOf:
@@ -10511,6 +10560,7 @@ components:
               emersio: E
               lower_uncertainty: 0.52
             confidence_level: 68.3
+            flags: "DPC,twitter,shakemap4,FM"
             e1_az: 4.145608
             err_h: 7.457744773683766
             lon: 9.19289
@@ -11087,6 +11137,7 @@ components:
               emersio: E
               lower_uncertainty: 0.52
             confidence_level: 68.3
+            flags: "DPC,twitter,shakemap4,FM"
             e1_az: 4.145608
             err_h: 7.457744773683766
             lon: 9.19289
@@ -11779,6 +11830,7 @@ components:
                 emersio: E
                 lower_uncertainty: 0.52
               confidence_level: 68.3
+              flags: "DPC,twitter,shakemap4,FM"
               e1_az: 4.145608
               err_h: 7.457744773683766
               lon: 9.19289
@@ -12355,6 +12407,7 @@ components:
                 emersio: E
                 lower_uncertainty: 0.52
               confidence_level: 68.3
+              flags: "DPC,twitter,shakemap4,FM"
               e1_az: 4.145608
               err_h: 7.457744773683766
               lon: 9.19289
@@ -13187,7 +13240,6 @@ components:
           example: earthquake
           type: string
         event_group_id:
-          default: 0
           description: Link event group | bigint(20)
           format: int64
           type: integer

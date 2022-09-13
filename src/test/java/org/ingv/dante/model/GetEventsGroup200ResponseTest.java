@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.LinksDefinition;
 import org.ingv.dante.model.MetaDefinition;
-import org.ingv.dante.model.ObjectOriginsEventsAndEventsGroup;
+import org.ingv.dante.model.ObjectMagnitudesOriginsEventsAndEventsGroup;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 

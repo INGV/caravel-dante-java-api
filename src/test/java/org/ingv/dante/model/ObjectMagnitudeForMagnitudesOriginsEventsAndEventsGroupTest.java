@@ -21,26 +21,24 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.time.OffsetDateTime;
-import org.ingv.dante.model.ObjectProvenaceForOriginsEventsAndEventsGroup;
-import org.ingv.dante.model.ObjectTypeOrigin;
+import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectOriginForOriginsEventsAndEventsGroup
+ * Model tests for ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup
  */
-public class ObjectOriginForOriginsEventsAndEventsGroupTest {
-    private final ObjectOriginForOriginsEventsAndEventsGroup model = new ObjectOriginForOriginsEventsAndEventsGroup();
+public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroupTest {
+    private final ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup model = new ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup();
 
     /**
-     * Model tests for ObjectOriginForOriginsEventsAndEventsGroup
+     * Model tests for ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup
      */
     @Test
-    public void testObjectOriginForOriginsEventsAndEventsGroup() {
-        // TODO: test ObjectOriginForOriginsEventsAndEventsGroup
+    public void testObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup() {
+        // TODO: test ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup
     }
 
     /**
@@ -68,75 +66,35 @@ public class ObjectOriginForOriginsEventsAndEventsGroupTest {
     }
 
     /**
-     * Test the property 'ot'
+     * Test the property 'mag'
      */
     @Test
-    public void otTest() {
-        // TODO: test ot
+    public void magTest() {
+        // TODO: test mag
     }
 
     /**
-     * Test the property 'lat'
+     * Test the property 'typeMagnitude'
      */
     @Test
-    public void latTest() {
-        // TODO: test lat
+    public void typeMagnitudeTest() {
+        // TODO: test typeMagnitude
     }
 
     /**
-     * Test the property 'lon'
+     * Test the property 'lowerUncertainty'
      */
     @Test
-    public void lonTest() {
-        // TODO: test lon
+    public void lowerUncertaintyTest() {
+        // TODO: test lowerUncertainty
     }
 
     /**
-     * Test the property 'depth'
+     * Test the property 'upperUncertainty'
      */
     @Test
-    public void depthTest() {
-        // TODO: test depth
-    }
-
-    /**
-     * Test the property 'errOt'
-     */
-    @Test
-    public void errOtTest() {
-        // TODO: test errOt
-    }
-
-    /**
-     * Test the property 'errH'
-     */
-    @Test
-    public void errHTest() {
-        // TODO: test errH
-    }
-
-    /**
-     * Test the property 'errZ'
-     */
-    @Test
-    public void errZTest() {
-        // TODO: test errZ
-    }
-
-    /**
-     * Test the property 'errLat'
-     */
-    @Test
-    public void errLatTest() {
-        // TODO: test errLat
-    }
-
-    /**
-     * Test the property 'errLon'
-     */
-    @Test
-    public void errLonTest() {
-        // TODO: test errLon
+    public void upperUncertaintyTest() {
+        // TODO: test upperUncertainty
     }
 
     /**
@@ -148,67 +106,19 @@ public class ObjectOriginForOriginsEventsAndEventsGroupTest {
     }
 
     /**
-     * Test the property 'associatedPhaseCount'
+     * Test the property 'magQuality'
      */
     @Test
-    public void associatedPhaseCountTest() {
-        // TODO: test associatedPhaseCount
+    public void magQualityTest() {
+        // TODO: test magQuality
     }
 
     /**
-     * Test the property 'associatedStationCount'
+     * Test the property 'originid'
      */
     @Test
-    public void associatedStationCountTest() {
-        // TODO: test associatedStationCount
-    }
-
-    /**
-     * Test the property 'usedPhaseCount'
-     */
-    @Test
-    public void usedPhaseCountTest() {
-        // TODO: test usedPhaseCount
-    }
-
-    /**
-     * Test the property 'usedStationCount'
-     */
-    @Test
-    public void usedStationCountTest() {
-        // TODO: test usedStationCount
-    }
-
-    /**
-     * Test the property 'region'
-     */
-    @Test
-    public void regionTest() {
-        // TODO: test region
-    }
-
-    /**
-     * Test the property 'modified'
-     */
-    @Test
-    public void modifiedTest() {
-        // TODO: test modified
-    }
-
-    /**
-     * Test the property 'inserted'
-     */
-    @Test
-    public void insertedTest() {
-        // TODO: test inserted
-    }
-
-    /**
-     * Test the property 'typeOrigin'
-     */
-    @Test
-    public void typeOriginTest() {
-        // TODO: test typeOrigin
+    public void originidTest() {
+        // TODO: test originid
     }
 
     /**

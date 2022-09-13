@@ -21,24 +21,27 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.ObjectProvenaceForOriginsEventsAndEventsGroup;
+import java.time.OffsetDateTime;
+import org.ingv.dante.model.ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup;
+import org.ingv.dante.model.ObjectOriginForMagnitudesOriginsEventsAndEventsGroup;
+import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectMagnitudeForOriginsEventsAndEventsGroup
+ * Model tests for ObjectMagnitudesOriginsEventsAndEventsGroup
  */
-public class ObjectMagnitudeForOriginsEventsAndEventsGroupTest {
-    private final ObjectMagnitudeForOriginsEventsAndEventsGroup model = new ObjectMagnitudeForOriginsEventsAndEventsGroup();
+public class ObjectMagnitudesOriginsEventsAndEventsGroupTest {
+    private final ObjectMagnitudesOriginsEventsAndEventsGroup model = new ObjectMagnitudesOriginsEventsAndEventsGroup();
 
     /**
-     * Model tests for ObjectMagnitudeForOriginsEventsAndEventsGroup
+     * Model tests for ObjectMagnitudesOriginsEventsAndEventsGroup
      */
     @Test
-    public void testObjectMagnitudeForOriginsEventsAndEventsGroup() {
-        // TODO: test ObjectMagnitudeForOriginsEventsAndEventsGroup
+    public void testObjectMagnitudesOriginsEventsAndEventsGroup() {
+        // TODO: test ObjectMagnitudesOriginsEventsAndEventsGroup
     }
 
     /**
@@ -66,59 +69,83 @@ public class ObjectMagnitudeForOriginsEventsAndEventsGroupTest {
     }
 
     /**
-     * Test the property 'mag'
+     * Test the property 'eventGroupId'
      */
     @Test
-    public void magTest() {
-        // TODO: test mag
+    public void eventGroupIdTest() {
+        // TODO: test eventGroupId
     }
 
     /**
-     * Test the property 'typeMagnitude'
+     * Test the property 'preferredOriginId'
      */
     @Test
-    public void typeMagnitudeTest() {
-        // TODO: test typeMagnitude
+    public void preferredOriginIdTest() {
+        // TODO: test preferredOriginId
     }
 
     /**
-     * Test the property 'lowerUncertainty'
+     * Test the property 'preferredMagnitudeId'
      */
     @Test
-    public void lowerUncertaintyTest() {
-        // TODO: test lowerUncertainty
+    public void preferredMagnitudeIdTest() {
+        // TODO: test preferredMagnitudeId
     }
 
     /**
-     * Test the property 'upperUncertainty'
+     * Test the property 'preferredFocalmechanismId'
      */
     @Test
-    public void upperUncertaintyTest() {
-        // TODO: test upperUncertainty
+    public void preferredFocalmechanismIdTest() {
+        // TODO: test preferredFocalmechanismId
     }
 
     /**
-     * Test the property 'quality'
+     * Test the property 'typeGroup'
      */
     @Test
-    public void qualityTest() {
-        // TODO: test quality
+    public void typeGroupTest() {
+        // TODO: test typeGroup
     }
 
     /**
-     * Test the property 'magQuality'
+     * Test the property 'typeEvent'
      */
     @Test
-    public void magQualityTest() {
-        // TODO: test magQuality
+    public void typeEventTest() {
+        // TODO: test typeEvent
     }
 
     /**
-     * Test the property 'originid'
+     * Test the property 'modified'
      */
     @Test
-    public void originidTest() {
-        // TODO: test originid
+    public void modifiedTest() {
+        // TODO: test modified
+    }
+
+    /**
+     * Test the property 'inserted'
+     */
+    @Test
+    public void insertedTest() {
+        // TODO: test inserted
+    }
+
+    /**
+     * Test the property 'origin'
+     */
+    @Test
+    public void originTest() {
+        // TODO: test origin
+    }
+
+    /**
+     * Test the property 'magnitude'
+     */
+    @Test
+    public void magnitudeTest() {
+        // TODO: test magnitude
     }
 
     /**

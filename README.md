@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.51.0-dev
-  - Build date: 2022-09-12T12:56:31.093015Z[Etc/UTC]
+  - Build date: 2022-09-13T09:51:17.331702Z[Etc/UTC]
 
   
 
@@ -271,8 +271,9 @@ Class | Method | HTTP request | Description
  - [ObjectFocalmechanismPostOutputFocalmechanismsInner](docs/ObjectFocalmechanismPostOutputFocalmechanismsInner.md)
  - [ObjectLocalspace](docs/ObjectLocalspace.md)
  - [ObjectMagnitude](docs/ObjectMagnitude.md)
- - [ObjectMagnitudeForOriginsEventsAndEventsGroup](docs/ObjectMagnitudeForOriginsEventsAndEventsGroup.md)
+ - [ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup](docs/ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectMagnitudePostOutput](docs/ObjectMagnitudePostOutput.md)
+ - [ObjectMagnitudesOriginsEventsAndEventsGroup](docs/ObjectMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectMomenttensor](docs/ObjectMomenttensor.md)
  - [ObjectMomenttensorPostOutput](docs/ObjectMomenttensorPostOutput.md)
  - [ObjectMomenttensorPostOutputMomenttensor](docs/ObjectMomenttensorPostOutputMomenttensor.md)
@@ -283,10 +284,9 @@ Class | Method | HTTP request | Description
  - [ObjectOriginFlag](docs/ObjectOriginFlag.md)
  - [ObjectOriginFlagPostOutput](docs/ObjectOriginFlagPostOutput.md)
  - [ObjectOriginFlagPostOutputOriginFlagInner](docs/ObjectOriginFlagPostOutputOriginFlagInner.md)
- - [ObjectOriginForOriginsEventsAndEventsGroup](docs/ObjectOriginForOriginsEventsAndEventsGroup.md)
- - [ObjectOriginsEventsAndEventsGroup](docs/ObjectOriginsEventsAndEventsGroup.md)
+ - [ObjectOriginForMagnitudesOriginsEventsAndEventsGroup](docs/ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectPickEw](docs/ObjectPickEw.md)
- - [ObjectProvenaceForOriginsEventsAndEventsGroup](docs/ObjectProvenaceForOriginsEventsAndEventsGroup.md)
+ - [ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup](docs/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectProvenance](docs/ObjectProvenance.md)
  - [ObjectStationmagnitude](docs/ObjectStationmagnitude.md)
  - [ObjectStationmagnitudeTypeAmplitude](docs/ObjectStationmagnitudeTypeAmplitude.md)
