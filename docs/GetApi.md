@@ -135,7 +135,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
@@ -178,7 +178,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -251,7 +251,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
@@ -294,7 +294,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -431,7 +431,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
@@ -474,7 +474,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -759,7 +759,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by regex (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
     String orderby = "event_id-asc"; // String | Select order
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
@@ -802,7 +802,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by regex (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |

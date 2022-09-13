@@ -348,7 +348,7 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole)."
         in: query
         name: wherelocalspacenamein
         required: false
@@ -606,7 +606,7 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole)."
         in: query
         name: wherelocalspacenamein
         required: false
@@ -863,7 +863,7 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole)."
         in: query
         name: wherelocalspacenamein
         required: false
@@ -1119,7 +1119,7 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter localspace.name by regex (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole)."
         in: query
         name: wherelocalspacenamein
         required: false
