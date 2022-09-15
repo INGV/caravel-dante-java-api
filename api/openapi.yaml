@@ -14200,24 +14200,24 @@ components:
           format: double
           type: number
         ccntr:
-          items:
-            description: Todo description | ???
-            example:
-            - 0
-            - 0
-            - 0
-            - 0
-            - 0
+          example:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          format: int64
           type: array
         caav:
-          items:
-            description: Todo description | ???
-            example:
-            - 0
-            - 0
-            - 0
-            - 0
-            - 0
+          example:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          format: int64
           type: array
         amplitude:
           description: Amplitude (Normally peak-to-peak) | col55 F7.2
