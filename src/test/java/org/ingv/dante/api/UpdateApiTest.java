@@ -23,6 +23,7 @@ import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.ingv.dante.model.Problem;
 import org.ingv.dante.model.UpdateEvent200Response;
 import org.ingv.dante.model.UpdateEventRequest;
+import org.ingv.dante.model.UpdateEventsGroupRequest;
 import org.ingv.dante.model.UpdateOriginFlagRequest;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -52,6 +53,20 @@ public class UpdateApiTest {
         Long id = null;
         UpdateEventRequest updateEventRequest = null;
         UpdateEvent200Response response = api.updateEvent(id, updateEventRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Update/Create an events-group
+     *
+     * Create a new events-group or Update an existing one.&lt;/br&gt; To use this API you must be authenticated.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateEventsGroupTest() throws ApiException {
+        UpdateEventsGroupRequest updateEventsGroupRequest = null;
+        ObjectTableTypeEvent response = api.updateEventsGroup(updateEventsGroupRequest);
         // TODO: test validations
     }
 

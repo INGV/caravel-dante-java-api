@@ -11,29 +11,41 @@
  */
 
 
-package org.ingv.dante;
+package org.ingv.dante.model;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-15T17:46:19.410517Z[Etc/UTC]")
-public class Configuration {
-    private static ApiClient defaultApiClient = new ApiClient();
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import org.ingv.dante.model.UpdateEventsGroupRequestData;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
+
+/**
+ * Model tests for UpdateEventsGroupRequest
+ */
+public class UpdateEventsGroupRequestTest {
+    private final UpdateEventsGroupRequest model = new UpdateEventsGroupRequest();
 
     /**
-     * Get the default API client, which would be used when creating API
-     * instances without providing an API client.
-     *
-     * @return Default API client
+     * Model tests for UpdateEventsGroupRequest
      */
-    public static ApiClient getDefaultApiClient() {
-        return defaultApiClient;
+    @Test
+    public void testUpdateEventsGroupRequest() {
+        // TODO: test UpdateEventsGroupRequest
     }
 
     /**
-     * Set the default API client, which would be used when creating API
-     * instances without providing an API client.
-     *
-     * @param apiClient API client
+     * Test the property 'data'
      */
-    public static void setDefaultApiClient(ApiClient apiClient) {
-        defaultApiClient = apiClient;
+    @Test
+    public void dataTest() {
+        // TODO: test data
     }
+
 }

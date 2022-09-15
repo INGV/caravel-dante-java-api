@@ -23,7 +23,8 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.TypeOriginName;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -46,91 +47,73 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * ObjectTypeOrigin
+ * UpdateEventsGroupRequestData
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-15T17:46:19.410517Z[Etc/UTC]")
-public class ObjectTypeOrigin {
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private TypeOriginName name = TypeOriginName.HYPOCENTER;
+public class UpdateEventsGroupRequestData {
+  public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
+  @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  private Long eventGroupId;
 
-  public static final String SERIALIZED_NAME_VERSION_NAME = "version_name";
-  @SerializedName(SERIALIZED_NAME_VERSION_NAME)
-  private String versionName;
+  public static final String SERIALIZED_NAME_EVENTIDS = "eventids";
+  @SerializedName(SERIALIZED_NAME_EVENTIDS)
+  private List<Long> eventids = null;
 
-  public static final String SERIALIZED_NAME_VERSION_VALUE = "version_value";
-  @SerializedName(SERIALIZED_NAME_VERSION_VALUE)
-  private Long versionValue;
-
-  public ObjectTypeOrigin() {
+  public UpdateEventsGroupRequestData() {
   }
 
-  
-  public ObjectTypeOrigin(
-     Long versionValue
-  ) {
-    this();
-    this.versionValue = versionValue;
-  }
-
-  public ObjectTypeOrigin name(TypeOriginName name) {
+  public UpdateEventsGroupRequestData eventGroupId(Long eventGroupId) {
     
-    this.name = name;
+    this.eventGroupId = eventGroupId;
     return this;
   }
 
    /**
-   * Get name
-   * @return name
+   * Unique incremental id | bigint(20)
+   * @return eventGroupId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
-  public TypeOriginName getName() {
-    return name;
+  public Long getEventGroupId() {
+    return eventGroupId;
   }
 
 
-  public void setName(TypeOriginName name) {
-    this.name = name;
+  public void setEventGroupId(Long eventGroupId) {
+    this.eventGroupId = eventGroupId;
   }
 
 
-  public ObjectTypeOrigin versionName(String versionName) {
+  public UpdateEventsGroupRequestData eventids(List<Long> eventids) {
     
-    this.versionName = versionName;
+    this.eventids = eventids;
+    return this;
+  }
+
+  public UpdateEventsGroupRequestData addEventidsItem(Long eventidsItem) {
+    if (this.eventids == null) {
+      this.eventids = new ArrayList<>();
+    }
+    this.eventids.add(eventidsItem);
     return this;
   }
 
    /**
-   * Localization name (es:ew prelim,XX,WW,..) | varchar(255)
-   * @return versionName
+   * Get eventids
+   * @return eventids
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ew prelim", value = "Localization name (es:ew prelim,XX,WW,..) | varchar(255)")
+  @ApiModelProperty(example = "[11111,11121,11131]", value = "")
 
-  public String getVersionName() {
-    return versionName;
+  public List<Long> getEventids() {
+    return eventids;
   }
 
 
-  public void setVersionName(String versionName) {
-    this.versionName = versionName;
+  public void setEventids(List<Long> eventids) {
+    this.eventids = eventids;
   }
-
-
-   /**
-   * Define a numeric value for type origin. &lt; 100 is automatic location | bigint(20)
-   * @return versionValue
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Define a numeric value for type origin. < 100 is automatic location | bigint(20)")
-
-  public Long getVersionValue() {
-    return versionValue;
-  }
-
-
 
   /**
    * A container for additional, undeclared properties.
@@ -143,7 +126,7 @@ public class ObjectTypeOrigin {
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
    */
-  public ObjectTypeOrigin putAdditionalProperty(String key, Object value) {
+  public UpdateEventsGroupRequestData putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -177,25 +160,23 @@ public class ObjectTypeOrigin {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectTypeOrigin objectTypeOrigin = (ObjectTypeOrigin) o;
-    return Objects.equals(this.name, objectTypeOrigin.name) &&
-        Objects.equals(this.versionName, objectTypeOrigin.versionName) &&
-        Objects.equals(this.versionValue, objectTypeOrigin.versionValue)&&
-        Objects.equals(this.additionalProperties, objectTypeOrigin.additionalProperties);
+    UpdateEventsGroupRequestData updateEventsGroupRequestData = (UpdateEventsGroupRequestData) o;
+    return Objects.equals(this.eventGroupId, updateEventsGroupRequestData.eventGroupId) &&
+        Objects.equals(this.eventids, updateEventsGroupRequestData.eventids)&&
+        Objects.equals(this.additionalProperties, updateEventsGroupRequestData.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, versionName, versionValue, additionalProperties);
+    return Objects.hash(eventGroupId, eventids, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectTypeOrigin {\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    versionName: ").append(toIndentedString(versionName)).append("\n");
-    sb.append("    versionValue: ").append(toIndentedString(versionValue)).append("\n");
+    sb.append("class UpdateEventsGroupRequestData {\n");
+    sb.append("    eventGroupId: ").append(toIndentedString(eventGroupId)).append("\n");
+    sb.append("    eventids: ").append(toIndentedString(eventids)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -219,38 +200,30 @@ public class ObjectTypeOrigin {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("name");
-    openapiFields.add("version_name");
-    openapiFields.add("version_value");
+    openapiFields.add("event_group_id");
+    openapiFields.add("eventids");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("name");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectTypeOrigin
+  * @throws IOException if the JSON Object is invalid with respect to UpdateEventsGroupRequestData
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectTypeOrigin.openapiRequiredFields.isEmpty()) {
+        if (UpdateEventsGroupRequestData.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTypeOrigin is not found in the empty JSON string", ObjectTypeOrigin.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateEventsGroupRequestData is not found in the empty JSON string", UpdateEventsGroupRequestData.openapiRequiredFields.toString()));
         }
       }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectTypeOrigin.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-        }
-      }
-      if ((jsonObj.get("version_name") != null && !jsonObj.get("version_name").isJsonNull()) && !jsonObj.get("version_name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `version_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version_name").toString()));
+      // ensure the json data is an array
+      if ((jsonObj.get("eventids") != null && !jsonObj.get("eventids").isJsonNull()) && !jsonObj.get("eventids").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `eventids` to be an array in the JSON string but got `%s`", jsonObj.get("eventids").toString()));
       }
   }
 
@@ -258,16 +231,16 @@ public class ObjectTypeOrigin {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectTypeOrigin.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectTypeOrigin' and its subtypes
+       if (!UpdateEventsGroupRequestData.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'UpdateEventsGroupRequestData' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectTypeOrigin> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectTypeOrigin.class));
+       final TypeAdapter<UpdateEventsGroupRequestData> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(UpdateEventsGroupRequestData.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectTypeOrigin>() {
+       return (TypeAdapter<T>) new TypeAdapter<UpdateEventsGroupRequestData>() {
            @Override
-           public void write(JsonWriter out, ObjectTypeOrigin value) throws IOException {
+           public void write(JsonWriter out, UpdateEventsGroupRequestData value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additonal properties
@@ -290,11 +263,11 @@ public class ObjectTypeOrigin {
            }
 
            @Override
-           public ObjectTypeOrigin read(JsonReader in) throws IOException {
+           public UpdateEventsGroupRequestData read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             ObjectTypeOrigin instance = thisAdapter.fromJsonTree(jsonObj);
+             UpdateEventsGroupRequestData instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -319,18 +292,18 @@ public class ObjectTypeOrigin {
   }
 
  /**
-  * Create an instance of ObjectTypeOrigin given an JSON string
+  * Create an instance of UpdateEventsGroupRequestData given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectTypeOrigin
-  * @throws IOException if the JSON string is invalid with respect to ObjectTypeOrigin
+  * @return An instance of UpdateEventsGroupRequestData
+  * @throws IOException if the JSON string is invalid with respect to UpdateEventsGroupRequestData
   */
-  public static ObjectTypeOrigin fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectTypeOrigin.class);
+  public static UpdateEventsGroupRequestData fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UpdateEventsGroupRequestData.class);
   }
 
  /**
-  * Convert an instance of ObjectTypeOrigin to an JSON string
+  * Convert an instance of UpdateEventsGroupRequestData to an JSON string
   *
   * @return JSON string
   */

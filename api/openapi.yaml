@@ -1263,6 +1263,102 @@ paths:
       tags:
       - get
       x-accepts: application/json
+  /quakedb/v1/eventsgroup:
+    patch:
+      description: Create a new events-group or Update an existing one.</br> To use
+        this API you must be authenticated.
+      operationId: updateEventsGroup
+      requestBody:
+        content:
+          application/merge-patch+json:
+            schema:
+              $ref: '#/components/schemas/updateEventsGroup_request'
+        description: JSON to update
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ObjectTableTypeEvent'
+          description: record updated
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Update/Create an events-group
+      tags:
+      - update
+      x-content-type: application/merge-patch+json
+      x-accepts: application/json
   /quakedb/table/v1/type-event:
     get:
       description: This API returns all the type_event(s).
@@ -10307,6 +10403,26 @@ components:
             $ref: '#/components/schemas/ObjectMagnitudesOriginsEventsAndEventsGroup'
           type: array
       type: object
+    updateEventsGroup_request_data:
+      properties:
+        event_group_id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        eventids:
+          example:
+          - 11111
+          - 11121
+          - 11131
+          items:
+            format: int64
+            type: integer
+          type: array
+    updateEventsGroup_request:
+      properties:
+        data:
+          $ref: '#/components/schemas/updateEventsGroup_request_data'
     getTypeEvent_200_response_allOf:
       properties:
         data:
@@ -14252,24 +14368,24 @@ components:
           format: double
           type: number
         ccntr:
-          items:
-            description: Todo description | ???
-            example:
-            - 0
-            - 0
-            - 0
-            - 0
-            - 0
+          example:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          format: int64
           type: array
         caav:
-          items:
-            description: Todo description | ???
-            example:
-            - 0
-            - 0
-            - 0
-            - 0
-            - 0
+          example:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          format: int64
           type: array
         amplitude:
           description: Amplitude (Normally peak-to-peak) | col55 F7.2

@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.51.0-dev
-  - Build date: 2022-09-13T09:51:17.331702Z[Etc/UTC]
+  - Build date: 2022-09-15T17:46:19.410517Z[Etc/UTC]
 
   
 
@@ -177,6 +177,7 @@ Class | Method | HTTP request | Description
 *StoreApi* | [**addTypeMagnitude**](docs/StoreApi.md#addTypeMagnitude) | **POST** /quakedb/table/v1/type-magnitude | Add a new type_magnitude to the DB
 *StoreApi* | [**addTypeOrigin**](docs/StoreApi.md#addTypeOrigin) | **POST** /quakedb/table/v1/type-origin | Add a new type_origin to the DB
 *UpdateApi* | [**updateEvent**](docs/UpdateApi.md#updateEvent) | **PATCH** /quakedb/v1/event/{id} | Update an existing event
+*UpdateApi* | [**updateEventsGroup**](docs/UpdateApi.md#updateEventsGroup) | **PATCH** /quakedb/v1/eventsgroup | Update/Create an events-group
 *UpdateApi* | [**updateLocalspace**](docs/UpdateApi.md#updateLocalspace) | **PATCH** /quakedb/table/v1/localspace/{id} | Update an existing localspace
 *UpdateApi* | [**updateOriginFlag**](docs/UpdateApi.md#updateOriginFlag) | **PATCH** /quakedb/v1/origin-flag/{id} | Update an existing origin-flag
 *UpdateApi* | [**updateProvenance**](docs/UpdateApi.md#updateProvenance) | **PATCH** /quakedb/table/v1/provenance/{id} | Update an existing provenance
@@ -321,6 +322,8 @@ Class | Method | HTTP request | Description
  - [UpdateEventRequest](docs/UpdateEventRequest.md)
  - [UpdateEventRequestData](docs/UpdateEventRequestData.md)
  - [UpdateEventRequestDataEvent](docs/UpdateEventRequestDataEvent.md)
+ - [UpdateEventsGroupRequest](docs/UpdateEventsGroupRequest.md)
+ - [UpdateEventsGroupRequestData](docs/UpdateEventsGroupRequestData.md)
  - [UpdateOriginFlagRequest](docs/UpdateOriginFlagRequest.md)
  - [UpdateOriginFlagRequestData](docs/UpdateOriginFlagRequestData.md)
 

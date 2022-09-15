@@ -36,6 +36,7 @@ import org.ingv.dante.model.ObjectTableTypeOrigin;
 import org.ingv.dante.model.Problem;
 import org.ingv.dante.model.UpdateEvent200Response;
 import org.ingv.dante.model.UpdateEventRequest;
+import org.ingv.dante.model.UpdateEventsGroupRequest;
 import org.ingv.dante.model.UpdateOriginFlagRequest;
 
 import java.lang.reflect.Type;
@@ -247,6 +248,164 @@ public class UpdateApi {
 
         okhttp3.Call localVarCall = updateEventValidateBeforeCall(id, updateEventRequest, _callback);
         Type localVarReturnType = new TypeToken<UpdateEvent200Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for updateEventsGroup
+     * @param updateEventsGroupRequest JSON to update (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateEventsGroupCall(UpdateEventsGroupRequest updateEventsGroupRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = updateEventsGroupRequest;
+
+        // create path and map variables
+        String localVarPath = "/quakedb/v1/eventsgroup";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/problem+json", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/merge-patch+json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateEventsGroupValidateBeforeCall(UpdateEventsGroupRequest updateEventsGroupRequest, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'updateEventsGroupRequest' is set
+        if (updateEventsGroupRequest == null) {
+            throw new ApiException("Missing the required parameter 'updateEventsGroupRequest' when calling updateEventsGroup(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = updateEventsGroupCall(updateEventsGroupRequest, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Update/Create an events-group
+     * Create a new events-group or Update an existing one.&lt;/br&gt; To use this API you must be authenticated.
+     * @param updateEventsGroupRequest JSON to update (required)
+     * @return ObjectTableTypeEvent
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ObjectTableTypeEvent updateEventsGroup(UpdateEventsGroupRequest updateEventsGroupRequest) throws ApiException {
+        ApiResponse<ObjectTableTypeEvent> localVarResp = updateEventsGroupWithHttpInfo(updateEventsGroupRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Update/Create an events-group
+     * Create a new events-group or Update an existing one.&lt;/br&gt; To use this API you must be authenticated.
+     * @param updateEventsGroupRequest JSON to update (required)
+     * @return ApiResponse&lt;ObjectTableTypeEvent&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<ObjectTableTypeEvent> updateEventsGroupWithHttpInfo(UpdateEventsGroupRequest updateEventsGroupRequest) throws ApiException {
+        okhttp3.Call localVarCall = updateEventsGroupValidateBeforeCall(updateEventsGroupRequest, null);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeEvent>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Update/Create an events-group (asynchronously)
+     * Create a new events-group or Update an existing one.&lt;/br&gt; To use this API you must be authenticated.
+     * @param updateEventsGroupRequest JSON to update (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateEventsGroupAsync(UpdateEventsGroupRequest updateEventsGroupRequest, final ApiCallback<ObjectTableTypeEvent> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = updateEventsGroupValidateBeforeCall(updateEventsGroupRequest, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableTypeEvent>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
