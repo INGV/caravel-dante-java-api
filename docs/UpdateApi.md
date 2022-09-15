@@ -5,6 +5,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**updateEvent**](UpdateApi.md#updateEvent) | **PATCH** /quakedb/v1/event/{id} | Update an existing event |
+| [**updateEventsGroup**](UpdateApi.md#updateEventsGroup) | **PATCH** /quakedb/v1/eventsgroup | Update/Create an events-group |
 | [**updateLocalspace**](UpdateApi.md#updateLocalspace) | **PATCH** /quakedb/table/v1/localspace/{id} | Update an existing localspace |
 | [**updateOriginFlag**](UpdateApi.md#updateOriginFlag) | **PATCH** /quakedb/v1/origin-flag/{id} | Update an existing origin-flag |
 | [**updateProvenance**](UpdateApi.md#updateProvenance) | **PATCH** /quakedb/table/v1/provenance/{id} | Update an existing provenance |
@@ -67,6 +68,81 @@ public class Example {
 ### Return type
 
 [**UpdateEvent200Response**](UpdateEvent200Response.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/merge-patch+json
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | record updated |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **0** | Unexpected error |  -  |
+
+<a name="updateEventsGroup"></a>
+# **updateEventsGroup**
+> ObjectTableTypeEvent updateEventsGroup(updateEventsGroupRequest)
+
+Update/Create an events-group
+
+Create a new events-group or Update an existing one.&lt;/br&gt; To use this API you must be authenticated.
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.UpdateApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
+
+    UpdateApi apiInstance = new UpdateApi(defaultClient);
+    UpdateEventsGroupRequest updateEventsGroupRequest = new UpdateEventsGroupRequest(); // UpdateEventsGroupRequest | JSON to update
+    try {
+      ObjectTableTypeEvent result = apiInstance.updateEventsGroup(updateEventsGroupRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UpdateApi#updateEventsGroup");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **updateEventsGroupRequest** | [**UpdateEventsGroupRequest**](UpdateEventsGroupRequest.md)| JSON to update | |
+
+### Return type
+
+[**ObjectTableTypeEvent**](ObjectTableTypeEvent.md)
 
 ### Authorization
 

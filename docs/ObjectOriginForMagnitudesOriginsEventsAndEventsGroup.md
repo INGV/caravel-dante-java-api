@@ -1,6 +1,6 @@
 
 
-# ObjectOriginForOriginsEventsAndEventsGroup
+# ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
 
 
 ## Properties
@@ -25,10 +25,11 @@
 |**usedPhaseCount** | **Long** | Number of defining phases, i.e., phase observations that were actually used for computing the origin | int(8)&#39; |  [optional] |
 |**usedStationCount** | **Long** | Number of stations from which data was used for origin computation | int(8)&#39; |  [optional] |
 |**region** | **String** | Event location remark region | varchar(255) |  [optional] |
+|**flags** | **String** | Flags for origin | varchar(255) |  [optional] [readonly] |
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
 |**typeOrigin** | [**ObjectTypeOrigin**](ObjectTypeOrigin.md) |  |  [optional] |
-|**provenance** | [**ObjectProvenaceForOriginsEventsAndEventsGroup**](ObjectProvenaceForOriginsEventsAndEventsGroup.md) |  |  [optional] |
+|**provenance** | [**ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup**](ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.md) |  |  [optional] |
 
 
 

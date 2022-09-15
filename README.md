@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 2.50.0
-  - Build date: 2022-09-15T17:47:04.823571Z[Etc/UTC]
+- API version: 2.51.0
+  - Build date: 2022-09-15T18:29:29.381941Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>2.50.0</version>
+  <version>2.51.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.50.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.51.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-2.50.0.jar`
+* `target/java-openapi-generator-cli-dante-2.51.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -177,6 +177,7 @@ Class | Method | HTTP request | Description
 *StoreApi* | [**addTypeMagnitude**](docs/StoreApi.md#addTypeMagnitude) | **POST** /quakedb/table/v1/type-magnitude | Add a new type_magnitude to the DB
 *StoreApi* | [**addTypeOrigin**](docs/StoreApi.md#addTypeOrigin) | **POST** /quakedb/table/v1/type-origin | Add a new type_origin to the DB
 *UpdateApi* | [**updateEvent**](docs/UpdateApi.md#updateEvent) | **PATCH** /quakedb/v1/event/{id} | Update an existing event
+*UpdateApi* | [**updateEventsGroup**](docs/UpdateApi.md#updateEventsGroup) | **PATCH** /quakedb/v1/eventsgroup | Update/Create an events-group
 *UpdateApi* | [**updateLocalspace**](docs/UpdateApi.md#updateLocalspace) | **PATCH** /quakedb/table/v1/localspace/{id} | Update an existing localspace
 *UpdateApi* | [**updateOriginFlag**](docs/UpdateApi.md#updateOriginFlag) | **PATCH** /quakedb/v1/origin-flag/{id} | Update an existing origin-flag
 *UpdateApi* | [**updateProvenance**](docs/UpdateApi.md#updateProvenance) | **PATCH** /quakedb/table/v1/provenance/{id} | Update an existing provenance
@@ -271,8 +272,9 @@ Class | Method | HTTP request | Description
  - [ObjectFocalmechanismPostOutputFocalmechanismsInner](docs/ObjectFocalmechanismPostOutputFocalmechanismsInner.md)
  - [ObjectLocalspace](docs/ObjectLocalspace.md)
  - [ObjectMagnitude](docs/ObjectMagnitude.md)
- - [ObjectMagnitudeForOriginsEventsAndEventsGroup](docs/ObjectMagnitudeForOriginsEventsAndEventsGroup.md)
+ - [ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup](docs/ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectMagnitudePostOutput](docs/ObjectMagnitudePostOutput.md)
+ - [ObjectMagnitudesOriginsEventsAndEventsGroup](docs/ObjectMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectMomenttensor](docs/ObjectMomenttensor.md)
  - [ObjectMomenttensorPostOutput](docs/ObjectMomenttensorPostOutput.md)
  - [ObjectMomenttensorPostOutputMomenttensor](docs/ObjectMomenttensorPostOutputMomenttensor.md)
@@ -283,10 +285,9 @@ Class | Method | HTTP request | Description
  - [ObjectOriginFlag](docs/ObjectOriginFlag.md)
  - [ObjectOriginFlagPostOutput](docs/ObjectOriginFlagPostOutput.md)
  - [ObjectOriginFlagPostOutputOriginFlagInner](docs/ObjectOriginFlagPostOutputOriginFlagInner.md)
- - [ObjectOriginForOriginsEventsAndEventsGroup](docs/ObjectOriginForOriginsEventsAndEventsGroup.md)
- - [ObjectOriginsEventsAndEventsGroup](docs/ObjectOriginsEventsAndEventsGroup.md)
+ - [ObjectOriginForMagnitudesOriginsEventsAndEventsGroup](docs/ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectPickEw](docs/ObjectPickEw.md)
- - [ObjectProvenaceForOriginsEventsAndEventsGroup](docs/ObjectProvenaceForOriginsEventsAndEventsGroup.md)
+ - [ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup](docs/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectProvenance](docs/ObjectProvenance.md)
  - [ObjectStationmagnitude](docs/ObjectStationmagnitude.md)
  - [ObjectStationmagnitudeTypeAmplitude](docs/ObjectStationmagnitudeTypeAmplitude.md)
@@ -321,6 +322,8 @@ Class | Method | HTTP request | Description
  - [UpdateEventRequest](docs/UpdateEventRequest.md)
  - [UpdateEventRequestData](docs/UpdateEventRequestData.md)
  - [UpdateEventRequestDataEvent](docs/UpdateEventRequestDataEvent.md)
+ - [UpdateEventsGroupRequest](docs/UpdateEventsGroupRequest.md)
+ - [UpdateEventsGroupRequestData](docs/UpdateEventsGroupRequestData.md)
  - [UpdateOriginFlagRequest](docs/UpdateOriginFlagRequest.md)
  - [UpdateOriginFlagRequestData](docs/UpdateOriginFlagRequestData.md)
 

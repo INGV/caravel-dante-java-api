@@ -1,6 +1,6 @@
 
 
-# ObjectProvenaceForOriginsEventsAndEventsGroup
+# ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
 
 
 ## Properties

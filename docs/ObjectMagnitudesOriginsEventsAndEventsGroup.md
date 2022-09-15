@@ -1,6 +1,6 @@
 
 
-# ObjectOriginsEventsAndEventsGroup
+# ObjectMagnitudesOriginsEventsAndEventsGroup
 
 
 ## Properties
@@ -18,9 +18,9 @@
 |**typeEvent** | **String** | Name | varchar(255) |  [optional] |
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
-|**origin** | [**ObjectOriginForOriginsEventsAndEventsGroup**](ObjectOriginForOriginsEventsAndEventsGroup.md) |  |  [optional] |
-|**magnitude** | [**ObjectMagnitudeForOriginsEventsAndEventsGroup**](ObjectMagnitudeForOriginsEventsAndEventsGroup.md) |  |  [optional] |
-|**provenance** | [**ObjectProvenaceForOriginsEventsAndEventsGroup**](ObjectProvenaceForOriginsEventsAndEventsGroup.md) |  |  [optional] |
+|**origin** | [**ObjectOriginForMagnitudesOriginsEventsAndEventsGroup**](ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.md) |  |  [optional] |
+|**magnitude** | [**ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup**](ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.md) |  |  [optional] |
+|**provenance** | [**ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup**](ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.md) |  |  [optional] |
 
 
 
