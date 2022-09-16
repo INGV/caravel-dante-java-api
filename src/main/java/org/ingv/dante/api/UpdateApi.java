@@ -27,7 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.ingv.dante.model.AddOriginFlag201Response;
+import org.ingv.dante.model.ObjectOriginFlag;
 import org.ingv.dante.model.ObjectTableLocalspace;
 import org.ingv.dante.model.ObjectTableProvenance;
 import org.ingv.dante.model.ObjectTableTypeEvent;
@@ -37,7 +37,6 @@ import org.ingv.dante.model.Problem;
 import org.ingv.dante.model.UpdateEvent200Response;
 import org.ingv.dante.model.UpdateEventRequest;
 import org.ingv.dante.model.UpdateEventsGroupRequest;
-import org.ingv.dante.model.UpdateOriginFlagRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -580,7 +579,7 @@ public class UpdateApi {
     /**
      * Build call for updateOriginFlag
      * @param id INGV origin-flag id that need to be updated. (required)
-     * @param updateOriginFlagRequest JSON to update (required)
+     * @param objectOriginFlag JSON to update (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -598,7 +597,7 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateOriginFlagCall(Long id, UpdateOriginFlagRequest updateOriginFlagRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call updateOriginFlagCall(Long id, ObjectOriginFlag objectOriginFlag, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -612,10 +611,10 @@ public class UpdateApi {
             basePath = null;
         }
 
-        Object localVarPostBody = updateOriginFlagRequest;
+        Object localVarPostBody = objectOriginFlag;
 
         // create path and map variables
-        String localVarPath = "/quakedb/v1/origin-flag/{id}"
+        String localVarPath = "/quakedb/table/v1/origin-flag/{id}"
             .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -645,30 +644,30 @@ public class UpdateApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call updateOriginFlagValidateBeforeCall(Long id, UpdateOriginFlagRequest updateOriginFlagRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call updateOriginFlagValidateBeforeCall(Long id, ObjectOriginFlag objectOriginFlag, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateOriginFlag(Async)");
         }
         
-        // verify the required parameter 'updateOriginFlagRequest' is set
-        if (updateOriginFlagRequest == null) {
-            throw new ApiException("Missing the required parameter 'updateOriginFlagRequest' when calling updateOriginFlag(Async)");
+        // verify the required parameter 'objectOriginFlag' is set
+        if (objectOriginFlag == null) {
+            throw new ApiException("Missing the required parameter 'objectOriginFlag' when calling updateOriginFlag(Async)");
         }
         
 
-        okhttp3.Call localVarCall = updateOriginFlagCall(id, updateOriginFlagRequest, _callback);
+        okhttp3.Call localVarCall = updateOriginFlagCall(id, objectOriginFlag, _callback);
         return localVarCall;
 
     }
 
     /**
      * Update an existing origin-flag
-     * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
+     * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV origin-flag id that need to be updated. (required)
-     * @param updateOriginFlagRequest JSON to update (required)
-     * @return AddOriginFlag201Response
+     * @param objectOriginFlag JSON to update (required)
+     * @return ObjectTableLocalspace
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -684,17 +683,17 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public AddOriginFlag201Response updateOriginFlag(Long id, UpdateOriginFlagRequest updateOriginFlagRequest) throws ApiException {
-        ApiResponse<AddOriginFlag201Response> localVarResp = updateOriginFlagWithHttpInfo(id, updateOriginFlagRequest);
+    public ObjectTableLocalspace updateOriginFlag(Long id, ObjectOriginFlag objectOriginFlag) throws ApiException {
+        ApiResponse<ObjectTableLocalspace> localVarResp = updateOriginFlagWithHttpInfo(id, objectOriginFlag);
         return localVarResp.getData();
     }
 
     /**
      * Update an existing origin-flag
-     * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
+     * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV origin-flag id that need to be updated. (required)
-     * @param updateOriginFlagRequest JSON to update (required)
-     * @return ApiResponse&lt;AddOriginFlag201Response&gt;
+     * @param objectOriginFlag JSON to update (required)
+     * @return ApiResponse&lt;ObjectTableLocalspace&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -710,17 +709,17 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AddOriginFlag201Response> updateOriginFlagWithHttpInfo(Long id, UpdateOriginFlagRequest updateOriginFlagRequest) throws ApiException {
-        okhttp3.Call localVarCall = updateOriginFlagValidateBeforeCall(id, updateOriginFlagRequest, null);
-        Type localVarReturnType = new TypeToken<AddOriginFlag201Response>(){}.getType();
+    public ApiResponse<ObjectTableLocalspace> updateOriginFlagWithHttpInfo(Long id, ObjectOriginFlag objectOriginFlag) throws ApiException {
+        okhttp3.Call localVarCall = updateOriginFlagValidateBeforeCall(id, objectOriginFlag, null);
+        Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Update an existing origin-flag (asynchronously)
-     * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
+     * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated.
      * @param id INGV origin-flag id that need to be updated. (required)
-     * @param updateOriginFlagRequest JSON to update (required)
+     * @param objectOriginFlag JSON to update (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -738,10 +737,10 @@ public class UpdateApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call updateOriginFlagAsync(Long id, UpdateOriginFlagRequest updateOriginFlagRequest, final ApiCallback<AddOriginFlag201Response> _callback) throws ApiException {
+    public okhttp3.Call updateOriginFlagAsync(Long id, ObjectOriginFlag objectOriginFlag, final ApiCallback<ObjectTableLocalspace> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = updateOriginFlagValidateBeforeCall(id, updateOriginFlagRequest, _callback);
-        Type localVarReturnType = new TypeToken<AddOriginFlag201Response>(){}.getType();
+        okhttp3.Call localVarCall = updateOriginFlagValidateBeforeCall(id, objectOriginFlag, _callback);
+        Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

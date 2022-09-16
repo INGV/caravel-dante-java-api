@@ -3064,6 +3064,196 @@ paths:
       - update
       x-content-type: application/merge-patch+json
       x-accepts: application/json
+  /quakedb/table/v1/origin-flag/{id}:
+    delete:
+      description: Delete an existing origin-flag.</br> To use this API you must be
+        authenticated.
+      operationId: deleteOriginFlag
+      parameters:
+      - description: INGV origin-flag id that need to be deleted.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "204":
+          description: record deleted
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Delete an existing origin-flag
+      tags:
+      - delete
+      x-accepts: application/problem+json
+    patch:
+      description: Update an existing origin-flag.</br> To use this API you must be
+        authenticated.
+      operationId: updateOriginFlag
+      parameters:
+      - description: INGV origin-flag id that need to be updated.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/merge-patch+json:
+            schema:
+              $ref: '#/components/schemas/ObjectOriginFlag'
+        description: JSON to update
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ObjectTableLocalspace'
+          description: record updated
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Update an existing origin-flag
+      tags:
+      - update
+      x-content-type: application/merge-patch+json
+      x-accepts: application/json
   /quakedb/v1/event:
     get:
       description: This API returns the preferred origin and the preferred magnitude
@@ -3256,6 +3446,33 @@ paths:
         schema:
           format: int64
           type: integer
+      - description: Flag name
+        explode: true
+        in: query
+        name: name
+        required: false
+        schema:
+          format: string
+          type: string
+        style: form
+      - description: Flag value
+        explode: true
+        in: query
+        name: value
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: Flag note
+        explode: true
+        in: query
+        name: note
+        required: false
+        schema:
+          format: string
+          type: string
+        style: form
       responses:
         "400":
           content:
@@ -3402,112 +3619,6 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
-  /quakedb/v1/origin-flag/{id}:
-    patch:
-      description: Update an existing origin-flag.</br> To use this API you must be
-        authenticated and "origin.localspace_name" owner.
-      operationId: updateOriginFlag
-      parameters:
-      - description: INGV origin-flag id that need to be updated.
-        explode: false
-        in: path
-        name: id
-        required: true
-        schema:
-          format: int64
-          type: integer
-        style: simple
-      requestBody:
-        content:
-          application/merge-patch+json:
-            schema:
-              $ref: '#/components/schemas/updateOriginFlag_request'
-        description: JSON to update
-        required: true
-      responses:
-        "400":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Bad Request
-        "422":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unprocessable Entity
-        "429":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Too many requests
-          headers:
-            Retry-After:
-              $ref: '#/components/headers/Retry-After'
-            X-RateLimit-Limit:
-              $ref: '#/components/headers/X-RateLimit-Limit'
-            X-RateLimit-Remaining:
-              $ref: '#/components/headers/X-RateLimit-Remaining'
-            X-RateLimit-Reset:
-              $ref: '#/components/headers/X-RateLimit-Reset'
-        "503":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Service Unavailable
-          headers:
-            Retry-After:
-              $ref: '#/components/headers/Retry-After'
-        "500":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Internal Server Error
-        default:
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unexpected error
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/addOriginFlag_201_response'
-          description: record updated
-          headers:
-            Cache-Control:
-              $ref: '#/components/headers/Cache-Control'
-            X-RateLimit-Limit:
-              $ref: '#/components/headers/X-RateLimit-Limit'
-            X-RateLimit-Remaining:
-              $ref: '#/components/headers/X-RateLimit-Remaining'
-            X-RateLimit-Reset:
-              $ref: '#/components/headers/X-RateLimit-Reset'
-        "401":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unauthorized
-        "403":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Forbidden
-      security:
-      - BearerAuth:
-        - write
-      summary: Update an existing origin-flag
-      tags:
-      - update
-      x-content-type: application/merge-patch+json
       x-accepts: application/json
   /boundaries/v1/region-name:
     get:
@@ -13115,11 +13226,36 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           value: 1
+        meta:
+          path: http://localhost:8087
+          per_page: 4000
+          total: 10000
+          last_page: 3
+          from: 1
+          links:
+          - active: "true"
+            label: "2"
+            url: http://localhost:8087
+          - active: "true"
+            label: "2"
+            url: http://localhost:8087
+          to: 4000
+          current_page: 2
+        links:
+          next: http://localhost:8087/api/quakedb/v1/events-group/?page=3
+          last: http://localhost:8087/api/quakedb/v1/events-group/?page=4
+          prev: http://localhost:8087/api/quakedb/v1/events-group/?page=1
+          first: http://localhost:8087/api/quakedb/v1/events-group/?page=2
       properties:
+        links:
+          $ref: '#/components/schemas/LinksDefinition'
+        meta:
+          $ref: '#/components/schemas/MetaDefinition'
         data:
           items:
             $ref: '#/components/schemas/ObjectOriginFlag'
           type: array
+      type: object
     addOriginFlag_request_data:
       properties:
         originid:
@@ -13150,14 +13286,6 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/ObjectOriginFlagPostOutput'
-    updateOriginFlag_request_data:
-      properties:
-        origin-flag:
-          $ref: '#/components/schemas/ObjectOriginFlag'
-    updateOriginFlag_request:
-      properties:
-        data:
-          $ref: '#/components/schemas/updateOriginFlag_request_data'
     getRegionName_200_response_data:
       example:
         region_name: 8 km NW Ladispoli (RM)

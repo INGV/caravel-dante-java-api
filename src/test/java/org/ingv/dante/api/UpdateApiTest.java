@@ -14,7 +14,7 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
-import org.ingv.dante.model.AddOriginFlag201Response;
+import org.ingv.dante.model.ObjectOriginFlag;
 import org.ingv.dante.model.ObjectTableLocalspace;
 import org.ingv.dante.model.ObjectTableProvenance;
 import org.ingv.dante.model.ObjectTableTypeEvent;
@@ -24,7 +24,6 @@ import org.ingv.dante.model.Problem;
 import org.ingv.dante.model.UpdateEvent200Response;
 import org.ingv.dante.model.UpdateEventRequest;
 import org.ingv.dante.model.UpdateEventsGroupRequest;
-import org.ingv.dante.model.UpdateOriginFlagRequest;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -88,15 +87,15 @@ public class UpdateApiTest {
     /**
      * Update an existing origin-flag
      *
-     * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
+     * Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
     public void updateOriginFlagTest() throws ApiException {
         Long id = null;
-        UpdateOriginFlagRequest updateOriginFlagRequest = null;
-        AddOriginFlag201Response response = api.updateOriginFlag(id, updateOriginFlagRequest);
+        ObjectOriginFlag objectOriginFlag = null;
+        ObjectTableLocalspace response = api.updateOriginFlag(id, objectOriginFlag);
         // TODO: test validations
     }
 

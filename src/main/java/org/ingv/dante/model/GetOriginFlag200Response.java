@@ -25,6 +25,8 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.ingv.dante.model.LinksDefinition;
+import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.ObjectOriginFlag;
 
 import com.google.gson.Gson;
@@ -50,14 +52,68 @@ import org.ingv.dante.JSON;
 /**
  * GetOriginFlag200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-15T19:11:50.388149Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-16T14:18:19.269194Z[Etc/UTC]")
 public class GetOriginFlag200Response {
+  public static final String SERIALIZED_NAME_LINKS = "links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  private LinksDefinition links;
+
+  public static final String SERIALIZED_NAME_META = "meta";
+  @SerializedName(SERIALIZED_NAME_META)
+  private MetaDefinition meta;
+
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
   private List<ObjectOriginFlag> data = null;
 
   public GetOriginFlag200Response() {
   }
+
+  public GetOriginFlag200Response links(LinksDefinition links) {
+    
+    this.links = links;
+    return this;
+  }
+
+   /**
+   * Get links
+   * @return links
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public LinksDefinition getLinks() {
+    return links;
+  }
+
+
+  public void setLinks(LinksDefinition links) {
+    this.links = links;
+  }
+
+
+  public GetOriginFlag200Response meta(MetaDefinition meta) {
+    
+    this.meta = meta;
+    return this;
+  }
+
+   /**
+   * Get meta
+   * @return meta
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public MetaDefinition getMeta() {
+    return meta;
+  }
+
+
+  public void setMeta(MetaDefinition meta) {
+    this.meta = meta;
+  }
+
 
   public GetOriginFlag200Response data(List<ObjectOriginFlag> data) {
     
@@ -135,19 +191,23 @@ public class GetOriginFlag200Response {
       return false;
     }
     GetOriginFlag200Response getOriginFlag200Response = (GetOriginFlag200Response) o;
-    return Objects.equals(this.data, getOriginFlag200Response.data)&&
+    return Objects.equals(this.links, getOriginFlag200Response.links) &&
+        Objects.equals(this.meta, getOriginFlag200Response.meta) &&
+        Objects.equals(this.data, getOriginFlag200Response.data)&&
         Objects.equals(this.additionalProperties, getOriginFlag200Response.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, additionalProperties);
+    return Objects.hash(links, meta, data, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GetOriginFlag200Response {\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    meta: ").append(toIndentedString(meta)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
@@ -172,6 +232,8 @@ public class GetOriginFlag200Response {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("links");
+    openapiFields.add("meta");
     openapiFields.add("data");
 
     // a set of required properties/fields (JSON key names)
@@ -191,6 +253,14 @@ public class GetOriginFlag200Response {
         } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in GetOriginFlag200Response is not found in the empty JSON string", GetOriginFlag200Response.openapiRequiredFields.toString()));
         }
+      }
+      // validate the optional field `links`
+      if (jsonObj.get("links") != null && !jsonObj.get("links").isJsonNull()) {
+        LinksDefinition.validateJsonObject(jsonObj.getAsJsonObject("links"));
+      }
+      // validate the optional field `meta`
+      if (jsonObj.get("meta") != null && !jsonObj.get("meta").isJsonNull()) {
+        MetaDefinition.validateJsonObject(jsonObj.getAsJsonObject("meta"));
       }
       JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
       if (jsonArraydata != null) {

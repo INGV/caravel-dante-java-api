@@ -23,6 +23,8 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.ingv.dante.model.LinksDefinition;
+import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.ObjectOriginFlag;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -40,6 +42,22 @@ public class GetOriginFlag200ResponseTest {
     @Test
     public void testGetOriginFlag200Response() {
         // TODO: test GetOriginFlag200Response
+    }
+
+    /**
+     * Test the property 'links'
+     */
+    @Test
+    public void linksTest() {
+        // TODO: test links
+    }
+
+    /**
+     * Test the property 'meta'
+     */
+    @Test
+    public void metaTest() {
+        // TODO: test meta
     }
 
     /**

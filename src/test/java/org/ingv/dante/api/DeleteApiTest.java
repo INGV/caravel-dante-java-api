@@ -46,6 +46,20 @@ public class DeleteApiTest {
     }
 
     /**
+     * Delete an existing origin-flag
+     *
+     * Delete an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void deleteOriginFlagTest() throws ApiException {
+        Long id = null;
+        api.deleteOriginFlag(id);
+        // TODO: test validations
+    }
+
+    /**
      * Delete an existing provenance
      *
      * Delete an existing provenance.&lt;/br&gt; To use this API you must be authenticated.

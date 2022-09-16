@@ -232,7 +232,10 @@ public class GetApiTest {
     @Test
     public void getOriginFlagTest() throws ApiException {
         Long originid = null;
-        GetOriginFlag200Response response = api.getOriginFlag(originid);
+        String name = null;
+        Long value = null;
+        String note = null;
+        GetOriginFlag200Response response = api.getOriginFlag(originid, name, value, note);
         // TODO: test validations
     }
 
