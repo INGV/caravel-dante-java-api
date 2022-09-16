@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 2.51.0
-  - Build date: 2022-09-15T19:13:24.841549Z[Etc/UTC]
+- API version: 2.52.0
+  - Build date: 2022-09-16T15:18:27.492624Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>2.51.0</version>
+  <version>2.52.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.51.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.52.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-2.51.0.jar`
+* `target/java-openapi-generator-cli-dante-2.52.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -140,6 +140,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DeleteApi* | [**deleteLocalspace**](docs/DeleteApi.md#deleteLocalspace) | **DELETE** /quakedb/table/v1/localspace/{id} | Delete an existing localspace
+*DeleteApi* | [**deleteOriginFlag**](docs/DeleteApi.md#deleteOriginFlag) | **DELETE** /quakedb/table/v1/origin-flag/{id} | Delete an existing origin-flag
 *DeleteApi* | [**deleteProvenance**](docs/DeleteApi.md#deleteProvenance) | **DELETE** /quakedb/table/v1/provenance/{id} | Delete an existing provenance
 *DeleteApi* | [**deleteTypeEvent**](docs/DeleteApi.md#deleteTypeEvent) | **DELETE** /quakedb/table/v1/type-event/{id} | Delete an existing type_event
 *DeleteApi* | [**deleteTypeMagnitude**](docs/DeleteApi.md#deleteTypeMagnitude) | **DELETE** /quakedb/table/v1/type-magnitude/{id} | Delete an existing type_magnitude
@@ -179,7 +180,7 @@ Class | Method | HTTP request | Description
 *UpdateApi* | [**updateEvent**](docs/UpdateApi.md#updateEvent) | **PATCH** /quakedb/v1/event/{id} | Update an existing event
 *UpdateApi* | [**updateEventsGroup**](docs/UpdateApi.md#updateEventsGroup) | **PATCH** /quakedb/v1/eventsgroup | Update/Create an events-group
 *UpdateApi* | [**updateLocalspace**](docs/UpdateApi.md#updateLocalspace) | **PATCH** /quakedb/table/v1/localspace/{id} | Update an existing localspace
-*UpdateApi* | [**updateOriginFlag**](docs/UpdateApi.md#updateOriginFlag) | **PATCH** /quakedb/v1/origin-flag/{id} | Update an existing origin-flag
+*UpdateApi* | [**updateOriginFlag**](docs/UpdateApi.md#updateOriginFlag) | **PATCH** /quakedb/table/v1/origin-flag/{id} | Update an existing origin-flag
 *UpdateApi* | [**updateProvenance**](docs/UpdateApi.md#updateProvenance) | **PATCH** /quakedb/table/v1/provenance/{id} | Update an existing provenance
 *UpdateApi* | [**updateTypeEvent**](docs/UpdateApi.md#updateTypeEvent) | **PATCH** /quakedb/table/v1/type-event/{id} | Update an existing type_event
 *UpdateApi* | [**updateTypeMagnitude**](docs/UpdateApi.md#updateTypeMagnitude) | **PATCH** /quakedb/table/v1/type-magnitude/{id} | Update an existing type_magnitude
@@ -324,8 +325,6 @@ Class | Method | HTTP request | Description
  - [UpdateEventRequestDataEvent](docs/UpdateEventRequestDataEvent.md)
  - [UpdateEventsGroupRequest](docs/UpdateEventsGroupRequest.md)
  - [UpdateEventsGroupRequestData](docs/UpdateEventsGroupRequestData.md)
- - [UpdateOriginFlagRequest](docs/UpdateOriginFlagRequest.md)
- - [UpdateOriginFlagRequestData](docs/UpdateOriginFlagRequestData.md)
 
 
 ## Documentation for Authorization

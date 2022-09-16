@@ -146,8 +146,6 @@ docs/UpdateEventRequestData.md
 docs/UpdateEventRequestDataEvent.md
 docs/UpdateEventsGroupRequest.md
 docs/UpdateEventsGroupRequestData.md
-docs/UpdateOriginFlagRequest.md
-docs/UpdateOriginFlagRequestData.md
 docs/UserApi.md
 git_push.sh
 gradle.properties
@@ -317,8 +315,6 @@ src/main/java/org/ingv/dante/model/UpdateEventRequestData.java
 src/main/java/org/ingv/dante/model/UpdateEventRequestDataEvent.java
 src/main/java/org/ingv/dante/model/UpdateEventsGroupRequest.java
 src/main/java/org/ingv/dante/model/UpdateEventsGroupRequestData.java
-src/main/java/org/ingv/dante/model/UpdateOriginFlagRequest.java
-src/main/java/org/ingv/dante/model/UpdateOriginFlagRequestData.java
 src/test/java/org/ingv/dante/api/DeleteApiTest.java
 src/test/java/org/ingv/dante/api/EarthwormApiApiTest.java
 src/test/java/org/ingv/dante/api/GetApiTest.java
@@ -460,5 +456,3 @@ src/test/java/org/ingv/dante/model/UpdateEventRequestDataTest.java
 src/test/java/org/ingv/dante/model/UpdateEventRequestTest.java
 src/test/java/org/ingv/dante/model/UpdateEventsGroupRequestDataTest.java
 src/test/java/org/ingv/dante/model/UpdateEventsGroupRequestTest.java
-src/test/java/org/ingv/dante/model/UpdateOriginFlagRequestDataTest.java
-src/test/java/org/ingv/dante/model/UpdateOriginFlagRequestTest.java

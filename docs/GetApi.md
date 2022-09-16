@@ -657,7 +657,7 @@ No authorization required
 
 <a name="getOriginFlag"></a>
 # **getOriginFlag**
-> GetOriginFlag200Response getOriginFlag(originid)
+> GetOriginFlag200Response getOriginFlag(originid, name, value, note)
 
 This API returns the all the flags assosiated to the originid.
 
@@ -679,8 +679,11 @@ public class Example {
 
     GetApi apiInstance = new GetApi(defaultClient);
     Long originid = 56L; // Long | Select by origin id.
+    String name = "name_example"; // String | Flag name
+    Long value = 56L; // Long | Flag value
+    String note = "note_example"; // String | Flag note
     try {
-      GetOriginFlag200Response result = apiInstance.getOriginFlag(originid);
+      GetOriginFlag200Response result = apiInstance.getOriginFlag(originid, name, value, note);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOriginFlag");
@@ -698,6 +701,9 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **originid** | **Long**| Select by origin id. | [optional] |
+| **name** | **String**| Flag name | [optional] |
+| **value** | **Long**| Flag value | [optional] |
+| **note** | **String**| Flag note | [optional] |
 
 ### Return type
 

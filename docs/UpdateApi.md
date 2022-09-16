@@ -7,7 +7,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 | [**updateEvent**](UpdateApi.md#updateEvent) | **PATCH** /quakedb/v1/event/{id} | Update an existing event |
 | [**updateEventsGroup**](UpdateApi.md#updateEventsGroup) | **PATCH** /quakedb/v1/eventsgroup | Update/Create an events-group |
 | [**updateLocalspace**](UpdateApi.md#updateLocalspace) | **PATCH** /quakedb/table/v1/localspace/{id} | Update an existing localspace |
-| [**updateOriginFlag**](UpdateApi.md#updateOriginFlag) | **PATCH** /quakedb/v1/origin-flag/{id} | Update an existing origin-flag |
+| [**updateOriginFlag**](UpdateApi.md#updateOriginFlag) | **PATCH** /quakedb/table/v1/origin-flag/{id} | Update an existing origin-flag |
 | [**updateProvenance**](UpdateApi.md#updateProvenance) | **PATCH** /quakedb/table/v1/provenance/{id} | Update an existing provenance |
 | [**updateTypeEvent**](UpdateApi.md#updateTypeEvent) | **PATCH** /quakedb/table/v1/type-event/{id} | Update an existing type_event |
 | [**updateTypeMagnitude**](UpdateApi.md#updateTypeMagnitude) | **PATCH** /quakedb/table/v1/type-magnitude/{id} | Update an existing type_magnitude |
@@ -245,11 +245,11 @@ public class Example {
 
 <a name="updateOriginFlag"></a>
 # **updateOriginFlag**
-> AddOriginFlag201Response updateOriginFlag(id, updateOriginFlagRequest)
+> ObjectTableLocalspace updateOriginFlag(id, objectOriginFlag)
 
 Update an existing origin-flag
 
-Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated and \&quot;origin.localspace_name\&quot; owner.
+Update an existing origin-flag.&lt;/br&gt; To use this API you must be authenticated.
 
 ### Example
 ```java
@@ -272,9 +272,9 @@ public class Example {
 
     UpdateApi apiInstance = new UpdateApi(defaultClient);
     Long id = 56L; // Long | INGV origin-flag id that need to be updated.
-    UpdateOriginFlagRequest updateOriginFlagRequest = new UpdateOriginFlagRequest(); // UpdateOriginFlagRequest | JSON to update
+    ObjectOriginFlag objectOriginFlag = new ObjectOriginFlag(); // ObjectOriginFlag | JSON to update
     try {
-      AddOriginFlag201Response result = apiInstance.updateOriginFlag(id, updateOriginFlagRequest);
+      ObjectTableLocalspace result = apiInstance.updateOriginFlag(id, objectOriginFlag);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UpdateApi#updateOriginFlag");
@@ -292,11 +292,11 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **Long**| INGV origin-flag id that need to be updated. | |
-| **updateOriginFlagRequest** | [**UpdateOriginFlagRequest**](UpdateOriginFlagRequest.md)| JSON to update | |
+| **objectOriginFlag** | [**ObjectOriginFlag**](ObjectOriginFlag.md)| JSON to update | |
 
 ### Return type
 
-[**AddOriginFlag201Response**](AddOriginFlag201Response.md)
+[**ObjectTableLocalspace**](ObjectTableLocalspace.md)
 
 ### Authorization
 
