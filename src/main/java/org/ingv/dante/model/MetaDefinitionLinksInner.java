@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * MetaDefinitionLinksInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-20T14:34:30.159845Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-20T14:56:28.039985Z[Etc/UTC]")
 public class MetaDefinitionLinksInner {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
