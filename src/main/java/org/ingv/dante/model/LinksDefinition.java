@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * LinksDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-20T17:21:02.308373Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-21T13:11:13.112893Z[Etc/UTC]")
 public class LinksDefinition {
   public static final String SERIALIZED_NAME_FIRST = "first";
   @SerializedName(SERIALIZED_NAME_FIRST)
