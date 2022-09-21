@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * GetTokenRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-20T17:20:15.691385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-21T13:10:26.951250Z[Etc/UTC]")
 public class GetTokenRequest {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
