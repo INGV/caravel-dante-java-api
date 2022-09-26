@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableTypeOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-26T09:11:22.768063Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-26T09:54:33.867025Z[Etc/UTC]")
 public class ObjectTableTypeOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
