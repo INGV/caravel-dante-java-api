@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: http://terremoti.ingv.it/webservices_and_software
   title: Dante Web Services
-  version: 2.54.0
+  version: 2.55.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -5188,7 +5188,6 @@ components:
           err_z: 9.301444243932576
           ot: 2016-06-22T16:52:06.26Z
           associatedStationCount: 7
-          flags: "DPC,twitter,shakemap4,FM"
           lon: 9.19289
           err_ot: 2.3021358869347655
           err_h: 7.061401241503109
@@ -5213,6 +5212,7 @@ components:
           region: Norcia
           lat: 45.492599
           associatedPhaseCount: 4
+        flags: "DPC,twitter,shakemap4,FM"
         preferred_origin_id: 6
         type_group: 5
         type_event: earthquake
@@ -5283,6 +5283,11 @@ components:
           nullable: true
           readOnly: true
           type: integer
+        flags:
+          description: Flags for origin | varchar(255)
+          example: "DPC,twitter,shakemap4,FM"
+          readOnly: true
+          type: string
         type_group:
           default: 0
           description: Group type. Used by clustering algorithm | tinyint(4)
@@ -5399,6 +5404,7 @@ components:
     ObjectEvent:
       example:
         preferred_focalmechanism_id: 5
+        flags: "DPC,twitter,shakemap4,FM"
         preferred_origin_id: 6
         type_group: 5
         type_event: earthquake
@@ -6689,6 +6695,11 @@ components:
         type_event:
           description: Name | varchar(255)
           example: earthquake
+          type: string
+        flags:
+          description: Flags for origin | varchar(255)
+          example: "DPC,twitter,shakemap4,FM"
+          readOnly: true
           type: string
         event_group_id:
           default: 0
@@ -8958,7 +8969,6 @@ components:
         err_z: 9.301444243932576
         ot: 2016-06-22T16:52:06.26Z
         associatedStationCount: 7
-        flags: "DPC,twitter,shakemap4,FM"
         lon: 9.19289
         err_ot: 2.3021358869347655
         err_h: 7.061401241503109
@@ -9082,11 +9092,6 @@ components:
         region:
           description: Event location remark region | varchar(255)
           example: Norcia
-          type: string
-        flags:
-          description: Flags for origin | varchar(255)
-          example: "DPC,twitter,shakemap4,FM"
-          readOnly: true
           type: string
         modified:
           description: Last Review | timestamp
@@ -9861,6 +9866,11 @@ components:
       nullable: true
       readOnly: true
       type: integer
+    flags:
+      description: Flags for origin | varchar(255)
+      example: "DPC,twitter,shakemap4,FM"
+      readOnly: true
+      type: string
     event__type_group:
       default: 0
       description: Group type. Used by clustering algorithm | tinyint(4)
@@ -9948,11 +9958,6 @@ components:
       description: Root mean square Weighted | double
       format: double
       type: number
-    flags:
-      description: Flags for origin | varchar(255)
-      example: "DPC,twitter,shakemap4,FM"
-      readOnly: true
-      type: string
     origin_flag__name:
       description: Flag name | varchar(255)
       example: DPC
@@ -10370,7 +10375,6 @@ components:
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
             associatedStationCount: 7
-            flags: "DPC,twitter,shakemap4,FM"
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
@@ -10395,6 +10399,7 @@ components:
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 4
+          flags: "DPC,twitter,shakemap4,FM"
           preferred_origin_id: 6
           type_group: 5
           type_event: earthquake
@@ -10430,7 +10435,6 @@ components:
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
             associatedStationCount: 7
-            flags: "DPC,twitter,shakemap4,FM"
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
@@ -10455,6 +10459,7 @@ components:
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 4
+          flags: "DPC,twitter,shakemap4,FM"
           preferred_origin_id: 6
           type_group: 5
           type_event: earthquake
@@ -10588,6 +10593,7 @@ components:
       example:
         event:
           preferred_focalmechanism_id: 5
+          flags: "DPC,twitter,shakemap4,FM"
           preferred_origin_id: 6
           type_group: 5
           type_event: earthquake
@@ -11858,6 +11864,7 @@ components:
         data:
           event:
             preferred_focalmechanism_id: 5
+            flags: "DPC,twitter,shakemap4,FM"
             preferred_origin_id: 6
             type_group: 5
             type_event: earthquake
