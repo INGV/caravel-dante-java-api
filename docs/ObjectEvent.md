@@ -12,6 +12,7 @@
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
 |**idLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
 |**typeEvent** | **String** | Name | varchar(255) |  |
+|**flags** | **String** | Flags for origin | varchar(255) |  [optional] [readonly] |
 |**eventGroupId** | **Long** | Link event group | bigint(20) |  [optional] [readonly] |
 |**preferredOriginId** | **Long** | Link: preferred origin. It can be NULL. | bigint(20) |  [optional] [readonly] |
 |**preferredMagnitudeId** | **Long** | Link: preferred magnitude. It can be NULL. | bigint(20) |  [optional] [readonly] |
