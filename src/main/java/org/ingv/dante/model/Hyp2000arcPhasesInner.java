@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcPhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-03T09:25:32.351123Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-03T09:55:32.386196Z[Etc/UTC]")
 public class Hyp2000arcPhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)

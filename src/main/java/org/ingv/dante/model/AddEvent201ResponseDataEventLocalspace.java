@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEvent201ResponseDataEventLocalspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-03T09:25:32.351123Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-03T09:55:32.386196Z[Etc/UTC]")
 public class AddEvent201ResponseDataEventLocalspace {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
