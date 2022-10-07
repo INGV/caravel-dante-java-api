@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.59.0-dev
-  - Build date: 2022-10-07T07:04:53.369065Z[Etc/UTC]
+  - Build date: 2022-10-07T15:28:49.169244Z[Etc/UTC]
 
   
 
@@ -150,6 +150,7 @@ Class | Method | HTTP request | Description
 *EarthwormApiApi* | [**addHEwMagnitude**](docs/EarthwormApiApi.md#addHEwMagnitude) | **POST** /quakedb/ew/v1/magnitude | Insert a new magnitude message to the DB using ew2openapi module
 *EarthwormApiApi* | [**addHEwPickScnl**](docs/EarthwormApiApi.md#addHEwPickScnl) | **POST** /quakedb/ew/v1/pick-scnl | Insert a new pick-scnl message to the DB using ew2openapi module
 *EarthwormApiApi* | [**addHEwStrongmotionii**](docs/EarthwormApiApi.md#addHEwStrongmotionii) | **POST** /quakedb/ew/v1/strongmotionii | Insert a new strongmotionii message to the DB using ew2openapi module
+*GetApi* | [**getCatalog**](docs/GetApi.md#getCatalog) | **GET** /quakedb/v1/catalog | This API returns the catalogs.
 *GetApi* | [**getEvent**](docs/GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events.
 *GetApi* | [**getEvents**](docs/GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance.
 *GetApi* | [**getEventsGroup**](docs/GetApi.md#getEventsGroup) | **GET** /quakedb/v1/events-group | This API returns the preferred origin and the preferred magnitude from all clusterd events.
@@ -232,6 +233,7 @@ Class | Method | HTTP request | Description
  - [AddStrongmotion201Response](docs/AddStrongmotion201Response.md)
  - [AddStrongmotionRequest](docs/AddStrongmotionRequest.md)
  - [AddStrongmotionRequestData](docs/AddStrongmotionRequestData.md)
+ - [GetCatalog200Response](docs/GetCatalog200Response.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)
  - [GetEvent200ResponseData](docs/GetEvent200ResponseData.md)
  - [GetEventsGroup200Response](docs/GetEventsGroup200Response.md)
@@ -267,6 +269,7 @@ Class | Method | HTTP request | Description
  - [MetaDefinition](docs/MetaDefinition.md)
  - [MetaDefinitionLinksInner](docs/MetaDefinitionLinksInner.md)
  - [ObjectArrival](docs/ObjectArrival.md)
+ - [ObjectCatalog](docs/ObjectCatalog.md)
  - [ObjectEvent](docs/ObjectEvent.md)
  - [ObjectFocalmechanism](docs/ObjectFocalmechanism.md)
  - [ObjectFocalmechanismPostOutput](docs/ObjectFocalmechanismPostOutput.md)

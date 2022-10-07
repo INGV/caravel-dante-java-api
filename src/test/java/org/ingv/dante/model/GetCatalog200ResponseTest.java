@@ -11,29 +11,61 @@
  */
 
 
-package org.ingv.dante;
+package org.ingv.dante.model;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-07T15:28:49.169244Z[Etc/UTC]")
-public class Configuration {
-    private static ApiClient defaultApiClient = new ApiClient();
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.LinksDefinition;
+import org.ingv.dante.model.MetaDefinition;
+import org.ingv.dante.model.ObjectCatalog;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
+
+/**
+ * Model tests for GetCatalog200Response
+ */
+public class GetCatalog200ResponseTest {
+    private final GetCatalog200Response model = new GetCatalog200Response();
 
     /**
-     * Get the default API client, which would be used when creating API
-     * instances without providing an API client.
-     *
-     * @return Default API client
+     * Model tests for GetCatalog200Response
      */
-    public static ApiClient getDefaultApiClient() {
-        return defaultApiClient;
+    @Test
+    public void testGetCatalog200Response() {
+        // TODO: test GetCatalog200Response
     }
 
     /**
-     * Set the default API client, which would be used when creating API
-     * instances without providing an API client.
-     *
-     * @param apiClient API client
+     * Test the property 'links'
      */
-    public static void setDefaultApiClient(ApiClient apiClient) {
-        defaultApiClient = apiClient;
+    @Test
+    public void linksTest() {
+        // TODO: test links
     }
+
+    /**
+     * Test the property 'meta'
+     */
+    @Test
+    public void metaTest() {
+        // TODO: test meta
+    }
+
+    /**
+     * Test the property 'data'
+     */
+    @Test
+    public void dataTest() {
+        // TODO: test data
+    }
+
 }

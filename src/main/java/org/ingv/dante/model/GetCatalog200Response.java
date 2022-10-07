@@ -23,7 +23,11 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.AddOrigin201ResponseData;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.LinksDefinition;
+import org.ingv.dante.model.MetaDefinition;
+import org.ingv.dante.model.ObjectCatalog;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -46,20 +50,82 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * AddOrigin201Response
+ * GetCatalog200Response
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-07T15:28:49.169244Z[Etc/UTC]")
-public class AddOrigin201Response {
+public class GetCatalog200Response {
+  public static final String SERIALIZED_NAME_LINKS = "links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  private LinksDefinition links;
+
+  public static final String SERIALIZED_NAME_META = "meta";
+  @SerializedName(SERIALIZED_NAME_META)
+  private MetaDefinition meta;
+
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private AddOrigin201ResponseData data;
+  private List<ObjectCatalog> data = null;
 
-  public AddOrigin201Response() {
+  public GetCatalog200Response() {
   }
 
-  public AddOrigin201Response data(AddOrigin201ResponseData data) {
+  public GetCatalog200Response links(LinksDefinition links) {
+    
+    this.links = links;
+    return this;
+  }
+
+   /**
+   * Get links
+   * @return links
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public LinksDefinition getLinks() {
+    return links;
+  }
+
+
+  public void setLinks(LinksDefinition links) {
+    this.links = links;
+  }
+
+
+  public GetCatalog200Response meta(MetaDefinition meta) {
+    
+    this.meta = meta;
+    return this;
+  }
+
+   /**
+   * Get meta
+   * @return meta
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public MetaDefinition getMeta() {
+    return meta;
+  }
+
+
+  public void setMeta(MetaDefinition meta) {
+    this.meta = meta;
+  }
+
+
+  public GetCatalog200Response data(List<ObjectCatalog> data) {
     
     this.data = data;
+    return this;
+  }
+
+  public GetCatalog200Response addDataItem(ObjectCatalog dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<>();
+    }
+    this.data.add(dataItem);
     return this;
   }
 
@@ -70,12 +136,12 @@ public class AddOrigin201Response {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public AddOrigin201ResponseData getData() {
+  public List<ObjectCatalog> getData() {
     return data;
   }
 
 
-  public void setData(AddOrigin201ResponseData data) {
+  public void setData(List<ObjectCatalog> data) {
     this.data = data;
   }
 
@@ -90,7 +156,7 @@ public class AddOrigin201Response {
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
    */
-  public AddOrigin201Response putAdditionalProperty(String key, Object value) {
+  public GetCatalog200Response putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -124,20 +190,24 @@ public class AddOrigin201Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AddOrigin201Response addOrigin201Response = (AddOrigin201Response) o;
-    return Objects.equals(this.data, addOrigin201Response.data)&&
-        Objects.equals(this.additionalProperties, addOrigin201Response.additionalProperties);
+    GetCatalog200Response getCatalog200Response = (GetCatalog200Response) o;
+    return Objects.equals(this.links, getCatalog200Response.links) &&
+        Objects.equals(this.meta, getCatalog200Response.meta) &&
+        Objects.equals(this.data, getCatalog200Response.data)&&
+        Objects.equals(this.additionalProperties, getCatalog200Response.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, additionalProperties);
+    return Objects.hash(links, meta, data, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AddOrigin201Response {\n");
+    sb.append("class GetCatalog200Response {\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    meta: ").append(toIndentedString(meta)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
@@ -162,6 +232,8 @@ public class AddOrigin201Response {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("links");
+    openapiFields.add("meta");
     openapiFields.add("data");
 
     // a set of required properties/fields (JSON key names)
@@ -172,19 +244,35 @@ public class AddOrigin201Response {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddOrigin201Response
+  * @throws IOException if the JSON Object is invalid with respect to GetCatalog200Response
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (AddOrigin201Response.openapiRequiredFields.isEmpty()) {
+        if (GetCatalog200Response.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AddOrigin201Response is not found in the empty JSON string", AddOrigin201Response.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in GetCatalog200Response is not found in the empty JSON string", GetCatalog200Response.openapiRequiredFields.toString()));
         }
       }
-      // validate the optional field `data`
-      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        AddOrigin201ResponseData.validateJsonObject(jsonObj.getAsJsonObject("data"));
+      // validate the optional field `links`
+      if (jsonObj.get("links") != null && !jsonObj.get("links").isJsonNull()) {
+        LinksDefinition.validateJsonObject(jsonObj.getAsJsonObject("links"));
+      }
+      // validate the optional field `meta`
+      if (jsonObj.get("meta") != null && !jsonObj.get("meta").isJsonNull()) {
+        MetaDefinition.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      }
+      JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+      if (jsonArraydata != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("data").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
+        }
+
+        // validate the optional field `data` (array)
+        for (int i = 0; i < jsonArraydata.size(); i++) {
+          ObjectCatalog.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+        };
       }
   }
 
@@ -192,16 +280,16 @@ public class AddOrigin201Response {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!AddOrigin201Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'AddOrigin201Response' and its subtypes
+       if (!GetCatalog200Response.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'GetCatalog200Response' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<AddOrigin201Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(AddOrigin201Response.class));
+       final TypeAdapter<GetCatalog200Response> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(GetCatalog200Response.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<AddOrigin201Response>() {
+       return (TypeAdapter<T>) new TypeAdapter<GetCatalog200Response>() {
            @Override
-           public void write(JsonWriter out, AddOrigin201Response value) throws IOException {
+           public void write(JsonWriter out, GetCatalog200Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additonal properties
@@ -224,11 +312,11 @@ public class AddOrigin201Response {
            }
 
            @Override
-           public AddOrigin201Response read(JsonReader in) throws IOException {
+           public GetCatalog200Response read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             AddOrigin201Response instance = thisAdapter.fromJsonTree(jsonObj);
+             GetCatalog200Response instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -253,18 +341,18 @@ public class AddOrigin201Response {
   }
 
  /**
-  * Create an instance of AddOrigin201Response given an JSON string
+  * Create an instance of GetCatalog200Response given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of AddOrigin201Response
-  * @throws IOException if the JSON string is invalid with respect to AddOrigin201Response
+  * @return An instance of GetCatalog200Response
+  * @throws IOException if the JSON string is invalid with respect to GetCatalog200Response
   */
-  public static AddOrigin201Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, AddOrigin201Response.class);
+  public static GetCatalog200Response fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, GetCatalog200Response.class);
   }
 
  /**
-  * Convert an instance of AddOrigin201Response to an JSON string
+  * Convert an instance of GetCatalog200Response to an JSON string
   *
   * @return JSON string
   */

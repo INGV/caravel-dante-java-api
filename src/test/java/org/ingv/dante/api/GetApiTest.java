@@ -14,6 +14,7 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
+import org.ingv.dante.model.GetCatalog200Response;
 import org.ingv.dante.model.GetEvent200Response;
 import org.ingv.dante.model.GetEventsGroup200Response;
 import org.ingv.dante.model.GetLocalspace200Response;
@@ -43,6 +44,25 @@ import java.util.Map;
 public class GetApiTest {
 
     private final GetApi api = new GetApi();
+
+    /**
+     * This API returns the catalogs.
+     *
+     * This API returns the catalogs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCatalogTest() throws ApiException {
+        Long eventid = null;
+        Long originid = null;
+        Long magnitudeid = null;
+        String name = null;
+        String doi = null;
+        String wherenamelike = null;
+        GetCatalog200Response response = api.getCatalog(eventid, originid, magnitudeid, name, doi, wherenamelike);
+        // TODO: test validations
+    }
 
     /**
      * This API returns the preferred origin and the preferred magnitude from all clusterd events.

@@ -46,91 +46,198 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * ObjectPickEw
+ * ObjectCatalog
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-07T15:28:49.169244Z[Etc/UTC]")
-public class ObjectPickEw {
-  public static final String SERIALIZED_NAME_PAMP1 = "pamp1";
-  @SerializedName(SERIALIZED_NAME_PAMP1)
-  private Float pamp1;
+public class ObjectCatalog {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private Long id;
 
-  public static final String SERIALIZED_NAME_PAMP2 = "pamp2";
-  @SerializedName(SERIALIZED_NAME_PAMP2)
-  private Float pamp2;
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
-  public static final String SERIALIZED_NAME_PAMP3 = "pamp3";
-  @SerializedName(SERIALIZED_NAME_PAMP3)
-  private Float pamp3;
+  public static final String SERIALIZED_NAME_DOI = "doi";
+  @SerializedName(SERIALIZED_NAME_DOI)
+  private String doi;
 
-  public ObjectPickEw() {
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  private String description;
+
+  public static final String SERIALIZED_NAME_EVENTID = "eventid";
+  @SerializedName(SERIALIZED_NAME_EVENTID)
+  private Long eventid;
+
+  public static final String SERIALIZED_NAME_ORIGINID = "originid";
+  @SerializedName(SERIALIZED_NAME_ORIGINID)
+  private Long originid;
+
+  public static final String SERIALIZED_NAME_MAGNITUDEID = "magnitudeid";
+  @SerializedName(SERIALIZED_NAME_MAGNITUDEID)
+  private Long magnitudeid;
+
+  public ObjectCatalog() {
   }
 
-  public ObjectPickEw pamp1(Float pamp1) {
+  
+  public ObjectCatalog(
+     Long id
+  ) {
+    this();
+    this.id = id;
+  }
+
+   /**
+   * Unique incremental id | bigint(20)
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
+  public Long getId() {
+    return id;
+  }
+
+
+
+
+  public ObjectCatalog name(String name) {
     
-    this.pamp1 = pamp1;
+    this.name = name;
     return this;
   }
 
    /**
-   * peak P-wave half amplitude | double(22)
-   * @return pamp1
+   * Catalog name | varchar(255)
+   * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "283", required = true, value = "peak P-wave half amplitude | double(22)")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "BSI", required = true, value = "Catalog name | varchar(255)")
 
-  public Float getPamp1() {
-    return pamp1;
+  public String getName() {
+    return name;
   }
 
 
-  public void setPamp1(Float pamp1) {
-    this.pamp1 = pamp1;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
-  public ObjectPickEw pamp2(Float pamp2) {
+  public ObjectCatalog doi(String doi) {
     
-    this.pamp2 = pamp2;
+    this.doi = doi;
     return this;
   }
 
    /**
-   * peak P-wave half amplitude | double(22)
-   * @return pamp2
+   * DOI | varchar(255)
+   * @return doi
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "283", value = "peak P-wave half amplitude | double(22)")
+  @ApiModelProperty(example = "10.13127/TDMT", value = "DOI | varchar(255)")
 
-  public Float getPamp2() {
-    return pamp2;
+  public String getDoi() {
+    return doi;
   }
 
 
-  public void setPamp2(Float pamp2) {
-    this.pamp2 = pamp2;
+  public void setDoi(String doi) {
+    this.doi = doi;
   }
 
 
-  public ObjectPickEw pamp3(Float pamp3) {
+  public ObjectCatalog description(String description) {
     
-    this.pamp3 = pamp3;
+    this.description = description;
     return this;
   }
 
    /**
-   * peak P-wave half amplitude | double(22)
-   * @return pamp3
+   * Additional information | char(255)
+   * @return description
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "283", value = "peak P-wave half amplitude | double(22)")
+  @ApiModelProperty(example = "Auto added", value = "Additional information | char(255)")
 
-  public Float getPamp3() {
-    return pamp3;
+  public String getDescription() {
+    return description;
   }
 
 
-  public void setPamp3(Float pamp3) {
-    this.pamp3 = pamp3;
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+
+  public ObjectCatalog eventid(Long eventid) {
+    
+    this.eventid = eventid;
+    return this;
+  }
+
+   /**
+   * Unique incremental id | bigint(20)
+   * @return eventid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
+  public Long getEventid() {
+    return eventid;
+  }
+
+
+  public void setEventid(Long eventid) {
+    this.eventid = eventid;
+  }
+
+
+  public ObjectCatalog originid(Long originid) {
+    
+    this.originid = originid;
+    return this;
+  }
+
+   /**
+   * Unique incremental id | bigint(20)
+   * @return originid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
+  public Long getOriginid() {
+    return originid;
+  }
+
+
+  public void setOriginid(Long originid) {
+    this.originid = originid;
+  }
+
+
+  public ObjectCatalog magnitudeid(Long magnitudeid) {
+    
+    this.magnitudeid = magnitudeid;
+    return this;
+  }
+
+   /**
+   * Unique incremental id | bigint(20)
+   * @return magnitudeid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
+  public Long getMagnitudeid() {
+    return magnitudeid;
+  }
+
+
+  public void setMagnitudeid(Long magnitudeid) {
+    this.magnitudeid = magnitudeid;
   }
 
   /**
@@ -144,7 +251,7 @@ public class ObjectPickEw {
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
    */
-  public ObjectPickEw putAdditionalProperty(String key, Object value) {
+  public ObjectCatalog putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -178,11 +285,15 @@ public class ObjectPickEw {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectPickEw objectPickEw = (ObjectPickEw) o;
-    return Objects.equals(this.pamp1, objectPickEw.pamp1) &&
-        Objects.equals(this.pamp2, objectPickEw.pamp2) &&
-        Objects.equals(this.pamp3, objectPickEw.pamp3)&&
-        Objects.equals(this.additionalProperties, objectPickEw.additionalProperties);
+    ObjectCatalog objectCatalog = (ObjectCatalog) o;
+    return Objects.equals(this.id, objectCatalog.id) &&
+        Objects.equals(this.name, objectCatalog.name) &&
+        Objects.equals(this.doi, objectCatalog.doi) &&
+        Objects.equals(this.description, objectCatalog.description) &&
+        Objects.equals(this.eventid, objectCatalog.eventid) &&
+        Objects.equals(this.originid, objectCatalog.originid) &&
+        Objects.equals(this.magnitudeid, objectCatalog.magnitudeid)&&
+        Objects.equals(this.additionalProperties, objectCatalog.additionalProperties);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -191,7 +302,7 @@ public class ObjectPickEw {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pamp1, pamp2, pamp3, additionalProperties);
+    return Objects.hash(id, name, doi, description, eventid, originid, magnitudeid, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -204,10 +315,14 @@ public class ObjectPickEw {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectPickEw {\n");
-    sb.append("    pamp1: ").append(toIndentedString(pamp1)).append("\n");
-    sb.append("    pamp2: ").append(toIndentedString(pamp2)).append("\n");
-    sb.append("    pamp3: ").append(toIndentedString(pamp3)).append("\n");
+    sb.append("class ObjectCatalog {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    doi: ").append(toIndentedString(doi)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    eventid: ").append(toIndentedString(eventid)).append("\n");
+    sb.append("    originid: ").append(toIndentedString(originid)).append("\n");
+    sb.append("    magnitudeid: ").append(toIndentedString(magnitudeid)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -231,35 +346,48 @@ public class ObjectPickEw {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("pamp1");
-    openapiFields.add("pamp2");
-    openapiFields.add("pamp3");
+    openapiFields.add("id");
+    openapiFields.add("name");
+    openapiFields.add("doi");
+    openapiFields.add("description");
+    openapiFields.add("eventid");
+    openapiFields.add("originid");
+    openapiFields.add("magnitudeid");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("pamp1");
+    openapiRequiredFields.add("name");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectPickEw
+  * @throws IOException if the JSON Object is invalid with respect to ObjectCatalog
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectPickEw.openapiRequiredFields.isEmpty()) {
+        if (ObjectCatalog.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectPickEw is not found in the empty JSON string", ObjectPickEw.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectCatalog is not found in the empty JSON string", ObjectCatalog.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectPickEw.openapiRequiredFields) {
+      for (String requiredField : ObjectCatalog.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      if ((jsonObj.get("doi") != null && !jsonObj.get("doi").isJsonNull()) && !jsonObj.get("doi").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `doi` to be a primitive type in the JSON string but got `%s`", jsonObj.get("doi").toString()));
+      }
+      if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
   }
 
@@ -267,16 +395,16 @@ public class ObjectPickEw {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectPickEw.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectPickEw' and its subtypes
+       if (!ObjectCatalog.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectCatalog' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectPickEw> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectPickEw.class));
+       final TypeAdapter<ObjectCatalog> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectCatalog.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectPickEw>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectCatalog>() {
            @Override
-           public void write(JsonWriter out, ObjectPickEw value) throws IOException {
+           public void write(JsonWriter out, ObjectCatalog value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additonal properties
@@ -299,11 +427,11 @@ public class ObjectPickEw {
            }
 
            @Override
-           public ObjectPickEw read(JsonReader in) throws IOException {
+           public ObjectCatalog read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             ObjectPickEw instance = thisAdapter.fromJsonTree(jsonObj);
+             ObjectCatalog instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -328,18 +456,18 @@ public class ObjectPickEw {
   }
 
  /**
-  * Create an instance of ObjectPickEw given an JSON string
+  * Create an instance of ObjectCatalog given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectPickEw
-  * @throws IOException if the JSON string is invalid with respect to ObjectPickEw
+  * @return An instance of ObjectCatalog
+  * @throws IOException if the JSON string is invalid with respect to ObjectCatalog
   */
-  public static ObjectPickEw fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectPickEw.class);
+  public static ObjectCatalog fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectCatalog.class);
   }
 
  /**
-  * Convert an instance of ObjectPickEw to an JSON string
+  * Convert an instance of ObjectCatalog to an JSON string
   *
   * @return JSON string
   */
