@@ -89,7 +89,7 @@ public class GetApi {
     /**
      * Build call for getEvent
      * @param originid Select by origin id. (optional)
-     * @param eventid Retrieve an event based on the unique INGV event id. (optional)
+     * @param eventid Select by event id. (optional)
      * @param level Select deep level (optional, default to all)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -176,7 +176,7 @@ public class GetApi {
      * This API returns the preferred origin and the preferred magnitude from all clusterd events.
      * This API returns the preferred origin and the preferred magnitude from all clusterd events.
      * @param originid Select by origin id. (optional)
-     * @param eventid Retrieve an event based on the unique INGV event id. (optional)
+     * @param eventid Select by event id. (optional)
      * @param level Select deep level (optional, default to all)
      * @return GetEvent200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -201,7 +201,7 @@ public class GetApi {
      * This API returns the preferred origin and the preferred magnitude from all clusterd events.
      * This API returns the preferred origin and the preferred magnitude from all clusterd events.
      * @param originid Select by origin id. (optional)
-     * @param eventid Retrieve an event based on the unique INGV event id. (optional)
+     * @param eventid Select by event id. (optional)
      * @param level Select deep level (optional, default to all)
      * @return ApiResponse&lt;GetEvent200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -227,7 +227,7 @@ public class GetApi {
      * This API returns the preferred origin and the preferred magnitude from all clusterd events. (asynchronously)
      * This API returns the preferred origin and the preferred magnitude from all clusterd events.
      * @param originid Select by origin id. (optional)
-     * @param eventid Retrieve an event based on the unique INGV event id. (optional)
+     * @param eventid Select by event id. (optional)
      * @param level Select deep level (optional, default to all)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call

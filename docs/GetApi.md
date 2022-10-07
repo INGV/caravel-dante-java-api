@@ -45,7 +45,7 @@ public class Example {
 
     GetApi apiInstance = new GetApi(defaultClient);
     Long originid = 56L; // Long | Select by origin id.
-    Long eventid = 56L; // Long | Retrieve an event based on the unique INGV event id.
+    Long eventid = 56L; // Long | Select by event id.
     String level = "event"; // String | Select deep level
     try {
       GetEvent200Response result = apiInstance.getEvent(originid, eventid, level);
@@ -66,7 +66,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **originid** | **Long**| Select by origin id. | [optional] |
-| **eventid** | **Long**| Retrieve an event based on the unique INGV event id. | [optional] |
+| **eventid** | **Long**| Select by event id. | [optional] |
 | **level** | **String**| Select deep level | [optional] [default to all] [enum: event, origin, magnitude, all] |
 
 ### Return type

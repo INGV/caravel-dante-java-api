@@ -3267,7 +3267,7 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: Retrieve an event based on the unique INGV event id.
+      - description: Select by event id.
         in: query
         name: eventid
         required: false
