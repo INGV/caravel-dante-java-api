@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaEwLogo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-11T13:34:27.522857Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-11T14:53:35.686167Z[Etc/UTC]")
 public class StrongmotioniiSchemaEwLogo {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
