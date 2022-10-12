@@ -4,6 +4,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
+| [**getCatalog**](GetApi.md#getCatalog) | **GET** /quakedb/v1/catalog | This API returns the catalogs. |
 | [**getEvent**](GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events. |
 | [**getEvents**](GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance. |
 | [**getEventsGroup**](GetApi.md#getEventsGroup) | **GET** /quakedb/v1/events-group | This API returns the preferred origin and the preferred magnitude from all clusterd events. |
@@ -20,6 +21,84 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 | [**getTypeMagnitude**](GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s). |
 | [**getTypeOrigin**](GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s). |
 
+
+<a name="getCatalog"></a>
+# **getCatalog**
+> GetCatalog200Response getCatalog(eventid, originid, magnitudeid, name, doi, wherenamelike)
+
+This API returns the catalogs.
+
+This API returns the catalogs.
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.GetApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    GetApi apiInstance = new GetApi(defaultClient);
+    Long eventid = 56L; // Long | Select by event id.
+    Long originid = 56L; // Long | Select by origin id.
+    Long magnitudeid = 56L; // Long | Select by magnitude id.
+    String name = "name_example"; // String | Catalog name
+    String doi = "doi_example"; // String | DOI
+    String wherenamelike = "wherenamelike_example"; // String | Select data by \"like\" operator.
+    try {
+      GetCatalog200Response result = apiInstance.getCatalog(eventid, originid, magnitudeid, name, doi, wherenamelike);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GetApi#getCatalog");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eventid** | **Long**| Select by event id. | [optional] |
+| **originid** | **Long**| Select by origin id. | [optional] |
+| **magnitudeid** | **Long**| Select by magnitude id. | [optional] |
+| **name** | **String**| Catalog name | [optional] |
+| **doi** | **String**| DOI | [optional] |
+| **wherenamelike** | **String**| Select data by \&quot;like\&quot; operator. | [optional] |
+
+### Return type
+
+[**GetCatalog200Response**](GetCatalog200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
 
 <a name="getEvent"></a>
 # **getEvent**

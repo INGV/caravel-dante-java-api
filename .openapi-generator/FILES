@@ -51,6 +51,7 @@ docs/AddStrongmotionRequestData.md
 docs/DeleteApi.md
 docs/EarthwormApiApi.md
 docs/GetApi.md
+docs/GetCatalog200Response.md
 docs/GetEvent200Response.md
 docs/GetEvent200ResponseData.md
 docs/GetEventsGroup200Response.md
@@ -86,6 +87,7 @@ docs/MagnitudeSchemaEwMessage.md
 docs/MetaDefinition.md
 docs/MetaDefinitionLinksInner.md
 docs/ObjectArrival.md
+docs/ObjectCatalog.md
 docs/ObjectEvent.md
 docs/ObjectFocalmechanism.md
 docs/ObjectFocalmechanismPostOutput.md
@@ -222,6 +224,7 @@ src/main/java/org/ingv/dante/model/AddOriginRequestData.java
 src/main/java/org/ingv/dante/model/AddStrongmotion201Response.java
 src/main/java/org/ingv/dante/model/AddStrongmotionRequest.java
 src/main/java/org/ingv/dante/model/AddStrongmotionRequestData.java
+src/main/java/org/ingv/dante/model/GetCatalog200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200ResponseData.java
 src/main/java/org/ingv/dante/model/GetEventsGroup200Response.java
@@ -257,6 +260,7 @@ src/main/java/org/ingv/dante/model/MagnitudeSchemaEwMessage.java
 src/main/java/org/ingv/dante/model/MetaDefinition.java
 src/main/java/org/ingv/dante/model/MetaDefinitionLinksInner.java
 src/main/java/org/ingv/dante/model/ObjectArrival.java
+src/main/java/org/ingv/dante/model/ObjectCatalog.java
 src/main/java/org/ingv/dante/model/ObjectEvent.java
 src/main/java/org/ingv/dante/model/ObjectFocalmechanism.java
 src/main/java/org/ingv/dante/model/ObjectFocalmechanismPostOutput.java
@@ -363,6 +367,7 @@ src/test/java/org/ingv/dante/model/AddOriginRequestTest.java
 src/test/java/org/ingv/dante/model/AddStrongmotion201ResponseTest.java
 src/test/java/org/ingv/dante/model/AddStrongmotionRequestDataTest.java
 src/test/java/org/ingv/dante/model/AddStrongmotionRequestTest.java
+src/test/java/org/ingv/dante/model/GetCatalog200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseDataTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEventsGroup200ResponseTest.java
@@ -398,6 +403,7 @@ src/test/java/org/ingv/dante/model/MagnitudeSchemaTest.java
 src/test/java/org/ingv/dante/model/MetaDefinitionLinksInnerTest.java
 src/test/java/org/ingv/dante/model/MetaDefinitionTest.java
 src/test/java/org/ingv/dante/model/ObjectArrivalTest.java
+src/test/java/org/ingv/dante/model/ObjectCatalogTest.java
 src/test/java/org/ingv/dante/model/ObjectEventTest.java
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputFocalmechanismsInnerTest.java
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputTest.java

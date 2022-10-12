@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 2.58.0
-  - Build date: 2022-10-11T14:55:16.090311Z[Etc/UTC]
+- API version: 2.59.0
+  - Build date: 2022-10-12T06:07:58.904960Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>2.58.0</version>
+  <version>2.59.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.58.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.59.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-2.58.0.jar`
+* `target/java-openapi-generator-cli-dante-2.59.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -150,6 +150,7 @@ Class | Method | HTTP request | Description
 *EarthwormApiApi* | [**addHEwMagnitude**](docs/EarthwormApiApi.md#addHEwMagnitude) | **POST** /quakedb/ew/v1/magnitude | Insert a new magnitude message to the DB using ew2openapi module
 *EarthwormApiApi* | [**addHEwPickScnl**](docs/EarthwormApiApi.md#addHEwPickScnl) | **POST** /quakedb/ew/v1/pick-scnl | Insert a new pick-scnl message to the DB using ew2openapi module
 *EarthwormApiApi* | [**addHEwStrongmotionii**](docs/EarthwormApiApi.md#addHEwStrongmotionii) | **POST** /quakedb/ew/v1/strongmotionii | Insert a new strongmotionii message to the DB using ew2openapi module
+*GetApi* | [**getCatalog**](docs/GetApi.md#getCatalog) | **GET** /quakedb/v1/catalog | This API returns the catalogs.
 *GetApi* | [**getEvent**](docs/GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events.
 *GetApi* | [**getEvents**](docs/GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance.
 *GetApi* | [**getEventsGroup**](docs/GetApi.md#getEventsGroup) | **GET** /quakedb/v1/events-group | This API returns the preferred origin and the preferred magnitude from all clusterd events.
@@ -232,6 +233,7 @@ Class | Method | HTTP request | Description
  - [AddStrongmotion201Response](docs/AddStrongmotion201Response.md)
  - [AddStrongmotionRequest](docs/AddStrongmotionRequest.md)
  - [AddStrongmotionRequestData](docs/AddStrongmotionRequestData.md)
+ - [GetCatalog200Response](docs/GetCatalog200Response.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)
  - [GetEvent200ResponseData](docs/GetEvent200ResponseData.md)
  - [GetEventsGroup200Response](docs/GetEventsGroup200Response.md)
@@ -267,6 +269,7 @@ Class | Method | HTTP request | Description
  - [MetaDefinition](docs/MetaDefinition.md)
  - [MetaDefinitionLinksInner](docs/MetaDefinitionLinksInner.md)
  - [ObjectArrival](docs/ObjectArrival.md)
+ - [ObjectCatalog](docs/ObjectCatalog.md)
  - [ObjectEvent](docs/ObjectEvent.md)
  - [ObjectFocalmechanism](docs/ObjectFocalmechanism.md)
  - [ObjectFocalmechanismPostOutput](docs/ObjectFocalmechanismPostOutput.md)
