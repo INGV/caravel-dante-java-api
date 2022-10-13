@@ -15,6 +15,7 @@ package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
 import org.ingv.dante.model.GetCatalog200Response;
+import org.ingv.dante.model.GetCatalogMetadata200Response;
 import org.ingv.dante.model.GetEvent200Response;
 import org.ingv.dante.model.GetEventsGroup200Response;
 import org.ingv.dante.model.GetLocalspace200Response;
@@ -54,13 +55,55 @@ public class GetApiTest {
      */
     @Test
     public void getCatalogTest() throws ApiException {
+        OffsetDateTime starttime = null;
+        OffsetDateTime endtime = null;
+        Double minlat = null;
+        Double maxlat = null;
+        Double minlon = null;
+        Double maxlon = null;
+        Double lat = null;
+        Double lon = null;
+        Double minradius = null;
+        Double maxradius = null;
+        Double minradiuskm = null;
+        Double maxradiuskm = null;
+        Double minmag = null;
+        Double maxmag = null;
+        Double mindepth = null;
+        Double maxdepth = null;
+        Long mintypeoriginvalue = null;
+        Long maxtypeoriginvalue = null;
+        String wheretypeoriginvaluein = null;
+        String wherelocalspacenamein = null;
+        String whereflagsin = null;
+        String orderby = null;
+        Long eventGroupId = null;
+        Long idLocalspace = null;
+        Integer limit = null;
+        Integer page = null;
         Long eventid = null;
         Long originid = null;
         Long magnitudeid = null;
         String name = null;
         String doi = null;
         String wherenamelike = null;
-        GetCatalog200Response response = api.getCatalog(eventid, originid, magnitudeid, name, doi, wherenamelike);
+        GetCatalog200Response response = api.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
+        // TODO: test validations
+    }
+
+    /**
+     * This API returns the catalog-metadata.
+     *
+     * This API returns the catalog-metadata.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getCatalogMetadataTest() throws ApiException {
+        String name = null;
+        String doi = null;
+        String wherenamelike = null;
+        GetCatalogMetadata200Response response = api.getCatalogMetadata(name, doi, wherenamelike);
         // TODO: test validations
     }
 

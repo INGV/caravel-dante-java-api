@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.60.0-dev
-  - Build date: 2022-10-12T06:07:14.914360Z[Etc/UTC]
+  - Build date: 2022-10-13T16:11:27.390203Z[Etc/UTC]
 
   
 
@@ -118,11 +118,11 @@ public class Example {
     BearerAuth.setBearerToken("BEARER TOKEN");
 
     DeleteApi apiInstance = new DeleteApi(defaultClient);
-    Long id = 56L; // Long | INGV localspace id that need to be deleted.
+    Long id = 56L; // Long | INGV catalog_metadata id that need to be deleted.
     try {
-      apiInstance.deleteLocalspace(id);
+      apiInstance.deleteCatalogMetadata(id);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DeleteApi#deleteLocalspace");
+      System.err.println("Exception when calling DeleteApi#deleteCatalogMetadata");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -139,6 +139,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DeleteApi* | [**deleteCatalogMetadata**](docs/DeleteApi.md#deleteCatalogMetadata) | **DELETE** /quakedb/table/v1/catalog-metadata/{id} | Delete an existing catalog_metadata
 *DeleteApi* | [**deleteLocalspace**](docs/DeleteApi.md#deleteLocalspace) | **DELETE** /quakedb/table/v1/localspace/{id} | Delete an existing localspace
 *DeleteApi* | [**deleteOriginFlag**](docs/DeleteApi.md#deleteOriginFlag) | **DELETE** /quakedb/table/v1/origin-flag/{id} | Delete an existing origin-flag
 *DeleteApi* | [**deleteProvenance**](docs/DeleteApi.md#deleteProvenance) | **DELETE** /quakedb/table/v1/provenance/{id} | Delete an existing provenance
@@ -151,6 +152,7 @@ Class | Method | HTTP request | Description
 *EarthwormApiApi* | [**addHEwPickScnl**](docs/EarthwormApiApi.md#addHEwPickScnl) | **POST** /quakedb/ew/v1/pick-scnl | Insert a new pick-scnl message to the DB using ew2openapi module
 *EarthwormApiApi* | [**addHEwStrongmotionii**](docs/EarthwormApiApi.md#addHEwStrongmotionii) | **POST** /quakedb/ew/v1/strongmotionii | Insert a new strongmotionii message to the DB using ew2openapi module
 *GetApi* | [**getCatalog**](docs/GetApi.md#getCatalog) | **GET** /quakedb/v1/catalog | This API returns the catalogs.
+*GetApi* | [**getCatalogMetadata**](docs/GetApi.md#getCatalogMetadata) | **GET** /quakedb/v1/catalog-metadata | This API returns the catalog-metadata.
 *GetApi* | [**getEvent**](docs/GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events.
 *GetApi* | [**getEvents**](docs/GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance.
 *GetApi* | [**getEventsGroup**](docs/GetApi.md#getEventsGroup) | **GET** /quakedb/v1/events-group | This API returns the preferred origin and the preferred magnitude from all clusterd events.
@@ -166,6 +168,8 @@ Class | Method | HTTP request | Description
 *GetApi* | [**getTypeEvent**](docs/GetApi.md#getTypeEvent) | **GET** /quakedb/table/v1/type-event | This API returns all the type_event(s).
 *GetApi* | [**getTypeMagnitude**](docs/GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s).
 *GetApi* | [**getTypeOrigin**](docs/GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s).
+*StoreApi* | [**addCatalog**](docs/StoreApi.md#addCatalog) | **POST** /quakedb/v1/catalog | Add a new catalog to the DB
+*StoreApi* | [**addCatalogMetadata**](docs/StoreApi.md#addCatalogMetadata) | **POST** /quakedb/v1/catalog-metadata | Add a new catalog to the DB
 *StoreApi* | [**addEvent**](docs/StoreApi.md#addEvent) | **POST** /quakedb/v1/event | Add a new event to the DB
 *StoreApi* | [**addFocalmechanism**](docs/StoreApi.md#addFocalmechanism) | **POST** /quakedb/v1/focalmechanism | Add a new focalmechanism(s) to the DB
 *StoreApi* | [**addLocalspace**](docs/StoreApi.md#addLocalspace) | **POST** /quakedb/table/v1/localspace | Add a new localspace to the DB
@@ -178,6 +182,7 @@ Class | Method | HTTP request | Description
 *StoreApi* | [**addTypeEvent**](docs/StoreApi.md#addTypeEvent) | **POST** /quakedb/table/v1/type-event | Add a new type_event to the DB
 *StoreApi* | [**addTypeMagnitude**](docs/StoreApi.md#addTypeMagnitude) | **POST** /quakedb/table/v1/type-magnitude | Add a new type_magnitude to the DB
 *StoreApi* | [**addTypeOrigin**](docs/StoreApi.md#addTypeOrigin) | **POST** /quakedb/table/v1/type-origin | Add a new type_origin to the DB
+*UpdateApi* | [**updateCatalogMetadata**](docs/UpdateApi.md#updateCatalogMetadata) | **PATCH** /quakedb/table/v1/catalog-metadata/{id} | Update an existing catalog-metadata
 *UpdateApi* | [**updateEvent**](docs/UpdateApi.md#updateEvent) | **PATCH** /quakedb/v1/event/{id} | Update an existing event
 *UpdateApi* | [**updateEventsGroup**](docs/UpdateApi.md#updateEventsGroup) | **PATCH** /quakedb/v1/eventsgroup | Update/Create an events-group
 *UpdateApi* | [**updateLocalspace**](docs/UpdateApi.md#updateLocalspace) | **PATCH** /quakedb/table/v1/localspace/{id} | Update an existing localspace
@@ -191,6 +196,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [AddCatalogMetadataRequest](docs/AddCatalogMetadataRequest.md)
+ - [AddCatalogRequest](docs/AddCatalogRequest.md)
  - [AddEvent201Response](docs/AddEvent201Response.md)
  - [AddEvent201ResponseData](docs/AddEvent201ResponseData.md)
  - [AddEvent201ResponseDataEvent](docs/AddEvent201ResponseDataEvent.md)
@@ -234,6 +241,7 @@ Class | Method | HTTP request | Description
  - [AddStrongmotionRequest](docs/AddStrongmotionRequest.md)
  - [AddStrongmotionRequestData](docs/AddStrongmotionRequestData.md)
  - [GetCatalog200Response](docs/GetCatalog200Response.md)
+ - [GetCatalogMetadata200Response](docs/GetCatalogMetadata200Response.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)
  - [GetEvent200ResponseData](docs/GetEvent200ResponseData.md)
  - [GetEventsGroup200Response](docs/GetEventsGroup200Response.md)
@@ -270,6 +278,7 @@ Class | Method | HTTP request | Description
  - [MetaDefinitionLinksInner](docs/MetaDefinitionLinksInner.md)
  - [ObjectArrival](docs/ObjectArrival.md)
  - [ObjectCatalog](docs/ObjectCatalog.md)
+ - [ObjectCatalogMetadata](docs/ObjectCatalogMetadata.md)
  - [ObjectEvent](docs/ObjectEvent.md)
  - [ObjectFocalmechanism](docs/ObjectFocalmechanism.md)
  - [ObjectFocalmechanismPostOutput](docs/ObjectFocalmechanismPostOutput.md)
@@ -307,6 +316,9 @@ Class | Method | HTTP request | Description
  - [ObjectTableTypeMagnitude](docs/ObjectTableTypeMagnitude.md)
  - [ObjectTableTypeOrigin](docs/ObjectTableTypeOrigin.md)
  - [ObjectTypeOrigin](docs/ObjectTypeOrigin.md)
+ - [ObjectVwCatalogInner](docs/ObjectVwCatalogInner.md)
+ - [ObjectVwCatalogInnerAllOf](docs/ObjectVwCatalogInnerAllOf.md)
+ - [ObjectVwCatalogInnerAllOfCatalog](docs/ObjectVwCatalogInnerAllOfCatalog.md)
  - [PickEmersio](docs/PickEmersio.md)
  - [PickFirstmotion](docs/PickFirstmotion.md)
  - [PickScnlSchema](docs/PickScnlSchema.md)

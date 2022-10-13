@@ -23,7 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
+import java.time.OffsetDateTime;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectCatalog
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-12T06:07:14.914360Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-13T16:11:27.390203Z[Etc/UTC]")
 public class ObjectCatalog {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -57,14 +57,6 @@ public class ObjectCatalog {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
-
-  public static final String SERIALIZED_NAME_DOI = "doi";
-  @SerializedName(SERIALIZED_NAME_DOI)
-  private String doi;
-
-  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
-  private String description;
 
   public static final String SERIALIZED_NAME_EVENTID = "eventid";
   @SerializedName(SERIALIZED_NAME_EVENTID)
@@ -78,15 +70,35 @@ public class ObjectCatalog {
   @SerializedName(SERIALIZED_NAME_MAGNITUDEID)
   private Long magnitudeid;
 
+  public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
+  @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  private Long eventGroupId;
+
+  public static final String SERIALIZED_NAME_MODIFIED = "modified";
+  @SerializedName(SERIALIZED_NAME_MODIFIED)
+  private OffsetDateTime modified;
+
+  public static final String SERIALIZED_NAME_INSERTED = "inserted";
+  @SerializedName(SERIALIZED_NAME_INSERTED)
+  private OffsetDateTime inserted;
+
   public ObjectCatalog() {
   }
 
   
   public ObjectCatalog(
-     Long id
+     Long id, 
+     Long eventid, 
+     Long eventGroupId, 
+     OffsetDateTime modified, 
+     OffsetDateTime inserted
   ) {
     this();
     this.id = id;
+    this.eventid = eventid;
+    this.eventGroupId = eventGroupId;
+    this.modified = modified;
+    this.inserted = inserted;
   }
 
    /**
@@ -110,11 +122,11 @@ public class ObjectCatalog {
   }
 
    /**
-   * Catalog name | varchar(255)
+   * Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)
    * @return name
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "BSI", required = true, value = "Catalog name | varchar(255)")
+  @ApiModelProperty(example = "TDMT-INGV", required = true, value = "Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)")
 
   public String getName() {
     return name;
@@ -125,58 +137,6 @@ public class ObjectCatalog {
     this.name = name;
   }
 
-
-  public ObjectCatalog doi(String doi) {
-    
-    this.doi = doi;
-    return this;
-  }
-
-   /**
-   * DOI | varchar(255)
-   * @return doi
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "10.13127/TDMT", value = "DOI | varchar(255)")
-
-  public String getDoi() {
-    return doi;
-  }
-
-
-  public void setDoi(String doi) {
-    this.doi = doi;
-  }
-
-
-  public ObjectCatalog description(String description) {
-    
-    this.description = description;
-    return this;
-  }
-
-   /**
-   * Additional information | char(255)
-   * @return description
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "Auto added", value = "Additional information | char(255)")
-
-  public String getDescription() {
-    return description;
-  }
-
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-
-  public ObjectCatalog eventid(Long eventid) {
-    
-    this.eventid = eventid;
-    return this;
-  }
 
    /**
    * Unique incremental id | bigint(20)
@@ -190,9 +150,6 @@ public class ObjectCatalog {
   }
 
 
-  public void setEventid(Long eventid) {
-    this.eventid = eventid;
-  }
 
 
   public ObjectCatalog originid(Long originid) {
@@ -239,6 +196,48 @@ public class ObjectCatalog {
   public void setMagnitudeid(Long magnitudeid) {
     this.magnitudeid = magnitudeid;
   }
+
+
+   /**
+   * Unique incremental id | bigint(20)
+   * @return eventGroupId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
+  public Long getEventGroupId() {
+    return eventGroupId;
+  }
+
+
+
+
+   /**
+   * Last Review | timestamp
+   * @return modified
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
+
+  public OffsetDateTime getModified() {
+    return modified;
+  }
+
+
+
+
+   /**
+   * Insert time | timestamp
+   * @return inserted
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
+  public OffsetDateTime getInserted() {
+    return inserted;
+  }
+
+
 
   /**
    * A container for additional, undeclared properties.
@@ -288,28 +287,18 @@ public class ObjectCatalog {
     ObjectCatalog objectCatalog = (ObjectCatalog) o;
     return Objects.equals(this.id, objectCatalog.id) &&
         Objects.equals(this.name, objectCatalog.name) &&
-        Objects.equals(this.doi, objectCatalog.doi) &&
-        Objects.equals(this.description, objectCatalog.description) &&
         Objects.equals(this.eventid, objectCatalog.eventid) &&
         Objects.equals(this.originid, objectCatalog.originid) &&
-        Objects.equals(this.magnitudeid, objectCatalog.magnitudeid)&&
+        Objects.equals(this.magnitudeid, objectCatalog.magnitudeid) &&
+        Objects.equals(this.eventGroupId, objectCatalog.eventGroupId) &&
+        Objects.equals(this.modified, objectCatalog.modified) &&
+        Objects.equals(this.inserted, objectCatalog.inserted)&&
         Objects.equals(this.additionalProperties, objectCatalog.additionalProperties);
-  }
-
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, doi, description, eventid, originid, magnitudeid, additionalProperties);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+    return Objects.hash(id, name, eventid, originid, magnitudeid, eventGroupId, modified, inserted, additionalProperties);
   }
 
   @Override
@@ -318,11 +307,12 @@ public class ObjectCatalog {
     sb.append("class ObjectCatalog {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    doi: ").append(toIndentedString(doi)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    eventid: ").append(toIndentedString(eventid)).append("\n");
     sb.append("    originid: ").append(toIndentedString(originid)).append("\n");
     sb.append("    magnitudeid: ").append(toIndentedString(magnitudeid)).append("\n");
+    sb.append("    eventGroupId: ").append(toIndentedString(eventGroupId)).append("\n");
+    sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
+    sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -348,11 +338,12 @@ public class ObjectCatalog {
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
     openapiFields.add("name");
-    openapiFields.add("doi");
-    openapiFields.add("description");
     openapiFields.add("eventid");
     openapiFields.add("originid");
     openapiFields.add("magnitudeid");
+    openapiFields.add("event_group_id");
+    openapiFields.add("modified");
+    openapiFields.add("inserted");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -382,12 +373,6 @@ public class ObjectCatalog {
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      if ((jsonObj.get("doi") != null && !jsonObj.get("doi").isJsonNull()) && !jsonObj.get("doi").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `doi` to be a primitive type in the JSON string but got `%s`", jsonObj.get("doi").toString()));
-      }
-      if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
   }
 

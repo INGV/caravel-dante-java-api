@@ -14,6 +14,8 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
+import org.ingv.dante.model.AddCatalogMetadataRequest;
+import org.ingv.dante.model.AddCatalogRequest;
 import org.ingv.dante.model.AddEvent201Response;
 import org.ingv.dante.model.AddFocalmechanism201Response;
 import org.ingv.dante.model.AddFocalmechanismRequest;
@@ -49,6 +51,34 @@ import java.util.Map;
 public class StoreApiTest {
 
     private final StoreApi api = new StoreApi();
+
+    /**
+     * Add a new catalog to the DB
+     *
+     * This API is used to add a catalog object.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void addCatalogTest() throws ApiException {
+        AddCatalogRequest addCatalogRequest = null;
+        AddCatalogRequest response = api.addCatalog(addCatalogRequest);
+        // TODO: test validations
+    }
+
+    /**
+     * Add a new catalog to the DB
+     *
+     * This API is used to add a catalog object.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void addCatalogMetadataTest() throws ApiException {
+        AddCatalogMetadataRequest addCatalogMetadataRequest = null;
+        AddCatalogMetadataRequest response = api.addCatalogMetadata(addCatalogMetadataRequest);
+        // TODO: test validations
+    }
 
     /**
      * Add a new event to the DB

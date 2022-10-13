@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.ingv.dante.model.LinksDefinition;
 import org.ingv.dante.model.MetaDefinition;
-import org.ingv.dante.model.ObjectCatalog;
+import org.ingv.dante.model.ObjectVwCatalogInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * GetCatalog200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-12T06:07:14.914360Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-13T16:11:27.390203Z[Etc/UTC]")
 public class GetCatalog200Response {
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -64,7 +64,7 @@ public class GetCatalog200Response {
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<ObjectCatalog> data = null;
+  private List<ObjectVwCatalogInner> data = null;
 
   public GetCatalog200Response() {
   }
@@ -115,13 +115,13 @@ public class GetCatalog200Response {
   }
 
 
-  public GetCatalog200Response data(List<ObjectCatalog> data) {
+  public GetCatalog200Response data(List<ObjectVwCatalogInner> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetCatalog200Response addDataItem(ObjectCatalog dataItem) {
+  public GetCatalog200Response addDataItem(ObjectVwCatalogInner dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -136,12 +136,12 @@ public class GetCatalog200Response {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<ObjectCatalog> getData() {
+  public List<ObjectVwCatalogInner> getData() {
     return data;
   }
 
 
-  public void setData(List<ObjectCatalog> data) {
+  public void setData(List<ObjectVwCatalogInner> data) {
     this.data = data;
   }
 
@@ -271,7 +271,7 @@ public class GetCatalog200Response {
 
         // validate the optional field `data` (array)
         for (int i = 0; i < jsonArraydata.size(); i++) {
-          ObjectCatalog.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+          ObjectVwCatalogInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
         };
       }
   }

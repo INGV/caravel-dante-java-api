@@ -21,7 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
+import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -57,22 +57,6 @@ public class ObjectCatalogTest {
     }
 
     /**
-     * Test the property 'doi'
-     */
-    @Test
-    public void doiTest() {
-        // TODO: test doi
-    }
-
-    /**
-     * Test the property 'description'
-     */
-    @Test
-    public void descriptionTest() {
-        // TODO: test description
-    }
-
-    /**
      * Test the property 'eventid'
      */
     @Test
@@ -94,6 +78,30 @@ public class ObjectCatalogTest {
     @Test
     public void magnitudeidTest() {
         // TODO: test magnitudeid
+    }
+
+    /**
+     * Test the property 'eventGroupId'
+     */
+    @Test
+    public void eventGroupIdTest() {
+        // TODO: test eventGroupId
+    }
+
+    /**
+     * Test the property 'modified'
+     */
+    @Test
+    public void modifiedTest() {
+        // TODO: test modified
+    }
+
+    /**
+     * Test the property 'inserted'
+     */
+    @Test
+    public void insertedTest() {
+        // TODO: test inserted
     }
 
 }

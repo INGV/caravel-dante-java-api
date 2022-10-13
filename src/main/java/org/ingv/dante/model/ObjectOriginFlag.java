@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginFlag
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-12T06:07:14.914360Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-13T16:11:27.390203Z[Etc/UTC]")
 public class ObjectOriginFlag {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -142,8 +142,8 @@ public class ObjectOriginFlag {
    * Flag name | varchar(255)
    * @return name
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "DPC", required = true, value = "Flag name | varchar(255)")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "DPC", value = "Flag name | varchar(255)")
 
   public String getName() {
     return name;
@@ -188,8 +188,8 @@ public class ObjectOriginFlag {
    * Value associated to the flag | int
    * @return value
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "1", required = true, value = "Value associated to the flag | int")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "1", value = "Value associated to the flag | int")
 
   public Float getValue() {
     return value;
@@ -313,8 +313,6 @@ public class ObjectOriginFlag {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("value");
   }
 
  /**
@@ -329,13 +327,6 @@ public class ObjectOriginFlag {
           return;
         } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectOriginFlag is not found in the empty JSON string", ObjectOriginFlag.openapiRequiredFields.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectOriginFlag.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {

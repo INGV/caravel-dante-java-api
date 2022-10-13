@@ -27,6 +27,8 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.ingv.dante.model.AddCatalogMetadataRequest;
+import org.ingv.dante.model.AddCatalogRequest;
 import org.ingv.dante.model.AddEvent201Response;
 import org.ingv.dante.model.AddFocalmechanism201Response;
 import org.ingv.dante.model.AddFocalmechanismRequest;
@@ -92,6 +94,306 @@ public class StoreApi {
         this.localCustomBaseUrl = customBaseUrl;
     }
 
+    /**
+     * Build call for addCatalog
+     * @param addCatalogRequest JSON to store (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call addCatalogCall(AddCatalogRequest addCatalogRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = addCatalogRequest;
+
+        // create path and map variables
+        String localVarPath = "/quakedb/v1/catalog";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/problem+json", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call addCatalogValidateBeforeCall(AddCatalogRequest addCatalogRequest, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'addCatalogRequest' is set
+        if (addCatalogRequest == null) {
+            throw new ApiException("Missing the required parameter 'addCatalogRequest' when calling addCatalog(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = addCatalogCall(addCatalogRequest, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Add a new catalog to the DB
+     * This API is used to add a catalog object.
+     * @param addCatalogRequest JSON to store (required)
+     * @return AddCatalogRequest
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public AddCatalogRequest addCatalog(AddCatalogRequest addCatalogRequest) throws ApiException {
+        ApiResponse<AddCatalogRequest> localVarResp = addCatalogWithHttpInfo(addCatalogRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Add a new catalog to the DB
+     * This API is used to add a catalog object.
+     * @param addCatalogRequest JSON to store (required)
+     * @return ApiResponse&lt;AddCatalogRequest&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<AddCatalogRequest> addCatalogWithHttpInfo(AddCatalogRequest addCatalogRequest) throws ApiException {
+        okhttp3.Call localVarCall = addCatalogValidateBeforeCall(addCatalogRequest, null);
+        Type localVarReturnType = new TypeToken<AddCatalogRequest>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Add a new catalog to the DB (asynchronously)
+     * This API is used to add a catalog object.
+     * @param addCatalogRequest JSON to store (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call addCatalogAsync(AddCatalogRequest addCatalogRequest, final ApiCallback<AddCatalogRequest> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = addCatalogValidateBeforeCall(addCatalogRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddCatalogRequest>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for addCatalogMetadata
+     * @param addCatalogMetadataRequest JSON to store (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call addCatalogMetadataCall(AddCatalogMetadataRequest addCatalogMetadataRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = addCatalogMetadataRequest;
+
+        // create path and map variables
+        String localVarPath = "/quakedb/v1/catalog-metadata";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/problem+json", "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call addCatalogMetadataValidateBeforeCall(AddCatalogMetadataRequest addCatalogMetadataRequest, final ApiCallback _callback) throws ApiException {
+        
+        // verify the required parameter 'addCatalogMetadataRequest' is set
+        if (addCatalogMetadataRequest == null) {
+            throw new ApiException("Missing the required parameter 'addCatalogMetadataRequest' when calling addCatalogMetadata(Async)");
+        }
+        
+
+        okhttp3.Call localVarCall = addCatalogMetadataCall(addCatalogMetadataRequest, _callback);
+        return localVarCall;
+
+    }
+
+    /**
+     * Add a new catalog to the DB
+     * This API is used to add a catalog object.
+     * @param addCatalogMetadataRequest JSON to store (required)
+     * @return AddCatalogMetadataRequest
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public AddCatalogMetadataRequest addCatalogMetadata(AddCatalogMetadataRequest addCatalogMetadataRequest) throws ApiException {
+        ApiResponse<AddCatalogMetadataRequest> localVarResp = addCatalogMetadataWithHttpInfo(addCatalogMetadataRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Add a new catalog to the DB
+     * This API is used to add a catalog object.
+     * @param addCatalogMetadataRequest JSON to store (required)
+     * @return ApiResponse&lt;AddCatalogMetadataRequest&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<AddCatalogMetadataRequest> addCatalogMetadataWithHttpInfo(AddCatalogMetadataRequest addCatalogMetadataRequest) throws ApiException {
+        okhttp3.Call localVarCall = addCatalogMetadataValidateBeforeCall(addCatalogMetadataRequest, null);
+        Type localVarReturnType = new TypeToken<AddCatalogMetadataRequest>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Add a new catalog to the DB (asynchronously)
+     * This API is used to add a catalog object.
+     * @param addCatalogMetadataRequest JSON to store (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 201 </td><td> record inserted </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call addCatalogMetadataAsync(AddCatalogMetadataRequest addCatalogMetadataRequest, final ApiCallback<AddCatalogMetadataRequest> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = addCatalogMetadataValidateBeforeCall(addCatalogMetadataRequest, _callback);
+        Type localVarReturnType = new TypeToken<AddCatalogMetadataRequest>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
     /**
      * Build call for addEvent
      * @param getEvent200Response JSON to store (required)
