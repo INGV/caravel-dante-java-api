@@ -93,7 +93,6 @@ public class JSON {
         gsonBuilder.registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter);
         gsonBuilder.registerTypeAdapter(LocalDate.class, localDateTypeAdapter);
         gsonBuilder.registerTypeAdapter(byte[].class, byteArrayAdapter);
-        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.AddCatalogMetadataRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.AddCatalogRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.AddEvent201Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.AddEvent201ResponseData.CustomTypeAdapterFactory());

@@ -5,7 +5,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**addCatalog**](StoreApi.md#addCatalog) | **POST** /quakedb/v1/catalog | Add a new catalog to the DB |
-| [**addCatalogMetadata**](StoreApi.md#addCatalogMetadata) | **POST** /quakedb/v1/catalog-metadata | Add a new catalog to the DB |
+| [**addCatalogMetadata**](StoreApi.md#addCatalogMetadata) | **POST** /quakedb/table/v1/catalog-metadata | Add a new catalog to the DB |
 | [**addEvent**](StoreApi.md#addEvent) | **POST** /quakedb/v1/event | Add a new event to the DB |
 | [**addFocalmechanism**](StoreApi.md#addFocalmechanism) | **POST** /quakedb/v1/focalmechanism | Add a new focalmechanism(s) to the DB |
 | [**addLocalspace**](StoreApi.md#addLocalspace) | **POST** /quakedb/table/v1/localspace | Add a new localspace to the DB |
@@ -90,7 +90,7 @@ No authorization required
 
 <a name="addCatalogMetadata"></a>
 # **addCatalogMetadata**
-> AddCatalogMetadataRequest addCatalogMetadata(addCatalogMetadataRequest)
+> ObjectCatalogMetadata addCatalogMetadata(objectCatalogMetadata)
 
 Add a new catalog to the DB
 
@@ -111,9 +111,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    AddCatalogMetadataRequest addCatalogMetadataRequest = new AddCatalogMetadataRequest(); // AddCatalogMetadataRequest | JSON to store
+    ObjectCatalogMetadata objectCatalogMetadata = new ObjectCatalogMetadata(); // ObjectCatalogMetadata | JSON to store
     try {
-      AddCatalogMetadataRequest result = apiInstance.addCatalogMetadata(addCatalogMetadataRequest);
+      ObjectCatalogMetadata result = apiInstance.addCatalogMetadata(objectCatalogMetadata);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addCatalogMetadata");
@@ -130,11 +130,11 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **addCatalogMetadataRequest** | [**AddCatalogMetadataRequest**](AddCatalogMetadataRequest.md)| JSON to store | |
+| **objectCatalogMetadata** | [**ObjectCatalogMetadata**](ObjectCatalogMetadata.md)| JSON to store | |
 
 ### Return type
 
-[**AddCatalogMetadataRequest**](AddCatalogMetadataRequest.md)
+[**ObjectCatalogMetadata**](ObjectCatalogMetadata.md)
 
 ### Authorization
 

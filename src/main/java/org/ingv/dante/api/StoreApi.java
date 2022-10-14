@@ -27,7 +27,6 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import org.ingv.dante.model.AddCatalogMetadataRequest;
 import org.ingv.dante.model.AddCatalogRequest;
 import org.ingv.dante.model.AddEvent201Response;
 import org.ingv.dante.model.AddFocalmechanism201Response;
@@ -43,6 +42,7 @@ import org.ingv.dante.model.AddOriginRequest;
 import org.ingv.dante.model.AddStrongmotion201Response;
 import org.ingv.dante.model.AddStrongmotionRequest;
 import org.ingv.dante.model.GetEvent200Response;
+import org.ingv.dante.model.ObjectCatalogMetadata;
 import org.ingv.dante.model.ObjectTableLocalspace;
 import org.ingv.dante.model.ObjectTableProvenance;
 import org.ingv.dante.model.ObjectTableTypeEvent;
@@ -246,7 +246,7 @@ public class StoreApi {
     }
     /**
      * Build call for addCatalogMetadata
-     * @param addCatalogMetadataRequest JSON to store (required)
+     * @param objectCatalogMetadata JSON to store (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -262,7 +262,7 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addCatalogMetadataCall(AddCatalogMetadataRequest addCatalogMetadataRequest, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call addCatalogMetadataCall(ObjectCatalogMetadata objectCatalogMetadata, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -276,10 +276,10 @@ public class StoreApi {
             basePath = null;
         }
 
-        Object localVarPostBody = addCatalogMetadataRequest;
+        Object localVarPostBody = objectCatalogMetadata;
 
         // create path and map variables
-        String localVarPath = "/quakedb/v1/catalog-metadata";
+        String localVarPath = "/quakedb/table/v1/catalog-metadata";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -308,15 +308,15 @@ public class StoreApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call addCatalogMetadataValidateBeforeCall(AddCatalogMetadataRequest addCatalogMetadataRequest, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call addCatalogMetadataValidateBeforeCall(ObjectCatalogMetadata objectCatalogMetadata, final ApiCallback _callback) throws ApiException {
         
-        // verify the required parameter 'addCatalogMetadataRequest' is set
-        if (addCatalogMetadataRequest == null) {
-            throw new ApiException("Missing the required parameter 'addCatalogMetadataRequest' when calling addCatalogMetadata(Async)");
+        // verify the required parameter 'objectCatalogMetadata' is set
+        if (objectCatalogMetadata == null) {
+            throw new ApiException("Missing the required parameter 'objectCatalogMetadata' when calling addCatalogMetadata(Async)");
         }
         
 
-        okhttp3.Call localVarCall = addCatalogMetadataCall(addCatalogMetadataRequest, _callback);
+        okhttp3.Call localVarCall = addCatalogMetadataCall(objectCatalogMetadata, _callback);
         return localVarCall;
 
     }
@@ -324,8 +324,8 @@ public class StoreApi {
     /**
      * Add a new catalog to the DB
      * This API is used to add a catalog object.
-     * @param addCatalogMetadataRequest JSON to store (required)
-     * @return AddCatalogMetadataRequest
+     * @param objectCatalogMetadata JSON to store (required)
+     * @return ObjectCatalogMetadata
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -339,16 +339,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public AddCatalogMetadataRequest addCatalogMetadata(AddCatalogMetadataRequest addCatalogMetadataRequest) throws ApiException {
-        ApiResponse<AddCatalogMetadataRequest> localVarResp = addCatalogMetadataWithHttpInfo(addCatalogMetadataRequest);
+    public ObjectCatalogMetadata addCatalogMetadata(ObjectCatalogMetadata objectCatalogMetadata) throws ApiException {
+        ApiResponse<ObjectCatalogMetadata> localVarResp = addCatalogMetadataWithHttpInfo(objectCatalogMetadata);
         return localVarResp.getData();
     }
 
     /**
      * Add a new catalog to the DB
      * This API is used to add a catalog object.
-     * @param addCatalogMetadataRequest JSON to store (required)
-     * @return ApiResponse&lt;AddCatalogMetadataRequest&gt;
+     * @param objectCatalogMetadata JSON to store (required)
+     * @return ApiResponse&lt;ObjectCatalogMetadata&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -362,16 +362,16 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AddCatalogMetadataRequest> addCatalogMetadataWithHttpInfo(AddCatalogMetadataRequest addCatalogMetadataRequest) throws ApiException {
-        okhttp3.Call localVarCall = addCatalogMetadataValidateBeforeCall(addCatalogMetadataRequest, null);
-        Type localVarReturnType = new TypeToken<AddCatalogMetadataRequest>(){}.getType();
+    public ApiResponse<ObjectCatalogMetadata> addCatalogMetadataWithHttpInfo(ObjectCatalogMetadata objectCatalogMetadata) throws ApiException {
+        okhttp3.Call localVarCall = addCatalogMetadataValidateBeforeCall(objectCatalogMetadata, null);
+        Type localVarReturnType = new TypeToken<ObjectCatalogMetadata>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * Add a new catalog to the DB (asynchronously)
      * This API is used to add a catalog object.
-     * @param addCatalogMetadataRequest JSON to store (required)
+     * @param objectCatalogMetadata JSON to store (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -387,10 +387,10 @@ public class StoreApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call addCatalogMetadataAsync(AddCatalogMetadataRequest addCatalogMetadataRequest, final ApiCallback<AddCatalogMetadataRequest> _callback) throws ApiException {
+    public okhttp3.Call addCatalogMetadataAsync(ObjectCatalogMetadata objectCatalogMetadata, final ApiCallback<ObjectCatalogMetadata> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = addCatalogMetadataValidateBeforeCall(addCatalogMetadataRequest, _callback);
-        Type localVarReturnType = new TypeToken<AddCatalogMetadataRequest>(){}.getType();
+        okhttp3.Call localVarCall = addCatalogMetadataValidateBeforeCall(objectCatalogMetadata, _callback);
+        Type localVarReturnType = new TypeToken<ObjectCatalogMetadata>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

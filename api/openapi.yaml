@@ -1359,6 +1359,7 @@ paths:
       tags:
       - get
       x-accepts: application/json
+  /quakedb/table/v1/catalog-metadata:
     post:
       description: This API is used to add a catalog object.
       operationId: addCatalogMetadata
@@ -1366,7 +1367,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/addCatalogMetadata_request'
+              $ref: '#/components/schemas/ObjectCatalogMetadata'
         description: JSON to store
         required: true
       responses:
@@ -1422,7 +1423,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/addCatalogMetadata_request'
+                $ref: '#/components/schemas/ObjectCatalogMetadata'
           description: record inserted
           headers:
             Cache-Control:
@@ -11455,18 +11456,6 @@ components:
             $ref: '#/components/schemas/ObjectCatalogMetadata'
           type: array
       type: object
-    addCatalogMetadata_request:
-      example:
-        data:
-          inserted: 2016-06-22T16:52:06.26Z
-          name: TDMT-INGV
-          description: Auto added
-          modified: 2016-06-22T16:52:06.26Z
-          id: 14932631
-          doi: 10.13127/TDMT
-      properties:
-        data:
-          $ref: '#/components/schemas/ObjectCatalogMetadata'
     getCatalog_200_response:
       example:
         data:

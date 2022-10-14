@@ -14,7 +14,6 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
-import org.ingv.dante.model.AddCatalogMetadataRequest;
 import org.ingv.dante.model.AddCatalogRequest;
 import org.ingv.dante.model.AddEvent201Response;
 import org.ingv.dante.model.AddFocalmechanism201Response;
@@ -30,6 +29,7 @@ import org.ingv.dante.model.AddOriginRequest;
 import org.ingv.dante.model.AddStrongmotion201Response;
 import org.ingv.dante.model.AddStrongmotionRequest;
 import org.ingv.dante.model.GetEvent200Response;
+import org.ingv.dante.model.ObjectCatalogMetadata;
 import org.ingv.dante.model.ObjectTableLocalspace;
 import org.ingv.dante.model.ObjectTableProvenance;
 import org.ingv.dante.model.ObjectTableTypeEvent;
@@ -75,8 +75,8 @@ public class StoreApiTest {
      */
     @Test
     public void addCatalogMetadataTest() throws ApiException {
-        AddCatalogMetadataRequest addCatalogMetadataRequest = null;
-        AddCatalogMetadataRequest response = api.addCatalogMetadata(addCatalogMetadataRequest);
+        ObjectCatalogMetadata objectCatalogMetadata = null;
+        ObjectCatalogMetadata response = api.addCatalogMetadata(objectCatalogMetadata);
         // TODO: test validations
     }
 

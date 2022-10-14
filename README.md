@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.60.0-dev
-  - Build date: 2022-10-13T16:30:03.457629Z[Etc/UTC]
+  - Build date: 2022-10-14T14:31:05.491465Z[Etc/UTC]
 
   
 
@@ -169,7 +169,7 @@ Class | Method | HTTP request | Description
 *GetApi* | [**getTypeMagnitude**](docs/GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s).
 *GetApi* | [**getTypeOrigin**](docs/GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s).
 *StoreApi* | [**addCatalog**](docs/StoreApi.md#addCatalog) | **POST** /quakedb/v1/catalog | Add a new catalog to the DB
-*StoreApi* | [**addCatalogMetadata**](docs/StoreApi.md#addCatalogMetadata) | **POST** /quakedb/v1/catalog-metadata | Add a new catalog to the DB
+*StoreApi* | [**addCatalogMetadata**](docs/StoreApi.md#addCatalogMetadata) | **POST** /quakedb/table/v1/catalog-metadata | Add a new catalog to the DB
 *StoreApi* | [**addEvent**](docs/StoreApi.md#addEvent) | **POST** /quakedb/v1/event | Add a new event to the DB
 *StoreApi* | [**addFocalmechanism**](docs/StoreApi.md#addFocalmechanism) | **POST** /quakedb/v1/focalmechanism | Add a new focalmechanism(s) to the DB
 *StoreApi* | [**addLocalspace**](docs/StoreApi.md#addLocalspace) | **POST** /quakedb/table/v1/localspace | Add a new localspace to the DB
@@ -196,7 +196,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [AddCatalogMetadataRequest](docs/AddCatalogMetadataRequest.md)
  - [AddCatalogRequest](docs/AddCatalogRequest.md)
  - [AddEvent201Response](docs/AddEvent201Response.md)
  - [AddEvent201ResponseData](docs/AddEvent201ResponseData.md)

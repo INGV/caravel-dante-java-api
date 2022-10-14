@@ -6,7 +6,6 @@ README.md
 api/openapi.yaml
 build.gradle
 build.sbt
-docs/AddCatalogMetadataRequest.md
 docs/AddCatalogRequest.md
 docs/AddEvent201Response.md
 docs/AddEvent201ResponseData.md
@@ -189,7 +188,6 @@ src/main/java/org/ingv/dante/auth/Authentication.java
 src/main/java/org/ingv/dante/auth/HttpBasicAuth.java
 src/main/java/org/ingv/dante/auth/HttpBearerAuth.java
 src/main/java/org/ingv/dante/model/AbstractOpenApiSchema.java
-src/main/java/org/ingv/dante/model/AddCatalogMetadataRequest.java
 src/main/java/org/ingv/dante/model/AddCatalogRequest.java
 src/main/java/org/ingv/dante/model/AddEvent201Response.java
 src/main/java/org/ingv/dante/model/AddEvent201ResponseData.java
@@ -339,7 +337,6 @@ src/test/java/org/ingv/dante/api/GetApiTest.java
 src/test/java/org/ingv/dante/api/StoreApiTest.java
 src/test/java/org/ingv/dante/api/UpdateApiTest.java
 src/test/java/org/ingv/dante/api/UserApiTest.java
-src/test/java/org/ingv/dante/model/AddCatalogMetadataRequestTest.java
 src/test/java/org/ingv/dante/model/AddCatalogRequestTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventLocalspaceTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventOriginsInnerAllOfTest.java
