@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorTdmt
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-14T15:08:53.154675Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T09:24:53.100024Z[Etc/UTC]")
 public class ObjectMomenttensorTdmt {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
