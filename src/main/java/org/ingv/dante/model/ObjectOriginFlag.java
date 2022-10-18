@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginFlag
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T14:28:38.806820Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-18T11:27:13.813827Z[Etc/UTC]")
 public class ObjectOriginFlag {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -74,6 +74,10 @@ public class ObjectOriginFlag {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
   private Float value;
+
+  public static final String SERIALIZED_NAME_ORIGINID = "originid";
+  @SerializedName(SERIALIZED_NAME_ORIGINID)
+  private Long originid;
 
   public ObjectOriginFlag() {
   }
@@ -200,6 +204,29 @@ public class ObjectOriginFlag {
     this.value = value;
   }
 
+
+  public ObjectOriginFlag originid(Long originid) {
+    
+    this.originid = originid;
+    return this;
+  }
+
+   /**
+   * Unique incremental id | bigint(20)
+   * @return originid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
+  public Long getOriginid() {
+    return originid;
+  }
+
+
+  public void setOriginid(Long originid) {
+    this.originid = originid;
+  }
+
   /**
    * A container for additional, undeclared properties.
    * This is a holder for any undeclared properties as specified with
@@ -251,7 +278,8 @@ public class ObjectOriginFlag {
         Objects.equals(this.inserted, objectOriginFlag.inserted) &&
         Objects.equals(this.name, objectOriginFlag.name) &&
         Objects.equals(this.note, objectOriginFlag.note) &&
-        Objects.equals(this.value, objectOriginFlag.value)&&
+        Objects.equals(this.value, objectOriginFlag.value) &&
+        Objects.equals(this.originid, objectOriginFlag.originid)&&
         Objects.equals(this.additionalProperties, objectOriginFlag.additionalProperties);
   }
 
@@ -261,7 +289,7 @@ public class ObjectOriginFlag {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, name, note, value, additionalProperties);
+    return Objects.hash(id, modified, inserted, name, note, value, originid, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -281,6 +309,7 @@ public class ObjectOriginFlag {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    note: ").append(toIndentedString(note)).append("\n");
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    originid: ").append(toIndentedString(originid)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -310,6 +339,7 @@ public class ObjectOriginFlag {
     openapiFields.add("name");
     openapiFields.add("note");
     openapiFields.add("value");
+    openapiFields.add("originid");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEvent201ResponseDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-17T14:28:38.806820Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-18T11:27:13.813827Z[Etc/UTC]")
 public class AddEvent201ResponseDataEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

@@ -8441,6 +8441,7 @@ components:
       example:
         note: my note
         inserted: 2016-06-22T16:52:06.26Z
+        originid: 14932631
         name: DPC
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
@@ -8478,6 +8479,11 @@ components:
           example: 1
           format: float
           type: number
+        originid:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
       type: object
     ObjectOriginFlagPostOutput:
       example:
@@ -14209,12 +14215,14 @@ components:
         data:
         - note: my note
           inserted: 2016-06-22T16:52:06.26Z
+          originid: 14932631
           name: DPC
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           value: 1
         - note: my note
           inserted: 2016-06-22T16:52:06.26Z
+          originid: 14932631
           name: DPC
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631

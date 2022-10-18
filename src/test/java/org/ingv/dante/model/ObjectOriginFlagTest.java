@@ -89,4 +89,12 @@ public class ObjectOriginFlagTest {
         // TODO: test value
     }
 
+    /**
+     * Test the property 'originid'
+     */
+    @Test
+    public void originidTest() {
+        // TODO: test originid
+    }
+
 }
