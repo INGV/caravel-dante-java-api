@@ -6,6 +6,7 @@ README.md
 api/openapi.yaml
 build.gradle
 build.sbt
+docs/AddCatalogRequest.md
 docs/AddEvent201Response.md
 docs/AddEvent201ResponseData.md
 docs/AddEvent201ResponseDataEvent.md
@@ -52,6 +53,7 @@ docs/DeleteApi.md
 docs/EarthwormApiApi.md
 docs/GetApi.md
 docs/GetCatalog200Response.md
+docs/GetCatalogMetadata200Response.md
 docs/GetEvent200Response.md
 docs/GetEvent200ResponseData.md
 docs/GetEventsGroup200Response.md
@@ -88,6 +90,7 @@ docs/MetaDefinition.md
 docs/MetaDefinitionLinksInner.md
 docs/ObjectArrival.md
 docs/ObjectCatalog.md
+docs/ObjectCatalogMetadata.md
 docs/ObjectEvent.md
 docs/ObjectFocalmechanism.md
 docs/ObjectFocalmechanismPostOutput.md
@@ -125,6 +128,9 @@ docs/ObjectTableTypeEvent.md
 docs/ObjectTableTypeMagnitude.md
 docs/ObjectTableTypeOrigin.md
 docs/ObjectTypeOrigin.md
+docs/ObjectVwCatalogInner.md
+docs/ObjectVwCatalogInnerAllOf.md
+docs/ObjectVwCatalogInnerAllOfCatalog.md
 docs/PickEmersio.md
 docs/PickFirstmotion.md
 docs/PickScnlSchema.md
@@ -182,6 +188,7 @@ src/main/java/org/ingv/dante/auth/Authentication.java
 src/main/java/org/ingv/dante/auth/HttpBasicAuth.java
 src/main/java/org/ingv/dante/auth/HttpBearerAuth.java
 src/main/java/org/ingv/dante/model/AbstractOpenApiSchema.java
+src/main/java/org/ingv/dante/model/AddCatalogRequest.java
 src/main/java/org/ingv/dante/model/AddEvent201Response.java
 src/main/java/org/ingv/dante/model/AddEvent201ResponseData.java
 src/main/java/org/ingv/dante/model/AddEvent201ResponseDataEvent.java
@@ -225,6 +232,7 @@ src/main/java/org/ingv/dante/model/AddStrongmotion201Response.java
 src/main/java/org/ingv/dante/model/AddStrongmotionRequest.java
 src/main/java/org/ingv/dante/model/AddStrongmotionRequestData.java
 src/main/java/org/ingv/dante/model/GetCatalog200Response.java
+src/main/java/org/ingv/dante/model/GetCatalogMetadata200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200ResponseData.java
 src/main/java/org/ingv/dante/model/GetEventsGroup200Response.java
@@ -261,6 +269,7 @@ src/main/java/org/ingv/dante/model/MetaDefinition.java
 src/main/java/org/ingv/dante/model/MetaDefinitionLinksInner.java
 src/main/java/org/ingv/dante/model/ObjectArrival.java
 src/main/java/org/ingv/dante/model/ObjectCatalog.java
+src/main/java/org/ingv/dante/model/ObjectCatalogMetadata.java
 src/main/java/org/ingv/dante/model/ObjectEvent.java
 src/main/java/org/ingv/dante/model/ObjectFocalmechanism.java
 src/main/java/org/ingv/dante/model/ObjectFocalmechanismPostOutput.java
@@ -298,6 +307,9 @@ src/main/java/org/ingv/dante/model/ObjectTableTypeEvent.java
 src/main/java/org/ingv/dante/model/ObjectTableTypeMagnitude.java
 src/main/java/org/ingv/dante/model/ObjectTableTypeOrigin.java
 src/main/java/org/ingv/dante/model/ObjectTypeOrigin.java
+src/main/java/org/ingv/dante/model/ObjectVwCatalogInner.java
+src/main/java/org/ingv/dante/model/ObjectVwCatalogInnerAllOf.java
+src/main/java/org/ingv/dante/model/ObjectVwCatalogInnerAllOfCatalog.java
 src/main/java/org/ingv/dante/model/PickEmersio.java
 src/main/java/org/ingv/dante/model/PickFirstmotion.java
 src/main/java/org/ingv/dante/model/PickScnlSchema.java
@@ -325,6 +337,7 @@ src/test/java/org/ingv/dante/api/GetApiTest.java
 src/test/java/org/ingv/dante/api/StoreApiTest.java
 src/test/java/org/ingv/dante/api/UpdateApiTest.java
 src/test/java/org/ingv/dante/api/UserApiTest.java
+src/test/java/org/ingv/dante/model/AddCatalogRequestTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventLocalspaceTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventOriginsInnerAllOfTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventOriginsInnerTest.java
@@ -368,6 +381,7 @@ src/test/java/org/ingv/dante/model/AddStrongmotion201ResponseTest.java
 src/test/java/org/ingv/dante/model/AddStrongmotionRequestDataTest.java
 src/test/java/org/ingv/dante/model/AddStrongmotionRequestTest.java
 src/test/java/org/ingv/dante/model/GetCatalog200ResponseTest.java
+src/test/java/org/ingv/dante/model/GetCatalogMetadata200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseDataTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEventsGroup200ResponseTest.java
@@ -403,6 +417,7 @@ src/test/java/org/ingv/dante/model/MagnitudeSchemaTest.java
 src/test/java/org/ingv/dante/model/MetaDefinitionLinksInnerTest.java
 src/test/java/org/ingv/dante/model/MetaDefinitionTest.java
 src/test/java/org/ingv/dante/model/ObjectArrivalTest.java
+src/test/java/org/ingv/dante/model/ObjectCatalogMetadataTest.java
 src/test/java/org/ingv/dante/model/ObjectCatalogTest.java
 src/test/java/org/ingv/dante/model/ObjectEventTest.java
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputFocalmechanismsInnerTest.java
@@ -441,6 +456,9 @@ src/test/java/org/ingv/dante/model/ObjectTableTypeEventTest.java
 src/test/java/org/ingv/dante/model/ObjectTableTypeMagnitudeTest.java
 src/test/java/org/ingv/dante/model/ObjectTableTypeOriginTest.java
 src/test/java/org/ingv/dante/model/ObjectTypeOriginTest.java
+src/test/java/org/ingv/dante/model/ObjectVwCatalogInnerAllOfCatalogTest.java
+src/test/java/org/ingv/dante/model/ObjectVwCatalogInnerAllOfTest.java
+src/test/java/org/ingv/dante/model/ObjectVwCatalogInnerTest.java
 src/test/java/org/ingv/dante/model/PickEmersioTest.java
 src/test/java/org/ingv/dante/model/PickFirstmotionTest.java
 src/test/java/org/ingv/dante/model/PickScnlSchemaEwLogoTest.java

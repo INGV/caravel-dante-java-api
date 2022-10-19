@@ -5,6 +5,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**getCatalog**](GetApi.md#getCatalog) | **GET** /quakedb/v1/catalog | This API returns the catalogs. |
+| [**getCatalogMetadata**](GetApi.md#getCatalogMetadata) | **GET** /quakedb/v1/catalog-metadata | This API returns the catalog-metadata. |
 | [**getEvent**](GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events. |
 | [**getEvents**](GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance. |
 | [**getEventsGroup**](GetApi.md#getEventsGroup) | **GET** /quakedb/v1/events-group | This API returns the preferred origin and the preferred magnitude from all clusterd events. |
@@ -24,7 +25,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="getCatalog"></a>
 # **getCatalog**
-> GetCatalog200Response getCatalog(eventid, originid, magnitudeid, name, doi, wherenamelike)
+> GetCatalog200Response getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike)
 
 This API returns the catalogs.
 
@@ -45,14 +46,40 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
+    OffsetDateTime starttime = OffsetDateTime.now(); // OffsetDateTime | Select date start (i.e. 2016-06-22T16:52:06.260Z).
+    OffsetDateTime endtime = OffsetDateTime.now(); // OffsetDateTime | Select date end (i.e. 2016-06-22T16:52:06.260Z).
+    Double minlat = 3.4D; // Double | Specify southern boundary for search in WGS84 (i.e. 39.12).
+    Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
+    Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
+    Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+    Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
+    Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
+    Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
+    Double maxradius = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5).
+    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+    Double minmag = 3.4D; // Double | Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5).
+    Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
+    Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
+    Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
+    Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
+    Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
+    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
+    String orderby = "event_id-asc"; // String | Select order
+    Long eventGroupId = 56L; // Long | Select events with same event_group_id.
+    Long idLocalspace = 56L; // Long | Localspace Id.
+    Integer limit = 56; // Integer | Limit the results to the specified number of records.
+    Integer page = 56; // Integer | Pagination.
     Long eventid = 56L; // Long | Select by event id.
     Long originid = 56L; // Long | Select by origin id.
     Long magnitudeid = 56L; // Long | Select by magnitude id.
-    String name = "name_example"; // String | Catalog name
-    String doi = "doi_example"; // String | DOI
+    String name = "name_example"; // String | Catalog name.
+    String doi = "doi_example"; // String | Catalog DOI.
     String wherenamelike = "wherenamelike_example"; // String | Select data by \"like\" operator.
     try {
-      GetCatalog200Response result = apiInstance.getCatalog(eventid, originid, magnitudeid, name, doi, wherenamelike);
+      GetCatalog200Response result = apiInstance.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getCatalog");
@@ -69,16 +96,114 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **starttime** | **OffsetDateTime**| Select date start (i.e. 2016-06-22T16:52:06.260Z). | [optional] |
+| **endtime** | **OffsetDateTime**| Select date end (i.e. 2016-06-22T16:52:06.260Z). | [optional] |
+| **minlat** | **Double**| Specify southern boundary for search in WGS84 (i.e. 39.12). | [optional] |
+| **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
+| **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
+| **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
+| **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
+| **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
+| **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
+| **maxradius** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). | [optional] |
+| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
+| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
+| **minmag** | **Double**| Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). | [optional] |
+| **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
+| **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
+| **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
+| **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
+| **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
+| **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
+| **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
+| **idLocalspace** | **Long**| Localspace Id. | [optional] |
+| **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
+| **page** | **Integer**| Pagination. | [optional] |
 | **eventid** | **Long**| Select by event id. | [optional] |
 | **originid** | **Long**| Select by origin id. | [optional] |
 | **magnitudeid** | **Long**| Select by magnitude id. | [optional] |
-| **name** | **String**| Catalog name | [optional] |
-| **doi** | **String**| DOI | [optional] |
+| **name** | **String**| Catalog name. | [optional] |
+| **doi** | **String**| Catalog DOI. | [optional] |
 | **wherenamelike** | **String**| Select data by \&quot;like\&quot; operator. | [optional] |
 
 ### Return type
 
 [**GetCatalog200Response**](GetCatalog200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
+<a name="getCatalogMetadata"></a>
+# **getCatalogMetadata**
+> GetCatalogMetadata200Response getCatalogMetadata(name, doi, wherenamelike)
+
+This API returns the catalog-metadata.
+
+This API returns the catalog-metadata.
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.GetApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+
+    GetApi apiInstance = new GetApi(defaultClient);
+    String name = "name_example"; // String | Catalog name.
+    String doi = "doi_example"; // String | Catalog DOI.
+    String wherenamelike = "wherenamelike_example"; // String | Select data by \"like\" operator.
+    try {
+      GetCatalogMetadata200Response result = apiInstance.getCatalogMetadata(name, doi, wherenamelike);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GetApi#getCatalogMetadata");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **name** | **String**| Catalog name. | [optional] |
+| **doi** | **String**| Catalog DOI. | [optional] |
+| **wherenamelike** | **String**| Select data by \&quot;like\&quot; operator. | [optional] |
+
+### Return type
+
+[**GetCatalogMetadata200Response**](GetCatalogMetadata200Response.md)
 
 ### Authorization
 
