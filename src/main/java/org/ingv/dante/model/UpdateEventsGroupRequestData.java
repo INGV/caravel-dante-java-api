@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventsGroupRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-24T09:54:52.748568Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-24T11:55:06.575997Z[Etc/UTC]")
 public class UpdateEventsGroupRequestData {
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
@@ -58,6 +58,10 @@ public class UpdateEventsGroupRequestData {
   public static final String SERIALIZED_NAME_EVENTIDS = "eventids";
   @SerializedName(SERIALIZED_NAME_EVENTIDS)
   private List<Long> eventids = null;
+
+  public static final String SERIALIZED_NAME_EVENT_GROUP_IDS = "event_group_ids";
+  @SerializedName(SERIALIZED_NAME_EVENT_GROUP_IDS)
+  private List<Long> eventGroupIds = null;
 
   public UpdateEventsGroupRequestData() {
   }
@@ -115,6 +119,37 @@ public class UpdateEventsGroupRequestData {
     this.eventids = eventids;
   }
 
+
+  public UpdateEventsGroupRequestData eventGroupIds(List<Long> eventGroupIds) {
+    
+    this.eventGroupIds = eventGroupIds;
+    return this;
+  }
+
+  public UpdateEventsGroupRequestData addEventGroupIdsItem(Long eventGroupIdsItem) {
+    if (this.eventGroupIds == null) {
+      this.eventGroupIds = new ArrayList<>();
+    }
+    this.eventGroupIds.add(eventGroupIdsItem);
+    return this;
+  }
+
+   /**
+   * Get eventGroupIds
+   * @return eventGroupIds
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "[22222,33333,44444]", value = "")
+
+  public List<Long> getEventGroupIds() {
+    return eventGroupIds;
+  }
+
+
+  public void setEventGroupIds(List<Long> eventGroupIds) {
+    this.eventGroupIds = eventGroupIds;
+  }
+
   /**
    * A container for additional, undeclared properties.
    * This is a holder for any undeclared properties as specified with
@@ -162,13 +197,14 @@ public class UpdateEventsGroupRequestData {
     }
     UpdateEventsGroupRequestData updateEventsGroupRequestData = (UpdateEventsGroupRequestData) o;
     return Objects.equals(this.eventGroupId, updateEventsGroupRequestData.eventGroupId) &&
-        Objects.equals(this.eventids, updateEventsGroupRequestData.eventids)&&
+        Objects.equals(this.eventids, updateEventsGroupRequestData.eventids) &&
+        Objects.equals(this.eventGroupIds, updateEventsGroupRequestData.eventGroupIds)&&
         Objects.equals(this.additionalProperties, updateEventsGroupRequestData.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventGroupId, eventids, additionalProperties);
+    return Objects.hash(eventGroupId, eventids, eventGroupIds, additionalProperties);
   }
 
   @Override
@@ -177,6 +213,7 @@ public class UpdateEventsGroupRequestData {
     sb.append("class UpdateEventsGroupRequestData {\n");
     sb.append("    eventGroupId: ").append(toIndentedString(eventGroupId)).append("\n");
     sb.append("    eventids: ").append(toIndentedString(eventids)).append("\n");
+    sb.append("    eventGroupIds: ").append(toIndentedString(eventGroupIds)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -202,6 +239,7 @@ public class UpdateEventsGroupRequestData {
     openapiFields = new HashSet<String>();
     openapiFields.add("event_group_id");
     openapiFields.add("eventids");
+    openapiFields.add("event_group_ids");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -224,6 +262,10 @@ public class UpdateEventsGroupRequestData {
       // ensure the json data is an array
       if ((jsonObj.get("eventids") != null && !jsonObj.get("eventids").isJsonNull()) && !jsonObj.get("eventids").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `eventids` to be an array in the JSON string but got `%s`", jsonObj.get("eventids").toString()));
+      }
+      // ensure the json data is an array
+      if ((jsonObj.get("event_group_ids") != null && !jsonObj.get("event_group_ids").isJsonNull()) && !jsonObj.get("event_group_ids").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `event_group_ids` to be an array in the JSON string but got `%s`", jsonObj.get("event_group_ids").toString()));
       }
   }
 

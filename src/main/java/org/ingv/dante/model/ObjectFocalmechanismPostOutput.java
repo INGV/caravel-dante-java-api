@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanismPostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-24T09:54:52.748568Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-24T11:55:06.575997Z[Etc/UTC]")
 public class ObjectFocalmechanismPostOutput {
   public static final String SERIALIZED_NAME_FOCALMECHANISMS = "focalmechanisms";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)

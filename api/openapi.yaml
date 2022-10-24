@@ -11527,6 +11527,15 @@ components:
             format: int64
             type: integer
           type: array
+        event_group_ids:
+          example:
+          - 22222
+          - 33333
+          - 44444
+          items:
+            format: int64
+            type: integer
+          type: array
     updateEventsGroup_request:
       properties:
         data:

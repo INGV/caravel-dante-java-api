@@ -57,4 +57,12 @@ public class UpdateEventsGroupRequestDataTest {
         // TODO: test eventids
     }
 
+    /**
+     * Test the property 'eventGroupIds'
+     */
+    @Test
+    public void eventGroupIdsTest() {
+        // TODO: test eventGroupIds
+    }
+
 }
