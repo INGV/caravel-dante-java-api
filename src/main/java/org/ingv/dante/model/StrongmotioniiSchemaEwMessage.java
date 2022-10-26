@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-25T15:48:36.411783Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-10-26T13:29:53.272137Z[Etc/UTC]")
 public class StrongmotioniiSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
