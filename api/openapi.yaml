@@ -6066,6 +6066,7 @@ components:
           type: string
       required:
       - name
+      - softwarename
       type: object
     ObjectMagnitudesOriginsEventsAndEventsGroup:
       example:
