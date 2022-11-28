@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: http://terremoti.ingv.it/webservices_and_software
   title: Dante Web Services
-  version: 2.60.2
+  version: 2.61.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -6066,6 +6066,7 @@ components:
           type: string
       required:
       - name
+      - softwarename
       type: object
     ObjectMagnitudesOriginsEventsAndEventsGroup:
       example:
@@ -11523,6 +11524,15 @@ components:
           - 11111
           - 11121
           - 11131
+          items:
+            format: int64
+            type: integer
+          type: array
+        event_group_ids:
+          example:
+          - 22222
+          - 33333
+          - 44444
           items:
             format: int64
             type: integer
