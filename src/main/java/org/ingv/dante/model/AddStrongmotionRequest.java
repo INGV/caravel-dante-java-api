@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * AddStrongmotionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-29T10:59:10.793163Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-29T11:20:01.445849Z[Etc/UTC]")
 public class AddStrongmotionRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
