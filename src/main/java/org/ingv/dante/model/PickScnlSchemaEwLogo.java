@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlSchemaEwLogo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-29T14:07:50.310169Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-29T18:04:21.938448Z[Etc/UTC]")
 public class PickScnlSchemaEwLogo {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)

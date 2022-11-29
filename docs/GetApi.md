@@ -67,7 +67,7 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
-    String orderby = "event_id-asc"; // String | Select order
+    String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
@@ -117,7 +117,7 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
-| **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
@@ -341,7 +341,7 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
-    String orderby = "event_id-asc"; // String | Select order
+    String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
@@ -385,7 +385,7 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
-| **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
@@ -459,7 +459,7 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
-    String orderby = "event_id-asc"; // String | Select order
+    String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
@@ -503,7 +503,7 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
-| **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
@@ -641,7 +641,7 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
-    String orderby = "event_id-asc"; // String | Select order
+    String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
@@ -685,7 +685,7 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
-| **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
@@ -977,7 +977,7 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
-    String orderby = "event_id-asc"; // String | Select order
+    String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
@@ -1021,7 +1021,7 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
-| **orderby** | **String**| Select order | [optional] [enum: event_id-asc, event_id-desc, origin_ot-asc, origin_ot-desc, magnitude_mag-asc, magnitude_mag-desc] |
+| **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
