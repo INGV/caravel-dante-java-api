@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-29T18:02:40.909247Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-01T16:24:16.996569Z[Etc/UTC]")
 public class ObjectMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -226,8 +226,8 @@ public class ObjectMagnitude {
    * Magnitude value | double
    * @return mag
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "3.01", value = "Magnitude value | double")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "3.01", required = true, value = "Magnitude value | double")
 
   public Double getMag() {
     return mag;
@@ -746,6 +746,7 @@ public class ObjectMagnitude {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("mag");
     openapiRequiredFields.add("type_magnitude");
   }
 

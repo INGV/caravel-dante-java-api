@@ -8870,6 +8870,7 @@ components:
             $ref: '#/components/schemas/ObjectStationmagnitude'
           type: array
       required:
+      - mag
       - type_magnitude
       type: object
     ObjectMagnitudePostOutput:
