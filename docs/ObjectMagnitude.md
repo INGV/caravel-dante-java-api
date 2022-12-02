@@ -11,7 +11,7 @@
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
 |**idLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
-|**mag** | **Double** | Magnitude value | double |  [optional] |
+|**mag** | **Double** | Magnitude value | double |  |
 |**lowerUncertainty** | **Double** | Magnitude lower_uncertainty | double |  [optional] |
 |**upperUncertainty** | **Double** | Magnitude upper_uncertainty | double |  [optional] |
 |**confidenceLevel** | **Float** | Integer numer for confidence level type (68.3 1 sigma, xx &#x3D;2 sigma, 99% 3 sigma) | decimal(5.2) |  [optional] |
