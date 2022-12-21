@@ -27,6 +27,7 @@ import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
 import org.ingv.dante.model.ObjectStationmagnitudeTypeAmplitude;
+import org.ingv.dante.model.TypeAmplitudeCategory;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -52,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStationmagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-19T10:50:07.627038Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-21T11:47:22.340473Z[Etc/UTC]")
 public class ObjectStationmagnitude {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -72,7 +73,7 @@ public class ObjectStationmagnitude {
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
   @SerializedName(SERIALIZED_NAME_CATEGORY)
-  private String category;
+  private TypeAmplitudeCategory category;
 
   public static final String SERIALIZED_NAME_TIMEWINDOW_REFERENCE = "timewindow_reference";
   @SerializedName(SERIALIZED_NAME_TIMEWINDOW_REFERENCE)
@@ -175,14 +176,12 @@ public class ObjectStationmagnitude {
 
   
   public ObjectStationmagnitude(
-     String category, 
      OffsetDateTime timewindowReference, 
      Long id, 
      OffsetDateTime modified, 
      OffsetDateTime inserted
   ) {
     this();
-    this.category = category;
     this.timewindowReference = timewindowReference;
     this.id = id;
     this.modified = modified;
@@ -281,18 +280,27 @@ public class ObjectStationmagnitude {
   }
 
 
+  public ObjectStationmagnitude category(TypeAmplitudeCategory category) {
+    
+    this.category = category;
+    return this;
+  }
+
    /**
-   * The way the waveform trace is evaluated to derive an amplitude value.
+   * Get category
    * @return category
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Other", value = "The way the waveform trace is evaluated to derive an amplitude value.")
+  @ApiModelProperty(value = "")
 
-  public String getCategory() {
+  public TypeAmplitudeCategory getCategory() {
     return category;
   }
 
 
+  public void setCategory(TypeAmplitudeCategory category) {
+    this.category = category;
+  }
 
 
    /**
@@ -1028,9 +1036,6 @@ public class ObjectStationmagnitude {
       }
       if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
-      }
-      if ((jsonObj.get("category") != null && !jsonObj.get("category").isJsonNull()) && !jsonObj.get("category").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `category` to be a primitive type in the JSON string but got `%s`", jsonObj.get("category").toString()));
       }
       // validate the optional field `type_amplitude`
       if (jsonObj.get("type_amplitude") != null && !jsonObj.get("type_amplitude").isJsonNull()) {

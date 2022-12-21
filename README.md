@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.65.0-dev
-  - Build date: 2022-12-19T10:50:07.627038Z[Etc/UTC]
+  - Build date: 2022-12-21T11:47:22.340473Z[Etc/UTC]
 
   
 
@@ -331,6 +331,7 @@ Class | Method | HTTP request | Description
  - [StrongmotioniiSchemaEwLogo](docs/StrongmotioniiSchemaEwLogo.md)
  - [StrongmotioniiSchemaEwMessage](docs/StrongmotioniiSchemaEwMessage.md)
  - [StrongmotioniiSchemaEwMessageRSAInner](docs/StrongmotioniiSchemaEwMessageRSAInner.md)
+ - [TypeAmplitudeCategory](docs/TypeAmplitudeCategory.md)
  - [TypeOriginName](docs/TypeOriginName.md)
  - [UpdateEvent200Response](docs/UpdateEvent200Response.md)
  - [UpdateEvent200ResponseData](docs/UpdateEvent200ResponseData.md)

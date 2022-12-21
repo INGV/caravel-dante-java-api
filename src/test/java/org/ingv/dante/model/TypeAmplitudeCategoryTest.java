@@ -11,29 +11,24 @@
  */
 
 
-package org.ingv.dante;
+package org.ingv.dante.model;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-21T11:47:22.340473Z[Etc/UTC]")
-public class Configuration {
-    private static ApiClient defaultApiClient = new ApiClient();
+import io.swagger.annotations.ApiModel;
+import com.google.gson.annotations.SerializedName;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
+
+/**
+ * Model tests for TypeAmplitudeCategory
+ */
+public class TypeAmplitudeCategoryTest {
     /**
-     * Get the default API client, which would be used when creating API
-     * instances without providing an API client.
-     *
-     * @return Default API client
+     * Model tests for TypeAmplitudeCategory
      */
-    public static ApiClient getDefaultApiClient() {
-        return defaultApiClient;
+    @Test
+    public void testTypeAmplitudeCategory() {
+        // TODO: test TypeAmplitudeCategory
     }
 
-    /**
-     * Set the default API client, which would be used when creating API
-     * instances without providing an API client.
-     *
-     * @param apiClient API client
-     */
-    public static void setDefaultApiClient(ApiClient apiClient) {
-        defaultApiClient = apiClient;
-    }
 }
