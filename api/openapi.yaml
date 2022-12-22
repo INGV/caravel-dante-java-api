@@ -6375,6 +6375,272 @@ components:
         modified: 2016-06-22T16:52:06.26Z
         origins:
         - e1_dip: 7.386281948385884
+          err_lon_deg: 9.965781217890562
+          err_lat: 1.1730742509559433
+          nph_s: 1
+          modified: 2016-06-22T16:52:06.26Z
+          rms: 6.778324963048013
+          id: 14932631
+          magnitudes:
+          - type_magnitude: ML-VAX
+            nsta: 7
+            stationmagnitudes:
+            - amp1: -0.358
+              loc: "00"
+              amp2: 0.292
+              mag_correction: 0
+              type_amplitude:
+                unit: m/s
+                name: Acceleration
+              time1: 2017-04-28T06:34:15.35Z
+              time2: 2017-04-28T06:34:15.85Z
+              id_localspace: 182491
+              azimut: 161
+              mag: 3.04
+              inserted: 2016-06-22T16:52:06.26Z
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              modified: 2016-06-22T16:52:06.26Z
+              timewindow_reference: 2000-01-23T04:56:07.000+00:00
+              id: 14932631
+              net: IV
+              cha: HHZ
+              type_magnitude: ML-VAX
+              sta: ACER
+              period: 7.058770351582356
+              err_mag: 6.519180951018382
+              weight: 0.88
+              orig_distance: 161
+              is_used: false
+              pick_id: 14932631
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              ep_distance: 223.3
+              category: other
+              revised: 0
+            - amp1: -0.358
+              loc: "00"
+              amp2: 0.292
+              mag_correction: 0
+              type_amplitude:
+                unit: m/s
+                name: Acceleration
+              time1: 2017-04-28T06:34:15.35Z
+              time2: 2017-04-28T06:34:15.85Z
+              id_localspace: 182491
+              azimut: 161
+              mag: 3.04
+              inserted: 2016-06-22T16:52:06.26Z
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              modified: 2016-06-22T16:52:06.26Z
+              timewindow_reference: 2000-01-23T04:56:07.000+00:00
+              id: 14932631
+              net: IV
+              cha: HHZ
+              type_magnitude: ML-VAX
+              sta: ACER
+              period: 7.058770351582356
+              err_mag: 6.519180951018382
+              weight: 0.88
+              orig_distance: 161
+              is_used: false
+              pick_id: 14932631
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              ep_distance: 223.3
+              category: other
+              revised: 0
+            confidence_level: 68.3
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.704019297950036
+            id_localspace: 182491
+            mag: 3.01
+            azimut: 3.0937452
+            inserted: 2016-06-22T16:52:06.26Z
+            nsta_used: 9
+            provenance:
+              hostname: hew10.ingv.it
+              method: ToDo
+              name: INGV
+              description: Auto added
+              model: prem
+              program: IPO-EW__tdmt_invc.c
+              priority: 0
+              softwarename: software
+              version: hew1_mole
+              parameters: ToDo
+              username: ew
+            ncha_used: 27
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            ncha: 0
+            min_dist: 3.353193347011243
+            lower_uncertainty: 0.52
+          - type_magnitude: ML-VAX
+            nsta: 7
+            stationmagnitudes:
+            - amp1: -0.358
+              loc: "00"
+              amp2: 0.292
+              mag_correction: 0
+              type_amplitude:
+                unit: m/s
+                name: Acceleration
+              time1: 2017-04-28T06:34:15.35Z
+              time2: 2017-04-28T06:34:15.85Z
+              id_localspace: 182491
+              azimut: 161
+              mag: 3.04
+              inserted: 2016-06-22T16:52:06.26Z
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              modified: 2016-06-22T16:52:06.26Z
+              timewindow_reference: 2000-01-23T04:56:07.000+00:00
+              id: 14932631
+              net: IV
+              cha: HHZ
+              type_magnitude: ML-VAX
+              sta: ACER
+              period: 7.058770351582356
+              err_mag: 6.519180951018382
+              weight: 0.88
+              orig_distance: 161
+              is_used: false
+              pick_id: 14932631
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              ep_distance: 223.3
+              category: other
+              revised: 0
+            - amp1: -0.358
+              loc: "00"
+              amp2: 0.292
+              mag_correction: 0
+              type_amplitude:
+                unit: m/s
+                name: Acceleration
+              time1: 2017-04-28T06:34:15.35Z
+              time2: 2017-04-28T06:34:15.85Z
+              id_localspace: 182491
+              azimut: 161
+              mag: 3.04
+              inserted: 2016-06-22T16:52:06.26Z
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              modified: 2016-06-22T16:52:06.26Z
+              timewindow_reference: 2000-01-23T04:56:07.000+00:00
+              id: 14932631
+              net: IV
+              cha: HHZ
+              type_magnitude: ML-VAX
+              sta: ACER
+              period: 7.058770351582356
+              err_mag: 6.519180951018382
+              weight: 0.88
+              orig_distance: 161
+              is_used: false
+              pick_id: 14932631
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              ep_distance: 223.3
+              category: other
+              revised: 0
+            confidence_level: 68.3
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.704019297950036
+            id_localspace: 182491
+            mag: 3.01
+            azimut: 3.0937452
+            inserted: 2016-06-22T16:52:06.26Z
+            nsta_used: 9
+            provenance:
+              hostname: hew10.ingv.it
+              method: ToDo
+              name: INGV
+              description: Auto added
+              model: prem
+              program: IPO-EW__tdmt_invc.c
+              priority: 0
+              softwarename: software
+              version: hew1_mole
+              parameters: ToDo
+              username: ew
+            ncha_used: 27
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            ncha: 0
+            min_dist: 3.353193347011243
+            lower_uncertainty: 0.52
+          e0_dip: 3.616076749251911
+          lat: 45.492599
+          err_lon: 4.965218492984954
+          err_lat_deg: 5.025004791520295
+          err_ot: 9.369310271410669
+          e0_az: 9.301444
+          med_distance: 9.018348186070783
+          quality: AB
+          localspace:
+            name: hew1_mole
+            description: Auto added
+          type_origin:
+            version_value: 1
+            version_name: ew prelim
+            name: hypocenter
+          region: Norcia
+          max_distance: 8.762042012749001
           fix_depth: false
           quality_numeric: 12
           arrivals:
@@ -6487,267 +6753,14 @@ components:
             version: hew1_mole
             parameters: ToDo
             username: ew
-          err_lat: 1.1730742509559433
-          min_distance: 8.762042012749001
-          sec_azim_gap: 2.8841622
+          min_distance: 6.438423552598547
+          sec_azim_gap: 6.878052
           azim_gap: 2.302136
-          nph_s: 3
-          modified: 2016-06-22T16:52:06.26Z
-          rms: 1.284659006116532
-          id: 14932631
-          magnitudes:
-          - type_magnitude: ML-VAX
-            nsta: 3
-            stationmagnitudes:
-            - amp1: -0.358
-              loc: "00"
-              amp2: 0.292
-              mag_correction: 0
-              type_amplitude:
-                unit: m/s
-                name: Acceleration
-              time1: 2017-04-28T06:34:15.35Z
-              time2: 2017-04-28T06:34:15.85Z
-              id_localspace: 182491
-              azimut: 161
-              mag: 3.04
-              inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              modified: 2016-06-22T16:52:06.26Z
-              timewindow_reference: 2000-01-23T04:56:07.000+00:00
-              id: 14932631
-              net: IV
-              cha: HHZ
-              type_magnitude: ML-VAX
-              sta: ACER
-              period: 7.143538047012306
-              err_mag: 0.8851374739011653
-              weight: 0.88
-              orig_distance: 161
-              is_used: false
-              pick_id: 14932631
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              ep_distance: 223.3
-              category: other
-              revised: 0
-            - amp1: -0.358
-              loc: "00"
-              amp2: 0.292
-              mag_correction: 0
-              type_amplitude:
-                unit: m/s
-                name: Acceleration
-              time1: 2017-04-28T06:34:15.35Z
-              time2: 2017-04-28T06:34:15.85Z
-              id_localspace: 182491
-              azimut: 161
-              mag: 3.04
-              inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              modified: 2016-06-22T16:52:06.26Z
-              timewindow_reference: 2000-01-23T04:56:07.000+00:00
-              id: 14932631
-              net: IV
-              cha: HHZ
-              type_magnitude: ML-VAX
-              sta: ACER
-              period: 7.143538047012306
-              err_mag: 0.8851374739011653
-              weight: 0.88
-              orig_distance: 161
-              is_used: false
-              pick_id: 14932631
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              ep_distance: 223.3
-              category: other
-              revised: 0
-            confidence_level: 68.3
-            upper_uncertainty: 0.53
-            mag_quality: BB
-            quality: 6.878052220127876
-            id_localspace: 182491
-            mag: 3.01
-            azimut: 6.704019
-            inserted: 2016-06-22T16:52:06.26Z
-            nsta_used: 9
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
-            ncha_used: 27
-            localspace:
-              name: hew1_mole
-              description: Auto added
-            modified: 2016-06-22T16:52:06.26Z
-            id: 14932631
-            ncha: 3
-            min_dist: 5.944895607614016
-            lower_uncertainty: 0.52
-          - type_magnitude: ML-VAX
-            nsta: 3
-            stationmagnitudes:
-            - amp1: -0.358
-              loc: "00"
-              amp2: 0.292
-              mag_correction: 0
-              type_amplitude:
-                unit: m/s
-                name: Acceleration
-              time1: 2017-04-28T06:34:15.35Z
-              time2: 2017-04-28T06:34:15.85Z
-              id_localspace: 182491
-              azimut: 161
-              mag: 3.04
-              inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              modified: 2016-06-22T16:52:06.26Z
-              timewindow_reference: 2000-01-23T04:56:07.000+00:00
-              id: 14932631
-              net: IV
-              cha: HHZ
-              type_magnitude: ML-VAX
-              sta: ACER
-              period: 7.143538047012306
-              err_mag: 0.8851374739011653
-              weight: 0.88
-              orig_distance: 161
-              is_used: false
-              pick_id: 14932631
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              ep_distance: 223.3
-              category: other
-              revised: 0
-            - amp1: -0.358
-              loc: "00"
-              amp2: 0.292
-              mag_correction: 0
-              type_amplitude:
-                unit: m/s
-                name: Acceleration
-              time1: 2017-04-28T06:34:15.35Z
-              time2: 2017-04-28T06:34:15.85Z
-              id_localspace: 182491
-              azimut: 161
-              mag: 3.04
-              inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              modified: 2016-06-22T16:52:06.26Z
-              timewindow_reference: 2000-01-23T04:56:07.000+00:00
-              id: 14932631
-              net: IV
-              cha: HHZ
-              type_magnitude: ML-VAX
-              sta: ACER
-              period: 7.143538047012306
-              err_mag: 0.8851374739011653
-              weight: 0.88
-              orig_distance: 161
-              is_used: false
-              pick_id: 14932631
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              ep_distance: 223.3
-              category: other
-              revised: 0
-            confidence_level: 68.3
-            upper_uncertainty: 0.53
-            mag_quality: BB
-            quality: 6.878052220127876
-            id_localspace: 182491
-            mag: 3.01
-            azimut: 6.704019
-            inserted: 2016-06-22T16:52:06.26Z
-            nsta_used: 9
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
-            ncha_used: 27
-            localspace:
-              name: hew1_mole
-              description: Auto added
-            modified: 2016-06-22T16:52:06.26Z
-            id: 14932631
-            ncha: 3
-            min_dist: 5.944895607614016
-            lower_uncertainty: 0.52
-          e0_dip: 3.616076749251911
-          lat: 45.492599
-          err_lon: 4.965218492984954
-          err_z: 9.965781217890562
+          err_z: 6.683562403749608
           ot: 2016-06-22T16:52:06.26Z
-          nph: 9
-          w_rms: 6.778324963048013
-          err_ot: 5.025004791520295
+          nph: 3
+          w_rms: 5.944895607614016
           e0: 7.061401241503109
-          e0_az: 9.301444
           focalmechanisms:
           - momenttensor:
               tdmt:
@@ -6756,7 +6769,7 @@ components:
                 id: 14932631
                 stations:
                 - sta: ACER
-                  azi: 3.0205798
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -6764,7 +6777,7 @@ components:
                   modified: 2016-06-22T16:52:06.26Z
                   vr: 0.88
                 - sta: ACER
-                  azi: 3.0205798
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -6808,14 +6821,14 @@ components:
               originid_out: 14932631
               type_momenttensor: TDMT
               id: 14932631
-            misfit: 0.10263654006109402
+            misfit: 8.969578798196912
             dip2: 40
             strike1: 34
             dip1: 50
-            frac_acc_30deg_pref: 7.740351818741173
+            frac_acc_30deg_pref: 3.0576100241049344
             url: http://mysite
             quality: Ba
-            rms_ang_diff_acc_pref: 8.969578798196912
+            rms_ang_diff_acc_pref: 3.0205796992916243
             id_localspace: 182491
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
@@ -6831,16 +6844,16 @@ components:
               parameters: ToDo
               username: ew
             strike2: 218
-            azim_gap: 7.05877
+            azim_gap: 0.10263654
             localspace:
               name: hew1_mole
               description: Auto added
             modified: 2016-06-22T16:52:06.26Z
-            stdr: 4.652396432933246
+            stdr: 7.740351818741173
             id: 14932631
             rake1: 88
             rake2: 93
-            nsta_polarity: 6
+            nsta_polarity: 4
           - momenttensor:
               tdmt:
                 inserted: 2016-06-22T16:52:06.26Z
@@ -6848,7 +6861,7 @@ components:
                 id: 14932631
                 stations:
                 - sta: ACER
-                  azi: 3.0205798
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -6856,7 +6869,7 @@ components:
                   modified: 2016-06-22T16:52:06.26Z
                   vr: 0.88
                 - sta: ACER
-                  azi: 3.0205798
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -6900,14 +6913,14 @@ components:
               originid_out: 14932631
               type_momenttensor: TDMT
               id: 14932631
-            misfit: 0.10263654006109402
+            misfit: 8.969578798196912
             dip2: 40
             strike1: 34
             dip1: 50
-            frac_acc_30deg_pref: 7.740351818741173
+            frac_acc_30deg_pref: 3.0576100241049344
             url: http://mysite
             quality: Ba
-            rms_ang_diff_acc_pref: 8.969578798196912
+            rms_ang_diff_acc_pref: 3.0205796992916243
             id_localspace: 182491
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
@@ -6923,35 +6936,290 @@ components:
               parameters: ToDo
               username: ew
             strike2: 218
-            azim_gap: 7.05877
+            azim_gap: 0.10263654
             localspace:
               name: hew1_mole
               description: Auto added
             modified: 2016-06-22T16:52:06.26Z
-            stdr: 4.652396432933246
+            stdr: 7.740351818741173
             id: 14932631
             rake1: 88
             rake2: 93
-            nsta_polarity: 6
+            nsta_polarity: 4
           e1: 2.027123023002322
           e2_az: 1.0246457
-          med_distance: 6.683562403749608
           e2: 1.2315135367772556
-          quality: AB
           err_depth: 6.84685269835264
-          nph_tot: 6
+          nph_tot: 2
           depth: 0.02
-          localspace:
-            name: hew1_mole
-            description: Auto added
-          type_origin:
-            version_value: 1
-            version_name: ew prelim
-            name: hypocenter
-          region: Norcia
-          max_distance: 9.369310271410669
           e2_dip: 1
         - e1_dip: 7.386281948385884
+          err_lon_deg: 9.965781217890562
+          err_lat: 1.1730742509559433
+          nph_s: 1
+          modified: 2016-06-22T16:52:06.26Z
+          rms: 6.778324963048013
+          id: 14932631
+          magnitudes:
+          - type_magnitude: ML-VAX
+            nsta: 7
+            stationmagnitudes:
+            - amp1: -0.358
+              loc: "00"
+              amp2: 0.292
+              mag_correction: 0
+              type_amplitude:
+                unit: m/s
+                name: Acceleration
+              time1: 2017-04-28T06:34:15.35Z
+              time2: 2017-04-28T06:34:15.85Z
+              id_localspace: 182491
+              azimut: 161
+              mag: 3.04
+              inserted: 2016-06-22T16:52:06.26Z
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              modified: 2016-06-22T16:52:06.26Z
+              timewindow_reference: 2000-01-23T04:56:07.000+00:00
+              id: 14932631
+              net: IV
+              cha: HHZ
+              type_magnitude: ML-VAX
+              sta: ACER
+              period: 7.058770351582356
+              err_mag: 6.519180951018382
+              weight: 0.88
+              orig_distance: 161
+              is_used: false
+              pick_id: 14932631
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              ep_distance: 223.3
+              category: other
+              revised: 0
+            - amp1: -0.358
+              loc: "00"
+              amp2: 0.292
+              mag_correction: 0
+              type_amplitude:
+                unit: m/s
+                name: Acceleration
+              time1: 2017-04-28T06:34:15.35Z
+              time2: 2017-04-28T06:34:15.85Z
+              id_localspace: 182491
+              azimut: 161
+              mag: 3.04
+              inserted: 2016-06-22T16:52:06.26Z
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              modified: 2016-06-22T16:52:06.26Z
+              timewindow_reference: 2000-01-23T04:56:07.000+00:00
+              id: 14932631
+              net: IV
+              cha: HHZ
+              type_magnitude: ML-VAX
+              sta: ACER
+              period: 7.058770351582356
+              err_mag: 6.519180951018382
+              weight: 0.88
+              orig_distance: 161
+              is_used: false
+              pick_id: 14932631
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              ep_distance: 223.3
+              category: other
+              revised: 0
+            confidence_level: 68.3
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.704019297950036
+            id_localspace: 182491
+            mag: 3.01
+            azimut: 3.0937452
+            inserted: 2016-06-22T16:52:06.26Z
+            nsta_used: 9
+            provenance:
+              hostname: hew10.ingv.it
+              method: ToDo
+              name: INGV
+              description: Auto added
+              model: prem
+              program: IPO-EW__tdmt_invc.c
+              priority: 0
+              softwarename: software
+              version: hew1_mole
+              parameters: ToDo
+              username: ew
+            ncha_used: 27
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            ncha: 0
+            min_dist: 3.353193347011243
+            lower_uncertainty: 0.52
+          - type_magnitude: ML-VAX
+            nsta: 7
+            stationmagnitudes:
+            - amp1: -0.358
+              loc: "00"
+              amp2: 0.292
+              mag_correction: 0
+              type_amplitude:
+                unit: m/s
+                name: Acceleration
+              time1: 2017-04-28T06:34:15.35Z
+              time2: 2017-04-28T06:34:15.85Z
+              id_localspace: 182491
+              azimut: 161
+              mag: 3.04
+              inserted: 2016-06-22T16:52:06.26Z
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              modified: 2016-06-22T16:52:06.26Z
+              timewindow_reference: 2000-01-23T04:56:07.000+00:00
+              id: 14932631
+              net: IV
+              cha: HHZ
+              type_magnitude: ML-VAX
+              sta: ACER
+              period: 7.058770351582356
+              err_mag: 6.519180951018382
+              weight: 0.88
+              orig_distance: 161
+              is_used: false
+              pick_id: 14932631
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              ep_distance: 223.3
+              category: other
+              revised: 0
+            - amp1: -0.358
+              loc: "00"
+              amp2: 0.292
+              mag_correction: 0
+              type_amplitude:
+                unit: m/s
+                name: Acceleration
+              time1: 2017-04-28T06:34:15.35Z
+              time2: 2017-04-28T06:34:15.85Z
+              id_localspace: 182491
+              azimut: 161
+              mag: 3.04
+              inserted: 2016-06-22T16:52:06.26Z
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              modified: 2016-06-22T16:52:06.26Z
+              timewindow_reference: 2000-01-23T04:56:07.000+00:00
+              id: 14932631
+              net: IV
+              cha: HHZ
+              type_magnitude: ML-VAX
+              sta: ACER
+              period: 7.058770351582356
+              err_mag: 6.519180951018382
+              weight: 0.88
+              orig_distance: 161
+              is_used: false
+              pick_id: 14932631
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              ep_distance: 223.3
+              category: other
+              revised: 0
+            confidence_level: 68.3
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.704019297950036
+            id_localspace: 182491
+            mag: 3.01
+            azimut: 3.0937452
+            inserted: 2016-06-22T16:52:06.26Z
+            nsta_used: 9
+            provenance:
+              hostname: hew10.ingv.it
+              method: ToDo
+              name: INGV
+              description: Auto added
+              model: prem
+              program: IPO-EW__tdmt_invc.c
+              priority: 0
+              softwarename: software
+              version: hew1_mole
+              parameters: ToDo
+              username: ew
+            ncha_used: 27
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            ncha: 0
+            min_dist: 3.353193347011243
+            lower_uncertainty: 0.52
+          e0_dip: 3.616076749251911
+          lat: 45.492599
+          err_lon: 4.965218492984954
+          err_lat_deg: 5.025004791520295
+          err_ot: 9.369310271410669
+          e0_az: 9.301444
+          med_distance: 9.018348186070783
+          quality: AB
+          localspace:
+            name: hew1_mole
+            description: Auto added
+          type_origin:
+            version_value: 1
+            version_name: ew prelim
+            name: hypocenter
+          region: Norcia
+          max_distance: 8.762042012749001
           fix_depth: false
           quality_numeric: 12
           arrivals:
@@ -7064,267 +7332,14 @@ components:
             version: hew1_mole
             parameters: ToDo
             username: ew
-          err_lat: 1.1730742509559433
-          min_distance: 8.762042012749001
-          sec_azim_gap: 2.8841622
+          min_distance: 6.438423552598547
+          sec_azim_gap: 6.878052
           azim_gap: 2.302136
-          nph_s: 3
-          modified: 2016-06-22T16:52:06.26Z
-          rms: 1.284659006116532
-          id: 14932631
-          magnitudes:
-          - type_magnitude: ML-VAX
-            nsta: 3
-            stationmagnitudes:
-            - amp1: -0.358
-              loc: "00"
-              amp2: 0.292
-              mag_correction: 0
-              type_amplitude:
-                unit: m/s
-                name: Acceleration
-              time1: 2017-04-28T06:34:15.35Z
-              time2: 2017-04-28T06:34:15.85Z
-              id_localspace: 182491
-              azimut: 161
-              mag: 3.04
-              inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              modified: 2016-06-22T16:52:06.26Z
-              timewindow_reference: 2000-01-23T04:56:07.000+00:00
-              id: 14932631
-              net: IV
-              cha: HHZ
-              type_magnitude: ML-VAX
-              sta: ACER
-              period: 7.143538047012306
-              err_mag: 0.8851374739011653
-              weight: 0.88
-              orig_distance: 161
-              is_used: false
-              pick_id: 14932631
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              ep_distance: 223.3
-              category: other
-              revised: 0
-            - amp1: -0.358
-              loc: "00"
-              amp2: 0.292
-              mag_correction: 0
-              type_amplitude:
-                unit: m/s
-                name: Acceleration
-              time1: 2017-04-28T06:34:15.35Z
-              time2: 2017-04-28T06:34:15.85Z
-              id_localspace: 182491
-              azimut: 161
-              mag: 3.04
-              inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              modified: 2016-06-22T16:52:06.26Z
-              timewindow_reference: 2000-01-23T04:56:07.000+00:00
-              id: 14932631
-              net: IV
-              cha: HHZ
-              type_magnitude: ML-VAX
-              sta: ACER
-              period: 7.143538047012306
-              err_mag: 0.8851374739011653
-              weight: 0.88
-              orig_distance: 161
-              is_used: false
-              pick_id: 14932631
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              ep_distance: 223.3
-              category: other
-              revised: 0
-            confidence_level: 68.3
-            upper_uncertainty: 0.53
-            mag_quality: BB
-            quality: 6.878052220127876
-            id_localspace: 182491
-            mag: 3.01
-            azimut: 6.704019
-            inserted: 2016-06-22T16:52:06.26Z
-            nsta_used: 9
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
-            ncha_used: 27
-            localspace:
-              name: hew1_mole
-              description: Auto added
-            modified: 2016-06-22T16:52:06.26Z
-            id: 14932631
-            ncha: 3
-            min_dist: 5.944895607614016
-            lower_uncertainty: 0.52
-          - type_magnitude: ML-VAX
-            nsta: 3
-            stationmagnitudes:
-            - amp1: -0.358
-              loc: "00"
-              amp2: 0.292
-              mag_correction: 0
-              type_amplitude:
-                unit: m/s
-                name: Acceleration
-              time1: 2017-04-28T06:34:15.35Z
-              time2: 2017-04-28T06:34:15.85Z
-              id_localspace: 182491
-              azimut: 161
-              mag: 3.04
-              inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              modified: 2016-06-22T16:52:06.26Z
-              timewindow_reference: 2000-01-23T04:56:07.000+00:00
-              id: 14932631
-              net: IV
-              cha: HHZ
-              type_magnitude: ML-VAX
-              sta: ACER
-              period: 7.143538047012306
-              err_mag: 0.8851374739011653
-              weight: 0.88
-              orig_distance: 161
-              is_used: false
-              pick_id: 14932631
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              ep_distance: 223.3
-              category: other
-              revised: 0
-            - amp1: -0.358
-              loc: "00"
-              amp2: 0.292
-              mag_correction: 0
-              type_amplitude:
-                unit: m/s
-                name: Acceleration
-              time1: 2017-04-28T06:34:15.35Z
-              time2: 2017-04-28T06:34:15.85Z
-              id_localspace: 182491
-              azimut: 161
-              mag: 3.04
-              inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              modified: 2016-06-22T16:52:06.26Z
-              timewindow_reference: 2000-01-23T04:56:07.000+00:00
-              id: 14932631
-              net: IV
-              cha: HHZ
-              type_magnitude: ML-VAX
-              sta: ACER
-              period: 7.143538047012306
-              err_mag: 0.8851374739011653
-              weight: 0.88
-              orig_distance: 161
-              is_used: false
-              pick_id: 14932631
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              ep_distance: 223.3
-              category: other
-              revised: 0
-            confidence_level: 68.3
-            upper_uncertainty: 0.53
-            mag_quality: BB
-            quality: 6.878052220127876
-            id_localspace: 182491
-            mag: 3.01
-            azimut: 6.704019
-            inserted: 2016-06-22T16:52:06.26Z
-            nsta_used: 9
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
-            ncha_used: 27
-            localspace:
-              name: hew1_mole
-              description: Auto added
-            modified: 2016-06-22T16:52:06.26Z
-            id: 14932631
-            ncha: 3
-            min_dist: 5.944895607614016
-            lower_uncertainty: 0.52
-          e0_dip: 3.616076749251911
-          lat: 45.492599
-          err_lon: 4.965218492984954
-          err_z: 9.965781217890562
+          err_z: 6.683562403749608
           ot: 2016-06-22T16:52:06.26Z
-          nph: 9
-          w_rms: 6.778324963048013
-          err_ot: 5.025004791520295
+          nph: 3
+          w_rms: 5.944895607614016
           e0: 7.061401241503109
-          e0_az: 9.301444
           focalmechanisms:
           - momenttensor:
               tdmt:
@@ -7333,7 +7348,7 @@ components:
                 id: 14932631
                 stations:
                 - sta: ACER
-                  azi: 3.0205798
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -7341,7 +7356,7 @@ components:
                   modified: 2016-06-22T16:52:06.26Z
                   vr: 0.88
                 - sta: ACER
-                  azi: 3.0205798
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -7385,14 +7400,14 @@ components:
               originid_out: 14932631
               type_momenttensor: TDMT
               id: 14932631
-            misfit: 0.10263654006109402
+            misfit: 8.969578798196912
             dip2: 40
             strike1: 34
             dip1: 50
-            frac_acc_30deg_pref: 7.740351818741173
+            frac_acc_30deg_pref: 3.0576100241049344
             url: http://mysite
             quality: Ba
-            rms_ang_diff_acc_pref: 8.969578798196912
+            rms_ang_diff_acc_pref: 3.0205796992916243
             id_localspace: 182491
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
@@ -7408,16 +7423,16 @@ components:
               parameters: ToDo
               username: ew
             strike2: 218
-            azim_gap: 7.05877
+            azim_gap: 0.10263654
             localspace:
               name: hew1_mole
               description: Auto added
             modified: 2016-06-22T16:52:06.26Z
-            stdr: 4.652396432933246
+            stdr: 7.740351818741173
             id: 14932631
             rake1: 88
             rake2: 93
-            nsta_polarity: 6
+            nsta_polarity: 4
           - momenttensor:
               tdmt:
                 inserted: 2016-06-22T16:52:06.26Z
@@ -7425,7 +7440,7 @@ components:
                 id: 14932631
                 stations:
                 - sta: ACER
-                  azi: 3.0205798
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -7433,7 +7448,7 @@ components:
                   modified: 2016-06-22T16:52:06.26Z
                   vr: 0.88
                 - sta: ACER
-                  azi: 3.0205798
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -7477,14 +7492,14 @@ components:
               originid_out: 14932631
               type_momenttensor: TDMT
               id: 14932631
-            misfit: 0.10263654006109402
+            misfit: 8.969578798196912
             dip2: 40
             strike1: 34
             dip1: 50
-            frac_acc_30deg_pref: 7.740351818741173
+            frac_acc_30deg_pref: 3.0576100241049344
             url: http://mysite
             quality: Ba
-            rms_ang_diff_acc_pref: 8.969578798196912
+            rms_ang_diff_acc_pref: 3.0205796992916243
             id_localspace: 182491
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
@@ -7500,33 +7515,22 @@ components:
               parameters: ToDo
               username: ew
             strike2: 218
-            azim_gap: 7.05877
+            azim_gap: 0.10263654
             localspace:
               name: hew1_mole
               description: Auto added
             modified: 2016-06-22T16:52:06.26Z
-            stdr: 4.652396432933246
+            stdr: 7.740351818741173
             id: 14932631
             rake1: 88
             rake2: 93
-            nsta_polarity: 6
+            nsta_polarity: 4
           e1: 2.027123023002322
           e2_az: 1.0246457
-          med_distance: 6.683562403749608
           e2: 1.2315135367772556
-          quality: AB
           err_depth: 6.84685269835264
-          nph_tot: 6
+          nph_tot: 2
           depth: 0.02
-          localspace:
-            name: hew1_mole
-            description: Auto added
-          type_origin:
-            version_value: 1
-            version_name: ew prelim
-            name: hypocenter
-          region: Norcia
-          max_distance: 9.369310271410669
           e2_dip: 1
         id: 14932631
         event_group_id: 0
@@ -7612,6 +7616,272 @@ components:
     ObjectOrigin:
       example:
         e1_dip: 7.386281948385884
+        err_lon_deg: 9.965781217890562
+        err_lat: 1.1730742509559433
+        nph_s: 1
+        modified: 2016-06-22T16:52:06.26Z
+        rms: 6.778324963048013
+        id: 14932631
+        magnitudes:
+        - type_magnitude: ML-VAX
+          nsta: 7
+          stationmagnitudes:
+          - amp1: -0.358
+            loc: "00"
+            amp2: 0.292
+            mag_correction: 0
+            type_amplitude:
+              unit: m/s
+              name: Acceleration
+            time1: 2017-04-28T06:34:15.35Z
+            time2: 2017-04-28T06:34:15.85Z
+            id_localspace: 182491
+            azimut: 161
+            mag: 3.04
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              hostname: hew10.ingv.it
+              method: ToDo
+              name: INGV
+              description: Auto added
+              model: prem
+              program: IPO-EW__tdmt_invc.c
+              priority: 0
+              softwarename: software
+              version: hew1_mole
+              parameters: ToDo
+              username: ew
+            modified: 2016-06-22T16:52:06.26Z
+            timewindow_reference: 2000-01-23T04:56:07.000+00:00
+            id: 14932631
+            net: IV
+            cha: HHZ
+            type_magnitude: ML-VAX
+            sta: ACER
+            period: 7.058770351582356
+            err_mag: 6.519180951018382
+            weight: 0.88
+            orig_distance: 161
+            is_used: false
+            pick_id: 14932631
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            ep_distance: 223.3
+            category: other
+            revised: 0
+          - amp1: -0.358
+            loc: "00"
+            amp2: 0.292
+            mag_correction: 0
+            type_amplitude:
+              unit: m/s
+              name: Acceleration
+            time1: 2017-04-28T06:34:15.35Z
+            time2: 2017-04-28T06:34:15.85Z
+            id_localspace: 182491
+            azimut: 161
+            mag: 3.04
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              hostname: hew10.ingv.it
+              method: ToDo
+              name: INGV
+              description: Auto added
+              model: prem
+              program: IPO-EW__tdmt_invc.c
+              priority: 0
+              softwarename: software
+              version: hew1_mole
+              parameters: ToDo
+              username: ew
+            modified: 2016-06-22T16:52:06.26Z
+            timewindow_reference: 2000-01-23T04:56:07.000+00:00
+            id: 14932631
+            net: IV
+            cha: HHZ
+            type_magnitude: ML-VAX
+            sta: ACER
+            period: 7.058770351582356
+            err_mag: 6.519180951018382
+            weight: 0.88
+            orig_distance: 161
+            is_used: false
+            pick_id: 14932631
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            ep_distance: 223.3
+            category: other
+            revised: 0
+          confidence_level: 68.3
+          upper_uncertainty: 0.53
+          mag_quality: BB
+          quality: 6.704019297950036
+          id_localspace: 182491
+          mag: 3.01
+          azimut: 3.0937452
+          inserted: 2016-06-22T16:52:06.26Z
+          nsta_used: 9
+          provenance:
+            hostname: hew10.ingv.it
+            method: ToDo
+            name: INGV
+            description: Auto added
+            model: prem
+            program: IPO-EW__tdmt_invc.c
+            priority: 0
+            softwarename: software
+            version: hew1_mole
+            parameters: ToDo
+            username: ew
+          ncha_used: 27
+          localspace:
+            name: hew1_mole
+            description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          ncha: 0
+          min_dist: 3.353193347011243
+          lower_uncertainty: 0.52
+        - type_magnitude: ML-VAX
+          nsta: 7
+          stationmagnitudes:
+          - amp1: -0.358
+            loc: "00"
+            amp2: 0.292
+            mag_correction: 0
+            type_amplitude:
+              unit: m/s
+              name: Acceleration
+            time1: 2017-04-28T06:34:15.35Z
+            time2: 2017-04-28T06:34:15.85Z
+            id_localspace: 182491
+            azimut: 161
+            mag: 3.04
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              hostname: hew10.ingv.it
+              method: ToDo
+              name: INGV
+              description: Auto added
+              model: prem
+              program: IPO-EW__tdmt_invc.c
+              priority: 0
+              softwarename: software
+              version: hew1_mole
+              parameters: ToDo
+              username: ew
+            modified: 2016-06-22T16:52:06.26Z
+            timewindow_reference: 2000-01-23T04:56:07.000+00:00
+            id: 14932631
+            net: IV
+            cha: HHZ
+            type_magnitude: ML-VAX
+            sta: ACER
+            period: 7.058770351582356
+            err_mag: 6.519180951018382
+            weight: 0.88
+            orig_distance: 161
+            is_used: false
+            pick_id: 14932631
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            ep_distance: 223.3
+            category: other
+            revised: 0
+          - amp1: -0.358
+            loc: "00"
+            amp2: 0.292
+            mag_correction: 0
+            type_amplitude:
+              unit: m/s
+              name: Acceleration
+            time1: 2017-04-28T06:34:15.35Z
+            time2: 2017-04-28T06:34:15.85Z
+            id_localspace: 182491
+            azimut: 161
+            mag: 3.04
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              hostname: hew10.ingv.it
+              method: ToDo
+              name: INGV
+              description: Auto added
+              model: prem
+              program: IPO-EW__tdmt_invc.c
+              priority: 0
+              softwarename: software
+              version: hew1_mole
+              parameters: ToDo
+              username: ew
+            modified: 2016-06-22T16:52:06.26Z
+            timewindow_reference: 2000-01-23T04:56:07.000+00:00
+            id: 14932631
+            net: IV
+            cha: HHZ
+            type_magnitude: ML-VAX
+            sta: ACER
+            period: 7.058770351582356
+            err_mag: 6.519180951018382
+            weight: 0.88
+            orig_distance: 161
+            is_used: false
+            pick_id: 14932631
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            ep_distance: 223.3
+            category: other
+            revised: 0
+          confidence_level: 68.3
+          upper_uncertainty: 0.53
+          mag_quality: BB
+          quality: 6.704019297950036
+          id_localspace: 182491
+          mag: 3.01
+          azimut: 3.0937452
+          inserted: 2016-06-22T16:52:06.26Z
+          nsta_used: 9
+          provenance:
+            hostname: hew10.ingv.it
+            method: ToDo
+            name: INGV
+            description: Auto added
+            model: prem
+            program: IPO-EW__tdmt_invc.c
+            priority: 0
+            softwarename: software
+            version: hew1_mole
+            parameters: ToDo
+            username: ew
+          ncha_used: 27
+          localspace:
+            name: hew1_mole
+            description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          ncha: 0
+          min_dist: 3.353193347011243
+          lower_uncertainty: 0.52
+        e0_dip: 3.616076749251911
+        lat: 45.492599
+        err_lon: 4.965218492984954
+        err_lat_deg: 5.025004791520295
+        err_ot: 9.369310271410669
+        e0_az: 9.301444
+        med_distance: 9.018348186070783
+        quality: AB
+        localspace:
+          name: hew1_mole
+          description: Auto added
+        type_origin:
+          version_value: 1
+          version_name: ew prelim
+          name: hypocenter
+        region: Norcia
+        max_distance: 8.762042012749001
         fix_depth: false
         quality_numeric: 12
         arrivals:
@@ -7724,267 +7994,14 @@ components:
           version: hew1_mole
           parameters: ToDo
           username: ew
-        err_lat: 1.1730742509559433
-        min_distance: 8.762042012749001
-        sec_azim_gap: 2.8841622
+        min_distance: 6.438423552598547
+        sec_azim_gap: 6.878052
         azim_gap: 2.302136
-        nph_s: 3
-        modified: 2016-06-22T16:52:06.26Z
-        rms: 1.284659006116532
-        id: 14932631
-        magnitudes:
-        - type_magnitude: ML-VAX
-          nsta: 3
-          stationmagnitudes:
-          - amp1: -0.358
-            loc: "00"
-            amp2: 0.292
-            mag_correction: 0
-            type_amplitude:
-              unit: m/s
-              name: Acceleration
-            time1: 2017-04-28T06:34:15.35Z
-            time2: 2017-04-28T06:34:15.85Z
-            id_localspace: 182491
-            azimut: 161
-            mag: 3.04
-            inserted: 2016-06-22T16:52:06.26Z
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
-            modified: 2016-06-22T16:52:06.26Z
-            timewindow_reference: 2000-01-23T04:56:07.000+00:00
-            id: 14932631
-            net: IV
-            cha: HHZ
-            type_magnitude: ML-VAX
-            sta: ACER
-            period: 7.143538047012306
-            err_mag: 0.8851374739011653
-            weight: 0.88
-            orig_distance: 161
-            is_used: false
-            pick_id: 14932631
-            localspace:
-              name: hew1_mole
-              description: Auto added
-            ep_distance: 223.3
-            category: other
-            revised: 0
-          - amp1: -0.358
-            loc: "00"
-            amp2: 0.292
-            mag_correction: 0
-            type_amplitude:
-              unit: m/s
-              name: Acceleration
-            time1: 2017-04-28T06:34:15.35Z
-            time2: 2017-04-28T06:34:15.85Z
-            id_localspace: 182491
-            azimut: 161
-            mag: 3.04
-            inserted: 2016-06-22T16:52:06.26Z
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
-            modified: 2016-06-22T16:52:06.26Z
-            timewindow_reference: 2000-01-23T04:56:07.000+00:00
-            id: 14932631
-            net: IV
-            cha: HHZ
-            type_magnitude: ML-VAX
-            sta: ACER
-            period: 7.143538047012306
-            err_mag: 0.8851374739011653
-            weight: 0.88
-            orig_distance: 161
-            is_used: false
-            pick_id: 14932631
-            localspace:
-              name: hew1_mole
-              description: Auto added
-            ep_distance: 223.3
-            category: other
-            revised: 0
-          confidence_level: 68.3
-          upper_uncertainty: 0.53
-          mag_quality: BB
-          quality: 6.878052220127876
-          id_localspace: 182491
-          mag: 3.01
-          azimut: 6.704019
-          inserted: 2016-06-22T16:52:06.26Z
-          nsta_used: 9
-          provenance:
-            hostname: hew10.ingv.it
-            method: ToDo
-            name: INGV
-            description: Auto added
-            model: prem
-            program: IPO-EW__tdmt_invc.c
-            priority: 0
-            softwarename: software
-            version: hew1_mole
-            parameters: ToDo
-            username: ew
-          ncha_used: 27
-          localspace:
-            name: hew1_mole
-            description: Auto added
-          modified: 2016-06-22T16:52:06.26Z
-          id: 14932631
-          ncha: 3
-          min_dist: 5.944895607614016
-          lower_uncertainty: 0.52
-        - type_magnitude: ML-VAX
-          nsta: 3
-          stationmagnitudes:
-          - amp1: -0.358
-            loc: "00"
-            amp2: 0.292
-            mag_correction: 0
-            type_amplitude:
-              unit: m/s
-              name: Acceleration
-            time1: 2017-04-28T06:34:15.35Z
-            time2: 2017-04-28T06:34:15.85Z
-            id_localspace: 182491
-            azimut: 161
-            mag: 3.04
-            inserted: 2016-06-22T16:52:06.26Z
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
-            modified: 2016-06-22T16:52:06.26Z
-            timewindow_reference: 2000-01-23T04:56:07.000+00:00
-            id: 14932631
-            net: IV
-            cha: HHZ
-            type_magnitude: ML-VAX
-            sta: ACER
-            period: 7.143538047012306
-            err_mag: 0.8851374739011653
-            weight: 0.88
-            orig_distance: 161
-            is_used: false
-            pick_id: 14932631
-            localspace:
-              name: hew1_mole
-              description: Auto added
-            ep_distance: 223.3
-            category: other
-            revised: 0
-          - amp1: -0.358
-            loc: "00"
-            amp2: 0.292
-            mag_correction: 0
-            type_amplitude:
-              unit: m/s
-              name: Acceleration
-            time1: 2017-04-28T06:34:15.35Z
-            time2: 2017-04-28T06:34:15.85Z
-            id_localspace: 182491
-            azimut: 161
-            mag: 3.04
-            inserted: 2016-06-22T16:52:06.26Z
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
-            modified: 2016-06-22T16:52:06.26Z
-            timewindow_reference: 2000-01-23T04:56:07.000+00:00
-            id: 14932631
-            net: IV
-            cha: HHZ
-            type_magnitude: ML-VAX
-            sta: ACER
-            period: 7.143538047012306
-            err_mag: 0.8851374739011653
-            weight: 0.88
-            orig_distance: 161
-            is_used: false
-            pick_id: 14932631
-            localspace:
-              name: hew1_mole
-              description: Auto added
-            ep_distance: 223.3
-            category: other
-            revised: 0
-          confidence_level: 68.3
-          upper_uncertainty: 0.53
-          mag_quality: BB
-          quality: 6.878052220127876
-          id_localspace: 182491
-          mag: 3.01
-          azimut: 6.704019
-          inserted: 2016-06-22T16:52:06.26Z
-          nsta_used: 9
-          provenance:
-            hostname: hew10.ingv.it
-            method: ToDo
-            name: INGV
-            description: Auto added
-            model: prem
-            program: IPO-EW__tdmt_invc.c
-            priority: 0
-            softwarename: software
-            version: hew1_mole
-            parameters: ToDo
-            username: ew
-          ncha_used: 27
-          localspace:
-            name: hew1_mole
-            description: Auto added
-          modified: 2016-06-22T16:52:06.26Z
-          id: 14932631
-          ncha: 3
-          min_dist: 5.944895607614016
-          lower_uncertainty: 0.52
-        e0_dip: 3.616076749251911
-        lat: 45.492599
-        err_lon: 4.965218492984954
-        err_z: 9.965781217890562
+        err_z: 6.683562403749608
         ot: 2016-06-22T16:52:06.26Z
-        nph: 9
-        w_rms: 6.778324963048013
-        err_ot: 5.025004791520295
+        nph: 3
+        w_rms: 5.944895607614016
         e0: 7.061401241503109
-        e0_az: 9.301444
         focalmechanisms:
         - momenttensor:
             tdmt:
@@ -7993,7 +8010,7 @@ components:
               id: 14932631
               stations:
               - sta: ACER
-                azi: 3.0205798
+                azi: 7.0483656
                 r: 223.3
                 inserted: 2016-06-22T16:52:06.26Z
                 zcor: 0.88
@@ -8001,7 +8018,7 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 vr: 0.88
               - sta: ACER
-                azi: 3.0205798
+                azi: 7.0483656
                 r: 223.3
                 inserted: 2016-06-22T16:52:06.26Z
                 zcor: 0.88
@@ -8045,14 +8062,14 @@ components:
             originid_out: 14932631
             type_momenttensor: TDMT
             id: 14932631
-          misfit: 0.10263654006109402
+          misfit: 8.969578798196912
           dip2: 40
           strike1: 34
           dip1: 50
-          frac_acc_30deg_pref: 7.740351818741173
+          frac_acc_30deg_pref: 3.0576100241049344
           url: http://mysite
           quality: Ba
-          rms_ang_diff_acc_pref: 8.969578798196912
+          rms_ang_diff_acc_pref: 3.0205796992916243
           id_localspace: 182491
           inserted: 2016-06-22T16:52:06.26Z
           provenance:
@@ -8068,16 +8085,16 @@ components:
             parameters: ToDo
             username: ew
           strike2: 218
-          azim_gap: 7.05877
+          azim_gap: 0.10263654
           localspace:
             name: hew1_mole
             description: Auto added
           modified: 2016-06-22T16:52:06.26Z
-          stdr: 4.652396432933246
+          stdr: 7.740351818741173
           id: 14932631
           rake1: 88
           rake2: 93
-          nsta_polarity: 6
+          nsta_polarity: 4
         - momenttensor:
             tdmt:
               inserted: 2016-06-22T16:52:06.26Z
@@ -8085,7 +8102,7 @@ components:
               id: 14932631
               stations:
               - sta: ACER
-                azi: 3.0205798
+                azi: 7.0483656
                 r: 223.3
                 inserted: 2016-06-22T16:52:06.26Z
                 zcor: 0.88
@@ -8093,7 +8110,7 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 vr: 0.88
               - sta: ACER
-                azi: 3.0205798
+                azi: 7.0483656
                 r: 223.3
                 inserted: 2016-06-22T16:52:06.26Z
                 zcor: 0.88
@@ -8137,14 +8154,14 @@ components:
             originid_out: 14932631
             type_momenttensor: TDMT
             id: 14932631
-          misfit: 0.10263654006109402
+          misfit: 8.969578798196912
           dip2: 40
           strike1: 34
           dip1: 50
-          frac_acc_30deg_pref: 7.740351818741173
+          frac_acc_30deg_pref: 3.0576100241049344
           url: http://mysite
           quality: Ba
-          rms_ang_diff_acc_pref: 8.969578798196912
+          rms_ang_diff_acc_pref: 3.0205796992916243
           id_localspace: 182491
           inserted: 2016-06-22T16:52:06.26Z
           provenance:
@@ -8160,33 +8177,22 @@ components:
             parameters: ToDo
             username: ew
           strike2: 218
-          azim_gap: 7.05877
+          azim_gap: 0.10263654
           localspace:
             name: hew1_mole
             description: Auto added
           modified: 2016-06-22T16:52:06.26Z
-          stdr: 4.652396432933246
+          stdr: 7.740351818741173
           id: 14932631
           rake1: 88
           rake2: 93
-          nsta_polarity: 6
+          nsta_polarity: 4
         e1: 2.027123023002322
         e2_az: 1.0246457
-        med_distance: 6.683562403749608
         e2: 1.2315135367772556
-        quality: AB
         err_depth: 6.84685269835264
-        nph_tot: 6
+        nph_tot: 2
         depth: 0.02
-        localspace:
-          name: hew1_mole
-          description: Auto added
-        type_origin:
-          version_value: 1
-          version_name: ew prelim
-          name: hypocenter
-        region: Norcia
-        max_distance: 9.369310271410669
         e2_dip: 1
       properties:
         id:
@@ -8270,23 +8276,33 @@ components:
           format: double
           type: number
         err_h:
-          description: Depth error | double
+          description: Horizontal error (km) | double
           format: double
           type: number
         err_lat:
-          description: Latitude error | double
+          description: Latitude error (km) | double
           format: double
           type: number
         err_lon:
-          description: Longitude error | double
+          description: Longitude error (km) | double
           format: double
+          type: number
+        err_lat_deg:
+          description: Latitude error (deg) | double
+          format: double
+          readOnly: true
+          type: number
+        err_lon_deg:
+          description: Longitude error (deg) | double
+          format: double
+          readOnly: true
           type: number
         err_ot:
           description: Origin time error | double
           format: double
           type: number
         err_z:
-          description: Depth error | double
+          description: Depth error (km) | double
           format: double
           type: number
         fix_depth:
@@ -8649,7 +8665,7 @@ components:
     ObjectMagnitude:
       example:
         type_magnitude: ML-VAX
-        nsta: 3
+        nsta: 7
         stationmagnitudes:
         - amp1: -0.358
           loc: "00"
@@ -8683,8 +8699,8 @@ components:
           cha: HHZ
           type_magnitude: ML-VAX
           sta: ACER
-          period: 7.143538047012306
-          err_mag: 0.8851374739011653
+          period: 7.058770351582356
+          err_mag: 6.519180951018382
           weight: 0.88
           orig_distance: 161
           is_used: false
@@ -8727,8 +8743,8 @@ components:
           cha: HHZ
           type_magnitude: ML-VAX
           sta: ACER
-          period: 7.143538047012306
-          err_mag: 0.8851374739011653
+          period: 7.058770351582356
+          err_mag: 6.519180951018382
           weight: 0.88
           orig_distance: 161
           is_used: false
@@ -8742,10 +8758,10 @@ components:
         confidence_level: 68.3
         upper_uncertainty: 0.53
         mag_quality: BB
-        quality: 6.878052220127876
+        quality: 6.704019297950036
         id_localspace: 182491
         mag: 3.01
-        azimut: 6.704019
+        azimut: 3.0937452
         inserted: 2016-06-22T16:52:06.26Z
         nsta_used: 9
         provenance:
@@ -8766,8 +8782,8 @@ components:
           description: Auto added
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
-        ncha: 3
-        min_dist: 5.944895607614016
+        ncha: 0
+        min_dist: 3.353193347011243
         lower_uncertainty: 0.52
       properties:
         id:
@@ -8892,7 +8908,7 @@ components:
             id: 14932631
             stations:
             - sta: ACER
-              azi: 3.0205798
+              azi: 7.0483656
               r: 223.3
               inserted: 2016-06-22T16:52:06.26Z
               zcor: 0.88
@@ -8900,7 +8916,7 @@ components:
               modified: 2016-06-22T16:52:06.26Z
               vr: 0.88
             - sta: ACER
-              azi: 3.0205798
+              azi: 7.0483656
               r: 223.3
               inserted: 2016-06-22T16:52:06.26Z
               zcor: 0.88
@@ -8944,14 +8960,14 @@ components:
           originid_out: 14932631
           type_momenttensor: TDMT
           id: 14932631
-        misfit: 0.10263654006109402
+        misfit: 8.969578798196912
         dip2: 40
         strike1: 34
         dip1: 50
-        frac_acc_30deg_pref: 7.740351818741173
+        frac_acc_30deg_pref: 3.0576100241049344
         url: http://mysite
         quality: Ba
-        rms_ang_diff_acc_pref: 8.969578798196912
+        rms_ang_diff_acc_pref: 3.0205796992916243
         id_localspace: 182491
         inserted: 2016-06-22T16:52:06.26Z
         provenance:
@@ -8967,16 +8983,16 @@ components:
           parameters: ToDo
           username: ew
         strike2: 218
-        azim_gap: 7.05877
+        azim_gap: 0.10263654
         localspace:
           name: hew1_mole
           description: Auto added
         modified: 2016-06-22T16:52:06.26Z
-        stdr: 4.652396432933246
+        stdr: 7.740351818741173
         id: 14932631
         rake1: 88
         rake2: 93
-        nsta_polarity: 6
+        nsta_polarity: 4
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -9102,7 +9118,7 @@ components:
           id: 14932631
           stations:
           - sta: ACER
-            azi: 3.0205798
+            azi: 7.0483656
             r: 223.3
             inserted: 2016-06-22T16:52:06.26Z
             zcor: 0.88
@@ -9110,7 +9126,7 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             vr: 0.88
           - sta: ACER
-            azi: 3.0205798
+            azi: 7.0483656
             r: 223.3
             inserted: 2016-06-22T16:52:06.26Z
             zcor: 0.88
@@ -9482,8 +9498,8 @@ components:
         cha: HHZ
         type_magnitude: ML-VAX
         sta: ACER
-        period: 7.143538047012306
-        err_mag: 0.8851374739011653
+        period: 7.058770351582356
+        err_mag: 6.519180951018382
         weight: 0.88
         orig_distance: 161
         is_used: false
@@ -9908,19 +9924,19 @@ components:
           format: double
           type: number
         err_h:
-          description: Depth error | double
+          description: Horizontal error (km) | double
           format: double
           type: number
         err_z:
-          description: Depth error | double
+          description: Depth error (km) | double
           format: double
           type: number
         err_lat:
-          description: Latitude error | double
+          description: Latitude error (km) | double
           format: double
           type: number
         err_lon:
-          description: Longitude error | double
+          description: Longitude error (km) | double
           format: double
           type: number
         quality:
@@ -10384,11 +10400,11 @@ components:
       format: double
       type: number
     origin__err_h:
-      description: Depth error | double
+      description: Horizontal error (km) | double
       format: double
       type: number
     origin__err_z:
-      description: Depth error | double
+      description: Depth error (km) | double
       format: double
       type: number
     hyp2000arc__phases:
@@ -10768,12 +10784,22 @@ components:
       format: double
       type: number
     origin__err_lat:
-      description: Latitude error | double
+      description: Latitude error (km) | double
       format: double
       type: number
     origin__err_lon:
-      description: Longitude error | double
+      description: Longitude error (km) | double
       format: double
+      type: number
+    err_lat_deg:
+      description: Latitude error (deg) | double
+      format: double
+      readOnly: true
+      type: number
+    err_lon_deg:
+      description: Longitude error (deg) | double
+      format: double
+      readOnly: true
       type: number
     origin__err_ot:
       description: Origin time error | double
@@ -11683,6 +11709,272 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           origins:
           - e1_dip: 7.386281948385884
+            err_lon_deg: 9.965781217890562
+            err_lat: 1.1730742509559433
+            nph_s: 1
+            modified: 2016-06-22T16:52:06.26Z
+            rms: 6.778324963048013
+            id: 14932631
+            magnitudes:
+            - type_magnitude: ML-VAX
+              nsta: 7
+              stationmagnitudes:
+              - amp1: -0.358
+                loc: "00"
+                amp2: 0.292
+                mag_correction: 0
+                type_amplitude:
+                  unit: m/s
+                  name: Acceleration
+                time1: 2017-04-28T06:34:15.35Z
+                time2: 2017-04-28T06:34:15.85Z
+                id_localspace: 182491
+                azimut: 161
+                mag: 3.04
+                inserted: 2016-06-22T16:52:06.26Z
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                modified: 2016-06-22T16:52:06.26Z
+                timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                id: 14932631
+                net: IV
+                cha: HHZ
+                type_magnitude: ML-VAX
+                sta: ACER
+                period: 7.058770351582356
+                err_mag: 6.519180951018382
+                weight: 0.88
+                orig_distance: 161
+                is_used: false
+                pick_id: 14932631
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                ep_distance: 223.3
+                category: other
+                revised: 0
+              - amp1: -0.358
+                loc: "00"
+                amp2: 0.292
+                mag_correction: 0
+                type_amplitude:
+                  unit: m/s
+                  name: Acceleration
+                time1: 2017-04-28T06:34:15.35Z
+                time2: 2017-04-28T06:34:15.85Z
+                id_localspace: 182491
+                azimut: 161
+                mag: 3.04
+                inserted: 2016-06-22T16:52:06.26Z
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                modified: 2016-06-22T16:52:06.26Z
+                timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                id: 14932631
+                net: IV
+                cha: HHZ
+                type_magnitude: ML-VAX
+                sta: ACER
+                period: 7.058770351582356
+                err_mag: 6.519180951018382
+                weight: 0.88
+                orig_distance: 161
+                is_used: false
+                pick_id: 14932631
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                ep_distance: 223.3
+                category: other
+                revised: 0
+              confidence_level: 68.3
+              upper_uncertainty: 0.53
+              mag_quality: BB
+              quality: 6.704019297950036
+              id_localspace: 182491
+              mag: 3.01
+              azimut: 3.0937452
+              inserted: 2016-06-22T16:52:06.26Z
+              nsta_used: 9
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              ncha_used: 27
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              modified: 2016-06-22T16:52:06.26Z
+              id: 14932631
+              ncha: 0
+              min_dist: 3.353193347011243
+              lower_uncertainty: 0.52
+            - type_magnitude: ML-VAX
+              nsta: 7
+              stationmagnitudes:
+              - amp1: -0.358
+                loc: "00"
+                amp2: 0.292
+                mag_correction: 0
+                type_amplitude:
+                  unit: m/s
+                  name: Acceleration
+                time1: 2017-04-28T06:34:15.35Z
+                time2: 2017-04-28T06:34:15.85Z
+                id_localspace: 182491
+                azimut: 161
+                mag: 3.04
+                inserted: 2016-06-22T16:52:06.26Z
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                modified: 2016-06-22T16:52:06.26Z
+                timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                id: 14932631
+                net: IV
+                cha: HHZ
+                type_magnitude: ML-VAX
+                sta: ACER
+                period: 7.058770351582356
+                err_mag: 6.519180951018382
+                weight: 0.88
+                orig_distance: 161
+                is_used: false
+                pick_id: 14932631
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                ep_distance: 223.3
+                category: other
+                revised: 0
+              - amp1: -0.358
+                loc: "00"
+                amp2: 0.292
+                mag_correction: 0
+                type_amplitude:
+                  unit: m/s
+                  name: Acceleration
+                time1: 2017-04-28T06:34:15.35Z
+                time2: 2017-04-28T06:34:15.85Z
+                id_localspace: 182491
+                azimut: 161
+                mag: 3.04
+                inserted: 2016-06-22T16:52:06.26Z
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                modified: 2016-06-22T16:52:06.26Z
+                timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                id: 14932631
+                net: IV
+                cha: HHZ
+                type_magnitude: ML-VAX
+                sta: ACER
+                period: 7.058770351582356
+                err_mag: 6.519180951018382
+                weight: 0.88
+                orig_distance: 161
+                is_used: false
+                pick_id: 14932631
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                ep_distance: 223.3
+                category: other
+                revised: 0
+              confidence_level: 68.3
+              upper_uncertainty: 0.53
+              mag_quality: BB
+              quality: 6.704019297950036
+              id_localspace: 182491
+              mag: 3.01
+              azimut: 3.0937452
+              inserted: 2016-06-22T16:52:06.26Z
+              nsta_used: 9
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              ncha_used: 27
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              modified: 2016-06-22T16:52:06.26Z
+              id: 14932631
+              ncha: 0
+              min_dist: 3.353193347011243
+              lower_uncertainty: 0.52
+            e0_dip: 3.616076749251911
+            lat: 45.492599
+            err_lon: 4.965218492984954
+            err_lat_deg: 5.025004791520295
+            err_ot: 9.369310271410669
+            e0_az: 9.301444
+            med_distance: 9.018348186070783
+            quality: AB
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            type_origin:
+              version_value: 1
+              version_name: ew prelim
+              name: hypocenter
+            region: Norcia
+            max_distance: 8.762042012749001
             fix_depth: false
             quality_numeric: 12
             arrivals:
@@ -11795,267 +12087,14 @@ components:
               version: hew1_mole
               parameters: ToDo
               username: ew
-            err_lat: 1.1730742509559433
-            min_distance: 8.762042012749001
-            sec_azim_gap: 2.8841622
+            min_distance: 6.438423552598547
+            sec_azim_gap: 6.878052
             azim_gap: 2.302136
-            nph_s: 3
-            modified: 2016-06-22T16:52:06.26Z
-            rms: 1.284659006116532
-            id: 14932631
-            magnitudes:
-            - type_magnitude: ML-VAX
-              nsta: 3
-              stationmagnitudes:
-              - amp1: -0.358
-                loc: "00"
-                amp2: 0.292
-                mag_correction: 0
-                type_amplitude:
-                  unit: m/s
-                  name: Acceleration
-                time1: 2017-04-28T06:34:15.35Z
-                time2: 2017-04-28T06:34:15.85Z
-                id_localspace: 182491
-                azimut: 161
-                mag: 3.04
-                inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                modified: 2016-06-22T16:52:06.26Z
-                timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                id: 14932631
-                net: IV
-                cha: HHZ
-                type_magnitude: ML-VAX
-                sta: ACER
-                period: 7.143538047012306
-                err_mag: 0.8851374739011653
-                weight: 0.88
-                orig_distance: 161
-                is_used: false
-                pick_id: 14932631
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                ep_distance: 223.3
-                category: other
-                revised: 0
-              - amp1: -0.358
-                loc: "00"
-                amp2: 0.292
-                mag_correction: 0
-                type_amplitude:
-                  unit: m/s
-                  name: Acceleration
-                time1: 2017-04-28T06:34:15.35Z
-                time2: 2017-04-28T06:34:15.85Z
-                id_localspace: 182491
-                azimut: 161
-                mag: 3.04
-                inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                modified: 2016-06-22T16:52:06.26Z
-                timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                id: 14932631
-                net: IV
-                cha: HHZ
-                type_magnitude: ML-VAX
-                sta: ACER
-                period: 7.143538047012306
-                err_mag: 0.8851374739011653
-                weight: 0.88
-                orig_distance: 161
-                is_used: false
-                pick_id: 14932631
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                ep_distance: 223.3
-                category: other
-                revised: 0
-              confidence_level: 68.3
-              upper_uncertainty: 0.53
-              mag_quality: BB
-              quality: 6.878052220127876
-              id_localspace: 182491
-              mag: 3.01
-              azimut: 6.704019
-              inserted: 2016-06-22T16:52:06.26Z
-              nsta_used: 9
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              ncha_used: 27
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              modified: 2016-06-22T16:52:06.26Z
-              id: 14932631
-              ncha: 3
-              min_dist: 5.944895607614016
-              lower_uncertainty: 0.52
-            - type_magnitude: ML-VAX
-              nsta: 3
-              stationmagnitudes:
-              - amp1: -0.358
-                loc: "00"
-                amp2: 0.292
-                mag_correction: 0
-                type_amplitude:
-                  unit: m/s
-                  name: Acceleration
-                time1: 2017-04-28T06:34:15.35Z
-                time2: 2017-04-28T06:34:15.85Z
-                id_localspace: 182491
-                azimut: 161
-                mag: 3.04
-                inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                modified: 2016-06-22T16:52:06.26Z
-                timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                id: 14932631
-                net: IV
-                cha: HHZ
-                type_magnitude: ML-VAX
-                sta: ACER
-                period: 7.143538047012306
-                err_mag: 0.8851374739011653
-                weight: 0.88
-                orig_distance: 161
-                is_used: false
-                pick_id: 14932631
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                ep_distance: 223.3
-                category: other
-                revised: 0
-              - amp1: -0.358
-                loc: "00"
-                amp2: 0.292
-                mag_correction: 0
-                type_amplitude:
-                  unit: m/s
-                  name: Acceleration
-                time1: 2017-04-28T06:34:15.35Z
-                time2: 2017-04-28T06:34:15.85Z
-                id_localspace: 182491
-                azimut: 161
-                mag: 3.04
-                inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                modified: 2016-06-22T16:52:06.26Z
-                timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                id: 14932631
-                net: IV
-                cha: HHZ
-                type_magnitude: ML-VAX
-                sta: ACER
-                period: 7.143538047012306
-                err_mag: 0.8851374739011653
-                weight: 0.88
-                orig_distance: 161
-                is_used: false
-                pick_id: 14932631
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                ep_distance: 223.3
-                category: other
-                revised: 0
-              confidence_level: 68.3
-              upper_uncertainty: 0.53
-              mag_quality: BB
-              quality: 6.878052220127876
-              id_localspace: 182491
-              mag: 3.01
-              azimut: 6.704019
-              inserted: 2016-06-22T16:52:06.26Z
-              nsta_used: 9
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              ncha_used: 27
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              modified: 2016-06-22T16:52:06.26Z
-              id: 14932631
-              ncha: 3
-              min_dist: 5.944895607614016
-              lower_uncertainty: 0.52
-            e0_dip: 3.616076749251911
-            lat: 45.492599
-            err_lon: 4.965218492984954
-            err_z: 9.965781217890562
+            err_z: 6.683562403749608
             ot: 2016-06-22T16:52:06.26Z
-            nph: 9
-            w_rms: 6.778324963048013
-            err_ot: 5.025004791520295
+            nph: 3
+            w_rms: 5.944895607614016
             e0: 7.061401241503109
-            e0_az: 9.301444
             focalmechanisms:
             - momenttensor:
                 tdmt:
@@ -12064,7 +12103,7 @@ components:
                   id: 14932631
                   stations:
                   - sta: ACER
-                    azi: 3.0205798
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -12072,7 +12111,7 @@ components:
                     modified: 2016-06-22T16:52:06.26Z
                     vr: 0.88
                   - sta: ACER
-                    azi: 3.0205798
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -12116,14 +12155,14 @@ components:
                 originid_out: 14932631
                 type_momenttensor: TDMT
                 id: 14932631
-              misfit: 0.10263654006109402
+              misfit: 8.969578798196912
               dip2: 40
               strike1: 34
               dip1: 50
-              frac_acc_30deg_pref: 7.740351818741173
+              frac_acc_30deg_pref: 3.0576100241049344
               url: http://mysite
               quality: Ba
-              rms_ang_diff_acc_pref: 8.969578798196912
+              rms_ang_diff_acc_pref: 3.0205796992916243
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -12139,16 +12178,16 @@ components:
                 parameters: ToDo
                 username: ew
               strike2: 218
-              azim_gap: 7.05877
+              azim_gap: 0.10263654
               localspace:
                 name: hew1_mole
                 description: Auto added
               modified: 2016-06-22T16:52:06.26Z
-              stdr: 4.652396432933246
+              stdr: 7.740351818741173
               id: 14932631
               rake1: 88
               rake2: 93
-              nsta_polarity: 6
+              nsta_polarity: 4
             - momenttensor:
                 tdmt:
                   inserted: 2016-06-22T16:52:06.26Z
@@ -12156,7 +12195,7 @@ components:
                   id: 14932631
                   stations:
                   - sta: ACER
-                    azi: 3.0205798
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -12164,7 +12203,7 @@ components:
                     modified: 2016-06-22T16:52:06.26Z
                     vr: 0.88
                   - sta: ACER
-                    azi: 3.0205798
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -12208,14 +12247,14 @@ components:
                 originid_out: 14932631
                 type_momenttensor: TDMT
                 id: 14932631
-              misfit: 0.10263654006109402
+              misfit: 8.969578798196912
               dip2: 40
               strike1: 34
               dip1: 50
-              frac_acc_30deg_pref: 7.740351818741173
+              frac_acc_30deg_pref: 3.0576100241049344
               url: http://mysite
               quality: Ba
-              rms_ang_diff_acc_pref: 8.969578798196912
+              rms_ang_diff_acc_pref: 3.0205796992916243
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -12231,35 +12270,290 @@ components:
                 parameters: ToDo
                 username: ew
               strike2: 218
-              azim_gap: 7.05877
+              azim_gap: 0.10263654
               localspace:
                 name: hew1_mole
                 description: Auto added
               modified: 2016-06-22T16:52:06.26Z
-              stdr: 4.652396432933246
+              stdr: 7.740351818741173
               id: 14932631
               rake1: 88
               rake2: 93
-              nsta_polarity: 6
+              nsta_polarity: 4
             e1: 2.027123023002322
             e2_az: 1.0246457
-            med_distance: 6.683562403749608
             e2: 1.2315135367772556
-            quality: AB
             err_depth: 6.84685269835264
-            nph_tot: 6
+            nph_tot: 2
             depth: 0.02
-            localspace:
-              name: hew1_mole
-              description: Auto added
-            type_origin:
-              version_value: 1
-              version_name: ew prelim
-              name: hypocenter
-            region: Norcia
-            max_distance: 9.369310271410669
             e2_dip: 1
           - e1_dip: 7.386281948385884
+            err_lon_deg: 9.965781217890562
+            err_lat: 1.1730742509559433
+            nph_s: 1
+            modified: 2016-06-22T16:52:06.26Z
+            rms: 6.778324963048013
+            id: 14932631
+            magnitudes:
+            - type_magnitude: ML-VAX
+              nsta: 7
+              stationmagnitudes:
+              - amp1: -0.358
+                loc: "00"
+                amp2: 0.292
+                mag_correction: 0
+                type_amplitude:
+                  unit: m/s
+                  name: Acceleration
+                time1: 2017-04-28T06:34:15.35Z
+                time2: 2017-04-28T06:34:15.85Z
+                id_localspace: 182491
+                azimut: 161
+                mag: 3.04
+                inserted: 2016-06-22T16:52:06.26Z
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                modified: 2016-06-22T16:52:06.26Z
+                timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                id: 14932631
+                net: IV
+                cha: HHZ
+                type_magnitude: ML-VAX
+                sta: ACER
+                period: 7.058770351582356
+                err_mag: 6.519180951018382
+                weight: 0.88
+                orig_distance: 161
+                is_used: false
+                pick_id: 14932631
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                ep_distance: 223.3
+                category: other
+                revised: 0
+              - amp1: -0.358
+                loc: "00"
+                amp2: 0.292
+                mag_correction: 0
+                type_amplitude:
+                  unit: m/s
+                  name: Acceleration
+                time1: 2017-04-28T06:34:15.35Z
+                time2: 2017-04-28T06:34:15.85Z
+                id_localspace: 182491
+                azimut: 161
+                mag: 3.04
+                inserted: 2016-06-22T16:52:06.26Z
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                modified: 2016-06-22T16:52:06.26Z
+                timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                id: 14932631
+                net: IV
+                cha: HHZ
+                type_magnitude: ML-VAX
+                sta: ACER
+                period: 7.058770351582356
+                err_mag: 6.519180951018382
+                weight: 0.88
+                orig_distance: 161
+                is_used: false
+                pick_id: 14932631
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                ep_distance: 223.3
+                category: other
+                revised: 0
+              confidence_level: 68.3
+              upper_uncertainty: 0.53
+              mag_quality: BB
+              quality: 6.704019297950036
+              id_localspace: 182491
+              mag: 3.01
+              azimut: 3.0937452
+              inserted: 2016-06-22T16:52:06.26Z
+              nsta_used: 9
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              ncha_used: 27
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              modified: 2016-06-22T16:52:06.26Z
+              id: 14932631
+              ncha: 0
+              min_dist: 3.353193347011243
+              lower_uncertainty: 0.52
+            - type_magnitude: ML-VAX
+              nsta: 7
+              stationmagnitudes:
+              - amp1: -0.358
+                loc: "00"
+                amp2: 0.292
+                mag_correction: 0
+                type_amplitude:
+                  unit: m/s
+                  name: Acceleration
+                time1: 2017-04-28T06:34:15.35Z
+                time2: 2017-04-28T06:34:15.85Z
+                id_localspace: 182491
+                azimut: 161
+                mag: 3.04
+                inserted: 2016-06-22T16:52:06.26Z
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                modified: 2016-06-22T16:52:06.26Z
+                timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                id: 14932631
+                net: IV
+                cha: HHZ
+                type_magnitude: ML-VAX
+                sta: ACER
+                period: 7.058770351582356
+                err_mag: 6.519180951018382
+                weight: 0.88
+                orig_distance: 161
+                is_used: false
+                pick_id: 14932631
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                ep_distance: 223.3
+                category: other
+                revised: 0
+              - amp1: -0.358
+                loc: "00"
+                amp2: 0.292
+                mag_correction: 0
+                type_amplitude:
+                  unit: m/s
+                  name: Acceleration
+                time1: 2017-04-28T06:34:15.35Z
+                time2: 2017-04-28T06:34:15.85Z
+                id_localspace: 182491
+                azimut: 161
+                mag: 3.04
+                inserted: 2016-06-22T16:52:06.26Z
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                modified: 2016-06-22T16:52:06.26Z
+                timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                id: 14932631
+                net: IV
+                cha: HHZ
+                type_magnitude: ML-VAX
+                sta: ACER
+                period: 7.058770351582356
+                err_mag: 6.519180951018382
+                weight: 0.88
+                orig_distance: 161
+                is_used: false
+                pick_id: 14932631
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                ep_distance: 223.3
+                category: other
+                revised: 0
+              confidence_level: 68.3
+              upper_uncertainty: 0.53
+              mag_quality: BB
+              quality: 6.704019297950036
+              id_localspace: 182491
+              mag: 3.01
+              azimut: 3.0937452
+              inserted: 2016-06-22T16:52:06.26Z
+              nsta_used: 9
+              provenance:
+                hostname: hew10.ingv.it
+                method: ToDo
+                name: INGV
+                description: Auto added
+                model: prem
+                program: IPO-EW__tdmt_invc.c
+                priority: 0
+                softwarename: software
+                version: hew1_mole
+                parameters: ToDo
+                username: ew
+              ncha_used: 27
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              modified: 2016-06-22T16:52:06.26Z
+              id: 14932631
+              ncha: 0
+              min_dist: 3.353193347011243
+              lower_uncertainty: 0.52
+            e0_dip: 3.616076749251911
+            lat: 45.492599
+            err_lon: 4.965218492984954
+            err_lat_deg: 5.025004791520295
+            err_ot: 9.369310271410669
+            e0_az: 9.301444
+            med_distance: 9.018348186070783
+            quality: AB
+            localspace:
+              name: hew1_mole
+              description: Auto added
+            type_origin:
+              version_value: 1
+              version_name: ew prelim
+              name: hypocenter
+            region: Norcia
+            max_distance: 8.762042012749001
             fix_depth: false
             quality_numeric: 12
             arrivals:
@@ -12372,267 +12666,14 @@ components:
               version: hew1_mole
               parameters: ToDo
               username: ew
-            err_lat: 1.1730742509559433
-            min_distance: 8.762042012749001
-            sec_azim_gap: 2.8841622
+            min_distance: 6.438423552598547
+            sec_azim_gap: 6.878052
             azim_gap: 2.302136
-            nph_s: 3
-            modified: 2016-06-22T16:52:06.26Z
-            rms: 1.284659006116532
-            id: 14932631
-            magnitudes:
-            - type_magnitude: ML-VAX
-              nsta: 3
-              stationmagnitudes:
-              - amp1: -0.358
-                loc: "00"
-                amp2: 0.292
-                mag_correction: 0
-                type_amplitude:
-                  unit: m/s
-                  name: Acceleration
-                time1: 2017-04-28T06:34:15.35Z
-                time2: 2017-04-28T06:34:15.85Z
-                id_localspace: 182491
-                azimut: 161
-                mag: 3.04
-                inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                modified: 2016-06-22T16:52:06.26Z
-                timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                id: 14932631
-                net: IV
-                cha: HHZ
-                type_magnitude: ML-VAX
-                sta: ACER
-                period: 7.143538047012306
-                err_mag: 0.8851374739011653
-                weight: 0.88
-                orig_distance: 161
-                is_used: false
-                pick_id: 14932631
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                ep_distance: 223.3
-                category: other
-                revised: 0
-              - amp1: -0.358
-                loc: "00"
-                amp2: 0.292
-                mag_correction: 0
-                type_amplitude:
-                  unit: m/s
-                  name: Acceleration
-                time1: 2017-04-28T06:34:15.35Z
-                time2: 2017-04-28T06:34:15.85Z
-                id_localspace: 182491
-                azimut: 161
-                mag: 3.04
-                inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                modified: 2016-06-22T16:52:06.26Z
-                timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                id: 14932631
-                net: IV
-                cha: HHZ
-                type_magnitude: ML-VAX
-                sta: ACER
-                period: 7.143538047012306
-                err_mag: 0.8851374739011653
-                weight: 0.88
-                orig_distance: 161
-                is_used: false
-                pick_id: 14932631
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                ep_distance: 223.3
-                category: other
-                revised: 0
-              confidence_level: 68.3
-              upper_uncertainty: 0.53
-              mag_quality: BB
-              quality: 6.878052220127876
-              id_localspace: 182491
-              mag: 3.01
-              azimut: 6.704019
-              inserted: 2016-06-22T16:52:06.26Z
-              nsta_used: 9
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              ncha_used: 27
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              modified: 2016-06-22T16:52:06.26Z
-              id: 14932631
-              ncha: 3
-              min_dist: 5.944895607614016
-              lower_uncertainty: 0.52
-            - type_magnitude: ML-VAX
-              nsta: 3
-              stationmagnitudes:
-              - amp1: -0.358
-                loc: "00"
-                amp2: 0.292
-                mag_correction: 0
-                type_amplitude:
-                  unit: m/s
-                  name: Acceleration
-                time1: 2017-04-28T06:34:15.35Z
-                time2: 2017-04-28T06:34:15.85Z
-                id_localspace: 182491
-                azimut: 161
-                mag: 3.04
-                inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                modified: 2016-06-22T16:52:06.26Z
-                timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                id: 14932631
-                net: IV
-                cha: HHZ
-                type_magnitude: ML-VAX
-                sta: ACER
-                period: 7.143538047012306
-                err_mag: 0.8851374739011653
-                weight: 0.88
-                orig_distance: 161
-                is_used: false
-                pick_id: 14932631
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                ep_distance: 223.3
-                category: other
-                revised: 0
-              - amp1: -0.358
-                loc: "00"
-                amp2: 0.292
-                mag_correction: 0
-                type_amplitude:
-                  unit: m/s
-                  name: Acceleration
-                time1: 2017-04-28T06:34:15.35Z
-                time2: 2017-04-28T06:34:15.85Z
-                id_localspace: 182491
-                azimut: 161
-                mag: 3.04
-                inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                modified: 2016-06-22T16:52:06.26Z
-                timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                id: 14932631
-                net: IV
-                cha: HHZ
-                type_magnitude: ML-VAX
-                sta: ACER
-                period: 7.143538047012306
-                err_mag: 0.8851374739011653
-                weight: 0.88
-                orig_distance: 161
-                is_used: false
-                pick_id: 14932631
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                ep_distance: 223.3
-                category: other
-                revised: 0
-              confidence_level: 68.3
-              upper_uncertainty: 0.53
-              mag_quality: BB
-              quality: 6.878052220127876
-              id_localspace: 182491
-              mag: 3.01
-              azimut: 6.704019
-              inserted: 2016-06-22T16:52:06.26Z
-              nsta_used: 9
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
-              ncha_used: 27
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              modified: 2016-06-22T16:52:06.26Z
-              id: 14932631
-              ncha: 3
-              min_dist: 5.944895607614016
-              lower_uncertainty: 0.52
-            e0_dip: 3.616076749251911
-            lat: 45.492599
-            err_lon: 4.965218492984954
-            err_z: 9.965781217890562
+            err_z: 6.683562403749608
             ot: 2016-06-22T16:52:06.26Z
-            nph: 9
-            w_rms: 6.778324963048013
-            err_ot: 5.025004791520295
+            nph: 3
+            w_rms: 5.944895607614016
             e0: 7.061401241503109
-            e0_az: 9.301444
             focalmechanisms:
             - momenttensor:
                 tdmt:
@@ -12641,7 +12682,7 @@ components:
                   id: 14932631
                   stations:
                   - sta: ACER
-                    azi: 3.0205798
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -12649,7 +12690,7 @@ components:
                     modified: 2016-06-22T16:52:06.26Z
                     vr: 0.88
                   - sta: ACER
-                    azi: 3.0205798
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -12693,14 +12734,14 @@ components:
                 originid_out: 14932631
                 type_momenttensor: TDMT
                 id: 14932631
-              misfit: 0.10263654006109402
+              misfit: 8.969578798196912
               dip2: 40
               strike1: 34
               dip1: 50
-              frac_acc_30deg_pref: 7.740351818741173
+              frac_acc_30deg_pref: 3.0576100241049344
               url: http://mysite
               quality: Ba
-              rms_ang_diff_acc_pref: 8.969578798196912
+              rms_ang_diff_acc_pref: 3.0205796992916243
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -12716,16 +12757,16 @@ components:
                 parameters: ToDo
                 username: ew
               strike2: 218
-              azim_gap: 7.05877
+              azim_gap: 0.10263654
               localspace:
                 name: hew1_mole
                 description: Auto added
               modified: 2016-06-22T16:52:06.26Z
-              stdr: 4.652396432933246
+              stdr: 7.740351818741173
               id: 14932631
               rake1: 88
               rake2: 93
-              nsta_polarity: 6
+              nsta_polarity: 4
             - momenttensor:
                 tdmt:
                   inserted: 2016-06-22T16:52:06.26Z
@@ -12733,7 +12774,7 @@ components:
                   id: 14932631
                   stations:
                   - sta: ACER
-                    azi: 3.0205798
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -12741,7 +12782,7 @@ components:
                     modified: 2016-06-22T16:52:06.26Z
                     vr: 0.88
                   - sta: ACER
-                    azi: 3.0205798
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -12785,14 +12826,14 @@ components:
                 originid_out: 14932631
                 type_momenttensor: TDMT
                 id: 14932631
-              misfit: 0.10263654006109402
+              misfit: 8.969578798196912
               dip2: 40
               strike1: 34
               dip1: 50
-              frac_acc_30deg_pref: 7.740351818741173
+              frac_acc_30deg_pref: 3.0576100241049344
               url: http://mysite
               quality: Ba
-              rms_ang_diff_acc_pref: 8.969578798196912
+              rms_ang_diff_acc_pref: 3.0205796992916243
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -12808,33 +12849,22 @@ components:
                 parameters: ToDo
                 username: ew
               strike2: 218
-              azim_gap: 7.05877
+              azim_gap: 0.10263654
               localspace:
                 name: hew1_mole
                 description: Auto added
               modified: 2016-06-22T16:52:06.26Z
-              stdr: 4.652396432933246
+              stdr: 7.740351818741173
               id: 14932631
               rake1: 88
               rake2: 93
-              nsta_polarity: 6
+              nsta_polarity: 4
             e1: 2.027123023002322
             e2_az: 1.0246457
-            med_distance: 6.683562403749608
             e2: 1.2315135367772556
-            quality: AB
             err_depth: 6.84685269835264
-            nph_tot: 6
+            nph_tot: 2
             depth: 0.02
-            localspace:
-              name: hew1_mole
-              description: Auto added
-            type_origin:
-              version_value: 1
-              version_name: ew prelim
-              name: hypocenter
-            region: Norcia
-            max_distance: 9.369310271410669
             e2_dip: 1
           id: 14932631
           event_group_id: 0
@@ -12954,6 +12984,272 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             origins:
             - e1_dip: 7.386281948385884
+              err_lon_deg: 9.965781217890562
+              err_lat: 1.1730742509559433
+              nph_s: 1
+              modified: 2016-06-22T16:52:06.26Z
+              rms: 6.778324963048013
+              id: 14932631
+              magnitudes:
+              - type_magnitude: ML-VAX
+                nsta: 7
+                stationmagnitudes:
+                - amp1: -0.358
+                  loc: "00"
+                  amp2: 0.292
+                  mag_correction: 0
+                  type_amplitude:
+                    unit: m/s
+                    name: Acceleration
+                  time1: 2017-04-28T06:34:15.35Z
+                  time2: 2017-04-28T06:34:15.85Z
+                  id_localspace: 182491
+                  azimut: 161
+                  mag: 3.04
+                  inserted: 2016-06-22T16:52:06.26Z
+                  provenance:
+                    hostname: hew10.ingv.it
+                    method: ToDo
+                    name: INGV
+                    description: Auto added
+                    model: prem
+                    program: IPO-EW__tdmt_invc.c
+                    priority: 0
+                    softwarename: software
+                    version: hew1_mole
+                    parameters: ToDo
+                    username: ew
+                  modified: 2016-06-22T16:52:06.26Z
+                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                  id: 14932631
+                  net: IV
+                  cha: HHZ
+                  type_magnitude: ML-VAX
+                  sta: ACER
+                  period: 7.058770351582356
+                  err_mag: 6.519180951018382
+                  weight: 0.88
+                  orig_distance: 161
+                  is_used: false
+                  pick_id: 14932631
+                  localspace:
+                    name: hew1_mole
+                    description: Auto added
+                  ep_distance: 223.3
+                  category: other
+                  revised: 0
+                - amp1: -0.358
+                  loc: "00"
+                  amp2: 0.292
+                  mag_correction: 0
+                  type_amplitude:
+                    unit: m/s
+                    name: Acceleration
+                  time1: 2017-04-28T06:34:15.35Z
+                  time2: 2017-04-28T06:34:15.85Z
+                  id_localspace: 182491
+                  azimut: 161
+                  mag: 3.04
+                  inserted: 2016-06-22T16:52:06.26Z
+                  provenance:
+                    hostname: hew10.ingv.it
+                    method: ToDo
+                    name: INGV
+                    description: Auto added
+                    model: prem
+                    program: IPO-EW__tdmt_invc.c
+                    priority: 0
+                    softwarename: software
+                    version: hew1_mole
+                    parameters: ToDo
+                    username: ew
+                  modified: 2016-06-22T16:52:06.26Z
+                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                  id: 14932631
+                  net: IV
+                  cha: HHZ
+                  type_magnitude: ML-VAX
+                  sta: ACER
+                  period: 7.058770351582356
+                  err_mag: 6.519180951018382
+                  weight: 0.88
+                  orig_distance: 161
+                  is_used: false
+                  pick_id: 14932631
+                  localspace:
+                    name: hew1_mole
+                    description: Auto added
+                  ep_distance: 223.3
+                  category: other
+                  revised: 0
+                confidence_level: 68.3
+                upper_uncertainty: 0.53
+                mag_quality: BB
+                quality: 6.704019297950036
+                id_localspace: 182491
+                mag: 3.01
+                azimut: 3.0937452
+                inserted: 2016-06-22T16:52:06.26Z
+                nsta_used: 9
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                ncha_used: 27
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                modified: 2016-06-22T16:52:06.26Z
+                id: 14932631
+                ncha: 0
+                min_dist: 3.353193347011243
+                lower_uncertainty: 0.52
+              - type_magnitude: ML-VAX
+                nsta: 7
+                stationmagnitudes:
+                - amp1: -0.358
+                  loc: "00"
+                  amp2: 0.292
+                  mag_correction: 0
+                  type_amplitude:
+                    unit: m/s
+                    name: Acceleration
+                  time1: 2017-04-28T06:34:15.35Z
+                  time2: 2017-04-28T06:34:15.85Z
+                  id_localspace: 182491
+                  azimut: 161
+                  mag: 3.04
+                  inserted: 2016-06-22T16:52:06.26Z
+                  provenance:
+                    hostname: hew10.ingv.it
+                    method: ToDo
+                    name: INGV
+                    description: Auto added
+                    model: prem
+                    program: IPO-EW__tdmt_invc.c
+                    priority: 0
+                    softwarename: software
+                    version: hew1_mole
+                    parameters: ToDo
+                    username: ew
+                  modified: 2016-06-22T16:52:06.26Z
+                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                  id: 14932631
+                  net: IV
+                  cha: HHZ
+                  type_magnitude: ML-VAX
+                  sta: ACER
+                  period: 7.058770351582356
+                  err_mag: 6.519180951018382
+                  weight: 0.88
+                  orig_distance: 161
+                  is_used: false
+                  pick_id: 14932631
+                  localspace:
+                    name: hew1_mole
+                    description: Auto added
+                  ep_distance: 223.3
+                  category: other
+                  revised: 0
+                - amp1: -0.358
+                  loc: "00"
+                  amp2: 0.292
+                  mag_correction: 0
+                  type_amplitude:
+                    unit: m/s
+                    name: Acceleration
+                  time1: 2017-04-28T06:34:15.35Z
+                  time2: 2017-04-28T06:34:15.85Z
+                  id_localspace: 182491
+                  azimut: 161
+                  mag: 3.04
+                  inserted: 2016-06-22T16:52:06.26Z
+                  provenance:
+                    hostname: hew10.ingv.it
+                    method: ToDo
+                    name: INGV
+                    description: Auto added
+                    model: prem
+                    program: IPO-EW__tdmt_invc.c
+                    priority: 0
+                    softwarename: software
+                    version: hew1_mole
+                    parameters: ToDo
+                    username: ew
+                  modified: 2016-06-22T16:52:06.26Z
+                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                  id: 14932631
+                  net: IV
+                  cha: HHZ
+                  type_magnitude: ML-VAX
+                  sta: ACER
+                  period: 7.058770351582356
+                  err_mag: 6.519180951018382
+                  weight: 0.88
+                  orig_distance: 161
+                  is_used: false
+                  pick_id: 14932631
+                  localspace:
+                    name: hew1_mole
+                    description: Auto added
+                  ep_distance: 223.3
+                  category: other
+                  revised: 0
+                confidence_level: 68.3
+                upper_uncertainty: 0.53
+                mag_quality: BB
+                quality: 6.704019297950036
+                id_localspace: 182491
+                mag: 3.01
+                azimut: 3.0937452
+                inserted: 2016-06-22T16:52:06.26Z
+                nsta_used: 9
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                ncha_used: 27
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                modified: 2016-06-22T16:52:06.26Z
+                id: 14932631
+                ncha: 0
+                min_dist: 3.353193347011243
+                lower_uncertainty: 0.52
+              e0_dip: 3.616076749251911
+              lat: 45.492599
+              err_lon: 4.965218492984954
+              err_lat_deg: 5.025004791520295
+              err_ot: 9.369310271410669
+              e0_az: 9.301444
+              med_distance: 9.018348186070783
+              quality: AB
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              type_origin:
+                version_value: 1
+                version_name: ew prelim
+                name: hypocenter
+              region: Norcia
+              max_distance: 8.762042012749001
               fix_depth: false
               quality_numeric: 12
               arrivals:
@@ -13066,267 +13362,14 @@ components:
                 version: hew1_mole
                 parameters: ToDo
                 username: ew
-              err_lat: 1.1730742509559433
-              min_distance: 8.762042012749001
-              sec_azim_gap: 2.8841622
+              min_distance: 6.438423552598547
+              sec_azim_gap: 6.878052
               azim_gap: 2.302136
-              nph_s: 3
-              modified: 2016-06-22T16:52:06.26Z
-              rms: 1.284659006116532
-              id: 14932631
-              magnitudes:
-              - type_magnitude: ML-VAX
-                nsta: 3
-                stationmagnitudes:
-                - amp1: -0.358
-                  loc: "00"
-                  amp2: 0.292
-                  mag_correction: 0
-                  type_amplitude:
-                    unit: m/s
-                    name: Acceleration
-                  time1: 2017-04-28T06:34:15.35Z
-                  time2: 2017-04-28T06:34:15.85Z
-                  id_localspace: 182491
-                  azimut: 161
-                  mag: 3.04
-                  inserted: 2016-06-22T16:52:06.26Z
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
-                  modified: 2016-06-22T16:52:06.26Z
-                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                  id: 14932631
-                  net: IV
-                  cha: HHZ
-                  type_magnitude: ML-VAX
-                  sta: ACER
-                  period: 7.143538047012306
-                  err_mag: 0.8851374739011653
-                  weight: 0.88
-                  orig_distance: 161
-                  is_used: false
-                  pick_id: 14932631
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
-                  ep_distance: 223.3
-                  category: other
-                  revised: 0
-                - amp1: -0.358
-                  loc: "00"
-                  amp2: 0.292
-                  mag_correction: 0
-                  type_amplitude:
-                    unit: m/s
-                    name: Acceleration
-                  time1: 2017-04-28T06:34:15.35Z
-                  time2: 2017-04-28T06:34:15.85Z
-                  id_localspace: 182491
-                  azimut: 161
-                  mag: 3.04
-                  inserted: 2016-06-22T16:52:06.26Z
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
-                  modified: 2016-06-22T16:52:06.26Z
-                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                  id: 14932631
-                  net: IV
-                  cha: HHZ
-                  type_magnitude: ML-VAX
-                  sta: ACER
-                  period: 7.143538047012306
-                  err_mag: 0.8851374739011653
-                  weight: 0.88
-                  orig_distance: 161
-                  is_used: false
-                  pick_id: 14932631
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
-                  ep_distance: 223.3
-                  category: other
-                  revised: 0
-                confidence_level: 68.3
-                upper_uncertainty: 0.53
-                mag_quality: BB
-                quality: 6.878052220127876
-                id_localspace: 182491
-                mag: 3.01
-                azimut: 6.704019
-                inserted: 2016-06-22T16:52:06.26Z
-                nsta_used: 9
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                ncha_used: 27
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                modified: 2016-06-22T16:52:06.26Z
-                id: 14932631
-                ncha: 3
-                min_dist: 5.944895607614016
-                lower_uncertainty: 0.52
-              - type_magnitude: ML-VAX
-                nsta: 3
-                stationmagnitudes:
-                - amp1: -0.358
-                  loc: "00"
-                  amp2: 0.292
-                  mag_correction: 0
-                  type_amplitude:
-                    unit: m/s
-                    name: Acceleration
-                  time1: 2017-04-28T06:34:15.35Z
-                  time2: 2017-04-28T06:34:15.85Z
-                  id_localspace: 182491
-                  azimut: 161
-                  mag: 3.04
-                  inserted: 2016-06-22T16:52:06.26Z
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
-                  modified: 2016-06-22T16:52:06.26Z
-                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                  id: 14932631
-                  net: IV
-                  cha: HHZ
-                  type_magnitude: ML-VAX
-                  sta: ACER
-                  period: 7.143538047012306
-                  err_mag: 0.8851374739011653
-                  weight: 0.88
-                  orig_distance: 161
-                  is_used: false
-                  pick_id: 14932631
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
-                  ep_distance: 223.3
-                  category: other
-                  revised: 0
-                - amp1: -0.358
-                  loc: "00"
-                  amp2: 0.292
-                  mag_correction: 0
-                  type_amplitude:
-                    unit: m/s
-                    name: Acceleration
-                  time1: 2017-04-28T06:34:15.35Z
-                  time2: 2017-04-28T06:34:15.85Z
-                  id_localspace: 182491
-                  azimut: 161
-                  mag: 3.04
-                  inserted: 2016-06-22T16:52:06.26Z
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
-                  modified: 2016-06-22T16:52:06.26Z
-                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                  id: 14932631
-                  net: IV
-                  cha: HHZ
-                  type_magnitude: ML-VAX
-                  sta: ACER
-                  period: 7.143538047012306
-                  err_mag: 0.8851374739011653
-                  weight: 0.88
-                  orig_distance: 161
-                  is_used: false
-                  pick_id: 14932631
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
-                  ep_distance: 223.3
-                  category: other
-                  revised: 0
-                confidence_level: 68.3
-                upper_uncertainty: 0.53
-                mag_quality: BB
-                quality: 6.878052220127876
-                id_localspace: 182491
-                mag: 3.01
-                azimut: 6.704019
-                inserted: 2016-06-22T16:52:06.26Z
-                nsta_used: 9
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                ncha_used: 27
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                modified: 2016-06-22T16:52:06.26Z
-                id: 14932631
-                ncha: 3
-                min_dist: 5.944895607614016
-                lower_uncertainty: 0.52
-              e0_dip: 3.616076749251911
-              lat: 45.492599
-              err_lon: 4.965218492984954
-              err_z: 9.965781217890562
+              err_z: 6.683562403749608
               ot: 2016-06-22T16:52:06.26Z
-              nph: 9
-              w_rms: 6.778324963048013
-              err_ot: 5.025004791520295
+              nph: 3
+              w_rms: 5.944895607614016
               e0: 7.061401241503109
-              e0_az: 9.301444
               focalmechanisms:
               - momenttensor:
                   tdmt:
@@ -13335,7 +13378,7 @@ components:
                     id: 14932631
                     stations:
                     - sta: ACER
-                      azi: 3.0205798
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -13343,7 +13386,7 @@ components:
                       modified: 2016-06-22T16:52:06.26Z
                       vr: 0.88
                     - sta: ACER
-                      azi: 3.0205798
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -13387,14 +13430,14 @@ components:
                   originid_out: 14932631
                   type_momenttensor: TDMT
                   id: 14932631
-                misfit: 0.10263654006109402
+                misfit: 8.969578798196912
                 dip2: 40
                 strike1: 34
                 dip1: 50
-                frac_acc_30deg_pref: 7.740351818741173
+                frac_acc_30deg_pref: 3.0576100241049344
                 url: http://mysite
                 quality: Ba
-                rms_ang_diff_acc_pref: 8.969578798196912
+                rms_ang_diff_acc_pref: 3.0205796992916243
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -13410,16 +13453,16 @@ components:
                   parameters: ToDo
                   username: ew
                 strike2: 218
-                azim_gap: 7.05877
+                azim_gap: 0.10263654
                 localspace:
                   name: hew1_mole
                   description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
-                stdr: 4.652396432933246
+                stdr: 7.740351818741173
                 id: 14932631
                 rake1: 88
                 rake2: 93
-                nsta_polarity: 6
+                nsta_polarity: 4
               - momenttensor:
                   tdmt:
                     inserted: 2016-06-22T16:52:06.26Z
@@ -13427,7 +13470,7 @@ components:
                     id: 14932631
                     stations:
                     - sta: ACER
-                      azi: 3.0205798
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -13435,7 +13478,7 @@ components:
                       modified: 2016-06-22T16:52:06.26Z
                       vr: 0.88
                     - sta: ACER
-                      azi: 3.0205798
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -13479,14 +13522,14 @@ components:
                   originid_out: 14932631
                   type_momenttensor: TDMT
                   id: 14932631
-                misfit: 0.10263654006109402
+                misfit: 8.969578798196912
                 dip2: 40
                 strike1: 34
                 dip1: 50
-                frac_acc_30deg_pref: 7.740351818741173
+                frac_acc_30deg_pref: 3.0576100241049344
                 url: http://mysite
                 quality: Ba
-                rms_ang_diff_acc_pref: 8.969578798196912
+                rms_ang_diff_acc_pref: 3.0205796992916243
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -13502,35 +13545,290 @@ components:
                   parameters: ToDo
                   username: ew
                 strike2: 218
-                azim_gap: 7.05877
+                azim_gap: 0.10263654
                 localspace:
                   name: hew1_mole
                   description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
-                stdr: 4.652396432933246
+                stdr: 7.740351818741173
                 id: 14932631
                 rake1: 88
                 rake2: 93
-                nsta_polarity: 6
+                nsta_polarity: 4
               e1: 2.027123023002322
               e2_az: 1.0246457
-              med_distance: 6.683562403749608
               e2: 1.2315135367772556
-              quality: AB
               err_depth: 6.84685269835264
-              nph_tot: 6
+              nph_tot: 2
               depth: 0.02
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              type_origin:
-                version_value: 1
-                version_name: ew prelim
-                name: hypocenter
-              region: Norcia
-              max_distance: 9.369310271410669
               e2_dip: 1
             - e1_dip: 7.386281948385884
+              err_lon_deg: 9.965781217890562
+              err_lat: 1.1730742509559433
+              nph_s: 1
+              modified: 2016-06-22T16:52:06.26Z
+              rms: 6.778324963048013
+              id: 14932631
+              magnitudes:
+              - type_magnitude: ML-VAX
+                nsta: 7
+                stationmagnitudes:
+                - amp1: -0.358
+                  loc: "00"
+                  amp2: 0.292
+                  mag_correction: 0
+                  type_amplitude:
+                    unit: m/s
+                    name: Acceleration
+                  time1: 2017-04-28T06:34:15.35Z
+                  time2: 2017-04-28T06:34:15.85Z
+                  id_localspace: 182491
+                  azimut: 161
+                  mag: 3.04
+                  inserted: 2016-06-22T16:52:06.26Z
+                  provenance:
+                    hostname: hew10.ingv.it
+                    method: ToDo
+                    name: INGV
+                    description: Auto added
+                    model: prem
+                    program: IPO-EW__tdmt_invc.c
+                    priority: 0
+                    softwarename: software
+                    version: hew1_mole
+                    parameters: ToDo
+                    username: ew
+                  modified: 2016-06-22T16:52:06.26Z
+                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                  id: 14932631
+                  net: IV
+                  cha: HHZ
+                  type_magnitude: ML-VAX
+                  sta: ACER
+                  period: 7.058770351582356
+                  err_mag: 6.519180951018382
+                  weight: 0.88
+                  orig_distance: 161
+                  is_used: false
+                  pick_id: 14932631
+                  localspace:
+                    name: hew1_mole
+                    description: Auto added
+                  ep_distance: 223.3
+                  category: other
+                  revised: 0
+                - amp1: -0.358
+                  loc: "00"
+                  amp2: 0.292
+                  mag_correction: 0
+                  type_amplitude:
+                    unit: m/s
+                    name: Acceleration
+                  time1: 2017-04-28T06:34:15.35Z
+                  time2: 2017-04-28T06:34:15.85Z
+                  id_localspace: 182491
+                  azimut: 161
+                  mag: 3.04
+                  inserted: 2016-06-22T16:52:06.26Z
+                  provenance:
+                    hostname: hew10.ingv.it
+                    method: ToDo
+                    name: INGV
+                    description: Auto added
+                    model: prem
+                    program: IPO-EW__tdmt_invc.c
+                    priority: 0
+                    softwarename: software
+                    version: hew1_mole
+                    parameters: ToDo
+                    username: ew
+                  modified: 2016-06-22T16:52:06.26Z
+                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                  id: 14932631
+                  net: IV
+                  cha: HHZ
+                  type_magnitude: ML-VAX
+                  sta: ACER
+                  period: 7.058770351582356
+                  err_mag: 6.519180951018382
+                  weight: 0.88
+                  orig_distance: 161
+                  is_used: false
+                  pick_id: 14932631
+                  localspace:
+                    name: hew1_mole
+                    description: Auto added
+                  ep_distance: 223.3
+                  category: other
+                  revised: 0
+                confidence_level: 68.3
+                upper_uncertainty: 0.53
+                mag_quality: BB
+                quality: 6.704019297950036
+                id_localspace: 182491
+                mag: 3.01
+                azimut: 3.0937452
+                inserted: 2016-06-22T16:52:06.26Z
+                nsta_used: 9
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                ncha_used: 27
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                modified: 2016-06-22T16:52:06.26Z
+                id: 14932631
+                ncha: 0
+                min_dist: 3.353193347011243
+                lower_uncertainty: 0.52
+              - type_magnitude: ML-VAX
+                nsta: 7
+                stationmagnitudes:
+                - amp1: -0.358
+                  loc: "00"
+                  amp2: 0.292
+                  mag_correction: 0
+                  type_amplitude:
+                    unit: m/s
+                    name: Acceleration
+                  time1: 2017-04-28T06:34:15.35Z
+                  time2: 2017-04-28T06:34:15.85Z
+                  id_localspace: 182491
+                  azimut: 161
+                  mag: 3.04
+                  inserted: 2016-06-22T16:52:06.26Z
+                  provenance:
+                    hostname: hew10.ingv.it
+                    method: ToDo
+                    name: INGV
+                    description: Auto added
+                    model: prem
+                    program: IPO-EW__tdmt_invc.c
+                    priority: 0
+                    softwarename: software
+                    version: hew1_mole
+                    parameters: ToDo
+                    username: ew
+                  modified: 2016-06-22T16:52:06.26Z
+                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                  id: 14932631
+                  net: IV
+                  cha: HHZ
+                  type_magnitude: ML-VAX
+                  sta: ACER
+                  period: 7.058770351582356
+                  err_mag: 6.519180951018382
+                  weight: 0.88
+                  orig_distance: 161
+                  is_used: false
+                  pick_id: 14932631
+                  localspace:
+                    name: hew1_mole
+                    description: Auto added
+                  ep_distance: 223.3
+                  category: other
+                  revised: 0
+                - amp1: -0.358
+                  loc: "00"
+                  amp2: 0.292
+                  mag_correction: 0
+                  type_amplitude:
+                    unit: m/s
+                    name: Acceleration
+                  time1: 2017-04-28T06:34:15.35Z
+                  time2: 2017-04-28T06:34:15.85Z
+                  id_localspace: 182491
+                  azimut: 161
+                  mag: 3.04
+                  inserted: 2016-06-22T16:52:06.26Z
+                  provenance:
+                    hostname: hew10.ingv.it
+                    method: ToDo
+                    name: INGV
+                    description: Auto added
+                    model: prem
+                    program: IPO-EW__tdmt_invc.c
+                    priority: 0
+                    softwarename: software
+                    version: hew1_mole
+                    parameters: ToDo
+                    username: ew
+                  modified: 2016-06-22T16:52:06.26Z
+                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
+                  id: 14932631
+                  net: IV
+                  cha: HHZ
+                  type_magnitude: ML-VAX
+                  sta: ACER
+                  period: 7.058770351582356
+                  err_mag: 6.519180951018382
+                  weight: 0.88
+                  orig_distance: 161
+                  is_used: false
+                  pick_id: 14932631
+                  localspace:
+                    name: hew1_mole
+                    description: Auto added
+                  ep_distance: 223.3
+                  category: other
+                  revised: 0
+                confidence_level: 68.3
+                upper_uncertainty: 0.53
+                mag_quality: BB
+                quality: 6.704019297950036
+                id_localspace: 182491
+                mag: 3.01
+                azimut: 3.0937452
+                inserted: 2016-06-22T16:52:06.26Z
+                nsta_used: 9
+                provenance:
+                  hostname: hew10.ingv.it
+                  method: ToDo
+                  name: INGV
+                  description: Auto added
+                  model: prem
+                  program: IPO-EW__tdmt_invc.c
+                  priority: 0
+                  softwarename: software
+                  version: hew1_mole
+                  parameters: ToDo
+                  username: ew
+                ncha_used: 27
+                localspace:
+                  name: hew1_mole
+                  description: Auto added
+                modified: 2016-06-22T16:52:06.26Z
+                id: 14932631
+                ncha: 0
+                min_dist: 3.353193347011243
+                lower_uncertainty: 0.52
+              e0_dip: 3.616076749251911
+              lat: 45.492599
+              err_lon: 4.965218492984954
+              err_lat_deg: 5.025004791520295
+              err_ot: 9.369310271410669
+              e0_az: 9.301444
+              med_distance: 9.018348186070783
+              quality: AB
+              localspace:
+                name: hew1_mole
+                description: Auto added
+              type_origin:
+                version_value: 1
+                version_name: ew prelim
+                name: hypocenter
+              region: Norcia
+              max_distance: 8.762042012749001
               fix_depth: false
               quality_numeric: 12
               arrivals:
@@ -13643,267 +13941,14 @@ components:
                 version: hew1_mole
                 parameters: ToDo
                 username: ew
-              err_lat: 1.1730742509559433
-              min_distance: 8.762042012749001
-              sec_azim_gap: 2.8841622
+              min_distance: 6.438423552598547
+              sec_azim_gap: 6.878052
               azim_gap: 2.302136
-              nph_s: 3
-              modified: 2016-06-22T16:52:06.26Z
-              rms: 1.284659006116532
-              id: 14932631
-              magnitudes:
-              - type_magnitude: ML-VAX
-                nsta: 3
-                stationmagnitudes:
-                - amp1: -0.358
-                  loc: "00"
-                  amp2: 0.292
-                  mag_correction: 0
-                  type_amplitude:
-                    unit: m/s
-                    name: Acceleration
-                  time1: 2017-04-28T06:34:15.35Z
-                  time2: 2017-04-28T06:34:15.85Z
-                  id_localspace: 182491
-                  azimut: 161
-                  mag: 3.04
-                  inserted: 2016-06-22T16:52:06.26Z
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
-                  modified: 2016-06-22T16:52:06.26Z
-                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                  id: 14932631
-                  net: IV
-                  cha: HHZ
-                  type_magnitude: ML-VAX
-                  sta: ACER
-                  period: 7.143538047012306
-                  err_mag: 0.8851374739011653
-                  weight: 0.88
-                  orig_distance: 161
-                  is_used: false
-                  pick_id: 14932631
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
-                  ep_distance: 223.3
-                  category: other
-                  revised: 0
-                - amp1: -0.358
-                  loc: "00"
-                  amp2: 0.292
-                  mag_correction: 0
-                  type_amplitude:
-                    unit: m/s
-                    name: Acceleration
-                  time1: 2017-04-28T06:34:15.35Z
-                  time2: 2017-04-28T06:34:15.85Z
-                  id_localspace: 182491
-                  azimut: 161
-                  mag: 3.04
-                  inserted: 2016-06-22T16:52:06.26Z
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
-                  modified: 2016-06-22T16:52:06.26Z
-                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                  id: 14932631
-                  net: IV
-                  cha: HHZ
-                  type_magnitude: ML-VAX
-                  sta: ACER
-                  period: 7.143538047012306
-                  err_mag: 0.8851374739011653
-                  weight: 0.88
-                  orig_distance: 161
-                  is_used: false
-                  pick_id: 14932631
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
-                  ep_distance: 223.3
-                  category: other
-                  revised: 0
-                confidence_level: 68.3
-                upper_uncertainty: 0.53
-                mag_quality: BB
-                quality: 6.878052220127876
-                id_localspace: 182491
-                mag: 3.01
-                azimut: 6.704019
-                inserted: 2016-06-22T16:52:06.26Z
-                nsta_used: 9
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                ncha_used: 27
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                modified: 2016-06-22T16:52:06.26Z
-                id: 14932631
-                ncha: 3
-                min_dist: 5.944895607614016
-                lower_uncertainty: 0.52
-              - type_magnitude: ML-VAX
-                nsta: 3
-                stationmagnitudes:
-                - amp1: -0.358
-                  loc: "00"
-                  amp2: 0.292
-                  mag_correction: 0
-                  type_amplitude:
-                    unit: m/s
-                    name: Acceleration
-                  time1: 2017-04-28T06:34:15.35Z
-                  time2: 2017-04-28T06:34:15.85Z
-                  id_localspace: 182491
-                  azimut: 161
-                  mag: 3.04
-                  inserted: 2016-06-22T16:52:06.26Z
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
-                  modified: 2016-06-22T16:52:06.26Z
-                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                  id: 14932631
-                  net: IV
-                  cha: HHZ
-                  type_magnitude: ML-VAX
-                  sta: ACER
-                  period: 7.143538047012306
-                  err_mag: 0.8851374739011653
-                  weight: 0.88
-                  orig_distance: 161
-                  is_used: false
-                  pick_id: 14932631
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
-                  ep_distance: 223.3
-                  category: other
-                  revised: 0
-                - amp1: -0.358
-                  loc: "00"
-                  amp2: 0.292
-                  mag_correction: 0
-                  type_amplitude:
-                    unit: m/s
-                    name: Acceleration
-                  time1: 2017-04-28T06:34:15.35Z
-                  time2: 2017-04-28T06:34:15.85Z
-                  id_localspace: 182491
-                  azimut: 161
-                  mag: 3.04
-                  inserted: 2016-06-22T16:52:06.26Z
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
-                  modified: 2016-06-22T16:52:06.26Z
-                  timewindow_reference: 2000-01-23T04:56:07.000+00:00
-                  id: 14932631
-                  net: IV
-                  cha: HHZ
-                  type_magnitude: ML-VAX
-                  sta: ACER
-                  period: 7.143538047012306
-                  err_mag: 0.8851374739011653
-                  weight: 0.88
-                  orig_distance: 161
-                  is_used: false
-                  pick_id: 14932631
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
-                  ep_distance: 223.3
-                  category: other
-                  revised: 0
-                confidence_level: 68.3
-                upper_uncertainty: 0.53
-                mag_quality: BB
-                quality: 6.878052220127876
-                id_localspace: 182491
-                mag: 3.01
-                azimut: 6.704019
-                inserted: 2016-06-22T16:52:06.26Z
-                nsta_used: 9
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
-                ncha_used: 27
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
-                modified: 2016-06-22T16:52:06.26Z
-                id: 14932631
-                ncha: 3
-                min_dist: 5.944895607614016
-                lower_uncertainty: 0.52
-              e0_dip: 3.616076749251911
-              lat: 45.492599
-              err_lon: 4.965218492984954
-              err_z: 9.965781217890562
+              err_z: 6.683562403749608
               ot: 2016-06-22T16:52:06.26Z
-              nph: 9
-              w_rms: 6.778324963048013
-              err_ot: 5.025004791520295
+              nph: 3
+              w_rms: 5.944895607614016
               e0: 7.061401241503109
-              e0_az: 9.301444
               focalmechanisms:
               - momenttensor:
                   tdmt:
@@ -13912,7 +13957,7 @@ components:
                     id: 14932631
                     stations:
                     - sta: ACER
-                      azi: 3.0205798
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -13920,7 +13965,7 @@ components:
                       modified: 2016-06-22T16:52:06.26Z
                       vr: 0.88
                     - sta: ACER
-                      azi: 3.0205798
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -13964,14 +14009,14 @@ components:
                   originid_out: 14932631
                   type_momenttensor: TDMT
                   id: 14932631
-                misfit: 0.10263654006109402
+                misfit: 8.969578798196912
                 dip2: 40
                 strike1: 34
                 dip1: 50
-                frac_acc_30deg_pref: 7.740351818741173
+                frac_acc_30deg_pref: 3.0576100241049344
                 url: http://mysite
                 quality: Ba
-                rms_ang_diff_acc_pref: 8.969578798196912
+                rms_ang_diff_acc_pref: 3.0205796992916243
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -13987,16 +14032,16 @@ components:
                   parameters: ToDo
                   username: ew
                 strike2: 218
-                azim_gap: 7.05877
+                azim_gap: 0.10263654
                 localspace:
                   name: hew1_mole
                   description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
-                stdr: 4.652396432933246
+                stdr: 7.740351818741173
                 id: 14932631
                 rake1: 88
                 rake2: 93
-                nsta_polarity: 6
+                nsta_polarity: 4
               - momenttensor:
                   tdmt:
                     inserted: 2016-06-22T16:52:06.26Z
@@ -14004,7 +14049,7 @@ components:
                     id: 14932631
                     stations:
                     - sta: ACER
-                      azi: 3.0205798
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -14012,7 +14057,7 @@ components:
                       modified: 2016-06-22T16:52:06.26Z
                       vr: 0.88
                     - sta: ACER
-                      azi: 3.0205798
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -14056,14 +14101,14 @@ components:
                   originid_out: 14932631
                   type_momenttensor: TDMT
                   id: 14932631
-                misfit: 0.10263654006109402
+                misfit: 8.969578798196912
                 dip2: 40
                 strike1: 34
                 dip1: 50
-                frac_acc_30deg_pref: 7.740351818741173
+                frac_acc_30deg_pref: 3.0576100241049344
                 url: http://mysite
                 quality: Ba
-                rms_ang_diff_acc_pref: 8.969578798196912
+                rms_ang_diff_acc_pref: 3.0205796992916243
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -14079,33 +14124,22 @@ components:
                   parameters: ToDo
                   username: ew
                 strike2: 218
-                azim_gap: 7.05877
+                azim_gap: 0.10263654
                 localspace:
                   name: hew1_mole
                   description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
-                stdr: 4.652396432933246
+                stdr: 7.740351818741173
                 id: 14932631
                 rake1: 88
                 rake2: 93
-                nsta_polarity: 6
+                nsta_polarity: 4
               e1: 2.027123023002322
               e2_az: 1.0246457
-              med_distance: 6.683562403749608
               e2: 1.2315135367772556
-              quality: AB
               err_depth: 6.84685269835264
-              nph_tot: 6
+              nph_tot: 2
               depth: 0.02
-              localspace:
-                name: hew1_mole
-                description: Auto added
-              type_origin:
-                version_value: 1
-                version_name: ew prelim
-                name: hypocenter
-              region: Norcia
-              max_distance: 9.369310271410669
               e2_dip: 1
             id: 14932631
             event_group_id: 0
@@ -14845,7 +14879,7 @@ components:
     ObjectMomenttensor_tdmt_stations_inner:
       example:
         sta: ACER
-        azi: 3.0205798
+        azi: 7.0483656
         r: 223.3
         inserted: 2016-06-22T16:52:06.26Z
         zcor: 0.88
@@ -14900,7 +14934,7 @@ components:
         id: 14932631
         stations:
         - sta: ACER
-          azi: 3.0205798
+          azi: 7.0483656
           r: 223.3
           inserted: 2016-06-22T16:52:06.26Z
           zcor: 0.88
@@ -14908,7 +14942,7 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           vr: 0.88
         - sta: ACER
-          azi: 3.0205798
+          azi: 7.0483656
           r: 223.3
           inserted: 2016-06-22T16:52:06.26Z
           zcor: 0.88
@@ -15262,11 +15296,11 @@ components:
           format: double
           type: number
         erh:
-          description: Depth error | double
+          description: Horizontal error (km) | double
           format: double
           type: number
         erz:
-          description: Depth error | double
+          description: Depth error (km) | double
           format: double
           type: number
         Md:

@@ -24,11 +24,13 @@
 |**e2Az** | **Float** | azimuth of smallest principal error | double |  [optional] |
 |**e2Dip** | **Long** | dip of smallest principal error | double |  [optional] |
 |**errDepth** | **Double** | Depth error | double |  [optional] |
-|**errH** | **Double** | Depth error | double |  [optional] |
-|**errLat** | **Double** | Latitude error | double |  [optional] |
-|**errLon** | **Double** | Longitude error | double |  [optional] |
+|**errH** | **Double** | Horizontal error (km) | double |  [optional] |
+|**errLat** | **Double** | Latitude error (km) | double |  [optional] |
+|**errLon** | **Double** | Longitude error (km) | double |  [optional] |
+|**errLatDeg** | **Double** | Latitude error (deg) | double |  [optional] [readonly] |
+|**errLonDeg** | **Double** | Longitude error (deg) | double |  [optional] [readonly] |
 |**errOt** | **Double** | Origin time error | double |  [optional] |
-|**errZ** | **Double** | Depth error | double |  [optional] |
+|**errZ** | **Double** | Depth error (km) | double |  [optional] |
 |**fixDepth** | **Boolean** | true if depth is fixed | boolean |  [optional] |
 |**isCentroid** | **Boolean** | true if it is a centroi | boolean |  [optional] |
 |**lat** | **Double** | Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  |

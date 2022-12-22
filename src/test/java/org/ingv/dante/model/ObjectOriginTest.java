@@ -210,6 +210,22 @@ public class ObjectOriginTest {
     }
 
     /**
+     * Test the property 'errLatDeg'
+     */
+    @Test
+    public void errLatDegTest() {
+        // TODO: test errLatDeg
+    }
+
+    /**
+     * Test the property 'errLonDeg'
+     */
+    @Test
+    public void errLonDegTest() {
+        // TODO: test errLonDeg
+    }
+
+    /**
      * Test the property 'errOt'
      */
     @Test

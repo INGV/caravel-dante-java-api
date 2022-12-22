@@ -57,7 +57,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-22T08:42:25.347673Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-22T14:35:27.156563Z[Etc/UTC]")
 public class ObjectOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -138,6 +138,14 @@ public class ObjectOrigin {
   public static final String SERIALIZED_NAME_ERR_LON = "err_lon";
   @SerializedName(SERIALIZED_NAME_ERR_LON)
   private Double errLon;
+
+  public static final String SERIALIZED_NAME_ERR_LAT_DEG = "err_lat_deg";
+  @SerializedName(SERIALIZED_NAME_ERR_LAT_DEG)
+  private Double errLatDeg;
+
+  public static final String SERIALIZED_NAME_ERR_LON_DEG = "err_lon_deg";
+  @SerializedName(SERIALIZED_NAME_ERR_LON_DEG)
+  private Double errLonDeg;
 
   public static final String SERIALIZED_NAME_ERR_OT = "err_ot";
   @SerializedName(SERIALIZED_NAME_ERR_OT)
@@ -255,12 +263,16 @@ public class ObjectOrigin {
      Long id, 
      OffsetDateTime modified, 
      OffsetDateTime inserted, 
+     Double errLatDeg, 
+     Double errLonDeg, 
      String flags
   ) {
     this();
     this.id = id;
     this.modified = modified;
     this.inserted = inserted;
+    this.errLatDeg = errLatDeg;
+    this.errLonDeg = errLonDeg;
     this.flags = flags;
   }
 
@@ -635,11 +647,11 @@ public class ObjectOrigin {
   }
 
    /**
-   * Depth error | double
+   * Horizontal error (km) | double
    * @return errH
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Depth error | double")
+  @ApiModelProperty(value = "Horizontal error (km) | double")
 
   public Double getErrH() {
     return errH;
@@ -658,11 +670,11 @@ public class ObjectOrigin {
   }
 
    /**
-   * Latitude error | double
+   * Latitude error (km) | double
    * @return errLat
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Latitude error | double")
+  @ApiModelProperty(value = "Latitude error (km) | double")
 
   public Double getErrLat() {
     return errLat;
@@ -681,11 +693,11 @@ public class ObjectOrigin {
   }
 
    /**
-   * Longitude error | double
+   * Longitude error (km) | double
    * @return errLon
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Longitude error | double")
+  @ApiModelProperty(value = "Longitude error (km) | double")
 
   public Double getErrLon() {
     return errLon;
@@ -695,6 +707,34 @@ public class ObjectOrigin {
   public void setErrLon(Double errLon) {
     this.errLon = errLon;
   }
+
+
+   /**
+   * Latitude error (deg) | double
+   * @return errLatDeg
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Latitude error (deg) | double")
+
+  public Double getErrLatDeg() {
+    return errLatDeg;
+  }
+
+
+
+
+   /**
+   * Longitude error (deg) | double
+   * @return errLonDeg
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Longitude error (deg) | double")
+
+  public Double getErrLonDeg() {
+    return errLonDeg;
+  }
+
+
 
 
   public ObjectOrigin errOt(Double errOt) {
@@ -727,11 +767,11 @@ public class ObjectOrigin {
   }
 
    /**
-   * Depth error | double
+   * Depth error (km) | double
    * @return errZ
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Depth error | double")
+  @ApiModelProperty(value = "Depth error (km) | double")
 
   public Double getErrZ() {
     return errZ;
@@ -1402,6 +1442,8 @@ public class ObjectOrigin {
         Objects.equals(this.errH, objectOrigin.errH) &&
         Objects.equals(this.errLat, objectOrigin.errLat) &&
         Objects.equals(this.errLon, objectOrigin.errLon) &&
+        Objects.equals(this.errLatDeg, objectOrigin.errLatDeg) &&
+        Objects.equals(this.errLonDeg, objectOrigin.errLonDeg) &&
         Objects.equals(this.errOt, objectOrigin.errOt) &&
         Objects.equals(this.errZ, objectOrigin.errZ) &&
         Objects.equals(this.fixDepth, objectOrigin.fixDepth) &&
@@ -1438,7 +1480,7 @@ public class ObjectOrigin {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, idLocalspace, azimGap, confidenceLevel, depth, e0, e0Az, e0Dip, e1, e1Az, e1Dip, e2, e2Az, e2Dip, errDepth, errH, errLat, errLon, errOt, errZ, fixDepth, isCentroid, lat, lon, maxDistance, medDistance, minDistance, nph, nphFm, nphS, nphTot, ot, quality, qualityNumeric, region, rms, secAzimGap, wRms, typeOrigin, localspace, provenance, flags, magnitudes, arrivals, focalmechanisms, additionalProperties);
+    return Objects.hash(id, modified, inserted, idLocalspace, azimGap, confidenceLevel, depth, e0, e0Az, e0Dip, e1, e1Az, e1Dip, e2, e2Az, e2Dip, errDepth, errH, errLat, errLon, errLatDeg, errLonDeg, errOt, errZ, fixDepth, isCentroid, lat, lon, maxDistance, medDistance, minDistance, nph, nphFm, nphS, nphTot, ot, quality, qualityNumeric, region, rms, secAzimGap, wRms, typeOrigin, localspace, provenance, flags, magnitudes, arrivals, focalmechanisms, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1472,6 +1514,8 @@ public class ObjectOrigin {
     sb.append("    errH: ").append(toIndentedString(errH)).append("\n");
     sb.append("    errLat: ").append(toIndentedString(errLat)).append("\n");
     sb.append("    errLon: ").append(toIndentedString(errLon)).append("\n");
+    sb.append("    errLatDeg: ").append(toIndentedString(errLatDeg)).append("\n");
+    sb.append("    errLonDeg: ").append(toIndentedString(errLonDeg)).append("\n");
     sb.append("    errOt: ").append(toIndentedString(errOt)).append("\n");
     sb.append("    errZ: ").append(toIndentedString(errZ)).append("\n");
     sb.append("    fixDepth: ").append(toIndentedString(fixDepth)).append("\n");
@@ -1542,6 +1586,8 @@ public class ObjectOrigin {
     openapiFields.add("err_h");
     openapiFields.add("err_lat");
     openapiFields.add("err_lon");
+    openapiFields.add("err_lat_deg");
+    openapiFields.add("err_lon_deg");
     openapiFields.add("err_ot");
     openapiFields.add("err_z");
     openapiFields.add("fix_depth");
