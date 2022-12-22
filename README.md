@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 2.64.0
-  - Build date: 2022-12-21T11:48:09.471488Z[Etc/UTC]
+- API version: 2.65.1
+  - Build date: 2022-12-22T08:43:19.010786Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>2.64.0</version>
+  <version>2.65.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.64.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.65.1"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-2.64.0.jar`
+* `target/java-openapi-generator-cli-dante-2.65.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -331,6 +331,7 @@ Class | Method | HTTP request | Description
  - [StrongmotioniiSchemaEwLogo](docs/StrongmotioniiSchemaEwLogo.md)
  - [StrongmotioniiSchemaEwMessage](docs/StrongmotioniiSchemaEwMessage.md)
  - [StrongmotioniiSchemaEwMessageRSAInner](docs/StrongmotioniiSchemaEwMessageRSAInner.md)
+ - [TypeAmplitudeCategory](docs/TypeAmplitudeCategory.md)
  - [TypeOriginName](docs/TypeOriginName.md)
  - [UpdateEvent200Response](docs/UpdateEvent200Response.md)
  - [UpdateEvent200ResponseData](docs/UpdateEvent200ResponseData.md)

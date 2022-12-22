@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: http://terremoti.ingv.it/webservices_and_software
   title: Dante Web Services
-  version: 2.64.0
+  version: 2.65.1
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -6541,7 +6541,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               ep_distance: 223.3
-              category: Other
+              category: other
               revised: 0
             - amp1: -0.358
               loc: "00"
@@ -6585,7 +6585,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               ep_distance: 223.3
-              category: Other
+              category: other
               revised: 0
             confidence_level: 68.3
             upper_uncertainty: 0.53
@@ -6662,7 +6662,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               ep_distance: 223.3
-              category: Other
+              category: other
               revised: 0
             - amp1: -0.358
               loc: "00"
@@ -6706,7 +6706,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               ep_distance: 223.3
-              category: Other
+              category: other
               revised: 0
             confidence_level: 68.3
             upper_uncertainty: 0.53
@@ -7118,7 +7118,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               ep_distance: 223.3
-              category: Other
+              category: other
               revised: 0
             - amp1: -0.358
               loc: "00"
@@ -7162,7 +7162,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               ep_distance: 223.3
-              category: Other
+              category: other
               revised: 0
             confidence_level: 68.3
             upper_uncertainty: 0.53
@@ -7239,7 +7239,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               ep_distance: 223.3
-              category: Other
+              category: other
               revised: 0
             - amp1: -0.358
               loc: "00"
@@ -7283,7 +7283,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               ep_distance: 223.3
-              category: Other
+              category: other
               revised: 0
             confidence_level: 68.3
             upper_uncertainty: 0.53
@@ -7778,7 +7778,7 @@ components:
               name: hew1_mole
               description: Auto added
             ep_distance: 223.3
-            category: Other
+            category: other
             revised: 0
           - amp1: -0.358
             loc: "00"
@@ -7822,7 +7822,7 @@ components:
               name: hew1_mole
               description: Auto added
             ep_distance: 223.3
-            category: Other
+            category: other
             revised: 0
           confidence_level: 68.3
           upper_uncertainty: 0.53
@@ -7899,7 +7899,7 @@ components:
               name: hew1_mole
               description: Auto added
             ep_distance: 223.3
-            category: Other
+            category: other
             revised: 0
           - amp1: -0.358
             loc: "00"
@@ -7943,7 +7943,7 @@ components:
               name: hew1_mole
               description: Auto added
             ep_distance: 223.3
-            category: Other
+            category: other
             revised: 0
           confidence_level: 68.3
           upper_uncertainty: 0.53
@@ -8417,7 +8417,6 @@ components:
       example:
         note: my note
         inserted: 2016-06-22T16:52:06.26Z
-        originid: 14932631
         name: DPC
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
@@ -8455,11 +8454,6 @@ components:
           example: 1
           format: float
           type: number
-        originid:
-          description: Unique incremental id | bigint(20)
-          example: 14932631
-          format: int64
-          type: integer
       type: object
     ObjectOriginFlagPostOutput:
       example:
@@ -8699,7 +8693,7 @@ components:
             name: hew1_mole
             description: Auto added
           ep_distance: 223.3
-          category: Other
+          category: other
           revised: 0
         - amp1: -0.358
           loc: "00"
@@ -8743,7 +8737,7 @@ components:
             name: hew1_mole
             description: Auto added
           ep_distance: 223.3
-          category: Other
+          category: other
           revised: 0
         confidence_level: 68.3
         upper_uncertainty: 0.53
@@ -9498,7 +9492,7 @@ components:
           name: hew1_mole
           description: Auto added
         ep_distance: 223.3
-        category: Other
+        category: other
         revised: 0
       properties:
         net:
@@ -9519,11 +9513,7 @@ components:
           example: "00"
           type: string
         category:
-          description: The way the waveform trace is evaluated to derive an amplitude
-            value.
-          example: Other
-          readOnly: true
-          type: string
+          $ref: '#/components/schemas/type_amplitude__category'
         timewindow_reference:
           description: "Describes a time window for amplitude measurements, given\
             \ by a central point in time"
@@ -11096,6 +11086,20 @@ components:
       example: 0.000096
       format: double
       type: number
+    type_amplitude__category:
+      description: "The way the waveform trace is evaluated to derive an amplitude\
+        \ value; from QuakeML. (es:point,mean,duration,period,..) | varchar(255)"
+      enum:
+      - point
+      - mean
+      - duration
+      - period
+      - integral
+      - other
+      - null
+      example: other
+      nullable: true
+      type: string
     amplitude__revised:
       description: "Dichiara se tale ampiezza è stata rivista dall'analista, eventualmente\
         \ anche non modificata, oppure no. (1/0, true/false) | tinyint(3)"
@@ -11845,7 +11849,7 @@ components:
                   name: hew1_mole
                   description: Auto added
                 ep_distance: 223.3
-                category: Other
+                category: other
                 revised: 0
               - amp1: -0.358
                 loc: "00"
@@ -11889,7 +11893,7 @@ components:
                   name: hew1_mole
                   description: Auto added
                 ep_distance: 223.3
-                category: Other
+                category: other
                 revised: 0
               confidence_level: 68.3
               upper_uncertainty: 0.53
@@ -11966,7 +11970,7 @@ components:
                   name: hew1_mole
                   description: Auto added
                 ep_distance: 223.3
-                category: Other
+                category: other
                 revised: 0
               - amp1: -0.358
                 loc: "00"
@@ -12010,7 +12014,7 @@ components:
                   name: hew1_mole
                   description: Auto added
                 ep_distance: 223.3
-                category: Other
+                category: other
                 revised: 0
               confidence_level: 68.3
               upper_uncertainty: 0.53
@@ -12422,7 +12426,7 @@ components:
                   name: hew1_mole
                   description: Auto added
                 ep_distance: 223.3
-                category: Other
+                category: other
                 revised: 0
               - amp1: -0.358
                 loc: "00"
@@ -12466,7 +12470,7 @@ components:
                   name: hew1_mole
                   description: Auto added
                 ep_distance: 223.3
-                category: Other
+                category: other
                 revised: 0
               confidence_level: 68.3
               upper_uncertainty: 0.53
@@ -12543,7 +12547,7 @@ components:
                   name: hew1_mole
                   description: Auto added
                 ep_distance: 223.3
-                category: Other
+                category: other
                 revised: 0
               - amp1: -0.358
                 loc: "00"
@@ -12587,7 +12591,7 @@ components:
                   name: hew1_mole
                   description: Auto added
                 ep_distance: 223.3
-                category: Other
+                category: other
                 revised: 0
               confidence_level: 68.3
               upper_uncertainty: 0.53
@@ -13116,7 +13120,7 @@ components:
                     name: hew1_mole
                     description: Auto added
                   ep_distance: 223.3
-                  category: Other
+                  category: other
                   revised: 0
                 - amp1: -0.358
                   loc: "00"
@@ -13160,7 +13164,7 @@ components:
                     name: hew1_mole
                     description: Auto added
                   ep_distance: 223.3
-                  category: Other
+                  category: other
                   revised: 0
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
@@ -13237,7 +13241,7 @@ components:
                     name: hew1_mole
                     description: Auto added
                   ep_distance: 223.3
-                  category: Other
+                  category: other
                   revised: 0
                 - amp1: -0.358
                   loc: "00"
@@ -13281,7 +13285,7 @@ components:
                     name: hew1_mole
                     description: Auto added
                   ep_distance: 223.3
-                  category: Other
+                  category: other
                   revised: 0
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
@@ -13693,7 +13697,7 @@ components:
                     name: hew1_mole
                     description: Auto added
                   ep_distance: 223.3
-                  category: Other
+                  category: other
                   revised: 0
                 - amp1: -0.358
                   loc: "00"
@@ -13737,7 +13741,7 @@ components:
                     name: hew1_mole
                     description: Auto added
                   ep_distance: 223.3
-                  category: Other
+                  category: other
                   revised: 0
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
@@ -13814,7 +13818,7 @@ components:
                     name: hew1_mole
                     description: Auto added
                   ep_distance: 223.3
-                  category: Other
+                  category: other
                   revised: 0
                 - amp1: -0.358
                   loc: "00"
@@ -13858,7 +13862,7 @@ components:
                     name: hew1_mole
                     description: Auto added
                   ep_distance: 223.3
-                  category: Other
+                  category: other
                   revised: 0
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
@@ -14201,14 +14205,12 @@ components:
         data:
         - note: my note
           inserted: 2016-06-22T16:52:06.26Z
-          originid: 14932631
           name: DPC
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           value: 1
         - note: my note
           inserted: 2016-06-22T16:52:06.26Z
-          originid: 14932631
           name: DPC
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631

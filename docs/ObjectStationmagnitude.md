@@ -11,7 +11,7 @@
 |**sta** | **String** | Channel station code | varchar(5) |  [optional] |
 |**cha** | **String** | Channel code | char(3) |  [optional] |
 |**loc** | **String** | Channel location | char(2) |  [optional] |
-|**category** | **String** | The way the waveform trace is evaluated to derive an amplitude value. |  [optional] [readonly] |
+|**category** | **TypeAmplitudeCategory** |  |  [optional] |
 |**timewindowReference** | **OffsetDateTime** | Describes a time window for amplitude measurements, given by a central point in time |  [optional] [readonly] |
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] [readonly] |
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |

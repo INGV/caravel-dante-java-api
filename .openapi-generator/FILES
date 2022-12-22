@@ -145,6 +145,7 @@ docs/StrongmotioniiSchema.md
 docs/StrongmotioniiSchemaEwLogo.md
 docs/StrongmotioniiSchemaEwMessage.md
 docs/StrongmotioniiSchemaEwMessageRSAInner.md
+docs/TypeAmplitudeCategory.md
 docs/TypeOriginName.md
 docs/UpdateApi.md
 docs/UpdateEvent200Response.md
@@ -323,6 +324,7 @@ src/main/java/org/ingv/dante/model/StrongmotioniiSchema.java
 src/main/java/org/ingv/dante/model/StrongmotioniiSchemaEwLogo.java
 src/main/java/org/ingv/dante/model/StrongmotioniiSchemaEwMessage.java
 src/main/java/org/ingv/dante/model/StrongmotioniiSchemaEwMessageRSAInner.java
+src/main/java/org/ingv/dante/model/TypeAmplitudeCategory.java
 src/main/java/org/ingv/dante/model/TypeOriginName.java
 src/main/java/org/ingv/dante/model/UpdateEvent200Response.java
 src/main/java/org/ingv/dante/model/UpdateEvent200ResponseData.java
@@ -472,6 +474,7 @@ src/test/java/org/ingv/dante/model/StrongmotioniiSchemaEwLogoTest.java
 src/test/java/org/ingv/dante/model/StrongmotioniiSchemaEwMessageRSAInnerTest.java
 src/test/java/org/ingv/dante/model/StrongmotioniiSchemaEwMessageTest.java
 src/test/java/org/ingv/dante/model/StrongmotioniiSchemaTest.java
+src/test/java/org/ingv/dante/model/TypeAmplitudeCategoryTest.java
 src/test/java/org/ingv/dante/model/TypeOriginNameTest.java
 src/test/java/org/ingv/dante/model/UpdateEvent200ResponseDataTest.java
 src/test/java/org/ingv/dante/model/UpdateEvent200ResponseTest.java

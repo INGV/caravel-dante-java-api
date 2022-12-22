@@ -13,39 +13,22 @@
 
 package org.ingv.dante.model;
 
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
+import com.google.gson.annotations.SerializedName;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for AddEvent201ResponseDataEventLocalspace
+ * Model tests for TypeAmplitudeCategory
  */
-public class AddEvent201ResponseDataEventLocalspaceTest {
-    private final AddEvent201ResponseDataEventLocalspace model = new AddEvent201ResponseDataEventLocalspace();
-
+public class TypeAmplitudeCategoryTest {
     /**
-     * Model tests for AddEvent201ResponseDataEventLocalspace
+     * Model tests for TypeAmplitudeCategory
      */
     @Test
-    public void testAddEvent201ResponseDataEventLocalspace() {
-        // TODO: test AddEvent201ResponseDataEventLocalspace
-    }
-
-    /**
-     * Test the property 'name'
-     */
-    @Test
-    public void nameTest() {
-        // TODO: test name
+    public void testTypeAmplitudeCategory() {
+        // TODO: test TypeAmplitudeCategory
     }
 
 }

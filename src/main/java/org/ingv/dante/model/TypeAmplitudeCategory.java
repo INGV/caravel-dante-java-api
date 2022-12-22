@@ -13,39 +13,72 @@
 
 package org.ingv.dante.model;
 
+import java.util.Objects;
+import java.util.Arrays;
+import io.swagger.annotations.ApiModel;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-
 
 /**
- * Model tests for AddEvent201ResponseDataEventLocalspace
+ * The way the waveform trace is evaluated to derive an amplitude value; from QuakeML. (es:point,mean,duration,period,..) | varchar(255)
  */
-public class AddEvent201ResponseDataEventLocalspaceTest {
-    private final AddEvent201ResponseDataEventLocalspace model = new AddEvent201ResponseDataEventLocalspace();
+@JsonAdapter(TypeAmplitudeCategory.Adapter.class)
+public enum TypeAmplitudeCategory {
+  
+  POINT("point"),
+  
+  MEAN("mean"),
+  
+  DURATION("duration"),
+  
+  PERIOD("period"),
+  
+  INTEGRAL("integral"),
+  
+  OTHER("other"),
+  
+  NULL("null");
 
-    /**
-     * Model tests for AddEvent201ResponseDataEventLocalspace
-     */
-    @Test
-    public void testAddEvent201ResponseDataEventLocalspace() {
-        // TODO: test AddEvent201ResponseDataEventLocalspace
+  private String value;
+
+  TypeAmplitudeCategory(String value) {
+    this.value = value;
+  }
+
+  public String getValue() {
+    return value;
+  }
+
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
+
+  public static TypeAmplitudeCategory fromValue(String value) {
+    for (TypeAmplitudeCategory b : TypeAmplitudeCategory.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
+    }
+    return null;
+  }
+
+  public static class Adapter extends TypeAdapter<TypeAmplitudeCategory> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final TypeAmplitudeCategory enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
-    /**
-     * Test the property 'name'
-     */
-    @Test
-    public void nameTest() {
-        // TODO: test name
+    @Override
+    public TypeAmplitudeCategory read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return TypeAmplitudeCategory.fromValue(value);
     }
-
+  }
 }
+
