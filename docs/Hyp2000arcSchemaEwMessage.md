@@ -28,8 +28,8 @@
 |**e1dp** | **Double** | dip of intermediate principal error | double |  [optional] |
 |**e1** | **Double** | intermed principal error | double |  [optional] |
 |**e2** | **Double** | smallest principal error | double |  [optional] |
-|**erh** | **Double** | Depth error | double |  [optional] |
-|**erz** | **Double** | Depth error | double |  [optional] |
+|**erh** | **Double** | Horizontal error (km) | double |  [optional] |
+|**erz** | **Double** | Depth error (km) | double |  [optional] |
 |**md** | **Double** | Md description | ??? |  [optional] |
 |**reg** | **String** | ingvQuality description | ??? |  [optional] |
 |**labelpref** | **String** | ingvQuality description | ??? |  [optional] |

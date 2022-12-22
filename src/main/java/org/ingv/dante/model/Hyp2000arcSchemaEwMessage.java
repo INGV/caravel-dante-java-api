@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-22T08:43:19.010786Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-22T14:36:18.422415Z[Etc/UTC]")
 public class Hyp2000arcSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -706,11 +706,11 @@ public class Hyp2000arcSchemaEwMessage {
   }
 
    /**
-   * Depth error | double
+   * Horizontal error (km) | double
    * @return erh
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Depth error | double")
+  @ApiModelProperty(value = "Horizontal error (km) | double")
 
   public Double getErh() {
     return erh;
@@ -729,11 +729,11 @@ public class Hyp2000arcSchemaEwMessage {
   }
 
    /**
-   * Depth error | double
+   * Depth error (km) | double
    * @return erz
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Depth error | double")
+  @ApiModelProperty(value = "Depth error (km) | double")
 
   public Double getErz() {
     return erz;

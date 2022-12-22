@@ -8270,15 +8270,15 @@ components:
           format: double
           type: number
         err_h:
-          description: Depth error | double
+          description: Horizontal error (km) | double
           format: double
           type: number
         err_lat:
-          description: Latitude error | double
+          description: Latitude error (km) | double
           format: double
           type: number
         err_lon:
-          description: Longitude error | double
+          description: Longitude error (km) | double
           format: double
           type: number
         err_ot:
@@ -8286,7 +8286,7 @@ components:
           format: double
           type: number
         err_z:
-          description: Depth error | double
+          description: Depth error (km) | double
           format: double
           type: number
         fix_depth:
@@ -9908,19 +9908,19 @@ components:
           format: double
           type: number
         err_h:
-          description: Depth error | double
+          description: Horizontal error (km) | double
           format: double
           type: number
         err_z:
-          description: Depth error | double
+          description: Depth error (km) | double
           format: double
           type: number
         err_lat:
-          description: Latitude error | double
+          description: Latitude error (km) | double
           format: double
           type: number
         err_lon:
-          description: Longitude error | double
+          description: Longitude error (km) | double
           format: double
           type: number
         quality:
@@ -10384,11 +10384,11 @@ components:
       format: double
       type: number
     origin__err_h:
-      description: Depth error | double
+      description: Horizontal error (km) | double
       format: double
       type: number
     origin__err_z:
-      description: Depth error | double
+      description: Depth error (km) | double
       format: double
       type: number
     hyp2000arc__phases:
@@ -10768,11 +10768,11 @@ components:
       format: double
       type: number
     origin__err_lat:
-      description: Latitude error | double
+      description: Latitude error (km) | double
       format: double
       type: number
     origin__err_lon:
-      description: Longitude error | double
+      description: Longitude error (km) | double
       format: double
       type: number
     origin__err_ot:
@@ -15262,11 +15262,11 @@ components:
           format: double
           type: number
         erh:
-          description: Depth error | double
+          description: Horizontal error (km) | double
           format: double
           type: number
         erz:
-          description: Depth error | double
+          description: Depth error (km) | double
           format: double
           type: number
         Md:

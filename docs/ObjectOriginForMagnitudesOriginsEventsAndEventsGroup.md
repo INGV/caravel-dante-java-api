@@ -15,10 +15,10 @@
 |**lon** | **Double** | Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  [optional] |
 |**depth** | **Double** | Depth in Km | double |  [optional] |
 |**errOt** | **Double** | Origin time error | double |  [optional] |
-|**errH** | **Double** | Depth error | double |  [optional] |
-|**errZ** | **Double** | Depth error | double |  [optional] |
-|**errLat** | **Double** | Latitude error | double |  [optional] |
-|**errLon** | **Double** | Longitude error | double |  [optional] |
+|**errH** | **Double** | Horizontal error (km) | double |  [optional] |
+|**errZ** | **Double** | Depth error (km) | double |  [optional] |
+|**errLat** | **Double** | Latitude error (km) | double |  [optional] |
+|**errLon** | **Double** | Longitude error (km) | double |  [optional] |
 |**quality** | **String** | Quality of the localization | char(2) |  [optional] |
 |**associatedPhaseCount** | **Long** | Number of associated phases, regardless of their use for origin computation | int(8)&#39; |  [optional] |
 |**associatedStationCount** | **Long** | Number of stations at which the event was observed | int(8)&#39; |  [optional] |

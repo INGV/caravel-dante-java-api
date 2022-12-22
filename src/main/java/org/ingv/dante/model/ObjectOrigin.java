@@ -57,7 +57,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-22T08:43:19.010786Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-12-22T14:36:18.422415Z[Etc/UTC]")
 public class ObjectOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -635,11 +635,11 @@ public class ObjectOrigin {
   }
 
    /**
-   * Depth error | double
+   * Horizontal error (km) | double
    * @return errH
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Depth error | double")
+  @ApiModelProperty(value = "Horizontal error (km) | double")
 
   public Double getErrH() {
     return errH;
@@ -658,11 +658,11 @@ public class ObjectOrigin {
   }
 
    /**
-   * Latitude error | double
+   * Latitude error (km) | double
    * @return errLat
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Latitude error | double")
+  @ApiModelProperty(value = "Latitude error (km) | double")
 
   public Double getErrLat() {
     return errLat;
@@ -681,11 +681,11 @@ public class ObjectOrigin {
   }
 
    /**
-   * Longitude error | double
+   * Longitude error (km) | double
    * @return errLon
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Longitude error | double")
+  @ApiModelProperty(value = "Longitude error (km) | double")
 
   public Double getErrLon() {
     return errLon;
@@ -727,11 +727,11 @@ public class ObjectOrigin {
   }
 
    /**
-   * Depth error | double
+   * Depth error (km) | double
    * @return errZ
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Depth error | double")
+  @ApiModelProperty(value = "Depth error (km) | double")
 
   public Double getErrZ() {
     return errZ;
