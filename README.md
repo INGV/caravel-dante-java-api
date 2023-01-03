@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.66.0-dev
-  - Build date: 2022-12-26T10:20:37.041578Z[Etc/UTC]
+  - Build date: 2023-01-03T18:23:53.332554Z[Etc/UTC]
 
   
 
