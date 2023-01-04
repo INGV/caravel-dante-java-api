@@ -27,6 +27,8 @@
 |**errH** | **Double** | Horizontal error (km) | double |  [optional] |
 |**errLat** | **Double** | Latitude error (km) | double |  [optional] |
 |**errLon** | **Double** | Longitude error (km) | double |  [optional] |
+|**errLatDeg** | **Double** | Latitude error (deg) | double |  [optional] [readonly] |
+|**errLonDeg** | **Double** | Longitude error (deg) | double |  [optional] [readonly] |
 |**errOt** | **Double** | Origin time error | double |  [optional] |
 |**errZ** | **Double** | Depth error (km) | double |  [optional] |
 |**fixDepth** | **Boolean** | true if depth is fixed | boolean |  [optional] |
