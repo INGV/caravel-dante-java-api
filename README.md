@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.68.0-dev
-  - Build date: 2023-01-04T14:41:21.620806Z[Etc/UTC]
+  - Build date: 2023-01-05T13:51:15.772360Z[Etc/UTC]
 
   
 
@@ -196,7 +196,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [AddCatalog201Response](docs/AddCatalog201Response.md)
+ - [AddCatalogMetadataRequest](docs/AddCatalogMetadataRequest.md)
  - [AddCatalogRequest](docs/AddCatalogRequest.md)
+ - [AddCatalogRequestData](docs/AddCatalogRequestData.md)
  - [AddEvent201Response](docs/AddEvent201Response.md)
  - [AddEvent201ResponseData](docs/AddEvent201ResponseData.md)
  - [AddEvent201ResponseDataEvent](docs/AddEvent201ResponseDataEvent.md)
@@ -221,6 +224,7 @@ Class | Method | HTTP request | Description
  - [AddHEwStrongmotionii201Response](docs/AddHEwStrongmotionii201Response.md)
  - [AddHEwStrongmotionii201ResponseData](docs/AddHEwStrongmotionii201ResponseData.md)
  - [AddHEwStrongmotioniiRequest](docs/AddHEwStrongmotioniiRequest.md)
+ - [AddLocalspaceRequest](docs/AddLocalspaceRequest.md)
  - [AddMagnitude201Response](docs/AddMagnitude201Response.md)
  - [AddMagnitudeRequest](docs/AddMagnitudeRequest.md)
  - [AddMagnitudeRequestData](docs/AddMagnitudeRequestData.md)
@@ -236,9 +240,13 @@ Class | Method | HTTP request | Description
  - [AddOriginFlagRequestData](docs/AddOriginFlagRequestData.md)
  - [AddOriginRequest](docs/AddOriginRequest.md)
  - [AddOriginRequestData](docs/AddOriginRequestData.md)
+ - [AddProvenanceRequest](docs/AddProvenanceRequest.md)
  - [AddStrongmotion201Response](docs/AddStrongmotion201Response.md)
  - [AddStrongmotionRequest](docs/AddStrongmotionRequest.md)
  - [AddStrongmotionRequestData](docs/AddStrongmotionRequestData.md)
+ - [AddTypeEventRequest](docs/AddTypeEventRequest.md)
+ - [AddTypeMagnitudeRequest](docs/AddTypeMagnitudeRequest.md)
+ - [AddTypeOriginRequest](docs/AddTypeOriginRequest.md)
  - [GetCatalog200Response](docs/GetCatalog200Response.md)
  - [GetCatalogMetadata200Response](docs/GetCatalogMetadata200Response.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)

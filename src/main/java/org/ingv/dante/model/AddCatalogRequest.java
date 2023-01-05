@@ -23,7 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.ingv.dante.model.ObjectCatalog;
+import org.ingv.dante.model.AddCatalogRequestData;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,16 +48,16 @@ import org.ingv.dante.JSON;
 /**
  * AddCatalogRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-04T14:41:21.620806Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-05T13:51:15.772360Z[Etc/UTC]")
 public class AddCatalogRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private ObjectCatalog data;
+  private AddCatalogRequestData data;
 
   public AddCatalogRequest() {
   }
 
-  public AddCatalogRequest data(ObjectCatalog data) {
+  public AddCatalogRequest data(AddCatalogRequestData data) {
     
     this.data = data;
     return this;
@@ -70,12 +70,12 @@ public class AddCatalogRequest {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public ObjectCatalog getData() {
+  public AddCatalogRequestData getData() {
     return data;
   }
 
 
-  public void setData(ObjectCatalog data) {
+  public void setData(AddCatalogRequestData data) {
     this.data = data;
   }
 
@@ -184,7 +184,7 @@ public class AddCatalogRequest {
       }
       // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        ObjectCatalog.validateJsonObject(jsonObj.getAsJsonObject("data"));
+        AddCatalogRequestData.validateJsonObject(jsonObj.getAsJsonObject("data"));
       }
   }
 

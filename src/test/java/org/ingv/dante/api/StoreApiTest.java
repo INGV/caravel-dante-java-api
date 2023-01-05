@@ -14,10 +14,13 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
+import org.ingv.dante.model.AddCatalog201Response;
+import org.ingv.dante.model.AddCatalogMetadataRequest;
 import org.ingv.dante.model.AddCatalogRequest;
 import org.ingv.dante.model.AddEvent201Response;
 import org.ingv.dante.model.AddFocalmechanism201Response;
 import org.ingv.dante.model.AddFocalmechanismRequest;
+import org.ingv.dante.model.AddLocalspaceRequest;
 import org.ingv.dante.model.AddMagnitude201Response;
 import org.ingv.dante.model.AddMagnitudeRequest;
 import org.ingv.dante.model.AddMomenttensor201Response;
@@ -26,8 +29,12 @@ import org.ingv.dante.model.AddOrigin201Response;
 import org.ingv.dante.model.AddOriginFlag201Response;
 import org.ingv.dante.model.AddOriginFlagRequest;
 import org.ingv.dante.model.AddOriginRequest;
+import org.ingv.dante.model.AddProvenanceRequest;
 import org.ingv.dante.model.AddStrongmotion201Response;
 import org.ingv.dante.model.AddStrongmotionRequest;
+import org.ingv.dante.model.AddTypeEventRequest;
+import org.ingv.dante.model.AddTypeMagnitudeRequest;
+import org.ingv.dante.model.AddTypeOriginRequest;
 import org.ingv.dante.model.GetEvent200Response;
 import org.ingv.dante.model.ObjectCatalogMetadata;
 import org.ingv.dante.model.ObjectTableLocalspace;
@@ -62,7 +69,7 @@ public class StoreApiTest {
     @Test
     public void addCatalogTest() throws ApiException {
         AddCatalogRequest addCatalogRequest = null;
-        AddCatalogRequest response = api.addCatalog(addCatalogRequest);
+        AddCatalog201Response response = api.addCatalog(addCatalogRequest);
         // TODO: test validations
     }
 
@@ -75,8 +82,8 @@ public class StoreApiTest {
      */
     @Test
     public void addCatalogMetadataTest() throws ApiException {
-        ObjectCatalogMetadata objectCatalogMetadata = null;
-        ObjectCatalogMetadata response = api.addCatalogMetadata(objectCatalogMetadata);
+        AddCatalogMetadataRequest addCatalogMetadataRequest = null;
+        ObjectCatalogMetadata response = api.addCatalogMetadata(addCatalogMetadataRequest);
         // TODO: test validations
     }
 
@@ -117,8 +124,8 @@ public class StoreApiTest {
      */
     @Test
     public void addLocalspaceTest() throws ApiException {
-        ObjectTableLocalspace objectTableLocalspace = null;
-        ObjectTableLocalspace response = api.addLocalspace(objectTableLocalspace);
+        AddLocalspaceRequest addLocalspaceRequest = null;
+        ObjectTableLocalspace response = api.addLocalspace(addLocalspaceRequest);
         // TODO: test validations
     }
 
@@ -187,8 +194,8 @@ public class StoreApiTest {
      */
     @Test
     public void addProvenanceTest() throws ApiException {
-        ObjectTableProvenance objectTableProvenance = null;
-        ObjectTableProvenance response = api.addProvenance(objectTableProvenance);
+        AddProvenanceRequest addProvenanceRequest = null;
+        ObjectTableProvenance response = api.addProvenance(addProvenanceRequest);
         // TODO: test validations
     }
 
@@ -215,8 +222,8 @@ public class StoreApiTest {
      */
     @Test
     public void addTypeEventTest() throws ApiException {
-        ObjectTableTypeEvent objectTableTypeEvent = null;
-        ObjectTableTypeEvent response = api.addTypeEvent(objectTableTypeEvent);
+        AddTypeEventRequest addTypeEventRequest = null;
+        ObjectTableTypeEvent response = api.addTypeEvent(addTypeEventRequest);
         // TODO: test validations
     }
 
@@ -229,8 +236,8 @@ public class StoreApiTest {
      */
     @Test
     public void addTypeMagnitudeTest() throws ApiException {
-        ObjectTableTypeMagnitude objectTableTypeMagnitude = null;
-        ObjectTableTypeMagnitude response = api.addTypeMagnitude(objectTableTypeMagnitude);
+        AddTypeMagnitudeRequest addTypeMagnitudeRequest = null;
+        ObjectTableTypeMagnitude response = api.addTypeMagnitude(addTypeMagnitudeRequest);
         // TODO: test validations
     }
 
@@ -243,8 +250,8 @@ public class StoreApiTest {
      */
     @Test
     public void addTypeOriginTest() throws ApiException {
-        ObjectTableTypeOrigin objectTableTypeOrigin = null;
-        ObjectTableTypeOrigin response = api.addTypeOrigin(objectTableTypeOrigin);
+        AddTypeOriginRequest addTypeOriginRequest = null;
+        ObjectTableTypeOrigin response = api.addTypeOrigin(addTypeOriginRequest);
         // TODO: test validations
     }
 

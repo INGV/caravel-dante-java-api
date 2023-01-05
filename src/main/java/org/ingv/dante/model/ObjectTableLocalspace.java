@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableLocalspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-04T14:41:21.620806Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-05T13:51:15.772360Z[Etc/UTC]")
 public class ObjectTableLocalspace {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -111,7 +111,7 @@ public class ObjectTableLocalspace {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "hew1_mole", required = true, value = "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)")
+  @ApiModelProperty(example = "hew1_mole", value = "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)")
 
   public String getName() {
     return name;
@@ -283,7 +283,6 @@ public class ObjectTableLocalspace {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("name");
   }
 
  /**
@@ -298,13 +297,6 @@ public class ObjectTableLocalspace {
           return;
         } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTableLocalspace is not found in the empty JSON string", ObjectTableLocalspace.openapiRequiredFields.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectTableLocalspace.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {

@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectProvenance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-04T14:41:21.620806Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-05T13:51:15.772360Z[Etc/UTC]")
 public class ObjectProvenance {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -130,8 +130,8 @@ public class ObjectProvenance {
    * Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)
    * @return softwarename
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "software", value = "Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)")
+  @javax.annotation.Nonnull
+  @ApiModelProperty(example = "software", required = true, value = "Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)")
 
   public String getSoftwarename() {
     return softwarename;
@@ -478,6 +478,7 @@ public class ObjectProvenance {
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("name");
+    openapiRequiredFields.add("softwarename");
   }
 
  /**

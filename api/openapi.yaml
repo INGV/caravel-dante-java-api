@@ -1347,7 +1347,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ObjectCatalogMetadata'
+              $ref: '#/components/schemas/addCatalogMetadata_request'
         description: JSON to store
         required: true
       responses:
@@ -1974,7 +1974,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/addCatalog_request'
+                $ref: '#/components/schemas/addCatalog_201_response'
           description: record inserted
           headers:
             Cache-Control:
@@ -2165,7 +2165,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ObjectTableTypeEvent'
+              $ref: '#/components/schemas/addTypeEvent_request'
         description: JSON to store
         required: true
       responses:
@@ -2506,7 +2506,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ObjectTableTypeOrigin'
+              $ref: '#/components/schemas/addTypeOrigin_request'
         description: JSON to store
         required: true
       responses:
@@ -2847,7 +2847,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ObjectTableTypeMagnitude'
+              $ref: '#/components/schemas/addTypeMagnitude_request'
         description: JSON to store
         required: true
       responses:
@@ -3188,7 +3188,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ObjectTableLocalspace'
+              $ref: '#/components/schemas/addLocalspace_request'
         description: JSON to store
         required: true
       responses:
@@ -3529,7 +3529,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ObjectTableProvenance'
+              $ref: '#/components/schemas/addProvenance_request'
         description: JSON to store
         required: true
       responses:
@@ -5816,8 +5816,6 @@ components:
           format: date-time
           readOnly: true
           type: string
-      required:
-      - name
       type: object
     ObjectCatalog:
       example:
@@ -5874,8 +5872,6 @@ components:
           format: date-time
           readOnly: true
           type: string
-      required:
-      - name
       type: object
     ObjectVwCatalog:
       items:
@@ -5950,6 +5946,7 @@ components:
           type: integer
       required:
       - name
+      - softwarename
       type: object
     ObjectTableProvenance:
       example:
@@ -6039,9 +6036,6 @@ components:
           format: date-time
           readOnly: true
           type: string
-      required:
-      - name
-      - softwarename
       type: object
     ObjectMagnitudesOriginsEventsAndEventsGroup:
       example:
@@ -6234,8 +6228,6 @@ components:
           format: date-time
           readOnly: true
           type: string
-      required:
-      - name
       type: object
     ObjectPickEw:
       example:
@@ -8559,8 +8551,6 @@ components:
           format: date-time
           readOnly: true
           type: string
-      required:
-      - name
       type: object
     ObjectTableTypeEvent:
       example:
@@ -8597,8 +8587,6 @@ components:
           format: date-time
           readOnly: true
           type: string
-      required:
-      - name
       type: object
     ObjectTableTypeMagnitude:
       example:
@@ -8659,8 +8647,6 @@ components:
           format: date-time
           readOnly: true
           type: string
-      required:
-      - name
       type: object
     ObjectMagnitude:
       example:
@@ -11469,6 +11455,12 @@ components:
             $ref: '#/components/schemas/ObjectCatalogMetadata'
           type: array
       type: object
+    addCatalogMetadata_request:
+      allOf:
+      - $ref: '#/components/schemas/ObjectCatalogMetadata'
+      - required:
+        - name
+        type: object
     getCatalog_200_response:
       example:
         data:
@@ -11504,7 +11496,17 @@ components:
             $ref: '#/components/schemas/ObjectVwCatalog_inner'
           type: array
       type: object
+    addCatalog_request_data:
+      allOf:
+      - $ref: '#/components/schemas/ObjectCatalog'
+      - required:
+        - name
+        type: object
     addCatalog_request:
+      properties:
+        data:
+          $ref: '#/components/schemas/addCatalog_request_data'
+    addCatalog_201_response:
       example:
         data:
           eventid: 14932631
@@ -11557,6 +11559,12 @@ components:
       allOf:
       - $ref: '#/components/schemas/MetaDefinition'
       - $ref: '#/components/schemas/getTypeEvent_200_response_allOf'
+    addTypeEvent_request:
+      allOf:
+      - $ref: '#/components/schemas/ObjectTableTypeEvent'
+      - required:
+        - name
+        type: object
     getTypeOrigin_200_response_allOf:
       properties:
         data:
@@ -11567,6 +11575,12 @@ components:
       allOf:
       - $ref: '#/components/schemas/MetaDefinition'
       - $ref: '#/components/schemas/getTypeOrigin_200_response_allOf'
+    addTypeOrigin_request:
+      allOf:
+      - $ref: '#/components/schemas/ObjectTableTypeOrigin'
+      - required:
+        - name
+        type: object
     getTypeMagnitude_200_response_allOf:
       properties:
         data:
@@ -11577,6 +11591,12 @@ components:
       allOf:
       - $ref: '#/components/schemas/MetaDefinition'
       - $ref: '#/components/schemas/getTypeMagnitude_200_response_allOf'
+    addTypeMagnitude_request:
+      allOf:
+      - $ref: '#/components/schemas/ObjectTableTypeMagnitude'
+      - required:
+        - name
+        type: object
     getLocalspace_200_response_allOf:
       properties:
         data:
@@ -11587,6 +11607,12 @@ components:
       allOf:
       - $ref: '#/components/schemas/MetaDefinition'
       - $ref: '#/components/schemas/getLocalspace_200_response_allOf'
+    addLocalspace_request:
+      allOf:
+      - $ref: '#/components/schemas/ObjectTableLocalspace'
+      - required:
+        - name
+        type: object
     getProvenance_200_response_allOf:
       properties:
         data:
@@ -11597,6 +11623,13 @@ components:
       allOf:
       - $ref: '#/components/schemas/MetaDefinition'
       - $ref: '#/components/schemas/getProvenance_200_response_allOf'
+    addProvenance_request:
+      allOf:
+      - $ref: '#/components/schemas/ObjectTableProvenance'
+      - required:
+        - name
+        - softwarename
+        type: object
     getEvent_200_response_data:
       example:
         event:

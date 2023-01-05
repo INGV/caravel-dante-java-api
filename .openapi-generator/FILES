@@ -6,7 +6,10 @@ README.md
 api/openapi.yaml
 build.gradle
 build.sbt
+docs/AddCatalog201Response.md
+docs/AddCatalogMetadataRequest.md
 docs/AddCatalogRequest.md
+docs/AddCatalogRequestData.md
 docs/AddEvent201Response.md
 docs/AddEvent201ResponseData.md
 docs/AddEvent201ResponseDataEvent.md
@@ -31,6 +34,7 @@ docs/AddHEwPickScnlRequest.md
 docs/AddHEwStrongmotionii201Response.md
 docs/AddHEwStrongmotionii201ResponseData.md
 docs/AddHEwStrongmotioniiRequest.md
+docs/AddLocalspaceRequest.md
 docs/AddMagnitude201Response.md
 docs/AddMagnitudeRequest.md
 docs/AddMagnitudeRequestData.md
@@ -46,9 +50,13 @@ docs/AddOriginFlagRequest.md
 docs/AddOriginFlagRequestData.md
 docs/AddOriginRequest.md
 docs/AddOriginRequestData.md
+docs/AddProvenanceRequest.md
 docs/AddStrongmotion201Response.md
 docs/AddStrongmotionRequest.md
 docs/AddStrongmotionRequestData.md
+docs/AddTypeEventRequest.md
+docs/AddTypeMagnitudeRequest.md
+docs/AddTypeOriginRequest.md
 docs/DeleteApi.md
 docs/EarthwormApiApi.md
 docs/GetApi.md
@@ -189,7 +197,10 @@ src/main/java/org/ingv/dante/auth/Authentication.java
 src/main/java/org/ingv/dante/auth/HttpBasicAuth.java
 src/main/java/org/ingv/dante/auth/HttpBearerAuth.java
 src/main/java/org/ingv/dante/model/AbstractOpenApiSchema.java
+src/main/java/org/ingv/dante/model/AddCatalog201Response.java
+src/main/java/org/ingv/dante/model/AddCatalogMetadataRequest.java
 src/main/java/org/ingv/dante/model/AddCatalogRequest.java
+src/main/java/org/ingv/dante/model/AddCatalogRequestData.java
 src/main/java/org/ingv/dante/model/AddEvent201Response.java
 src/main/java/org/ingv/dante/model/AddEvent201ResponseData.java
 src/main/java/org/ingv/dante/model/AddEvent201ResponseDataEvent.java
@@ -214,6 +225,7 @@ src/main/java/org/ingv/dante/model/AddHEwPickScnlRequest.java
 src/main/java/org/ingv/dante/model/AddHEwStrongmotionii201Response.java
 src/main/java/org/ingv/dante/model/AddHEwStrongmotionii201ResponseData.java
 src/main/java/org/ingv/dante/model/AddHEwStrongmotioniiRequest.java
+src/main/java/org/ingv/dante/model/AddLocalspaceRequest.java
 src/main/java/org/ingv/dante/model/AddMagnitude201Response.java
 src/main/java/org/ingv/dante/model/AddMagnitudeRequest.java
 src/main/java/org/ingv/dante/model/AddMagnitudeRequestData.java
@@ -229,9 +241,13 @@ src/main/java/org/ingv/dante/model/AddOriginFlagRequest.java
 src/main/java/org/ingv/dante/model/AddOriginFlagRequestData.java
 src/main/java/org/ingv/dante/model/AddOriginRequest.java
 src/main/java/org/ingv/dante/model/AddOriginRequestData.java
+src/main/java/org/ingv/dante/model/AddProvenanceRequest.java
 src/main/java/org/ingv/dante/model/AddStrongmotion201Response.java
 src/main/java/org/ingv/dante/model/AddStrongmotionRequest.java
 src/main/java/org/ingv/dante/model/AddStrongmotionRequestData.java
+src/main/java/org/ingv/dante/model/AddTypeEventRequest.java
+src/main/java/org/ingv/dante/model/AddTypeMagnitudeRequest.java
+src/main/java/org/ingv/dante/model/AddTypeOriginRequest.java
 src/main/java/org/ingv/dante/model/GetCatalog200Response.java
 src/main/java/org/ingv/dante/model/GetCatalogMetadata200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200Response.java
@@ -339,6 +355,9 @@ src/test/java/org/ingv/dante/api/GetApiTest.java
 src/test/java/org/ingv/dante/api/StoreApiTest.java
 src/test/java/org/ingv/dante/api/UpdateApiTest.java
 src/test/java/org/ingv/dante/api/UserApiTest.java
+src/test/java/org/ingv/dante/model/AddCatalog201ResponseTest.java
+src/test/java/org/ingv/dante/model/AddCatalogMetadataRequestTest.java
+src/test/java/org/ingv/dante/model/AddCatalogRequestDataTest.java
 src/test/java/org/ingv/dante/model/AddCatalogRequestTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventLocalspaceTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventOriginsInnerAllOfTest.java
@@ -364,6 +383,7 @@ src/test/java/org/ingv/dante/model/AddHEwPickScnlRequestTest.java
 src/test/java/org/ingv/dante/model/AddHEwStrongmotionii201ResponseDataTest.java
 src/test/java/org/ingv/dante/model/AddHEwStrongmotionii201ResponseTest.java
 src/test/java/org/ingv/dante/model/AddHEwStrongmotioniiRequestTest.java
+src/test/java/org/ingv/dante/model/AddLocalspaceRequestTest.java
 src/test/java/org/ingv/dante/model/AddMagnitude201ResponseTest.java
 src/test/java/org/ingv/dante/model/AddMagnitudeRequestDataTest.java
 src/test/java/org/ingv/dante/model/AddMagnitudeRequestTest.java
@@ -379,9 +399,13 @@ src/test/java/org/ingv/dante/model/AddOriginFlagRequestDataTest.java
 src/test/java/org/ingv/dante/model/AddOriginFlagRequestTest.java
 src/test/java/org/ingv/dante/model/AddOriginRequestDataTest.java
 src/test/java/org/ingv/dante/model/AddOriginRequestTest.java
+src/test/java/org/ingv/dante/model/AddProvenanceRequestTest.java
 src/test/java/org/ingv/dante/model/AddStrongmotion201ResponseTest.java
 src/test/java/org/ingv/dante/model/AddStrongmotionRequestDataTest.java
 src/test/java/org/ingv/dante/model/AddStrongmotionRequestTest.java
+src/test/java/org/ingv/dante/model/AddTypeEventRequestTest.java
+src/test/java/org/ingv/dante/model/AddTypeMagnitudeRequestTest.java
+src/test/java/org/ingv/dante/model/AddTypeOriginRequestTest.java
 src/test/java/org/ingv/dante/model/GetCatalog200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetCatalogMetadata200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseDataTest.java

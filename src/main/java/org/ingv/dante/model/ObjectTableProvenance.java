@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableProvenance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-04T14:41:21.620806Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-05T13:51:15.772360Z[Etc/UTC]")
 public class ObjectTableProvenance {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -146,8 +146,8 @@ public class ObjectTableProvenance {
    * Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)
    * @return name
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "INGV", required = true, value = "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "INGV", value = "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)")
 
   public String getName() {
     return name;
@@ -169,8 +169,8 @@ public class ObjectTableProvenance {
    * Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)
    * @return softwarename
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "software", required = true, value = "Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "software", value = "Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)")
 
   public String getSoftwarename() {
     return softwarename;
@@ -553,8 +553,6 @@ public class ObjectTableProvenance {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("name");
-    openapiRequiredFields.add("softwarename");
   }
 
  /**
@@ -569,13 +567,6 @@ public class ObjectTableProvenance {
           return;
         } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTableProvenance is not found in the empty JSON string", ObjectTableProvenance.openapiRequiredFields.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectTableProvenance.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {

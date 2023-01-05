@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectCatalogMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-04T14:41:21.620806Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-05T13:51:15.772360Z[Etc/UTC]")
 public class ObjectCatalogMetadata {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -114,8 +114,8 @@ public class ObjectCatalogMetadata {
    * Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)
    * @return name
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "TDMT-INGV", required = true, value = "Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "TDMT-INGV", value = "Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)")
 
   public String getName() {
     return name;
@@ -313,7 +313,6 @@ public class ObjectCatalogMetadata {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("name");
   }
 
  /**
@@ -328,13 +327,6 @@ public class ObjectCatalogMetadata {
           return;
         } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectCatalogMetadata is not found in the empty JSON string", ObjectCatalogMetadata.openapiRequiredFields.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectCatalogMetadata.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {

@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableTypeMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-04T14:41:21.620806Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-05T13:51:15.772360Z[Etc/UTC]")
 public class ObjectTableTypeMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -126,8 +126,8 @@ public class ObjectTableTypeMagnitude {
    * Type of the magnitude | varchar(255)
    * @return name
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "ML-VAX", required = true, value = "Type of the magnitude | varchar(255)")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "ML-VAX", value = "Type of the magnitude | varchar(255)")
 
   public String getName() {
     return name;
@@ -403,7 +403,6 @@ public class ObjectTableTypeMagnitude {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("name");
   }
 
  /**
@@ -418,13 +417,6 @@ public class ObjectTableTypeMagnitude {
           return;
         } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTableTypeMagnitude is not found in the empty JSON string", ObjectTableTypeMagnitude.openapiRequiredFields.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectTableTypeMagnitude.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {

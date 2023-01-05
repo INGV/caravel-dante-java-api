@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableTypeEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-04T14:41:21.620806Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-05T13:51:15.772360Z[Etc/UTC]")
 public class ObjectTableTypeEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -110,8 +110,8 @@ public class ObjectTableTypeEvent {
    * Name | varchar(255)
    * @return name
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(example = "earthquake", required = true, value = "Name | varchar(255)")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "earthquake", value = "Name | varchar(255)")
 
   public String getName() {
     return name;
@@ -283,7 +283,6 @@ public class ObjectTableTypeEvent {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("name");
   }
 
  /**
@@ -298,13 +297,6 @@ public class ObjectTableTypeEvent {
           return;
         } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTableTypeEvent is not found in the empty JSON string", ObjectTableTypeEvent.openapiRequiredFields.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectTableTypeEvent.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
