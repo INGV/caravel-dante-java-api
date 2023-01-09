@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'com.diffplug.spotless'
 
 group = 'org.ingv.dante'
-version = '2.68.0-dev'
+version = '2.69.0-dev'
 
 buildscript {
     repositories {
