@@ -22,7 +22,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="addCatalog"></a>
 # **addCatalog**
-> AddCatalogRequest addCatalog(addCatalogRequest)
+> AddCatalog201Response addCatalog(addCatalogRequest)
 
 Add a new catalog to the DB
 
@@ -45,7 +45,7 @@ public class Example {
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddCatalogRequest addCatalogRequest = new AddCatalogRequest(); // AddCatalogRequest | JSON to store
     try {
-      AddCatalogRequest result = apiInstance.addCatalog(addCatalogRequest);
+      AddCatalog201Response result = apiInstance.addCatalog(addCatalogRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addCatalog");
@@ -66,7 +66,7 @@ public class Example {
 
 ### Return type
 
-[**AddCatalogRequest**](AddCatalogRequest.md)
+[**AddCatalog201Response**](AddCatalog201Response.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ No authorization required
 
 <a name="addCatalogMetadata"></a>
 # **addCatalogMetadata**
-> ObjectCatalogMetadata addCatalogMetadata(objectCatalogMetadata)
+> ObjectCatalogMetadata addCatalogMetadata(addCatalogMetadataRequest)
 
 Add a new catalog to the DB
 
@@ -111,9 +111,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    ObjectCatalogMetadata objectCatalogMetadata = new ObjectCatalogMetadata(); // ObjectCatalogMetadata | JSON to store
+    AddCatalogMetadataRequest addCatalogMetadataRequest = new AddCatalogMetadataRequest(); // AddCatalogMetadataRequest | JSON to store
     try {
-      ObjectCatalogMetadata result = apiInstance.addCatalogMetadata(objectCatalogMetadata);
+      ObjectCatalogMetadata result = apiInstance.addCatalogMetadata(addCatalogMetadataRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addCatalogMetadata");
@@ -130,7 +130,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **objectCatalogMetadata** | [**ObjectCatalogMetadata**](ObjectCatalogMetadata.md)| JSON to store | |
+| **addCatalogMetadataRequest** | [**AddCatalogMetadataRequest**](AddCatalogMetadataRequest.md)| JSON to store | |
 
 ### Return type
 
@@ -294,7 +294,7 @@ No authorization required
 
 <a name="addLocalspace"></a>
 # **addLocalspace**
-> ObjectTableLocalspace addLocalspace(objectTableLocalspace)
+> ObjectTableLocalspace addLocalspace(addLocalspaceRequest)
 
 Add a new localspace to the DB
 
@@ -315,9 +315,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    ObjectTableLocalspace objectTableLocalspace = new ObjectTableLocalspace(); // ObjectTableLocalspace | JSON to store
+    AddLocalspaceRequest addLocalspaceRequest = new AddLocalspaceRequest(); // AddLocalspaceRequest | JSON to store
     try {
-      ObjectTableLocalspace result = apiInstance.addLocalspace(objectTableLocalspace);
+      ObjectTableLocalspace result = apiInstance.addLocalspace(addLocalspaceRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addLocalspace");
@@ -334,7 +334,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **objectTableLocalspace** | [**ObjectTableLocalspace**](ObjectTableLocalspace.md)| JSON to store | |
+| **addLocalspaceRequest** | [**AddLocalspaceRequest**](AddLocalspaceRequest.md)| JSON to store | |
 
 ### Return type
 
@@ -634,7 +634,7 @@ No authorization required
 
 <a name="addProvenance"></a>
 # **addProvenance**
-> ObjectTableProvenance addProvenance(objectTableProvenance)
+> ObjectTableProvenance addProvenance(addProvenanceRequest)
 
 Add a new provenance to the DB
 
@@ -655,9 +655,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    ObjectTableProvenance objectTableProvenance = new ObjectTableProvenance(); // ObjectTableProvenance | JSON to store
+    AddProvenanceRequest addProvenanceRequest = new AddProvenanceRequest(); // AddProvenanceRequest | JSON to store
     try {
-      ObjectTableProvenance result = apiInstance.addProvenance(objectTableProvenance);
+      ObjectTableProvenance result = apiInstance.addProvenance(addProvenanceRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addProvenance");
@@ -674,7 +674,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **objectTableProvenance** | [**ObjectTableProvenance**](ObjectTableProvenance.md)| JSON to store | |
+| **addProvenanceRequest** | [**AddProvenanceRequest**](AddProvenanceRequest.md)| JSON to store | |
 
 ### Return type
 
@@ -770,7 +770,7 @@ No authorization required
 
 <a name="addTypeEvent"></a>
 # **addTypeEvent**
-> ObjectTableTypeEvent addTypeEvent(objectTableTypeEvent)
+> ObjectTableTypeEvent addTypeEvent(addTypeEventRequest)
 
 Add a new type_event to the DB
 
@@ -791,9 +791,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    ObjectTableTypeEvent objectTableTypeEvent = new ObjectTableTypeEvent(); // ObjectTableTypeEvent | JSON to store
+    AddTypeEventRequest addTypeEventRequest = new AddTypeEventRequest(); // AddTypeEventRequest | JSON to store
     try {
-      ObjectTableTypeEvent result = apiInstance.addTypeEvent(objectTableTypeEvent);
+      ObjectTableTypeEvent result = apiInstance.addTypeEvent(addTypeEventRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addTypeEvent");
@@ -810,7 +810,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **objectTableTypeEvent** | [**ObjectTableTypeEvent**](ObjectTableTypeEvent.md)| JSON to store | |
+| **addTypeEventRequest** | [**AddTypeEventRequest**](AddTypeEventRequest.md)| JSON to store | |
 
 ### Return type
 
@@ -838,7 +838,7 @@ No authorization required
 
 <a name="addTypeMagnitude"></a>
 # **addTypeMagnitude**
-> ObjectTableTypeMagnitude addTypeMagnitude(objectTableTypeMagnitude)
+> ObjectTableTypeMagnitude addTypeMagnitude(addTypeMagnitudeRequest)
 
 Add a new type_magnitude to the DB
 
@@ -859,9 +859,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    ObjectTableTypeMagnitude objectTableTypeMagnitude = new ObjectTableTypeMagnitude(); // ObjectTableTypeMagnitude | JSON to store
+    AddTypeMagnitudeRequest addTypeMagnitudeRequest = new AddTypeMagnitudeRequest(); // AddTypeMagnitudeRequest | JSON to store
     try {
-      ObjectTableTypeMagnitude result = apiInstance.addTypeMagnitude(objectTableTypeMagnitude);
+      ObjectTableTypeMagnitude result = apiInstance.addTypeMagnitude(addTypeMagnitudeRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addTypeMagnitude");
@@ -878,7 +878,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **objectTableTypeMagnitude** | [**ObjectTableTypeMagnitude**](ObjectTableTypeMagnitude.md)| JSON to store | |
+| **addTypeMagnitudeRequest** | [**AddTypeMagnitudeRequest**](AddTypeMagnitudeRequest.md)| JSON to store | |
 
 ### Return type
 
@@ -906,7 +906,7 @@ No authorization required
 
 <a name="addTypeOrigin"></a>
 # **addTypeOrigin**
-> ObjectTableTypeOrigin addTypeOrigin(objectTableTypeOrigin)
+> ObjectTableTypeOrigin addTypeOrigin(addTypeOriginRequest)
 
 Add a new type_origin to the DB
 
@@ -927,9 +927,9 @@ public class Example {
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
-    ObjectTableTypeOrigin objectTableTypeOrigin = new ObjectTableTypeOrigin(); // ObjectTableTypeOrigin | JSON to store
+    AddTypeOriginRequest addTypeOriginRequest = new AddTypeOriginRequest(); // AddTypeOriginRequest | JSON to store
     try {
-      ObjectTableTypeOrigin result = apiInstance.addTypeOrigin(objectTableTypeOrigin);
+      ObjectTableTypeOrigin result = apiInstance.addTypeOrigin(addTypeOriginRequest);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling StoreApi#addTypeOrigin");
@@ -946,7 +946,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **objectTableTypeOrigin** | [**ObjectTableTypeOrigin**](ObjectTableTypeOrigin.md)| JSON to store | |
+| **addTypeOriginRequest** | [**AddTypeOriginRequest**](AddTypeOriginRequest.md)| JSON to store | |
 
 ### Return type
 

@@ -8,8 +8,8 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] [readonly] |
-|**name** | **String** | Name of Provenance. i.e. INGV, ETH, USGS | varchar(255) |  |
-|**softwarename** | **String** | Software name. i.e. SisPick, eqassemble, hypoinverse | char(255) |  |
+|**name** | **String** | Name of Provenance. i.e. INGV, ETH, USGS | varchar(255) |  [optional] |
+|**softwarename** | **String** | Software name. i.e. SisPick, eqassemble, hypoinverse | char(255) |  [optional] |
 |**version** | **String** | Version name | varchar(255) |  [optional] |
 |**model** | **String** | Name/URI/DOI of the model | varchar(255) |  [optional] |
 |**method** | **String** | Name/URI/DOI of the method | varchar(255) |  [optional] |

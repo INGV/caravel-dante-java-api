@@ -8,7 +8,7 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] [readonly] |
-|**name** | **String** | Name of Catalog. i.e. INGV, ETH, USGS | varchar(255) |  |
+|**name** | **String** | Name of Catalog. i.e. INGV, ETH, USGS | varchar(255) |  [optional] |
 |**eventid** | **Long** | Unique incremental id | bigint(20) |  [optional] [readonly] |
 |**originid** | **Long** | Unique incremental id | bigint(20) |  [optional] |
 |**magnitudeid** | **Long** | Unique incremental id | bigint(20) |  [optional] |

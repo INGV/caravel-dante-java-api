@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 2.67.0
-  - Build date: 2023-01-09T10:20:03.437485Z[Etc/UTC]
+- API version: 2.68.0
+  - Build date: 2023-01-09T16:58:30.236128Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>2.67.0</version>
+  <version>2.68.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.67.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.68.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-2.67.0.jar`
+* `target/java-openapi-generator-cli-dante-2.68.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -196,7 +196,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [AddCatalog201Response](docs/AddCatalog201Response.md)
+ - [AddCatalogMetadataRequest](docs/AddCatalogMetadataRequest.md)
  - [AddCatalogRequest](docs/AddCatalogRequest.md)
+ - [AddCatalogRequestData](docs/AddCatalogRequestData.md)
  - [AddEvent201Response](docs/AddEvent201Response.md)
  - [AddEvent201ResponseData](docs/AddEvent201ResponseData.md)
  - [AddEvent201ResponseDataEvent](docs/AddEvent201ResponseDataEvent.md)
@@ -221,6 +224,7 @@ Class | Method | HTTP request | Description
  - [AddHEwStrongmotionii201Response](docs/AddHEwStrongmotionii201Response.md)
  - [AddHEwStrongmotionii201ResponseData](docs/AddHEwStrongmotionii201ResponseData.md)
  - [AddHEwStrongmotioniiRequest](docs/AddHEwStrongmotioniiRequest.md)
+ - [AddLocalspaceRequest](docs/AddLocalspaceRequest.md)
  - [AddMagnitude201Response](docs/AddMagnitude201Response.md)
  - [AddMagnitudeRequest](docs/AddMagnitudeRequest.md)
  - [AddMagnitudeRequestData](docs/AddMagnitudeRequestData.md)
@@ -236,9 +240,13 @@ Class | Method | HTTP request | Description
  - [AddOriginFlagRequestData](docs/AddOriginFlagRequestData.md)
  - [AddOriginRequest](docs/AddOriginRequest.md)
  - [AddOriginRequestData](docs/AddOriginRequestData.md)
+ - [AddProvenanceRequest](docs/AddProvenanceRequest.md)
  - [AddStrongmotion201Response](docs/AddStrongmotion201Response.md)
  - [AddStrongmotionRequest](docs/AddStrongmotionRequest.md)
  - [AddStrongmotionRequestData](docs/AddStrongmotionRequestData.md)
+ - [AddTypeEventRequest](docs/AddTypeEventRequest.md)
+ - [AddTypeMagnitudeRequest](docs/AddTypeMagnitudeRequest.md)
+ - [AddTypeOriginRequest](docs/AddTypeOriginRequest.md)
  - [GetCatalog200Response](docs/GetCatalog200Response.md)
  - [GetCatalogMetadata200Response](docs/GetCatalogMetadata200Response.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)
