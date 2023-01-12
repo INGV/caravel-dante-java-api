@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * AddMagnitude201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T12:12:50.020144Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-12T15:21:44.123976Z[Etc/UTC]")
 public class AddMagnitude201Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
