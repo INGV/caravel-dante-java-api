@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T11:58:14.421154Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-16T12:27:46.679440Z[Etc/UTC]")
 public class MagnitudeSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
