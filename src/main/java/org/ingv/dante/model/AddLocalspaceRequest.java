@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * AddLocalspaceRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T17:46:57.231056Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T18:03:54.413878Z[Etc/UTC]")
 public class AddLocalspaceRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
