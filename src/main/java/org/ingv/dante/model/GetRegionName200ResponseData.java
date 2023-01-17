@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * GetRegionName200ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T11:51:33.738314Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-17T12:10:25.692141Z[Etc/UTC]")
 public class GetRegionName200ResponseData {
   public static final String SERIALIZED_NAME_REGION_NAME = "region_name";
   @SerializedName(SERIALIZED_NAME_REGION_NAME)
