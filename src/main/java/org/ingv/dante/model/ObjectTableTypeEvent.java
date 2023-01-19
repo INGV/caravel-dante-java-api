@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableTypeEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-18T11:01:04.011518Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-19T17:52:32.765406Z[Etc/UTC]")
 public class ObjectTableTypeEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
