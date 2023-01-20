@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.74.0-dev
-  - Build date: 2023-01-19T17:51:37.481951Z[Etc/UTC]
+  - Build date: 2023-01-20T11:05:26.025913Z[Etc/UTC]
 
   
 
@@ -151,6 +151,7 @@ Class | Method | HTTP request | Description
 *EarthwormApiApi* | [**addHEwMagnitude**](docs/EarthwormApiApi.md#addHEwMagnitude) | **POST** /quakedb/ew/v1/magnitude | Insert a new magnitude message to the DB using ew2openapi module
 *EarthwormApiApi* | [**addHEwPickScnl**](docs/EarthwormApiApi.md#addHEwPickScnl) | **POST** /quakedb/ew/v1/pick-scnl | Insert a new pick-scnl message to the DB using ew2openapi module
 *EarthwormApiApi* | [**addHEwStrongmotionii**](docs/EarthwormApiApi.md#addHEwStrongmotionii) | **POST** /quakedb/ew/v1/strongmotionii | Insert a new strongmotionii message to the DB using ew2openapi module
+*GetApi* | [**getAll**](docs/GetApi.md#getAll) | **GET** /quakedb/v1/all | This API returns all origins with all magnitude; one per line.
 *GetApi* | [**getCatalog**](docs/GetApi.md#getCatalog) | **GET** /quakedb/v1/catalog | This API returns the catalogs.
 *GetApi* | [**getCatalogMetadata**](docs/GetApi.md#getCatalogMetadata) | **GET** /quakedb/v1/catalog-metadata | This API returns the catalog-metadata.
 *GetApi* | [**getEvent**](docs/GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events.

@@ -47,6 +47,45 @@ public class GetApiTest {
     private final GetApi api = new GetApi();
 
     /**
+     * This API returns all origins with all magnitude; one per line.
+     *
+     * This API returns all the origins with all magnitudes; one per line
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getAllTest() throws ApiException {
+        OffsetDateTime starttime = null;
+        OffsetDateTime endtime = null;
+        Double minlat = null;
+        Double maxlat = null;
+        Double minlon = null;
+        Double maxlon = null;
+        Double lat = null;
+        Double lon = null;
+        Double minradius = null;
+        Double maxradius = null;
+        Double minradiuskm = null;
+        Double maxradiuskm = null;
+        Double minmag = null;
+        Double maxmag = null;
+        Double mindepth = null;
+        Double maxdepth = null;
+        Long mintypeoriginvalue = null;
+        Long maxtypeoriginvalue = null;
+        String wheretypeoriginvaluein = null;
+        String wherelocalspacenamein = null;
+        String whereflagsin = null;
+        String orderby = null;
+        Long eventGroupId = null;
+        Long idLocalspace = null;
+        Integer limit = null;
+        Integer page = null;
+        GetEventsGroup200Response response = api.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        // TODO: test validations
+    }
+
+    /**
      * This API returns the catalogs.
      *
      * This API returns the catalogs.
