@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventRequestDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-20T16:46:34.151104Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-01-23T10:26:04.173585Z[Etc/UTC]")
 public class UpdateEventRequestDataEvent {
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
