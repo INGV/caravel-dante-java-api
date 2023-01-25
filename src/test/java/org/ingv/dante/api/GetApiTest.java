@@ -158,7 +158,8 @@ public class GetApiTest {
         Long originid = null;
         Long eventid = null;
         String level = null;
-        GetEvent200Response response = api.getEvent(originid, eventid, level);
+        String orderby = null;
+        GetEvent200Response response = api.getEvent(originid, eventid, level, orderby);
         // TODO: test validations
     }
 

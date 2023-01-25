@@ -4271,6 +4271,20 @@ paths:
           - magnitude
           - all
           type: string
+      - description: Select origins "order by"
+        explode: true
+        in: query
+        name: orderby
+        required: false
+        schema:
+          default: type_origin_priority-asc
+          enum:
+          - type_origin_version_value-asc
+          - type_origin_version_value-desc
+          - type_origin_priority-asc
+          - type_origin_priority-desc
+          type: string
+        style: form
       responses:
         "400":
           content:
