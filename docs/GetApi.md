@@ -346,7 +346,7 @@ No authorization required
 
 <a name="getEvent"></a>
 # **getEvent**
-> GetEvent200Response getEvent(originid, eventid, level)
+> GetEvent200Response getEvent(originid, eventid, level, orderby)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -370,8 +370,9 @@ public class Example {
     Long originid = 56L; // Long | Select by origin id.
     Long eventid = 56L; // Long | Select by event id.
     String level = "event"; // String | Select deep level
+    String orderby = "type_origin_version_value-asc"; // String | Select origins \"order by\"
     try {
-      GetEvent200Response result = apiInstance.getEvent(originid, eventid, level);
+      GetEvent200Response result = apiInstance.getEvent(originid, eventid, level, orderby);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvent");
@@ -391,6 +392,7 @@ public class Example {
 | **originid** | **Long**| Select by origin id. | [optional] |
 | **eventid** | **Long**| Select by event id. | [optional] |
 | **level** | **String**| Select deep level | [optional] [default to all] [enum: event, origin, magnitude, all] |
+| **orderby** | **String**| Select origins \&quot;order by\&quot; | [optional] [default to type_origin_priority-asc] [enum: type_origin_version_value-asc, type_origin_version_value-desc, type_origin_priority-asc, type_origin_priority-desc] |
 
 ### Return type
 

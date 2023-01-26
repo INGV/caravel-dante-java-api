@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: http://terremoti.ingv.it/webservices_and_software
   title: Dante Web Services
-  version: 2.74.3
+  version: 2.75.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -4271,6 +4271,20 @@ paths:
           - magnitude
           - all
           type: string
+      - description: Select origins "order by"
+        explode: true
+        in: query
+        name: orderby
+        required: false
+        schema:
+          default: type_origin_priority-asc
+          enum:
+          - type_origin_version_value-asc
+          - type_origin_version_value-desc
+          - type_origin_priority-asc
+          - type_origin_priority-desc
+          type: string
+        style: form
       responses:
         "400":
           content:
