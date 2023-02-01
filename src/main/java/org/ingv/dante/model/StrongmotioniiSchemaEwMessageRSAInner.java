@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaEwMessageRSAInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-01T14:59:53.862116Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-01T15:09:59.683086Z[Etc/UTC]")
 public class StrongmotioniiSchemaEwMessageRSAInner {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
