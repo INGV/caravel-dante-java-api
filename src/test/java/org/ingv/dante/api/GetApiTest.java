@@ -75,13 +75,14 @@ public class GetApiTest {
         Long maxtypeoriginvalue = null;
         String wheretypeoriginvaluein = null;
         String wherelocalspacenamein = null;
+        String wherelocalspacenameincolumn = null;
         String whereflagsin = null;
         String orderby = null;
         Long eventGroupId = null;
         Long idLocalspace = null;
         Integer limit = null;
         Integer page = null;
-        GetEventsGroup200Response response = api.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        GetEventsGroup200Response response = api.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         // TODO: test validations
     }
 
@@ -114,6 +115,7 @@ public class GetApiTest {
         Long maxtypeoriginvalue = null;
         String wheretypeoriginvaluein = null;
         String wherelocalspacenamein = null;
+        String wherelocalspacenameincolumn = null;
         String whereflagsin = null;
         String orderby = null;
         Long eventGroupId = null;
@@ -126,7 +128,7 @@ public class GetApiTest {
         String name = null;
         String doi = null;
         String wherenamelike = null;
-        GetCatalog200Response response = api.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
+        GetCatalog200Response response = api.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
         // TODO: test validations
     }
 
@@ -192,13 +194,14 @@ public class GetApiTest {
         Long maxtypeoriginvalue = null;
         String wheretypeoriginvaluein = null;
         String wherelocalspacenamein = null;
+        String wherelocalspacenameincolumn = null;
         String whereflagsin = null;
         String orderby = null;
         Long eventGroupId = null;
         Long idLocalspace = null;
         Integer limit = null;
         Integer page = null;
-        GetEventsGroup200Response response = api.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        GetEventsGroup200Response response = api.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         // TODO: test validations
     }
 
@@ -231,13 +234,14 @@ public class GetApiTest {
         Long maxtypeoriginvalue = null;
         String wheretypeoriginvaluein = null;
         String wherelocalspacenamein = null;
+        String wherelocalspacenameincolumn = null;
         String whereflagsin = null;
         String orderby = null;
         Long eventGroupId = null;
         Long idLocalspace = null;
         Integer limit = null;
         Integer page = null;
-        GetEventsGroup200Response response = api.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        GetEventsGroup200Response response = api.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         // TODO: test validations
     }
 
@@ -283,13 +287,14 @@ public class GetApiTest {
         Long maxtypeoriginvalue = null;
         String wheretypeoriginvaluein = null;
         String wherelocalspacenamein = null;
+        String wherelocalspacenameincolumn = null;
         String whereflagsin = null;
         String orderby = null;
         Long eventGroupId = null;
         Long idLocalspace = null;
         Integer limit = null;
         Integer page = null;
-        GetEventsGroup200Response response = api.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        GetEventsGroup200Response response = api.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         // TODO: test validations
     }
 
@@ -371,13 +376,14 @@ public class GetApiTest {
         Long maxtypeoriginvalue = null;
         String wheretypeoriginvaluein = null;
         String wherelocalspacenamein = null;
+        String wherelocalspacenameincolumn = null;
         String whereflagsin = null;
         String orderby = null;
         Long eventGroupId = null;
         Long idLocalspace = null;
         Integer limit = null;
         Integer page = null;
-        GetEventsGroup200Response response = api.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        GetEventsGroup200Response response = api.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         // TODO: test validations
     }
 
