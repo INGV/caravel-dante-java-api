@@ -66,7 +66,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -110,7 +110,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
@@ -184,7 +184,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -234,7 +234,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
@@ -460,7 +460,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -504,7 +504,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
@@ -578,7 +578,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -622,7 +622,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
@@ -760,7 +760,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -804,7 +804,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
@@ -1096,7 +1096,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
-    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -1140,7 +1140,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
-| **wherelocalspacenamein** | **String**| Filter localspace.name by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
