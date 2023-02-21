@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 2.77.2
+  version: 2.78.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -36,9 +36,9 @@ servers:
   url: "http://{hostname}/api"
   variables:
     hostname:
-      default: localhost:8087
+      default: localhost:8585
       enum:
-      - localhost:8087
+      - localhost:8585
       - caravel.int.ingv.it:8585
   x-sandbox: true
 tags:
@@ -356,6 +356,38 @@ paths:
         schema:
           format: string
           type: string
+      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
+          "origin" means "origin.localspace.name"); default "event".
+        in: query
+        name: wherelocalspacenameincolumn
+        required: false
+        schema:
+          default: event
+          enum:
+          - event
+          - origin
+          - magnitude
+          type: string
+      - description: Limit data to "updated after" params.
+        in: query
+        name: updatedafter
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: Set the column to apply "updatedafter" filter (i.e. "origin"
+          means "origin.modified"); default "all".
+        in: query
+        name: updatedafterincolumn
+        required: false
+        schema:
+          default: all
+          enum:
+          - event
+          - origin
+          - magnitude
+          - all
+          type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
         name: whereflagsin
@@ -617,6 +649,38 @@ paths:
         schema:
           format: string
           type: string
+      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
+          "origin" means "origin.localspace.name"); default "event".
+        in: query
+        name: wherelocalspacenameincolumn
+        required: false
+        schema:
+          default: event
+          enum:
+          - event
+          - origin
+          - magnitude
+          type: string
+      - description: Limit data to "updated after" params.
+        in: query
+        name: updatedafter
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: Set the column to apply "updatedafter" filter (i.e. "origin"
+          means "origin.modified"); default "all".
+        in: query
+        name: updatedafterincolumn
+        required: false
+        schema:
+          default: all
+          enum:
+          - event
+          - origin
+          - magnitude
+          - all
+          type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
         name: whereflagsin
@@ -877,6 +941,38 @@ paths:
         schema:
           format: string
           type: string
+      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
+          "origin" means "origin.localspace.name"); default "event".
+        in: query
+        name: wherelocalspacenameincolumn
+        required: false
+        schema:
+          default: event
+          enum:
+          - event
+          - origin
+          - magnitude
+          type: string
+      - description: Limit data to "updated after" params.
+        in: query
+        name: updatedafter
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: Set the column to apply "updatedafter" filter (i.e. "origin"
+          means "origin.modified"); default "all".
+        in: query
+        name: updatedafterincolumn
+        required: false
+        schema:
+          default: all
+          enum:
+          - event
+          - origin
+          - magnitude
+          - all
+          type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
         name: whereflagsin
@@ -1136,6 +1232,38 @@ paths:
         schema:
           format: string
           type: string
+      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
+          "origin" means "origin.localspace.name"); default "event".
+        in: query
+        name: wherelocalspacenameincolumn
+        required: false
+        schema:
+          default: event
+          enum:
+          - event
+          - origin
+          - magnitude
+          type: string
+      - description: Limit data to "updated after" params.
+        in: query
+        name: updatedafter
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: Set the column to apply "updatedafter" filter (i.e. "origin"
+          means "origin.modified"); default "all".
+        in: query
+        name: updatedafterincolumn
+        required: false
+        schema:
+          default: all
+          enum:
+          - event
+          - origin
+          - magnitude
+          - all
+          type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
         name: whereflagsin
@@ -1394,6 +1522,38 @@ paths:
         required: false
         schema:
           format: string
+          type: string
+      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
+          "origin" means "origin.localspace.name"); default "event".
+        in: query
+        name: wherelocalspacenameincolumn
+        required: false
+        schema:
+          default: event
+          enum:
+          - event
+          - origin
+          - magnitude
+          type: string
+      - description: Limit data to "updated after" params.
+        in: query
+        name: updatedafter
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: Set the column to apply "updatedafter" filter (i.e. "origin"
+          means "origin.modified"); default "all".
+        in: query
+        name: updatedafterincolumn
+        required: false
+        schema:
+          default: all
+          enum:
+          - event
+          - origin
+          - magnitude
+          - all
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -2019,6 +2179,18 @@ paths:
         required: false
         schema:
           format: string
+          type: string
+      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
+          "origin" means "origin.localspace.name"); default "event".
+        in: query
+        name: wherelocalspacenameincolumn
+        required: false
+        schema:
+          default: event
+          enum:
+          - event
+          - origin
+          - magnitude
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -10338,7 +10510,7 @@ components:
       type: object
     MetaDefinition:
       example:
-        path: http://localhost:8087
+        path: http://localhost:8585
         per_page: 4000
         total: 10000
         last_page: 3
@@ -10346,10 +10518,10 @@ components:
         links:
         - active: "true"
           label: "2"
-          url: http://localhost:8087
+          url: http://localhost:8585
         - active: "true"
           label: "2"
-          url: http://localhost:8087
+          url: http://localhost:8585
         to: 4000
         current_page: 2
       properties:
@@ -10374,7 +10546,7 @@ components:
           type: array
         path:
           description: URL base path.
-          example: http://localhost:8087
+          example: http://localhost:8585
           type: string
         per_page:
           description: Record per page.
@@ -10394,28 +10566,28 @@ components:
       type: object
     LinksDefinition:
       example:
-        next: http://localhost:8087/api/quakedb/v1/events-group/?page=3
-        last: http://localhost:8087/api/quakedb/v1/events-group/?page=4
-        prev: http://localhost:8087/api/quakedb/v1/events-group/?page=1
-        first: http://localhost:8087/api/quakedb/v1/events-group/?page=2
+        next: http://localhost:8585/api/quakedb/v1/events-group/?page=3
+        last: http://localhost:8585/api/quakedb/v1/events-group/?page=4
+        prev: http://localhost:8585/api/quakedb/v1/events-group/?page=1
+        first: http://localhost:8585/api/quakedb/v1/events-group/?page=2
       properties:
         first:
           description: URL first page.
-          example: http://localhost:8087/api/quakedb/v1/events-group/?page=2
+          example: http://localhost:8585/api/quakedb/v1/events-group/?page=2
           type: string
         last:
           description: URL last page.
-          example: http://localhost:8087/api/quakedb/v1/events-group/?page=4
+          example: http://localhost:8585/api/quakedb/v1/events-group/?page=4
           nullable: true
           type: string
         prev:
           description: URL previous page.
-          example: http://localhost:8087/api/quakedb/v1/events-group/?page=1
+          example: http://localhost:8585/api/quakedb/v1/events-group/?page=1
           nullable: true
           type: string
         next:
           description: URL next page.
-          example: http://localhost:8087/api/quakedb/v1/events-group/?page=3
+          example: http://localhost:8585/api/quakedb/v1/events-group/?page=3
           nullable: true
           type: string
       type: object
@@ -11659,7 +11831,7 @@ components:
           id: 14932631
           event_group_id: 0
         meta:
-          path: http://localhost:8087
+          path: http://localhost:8585
           per_page: 4000
           total: 10000
           last_page: 3
@@ -11667,17 +11839,17 @@ components:
           links:
           - active: "true"
             label: "2"
-            url: http://localhost:8087
+            url: http://localhost:8585
           - active: "true"
             label: "2"
-            url: http://localhost:8087
+            url: http://localhost:8585
           to: 4000
           current_page: 2
         links:
-          next: http://localhost:8087/api/quakedb/v1/events-group/?page=3
-          last: http://localhost:8087/api/quakedb/v1/events-group/?page=4
-          prev: http://localhost:8087/api/quakedb/v1/events-group/?page=1
-          first: http://localhost:8087/api/quakedb/v1/events-group/?page=2
+          next: http://localhost:8585/api/quakedb/v1/events-group/?page=3
+          last: http://localhost:8585/api/quakedb/v1/events-group/?page=4
+          prev: http://localhost:8585/api/quakedb/v1/events-group/?page=1
+          first: http://localhost:8585/api/quakedb/v1/events-group/?page=2
       properties:
         links:
           $ref: '#/components/schemas/LinksDefinition'
@@ -11704,7 +11876,7 @@ components:
           id: 14932631
           doi: 10.13127/TDMT
         meta:
-          path: http://localhost:8087
+          path: http://localhost:8585
           per_page: 4000
           total: 10000
           last_page: 3
@@ -11712,17 +11884,17 @@ components:
           links:
           - active: "true"
             label: "2"
-            url: http://localhost:8087
+            url: http://localhost:8585
           - active: "true"
             label: "2"
-            url: http://localhost:8087
+            url: http://localhost:8585
           to: 4000
           current_page: 2
         links:
-          next: http://localhost:8087/api/quakedb/v1/events-group/?page=3
-          last: http://localhost:8087/api/quakedb/v1/events-group/?page=4
-          prev: http://localhost:8087/api/quakedb/v1/events-group/?page=1
-          first: http://localhost:8087/api/quakedb/v1/events-group/?page=2
+          next: http://localhost:8585/api/quakedb/v1/events-group/?page=3
+          last: http://localhost:8585/api/quakedb/v1/events-group/?page=4
+          prev: http://localhost:8585/api/quakedb/v1/events-group/?page=1
+          first: http://localhost:8585/api/quakedb/v1/events-group/?page=2
       properties:
         links:
           $ref: '#/components/schemas/LinksDefinition'
@@ -11745,7 +11917,7 @@ components:
         - null
         - null
         meta:
-          path: http://localhost:8087
+          path: http://localhost:8585
           per_page: 4000
           total: 10000
           last_page: 3
@@ -11753,17 +11925,17 @@ components:
           links:
           - active: "true"
             label: "2"
-            url: http://localhost:8087
+            url: http://localhost:8585
           - active: "true"
             label: "2"
-            url: http://localhost:8087
+            url: http://localhost:8585
           to: 4000
           current_page: 2
         links:
-          next: http://localhost:8087/api/quakedb/v1/events-group/?page=3
-          last: http://localhost:8087/api/quakedb/v1/events-group/?page=4
-          prev: http://localhost:8087/api/quakedb/v1/events-group/?page=1
-          first: http://localhost:8087/api/quakedb/v1/events-group/?page=2
+          next: http://localhost:8585/api/quakedb/v1/events-group/?page=3
+          last: http://localhost:8585/api/quakedb/v1/events-group/?page=4
+          prev: http://localhost:8585/api/quakedb/v1/events-group/?page=1
+          first: http://localhost:8585/api/quakedb/v1/events-group/?page=2
       properties:
         links:
           $ref: '#/components/schemas/LinksDefinition'
@@ -14561,7 +14733,7 @@ components:
           id: 14932631
           value: 1
         meta:
-          path: http://localhost:8087
+          path: http://localhost:8585
           per_page: 4000
           total: 10000
           last_page: 3
@@ -14569,17 +14741,17 @@ components:
           links:
           - active: "true"
             label: "2"
-            url: http://localhost:8087
+            url: http://localhost:8585
           - active: "true"
             label: "2"
-            url: http://localhost:8087
+            url: http://localhost:8585
           to: 4000
           current_page: 2
         links:
-          next: http://localhost:8087/api/quakedb/v1/events-group/?page=3
-          last: http://localhost:8087/api/quakedb/v1/events-group/?page=4
-          prev: http://localhost:8087/api/quakedb/v1/events-group/?page=1
-          first: http://localhost:8087/api/quakedb/v1/events-group/?page=2
+          next: http://localhost:8585/api/quakedb/v1/events-group/?page=3
+          last: http://localhost:8585/api/quakedb/v1/events-group/?page=4
+          prev: http://localhost:8585/api/quakedb/v1/events-group/?page=1
+          first: http://localhost:8585/api/quakedb/v1/events-group/?page=2
       properties:
         links:
           $ref: '#/components/schemas/LinksDefinition'
@@ -15381,11 +15553,11 @@ components:
       example:
         active: "true"
         label: "2"
-        url: http://localhost:8087
+        url: http://localhost:8585
       properties:
         url:
           description: URL base path.
-          example: http://localhost:8087
+          example: http://localhost:8585
           nullable: true
           type: string
         label:
