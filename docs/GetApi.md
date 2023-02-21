@@ -26,7 +26,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="getAll"></a>
 # **getAll**
-> GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, updatedafter, updatedafterincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all origins with all magnitude; one per line.
 
@@ -68,6 +68,8 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String wherelocalspacenameincolumn = "event"; // String | Set the column to apply \"wherelocalspacenamein\" filter (i.e. \"origin\" means \"origin.localspace.name\"); default \"event\".
+    OffsetDateTime updatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"updated after\" params.
+    String updatedafterincolumn = "event"; // String | Set the column to apply \"updatedafter\" filter (i.e. \"origin\" means \"origin.modified\"); default \"all\".
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -75,7 +77,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, updatedafter, updatedafterincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getAll");
@@ -113,6 +115,8 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **wherelocalspacenameincolumn** | **String**| Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. | [optional] [default to event] [enum: event, origin, magnitude] |
+| **updatedafter** | **OffsetDateTime**| Limit data to \&quot;updated after\&quot; params. | [optional] |
+| **updatedafterincolumn** | **String**| Set the column to apply \&quot;updatedafter\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.modified\&quot;); default \&quot;all\&quot;. | [optional] [default to all] [enum: event, origin, magnitude, all] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
@@ -424,7 +428,7 @@ No authorization required
 
 <a name="getEvents"></a>
 # **getEvents**
-> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, updatedafter, updatedafterincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns the preferred origin and the preferred magnitude from the same instance.
 
@@ -466,6 +470,8 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String wherelocalspacenameincolumn = "event"; // String | Set the column to apply \"wherelocalspacenamein\" filter (i.e. \"origin\" means \"origin.localspace.name\"); default \"event\".
+    OffsetDateTime updatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"updated after\" params.
+    String updatedafterincolumn = "event"; // String | Set the column to apply \"updatedafter\" filter (i.e. \"origin\" means \"origin.modified\"); default \"all\".
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -473,7 +479,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, updatedafter, updatedafterincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvents");
@@ -511,6 +517,8 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **wherelocalspacenameincolumn** | **String**| Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. | [optional] [default to event] [enum: event, origin, magnitude] |
+| **updatedafter** | **OffsetDateTime**| Limit data to \&quot;updated after\&quot; params. | [optional] |
+| **updatedafterincolumn** | **String**| Set the column to apply \&quot;updatedafter\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.modified\&quot;); default \&quot;all\&quot;. | [optional] [default to all] [enum: event, origin, magnitude, all] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
@@ -544,7 +552,7 @@ No authorization required
 
 <a name="getEventsGroup"></a>
 # **getEventsGroup**
-> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, updatedafter, updatedafterincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -586,6 +594,8 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String wherelocalspacenameincolumn = "event"; // String | Set the column to apply \"wherelocalspacenamein\" filter (i.e. \"origin\" means \"origin.localspace.name\"); default \"event\".
+    OffsetDateTime updatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"updated after\" params.
+    String updatedafterincolumn = "event"; // String | Set the column to apply \"updatedafter\" filter (i.e. \"origin\" means \"origin.modified\"); default \"all\".
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -593,7 +603,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, updatedafter, updatedafterincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEventsGroup");
@@ -631,6 +641,8 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **wherelocalspacenameincolumn** | **String**| Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. | [optional] [default to event] [enum: event, origin, magnitude] |
+| **updatedafter** | **OffsetDateTime**| Limit data to \&quot;updated after\&quot; params. | [optional] |
+| **updatedafterincolumn** | **String**| Set the column to apply \&quot;updatedafter\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.modified\&quot;); default \&quot;all\&quot;. | [optional] [default to all] [enum: event, origin, magnitude, all] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
@@ -728,7 +740,7 @@ No authorization required
 
 <a name="getMagnitudes"></a>
 # **getMagnitudes**
-> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, updatedafter, updatedafterincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all origins with own preferred magnitude.
 
@@ -770,6 +782,8 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String wherelocalspacenameincolumn = "event"; // String | Set the column to apply \"wherelocalspacenamein\" filter (i.e. \"origin\" means \"origin.localspace.name\"); default \"event\".
+    OffsetDateTime updatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"updated after\" params.
+    String updatedafterincolumn = "event"; // String | Set the column to apply \"updatedafter\" filter (i.e. \"origin\" means \"origin.modified\"); default \"all\".
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -777,7 +791,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, updatedafter, updatedafterincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getMagnitudes");
@@ -815,6 +829,8 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **wherelocalspacenameincolumn** | **String**| Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. | [optional] [default to event] [enum: event, origin, magnitude] |
+| **updatedafter** | **OffsetDateTime**| Limit data to \&quot;updated after\&quot; params. | [optional] |
+| **updatedafterincolumn** | **String**| Set the column to apply \&quot;updatedafter\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.modified\&quot;); default \&quot;all\&quot;. | [optional] [default to all] [enum: event, origin, magnitude, all] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
@@ -1066,7 +1082,7 @@ No authorization required
 
 <a name="getOrigins"></a>
 # **getOrigins**
-> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, updatedafter, updatedafterincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all the preferred origins.
 
@@ -1108,6 +1124,8 @@ public class Example {
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
     String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn' param) by comma separated value (i.e. hew10_mole,hew20_mole).
     String wherelocalspacenameincolumn = "event"; // String | Set the column to apply \"wherelocalspacenamein\" filter (i.e. \"origin\" means \"origin.localspace.name\"); default \"event\".
+    OffsetDateTime updatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"updated after\" params.
+    String updatedafterincolumn = "event"; // String | Set the column to apply \"updatedafter\" filter (i.e. \"origin\" means \"origin.modified\"); default \"all\".
     String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
@@ -1115,7 +1133,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, updatedafter, updatedafterincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOrigins");
@@ -1153,6 +1171,8 @@ public class Example {
 | **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
 | **wherelocalspacenameincolumn** | **String**| Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. | [optional] [default to event] [enum: event, origin, magnitude] |
+| **updatedafter** | **OffsetDateTime**| Limit data to \&quot;updated after\&quot; params. | [optional] |
+| **updatedafterincolumn** | **String**| Set the column to apply \&quot;updatedafter\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.modified\&quot;); default \&quot;all\&quot;. | [optional] [default to all] [enum: event, origin, magnitude, all] |
 | **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
