@@ -368,25 +368,26 @@ paths:
           - origin
           - magnitude
           type: string
-      - description: Limit data to "updated after" params.
+      - description: Limit data to "event.modified" after.
         in: query
-        name: updatedafter
+        name: eventupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Set the column to apply "updatedafter" filter (i.e. "origin"
-          means "origin.modified"); default "all".
+      - description: Limit data to "origin.modified" after.
         in: query
-        name: updatedafterincolumn
+        name: originupdatedafter
         required: false
         schema:
-          default: all
-          enum:
-          - event
-          - origin
-          - magnitude
-          - all
+          format: date-time
+          type: string
+      - description: Limit data to "magnitude.modified" after.
+        in: query
+        name: magnitudeupdatedafter
+        required: false
+        schema:
+          format: date-time
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -661,25 +662,26 @@ paths:
           - origin
           - magnitude
           type: string
-      - description: Limit data to "updated after" params.
+      - description: Limit data to "event.modified" after.
         in: query
-        name: updatedafter
+        name: eventupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Set the column to apply "updatedafter" filter (i.e. "origin"
-          means "origin.modified"); default "all".
+      - description: Limit data to "origin.modified" after.
         in: query
-        name: updatedafterincolumn
+        name: originupdatedafter
         required: false
         schema:
-          default: all
-          enum:
-          - event
-          - origin
-          - magnitude
-          - all
+          format: date-time
+          type: string
+      - description: Limit data to "magnitude.modified" after.
+        in: query
+        name: magnitudeupdatedafter
+        required: false
+        schema:
+          format: date-time
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -953,25 +955,26 @@ paths:
           - origin
           - magnitude
           type: string
-      - description: Limit data to "updated after" params.
+      - description: Limit data to "event.modified" after.
         in: query
-        name: updatedafter
+        name: eventupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Set the column to apply "updatedafter" filter (i.e. "origin"
-          means "origin.modified"); default "all".
+      - description: Limit data to "origin.modified" after.
         in: query
-        name: updatedafterincolumn
+        name: originupdatedafter
         required: false
         schema:
-          default: all
-          enum:
-          - event
-          - origin
-          - magnitude
-          - all
+          format: date-time
+          type: string
+      - description: Limit data to "magnitude.modified" after.
+        in: query
+        name: magnitudeupdatedafter
+        required: false
+        schema:
+          format: date-time
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -1244,25 +1247,26 @@ paths:
           - origin
           - magnitude
           type: string
-      - description: Limit data to "updated after" params.
+      - description: Limit data to "event.modified" after.
         in: query
-        name: updatedafter
+        name: eventupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Set the column to apply "updatedafter" filter (i.e. "origin"
-          means "origin.modified"); default "all".
+      - description: Limit data to "origin.modified" after.
         in: query
-        name: updatedafterincolumn
+        name: originupdatedafter
         required: false
         schema:
-          default: all
-          enum:
-          - event
-          - origin
-          - magnitude
-          - all
+          format: date-time
+          type: string
+      - description: Limit data to "magnitude.modified" after.
+        in: query
+        name: magnitudeupdatedafter
+        required: false
+        schema:
+          format: date-time
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -1535,25 +1539,26 @@ paths:
           - origin
           - magnitude
           type: string
-      - description: Limit data to "updated after" params.
+      - description: Limit data to "event.modified" after.
         in: query
-        name: updatedafter
+        name: eventupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Set the column to apply "updatedafter" filter (i.e. "origin"
-          means "origin.modified"); default "all".
+      - description: Limit data to "origin.modified" after.
         in: query
-        name: updatedafterincolumn
+        name: originupdatedafter
         required: false
         schema:
-          default: all
-          enum:
-          - event
-          - origin
-          - magnitude
-          - all
+          format: date-time
+          type: string
+      - description: Limit data to "magnitude.modified" after.
+        in: query
+        name: magnitudeupdatedafter
+        required: false
+        schema:
+          format: date-time
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
