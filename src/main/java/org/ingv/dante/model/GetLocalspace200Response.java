@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * GetLocalspace200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-25T16:00:35.514153Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-25T19:15:35.009566Z[Etc/UTC]")
 public class GetLocalspace200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
