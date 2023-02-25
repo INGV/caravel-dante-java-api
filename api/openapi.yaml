@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 2.80.0-dev
+  version: 2.81.0-dev
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -368,26 +368,43 @@ paths:
           - origin
           - magnitude
           type: string
-      - description: Limit data to "event.modified" after.
+      - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
         in: query
         name: eventupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Limit data to "origin.modified" after.
+      - description: "Limit data to \"origin.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
         in: query
         name: originupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Limit data to "magnitude.modified" after.
+      - description: "Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is\
+          \ used."
         in: query
         name: magnitudeupdatedafter
         required: false
         schema:
           format: date-time
+          type: string
+      - description: "Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\"\
+          \ and \"magnitudeupdatedafter\" are set."
+        in: query
+        name: updatedafteroperator
+        required: false
+        schema:
+          default: or
+          enum:
+          - and
+          - or
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -662,26 +679,43 @@ paths:
           - origin
           - magnitude
           type: string
-      - description: Limit data to "event.modified" after.
+      - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
         in: query
         name: eventupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Limit data to "origin.modified" after.
+      - description: "Limit data to \"origin.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
         in: query
         name: originupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Limit data to "magnitude.modified" after.
+      - description: "Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is\
+          \ used."
         in: query
         name: magnitudeupdatedafter
         required: false
         schema:
           format: date-time
+          type: string
+      - description: "Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\"\
+          \ and \"magnitudeupdatedafter\" are set."
+        in: query
+        name: updatedafteroperator
+        required: false
+        schema:
+          default: or
+          enum:
+          - and
+          - or
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -955,26 +989,43 @@ paths:
           - origin
           - magnitude
           type: string
-      - description: Limit data to "event.modified" after.
+      - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
         in: query
         name: eventupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Limit data to "origin.modified" after.
+      - description: "Limit data to \"origin.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
         in: query
         name: originupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Limit data to "magnitude.modified" after.
+      - description: "Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is\
+          \ used."
         in: query
         name: magnitudeupdatedafter
         required: false
         schema:
           format: date-time
+          type: string
+      - description: "Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\"\
+          \ and \"magnitudeupdatedafter\" are set."
+        in: query
+        name: updatedafteroperator
+        required: false
+        schema:
+          default: or
+          enum:
+          - and
+          - or
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -1247,26 +1298,43 @@ paths:
           - origin
           - magnitude
           type: string
-      - description: Limit data to "event.modified" after.
+      - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
         in: query
         name: eventupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Limit data to "origin.modified" after.
+      - description: "Limit data to \"origin.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
         in: query
         name: originupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Limit data to "magnitude.modified" after.
+      - description: "Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is\
+          \ used."
         in: query
         name: magnitudeupdatedafter
         required: false
         schema:
           format: date-time
+          type: string
+      - description: "Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\"\
+          \ and \"magnitudeupdatedafter\" are set."
+        in: query
+        name: updatedafteroperator
+        required: false
+        schema:
+          default: or
+          enum:
+          - and
+          - or
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -1539,26 +1607,43 @@ paths:
           - origin
           - magnitude
           type: string
-      - description: Limit data to "event.modified" after.
+      - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
         in: query
         name: eventupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Limit data to "origin.modified" after.
+      - description: "Limit data to \"origin.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
         in: query
         name: originupdatedafter
         required: false
         schema:
           format: date-time
           type: string
-      - description: Limit data to "magnitude.modified" after.
+      - description: "Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is\
+          \ used."
         in: query
         name: magnitudeupdatedafter
         required: false
         schema:
           format: date-time
+          type: string
+      - description: "Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\"\
+          \ and \"magnitudeupdatedafter\" are set."
+        in: query
+        name: updatedafteroperator
+        required: false
+        schema:
+          default: or
+          enum:
+          - and
+          - or
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
