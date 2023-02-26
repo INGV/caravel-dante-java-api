@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +39,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -50,11 +49,11 @@ import org.ingv.dante.JSON;
 /**
  * AddEwHyp2000arc201ResponseDataEventAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:40:18.214119Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:07:16.085036Z[Etc/UTC]")
 public class AddEwHyp2000arc201ResponseDataEventAllOf {
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<AddEvent201ResponseDataEventOriginsInnerAllOf> origins = null;
+  private List<AddEvent201ResponseDataEventOriginsInnerAllOf> origins = new ArrayList<>();
 
   public AddEwHyp2000arc201ResponseDataEventAllOf() {
   }
@@ -78,7 +77,6 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
    * @return origins
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<AddEvent201ResponseDataEventOriginsInnerAllOf> getOrigins() {
     return origins;
@@ -99,6 +97,10 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the AddEwHyp2000arc201ResponseDataEventAllOf instance itself
    */
   public AddEwHyp2000arc201ResponseDataEventAllOf putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -110,6 +112,8 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -117,6 +121,9 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -186,23 +193,23 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (AddEwHyp2000arc201ResponseDataEventAllOf.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!AddEwHyp2000arc201ResponseDataEventAllOf.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddEwHyp2000arc201ResponseDataEventAllOf is not found in the empty JSON string", AddEwHyp2000arc201ResponseDataEventAllOf.openapiRequiredFields.toString()));
         }
       }
-      JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
-      if (jsonArrayorigins != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("origins").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
-        }
+      if (jsonObj.get("origins") != null && !jsonObj.get("origins").isJsonNull()) {
+        JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
+        if (jsonArrayorigins != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("origins").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
+          }
 
-        // validate the optional field `origins` (array)
-        for (int i = 0; i < jsonArrayorigins.size(); i++) {
-          AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
-        };
+          // validate the optional field `origins` (array)
+          for (int i = 0; i < jsonArrayorigins.size(); i++) {
+            AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 
@@ -222,7 +229,7 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
            public void write(JsonWriter out, AddEwHyp2000arc201ResponseDataEventAllOf value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -258,8 +265,10 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

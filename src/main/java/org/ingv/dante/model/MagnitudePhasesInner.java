@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 
@@ -39,6 +37,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -48,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudePhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:40:18.214119Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:07:16.085036Z[Etc/UTC]")
 public class MagnitudePhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -116,7 +115,6 @@ public class MagnitudePhasesInner {
    * @return net
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "IV", required = true, value = "Channel net code | char(2)")
 
   public String getNet() {
     return net;
@@ -139,7 +137,6 @@ public class MagnitudePhasesInner {
    * @return sta
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "ACER", required = true, value = "Channel station code | varchar(5)")
 
   public String getSta() {
     return sta;
@@ -162,7 +159,6 @@ public class MagnitudePhasesInner {
    * @return comp
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "HHZ", required = true, value = "Channel code | char(3)")
 
   public String getComp() {
     return comp;
@@ -185,7 +181,6 @@ public class MagnitudePhasesInner {
    * @return loc
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "00", required = true, value = "Channel location | char(2)")
 
   public String getLoc() {
     return loc;
@@ -208,7 +203,6 @@ public class MagnitudePhasesInner {
    * @return mag
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3.04", value = "Amplitude magnitude value | double")
 
   public Double getMag() {
     return mag;
@@ -231,7 +225,6 @@ public class MagnitudePhasesInner {
    * @return dist
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "223.3", value = "Distance from epicenter of the station expressed in Km | double")
 
   public Float getDist() {
     return dist;
@@ -254,7 +247,6 @@ public class MagnitudePhasesInner {
    * @return corr
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "magnitude correction | double")
 
   public Double getCorr() {
     return corr;
@@ -277,7 +269,6 @@ public class MagnitudePhasesInner {
    * @return time1
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2017-04-28T06:34:15.350Z", required = true, value = " | datetime(3)")
 
   public OffsetDateTime getTime1() {
     return time1;
@@ -300,7 +291,6 @@ public class MagnitudePhasesInner {
    * @return amp1
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "-0.358", required = true, value = "Amplitude value | double")
 
   public Double getAmp1() {
     return amp1;
@@ -323,7 +313,6 @@ public class MagnitudePhasesInner {
    * @return period1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amlitude period | double")
 
   public Double getPeriod1() {
     return period1;
@@ -346,7 +335,6 @@ public class MagnitudePhasesInner {
    * @return time2
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2017-04-28T06:34:15.850Z", required = true, value = " | datetime(3)")
 
   public OffsetDateTime getTime2() {
     return time2;
@@ -369,7 +357,6 @@ public class MagnitudePhasesInner {
    * @return amp2
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.292", required = true, value = "Amplitude value | double")
 
   public Double getAmp2() {
     return amp2;
@@ -392,7 +379,6 @@ public class MagnitudePhasesInner {
    * @return period2
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amlitude period | double")
 
   public Double getPeriod2() {
     return period2;
@@ -413,6 +399,10 @@ public class MagnitudePhasesInner {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the MagnitudePhasesInner instance itself
    */
   public MagnitudePhasesInner putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -424,6 +414,8 @@ public class MagnitudePhasesInner {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -431,6 +423,9 @@ public class MagnitudePhasesInner {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -544,9 +539,7 @@ public class MagnitudePhasesInner {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (MagnitudePhasesInner.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!MagnitudePhasesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in MagnitudePhasesInner is not found in the empty JSON string", MagnitudePhasesInner.openapiRequiredFields.toString()));
         }
       }
@@ -557,16 +550,16 @@ public class MagnitudePhasesInner {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("net") != null && !jsonObj.get("net").isJsonNull()) && !jsonObj.get("net").isJsonPrimitive()) {
+      if (!jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
-      if ((jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonNull()) && !jsonObj.get("sta").isJsonPrimitive()) {
+      if (!jsonObj.get("sta").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
       }
-      if ((jsonObj.get("comp") != null && !jsonObj.get("comp").isJsonNull()) && !jsonObj.get("comp").isJsonPrimitive()) {
+      if (!jsonObj.get("comp").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `comp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("comp").toString()));
       }
-      if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
+      if (!jsonObj.get("loc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
       }
   }
@@ -587,7 +580,7 @@ public class MagnitudePhasesInner {
            public void write(JsonWriter out, MagnitudePhasesInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -623,8 +616,10 @@ public class MagnitudePhasesInner {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

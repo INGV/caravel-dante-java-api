@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -39,6 +37,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -48,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * LinksDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:40:18.214119Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:07:16.085036Z[Etc/UTC]")
 public class LinksDefinition {
   public static final String SERIALIZED_NAME_FIRST = "first";
   @SerializedName(SERIALIZED_NAME_FIRST)
@@ -80,7 +79,6 @@ public class LinksDefinition {
    * @return first
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8585/api/quakedb/v1/events-group/?page=2", value = "URL first page.")
 
   public String getFirst() {
     return first;
@@ -103,7 +101,6 @@ public class LinksDefinition {
    * @return last
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8585/api/quakedb/v1/events-group/?page=4", value = "URL last page.")
 
   public String getLast() {
     return last;
@@ -126,7 +123,6 @@ public class LinksDefinition {
    * @return prev
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8585/api/quakedb/v1/events-group/?page=1", value = "URL previous page.")
 
   public String getPrev() {
     return prev;
@@ -149,7 +145,6 @@ public class LinksDefinition {
    * @return next
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8585/api/quakedb/v1/events-group/?page=3", value = "URL next page.")
 
   public String getNext() {
     return next;
@@ -170,6 +165,10 @@ public class LinksDefinition {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the LinksDefinition instance itself
    */
   public LinksDefinition putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -181,6 +180,8 @@ public class LinksDefinition {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -188,6 +189,9 @@ public class LinksDefinition {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -277,9 +281,7 @@ public class LinksDefinition {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (LinksDefinition.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!LinksDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in LinksDefinition is not found in the empty JSON string", LinksDefinition.openapiRequiredFields.toString()));
         }
       }
@@ -313,7 +315,7 @@ public class LinksDefinition {
            public void write(JsonWriter out, LinksDefinition value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -349,8 +351,10 @@ public class LinksDefinition {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

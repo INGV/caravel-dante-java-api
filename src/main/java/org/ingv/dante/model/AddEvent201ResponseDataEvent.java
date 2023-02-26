@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +41,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -52,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEvent201ResponseDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:40:18.214119Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:07:16.085036Z[Etc/UTC]")
 public class AddEvent201ResponseDataEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -68,7 +67,7 @@ public class AddEvent201ResponseDataEvent {
 
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<AddEvent201ResponseDataEventOriginsInner> origins = null;
+  private List<AddEvent201ResponseDataEventOriginsInner> origins = new ArrayList<>();
 
   public AddEvent201ResponseDataEvent() {
   }
@@ -84,7 +83,6 @@ public class AddEvent201ResponseDataEvent {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getId() {
     return id;
@@ -107,7 +105,6 @@ public class AddEvent201ResponseDataEvent {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
 
   public Long getIdLocalspace() {
     return idLocalspace;
@@ -130,7 +127,6 @@ public class AddEvent201ResponseDataEvent {
    * @return localspace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public AddEvent201ResponseDataEventLocalspace getLocalspace() {
     return localspace;
@@ -161,7 +157,6 @@ public class AddEvent201ResponseDataEvent {
    * @return origins
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<AddEvent201ResponseDataEventOriginsInner> getOrigins() {
     return origins;
@@ -182,6 +177,10 @@ public class AddEvent201ResponseDataEvent {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the AddEvent201ResponseDataEvent instance itself
    */
   public AddEvent201ResponseDataEvent putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -193,6 +192,8 @@ public class AddEvent201ResponseDataEvent {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -200,6 +201,9 @@ public class AddEvent201ResponseDataEvent {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -289,9 +293,7 @@ public class AddEvent201ResponseDataEvent {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (AddEvent201ResponseDataEvent.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!AddEvent201ResponseDataEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddEvent201ResponseDataEvent is not found in the empty JSON string", AddEvent201ResponseDataEvent.openapiRequiredFields.toString()));
         }
       }
@@ -299,17 +301,19 @@ public class AddEvent201ResponseDataEvent {
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
         AddEvent201ResponseDataEventLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
-      JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
-      if (jsonArrayorigins != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("origins").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
-        }
+      if (jsonObj.get("origins") != null && !jsonObj.get("origins").isJsonNull()) {
+        JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
+        if (jsonArrayorigins != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("origins").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
+          }
 
-        // validate the optional field `origins` (array)
-        for (int i = 0; i < jsonArrayorigins.size(); i++) {
-          AddEvent201ResponseDataEventOriginsInner.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
-        };
+          // validate the optional field `origins` (array)
+          for (int i = 0; i < jsonArrayorigins.size(); i++) {
+            AddEvent201ResponseDataEventOriginsInner.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 
@@ -329,7 +333,7 @@ public class AddEvent201ResponseDataEvent {
            public void write(JsonWriter out, AddEvent201ResponseDataEvent value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -365,8 +369,10 @@ public class AddEvent201ResponseDataEvent {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

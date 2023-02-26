@@ -122,7 +122,7 @@ public class UpdateApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/catalog-metadata/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -131,7 +131,8 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -152,20 +153,17 @@ public class UpdateApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call updateCatalogMetadataValidateBeforeCall(Long id, ObjectCatalogMetadata objectCatalogMetadata, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateCatalogMetadata(Async)");
         }
-        
+
         // verify the required parameter 'objectCatalogMetadata' is set
         if (objectCatalogMetadata == null) {
             throw new ApiException("Missing the required parameter 'objectCatalogMetadata' when calling updateCatalogMetadata(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateCatalogMetadataCall(id, objectCatalogMetadata, _callback);
-        return localVarCall;
+        return updateCatalogMetadataCall(id, objectCatalogMetadata, _callback);
 
     }
 
@@ -290,7 +288,7 @@ public class UpdateApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/v1/event/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -299,7 +297,8 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -320,20 +319,17 @@ public class UpdateApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call updateEventValidateBeforeCall(Long id, UpdateEventRequest updateEventRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateEvent(Async)");
         }
-        
+
         // verify the required parameter 'updateEventRequest' is set
         if (updateEventRequest == null) {
             throw new ApiException("Missing the required parameter 'updateEventRequest' when calling updateEvent(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateEventCall(id, updateEventRequest, _callback);
-        return localVarCall;
+        return updateEventCall(id, updateEventRequest, _callback);
 
     }
 
@@ -465,7 +461,8 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -486,15 +483,12 @@ public class UpdateApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call updateEventsGroupValidateBeforeCall(UpdateEventsGroupRequest updateEventsGroupRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'updateEventsGroupRequest' is set
         if (updateEventsGroupRequest == null) {
             throw new ApiException("Missing the required parameter 'updateEventsGroupRequest' when calling updateEventsGroup(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateEventsGroupCall(updateEventsGroupRequest, _callback);
-        return localVarCall;
+        return updateEventsGroupCall(updateEventsGroupRequest, _callback);
 
     }
 
@@ -616,7 +610,7 @@ public class UpdateApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/localspace/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -625,7 +619,8 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -646,20 +641,17 @@ public class UpdateApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call updateLocalspaceValidateBeforeCall(Long id, ObjectTableLocalspace objectTableLocalspace, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateLocalspace(Async)");
         }
-        
+
         // verify the required parameter 'objectTableLocalspace' is set
         if (objectTableLocalspace == null) {
             throw new ApiException("Missing the required parameter 'objectTableLocalspace' when calling updateLocalspace(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateLocalspaceCall(id, objectTableLocalspace, _callback);
-        return localVarCall;
+        return updateLocalspaceCall(id, objectTableLocalspace, _callback);
 
     }
 
@@ -784,7 +776,7 @@ public class UpdateApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/origin-flag/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -793,7 +785,8 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -814,20 +807,17 @@ public class UpdateApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call updateOriginFlagValidateBeforeCall(Long id, ObjectOriginFlag objectOriginFlag, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateOriginFlag(Async)");
         }
-        
+
         // verify the required parameter 'objectOriginFlag' is set
         if (objectOriginFlag == null) {
             throw new ApiException("Missing the required parameter 'objectOriginFlag' when calling updateOriginFlag(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateOriginFlagCall(id, objectOriginFlag, _callback);
-        return localVarCall;
+        return updateOriginFlagCall(id, objectOriginFlag, _callback);
 
     }
 
@@ -952,7 +942,7 @@ public class UpdateApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/provenance/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -961,7 +951,8 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -982,20 +973,17 @@ public class UpdateApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call updateProvenanceValidateBeforeCall(Long id, ObjectTableProvenance objectTableProvenance, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateProvenance(Async)");
         }
-        
+
         // verify the required parameter 'objectTableProvenance' is set
         if (objectTableProvenance == null) {
             throw new ApiException("Missing the required parameter 'objectTableProvenance' when calling updateProvenance(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateProvenanceCall(id, objectTableProvenance, _callback);
-        return localVarCall;
+        return updateProvenanceCall(id, objectTableProvenance, _callback);
 
     }
 
@@ -1120,7 +1108,7 @@ public class UpdateApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/type-event/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1129,7 +1117,8 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1150,20 +1139,17 @@ public class UpdateApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call updateTypeEventValidateBeforeCall(Long id, ObjectTableTypeEvent objectTableTypeEvent, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateTypeEvent(Async)");
         }
-        
+
         // verify the required parameter 'objectTableTypeEvent' is set
         if (objectTableTypeEvent == null) {
             throw new ApiException("Missing the required parameter 'objectTableTypeEvent' when calling updateTypeEvent(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateTypeEventCall(id, objectTableTypeEvent, _callback);
-        return localVarCall;
+        return updateTypeEventCall(id, objectTableTypeEvent, _callback);
 
     }
 
@@ -1288,7 +1274,7 @@ public class UpdateApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/type-magnitude/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1297,7 +1283,8 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1318,20 +1305,17 @@ public class UpdateApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call updateTypeMagnitudeValidateBeforeCall(Long id, ObjectTableTypeMagnitude objectTableTypeMagnitude, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateTypeMagnitude(Async)");
         }
-        
+
         // verify the required parameter 'objectTableTypeMagnitude' is set
         if (objectTableTypeMagnitude == null) {
             throw new ApiException("Missing the required parameter 'objectTableTypeMagnitude' when calling updateTypeMagnitude(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateTypeMagnitudeCall(id, objectTableTypeMagnitude, _callback);
-        return localVarCall;
+        return updateTypeMagnitudeCall(id, objectTableTypeMagnitude, _callback);
 
     }
 
@@ -1456,7 +1440,7 @@ public class UpdateApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/type-origin/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1465,7 +1449,8 @@ public class UpdateApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1486,20 +1471,17 @@ public class UpdateApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call updateTypeOriginValidateBeforeCall(Long id, ObjectTableTypeOrigin objectTableTypeOrigin, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling updateTypeOrigin(Async)");
         }
-        
+
         // verify the required parameter 'objectTableTypeOrigin' is set
         if (objectTableTypeOrigin == null) {
             throw new ApiException("Missing the required parameter 'objectTableTypeOrigin' when calling updateTypeOrigin(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = updateTypeOriginCall(id, objectTableTypeOrigin, _callback);
-        return localVarCall;
+        return updateTypeOriginCall(id, objectTableTypeOrigin, _callback);
 
     }
 

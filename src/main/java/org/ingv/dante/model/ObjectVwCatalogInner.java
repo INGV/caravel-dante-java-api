@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup;
@@ -44,6 +42,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -53,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectVwCatalogInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:40:18.214119Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:07:16.085036Z[Etc/UTC]")
 public class ObjectVwCatalogInner {
   public static final String SERIALIZED_NAME_CATALOG = "catalog";
   @SerializedName(SERIALIZED_NAME_CATALOG)
@@ -155,7 +154,6 @@ public class ObjectVwCatalogInner {
    * @return catalog
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectVwCatalogInnerAllOfCatalog getCatalog() {
     return catalog;
@@ -178,7 +176,6 @@ public class ObjectVwCatalogInner {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getId() {
     return id;
@@ -201,7 +198,6 @@ public class ObjectVwCatalogInner {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
 
   public Long getIdLocalspace() {
     return idLocalspace;
@@ -224,7 +220,6 @@ public class ObjectVwCatalogInner {
    * @return localspace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "hew1_mole", value = "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)")
 
   public String getLocalspace() {
     return localspace;
@@ -241,7 +236,6 @@ public class ObjectVwCatalogInner {
    * @return eventGroupId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link event group | bigint(20)")
 
   public Long getEventGroupId() {
     return eventGroupId;
@@ -255,7 +249,6 @@ public class ObjectVwCatalogInner {
    * @return preferredOriginId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link: preferred origin. It can be NULL. | bigint(20)")
 
   public Long getPreferredOriginId() {
     return preferredOriginId;
@@ -269,7 +262,6 @@ public class ObjectVwCatalogInner {
    * @return preferredMagnitudeId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link: preferred magnitude. It can be NULL. | bigint(20)")
 
   public Long getPreferredMagnitudeId() {
     return preferredMagnitudeId;
@@ -283,7 +275,6 @@ public class ObjectVwCatalogInner {
    * @return preferredFocalmechanismId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link: preferred focalmechanism. It can be NULL. | bigint(20)")
 
   public Long getPreferredFocalmechanismId() {
     return preferredFocalmechanismId;
@@ -297,7 +288,6 @@ public class ObjectVwCatalogInner {
    * @return flags
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "DPC,twitter,shakemap4,FM", value = "Flags for origin | varchar(255)")
 
   public String getFlags() {
     return flags;
@@ -311,7 +301,6 @@ public class ObjectVwCatalogInner {
    * @return typeGroup
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Group type. Used by clustering algorithm | tinyint(4)")
 
   public Long getTypeGroup() {
     return typeGroup;
@@ -331,7 +320,6 @@ public class ObjectVwCatalogInner {
    * @return typeEvent
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "earthquake", value = "Name | varchar(255)")
 
   public String getTypeEvent() {
     return typeEvent;
@@ -348,7 +336,6 @@ public class ObjectVwCatalogInner {
    * @return modified
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
 
   public OffsetDateTime getModified() {
     return modified;
@@ -362,7 +349,6 @@ public class ObjectVwCatalogInner {
    * @return inserted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
 
   public OffsetDateTime getInserted() {
     return inserted;
@@ -382,7 +368,6 @@ public class ObjectVwCatalogInner {
    * @return origin
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup getOrigin() {
     return origin;
@@ -405,7 +390,6 @@ public class ObjectVwCatalogInner {
    * @return magnitude
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup getMagnitude() {
     return magnitude;
@@ -428,7 +412,6 @@ public class ObjectVwCatalogInner {
    * @return provenance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup getProvenance() {
     return provenance;
@@ -449,6 +432,10 @@ public class ObjectVwCatalogInner {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectVwCatalogInner instance itself
    */
   public ObjectVwCatalogInner putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -460,6 +447,8 @@ public class ObjectVwCatalogInner {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -467,6 +456,9 @@ public class ObjectVwCatalogInner {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -592,9 +584,7 @@ public class ObjectVwCatalogInner {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectVwCatalogInner.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!ObjectVwCatalogInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectVwCatalogInner is not found in the empty JSON string", ObjectVwCatalogInner.openapiRequiredFields.toString()));
         }
       }
@@ -641,7 +631,7 @@ public class ObjectVwCatalogInner {
            public void write(JsonWriter out, ObjectVwCatalogInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -677,8 +667,10 @@ public class ObjectVwCatalogInner {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

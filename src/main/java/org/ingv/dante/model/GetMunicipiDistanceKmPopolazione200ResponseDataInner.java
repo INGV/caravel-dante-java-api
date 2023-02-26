@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -38,6 +36,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -47,7 +46,7 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipiDistanceKmPopolazione200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:40:18.214119Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:07:16.085036Z[Etc/UTC]")
 public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -99,7 +98,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Ladispoli", value = "Italian \"municipio\" name.")
 
   public String getName() {
     return name;
@@ -122,7 +120,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
    * @return siglaPro
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "RM", value = "Italian province abbreviation.")
 
   public String getSiglaPro() {
     return siglaPro;
@@ -145,7 +142,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
    * @return nomePro
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Roma", value = "Italian province name.")
 
   public String getNomePro() {
     return nomePro;
@@ -168,7 +164,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
    * @return popolazione
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "41078", value = "Popolazione.")
 
   public Long getPopolazione() {
     return popolazione;
@@ -193,7 +188,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
    * @return lat
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "45.492599", value = "Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
 
   public Double getLat() {
     return lat;
@@ -218,7 +212,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
    * @return lon
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "9.19289", value = "Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
 
   public Double getLon() {
     return lon;
@@ -241,7 +234,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
    * @return distKm
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "7.6", value = "Distance in km.")
 
   public Float getDistKm() {
     return distKm;
@@ -264,7 +256,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
    * @return azm
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Azimutal gap | float4")
 
   public Float getAzm() {
     return azm;
@@ -287,7 +278,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
    * @return dir
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "NW", value = "Direction.")
 
   public String getDir() {
     return dir;
@@ -308,6 +298,10 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the GetMunicipiDistanceKmPopolazione200ResponseDataInner instance itself
    */
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -319,6 +313,8 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -326,6 +322,9 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -419,9 +418,7 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (GetMunicipiDistanceKmPopolazione200ResponseDataInner.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!GetMunicipiDistanceKmPopolazione200ResponseDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in GetMunicipiDistanceKmPopolazione200ResponseDataInner is not found in the empty JSON string", GetMunicipiDistanceKmPopolazione200ResponseDataInner.openapiRequiredFields.toString()));
         }
       }
@@ -455,7 +452,7 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
            public void write(JsonWriter out, GetMunicipiDistanceKmPopolazione200ResponseDataInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -491,8 +488,10 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

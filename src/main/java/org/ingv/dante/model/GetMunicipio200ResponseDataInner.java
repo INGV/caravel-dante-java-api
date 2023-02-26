@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -38,6 +36,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -47,7 +46,7 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipio200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:40:18.214119Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:07:16.085036Z[Etc/UTC]")
 public class GetMunicipio200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -91,7 +90,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Ladispoli", value = "Italian \"municipio\" name.")
 
   public String getName() {
     return name;
@@ -114,7 +112,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return provNameAbbr
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "RM", value = "Italian province abbreviation.")
 
   public String getProvNameAbbr() {
     return provNameAbbr;
@@ -137,7 +134,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return provName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Roma", value = "Italian province name.")
 
   public String getProvName() {
     return provName;
@@ -160,7 +156,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return regionName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Lazio", value = "Italian region name.")
 
   public String getRegionName() {
     return regionName;
@@ -183,7 +178,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return population
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "41078", value = "Popolazione.")
 
   public Long getPopulation() {
     return population;
@@ -208,7 +202,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return lat
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "45.492599", value = "Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
 
   public Double getLat() {
     return lat;
@@ -233,7 +226,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return lon
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "9.19289", value = "Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
 
   public Double getLon() {
     return lon;
@@ -254,6 +246,10 @@ public class GetMunicipio200ResponseDataInner {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the GetMunicipio200ResponseDataInner instance itself
    */
   public GetMunicipio200ResponseDataInner putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -265,6 +261,8 @@ public class GetMunicipio200ResponseDataInner {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -272,6 +270,9 @@ public class GetMunicipio200ResponseDataInner {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -359,9 +360,7 @@ public class GetMunicipio200ResponseDataInner {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (GetMunicipio200ResponseDataInner.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!GetMunicipio200ResponseDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in GetMunicipio200ResponseDataInner is not found in the empty JSON string", GetMunicipio200ResponseDataInner.openapiRequiredFields.toString()));
         }
       }
@@ -395,7 +394,7 @@ public class GetMunicipio200ResponseDataInner {
            public void write(JsonWriter out, GetMunicipio200ResponseDataInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -431,8 +430,10 @@ public class GetMunicipio200ResponseDataInner {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

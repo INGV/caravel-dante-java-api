@@ -111,7 +111,7 @@ public class DeleteApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/catalog-metadata/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -128,7 +128,6 @@ public class DeleteApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -141,15 +140,12 @@ public class DeleteApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call deleteCatalogMetadataValidateBeforeCall(Long id, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling deleteCatalogMetadata(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = deleteCatalogMetadataCall(id, _callback);
-        return localVarCall;
+        return deleteCatalogMetadataCall(id, _callback);
 
     }
 
@@ -266,7 +262,7 @@ public class DeleteApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/localspace/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -283,7 +279,6 @@ public class DeleteApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -296,15 +291,12 @@ public class DeleteApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call deleteLocalspaceValidateBeforeCall(Long id, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling deleteLocalspace(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = deleteLocalspaceCall(id, _callback);
-        return localVarCall;
+        return deleteLocalspaceCall(id, _callback);
 
     }
 
@@ -421,7 +413,7 @@ public class DeleteApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/origin-flag/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -438,7 +430,6 @@ public class DeleteApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -451,15 +442,12 @@ public class DeleteApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call deleteOriginFlagValidateBeforeCall(Long id, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling deleteOriginFlag(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = deleteOriginFlagCall(id, _callback);
-        return localVarCall;
+        return deleteOriginFlagCall(id, _callback);
 
     }
 
@@ -576,7 +564,7 @@ public class DeleteApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/provenance/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -593,7 +581,6 @@ public class DeleteApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -606,15 +593,12 @@ public class DeleteApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call deleteProvenanceValidateBeforeCall(Long id, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling deleteProvenance(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = deleteProvenanceCall(id, _callback);
-        return localVarCall;
+        return deleteProvenanceCall(id, _callback);
 
     }
 
@@ -731,7 +715,7 @@ public class DeleteApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/type-event/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -748,7 +732,6 @@ public class DeleteApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -761,15 +744,12 @@ public class DeleteApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call deleteTypeEventValidateBeforeCall(Long id, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling deleteTypeEvent(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = deleteTypeEventCall(id, _callback);
-        return localVarCall;
+        return deleteTypeEventCall(id, _callback);
 
     }
 
@@ -886,7 +866,7 @@ public class DeleteApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/type-magnitude/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -903,7 +883,6 @@ public class DeleteApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -916,15 +895,12 @@ public class DeleteApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call deleteTypeMagnitudeValidateBeforeCall(Long id, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling deleteTypeMagnitude(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = deleteTypeMagnitudeCall(id, _callback);
-        return localVarCall;
+        return deleteTypeMagnitudeCall(id, _callback);
 
     }
 
@@ -1041,7 +1017,7 @@ public class DeleteApi {
 
         // create path and map variables
         String localVarPath = "/quakedb/table/v1/type-origin/{id}"
-            .replaceAll("\\{" + "id" + "\\}", localVarApiClient.escapeString(id.toString()));
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1058,7 +1034,6 @@ public class DeleteApi {
         }
 
         final String[] localVarContentTypes = {
-            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1071,15 +1046,12 @@ public class DeleteApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call deleteTypeOriginValidateBeforeCall(Long id, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'id' is set
         if (id == null) {
             throw new ApiException("Missing the required parameter 'id' when calling deleteTypeOrigin(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = deleteTypeOriginCall(id, _callback);
-        return localVarCall;
+        return deleteTypeOriginCall(id, _callback);
 
     }
 

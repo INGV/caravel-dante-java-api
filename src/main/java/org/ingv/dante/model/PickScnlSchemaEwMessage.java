@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -43,6 +41,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -52,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:40:18.214119Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:07:16.085036Z[Etc/UTC]")
 public class PickScnlSchemaEwMessage {
   public static final String SERIALIZED_NAME_PICK_ID = "pickId";
   @SerializedName(SERIALIZED_NAME_PICK_ID)
@@ -88,7 +87,7 @@ public class PickScnlSchemaEwMessage {
 
   public static final String SERIALIZED_NAME_P_AMPLITUDE = "pAmplitude";
   @SerializedName(SERIALIZED_NAME_P_AMPLITUDE)
-  private List<Double> pAmplitude = null;
+  private List<Double> pAmplitude = new ArrayList<>();
 
   public PickScnlSchemaEwMessage() {
   }
@@ -104,7 +103,6 @@ public class PickScnlSchemaEwMessage {
    * @return pickId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", required = true, value = "Localspace Id | bigint(19)")
 
   public Long getPickId() {
     return pickId;
@@ -127,7 +125,6 @@ public class PickScnlSchemaEwMessage {
    * @return network
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "IV", value = "Channel net code | char(2)")
 
   public String getNetwork() {
     return network;
@@ -150,7 +147,6 @@ public class PickScnlSchemaEwMessage {
    * @return station
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ACER", value = "Channel station code | varchar(5)")
 
   public String getStation() {
     return station;
@@ -173,7 +169,6 @@ public class PickScnlSchemaEwMessage {
    * @return component
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "HHZ", value = "Channel code | char(3)")
 
   public String getComponent() {
     return component;
@@ -196,7 +191,6 @@ public class PickScnlSchemaEwMessage {
    * @return location
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "00", value = "Channel location | char(2)")
 
   public String getLocation() {
     return location;
@@ -219,7 +213,6 @@ public class PickScnlSchemaEwMessage {
    * @return firstMotion
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public PickFirstmotion getFirstMotion() {
     return firstMotion;
@@ -242,7 +235,6 @@ public class PickScnlSchemaEwMessage {
    * @return pickWeight
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.52", value = "Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)")
 
   public Float getPickWeight() {
     return pickWeight;
@@ -265,7 +257,6 @@ public class PickScnlSchemaEwMessage {
    * @return timeOfPick
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:46:30.930Z", value = "Arrival time with microseconds | datetime(3)")
 
   public OffsetDateTime getTimeOfPick() {
     return timeOfPick;
@@ -296,7 +287,6 @@ public class PickScnlSchemaEwMessage {
    * @return pAmplitude
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[109,101,122]", value = "")
 
   public List<Double> getpAmplitude() {
     return pAmplitude;
@@ -317,6 +307,10 @@ public class PickScnlSchemaEwMessage {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the PickScnlSchemaEwMessage instance itself
    */
   public PickScnlSchemaEwMessage putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -328,6 +322,8 @@ public class PickScnlSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -335,6 +331,9 @@ public class PickScnlSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -440,9 +439,7 @@ public class PickScnlSchemaEwMessage {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (PickScnlSchemaEwMessage.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!PickScnlSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in PickScnlSchemaEwMessage is not found in the empty JSON string", PickScnlSchemaEwMessage.openapiRequiredFields.toString()));
         }
       }
@@ -465,8 +462,8 @@ public class PickScnlSchemaEwMessage {
       if ((jsonObj.get("location") != null && !jsonObj.get("location").isJsonNull()) && !jsonObj.get("location").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `location` to be a primitive type in the JSON string but got `%s`", jsonObj.get("location").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("pAmplitude") != null && !jsonObj.get("pAmplitude").isJsonNull()) && !jsonObj.get("pAmplitude").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("pAmplitude") != null && !jsonObj.get("pAmplitude").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `pAmplitude` to be an array in the JSON string but got `%s`", jsonObj.get("pAmplitude").toString()));
       }
   }
@@ -487,7 +484,7 @@ public class PickScnlSchemaEwMessage {
            public void write(JsonWriter out, PickScnlSchemaEwMessage value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -523,8 +520,10 @@ public class PickScnlSchemaEwMessage {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
