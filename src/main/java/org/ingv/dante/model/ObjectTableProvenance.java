@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -40,6 +38,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -49,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableProvenance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:41:16.384966Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:09:32.349564Z[Etc/UTC]")
 public class ObjectTableProvenance {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -127,7 +126,6 @@ public class ObjectTableProvenance {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getId() {
     return id;
@@ -147,7 +145,6 @@ public class ObjectTableProvenance {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "INGV", value = "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)")
 
   public String getName() {
     return name;
@@ -170,7 +167,6 @@ public class ObjectTableProvenance {
    * @return softwarename
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "software", value = "Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)")
 
   public String getSoftwarename() {
     return softwarename;
@@ -193,7 +189,6 @@ public class ObjectTableProvenance {
    * @return version
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "hew1_mole", value = "Version name | varchar(255)")
 
   public String getVersion() {
     return version;
@@ -216,7 +211,6 @@ public class ObjectTableProvenance {
    * @return model
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "prem", value = "Name/URI/DOI of the model | varchar(255)")
 
   public String getModel() {
     return model;
@@ -239,7 +233,6 @@ public class ObjectTableProvenance {
    * @return method
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ToDo", value = "Name/URI/DOI of the method | varchar(255)")
 
   public String getMethod() {
     return method;
@@ -262,7 +255,6 @@ public class ObjectTableProvenance {
    * @return parameters
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ToDo", value = "Name/URI/DOI of the parameters | varchar(255)")
 
   public String getParameters() {
     return parameters;
@@ -285,7 +277,6 @@ public class ObjectTableProvenance {
    * @return program
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "IPO-EW__tdmt_invc.c", value = "Name/URI/DOI of the program | varchar(255)")
 
   public String getProgram() {
     return program;
@@ -308,7 +299,6 @@ public class ObjectTableProvenance {
    * @return username
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ew", value = "User name | char(255)")
 
   public String getUsername() {
     return username;
@@ -331,7 +321,6 @@ public class ObjectTableProvenance {
    * @return hostname
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "hew10.ingv.it", value = "Hostname | char(255)")
 
   public String getHostname() {
     return hostname;
@@ -354,7 +343,6 @@ public class ObjectTableProvenance {
    * @return description
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Auto added", value = "Additional information | char(255)")
 
   public String getDescription() {
     return description;
@@ -377,7 +365,6 @@ public class ObjectTableProvenance {
    * @return priority
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "Former provenance id | int(11)")
 
   public Long getPriority() {
     return priority;
@@ -394,7 +381,6 @@ public class ObjectTableProvenance {
    * @return modified
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
 
   public OffsetDateTime getModified() {
     return modified;
@@ -408,7 +394,6 @@ public class ObjectTableProvenance {
    * @return inserted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
 
   public OffsetDateTime getInserted() {
     return inserted;
@@ -426,6 +411,10 @@ public class ObjectTableProvenance {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectTableProvenance instance itself
    */
   public ObjectTableProvenance putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -437,6 +426,8 @@ public class ObjectTableProvenance {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -444,6 +435,9 @@ public class ObjectTableProvenance {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -563,9 +557,7 @@ public class ObjectTableProvenance {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectTableProvenance.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!ObjectTableProvenance.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTableProvenance is not found in the empty JSON string", ObjectTableProvenance.openapiRequiredFields.toString()));
         }
       }
@@ -617,7 +609,7 @@ public class ObjectTableProvenance {
            public void write(JsonWriter out, ObjectTableProvenance value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -653,8 +645,10 @@ public class ObjectTableProvenance {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

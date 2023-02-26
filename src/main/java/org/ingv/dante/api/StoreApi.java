@@ -145,7 +145,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -166,15 +167,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addCatalogValidateBeforeCall(AddCatalogRequest addCatalogRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addCatalogRequest' is set
         if (addCatalogRequest == null) {
             throw new ApiException("Missing the required parameter 'addCatalogRequest' when calling addCatalog(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addCatalogCall(addCatalogRequest, _callback);
-        return localVarCall;
+        return addCatalogCall(addCatalogRequest, _callback);
 
     }
 
@@ -295,7 +293,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -316,15 +315,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addCatalogMetadataValidateBeforeCall(AddCatalogMetadataRequest addCatalogMetadataRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addCatalogMetadataRequest' is set
         if (addCatalogMetadataRequest == null) {
             throw new ApiException("Missing the required parameter 'addCatalogMetadataRequest' when calling addCatalogMetadata(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addCatalogMetadataCall(addCatalogMetadataRequest, _callback);
-        return localVarCall;
+        return addCatalogMetadataCall(addCatalogMetadataRequest, _callback);
 
     }
 
@@ -445,7 +441,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -466,15 +463,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addEventValidateBeforeCall(GetEvent200Response getEvent200Response, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'getEvent200Response' is set
         if (getEvent200Response == null) {
             throw new ApiException("Missing the required parameter 'getEvent200Response' when calling addEvent(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addEventCall(getEvent200Response, _callback);
-        return localVarCall;
+        return addEventCall(getEvent200Response, _callback);
 
     }
 
@@ -595,7 +589,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -616,15 +611,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addFocalmechanismValidateBeforeCall(AddFocalmechanismRequest addFocalmechanismRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addFocalmechanismRequest' is set
         if (addFocalmechanismRequest == null) {
             throw new ApiException("Missing the required parameter 'addFocalmechanismRequest' when calling addFocalmechanism(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addFocalmechanismCall(addFocalmechanismRequest, _callback);
-        return localVarCall;
+        return addFocalmechanismCall(addFocalmechanismRequest, _callback);
 
     }
 
@@ -745,7 +737,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -766,15 +759,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addLocalspaceValidateBeforeCall(AddLocalspaceRequest addLocalspaceRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addLocalspaceRequest' is set
         if (addLocalspaceRequest == null) {
             throw new ApiException("Missing the required parameter 'addLocalspaceRequest' when calling addLocalspace(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addLocalspaceCall(addLocalspaceRequest, _callback);
-        return localVarCall;
+        return addLocalspaceCall(addLocalspaceRequest, _callback);
 
     }
 
@@ -895,7 +885,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -916,15 +907,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addMagnitudeValidateBeforeCall(AddMagnitudeRequest addMagnitudeRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addMagnitudeRequest' is set
         if (addMagnitudeRequest == null) {
             throw new ApiException("Missing the required parameter 'addMagnitudeRequest' when calling addMagnitude(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addMagnitudeCall(addMagnitudeRequest, _callback);
-        return localVarCall;
+        return addMagnitudeCall(addMagnitudeRequest, _callback);
 
     }
 
@@ -1045,7 +1033,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1066,15 +1055,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addMomenttensorValidateBeforeCall(AddMomenttensorRequest addMomenttensorRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addMomenttensorRequest' is set
         if (addMomenttensorRequest == null) {
             throw new ApiException("Missing the required parameter 'addMomenttensorRequest' when calling addMomenttensor(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addMomenttensorCall(addMomenttensorRequest, _callback);
-        return localVarCall;
+        return addMomenttensorCall(addMomenttensorRequest, _callback);
 
     }
 
@@ -1195,7 +1181,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1216,15 +1203,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addOriginValidateBeforeCall(AddOriginRequest addOriginRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addOriginRequest' is set
         if (addOriginRequest == null) {
             throw new ApiException("Missing the required parameter 'addOriginRequest' when calling addOrigin(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addOriginCall(addOriginRequest, _callback);
-        return localVarCall;
+        return addOriginCall(addOriginRequest, _callback);
 
     }
 
@@ -1345,7 +1329,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1366,15 +1351,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addOriginFlagValidateBeforeCall(AddOriginFlagRequest addOriginFlagRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addOriginFlagRequest' is set
         if (addOriginFlagRequest == null) {
             throw new ApiException("Missing the required parameter 'addOriginFlagRequest' when calling addOriginFlag(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addOriginFlagCall(addOriginFlagRequest, _callback);
-        return localVarCall;
+        return addOriginFlagCall(addOriginFlagRequest, _callback);
 
     }
 
@@ -1495,7 +1477,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1516,15 +1499,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addProvenanceValidateBeforeCall(AddProvenanceRequest addProvenanceRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addProvenanceRequest' is set
         if (addProvenanceRequest == null) {
             throw new ApiException("Missing the required parameter 'addProvenanceRequest' when calling addProvenance(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addProvenanceCall(addProvenanceRequest, _callback);
-        return localVarCall;
+        return addProvenanceCall(addProvenanceRequest, _callback);
 
     }
 
@@ -1645,7 +1625,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1666,15 +1647,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addStrongmotionValidateBeforeCall(AddStrongmotionRequest addStrongmotionRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addStrongmotionRequest' is set
         if (addStrongmotionRequest == null) {
             throw new ApiException("Missing the required parameter 'addStrongmotionRequest' when calling addStrongmotion(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addStrongmotionCall(addStrongmotionRequest, _callback);
-        return localVarCall;
+        return addStrongmotionCall(addStrongmotionRequest, _callback);
 
     }
 
@@ -1795,7 +1773,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1816,15 +1795,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addTypeEventValidateBeforeCall(AddTypeEventRequest addTypeEventRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addTypeEventRequest' is set
         if (addTypeEventRequest == null) {
             throw new ApiException("Missing the required parameter 'addTypeEventRequest' when calling addTypeEvent(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addTypeEventCall(addTypeEventRequest, _callback);
-        return localVarCall;
+        return addTypeEventCall(addTypeEventRequest, _callback);
 
     }
 
@@ -1945,7 +1921,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1966,15 +1943,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addTypeMagnitudeValidateBeforeCall(AddTypeMagnitudeRequest addTypeMagnitudeRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addTypeMagnitudeRequest' is set
         if (addTypeMagnitudeRequest == null) {
             throw new ApiException("Missing the required parameter 'addTypeMagnitudeRequest' when calling addTypeMagnitude(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addTypeMagnitudeCall(addTypeMagnitudeRequest, _callback);
-        return localVarCall;
+        return addTypeMagnitudeCall(addTypeMagnitudeRequest, _callback);
 
     }
 
@@ -2095,7 +2069,8 @@ public class StoreApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2116,15 +2091,12 @@ public class StoreApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addTypeOriginValidateBeforeCall(AddTypeOriginRequest addTypeOriginRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addTypeOriginRequest' is set
         if (addTypeOriginRequest == null) {
             throw new ApiException("Missing the required parameter 'addTypeOriginRequest' when calling addTypeOrigin(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addTypeOriginCall(addTypeOriginRequest, _callback);
-        return localVarCall;
+        return addTypeOriginCall(addTypeOriginRequest, _callback);
 
     }
 

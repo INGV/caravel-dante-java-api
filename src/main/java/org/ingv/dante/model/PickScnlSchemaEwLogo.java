@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 import com.google.gson.Gson;
@@ -38,6 +36,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -47,7 +46,7 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlSchemaEwLogo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:41:16.384966Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:09:32.349564Z[Etc/UTC]")
 public class PickScnlSchemaEwLogo {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -87,7 +86,6 @@ public class PickScnlSchemaEwLogo {
    * @return type
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "TYPE_PICK_SCNL", required = true, value = "Type description | ???")
 
   public String getType() {
     return type;
@@ -110,7 +108,6 @@ public class PickScnlSchemaEwLogo {
    * @return module
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "MOD_PICK_EW", required = true, value = "Module description | ???")
 
   public String getModule() {
     return module;
@@ -133,7 +130,6 @@ public class PickScnlSchemaEwLogo {
    * @return installation
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "INST_INGV", required = true, value = "Installation description | ???")
 
   public String getInstallation() {
     return installation;
@@ -156,7 +152,6 @@ public class PickScnlSchemaEwLogo {
    * @return user
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ew", value = "User | ???")
 
   public String getUser() {
     return user;
@@ -179,7 +174,6 @@ public class PickScnlSchemaEwLogo {
    * @return hostname
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "hew3.int.ingv.it", value = "Hostname | ???")
 
   public String getHostname() {
     return hostname;
@@ -202,7 +196,6 @@ public class PickScnlSchemaEwLogo {
    * @return instance
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "hew3_mole", required = true, value = "Instance description | ???")
 
   public String getInstance() {
     return instance;
@@ -223,6 +216,10 @@ public class PickScnlSchemaEwLogo {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the PickScnlSchemaEwLogo instance itself
    */
   public PickScnlSchemaEwLogo putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -234,6 +231,8 @@ public class PickScnlSchemaEwLogo {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -241,6 +240,9 @@ public class PickScnlSchemaEwLogo {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -329,9 +331,7 @@ public class PickScnlSchemaEwLogo {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (PickScnlSchemaEwLogo.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!PickScnlSchemaEwLogo.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in PickScnlSchemaEwLogo is not found in the empty JSON string", PickScnlSchemaEwLogo.openapiRequiredFields.toString()));
         }
       }
@@ -342,13 +342,13 @@ public class PickScnlSchemaEwLogo {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
+      if (!jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
-      if ((jsonObj.get("module") != null && !jsonObj.get("module").isJsonNull()) && !jsonObj.get("module").isJsonPrimitive()) {
+      if (!jsonObj.get("module").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `module` to be a primitive type in the JSON string but got `%s`", jsonObj.get("module").toString()));
       }
-      if ((jsonObj.get("installation") != null && !jsonObj.get("installation").isJsonNull()) && !jsonObj.get("installation").isJsonPrimitive()) {
+      if (!jsonObj.get("installation").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `installation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installation").toString()));
       }
       if ((jsonObj.get("user") != null && !jsonObj.get("user").isJsonNull()) && !jsonObj.get("user").isJsonPrimitive()) {
@@ -357,7 +357,7 @@ public class PickScnlSchemaEwLogo {
       if ((jsonObj.get("hostname") != null && !jsonObj.get("hostname").isJsonNull()) && !jsonObj.get("hostname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `hostname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hostname").toString()));
       }
-      if ((jsonObj.get("instance") != null && !jsonObj.get("instance").isJsonNull()) && !jsonObj.get("instance").isJsonPrimitive()) {
+      if (!jsonObj.get("instance").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `instance` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instance").toString()));
       }
   }
@@ -378,7 +378,7 @@ public class PickScnlSchemaEwLogo {
            public void write(JsonWriter out, PickScnlSchemaEwLogo value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -414,8 +414,10 @@ public class PickScnlSchemaEwLogo {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

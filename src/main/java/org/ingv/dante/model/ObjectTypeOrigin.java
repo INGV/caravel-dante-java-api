@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import org.ingv.dante.model.TypeOriginName;
 
@@ -39,6 +37,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -48,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTypeOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:41:16.384966Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:09:32.349564Z[Etc/UTC]")
 public class ObjectTypeOrigin {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -84,7 +83,6 @@ public class ObjectTypeOrigin {
    * @return name
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
 
   public TypeOriginName getName() {
     return name;
@@ -107,7 +105,6 @@ public class ObjectTypeOrigin {
    * @return versionName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ew prelim", value = "Localization name (es:ew prelim,XX,WW,..) | varchar(255)")
 
   public String getVersionName() {
     return versionName;
@@ -124,7 +121,6 @@ public class ObjectTypeOrigin {
    * @return versionValue
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Define a numeric value for type origin. < 100 is automatic location | bigint(20)")
 
   public Long getVersionValue() {
     return versionValue;
@@ -142,6 +138,10 @@ public class ObjectTypeOrigin {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectTypeOrigin instance itself
    */
   public ObjectTypeOrigin putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -153,6 +153,8 @@ public class ObjectTypeOrigin {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -160,6 +162,9 @@ public class ObjectTypeOrigin {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -236,9 +241,7 @@ public class ObjectTypeOrigin {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectTypeOrigin.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!ObjectTypeOrigin.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTypeOrigin is not found in the empty JSON string", ObjectTypeOrigin.openapiRequiredFields.toString()));
         }
       }
@@ -270,7 +273,7 @@ public class ObjectTypeOrigin {
            public void write(JsonWriter out, ObjectTypeOrigin value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -306,8 +309,10 @@ public class ObjectTypeOrigin {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -42,6 +40,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -51,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:41:16.384966Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:09:32.349564Z[Etc/UTC]")
 public class Hyp2000arcSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -207,7 +206,7 @@ public class Hyp2000arcSchemaEwMessage {
 
   public static final String SERIALIZED_NAME_PHASES = "phases";
   @SerializedName(SERIALIZED_NAME_PHASES)
-  private List<Hyp2000arcPhasesInner> phases = null;
+  private List<Hyp2000arcPhasesInner> phases = new ArrayList<>();
 
   public Hyp2000arcSchemaEwMessage() {
   }
@@ -223,7 +222,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return quakeId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", required = true, value = "Localspace Id | bigint(19)")
 
   public Long getQuakeId() {
     return quakeId;
@@ -246,7 +244,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return version
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "ew prelim", required = true, value = "Localization name (es:ew prelim,XX,WW,..) | varchar(255)")
 
   public String getVersion() {
     return version;
@@ -269,7 +266,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return originId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getOriginId() {
     return originId;
@@ -292,7 +288,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return originTime
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", required = true, value = "Origin time | datetime(3)")
 
   public OffsetDateTime getOriginTime() {
     return originTime;
@@ -317,7 +312,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return latitude
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "45.492599", required = true, value = "Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
 
   public Double getLatitude() {
     return latitude;
@@ -342,7 +336,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return longitude
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "9.19289", required = true, value = "Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
 
   public Double getLongitude() {
     return longitude;
@@ -365,7 +358,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return depth
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.02", required = true, value = "Depth in Km | double")
 
   public Double getDepth() {
     return depth;
@@ -388,7 +380,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return nph
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "# arrivals (P&S) weight >0.1 | int(11)")
 
   public Long getNph() {
     return nph;
@@ -411,7 +402,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return nphS
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "# S arrivals weight >0.1 | int(11)")
 
   public Long getNphS() {
     return nphS;
@@ -434,7 +424,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return nphtot
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "# arrivals (P&S) weight >0.0 | int(11)")
 
   public Long getNphtot() {
     return nphtot;
@@ -457,7 +446,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return nPfm
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "# P first motions | int(11)")
 
   public Long getnPfm() {
     return nPfm;
@@ -480,7 +468,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return gap
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Azimutal gap | float4")
 
   public Float getGap() {
     return gap;
@@ -503,7 +490,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return dmin
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "dmin description | ???")
 
   public Double getDmin() {
     return dmin;
@@ -526,7 +512,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return rms
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Root mean square | double")
 
   public Double getRms() {
     return rms;
@@ -549,7 +534,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return e0az
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "azimuth of largest principal error | double")
 
   public Float getE0az() {
     return e0az;
@@ -572,7 +556,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return e0dp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "dip of largest principal error | double")
 
   public Double getE0dp() {
     return e0dp;
@@ -595,7 +578,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return e0
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "largest principal error | double")
 
   public Double getE0() {
     return e0;
@@ -618,7 +600,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return e1az
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "azimuth of intermediate principal error | double")
 
   public Float getE1az() {
     return e1az;
@@ -641,7 +622,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return e1dp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "dip of intermediate principal error | double")
 
   public Double getE1dp() {
     return e1dp;
@@ -664,7 +644,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return e1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "intermed principal error | double")
 
   public Double getE1() {
     return e1;
@@ -687,7 +666,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return e2
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "smallest principal error | double")
 
   public Double getE2() {
     return e2;
@@ -710,7 +688,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return erh
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Horizontal error (km) | double")
 
   public Double getErh() {
     return erh;
@@ -733,7 +710,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return erz
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Depth error (km) | double")
 
   public Double getErz() {
     return erz;
@@ -756,7 +732,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return md
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Md description | ???")
 
   public Double getMd() {
     return md;
@@ -779,7 +754,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return reg
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = " ", value = "ingvQuality description | ???")
 
   public String getReg() {
     return reg;
@@ -802,7 +776,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return labelpref
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = " ", value = "ingvQuality description | ???")
 
   public String getLabelpref() {
     return labelpref;
@@ -825,7 +798,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return mpref
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Mpref description | ???")
 
   public Double getMpref() {
     return mpref;
@@ -848,7 +820,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return wtpref
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "wtpref description | ???")
 
   public Double getWtpref() {
     return wtpref;
@@ -871,7 +842,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return mdtype
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "D", value = "ingvQuality description | ???")
 
   public String getMdtype() {
     return mdtype;
@@ -894,7 +864,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return mdmad
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "mdmad description | ???")
 
   public Double getMdmad() {
     return mdmad;
@@ -917,7 +886,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return mdwt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "mdwt description | ???")
 
   public Double getMdwt() {
     return mdwt;
@@ -940,7 +908,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return ingvQuality
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "DD", value = "ingvQuality description | ???")
 
   public String getIngvQuality() {
     return ingvQuality;
@@ -963,7 +930,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return amplitudeMagnitude
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "amplitudeMagnitude description | col37 F3.2")
 
   public Double getAmplitudeMagnitude() {
     return amplitudeMagnitude;
@@ -986,7 +952,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return numberOfAmpMagWeightCode
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "numberOfAmpMagWeightCode description | col97 F4.1")
 
   public Double getNumberOfAmpMagWeightCode() {
     return numberOfAmpMagWeightCode;
@@ -1009,7 +974,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return medianAbsDiffAmpMag
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "medianAbsDiffAmpMag description | col105 F3.2")
 
   public Double getMedianAbsDiffAmpMag() {
     return medianAbsDiffAmpMag;
@@ -1032,7 +996,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return preferredMagLabel
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "preferredMagLabel description | ???")
 
   public String getPreferredMagLabel() {
     return preferredMagLabel;
@@ -1055,7 +1018,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return preferredMag
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "preferredMag description | ???")
 
   public Double getPreferredMag() {
     return preferredMag;
@@ -1078,7 +1040,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return numberOfPreferredMags
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "numberOfPreferredMags description | ???")
 
   public Double getNumberOfPreferredMags() {
     return numberOfPreferredMags;
@@ -1109,7 +1070,6 @@ public class Hyp2000arcSchemaEwMessage {
    * @return phases
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<Hyp2000arcPhasesInner> getPhases() {
     return phases;
@@ -1130,6 +1090,10 @@ public class Hyp2000arcSchemaEwMessage {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the Hyp2000arcSchemaEwMessage instance itself
    */
   public Hyp2000arcSchemaEwMessage putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -1141,6 +1105,8 @@ public class Hyp2000arcSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -1148,6 +1114,9 @@ public class Hyp2000arcSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -1337,9 +1306,7 @@ public class Hyp2000arcSchemaEwMessage {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (Hyp2000arcSchemaEwMessage.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!Hyp2000arcSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in Hyp2000arcSchemaEwMessage is not found in the empty JSON string", Hyp2000arcSchemaEwMessage.openapiRequiredFields.toString()));
         }
       }
@@ -1350,7 +1317,7 @@ public class Hyp2000arcSchemaEwMessage {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
+      if (!jsonObj.get("version").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
       if ((jsonObj.get("reg") != null && !jsonObj.get("reg").isJsonNull()) && !jsonObj.get("reg").isJsonPrimitive()) {
@@ -1368,17 +1335,19 @@ public class Hyp2000arcSchemaEwMessage {
       if ((jsonObj.get("preferredMagLabel") != null && !jsonObj.get("preferredMagLabel").isJsonNull()) && !jsonObj.get("preferredMagLabel").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `preferredMagLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("preferredMagLabel").toString()));
       }
-      JsonArray jsonArrayphases = jsonObj.getAsJsonArray("phases");
-      if (jsonArrayphases != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("phases").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `phases` to be an array in the JSON string but got `%s`", jsonObj.get("phases").toString()));
-        }
+      if (jsonObj.get("phases") != null && !jsonObj.get("phases").isJsonNull()) {
+        JsonArray jsonArrayphases = jsonObj.getAsJsonArray("phases");
+        if (jsonArrayphases != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("phases").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `phases` to be an array in the JSON string but got `%s`", jsonObj.get("phases").toString()));
+          }
 
-        // validate the optional field `phases` (array)
-        for (int i = 0; i < jsonArrayphases.size(); i++) {
-          Hyp2000arcPhasesInner.validateJsonObject(jsonArrayphases.get(i).getAsJsonObject());
-        };
+          // validate the optional field `phases` (array)
+          for (int i = 0; i < jsonArrayphases.size(); i++) {
+            Hyp2000arcPhasesInner.validateJsonObject(jsonArrayphases.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 
@@ -1398,7 +1367,7 @@ public class Hyp2000arcSchemaEwMessage {
            public void write(JsonWriter out, Hyp2000arcSchemaEwMessage value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -1434,8 +1403,10 @@ public class Hyp2000arcSchemaEwMessage {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
@@ -45,6 +43,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -54,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectArrival
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:41:16.384966Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:09:32.349564Z[Etc/UTC]")
 public class ObjectArrival {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -194,7 +193,6 @@ public class ObjectArrival {
    * @return net
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "IV", required = true, value = "Channel net code | char(2)")
 
   public String getNet() {
     return net;
@@ -217,7 +215,6 @@ public class ObjectArrival {
    * @return sta
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "ACER", required = true, value = "Channel station code | varchar(5)")
 
   public String getSta() {
     return sta;
@@ -240,7 +237,6 @@ public class ObjectArrival {
    * @return cha
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "HHZ", required = true, value = "Channel code | char(3)")
 
   public String getCha() {
     return cha;
@@ -263,7 +259,6 @@ public class ObjectArrival {
    * @return loc
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "00", value = "Channel location | char(2)")
 
   public String getLoc() {
     return loc;
@@ -280,7 +275,6 @@ public class ObjectArrival {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getId() {
     return id;
@@ -294,7 +288,6 @@ public class ObjectArrival {
    * @return modified
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
 
   public OffsetDateTime getModified() {
     return modified;
@@ -308,7 +301,6 @@ public class ObjectArrival {
    * @return inserted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
 
   public OffsetDateTime getInserted() {
     return inserted;
@@ -328,7 +320,6 @@ public class ObjectArrival {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
 
   public Long getIdLocalspace() {
     return idLocalspace;
@@ -351,7 +342,6 @@ public class ObjectArrival {
    * @return iscCode
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "S", required = true, value = "ISC arrival code | varchar(8)")
 
   public String getIscCode() {
     return iscCode;
@@ -374,7 +364,6 @@ public class ObjectArrival {
    * @return qualityClass
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3", value = "Pick quality class | bigint")
 
   public Integer getQualityClass() {
     return qualityClass;
@@ -397,7 +386,6 @@ public class ObjectArrival {
    * @return lowerUncertainty
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.52", value = "Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)")
 
   public Float getLowerUncertainty() {
     return lowerUncertainty;
@@ -420,7 +408,6 @@ public class ObjectArrival {
    * @return upperUncertainty
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.53", value = "Uncertainty as the absolute value of deviation from the mainvalue towards larger values. | decimal(8,3)")
 
   public Float getUpperUncertainty() {
     return upperUncertainty;
@@ -443,7 +430,6 @@ public class ObjectArrival {
    * @return confidenceLevel
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "68.3", value = "Integer numer for confidence level type (68.3 1 sigma, xx =2 sigma, 99% 3 sigma) | decimal(5.2)")
 
   public Float getConfidenceLevel() {
     return confidenceLevel;
@@ -466,7 +452,6 @@ public class ObjectArrival {
    * @return arrivalTime
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2017-04-12T08:46:30.930Z", required = true, value = "Arrival time with microseconds | datetime(3)")
 
   public OffsetDateTime getArrivalTime() {
     return arrivalTime;
@@ -489,7 +474,6 @@ public class ObjectArrival {
    * @return firstmotion
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public PickFirstmotion getFirstmotion() {
     return firstmotion;
@@ -512,7 +496,6 @@ public class ObjectArrival {
    * @return emersio
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public PickEmersio getEmersio() {
     return emersio;
@@ -535,7 +518,6 @@ public class ObjectArrival {
    * @return epDistanceKm
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "223.3", value = "Distance from epicenter of the station expressed in Km | double")
 
   public Float getEpDistanceKm() {
     return epDistanceKm;
@@ -558,7 +540,6 @@ public class ObjectArrival {
    * @return epDistanceDelta
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2", value = "Distance from epicenter of the station expressed in Degrees | double")
 
   public Float getEpDistanceDelta() {
     return epDistanceDelta;
@@ -581,7 +562,6 @@ public class ObjectArrival {
    * @return origDistance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "161", value = "Distance from origin of the station | double")
 
   public Double getOrigDistance() {
     return origDistance;
@@ -604,7 +584,6 @@ public class ObjectArrival {
    * @return azimut
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "161", value = "Station origin azimut | double")
 
   public Float getAzimut() {
     return azimut;
@@ -627,7 +606,6 @@ public class ObjectArrival {
    * @return takeOff
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "94", value = "Take off angle | double")
 
   public Float getTakeOff() {
     return takeOff;
@@ -650,7 +628,6 @@ public class ObjectArrival {
    * @return polarityIsUsed
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "1 if it is used for polarity calculation | boolean")
 
   public Boolean getPolarityIsUsed() {
     return polarityIsUsed;
@@ -673,7 +650,6 @@ public class ObjectArrival {
    * @return arrTimeIsUsed
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "1 if it is used for origin calculation | boolean")
 
   public Boolean getArrTimeIsUsed() {
     return arrTimeIsUsed;
@@ -696,7 +672,6 @@ public class ObjectArrival {
    * @return residual
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "6.19", value = "Residual | double")
 
   public Double getResidual() {
     return residual;
@@ -719,7 +694,6 @@ public class ObjectArrival {
    * @return weight
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.88", value = "Weight | double")
 
   public Double getWeight() {
     return weight;
@@ -742,7 +716,6 @@ public class ObjectArrival {
    * @return localspace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectLocalspace getLocalspace() {
     return localspace;
@@ -765,7 +738,6 @@ public class ObjectArrival {
    * @return provenance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectProvenance getProvenance() {
     return provenance;
@@ -788,7 +760,6 @@ public class ObjectArrival {
    * @return pickEw
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectPickEw getPickEw() {
     return pickEw;
@@ -809,6 +780,10 @@ public class ObjectArrival {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectArrival instance itself
    */
   public ObjectArrival putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -820,6 +795,8 @@ public class ObjectArrival {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -827,6 +804,9 @@ public class ObjectArrival {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -993,9 +973,7 @@ public class ObjectArrival {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectArrival.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!ObjectArrival.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectArrival is not found in the empty JSON string", ObjectArrival.openapiRequiredFields.toString()));
         }
       }
@@ -1006,19 +984,19 @@ public class ObjectArrival {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("net") != null && !jsonObj.get("net").isJsonNull()) && !jsonObj.get("net").isJsonPrimitive()) {
+      if (!jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
-      if ((jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonNull()) && !jsonObj.get("sta").isJsonPrimitive()) {
+      if (!jsonObj.get("sta").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
       }
-      if ((jsonObj.get("cha") != null && !jsonObj.get("cha").isJsonNull()) && !jsonObj.get("cha").isJsonPrimitive()) {
+      if (!jsonObj.get("cha").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `cha` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cha").toString()));
       }
       if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
       }
-      if ((jsonObj.get("isc_code") != null && !jsonObj.get("isc_code").isJsonNull()) && !jsonObj.get("isc_code").isJsonPrimitive()) {
+      if (!jsonObj.get("isc_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `isc_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("isc_code").toString()));
       }
       // validate the optional field `localspace`
@@ -1051,7 +1029,7 @@ public class ObjectArrival {
            public void write(JsonWriter out, ObjectArrival value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -1087,8 +1065,10 @@ public class ObjectArrival {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
@@ -44,6 +42,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -53,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:41:16.384966Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:09:32.349564Z[Etc/UTC]")
 public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -163,7 +162,6 @@ public class ObjectMomenttensor {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getId() {
     return id;
@@ -177,7 +175,6 @@ public class ObjectMomenttensor {
    * @return modified
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
 
   public OffsetDateTime getModified() {
     return modified;
@@ -191,7 +188,6 @@ public class ObjectMomenttensor {
    * @return inserted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
 
   public OffsetDateTime getInserted() {
     return inserted;
@@ -211,7 +207,6 @@ public class ObjectMomenttensor {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
 
   public Long getIdLocalspace() {
     return idLocalspace;
@@ -234,7 +229,6 @@ public class ObjectMomenttensor {
    * @return originidOut
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getOriginidOut() {
     return originidOut;
@@ -257,7 +251,6 @@ public class ObjectMomenttensor {
    * @return magnitudeidOut
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getMagnitudeidOut() {
     return magnitudeidOut;
@@ -280,7 +273,6 @@ public class ObjectMomenttensor {
    * @return scalarmoment
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "16607495309062.705", value = "Scalar moment as derived in moment tensor inversion. Unit, Nm | double(22)")
 
   public Double getScalarmoment() {
     return scalarmoment;
@@ -303,7 +295,6 @@ public class ObjectMomenttensor {
    * @return mrr
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "80.956", value = "mrr moment tensor component | double(22)")
 
   public Double getMrr() {
     return mrr;
@@ -326,7 +317,6 @@ public class ObjectMomenttensor {
    * @return mtt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "-25.017", value = "mtt moment tensor component | double(22)")
 
   public Double getMtt() {
     return mtt;
@@ -349,7 +339,6 @@ public class ObjectMomenttensor {
    * @return mpp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "-55.939", value = "mpp moment tensor component | double(22)")
 
   public Double getMpp() {
     return mpp;
@@ -372,7 +361,6 @@ public class ObjectMomenttensor {
    * @return mrt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "7.048", value = "mrt moment tensor component | double(22)")
 
   public Double getMrt() {
     return mrt;
@@ -395,7 +383,6 @@ public class ObjectMomenttensor {
    * @return mrp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "13.494", value = "mrp moment tensor component | double(22)")
 
   public Double getMrp() {
     return mrp;
@@ -418,7 +405,6 @@ public class ObjectMomenttensor {
    * @return mtp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "-49.466", value = "mtp moment tensor component | double(22)")
 
   public Double getMtp() {
     return mtp;
@@ -441,7 +427,6 @@ public class ObjectMomenttensor {
    * @return clvd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.24", value = "CLVD (compensated linear vector dipole) parameter obtained from moment tensor inversion (decimal fraction between 0 and 1) | double(22)")
 
   public Double getClvd() {
     return clvd;
@@ -464,7 +449,6 @@ public class ObjectMomenttensor {
    * @return iso
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "Isotropic part obtained from moment tensor inversion (decimal fraction between 0 and 1) | double(22)")
 
   public Double getIso() {
     return iso;
@@ -487,7 +471,6 @@ public class ObjectMomenttensor {
    * @return varianceReduction
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "41.15", value = "Variance reduction of moment tensor inversion, given in percent (Dreger 2003). This is a goodness-of-fit measure | double(22)")
 
   public Double getVarianceReduction() {
     return varianceReduction;
@@ -510,7 +493,6 @@ public class ObjectMomenttensor {
    * @return doubleCouple
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.76", value = "Double couple parameter obtained from moment tensor inversion (decimal fraction between 0 and 1) | double(22)")
 
   public Double getDoubleCouple() {
     return doubleCouple;
@@ -533,7 +515,6 @@ public class ObjectMomenttensor {
    * @return typeMomenttensor
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "TDMT", value = "Type of Moment Tensor | varchar(50)")
 
   public String getTypeMomenttensor() {
     return typeMomenttensor;
@@ -556,7 +537,6 @@ public class ObjectMomenttensor {
    * @return localspace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectLocalspace getLocalspace() {
     return localspace;
@@ -579,7 +559,6 @@ public class ObjectMomenttensor {
    * @return provenance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectProvenance getProvenance() {
     return provenance;
@@ -602,7 +581,6 @@ public class ObjectMomenttensor {
    * @return tdmt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectMomenttensorTdmt getTdmt() {
     return tdmt;
@@ -625,7 +603,6 @@ public class ObjectMomenttensor {
    * @return rcmt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectMomenttensorRcmt getRcmt() {
     return rcmt;
@@ -646,6 +623,10 @@ public class ObjectMomenttensor {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectMomenttensor instance itself
    */
   public ObjectMomenttensor putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -657,6 +638,8 @@ public class ObjectMomenttensor {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -664,6 +647,9 @@ public class ObjectMomenttensor {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -807,9 +793,7 @@ public class ObjectMomenttensor {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectMomenttensor.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!ObjectMomenttensor.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMomenttensor is not found in the empty JSON string", ObjectMomenttensor.openapiRequiredFields.toString()));
         }
       }
@@ -850,7 +834,7 @@ public class ObjectMomenttensor {
            public void write(JsonWriter out, ObjectMomenttensor value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -886,8 +870,10 @@ public class ObjectMomenttensor {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

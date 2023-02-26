@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +38,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -49,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventsGroupRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:41:16.384966Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:09:32.349564Z[Etc/UTC]")
 public class UpdateEventsGroupRequestData {
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
@@ -57,11 +56,11 @@ public class UpdateEventsGroupRequestData {
 
   public static final String SERIALIZED_NAME_EVENTIDS = "eventids";
   @SerializedName(SERIALIZED_NAME_EVENTIDS)
-  private List<Long> eventids = null;
+  private List<Long> eventids = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_EVENT_GROUP_IDS = "event_group_ids";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_IDS)
-  private List<Long> eventGroupIds = null;
+  private List<Long> eventGroupIds = new ArrayList<>();
 
   public UpdateEventsGroupRequestData() {
   }
@@ -77,7 +76,6 @@ public class UpdateEventsGroupRequestData {
    * @return eventGroupId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getEventGroupId() {
     return eventGroupId;
@@ -108,7 +106,6 @@ public class UpdateEventsGroupRequestData {
    * @return eventids
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[11111,11121,11131]", value = "")
 
   public List<Long> getEventids() {
     return eventids;
@@ -139,7 +136,6 @@ public class UpdateEventsGroupRequestData {
    * @return eventGroupIds
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[22222,33333,44444]", value = "")
 
   public List<Long> getEventGroupIds() {
     return eventGroupIds;
@@ -160,6 +156,10 @@ public class UpdateEventsGroupRequestData {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the UpdateEventsGroupRequestData instance itself
    */
   public UpdateEventsGroupRequestData putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -171,6 +171,8 @@ public class UpdateEventsGroupRequestData {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -178,6 +180,9 @@ public class UpdateEventsGroupRequestData {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -253,18 +258,16 @@ public class UpdateEventsGroupRequestData {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (UpdateEventsGroupRequestData.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!UpdateEventsGroupRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateEventsGroupRequestData is not found in the empty JSON string", UpdateEventsGroupRequestData.openapiRequiredFields.toString()));
         }
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("eventids") != null && !jsonObj.get("eventids").isJsonNull()) && !jsonObj.get("eventids").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("eventids") != null && !jsonObj.get("eventids").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `eventids` to be an array in the JSON string but got `%s`", jsonObj.get("eventids").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("event_group_ids") != null && !jsonObj.get("event_group_ids").isJsonNull()) && !jsonObj.get("event_group_ids").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("event_group_ids") != null && !jsonObj.get("event_group_ids").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `event_group_ids` to be an array in the JSON string but got `%s`", jsonObj.get("event_group_ids").toString()));
       }
   }
@@ -285,7 +288,7 @@ public class UpdateEventsGroupRequestData {
            public void write(JsonWriter out, UpdateEventsGroupRequestData value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -321,8 +324,10 @@ public class UpdateEventsGroupRequestData {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

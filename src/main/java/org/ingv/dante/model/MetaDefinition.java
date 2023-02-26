@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +39,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -50,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * MetaDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:41:16.384966Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:09:32.349564Z[Etc/UTC]")
 public class MetaDefinition {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -66,7 +65,7 @@ public class MetaDefinition {
 
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
-  private List<MetaDefinitionLinksInner> links = null;
+  private List<MetaDefinitionLinksInner> links = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
@@ -98,7 +97,6 @@ public class MetaDefinition {
    * @return currentPage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2", value = "Current page.")
 
   public Integer getCurrentPage() {
     return currentPage;
@@ -121,7 +119,6 @@ public class MetaDefinition {
    * @return from
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1", value = "Showed record from.")
 
   public Integer getFrom() {
     return from;
@@ -144,7 +141,6 @@ public class MetaDefinition {
    * @return lastPage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3", value = "Last page.")
 
   public Integer getLastPage() {
     return lastPage;
@@ -175,7 +171,6 @@ public class MetaDefinition {
    * @return links
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<MetaDefinitionLinksInner> getLinks() {
     return links;
@@ -198,7 +193,6 @@ public class MetaDefinition {
    * @return path
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://localhost:8585", value = "URL base path.")
 
   public String getPath() {
     return path;
@@ -221,7 +215,6 @@ public class MetaDefinition {
    * @return perPage
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "4000", value = "Record per page.")
 
   public Integer getPerPage() {
     return perPage;
@@ -244,7 +237,6 @@ public class MetaDefinition {
    * @return to
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "4000", value = "Showed record to.")
 
   public Integer getTo() {
     return to;
@@ -267,7 +259,6 @@ public class MetaDefinition {
    * @return total
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "10000", value = "Total records.")
 
   public Integer getTotal() {
     return total;
@@ -288,6 +279,10 @@ public class MetaDefinition {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the MetaDefinition instance itself
    */
   public MetaDefinition putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -299,6 +294,8 @@ public class MetaDefinition {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -306,6 +303,9 @@ public class MetaDefinition {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -396,23 +396,23 @@ public class MetaDefinition {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (MetaDefinition.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!MetaDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in MetaDefinition is not found in the empty JSON string", MetaDefinition.openapiRequiredFields.toString()));
         }
       }
-      JsonArray jsonArraylinks = jsonObj.getAsJsonArray("links");
-      if (jsonArraylinks != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("links").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `links` to be an array in the JSON string but got `%s`", jsonObj.get("links").toString()));
-        }
+      if (jsonObj.get("links") != null && !jsonObj.get("links").isJsonNull()) {
+        JsonArray jsonArraylinks = jsonObj.getAsJsonArray("links");
+        if (jsonArraylinks != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("links").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `links` to be an array in the JSON string but got `%s`", jsonObj.get("links").toString()));
+          }
 
-        // validate the optional field `links` (array)
-        for (int i = 0; i < jsonArraylinks.size(); i++) {
-          MetaDefinitionLinksInner.validateJsonObject(jsonArraylinks.get(i).getAsJsonObject());
-        };
+          // validate the optional field `links` (array)
+          for (int i = 0; i < jsonArraylinks.size(); i++) {
+            MetaDefinitionLinksInner.validateJsonObject(jsonArraylinks.get(i).getAsJsonObject());
+          };
+        }
       }
       if ((jsonObj.get("path") != null && !jsonObj.get("path").isJsonNull()) && !jsonObj.get("path").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `path` to be a primitive type in the JSON string but got `%s`", jsonObj.get("path").toString()));
@@ -435,7 +435,7 @@ public class MetaDefinition {
            public void write(JsonWriter out, MetaDefinition value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -471,8 +471,10 @@ public class MetaDefinition {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

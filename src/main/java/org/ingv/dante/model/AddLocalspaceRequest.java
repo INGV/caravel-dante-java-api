@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -40,6 +38,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -49,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * AddLocalspaceRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:41:16.384966Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:09:32.349564Z[Etc/UTC]")
 public class AddLocalspaceRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -91,7 +90,6 @@ public class AddLocalspaceRequest {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getId() {
     return id;
@@ -111,7 +109,6 @@ public class AddLocalspaceRequest {
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "hew1_mole", required = true, value = "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)")
 
   public String getName() {
     return name;
@@ -134,7 +131,6 @@ public class AddLocalspaceRequest {
    * @return description
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Auto added", value = "Additional information | char(255)")
 
   public String getDescription() {
     return description;
@@ -151,7 +147,6 @@ public class AddLocalspaceRequest {
    * @return modified
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
 
   public OffsetDateTime getModified() {
     return modified;
@@ -165,7 +160,6 @@ public class AddLocalspaceRequest {
    * @return inserted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
 
   public OffsetDateTime getInserted() {
     return inserted;
@@ -183,6 +177,10 @@ public class AddLocalspaceRequest {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the AddLocalspaceRequest instance itself
    */
   public AddLocalspaceRequest putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -194,6 +192,8 @@ public class AddLocalspaceRequest {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -201,6 +201,9 @@ public class AddLocalspaceRequest {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -294,9 +297,7 @@ public class AddLocalspaceRequest {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (AddLocalspaceRequest.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!AddLocalspaceRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddLocalspaceRequest is not found in the empty JSON string", AddLocalspaceRequest.openapiRequiredFields.toString()));
         }
       }
@@ -307,7 +308,7 @@ public class AddLocalspaceRequest {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
+      if (!jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
@@ -331,7 +332,7 @@ public class AddLocalspaceRequest {
            public void write(JsonWriter out, AddLocalspaceRequest value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -367,8 +368,10 @@ public class AddLocalspaceRequest {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

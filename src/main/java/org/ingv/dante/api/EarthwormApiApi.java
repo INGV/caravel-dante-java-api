@@ -127,7 +127,8 @@ public class EarthwormApiApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -148,15 +149,12 @@ public class EarthwormApiApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addEwHyp2000arcValidateBeforeCall(AddEwHyp2000arcRequest addEwHyp2000arcRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addEwHyp2000arcRequest' is set
         if (addEwHyp2000arcRequest == null) {
             throw new ApiException("Missing the required parameter 'addEwHyp2000arcRequest' when calling addEwHyp2000arc(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addEwHyp2000arcCall(addEwHyp2000arcRequest, _callback);
-        return localVarCall;
+        return addEwHyp2000arcCall(addEwHyp2000arcRequest, _callback);
 
     }
 
@@ -277,7 +275,8 @@ public class EarthwormApiApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -298,15 +297,12 @@ public class EarthwormApiApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addEwQuake2kValidateBeforeCall(AddEwQuake2kRequest addEwQuake2kRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addEwQuake2kRequest' is set
         if (addEwQuake2kRequest == null) {
             throw new ApiException("Missing the required parameter 'addEwQuake2kRequest' when calling addEwQuake2k(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addEwQuake2kCall(addEwQuake2kRequest, _callback);
-        return localVarCall;
+        return addEwQuake2kCall(addEwQuake2kRequest, _callback);
 
     }
 
@@ -427,7 +423,8 @@ public class EarthwormApiApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -448,15 +445,12 @@ public class EarthwormApiApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addHEwMagnitudeValidateBeforeCall(AddHEwMagnitudeRequest addHEwMagnitudeRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addHEwMagnitudeRequest' is set
         if (addHEwMagnitudeRequest == null) {
             throw new ApiException("Missing the required parameter 'addHEwMagnitudeRequest' when calling addHEwMagnitude(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addHEwMagnitudeCall(addHEwMagnitudeRequest, _callback);
-        return localVarCall;
+        return addHEwMagnitudeCall(addHEwMagnitudeRequest, _callback);
 
     }
 
@@ -577,7 +571,8 @@ public class EarthwormApiApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -598,15 +593,12 @@ public class EarthwormApiApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addHEwPickScnlValidateBeforeCall(AddHEwPickScnlRequest addHEwPickScnlRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addHEwPickScnlRequest' is set
         if (addHEwPickScnlRequest == null) {
             throw new ApiException("Missing the required parameter 'addHEwPickScnlRequest' when calling addHEwPickScnl(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addHEwPickScnlCall(addHEwPickScnlRequest, _callback);
-        return localVarCall;
+        return addHEwPickScnlCall(addHEwPickScnlRequest, _callback);
 
     }
 
@@ -727,7 +719,8 @@ public class EarthwormApiApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json", "application/json"
+            "application/problem+json",
+            "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -748,15 +741,12 @@ public class EarthwormApiApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call addHEwStrongmotioniiValidateBeforeCall(AddHEwStrongmotioniiRequest addHEwStrongmotioniiRequest, final ApiCallback _callback) throws ApiException {
-        
         // verify the required parameter 'addHEwStrongmotioniiRequest' is set
         if (addHEwStrongmotioniiRequest == null) {
             throw new ApiException("Missing the required parameter 'addHEwStrongmotioniiRequest' when calling addHEwStrongmotionii(Async)");
         }
-        
 
-        okhttp3.Call localVarCall = addHEwStrongmotioniiCall(addHEwStrongmotioniiRequest, _callback);
-        return localVarCall;
+        return addHEwStrongmotioniiCall(addHEwStrongmotioniiRequest, _callback);
 
     }
 

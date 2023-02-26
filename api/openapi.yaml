@@ -6070,10 +6070,15 @@ paths:
       x-accepts: application/json
 components:
   headers:
-    Cache-Control:
-      description: no-store
+    Retry-After:
+      description: |-
+        Retry contacting the endpoint *at least* after seconds.
+        See https://tools.ietf.org/html/rfc7231#section-7.1.3
       schema:
-        type: string
+        format: int32
+        maximum: 186400
+        minimum: 0
+        type: integer
     X-RateLimit-Limit:
       description: The number of allowed requests in the current period
       schema:
@@ -6095,15 +6100,360 @@ components:
         maximum: 186400
         minimum: 0
         type: integer
-    Retry-After:
-      description: |-
-        Retry contacting the endpoint *at least* after seconds.
-        See https://tools.ietf.org/html/rfc7231#section-7.1.3
+    Cache-Control:
+      description: no-store
+      schema:
+        type: string
+  parameters:
+    starttime:
+      description: Select date start (i.e. 2016-06-22T16:52:06.260Z).
+      in: query
+      name: starttime
+      required: false
+      schema:
+        format: date-time
+        type: string
+    endtime:
+      description: Select date end (i.e. 2016-06-22T16:52:06.260Z).
+      in: query
+      name: endtime
+      required: false
+      schema:
+        format: date-time
+        type: string
+    minlat:
+      description: Specify southern boundary for search in WGS84 (i.e. 39.12).
+      in: query
+      name: minlat
+      required: false
+      schema:
+        $ref: '#/components/schemas/latitude'
+    maxlat:
+      description: Specify northern boundary for search in WGS84 (i.e. 46.52).
+      in: query
+      name: maxlat
+      required: false
+      schema:
+        $ref: '#/components/schemas/latitude'
+    minlon:
+      description: Specify western boundary for search in WGS84 (i.e. 10.12).
+      in: query
+      name: minlon
+      required: false
+      schema:
+        $ref: '#/components/schemas/longitude'
+    maxlon:
+      description: Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+      in: query
+      name: maxlon
+      required: false
+      schema:
+        $ref: '#/components/schemas/longitude'
+    lat:
+      description: Specify the central latitude point for a radial search in WGS84
+        (i.e. 42).
+      in: query
+      name: lat
+      required: false
+      schema:
+        $ref: '#/components/schemas/latitude'
+    lon:
+      description: Specify the central longitude point for a radial search in WGS84
+        (i.e. 12).
+      in: query
+      name: lon
+      required: false
+      schema:
+        $ref: '#/components/schemas/longitude'
+    minradius:
+      description: Specify minimum distance from the geographic point defined by latitude
+        and longitude in Degrees (i.e. 1.5).
+      in: query
+      name: minradius
+      required: false
+      schema:
+        format: double
+        type: number
+    maxradius:
+      description: Specify maximum distance from the geographic point defined by latitude
+        and longitude in Degrees (i.e. 5).
+      in: query
+      name: maxradius
+      required: false
+      schema:
+        format: double
+        type: number
+    minradiuskm:
+      description: Specify minimum distance from the geographic point defined by latitude
+        and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+      in: query
+      name: minradiuskm
+      required: false
+      schema:
+        format: double
+        type: number
+    maxradiuskm:
+      description: Specify maximum distance from the geographic point defined by latitude
+        and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+      in: query
+      name: maxradiuskm
+      required: false
+      schema:
+        format: double
+        type: number
+    minmag:
+      description: Limit to events with a magnitude larger than or equal to the specified
+        minimum (i.e. 1.5).
+      in: query
+      name: minmag
+      required: false
+      schema:
+        $ref: '#/components/schemas/magnitude'
+    maxmag:
+      description: Limit to events with a magnitude smaller than or equal to the specified
+        maximum (i.e. 7.3).
+      in: query
+      name: maxmag
+      required: false
+      schema:
+        $ref: '#/components/schemas/magnitude'
+    mindepth:
+      description: "Specify minimum depth (kilometers), values increase positively\
+        \ with depth (i.e. 0)."
+      in: query
+      name: mindepth
+      required: false
+      schema:
+        format: double
+        type: number
+    maxdepth:
+      description: "Specify maximum depth (kilometers), values increase positively\
+        \ with depth (i.e. 50)."
+      in: query
+      name: maxdepth
+      required: false
+      schema:
+        format: double
+        type: number
+    mintypeoriginvalue:
+      description: Filter the output to type_origin.version_value (i.e. 0).
+      in: query
+      name: mintypeoriginvalue
+      required: false
+      schema:
+        $ref: '#/components/schemas/type_origin__version_value'
+    maxtypeoriginvalue:
+      description: Filter the output to type_origin.version_value (i.e. 1000).
+      in: query
+      name: maxtypeoriginvalue
+      required: false
+      schema:
+        $ref: '#/components/schemas/type_origin__version_value'
+    wheretypeoriginvaluein:
+      description: "Filter type_origin.version_value (i.e. 0,1,200)."
+      in: query
+      name: wheretypeoriginvaluein
+      required: false
+      schema:
+        format: string
+        type: string
+    wherelocalspacenamein:
+      description: "Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn'\
+        \ param) by comma separated value (i.e. hew10_mole,hew20_mole)."
+      in: query
+      name: wherelocalspacenamein
+      required: false
+      schema:
+        format: string
+        type: string
+    wherelocalspacenameincolumn:
+      description: Set the column to apply "wherelocalspacenamein" filter (i.e. "origin"
+        means "origin.localspace.name"); default "event".
+      in: query
+      name: wherelocalspacenameincolumn
+      required: false
+      schema:
+        default: event
+        enum:
+        - event
+        - origin
+        - magnitude
+        type: string
+    eventupdatedafter:
+      description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
+        \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\" is\
+        \ used."
+      in: query
+      name: eventupdatedafter
+      required: false
+      schema:
+        format: date-time
+        type: string
+    originupdatedafter:
+      description: "Limit data to \"origin.modified\" after; if \"eventupdatedafter\"\
+        \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\" is\
+        \ used."
+      in: query
+      name: originupdatedafter
+      required: false
+      schema:
+        format: date-time
+        type: string
+    magnitudeupdatedafter:
+      description: "Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\"\
+        \ and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is used."
+      in: query
+      name: magnitudeupdatedafter
+      required: false
+      schema:
+        format: date-time
+        type: string
+    updatedafteroperator:
+      description: "Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\"\
+        \ and \"magnitudeupdatedafter\" are set."
+      in: query
+      name: updatedafteroperator
+      required: false
+      schema:
+        default: or
+        enum:
+        - and
+        - or
+        type: string
+    whereflagsin:
+      description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+      in: query
+      name: whereflagsin
+      required: false
+      schema:
+        format: string
+        type: string
+    orderby:
+      description: "Select \"order by\"; multiple \"order\" contatenation available\
+        \ (i.e. event_id-desc,type_origin_version_value-asc)"
+      in: query
+      name: orderby
+      required: false
+      schema:
+        format: string
+        type: string
+    fk_event_group:
+      description: Select events with same event_group_id.
+      in: query
+      name: event_group_id
+      required: false
+      schema:
+        format: int64
+        type: integer
+    id_localspace:
+      description: Localspace Id.
+      in: query
+      name: id_localspace
+      required: false
+      schema:
+        format: int64
+        type: integer
+    limit:
+      description: Limit the results to the specified number of records.
+      in: query
+      name: limit
+      required: false
       schema:
         format: int32
-        maximum: 186400
-        minimum: 0
         type: integer
+    page:
+      description: Pagination.
+      in: query
+      name: page
+      required: false
+      schema:
+        format: int32
+        type: integer
+    catalog_metadata__name:
+      description: Catalog name.
+      in: query
+      name: name
+      required: false
+      schema:
+        format: string
+        type: string
+    catalog_metadata__doi:
+      description: Catalog DOI.
+      in: query
+      name: doi
+      required: false
+      schema:
+        format: string
+        type: string
+    eventid:
+      description: Select by event id.
+      in: query
+      name: eventid
+      required: false
+      schema:
+        format: int64
+        type: integer
+    originid:
+      description: Select by origin id.
+      in: query
+      name: originid
+      required: false
+      schema:
+        format: int64
+        type: integer
+    magnitudeid:
+      description: Select by magnitude id.
+      in: query
+      name: magnitudeid
+      required: false
+      schema:
+        format: int64
+        type: integer
+    level:
+      description: Select deep level
+      in: query
+      name: level
+      required: false
+      schema:
+        default: all
+        enum:
+        - event
+        - origin
+        - magnitude
+        - all
+        type: string
+    mindistance__REQUIRED:
+      description: Specify minimum distance (kilometers).
+      in: query
+      name: mindistance
+      required: true
+      schema:
+        format: double
+        type: number
+    maxdistance__REQUIRED:
+      description: Specify maximum distance (kilometers).
+      in: query
+      name: maxdistance
+      required: true
+      schema:
+        format: double
+        type: number
+    minpopolazione__REQUIRED:
+      description: Specify minimum popolazione.
+      in: query
+      name: minpopolazione
+      required: true
+      schema:
+        format: int64
+        type: integer
+    municipio__REQUIRED:
+      description: Specify the Italian "municipio" name.
+      in: query
+      name: name
+      required: true
+      schema:
+        format: string
+        type: string
   responses:
     "204NoContent":
       description: Request was properly formatted and submitted but no data matches
@@ -6127,7 +6477,11 @@ components:
             $ref: '#/components/schemas/Problem'
       description: Forbidden
     "404NotFound":
-      $ref: https://teamdigitale.github.io/openapi/v0.1.0/definitions.yaml#/components/responses/404NotFound
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+      description: Not Found
     "422UnprocessableEntity":
       content:
         application/problem+json:
@@ -6249,10 +6603,12 @@ components:
     ObjectStatus:
       properties:
         detail:
-          description: "A human readable explanation specific to this occurrence of\
-            \ the\nproblem. You MUST NOT expose internal informations, personal\n\
-            data or implementation details through this field.\n\n`detail` supports\
-            \ localized patterns whereas `title` pattern is only in ascii.\n"
+          description: |
+            A human readable explanation specific to this occurrence of the
+            problem. You MUST NOT expose internal informations, personal
+            data or implementation details through this field.
+
+            `detail` supports localized patterns whereas `title` pattern is only in ascii.
           example: Request took too long to complete.
           maxLength: 4096
           pattern: "^.{0,1024}$"
@@ -6275,19 +6631,20 @@ components:
           minimum: 100
           type: integer
         title:
-          description: "A short, summary of the problem type. Written in english and\
-            \ readable\nfor engineers (usually not suited for non technical stakeholders\
-            \ and\nnot localized): the expressed pattern does not support unicode\
-            \ characters.\n"
+          description: |
+            A short, summary of the problem type. Written in english and readable
+            for engineers (usually not suited for non technical stakeholders and
+            not localized): the expressed pattern does not support unicode characters.
           example: Service Unavailable
           maxLength: 64
           pattern: "^[ -~]{0,64}$"
           type: string
         type:
           default: about:blank
-          description: "An absolute URI that identifies the problem type.  When dereferenced,\n\
-            it SHOULD provide human-readable documentation for the problem type\n\
-            (e.g., using HTML).\n"
+          description: |
+            An absolute URI that identifies the problem type.  When dereferenced,
+            it SHOULD provide human-readable documentation for the problem type
+            (e.g., using HTML).
           example: https://tools.ietf.org/html/rfc7231#section-6.6.4
           format: uri
           maxLength: 2048
@@ -6315,6 +6672,7 @@ components:
           description: DB Schema
           nullable: true
           type: string
+          example: null
       type: object
     ObjectCatalogMetadata:
       example:
@@ -10683,18 +11041,23 @@ components:
       type: object
     Problem:
       additionalProperties: false
-      description: "This schema describes RFC7807 Problem Details for HTTP APIs.\n\
-        The specification is intentionally flexible, and allows to adapt\nthe schema\
-        \ adding further properties, or not enforcing any of the properties\nbelow.\n\
-        \nTo make this schema safe by default, additionalProperties are forbidden\
-        \ though.\nIn case you need them, you can either re-define Problem or extend\
-        \ it\nusing `allOf`."
+      description: |-
+        This schema describes RFC7807 Problem Details for HTTP APIs.
+        The specification is intentionally flexible, and allows to adapt
+        the schema adding further properties, or not enforcing any of the properties
+        below.
+
+        To make this schema safe by default, additionalProperties are forbidden though.
+        In case you need them, you can either re-define Problem or extend it
+        using `allOf`.
       properties:
         detail:
-          description: "A human readable explanation specific to this occurrence of\
-            \ the\nproblem. You MUST NOT expose internal informations, personal\n\
-            data or implementation details through this field.\n\n`detail` supports\
-            \ localized patterns whereas `title` pattern is only in ascii.\n"
+          description: |
+            A human readable explanation specific to this occurrence of the
+            problem. You MUST NOT expose internal informations, personal
+            data or implementation details through this field.
+
+            `detail` supports localized patterns whereas `title` pattern is only in ascii.
           example: Request took too long to complete.
           maxLength: 4096
           pattern: "^.{0,1024}$"
@@ -10717,19 +11080,20 @@ components:
           minimum: 100
           type: integer
         title:
-          description: "A short, summary of the problem type. Written in english and\
-            \ readable\nfor engineers (usually not suited for non technical stakeholders\
-            \ and\nnot localized): the expressed pattern does not support unicode\
-            \ characters.\n"
+          description: |
+            A short, summary of the problem type. Written in english and readable
+            for engineers (usually not suited for non technical stakeholders and
+            not localized): the expressed pattern does not support unicode characters.
           example: Service Unavailable
           maxLength: 64
           pattern: "^[ -~]{0,64}$"
           type: string
         type:
           default: about:blank
-          description: "An absolute URI that identifies the problem type.  When dereferenced,\n\
-            it SHOULD provide human-readable documentation for the problem type\n\
-            (e.g., using HTML).\n"
+          description: |
+            An absolute URI that identifies the problem type.  When dereferenced,
+            it SHOULD provide human-readable documentation for the problem type
+            (e.g., using HTML).
           example: https://tools.ietf.org/html/rfc7231#section-6.6.4
           format: uri
           maxLength: 2048
@@ -11128,10 +11492,12 @@ components:
       format: date-time
       type: string
     detail:
-      description: "A human readable explanation specific to this occurrence of the\n\
-        problem. You MUST NOT expose internal informations, personal\ndata or implementation\
-        \ details through this field.\n\n`detail` supports localized patterns whereas\
-        \ `title` pattern is only in ascii.\n"
+      description: |
+        A human readable explanation specific to this occurrence of the
+        problem. You MUST NOT expose internal informations, personal
+        data or implementation details through this field.
+
+        `detail` supports localized patterns whereas `title` pattern is only in ascii.
       example: Request took too long to complete.
       maxLength: 4096
       pattern: "^.{0,1024}$"
@@ -11154,18 +11520,20 @@ components:
       minimum: 100
       type: integer
     title:
-      description: "A short, summary of the problem type. Written in english and readable\n\
-        for engineers (usually not suited for non technical stakeholders and\nnot\
-        \ localized): the expressed pattern does not support unicode characters.\n"
+      description: |
+        A short, summary of the problem type. Written in english and readable
+        for engineers (usually not suited for non technical stakeholders and
+        not localized): the expressed pattern does not support unicode characters.
       example: Service Unavailable
       maxLength: 64
       pattern: "^[ -~]{0,64}$"
       type: string
     type:
       default: about:blank
-      description: "An absolute URI that identifies the problem type.  When dereferenced,\n\
-        it SHOULD provide human-readable documentation for the problem type\n(e.g.,\
-        \ using HTML).\n"
+      description: |
+        An absolute URI that identifies the problem type.  When dereferenced,
+        it SHOULD provide human-readable documentation for the problem type
+        (e.g., using HTML).
       example: https://tools.ietf.org/html/rfc7231#section-6.6.4
       format: uri
       maxLength: 2048

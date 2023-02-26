@@ -20,8 +20,6 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -46,6 +44,7 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -55,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:41:16.384966Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T10:09:32.349564Z[Etc/UTC]")
 public class ObjectStrongmotion {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -143,7 +142,7 @@ public class ObjectStrongmotion {
 
   public static final String SERIALIZED_NAME_RSA = "rsa";
   @SerializedName(SERIALIZED_NAME_RSA)
-  private List<ObjectStrongmotionRsaInner> rsa = null;
+  private List<ObjectStrongmotionRsaInner> rsa = new ArrayList<>();
 
   public ObjectStrongmotion() {
   }
@@ -171,7 +170,6 @@ public class ObjectStrongmotion {
    * @return net
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "IV", value = "Channel net code | char(2)")
 
   public String getNet() {
     return net;
@@ -194,7 +192,6 @@ public class ObjectStrongmotion {
    * @return sta
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ACER", value = "Channel station code | varchar(5)")
 
   public String getSta() {
     return sta;
@@ -217,7 +214,6 @@ public class ObjectStrongmotion {
    * @return cha
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "HHZ", value = "Channel code | char(3)")
 
   public String getCha() {
     return cha;
@@ -240,7 +236,6 @@ public class ObjectStrongmotion {
    * @return loc
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "00", value = "Channel location | char(2)")
 
   public String getLoc() {
     return loc;
@@ -257,7 +252,6 @@ public class ObjectStrongmotion {
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
 
   public Long getId() {
     return id;
@@ -271,7 +265,6 @@ public class ObjectStrongmotion {
    * @return modified
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
 
   public OffsetDateTime getModified() {
     return modified;
@@ -285,7 +278,6 @@ public class ObjectStrongmotion {
    * @return inserted
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
 
   public OffsetDateTime getInserted() {
     return inserted;
@@ -305,7 +297,6 @@ public class ObjectStrongmotion {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
 
   public Long getIdLocalspace() {
     return idLocalspace;
@@ -328,7 +319,6 @@ public class ObjectStrongmotion {
    * @return tDt
   **/
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2017-04-12T08:46:56.190Z", required = true, value = "time: trigger reported by SM box - datetime part | datetime(6)")
 
   public OffsetDateTime gettDt() {
     return tDt;
@@ -351,7 +341,6 @@ public class ObjectStrongmotion {
    * @return pga
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000162", value = "REQUIRED: peak ground acceleration (cm/s/s) | double")
 
   public Float getPga() {
     return pga;
@@ -374,7 +363,6 @@ public class ObjectStrongmotion {
    * @return tpgaDt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:47:06.990Z", value = "OPTIONAL: time of pga - datetime part | datetime(3)")
 
   public OffsetDateTime getTpgaDt() {
     return tpgaDt;
@@ -397,7 +385,6 @@ public class ObjectStrongmotion {
    * @return pgv
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000034", value = "REQUIRED: peak ground velocity (cm/s) | double")
 
   public Float getPgv() {
     return pgv;
@@ -420,7 +407,6 @@ public class ObjectStrongmotion {
    * @return tpgvDt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:46:56.190Z", value = "OPTIONAL: time of pgv - datetime part | datetime(3)")
 
   public OffsetDateTime getTpgvDt() {
     return tpgvDt;
@@ -443,7 +429,6 @@ public class ObjectStrongmotion {
    * @return pgd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000025", value = "REQUIRED: peak ground displacement (cm) | double")
 
   public Float getPgd() {
     return pgd;
@@ -466,7 +451,6 @@ public class ObjectStrongmotion {
    * @return tpgdDt
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:46:59.989Z", value = "OPTIONAL: time of pgd - datetime part | datetime(3)")
 
   public OffsetDateTime getTpgdDt() {
     return tpgdDt;
@@ -489,7 +473,6 @@ public class ObjectStrongmotion {
    * @return rsa030
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.02604", value = "RSA(response spectrum accel) value for period 0.30 | double")
 
   public Float getRsa030() {
     return rsa030;
@@ -512,7 +495,6 @@ public class ObjectStrongmotion {
    * @return rsa100
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.003673", value = "RSA(response spectrum accel) value for period 1.00 | double")
 
   public Float getRsa100() {
     return rsa100;
@@ -535,7 +517,6 @@ public class ObjectStrongmotion {
    * @return rsa300
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000339", value = "RSA(response spectrum accel) value for period 3.00 | double")
 
   public Float getRsa300() {
     return rsa300;
@@ -558,7 +539,6 @@ public class ObjectStrongmotion {
    * @return localspace
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectLocalspace getLocalspace() {
     return localspace;
@@ -581,7 +561,6 @@ public class ObjectStrongmotion {
    * @return provenance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectProvenance getProvenance() {
     return provenance;
@@ -604,7 +583,6 @@ public class ObjectStrongmotion {
    * @return alternative
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public ObjectStrongmotionAlternative getAlternative() {
     return alternative;
@@ -635,7 +613,6 @@ public class ObjectStrongmotion {
    * @return rsa
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
 
   public List<ObjectStrongmotionRsaInner> getRsa() {
     return rsa;
@@ -656,6 +633,10 @@ public class ObjectStrongmotion {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectStrongmotion instance itself
    */
   public ObjectStrongmotion putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -667,6 +648,8 @@ public class ObjectStrongmotion {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -674,6 +657,9 @@ public class ObjectStrongmotion {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -818,9 +804,7 @@ public class ObjectStrongmotion {
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (ObjectStrongmotion.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+        if (!ObjectStrongmotion.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectStrongmotion is not found in the empty JSON string", ObjectStrongmotion.openapiRequiredFields.toString()));
         }
       }
@@ -855,17 +839,19 @@ public class ObjectStrongmotion {
       if (jsonObj.get("alternative") != null && !jsonObj.get("alternative").isJsonNull()) {
         ObjectStrongmotionAlternative.validateJsonObject(jsonObj.getAsJsonObject("alternative"));
       }
-      JsonArray jsonArrayrsa = jsonObj.getAsJsonArray("rsa");
-      if (jsonArrayrsa != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("rsa").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `rsa` to be an array in the JSON string but got `%s`", jsonObj.get("rsa").toString()));
-        }
+      if (jsonObj.get("rsa") != null && !jsonObj.get("rsa").isJsonNull()) {
+        JsonArray jsonArrayrsa = jsonObj.getAsJsonArray("rsa");
+        if (jsonArrayrsa != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("rsa").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `rsa` to be an array in the JSON string but got `%s`", jsonObj.get("rsa").toString()));
+          }
 
-        // validate the optional field `rsa` (array)
-        for (int i = 0; i < jsonArrayrsa.size(); i++) {
-          ObjectStrongmotionRsaInner.validateJsonObject(jsonArrayrsa.get(i).getAsJsonObject());
-        };
+          // validate the optional field `rsa` (array)
+          for (int i = 0; i < jsonArrayrsa.size(); i++) {
+            ObjectStrongmotionRsaInner.validateJsonObject(jsonArrayrsa.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 
@@ -885,7 +871,7 @@ public class ObjectStrongmotion {
            public void write(JsonWriter out, ObjectStrongmotion value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -921,8 +907,10 @@ public class ObjectStrongmotion {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
