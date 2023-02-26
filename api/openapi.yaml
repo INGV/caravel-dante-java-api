@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 2.80.0
+  version: 2.81.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -6982,19 +6982,21 @@ components:
         modified: 2016-06-22T16:52:06.26Z
         magnitude:
           type_magnitude: ML-VAX
+          upper_uncertainty: 0.53
+          mag_quality: BB
+          quality: 6.84685269835264
           id_localspace: 182491
           mag: 3.01
           originid: 14932631
+          inserted: 2016-06-22T16:52:06.26Z
           provenance:
             name: INGV
             version: hew1_mole
             softwarename: software
           localspace: hew1_mole
+          modified: 2016-06-22T16:52:06.26Z
           id: 14932631
-          upper_uncertainty: 0.53
-          mag_quality: BB
           lower_uncertainty: 0.52
-          quality: 6.84685269835264
         id: 14932631
         event_group_id: 0
       properties:
@@ -10890,19 +10892,21 @@ components:
     ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup:
       example:
         type_magnitude: ML-VAX
+        upper_uncertainty: 0.53
+        mag_quality: BB
+        quality: 6.84685269835264
         id_localspace: 182491
         mag: 3.01
         originid: 14932631
+        inserted: 2016-06-22T16:52:06.26Z
         provenance:
           name: INGV
           version: hew1_mole
           softwarename: software
         localspace: hew1_mole
+        modified: 2016-06-22T16:52:06.26Z
         id: 14932631
-        upper_uncertainty: 0.53
-        mag_quality: BB
         lower_uncertainty: 0.52
-        quality: 6.84685269835264
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -10953,6 +10957,18 @@ components:
           example: 14932631
           format: int64
           type: integer
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
         provenance:
           $ref: '#/components/schemas/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup'
       type: object
@@ -12213,19 +12229,21 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           magnitude:
             type_magnitude: ML-VAX
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.84685269835264
             id_localspace: 182491
             mag: 3.01
             originid: 14932631
+            inserted: 2016-06-22T16:52:06.26Z
             provenance:
               name: INGV
               version: hew1_mole
               softwarename: software
             localspace: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            upper_uncertainty: 0.53
-            mag_quality: BB
             lower_uncertainty: 0.52
-            quality: 6.84685269835264
           id: 14932631
           event_group_id: 0
         - preferred_focalmechanism_id: 5
@@ -12273,19 +12291,21 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           magnitude:
             type_magnitude: ML-VAX
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.84685269835264
             id_localspace: 182491
             mag: 3.01
             originid: 14932631
+            inserted: 2016-06-22T16:52:06.26Z
             provenance:
               name: INGV
               version: hew1_mole
               softwarename: software
             localspace: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            upper_uncertainty: 0.53
-            mag_quality: BB
             lower_uncertainty: 0.52
-            quality: 6.84685269835264
           id: 14932631
           event_group_id: 0
         meta:
