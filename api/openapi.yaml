@@ -6624,19 +6624,21 @@ components:
         modified: 2016-06-22T16:52:06.26Z
         magnitude:
           type_magnitude: ML-VAX
+          upper_uncertainty: 0.53
+          mag_quality: BB
+          quality: 6.84685269835264
           id_localspace: 182491
           mag: 3.01
           originid: 14932631
+          inserted: 2016-06-22T16:52:06.26Z
           provenance:
             name: INGV
             version: hew1_mole
             softwarename: software
           localspace: hew1_mole
+          modified: 2016-06-22T16:52:06.26Z
           id: 14932631
-          upper_uncertainty: 0.53
-          mag_quality: BB
           lower_uncertainty: 0.52
-          quality: 6.84685269835264
         id: 14932631
         event_group_id: 0
       properties:
@@ -10532,19 +10534,21 @@ components:
     ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup:
       example:
         type_magnitude: ML-VAX
+        upper_uncertainty: 0.53
+        mag_quality: BB
+        quality: 6.84685269835264
         id_localspace: 182491
         mag: 3.01
         originid: 14932631
+        inserted: 2016-06-22T16:52:06.26Z
         provenance:
           name: INGV
           version: hew1_mole
           softwarename: software
         localspace: hew1_mole
+        modified: 2016-06-22T16:52:06.26Z
         id: 14932631
-        upper_uncertainty: 0.53
-        mag_quality: BB
         lower_uncertainty: 0.52
-        quality: 6.84685269835264
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -10595,6 +10599,18 @@ components:
           example: 14932631
           format: int64
           type: integer
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
         provenance:
           $ref: '#/components/schemas/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup'
       type: object
@@ -11845,19 +11861,21 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           magnitude:
             type_magnitude: ML-VAX
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.84685269835264
             id_localspace: 182491
             mag: 3.01
             originid: 14932631
+            inserted: 2016-06-22T16:52:06.26Z
             provenance:
               name: INGV
               version: hew1_mole
               softwarename: software
             localspace: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            upper_uncertainty: 0.53
-            mag_quality: BB
             lower_uncertainty: 0.52
-            quality: 6.84685269835264
           id: 14932631
           event_group_id: 0
         - preferred_focalmechanism_id: 5
@@ -11905,19 +11923,21 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           magnitude:
             type_magnitude: ML-VAX
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.84685269835264
             id_localspace: 182491
             mag: 3.01
             originid: 14932631
+            inserted: 2016-06-22T16:52:06.26Z
             provenance:
               name: INGV
               version: hew1_mole
               softwarename: software
             localspace: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            upper_uncertainty: 0.53
-            mag_quality: BB
             lower_uncertainty: 0.52
-            quality: 6.84685269835264
           id: 14932631
           event_group_id: 0
         meta:

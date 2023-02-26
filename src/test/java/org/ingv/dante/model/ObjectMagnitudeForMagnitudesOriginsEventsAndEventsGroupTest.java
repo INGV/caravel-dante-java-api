@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
@@ -119,6 +120,22 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroupTest {
     @Test
     public void originidTest() {
         // TODO: test originid
+    }
+
+    /**
+     * Test the property 'modified'
+     */
+    @Test
+    public void modifiedTest() {
+        // TODO: test modified
+    }
+
+    /**
+     * Test the property 'inserted'
+     */
+    @Test
+    public void insertedTest() {
+        // TODO: test inserted
     }
 
     /**

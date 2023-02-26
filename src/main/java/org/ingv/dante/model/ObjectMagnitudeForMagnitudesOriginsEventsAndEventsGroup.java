@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -49,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-25T19:15:35.009566Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-26T09:40:18.214119Z[Etc/UTC]")
 public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -91,11 +92,29 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   @SerializedName(SERIALIZED_NAME_ORIGINID)
   private Long originid;
 
+  public static final String SERIALIZED_NAME_MODIFIED = "modified";
+  @SerializedName(SERIALIZED_NAME_MODIFIED)
+  private OffsetDateTime modified;
+
+  public static final String SERIALIZED_NAME_INSERTED = "inserted";
+  @SerializedName(SERIALIZED_NAME_INSERTED)
+  private OffsetDateTime inserted;
+
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
   private ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance;
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup() {
+  }
+
+  
+  public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup(
+     OffsetDateTime modified, 
+     OffsetDateTime inserted
+  ) {
+    this();
+    this.modified = modified;
+    this.inserted = inserted;
   }
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup id(Long id) {
@@ -328,6 +347,34 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   }
 
 
+   /**
+   * Last Review | timestamp
+   * @return modified
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
+
+  public OffsetDateTime getModified() {
+    return modified;
+  }
+
+
+
+
+   /**
+   * Insert time | timestamp
+   * @return inserted
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
+  public OffsetDateTime getInserted() {
+    return inserted;
+  }
+
+
+
+
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup provenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     
     this.provenance = provenance;
@@ -406,6 +453,8 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
         Objects.equals(this.quality, objectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.quality) &&
         Objects.equals(this.magQuality, objectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.magQuality) &&
         Objects.equals(this.originid, objectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.originid) &&
+        Objects.equals(this.modified, objectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.modified) &&
+        Objects.equals(this.inserted, objectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.inserted) &&
         Objects.equals(this.provenance, objectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.provenance)&&
         Objects.equals(this.additionalProperties, objectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.additionalProperties);
   }
@@ -416,7 +465,7 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idLocalspace, localspace, mag, typeMagnitude, lowerUncertainty, upperUncertainty, quality, magQuality, originid, provenance, additionalProperties);
+    return Objects.hash(id, idLocalspace, localspace, mag, typeMagnitude, lowerUncertainty, upperUncertainty, quality, magQuality, originid, modified, inserted, provenance, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -440,6 +489,8 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     sb.append("    quality: ").append(toIndentedString(quality)).append("\n");
     sb.append("    magQuality: ").append(toIndentedString(magQuality)).append("\n");
     sb.append("    originid: ").append(toIndentedString(originid)).append("\n");
+    sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
+    sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
@@ -474,6 +525,8 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     openapiFields.add("quality");
     openapiFields.add("mag_quality");
     openapiFields.add("originid");
+    openapiFields.add("modified");
+    openapiFields.add("inserted");
     openapiFields.add("provenance");
 
     // a set of required properties/fields (JSON key names)

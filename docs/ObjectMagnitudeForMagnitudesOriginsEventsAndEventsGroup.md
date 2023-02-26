@@ -17,6 +17,8 @@
 |**quality** | **Double** | quality | double |  [optional] |
 |**magQuality** | **String** | INGV quality code of the magnitude (computed by ew2moledb) | char(2) |  [optional] |
 |**originid** | **Long** | Unique incremental id | bigint(20) |  [optional] |
+|**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
+|**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
 |**provenance** | [**ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup**](ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.md) |  |  [optional] |
 
 
