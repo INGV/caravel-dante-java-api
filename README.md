@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 2.83.0-dev
-  - Build date: 2023-02-27T17:40:18.581710Z[Etc/UTC]
+  - Build date: 2023-03-08T11:32:05.826797Z[Etc/UTC]
 
   
 
@@ -248,6 +248,7 @@ Class | Method | HTTP request | Description
  - [AddTypeEventRequest](docs/AddTypeEventRequest.md)
  - [AddTypeMagnitudeRequest](docs/AddTypeMagnitudeRequest.md)
  - [AddTypeOriginRequest](docs/AddTypeOriginRequest.md)
+ - [Environment](docs/Environment.md)
  - [GetCatalog200Response](docs/GetCatalog200Response.md)
  - [GetCatalogMetadata200Response](docs/GetCatalogMetadata200Response.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)

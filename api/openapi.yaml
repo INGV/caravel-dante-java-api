@@ -6838,7 +6838,7 @@ components:
           type: string
         priority:
           default: 0
-          description: Former provenance id | int(11)
+          description: Priority | int(8)
           example: 0
           format: int64
           type: integer
@@ -6918,7 +6918,7 @@ components:
           type: string
         priority:
           default: 0
-          description: Former provenance id | int(11)
+          description: Priority | int(8)
           example: 0
           format: int64
           type: integer
@@ -7094,11 +7094,13 @@ components:
       type: object
     ObjectTableLocalspace:
       example:
+        environment: development
         inserted: 2016-06-22T16:52:06.26Z
         name: hew1_mole
         description: Auto added
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
+        priority: 0
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -7116,6 +7118,14 @@ components:
           example: Auto added
           nullable: true
           type: string
+        priority:
+          default: 0
+          description: Priority | int(8)
+          example: 0
+          format: int64
+          type: integer
+        environment:
+          $ref: '#/components/schemas/environment'
         modified:
           description: Last Review | timestamp
           example: 2016-06-22T16:52:06.26Z
@@ -9409,7 +9419,7 @@ components:
         description: Auto added
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
-        priority: 100
+        priority: 0
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -9435,8 +9445,8 @@ components:
           type: string
         priority:
           default: 0
-          description: Type origin priority | tinyint(4)
-          example: 100
+          description: Priority | int(8)
+          example: 0
           format: int64
           type: integer
         modified:
@@ -9498,7 +9508,7 @@ components:
         modified: 2016-06-22T16:52:06.26Z
         minmag: 1.2
         id: 14932631
-        priority: 1
+        priority: 0
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -9512,8 +9522,8 @@ components:
           type: string
         priority:
           default: 0
-          description: Type magnitude priority | int(8)
-          example: 1
+          description: Priority | int(8)
+          example: 0
           format: int64
           type: integer
         minmag:
@@ -11627,9 +11637,9 @@ components:
       example: hew10.ingv.it
       nullable: true
       type: string
-    provenance__priority:
+    priority:
       default: 0
-      description: Former provenance id | int(11)
+      description: Priority | int(8)
       example: 0
       format: int64
       type: integer
@@ -11668,6 +11678,18 @@ components:
       format: int64
       readOnly: true
       type: integer
+    environment:
+      default: development
+      description: "Environment (es:development, testing, staging, production, external)\
+        \ | varchar(255)"
+      enum:
+      - development
+      - testing
+      - staging
+      - production
+      - external
+      example: development
+      type: string
     pickew__pamp:
       description: peak P-wave half amplitude | double(22)
       example: 283
@@ -11778,18 +11800,6 @@ components:
         | bigint(20)
       format: int64
       readOnly: true
-      type: integer
-    type_origin__priority:
-      default: 0
-      description: Type origin priority | tinyint(4)
-      example: 100
-      format: int64
-      type: integer
-    type_magnitude__priority:
-      default: 0
-      description: Type magnitude priority | int(8)
-      example: 1
-      format: int64
       type: integer
     type_magnitude__minmag:
       description: Minimum magnitude value | float(4)

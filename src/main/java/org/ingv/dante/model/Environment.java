@@ -13,87 +13,67 @@
 
 package org.ingv.dante.model;
 
+import java.util.Objects;
+import java.util.Arrays;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import java.time.OffsetDateTime;
-import org.ingv.dante.model.Environment;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
-
 
 /**
- * Model tests for ObjectTableLocalspace
+ * Environment (es:development, testing, staging, production, external) | varchar(255)
  */
-public class ObjectTableLocalspaceTest {
-    private final ObjectTableLocalspace model = new ObjectTableLocalspace();
+@JsonAdapter(Environment.Adapter.class)
+public enum Environment {
+  
+  DEVELOPMENT("development"),
+  
+  TESTING("testing"),
+  
+  STAGING("staging"),
+  
+  PRODUCTION("production"),
+  
+  EXTERNAL("external");
 
-    /**
-     * Model tests for ObjectTableLocalspace
-     */
-    @Test
-    public void testObjectTableLocalspace() {
-        // TODO: test ObjectTableLocalspace
+  private String value;
+
+  Environment(String value) {
+    this.value = value;
+  }
+
+  public String getValue() {
+    return value;
+  }
+
+  @Override
+  public String toString() {
+    return String.valueOf(value);
+  }
+
+  public static Environment fromValue(String value) {
+    for (Environment b : Environment.values()) {
+      if (b.value.equals(value)) {
+        return b;
+      }
+    }
+    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+  }
+
+  public static class Adapter extends TypeAdapter<Environment> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final Environment enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
     }
 
-    /**
-     * Test the property 'id'
-     */
-    @Test
-    public void idTest() {
-        // TODO: test id
+    @Override
+    public Environment read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return Environment.fromValue(value);
     }
-
-    /**
-     * Test the property 'name'
-     */
-    @Test
-    public void nameTest() {
-        // TODO: test name
-    }
-
-    /**
-     * Test the property 'description'
-     */
-    @Test
-    public void descriptionTest() {
-        // TODO: test description
-    }
-
-    /**
-     * Test the property 'priority'
-     */
-    @Test
-    public void priorityTest() {
-        // TODO: test priority
-    }
-
-    /**
-     * Test the property 'environment'
-     */
-    @Test
-    public void environmentTest() {
-        // TODO: test environment
-    }
-
-    /**
-     * Test the property 'modified'
-     */
-    @Test
-    public void modifiedTest() {
-        // TODO: test modified
-    }
-
-    /**
-     * Test the property 'inserted'
-     */
-    @Test
-    public void insertedTest() {
-        // TODO: test inserted
-    }
-
+  }
 }
+

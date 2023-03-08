@@ -18,7 +18,7 @@
 |**username** | **String** | User name | char(255) |  [optional] |
 |**hostname** | **String** | Hostname | char(255) |  [optional] |
 |**description** | **String** | Additional information | char(255) |  [optional] |
-|**priority** | **Long** | Former provenance id | int(11) |  [optional] |
+|**priority** | **Long** | Priority | int(8) |  [optional] |
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
 

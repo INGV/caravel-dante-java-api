@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import org.ingv.dante.model.Environment;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -48,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableLocalspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-27T17:40:18.581710Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-08T11:32:05.826797Z[Etc/UTC]")
 public class ObjectTableLocalspace {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -61,6 +62,14 @@ public class ObjectTableLocalspace {
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
+
+  public static final String SERIALIZED_NAME_PRIORITY = "priority";
+  @SerializedName(SERIALIZED_NAME_PRIORITY)
+  private Long priority = 0l;
+
+  public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
+  @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
+  private Environment environment = Environment.DEVELOPMENT;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
@@ -139,6 +148,50 @@ public class ObjectTableLocalspace {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+
+  public ObjectTableLocalspace priority(Long priority) {
+    
+    this.priority = priority;
+    return this;
+  }
+
+   /**
+   * Priority | int(8)
+   * @return priority
+  **/
+  @javax.annotation.Nullable
+
+  public Long getPriority() {
+    return priority;
+  }
+
+
+  public void setPriority(Long priority) {
+    this.priority = priority;
+  }
+
+
+  public ObjectTableLocalspace environment(Environment environment) {
+    
+    this.environment = environment;
+    return this;
+  }
+
+   /**
+   * Get environment
+   * @return environment
+  **/
+  @javax.annotation.Nullable
+
+  public Environment getEnvironment() {
+    return environment;
+  }
+
+
+  public void setEnvironment(Environment environment) {
+    this.environment = environment;
   }
 
 
@@ -225,6 +278,8 @@ public class ObjectTableLocalspace {
     return Objects.equals(this.id, objectTableLocalspace.id) &&
         Objects.equals(this.name, objectTableLocalspace.name) &&
         Objects.equals(this.description, objectTableLocalspace.description) &&
+        Objects.equals(this.priority, objectTableLocalspace.priority) &&
+        Objects.equals(this.environment, objectTableLocalspace.environment) &&
         Objects.equals(this.modified, objectTableLocalspace.modified) &&
         Objects.equals(this.inserted, objectTableLocalspace.inserted)&&
         Objects.equals(this.additionalProperties, objectTableLocalspace.additionalProperties);
@@ -236,7 +291,7 @@ public class ObjectTableLocalspace {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, description, modified, inserted, additionalProperties);
+    return Objects.hash(id, name, description, priority, environment, modified, inserted, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -253,6 +308,8 @@ public class ObjectTableLocalspace {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
+    sb.append("    environment: ").append(toIndentedString(environment)).append("\n");
     sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
@@ -281,6 +338,8 @@ public class ObjectTableLocalspace {
     openapiFields.add("id");
     openapiFields.add("name");
     openapiFields.add("description");
+    openapiFields.add("priority");
+    openapiFields.add("environment");
     openapiFields.add("modified");
     openapiFields.add("inserted");
 

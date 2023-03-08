@@ -13,87 +13,21 @@
 
 package org.ingv.dante.model;
 
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import java.time.OffsetDateTime;
-import org.ingv.dante.model.Environment;
-import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectTableLocalspace
+ * Model tests for Environment
  */
-public class ObjectTableLocalspaceTest {
-    private final ObjectTableLocalspace model = new ObjectTableLocalspace();
-
+public class EnvironmentTest {
     /**
-     * Model tests for ObjectTableLocalspace
+     * Model tests for Environment
      */
     @Test
-    public void testObjectTableLocalspace() {
-        // TODO: test ObjectTableLocalspace
-    }
-
-    /**
-     * Test the property 'id'
-     */
-    @Test
-    public void idTest() {
-        // TODO: test id
-    }
-
-    /**
-     * Test the property 'name'
-     */
-    @Test
-    public void nameTest() {
-        // TODO: test name
-    }
-
-    /**
-     * Test the property 'description'
-     */
-    @Test
-    public void descriptionTest() {
-        // TODO: test description
-    }
-
-    /**
-     * Test the property 'priority'
-     */
-    @Test
-    public void priorityTest() {
-        // TODO: test priority
-    }
-
-    /**
-     * Test the property 'environment'
-     */
-    @Test
-    public void environmentTest() {
-        // TODO: test environment
-    }
-
-    /**
-     * Test the property 'modified'
-     */
-    @Test
-    public void modifiedTest() {
-        // TODO: test modified
-    }
-
-    /**
-     * Test the property 'inserted'
-     */
-    @Test
-    public void insertedTest() {
-        // TODO: test inserted
+    public void testEnvironment() {
+        // TODO: test Environment
     }
 
 }
