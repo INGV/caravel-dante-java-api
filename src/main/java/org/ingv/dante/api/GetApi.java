@@ -109,8 +109,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -136,7 +140,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getAllCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -237,12 +241,28 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheretypeoriginvaluein", wheretypeoriginvaluein));
         }
 
-        if (wherelocalspacenamein != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
+        if (whereeventlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereeventlocalspaceenvironmentin", whereeventlocalspaceenvironmentin));
         }
 
-        if (wherelocalspacenameincolumn != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenameincolumn", wherelocalspacenameincolumn));
+        if (whereoriginlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereoriginlocalspaceenvironmentin", whereoriginlocalspaceenvironmentin));
+        }
+
+        if (wheremagnitudelocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "wheremagnitudelocalspaceenvironmentin", wheremagnitudelocalspaceenvironmentin));
+        }
+
+        if (whereeventlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereeventlocalspacenamein", whereeventlocalspacenamein));
+        }
+
+        if (whereoriginlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereoriginlocalspacenamein", whereoriginlocalspacenamein));
+        }
+
+        if (wheremagnitudelocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheremagnitudelocalspacenamein", wheremagnitudelocalspacenamein));
         }
 
         if (eventupdatedafter != null) {
@@ -306,8 +326,8 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getAllValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
-        return getAllCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+    private okhttp3.Call getAllValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        return getAllCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
 
     }
 
@@ -333,8 +353,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -359,8 +383,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsGroup200Response getAll(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        ApiResponse<GetEventsGroup200Response> localVarResp = getAllWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+    public GetEventsGroup200Response getAll(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetEventsGroup200Response> localVarResp = getAllWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         return localVarResp.getData();
     }
 
@@ -386,8 +410,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -412,8 +440,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsGroup200Response> getAllWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        okhttp3.Call localVarCall = getAllValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
+    public ApiResponse<GetEventsGroup200Response> getAllWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getAllValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -440,8 +468,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -467,9 +499,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getAllAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+    public okhttp3.Call getAllAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getAllValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getAllValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -495,8 +527,16 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param updatedafteroperator Set the \&quot;operator\&quot; to use when \&quot;eventupdatedafter\&quot;, \&quot;originupdatedafter\&quot; and \&quot;magnitudeupdatedafter\&quot; are set. (optional, default to or)
      * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
@@ -524,7 +564,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCatalogCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String name, String doi, String wherenamelike, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCatalogCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String name, String doi, String wherenamelike, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -625,12 +665,44 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheretypeoriginvaluein", wheretypeoriginvaluein));
         }
 
-        if (wherelocalspacenamein != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
+        if (whereeventlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereeventlocalspaceenvironmentin", whereeventlocalspaceenvironmentin));
         }
 
-        if (wherelocalspacenameincolumn != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenameincolumn", wherelocalspacenameincolumn));
+        if (whereoriginlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereoriginlocalspaceenvironmentin", whereoriginlocalspaceenvironmentin));
+        }
+
+        if (wheremagnitudelocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "wheremagnitudelocalspaceenvironmentin", wheremagnitudelocalspaceenvironmentin));
+        }
+
+        if (whereeventlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereeventlocalspacenamein", whereeventlocalspacenamein));
+        }
+
+        if (whereoriginlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereoriginlocalspacenamein", whereoriginlocalspacenamein));
+        }
+
+        if (wheremagnitudelocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheremagnitudelocalspacenamein", wheremagnitudelocalspacenamein));
+        }
+
+        if (eventupdatedafter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("eventupdatedafter", eventupdatedafter));
+        }
+
+        if (originupdatedafter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("originupdatedafter", originupdatedafter));
+        }
+
+        if (magnitudeupdatedafter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("magnitudeupdatedafter", magnitudeupdatedafter));
+        }
+
+        if (updatedafteroperator != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("updatedafteroperator", updatedafteroperator));
         }
 
         if (whereflagsin != null) {
@@ -702,8 +774,8 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCatalogValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String name, String doi, String wherenamelike, final ApiCallback _callback) throws ApiException {
-        return getCatalogCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike, _callback);
+    private okhttp3.Call getCatalogValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String name, String doi, String wherenamelike, final ApiCallback _callback) throws ApiException {
+        return getCatalogCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike, _callback);
 
     }
 
@@ -729,8 +801,16 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param updatedafteroperator Set the \&quot;operator\&quot; to use when \&quot;eventupdatedafter\&quot;, \&quot;originupdatedafter\&quot; and \&quot;magnitudeupdatedafter\&quot; are set. (optional, default to or)
      * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
@@ -757,8 +837,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetCatalog200Response getCatalog(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String name, String doi, String wherenamelike) throws ApiException {
-        ApiResponse<GetCatalog200Response> localVarResp = getCatalogWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
+    public GetCatalog200Response getCatalog(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String name, String doi, String wherenamelike) throws ApiException {
+        ApiResponse<GetCatalog200Response> localVarResp = getCatalogWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
         return localVarResp.getData();
     }
 
@@ -784,8 +864,16 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param updatedafteroperator Set the \&quot;operator\&quot; to use when \&quot;eventupdatedafter\&quot;, \&quot;originupdatedafter\&quot; and \&quot;magnitudeupdatedafter\&quot; are set. (optional, default to or)
      * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
@@ -812,8 +900,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetCatalog200Response> getCatalogWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String name, String doi, String wherenamelike) throws ApiException {
-        okhttp3.Call localVarCall = getCatalogValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike, null);
+    public ApiResponse<GetCatalog200Response> getCatalogWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String name, String doi, String wherenamelike) throws ApiException {
+        okhttp3.Call localVarCall = getCatalogValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike, null);
         Type localVarReturnType = new TypeToken<GetCatalog200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -840,8 +928,16 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
+     * @param updatedafteroperator Set the \&quot;operator\&quot; to use when \&quot;eventupdatedafter\&quot;, \&quot;originupdatedafter\&quot; and \&quot;magnitudeupdatedafter\&quot; are set. (optional, default to or)
      * @param whereflagsin Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). (optional)
      * @param orderby Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) (optional)
      * @param eventGroupId Select events with same event_group_id. (optional)
@@ -869,9 +965,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCatalogAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String name, String doi, String wherenamelike, final ApiCallback<GetCatalog200Response> _callback) throws ApiException {
+    public okhttp3.Call getCatalogAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String name, String doi, String wherenamelike, final ApiCallback<GetCatalog200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getCatalogValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike, _callback);
+        okhttp3.Call localVarCall = getCatalogValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike, _callback);
         Type localVarReturnType = new TypeToken<GetCatalog200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1229,8 +1325,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -1256,7 +1356,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1357,12 +1457,28 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheretypeoriginvaluein", wheretypeoriginvaluein));
         }
 
-        if (wherelocalspacenamein != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
+        if (whereeventlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereeventlocalspaceenvironmentin", whereeventlocalspaceenvironmentin));
         }
 
-        if (wherelocalspacenameincolumn != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenameincolumn", wherelocalspacenameincolumn));
+        if (whereoriginlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereoriginlocalspaceenvironmentin", whereoriginlocalspaceenvironmentin));
+        }
+
+        if (wheremagnitudelocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "wheremagnitudelocalspaceenvironmentin", wheremagnitudelocalspaceenvironmentin));
+        }
+
+        if (whereeventlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereeventlocalspacenamein", whereeventlocalspacenamein));
+        }
+
+        if (whereoriginlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereoriginlocalspacenamein", whereoriginlocalspacenamein));
+        }
+
+        if (wheremagnitudelocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheremagnitudelocalspacenamein", wheremagnitudelocalspacenamein));
         }
 
         if (eventupdatedafter != null) {
@@ -1426,8 +1542,8 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
-        return getEventsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+    private okhttp3.Call getEventsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        return getEventsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
 
     }
 
@@ -1453,8 +1569,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -1479,8 +1599,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsGroup200Response getEvents(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        ApiResponse<GetEventsGroup200Response> localVarResp = getEventsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+    public GetEventsGroup200Response getEvents(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetEventsGroup200Response> localVarResp = getEventsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         return localVarResp.getData();
     }
 
@@ -1506,8 +1626,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -1532,8 +1656,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsGroup200Response> getEventsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
+    public ApiResponse<GetEventsGroup200Response> getEventsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1560,8 +1684,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -1587,9 +1715,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+    public okhttp3.Call getEventsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getEventsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1615,8 +1743,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -1642,7 +1774,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsGroupCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventsGroupCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1743,12 +1875,28 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheretypeoriginvaluein", wheretypeoriginvaluein));
         }
 
-        if (wherelocalspacenamein != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
+        if (whereeventlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereeventlocalspaceenvironmentin", whereeventlocalspaceenvironmentin));
         }
 
-        if (wherelocalspacenameincolumn != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenameincolumn", wherelocalspacenameincolumn));
+        if (whereoriginlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereoriginlocalspaceenvironmentin", whereoriginlocalspaceenvironmentin));
+        }
+
+        if (wheremagnitudelocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "wheremagnitudelocalspaceenvironmentin", wheremagnitudelocalspaceenvironmentin));
+        }
+
+        if (whereeventlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereeventlocalspacenamein", whereeventlocalspacenamein));
+        }
+
+        if (whereoriginlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereoriginlocalspacenamein", whereoriginlocalspacenamein));
+        }
+
+        if (wheremagnitudelocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheremagnitudelocalspacenamein", wheremagnitudelocalspacenamein));
         }
 
         if (eventupdatedafter != null) {
@@ -1812,8 +1960,8 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventsGroupValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
-        return getEventsGroupCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+    private okhttp3.Call getEventsGroupValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        return getEventsGroupCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
 
     }
 
@@ -1839,8 +1987,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -1865,8 +2017,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsGroup200Response getEventsGroup(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        ApiResponse<GetEventsGroup200Response> localVarResp = getEventsGroupWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+    public GetEventsGroup200Response getEventsGroup(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetEventsGroup200Response> localVarResp = getEventsGroupWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         return localVarResp.getData();
     }
 
@@ -1892,8 +2044,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -1918,8 +2074,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsGroup200Response> getEventsGroupWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        okhttp3.Call localVarCall = getEventsGroupValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
+    public ApiResponse<GetEventsGroup200Response> getEventsGroupWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getEventsGroupValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1946,8 +2102,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -1973,9 +2133,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventsGroupAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+    public okhttp3.Call getEventsGroupAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventsGroupValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getEventsGroupValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -2139,8 +2299,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -2166,7 +2330,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMagnitudesCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getMagnitudesCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2267,12 +2431,28 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheretypeoriginvaluein", wheretypeoriginvaluein));
         }
 
-        if (wherelocalspacenamein != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
+        if (whereeventlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereeventlocalspaceenvironmentin", whereeventlocalspaceenvironmentin));
         }
 
-        if (wherelocalspacenameincolumn != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenameincolumn", wherelocalspacenameincolumn));
+        if (whereoriginlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereoriginlocalspaceenvironmentin", whereoriginlocalspaceenvironmentin));
+        }
+
+        if (wheremagnitudelocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "wheremagnitudelocalspaceenvironmentin", wheremagnitudelocalspaceenvironmentin));
+        }
+
+        if (whereeventlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereeventlocalspacenamein", whereeventlocalspacenamein));
+        }
+
+        if (whereoriginlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereoriginlocalspacenamein", whereoriginlocalspacenamein));
+        }
+
+        if (wheremagnitudelocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheremagnitudelocalspacenamein", wheremagnitudelocalspacenamein));
         }
 
         if (eventupdatedafter != null) {
@@ -2336,8 +2516,8 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getMagnitudesValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
-        return getMagnitudesCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+    private okhttp3.Call getMagnitudesValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        return getMagnitudesCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
 
     }
 
@@ -2363,8 +2543,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -2389,8 +2573,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsGroup200Response getMagnitudes(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        ApiResponse<GetEventsGroup200Response> localVarResp = getMagnitudesWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+    public GetEventsGroup200Response getMagnitudes(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetEventsGroup200Response> localVarResp = getMagnitudesWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         return localVarResp.getData();
     }
 
@@ -2416,8 +2600,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -2442,8 +2630,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsGroup200Response> getMagnitudesWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        okhttp3.Call localVarCall = getMagnitudesValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
+    public ApiResponse<GetEventsGroup200Response> getMagnitudesWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getMagnitudesValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2470,8 +2658,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -2497,9 +2689,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getMagnitudesAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+    public okhttp3.Call getMagnitudesAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getMagnitudesValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getMagnitudesValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -3039,8 +3231,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -3066,7 +3262,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOriginsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getOriginsCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3167,12 +3363,28 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheretypeoriginvaluein", wheretypeoriginvaluein));
         }
 
-        if (wherelocalspacenamein != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
+        if (whereeventlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereeventlocalspaceenvironmentin", whereeventlocalspaceenvironmentin));
         }
 
-        if (wherelocalspacenameincolumn != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenameincolumn", wherelocalspacenameincolumn));
+        if (whereoriginlocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "whereoriginlocalspaceenvironmentin", whereoriginlocalspaceenvironmentin));
+        }
+
+        if (wheremagnitudelocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "wheremagnitudelocalspaceenvironmentin", wheremagnitudelocalspaceenvironmentin));
+        }
+
+        if (whereeventlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereeventlocalspacenamein", whereeventlocalspacenamein));
+        }
+
+        if (whereoriginlocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("whereoriginlocalspacenamein", whereoriginlocalspacenamein));
+        }
+
+        if (wheremagnitudelocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wheremagnitudelocalspacenamein", wheremagnitudelocalspacenamein));
         }
 
         if (eventupdatedafter != null) {
@@ -3236,8 +3448,8 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getOriginsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
-        return getOriginsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+    private okhttp3.Call getOriginsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        return getOriginsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
 
     }
 
@@ -3263,8 +3475,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -3289,8 +3505,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsGroup200Response getOrigins(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        ApiResponse<GetEventsGroup200Response> localVarResp = getOriginsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+    public GetEventsGroup200Response getOrigins(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetEventsGroup200Response> localVarResp = getOriginsWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         return localVarResp.getData();
     }
 
@@ -3316,8 +3532,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -3342,8 +3562,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsGroup200Response> getOriginsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
-        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
+    public ApiResponse<GetEventsGroup200Response> getOriginsWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, null);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -3370,8 +3590,12 @@ public class GetApi {
      * @param mintypeoriginvalue Filter the output to type_origin.version_value (i.e. 0). (optional)
      * @param maxtypeoriginvalue Filter the output to type_origin.version_value (i.e. 1000). (optional)
      * @param wheretypeoriginvaluein Filter type_origin.version_value (i.e. 0,1,200). (optional)
-     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; on column (see &#39;wherelocalspacenameincolumn&#39; param) by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
-     * @param wherelocalspacenameincolumn Set the column to apply \&quot;wherelocalspacenamein\&quot; filter (i.e. \&quot;origin\&quot; means \&quot;origin.localspace.name\&quot;); default \&quot;event\&quot;. (optional, default to event)
+     * @param whereeventlocalspaceenvironmentin Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereoriginlocalspaceenvironmentin Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wheremagnitudelocalspaceenvironmentin Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param whereeventlocalspacenamein Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param whereoriginlocalspacenamein Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param wheremagnitudelocalspacenamein Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
      * @param eventupdatedafter Limit data to \&quot;event.modified\&quot; after; if \&quot;originupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param originupdatedafter Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
      * @param magnitudeupdatedafter Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. (optional)
@@ -3397,9 +3621,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getOriginsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, String wherelocalspacenamein, String wherelocalspacenameincolumn, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+    public okhttp3.Call getOriginsAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, String wheretypeoriginvaluein, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wherelocalspacenamein, wherelocalspacenameincolumn, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
+        okhttp3.Call localVarCall = getOriginsValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, _callback);
         Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
