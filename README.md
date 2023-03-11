@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 2.80.0
-  - Build date: 2023-02-26T10:09:32.349564Z[Etc/UTC]
+- API version: 2.83.1
+  - Build date: 2023-03-11T18:52:27.526777Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>2.80.0</version>
+  <version>2.83.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.80.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.83.1"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-2.80.0.jar`
+* `target/java-openapi-generator-cli-dante-2.83.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -248,6 +248,7 @@ Class | Method | HTTP request | Description
  - [AddTypeEventRequest](docs/AddTypeEventRequest.md)
  - [AddTypeMagnitudeRequest](docs/AddTypeMagnitudeRequest.md)
  - [AddTypeOriginRequest](docs/AddTypeOriginRequest.md)
+ - [Environment](docs/Environment.md)
  - [GetCatalog200Response](docs/GetCatalog200Response.md)
  - [GetCatalogMetadata200Response](docs/GetCatalogMetadata200Response.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)

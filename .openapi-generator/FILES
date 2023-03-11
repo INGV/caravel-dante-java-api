@@ -59,6 +59,7 @@ docs/AddTypeMagnitudeRequest.md
 docs/AddTypeOriginRequest.md
 docs/DeleteApi.md
 docs/EarthwormApiApi.md
+docs/Environment.md
 docs/GetApi.md
 docs/GetCatalog200Response.md
 docs/GetCatalogMetadata200Response.md
@@ -248,6 +249,7 @@ src/main/java/org/ingv/dante/model/AddStrongmotionRequestData.java
 src/main/java/org/ingv/dante/model/AddTypeEventRequest.java
 src/main/java/org/ingv/dante/model/AddTypeMagnitudeRequest.java
 src/main/java/org/ingv/dante/model/AddTypeOriginRequest.java
+src/main/java/org/ingv/dante/model/Environment.java
 src/main/java/org/ingv/dante/model/GetCatalog200Response.java
 src/main/java/org/ingv/dante/model/GetCatalogMetadata200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200Response.java
@@ -406,6 +408,7 @@ src/test/java/org/ingv/dante/model/AddStrongmotionRequestTest.java
 src/test/java/org/ingv/dante/model/AddTypeEventRequestTest.java
 src/test/java/org/ingv/dante/model/AddTypeMagnitudeRequestTest.java
 src/test/java/org/ingv/dante/model/AddTypeOriginRequestTest.java
+src/test/java/org/ingv/dante/model/EnvironmentTest.java
 src/test/java/org/ingv/dante/model/GetCatalog200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetCatalogMetadata200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseDataTest.java

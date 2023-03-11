@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 2.81.0
+  version: 2.83.1
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -348,25 +348,80 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn'\
-          \ param) by comma separated value (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter by \"event.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
         in: query
-        name: wherelocalspacenamein
+        name: whereeventlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"origin.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: whereoriginlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"event.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: whereeventlocalspacenamein
         required: false
         schema:
           format: string
           type: string
-      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
-          "origin" means "origin.localspace.name"); default "event".
+      - description: "Filter by \"origin.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
         in: query
-        name: wherelocalspacenameincolumn
+        name: whereoriginlocalspacenamein
         required: false
         schema:
-          default: event
-          enum:
-          - event
-          - origin
-          - magnitude
+          format: string
+          type: string
+      - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspacenamein
+        required: false
+        schema:
+          format: string
           type: string
       - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
           \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
@@ -659,25 +714,80 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn'\
-          \ param) by comma separated value (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter by \"event.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
         in: query
-        name: wherelocalspacenamein
+        name: whereeventlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"origin.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: whereoriginlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"event.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: whereeventlocalspacenamein
         required: false
         schema:
           format: string
           type: string
-      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
-          "origin" means "origin.localspace.name"); default "event".
+      - description: "Filter by \"origin.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
         in: query
-        name: wherelocalspacenameincolumn
+        name: whereoriginlocalspacenamein
         required: false
         schema:
-          default: event
-          enum:
-          - event
-          - origin
-          - magnitude
+          format: string
+          type: string
+      - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspacenamein
+        required: false
+        schema:
+          format: string
           type: string
       - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
           \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
@@ -969,25 +1079,80 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn'\
-          \ param) by comma separated value (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter by \"event.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
         in: query
-        name: wherelocalspacenamein
+        name: whereeventlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"origin.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: whereoriginlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"event.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: whereeventlocalspacenamein
         required: false
         schema:
           format: string
           type: string
-      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
-          "origin" means "origin.localspace.name"); default "event".
+      - description: "Filter by \"origin.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
         in: query
-        name: wherelocalspacenameincolumn
+        name: whereoriginlocalspacenamein
         required: false
         schema:
-          default: event
-          enum:
-          - event
-          - origin
-          - magnitude
+          format: string
+          type: string
+      - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspacenamein
+        required: false
+        schema:
+          format: string
           type: string
       - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
           \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
@@ -1278,25 +1443,80 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn'\
-          \ param) by comma separated value (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter by \"event.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
         in: query
-        name: wherelocalspacenamein
+        name: whereeventlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"origin.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: whereoriginlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"event.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: whereeventlocalspacenamein
         required: false
         schema:
           format: string
           type: string
-      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
-          "origin" means "origin.localspace.name"); default "event".
+      - description: "Filter by \"origin.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
         in: query
-        name: wherelocalspacenameincolumn
+        name: whereoriginlocalspacenamein
         required: false
         schema:
-          default: event
-          enum:
-          - event
-          - origin
-          - magnitude
+          format: string
+          type: string
+      - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspacenamein
+        required: false
+        schema:
+          format: string
           type: string
       - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
           \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
@@ -1587,25 +1807,80 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn'\
-          \ param) by comma separated value (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter by \"event.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
         in: query
-        name: wherelocalspacenamein
+        name: whereeventlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"origin.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: whereoriginlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"event.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: whereeventlocalspacenamein
         required: false
         schema:
           format: string
           type: string
-      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
-          "origin" means "origin.localspace.name"); default "event".
+      - description: "Filter by \"origin.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
         in: query
-        name: wherelocalspacenameincolumn
+        name: whereoriginlocalspacenamein
         required: false
         schema:
-          default: event
-          enum:
-          - event
-          - origin
-          - magnitude
+          format: string
+          type: string
+      - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspacenamein
+        required: false
+        schema:
+          format: string
           type: string
       - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
           \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
@@ -2262,25 +2537,118 @@ paths:
         schema:
           format: string
           type: string
-      - description: "Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn'\
-          \ param) by comma separated value (i.e. hew10_mole,hew20_mole)."
+      - description: "Filter by \"event.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
         in: query
-        name: wherelocalspacenamein
+        name: whereeventlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"origin.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: whereoriginlocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
+          \ value (i.e. development,staging)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            type: string
+          type: array
+      - description: "Filter by \"event.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: whereeventlocalspacenamein
         required: false
         schema:
           format: string
           type: string
-      - description: Set the column to apply "wherelocalspacenamein" filter (i.e.
-          "origin" means "origin.localspace.name"); default "event".
+      - description: "Filter by \"origin.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
         in: query
-        name: wherelocalspacenameincolumn
+        name: whereoriginlocalspacenamein
         required: false
         schema:
-          default: event
+          format: string
+          type: string
+      - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
+          \ (i.e. hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: wheremagnitudelocalspacenamein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
+        in: query
+        name: eventupdatedafter
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: "Limit data to \"origin.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\"\
+          \ is used."
+        in: query
+        name: originupdatedafter
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: "Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\"\
+          \ and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is\
+          \ used."
+        in: query
+        name: magnitudeupdatedafter
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: "Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\"\
+          \ and \"magnitudeupdatedafter\" are set."
+        in: query
+        name: updatedafteroperator
+        required: false
+        schema:
+          default: or
           enum:
-          - event
-          - origin
-          - magnitude
+          - and
+          - or
           type: string
       - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
         in: query
@@ -6257,27 +6625,86 @@ components:
       schema:
         format: string
         type: string
-    wherelocalspacenamein:
-      description: "Filter by \"localspace.name\" on column (see 'wherelocalspacenameincolumn'\
-        \ param) by comma separated value (i.e. hew10_mole,hew20_mole)."
+    whereeventlocalspaceenvironmentin:
+      description: "Filter by \"event.localspace.environment\" by comma separated\
+        \ value (i.e. development,staging)."
+      explode: false
       in: query
-      name: wherelocalspacenamein
+      name: whereeventlocalspaceenvironmentin
+      required: false
+      schema:
+        items:
+          enum:
+          - development
+          - testing
+          - staging
+          - production
+          - external
+          type: string
+        type: array
+    whereoriginlocalspaceenvironmentin:
+      description: "Filter by \"origin.localspace.environment\" by comma separated\
+        \ value (i.e. development,staging)."
+      explode: false
+      in: query
+      name: whereoriginlocalspaceenvironmentin
+      required: false
+      schema:
+        items:
+          enum:
+          - development
+          - testing
+          - staging
+          - production
+          - external
+          type: string
+        type: array
+    wheremagnitudelocalspaceenvironmentin:
+      description: "Filter by \"magnitude.localspace.environment\" by comma separated\
+        \ value (i.e. development,staging)."
+      explode: false
+      in: query
+      name: wheremagnitudelocalspaceenvironmentin
+      required: false
+      schema:
+        items:
+          enum:
+          - development
+          - testing
+          - staging
+          - production
+          - external
+          type: string
+        type: array
+    whereeventlocalspacenamein:
+      description: "Filter by \"event.localspace.name\" by comma separated value (i.e.\
+        \ hew10_mole,hew20_mole)."
+      explode: false
+      in: query
+      name: whereeventlocalspacenamein
       required: false
       schema:
         format: string
         type: string
-    wherelocalspacenameincolumn:
-      description: Set the column to apply "wherelocalspacenamein" filter (i.e. "origin"
-        means "origin.localspace.name"); default "event".
+    whereoriginlocalspacenamein:
+      description: "Filter by \"origin.localspace.name\" by comma separated value\
+        \ (i.e. hew10_mole,hew20_mole)."
+      explode: false
       in: query
-      name: wherelocalspacenameincolumn
+      name: whereoriginlocalspacenamein
       required: false
       schema:
-        default: event
-        enum:
-        - event
-        - origin
-        - magnitude
+        format: string
+        type: string
+    wheremagnitudelocalspacenamein:
+      description: "Filter by \"magnitude.localspace.name\" by comma separated value\
+        \ (i.e. hew10_mole,hew20_mole)."
+      explode: false
+      in: query
+      name: wheremagnitudelocalspacenamein
+      required: false
+      schema:
+        format: string
         type: string
     eventupdatedafter:
       description: "Limit data to \"event.modified\" after; if \"originupdatedafter\"\
@@ -6838,7 +7265,7 @@ components:
           type: string
         priority:
           default: 0
-          description: Former provenance id | int(11)
+          description: Priority | int(8)
           example: 0
           format: int64
           type: integer
@@ -6918,7 +7345,7 @@ components:
           type: string
         priority:
           default: 0
-          description: Former provenance id | int(11)
+          description: Priority | int(8)
           example: 0
           format: int64
           type: integer
@@ -7094,11 +7521,13 @@ components:
       type: object
     ObjectTableLocalspace:
       example:
+        environment: development
         inserted: 2016-06-22T16:52:06.26Z
         name: hew1_mole
         description: Auto added
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
+        priority: 0
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -7116,6 +7545,14 @@ components:
           example: Auto added
           nullable: true
           type: string
+        priority:
+          default: 0
+          description: Priority | int(8)
+          example: 0
+          format: int64
+          type: integer
+        environment:
+          $ref: '#/components/schemas/environment'
         modified:
           description: Last Review | timestamp
           example: 2016-06-22T16:52:06.26Z
@@ -9409,7 +9846,7 @@ components:
         description: Auto added
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
-        priority: 100
+        priority: 0
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -9435,8 +9872,8 @@ components:
           type: string
         priority:
           default: 0
-          description: Type origin priority | tinyint(4)
-          example: 100
+          description: Priority | int(8)
+          example: 0
           format: int64
           type: integer
         modified:
@@ -9498,7 +9935,7 @@ components:
         modified: 2016-06-22T16:52:06.26Z
         minmag: 1.2
         id: 14932631
-        priority: 1
+        priority: 0
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -9512,8 +9949,8 @@ components:
           type: string
         priority:
           default: 0
-          description: Type magnitude priority | int(8)
-          example: 1
+          description: Priority | int(8)
+          example: 0
           format: int64
           type: integer
         minmag:
@@ -11627,9 +12064,9 @@ components:
       example: hew10.ingv.it
       nullable: true
       type: string
-    provenance__priority:
+    priority:
       default: 0
-      description: Former provenance id | int(11)
+      description: Priority | int(8)
       example: 0
       format: int64
       type: integer
@@ -11668,6 +12105,18 @@ components:
       format: int64
       readOnly: true
       type: integer
+    environment:
+      default: development
+      description: "Environment (es:development, testing, staging, production, external)\
+        \ | varchar(255)"
+      enum:
+      - development
+      - testing
+      - staging
+      - production
+      - external
+      example: development
+      type: string
     pickew__pamp:
       description: peak P-wave half amplitude | double(22)
       example: 283
@@ -11778,18 +12227,6 @@ components:
         | bigint(20)
       format: int64
       readOnly: true
-      type: integer
-    type_origin__priority:
-      default: 0
-      description: Type origin priority | tinyint(4)
-      example: 100
-      format: int64
-      type: integer
-    type_magnitude__priority:
-      default: 0
-      description: Type magnitude priority | int(8)
-      example: 1
-      format: int64
       type: integer
     type_magnitude__minmag:
       description: Minimum magnitude value | float(4)
