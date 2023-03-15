@@ -46,7 +46,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectVwCatalogInnerAllOfCatalog
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-13T13:05:16.268414Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-15T11:52:07.894314Z[Etc/UTC]")
 public class ObjectVwCatalogInnerAllOfCatalog {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -60,9 +60,9 @@ public class ObjectVwCatalogInnerAllOfCatalog {
   @SerializedName(SERIALIZED_NAME_CHECK_ORIGIN_EVENTID)
   private Boolean checkOriginEventid;
 
-  public static final String SERIALIZED_NAME_CHECK_MAGNIRUDE_ORIGINID = "check_magnirude_originid";
-  @SerializedName(SERIALIZED_NAME_CHECK_MAGNIRUDE_ORIGINID)
-  private Boolean checkMagnirudeOriginid;
+  public static final String SERIALIZED_NAME_CHECK_MAGNITUDE_ORIGINID = "check_magnitude_originid";
+  @SerializedName(SERIALIZED_NAME_CHECK_MAGNITUDE_ORIGINID)
+  private Boolean checkMagnitudeOriginid;
 
   public ObjectVwCatalogInnerAllOfCatalog() {
   }
@@ -133,25 +133,25 @@ public class ObjectVwCatalogInnerAllOfCatalog {
   }
 
 
-  public ObjectVwCatalogInnerAllOfCatalog checkMagnirudeOriginid(Boolean checkMagnirudeOriginid) {
+  public ObjectVwCatalogInnerAllOfCatalog checkMagnitudeOriginid(Boolean checkMagnitudeOriginid) {
     
-    this.checkMagnirudeOriginid = checkMagnirudeOriginid;
+    this.checkMagnitudeOriginid = checkMagnitudeOriginid;
     return this;
   }
 
    /**
-   * Get checkMagnirudeOriginid
-   * @return checkMagnirudeOriginid
+   * Get checkMagnitudeOriginid
+   * @return checkMagnitudeOriginid
   **/
   @javax.annotation.Nullable
 
-  public Boolean getCheckMagnirudeOriginid() {
-    return checkMagnirudeOriginid;
+  public Boolean getCheckMagnitudeOriginid() {
+    return checkMagnitudeOriginid;
   }
 
 
-  public void setCheckMagnirudeOriginid(Boolean checkMagnirudeOriginid) {
-    this.checkMagnirudeOriginid = checkMagnirudeOriginid;
+  public void setCheckMagnitudeOriginid(Boolean checkMagnitudeOriginid) {
+    this.checkMagnitudeOriginid = checkMagnitudeOriginid;
   }
 
   /**
@@ -212,13 +212,13 @@ public class ObjectVwCatalogInnerAllOfCatalog {
     return Objects.equals(this.name, objectVwCatalogInnerAllOfCatalog.name) &&
         Objects.equals(this.doi, objectVwCatalogInnerAllOfCatalog.doi) &&
         Objects.equals(this.checkOriginEventid, objectVwCatalogInnerAllOfCatalog.checkOriginEventid) &&
-        Objects.equals(this.checkMagnirudeOriginid, objectVwCatalogInnerAllOfCatalog.checkMagnirudeOriginid)&&
+        Objects.equals(this.checkMagnitudeOriginid, objectVwCatalogInnerAllOfCatalog.checkMagnitudeOriginid)&&
         Objects.equals(this.additionalProperties, objectVwCatalogInnerAllOfCatalog.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, doi, checkOriginEventid, checkMagnirudeOriginid, additionalProperties);
+    return Objects.hash(name, doi, checkOriginEventid, checkMagnitudeOriginid, additionalProperties);
   }
 
   @Override
@@ -228,7 +228,7 @@ public class ObjectVwCatalogInnerAllOfCatalog {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    doi: ").append(toIndentedString(doi)).append("\n");
     sb.append("    checkOriginEventid: ").append(toIndentedString(checkOriginEventid)).append("\n");
-    sb.append("    checkMagnirudeOriginid: ").append(toIndentedString(checkMagnirudeOriginid)).append("\n");
+    sb.append("    checkMagnitudeOriginid: ").append(toIndentedString(checkMagnitudeOriginid)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -255,7 +255,7 @@ public class ObjectVwCatalogInnerAllOfCatalog {
     openapiFields.add("name");
     openapiFields.add("doi");
     openapiFields.add("check_origin_eventid");
-    openapiFields.add("check_magnirude_originid");
+    openapiFields.add("check_magnitude_originid");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

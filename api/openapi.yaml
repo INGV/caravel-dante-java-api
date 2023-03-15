@@ -349,7 +349,9 @@ paths:
           format: string
           type: string
       - description: "Filter by \"event.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereeventlocalspaceenvironmentin
@@ -365,7 +367,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereoriginlocalspaceenvironmentin
@@ -381,7 +385,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: wheremagnitudelocalspaceenvironmentin
@@ -397,7 +403,8 @@ paths:
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereoriginlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereeventlocalspacenamein
@@ -406,7 +413,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"origin.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereoriginlocalspacenamein
@@ -415,7 +423,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"whereoriginlocalspacenamein\"."
         explode: false
         in: query
         name: wheremagnitudelocalspacenamein
@@ -715,7 +724,9 @@ paths:
           format: string
           type: string
       - description: "Filter by \"event.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereeventlocalspaceenvironmentin
@@ -731,7 +742,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereoriginlocalspaceenvironmentin
@@ -747,7 +760,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: wheremagnitudelocalspaceenvironmentin
@@ -763,7 +778,8 @@ paths:
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereoriginlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereeventlocalspacenamein
@@ -772,7 +788,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"origin.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereoriginlocalspacenamein
@@ -781,7 +798,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"whereoriginlocalspacenamein\"."
         explode: false
         in: query
         name: wheremagnitudelocalspacenamein
@@ -1080,7 +1098,9 @@ paths:
           format: string
           type: string
       - description: "Filter by \"event.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereeventlocalspaceenvironmentin
@@ -1096,7 +1116,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereoriginlocalspaceenvironmentin
@@ -1112,7 +1134,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: wheremagnitudelocalspaceenvironmentin
@@ -1128,7 +1152,8 @@ paths:
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereoriginlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereeventlocalspacenamein
@@ -1137,7 +1162,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"origin.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereoriginlocalspacenamein
@@ -1146,7 +1172,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"whereoriginlocalspacenamein\"."
         explode: false
         in: query
         name: wheremagnitudelocalspacenamein
@@ -1444,7 +1471,9 @@ paths:
           format: string
           type: string
       - description: "Filter by \"event.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereeventlocalspaceenvironmentin
@@ -1460,7 +1489,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereoriginlocalspaceenvironmentin
@@ -1476,7 +1507,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: wheremagnitudelocalspaceenvironmentin
@@ -1492,7 +1525,8 @@ paths:
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereoriginlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereeventlocalspacenamein
@@ -1501,7 +1535,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"origin.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereoriginlocalspacenamein
@@ -1510,7 +1545,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"whereoriginlocalspacenamein\"."
         explode: false
         in: query
         name: wheremagnitudelocalspacenamein
@@ -1808,7 +1844,9 @@ paths:
           format: string
           type: string
       - description: "Filter by \"event.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereeventlocalspaceenvironmentin
@@ -1824,7 +1862,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereoriginlocalspaceenvironmentin
@@ -1840,7 +1880,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: wheremagnitudelocalspaceenvironmentin
@@ -1856,7 +1898,8 @@ paths:
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereoriginlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereeventlocalspacenamein
@@ -1865,7 +1908,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"origin.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereoriginlocalspacenamein
@@ -1874,7 +1918,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"whereoriginlocalspacenamein\"."
         explode: false
         in: query
         name: wheremagnitudelocalspacenamein
@@ -2538,7 +2583,9 @@ paths:
           format: string
           type: string
       - description: "Filter by \"event.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereeventlocalspaceenvironmentin
@@ -2554,7 +2601,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: whereoriginlocalspaceenvironmentin
@@ -2570,7 +2619,9 @@ paths:
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
-          \ value (i.e. development,staging)."
+          \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
+          whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\"\
+          ."
         explode: false
         in: query
         name: wheremagnitudelocalspaceenvironmentin
@@ -2586,7 +2637,8 @@ paths:
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereoriginlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereeventlocalspacenamein
@@ -2595,7 +2647,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"origin.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"wheremagnitudelocalspacenamein\"."
         explode: false
         in: query
         name: whereoriginlocalspacenamein
@@ -2604,7 +2657,8 @@ paths:
           format: string
           type: string
       - description: "Filter by \"magnitude.localspace.name\" by comma separated value\
-          \ (i.e. hew10_mole,hew20_mole)."
+          \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+          \ and \"whereoriginlocalspacenamein\"."
         explode: false
         in: query
         name: wheremagnitudelocalspacenamein
@@ -6627,7 +6681,8 @@ components:
         type: string
     whereeventlocalspaceenvironmentin:
       description: "Filter by \"event.localspace.environment\" by comma separated\
-        \ value (i.e. development,staging)."
+        \ value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\"\
+        \ and \"wheremagnitudelocalspaceenvironmentin\"."
       explode: false
       in: query
       name: whereeventlocalspaceenvironmentin
@@ -6644,7 +6699,8 @@ components:
         type: array
     whereoriginlocalspaceenvironmentin:
       description: "Filter by \"origin.localspace.environment\" by comma separated\
-        \ value (i.e. development,staging)."
+        \ value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\"\
+        \ and \"wheremagnitudelocalspaceenvironmentin\"."
       explode: false
       in: query
       name: whereoriginlocalspaceenvironmentin
@@ -6661,7 +6717,8 @@ components:
         type: array
     wheremagnitudelocalspaceenvironmentin:
       description: "Filter by \"magnitude.localspace.environment\" by comma separated\
-        \ value (i.e. development,staging)."
+        \ value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\"\
+        \ and \"whereoriginlocalspaceenvironmentin\"."
       explode: false
       in: query
       name: wheremagnitudelocalspaceenvironmentin
@@ -6678,7 +6735,8 @@ components:
         type: array
     whereeventlocalspacenamein:
       description: "Filter by \"event.localspace.name\" by comma separated value (i.e.\
-        \ hew10_mole,hew20_mole)."
+        \ hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereoriginlocalspacenamein\"\
+        \ and \"wheremagnitudelocalspacenamein\"."
       explode: false
       in: query
       name: whereeventlocalspacenamein
@@ -6688,7 +6746,8 @@ components:
         type: string
     whereoriginlocalspacenamein:
       description: "Filter by \"origin.localspace.name\" by comma separated value\
-        \ (i.e. hew10_mole,hew20_mole)."
+        \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+        \ and \"wheremagnitudelocalspacenamein\"."
       explode: false
       in: query
       name: whereoriginlocalspacenamein
@@ -6698,7 +6757,8 @@ components:
         type: string
     wheremagnitudelocalspacenamein:
       description: "Filter by \"magnitude.localspace.name\" by comma separated value\
-        \ (i.e. hew10_mole,hew20_mole)."
+        \ (i.e. hew10_mole,hew20_mole); this parameter is in \"OR\" with \"whereeventlocalspacenamein\"\
+        \ and \"whereoriginlocalspacenamein\"."
       explode: false
       in: query
       name: wheremagnitudelocalspacenamein
@@ -16231,7 +16291,7 @@ components:
           type: string
         check_origin_eventid:
           type: boolean
-        check_magnirude_originid:
+        check_magnitude_originid:
           type: boolean
       required:
       - name

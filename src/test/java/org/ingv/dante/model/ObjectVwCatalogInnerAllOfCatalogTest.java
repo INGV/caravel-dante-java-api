@@ -62,11 +62,11 @@ public class ObjectVwCatalogInnerAllOfCatalogTest {
     }
 
     /**
-     * Test the property 'checkMagnirudeOriginid'
+     * Test the property 'checkMagnitudeOriginid'
      */
     @Test
-    public void checkMagnirudeOriginidTest() {
-        // TODO: test checkMagnirudeOriginid
+    public void checkMagnitudeOriginidTest() {
+        // TODO: test checkMagnitudeOriginid
     }
 
 }
