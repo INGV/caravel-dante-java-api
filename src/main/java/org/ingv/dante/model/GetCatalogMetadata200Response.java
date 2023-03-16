@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * GetCatalogMetadata200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-16T09:48:09.502299Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-16T10:06:52.940687Z[Etc/UTC]")
 public class GetCatalogMetadata200Response {
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
