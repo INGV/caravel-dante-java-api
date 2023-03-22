@@ -48,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcPhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-20T17:45:29.729198Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-22T13:57:20.858167Z[Etc/UTC]")
 public class Hyp2000arcPhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -65,14 +65,6 @@ public class Hyp2000arcPhasesInner {
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
   private String loc = "--";
-
-  public static final String SERIALIZED_NAME_LATITUDE = "latitude";
-  @SerializedName(SERIALIZED_NAME_LATITUDE)
-  private Double latitude;
-
-  public static final String SERIALIZED_NAME_LONGITUDE = "longitude";
-  @SerializedName(SERIALIZED_NAME_LONGITUDE)
-  private Double longitude;
 
   public static final String SERIALIZED_NAME_PLABEL = "Plabel";
   @SerializedName(SERIALIZED_NAME_PLABEL)
@@ -290,54 +282,6 @@ public class Hyp2000arcPhasesInner {
 
   public void setLoc(String loc) {
     this.loc = loc;
-  }
-
-
-  public Hyp2000arcPhasesInner latitude(Double latitude) {
-    
-    this.latitude = latitude;
-    return this;
-  }
-
-   /**
-   * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
-   * minimum: -90
-   * maximum: 90
-   * @return latitude
-  **/
-  @javax.annotation.Nullable
-
-  public Double getLatitude() {
-    return latitude;
-  }
-
-
-  public void setLatitude(Double latitude) {
-    this.latitude = latitude;
-  }
-
-
-  public Hyp2000arcPhasesInner longitude(Double longitude) {
-    
-    this.longitude = longitude;
-    return this;
-  }
-
-   /**
-   * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
-   * minimum: -180
-   * maximum: 180
-   * @return longitude
-  **/
-  @javax.annotation.Nullable
-
-  public Double getLongitude() {
-    return longitude;
-  }
-
-
-  public void setLongitude(Double longitude) {
-    this.longitude = longitude;
   }
 
 
@@ -1103,8 +1047,6 @@ public class Hyp2000arcPhasesInner {
         Objects.equals(this.sta, hyp2000arcPhasesInner.sta) &&
         Objects.equals(this.comp, hyp2000arcPhasesInner.comp) &&
         Objects.equals(this.loc, hyp2000arcPhasesInner.loc) &&
-        Objects.equals(this.latitude, hyp2000arcPhasesInner.latitude) &&
-        Objects.equals(this.longitude, hyp2000arcPhasesInner.longitude) &&
         Objects.equals(this.plabel, hyp2000arcPhasesInner.plabel) &&
         Objects.equals(this.slabel, hyp2000arcPhasesInner.slabel) &&
         Objects.equals(this.ponset, hyp2000arcPhasesInner.ponset) &&
@@ -1142,7 +1084,7 @@ public class Hyp2000arcPhasesInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(net, sta, comp, loc, latitude, longitude, plabel, slabel, ponset, sonset, pat, sat, pres, sres, pqual, squal, codalen, codawt, pfm, sfm, datasrc, md, azm, takeoff, dist, pwt, swt, pamp, codalenObs, ccntr, caav, amplitude, ampUnitsCode, ampType, ampMag, ampMagWeightCode, importanceP, importanceS, additionalProperties);
+    return Objects.hash(net, sta, comp, loc, plabel, slabel, ponset, sonset, pat, sat, pres, sres, pqual, squal, codalen, codawt, pfm, sfm, datasrc, md, azm, takeoff, dist, pwt, swt, pamp, codalenObs, ccntr, caav, amplitude, ampUnitsCode, ampType, ampMag, ampMagWeightCode, importanceP, importanceS, additionalProperties);
   }
 
   @Override
@@ -1153,8 +1095,6 @@ public class Hyp2000arcPhasesInner {
     sb.append("    sta: ").append(toIndentedString(sta)).append("\n");
     sb.append("    comp: ").append(toIndentedString(comp)).append("\n");
     sb.append("    loc: ").append(toIndentedString(loc)).append("\n");
-    sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
-    sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
     sb.append("    plabel: ").append(toIndentedString(plabel)).append("\n");
     sb.append("    slabel: ").append(toIndentedString(slabel)).append("\n");
     sb.append("    ponset: ").append(toIndentedString(ponset)).append("\n");
@@ -1214,8 +1154,6 @@ public class Hyp2000arcPhasesInner {
     openapiFields.add("sta");
     openapiFields.add("comp");
     openapiFields.add("loc");
-    openapiFields.add("latitude");
-    openapiFields.add("longitude");
     openapiFields.add("Plabel");
     openapiFields.add("Slabel");
     openapiFields.add("Ponset");

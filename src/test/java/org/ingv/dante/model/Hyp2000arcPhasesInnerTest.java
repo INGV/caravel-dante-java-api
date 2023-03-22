@@ -72,22 +72,6 @@ public class Hyp2000arcPhasesInnerTest {
     }
 
     /**
-     * Test the property 'latitude'
-     */
-    @Test
-    public void latitudeTest() {
-        // TODO: test latitude
-    }
-
-    /**
-     * Test the property 'longitude'
-     */
-    @Test
-    public void longitudeTest() {
-        // TODO: test longitude
-    }
-
-    /**
      * Test the property 'plabel'
      */
     @Test

@@ -11,8 +11,6 @@
 |**sta** | **String** | Channel station code | varchar(5) |  |
 |**comp** | **String** | Channel code | char(3) |  |
 |**loc** | **String** | Channel location | char(2) |  |
-|**latitude** | **Double** | Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  [optional] |
-|**longitude** | **Double** | Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  [optional] |
 |**plabel** | **String** | Todo description | ??? |  [optional] |
 |**slabel** | **String** | Todo description | ??? |  [optional] |
 |**ponset** | **String** | Todo description | ??? |  [optional] |
