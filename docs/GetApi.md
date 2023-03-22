@@ -65,7 +65,7 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
+    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -118,7 +118,7 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -201,7 +201,7 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
+    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -260,7 +260,7 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -495,7 +495,7 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
+    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -548,7 +548,7 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -631,7 +631,7 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
+    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -684,7 +684,7 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -831,7 +831,7 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
+    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -884,7 +884,7 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -1185,7 +1185,7 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter type_origin.version_value (i.e. 0,1,200).
+    String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -1238,7 +1238,7 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **wheretypeoriginvaluein** | **String**| Filter type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
