@@ -26,7 +26,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="getAll"></a>
 # **getAll**
-> GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all origins with all magnitude; one per line.
 
@@ -66,6 +66,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
+    String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -83,7 +84,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getAll");
@@ -119,6 +120,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -162,7 +164,7 @@ No authorization required
 
 <a name="getCatalog"></a>
 # **getCatalog**
-> GetCatalog200Response getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike)
+> GetCatalog200Response getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike)
 
 This API returns the catalogs.
 
@@ -202,6 +204,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
+    String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -225,7 +228,7 @@ public class Example {
     String doi = "doi_example"; // String | Catalog DOI.
     String wherenamelike = "wherenamelike_example"; // String | Select data by \"like\" operator.
     try {
-      GetCatalog200Response result = apiInstance.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
+      GetCatalog200Response result = apiInstance.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getCatalog");
@@ -261,6 +264,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -456,7 +460,7 @@ No authorization required
 
 <a name="getEvents"></a>
 # **getEvents**
-> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns the preferred origin and the preferred magnitude from the same instance.
 
@@ -496,6 +500,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
+    String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -513,7 +518,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvents");
@@ -549,6 +554,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -592,7 +598,7 @@ No authorization required
 
 <a name="getEventsGroup"></a>
 # **getEventsGroup**
-> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -632,6 +638,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
+    String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -649,7 +656,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEventsGroup");
@@ -685,6 +692,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -792,7 +800,7 @@ No authorization required
 
 <a name="getMagnitudes"></a>
 # **getMagnitudes**
-> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all origins with own preferred magnitude.
 
@@ -832,6 +840,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
+    String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -849,7 +858,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getMagnitudes");
@@ -885,6 +894,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -1146,7 +1156,7 @@ No authorization required
 
 <a name="getOrigins"></a>
 # **getOrigins**
-> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all the preferred origins.
 
@@ -1186,6 +1196,7 @@ public class Example {
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
+    String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> whereoriginlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"origin.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
     List<String> wheremagnitudelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"magnitude.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereeventlocalspaceenvironmentin\" and \"whereoriginlocalspaceenvironmentin\".
@@ -1203,7 +1214,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOrigins");
@@ -1239,6 +1250,7 @@ public class Example {
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
+| **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
 | **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |

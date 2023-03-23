@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 2.86.0
+  version: 2.87.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -344,6 +344,14 @@ paths:
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+          "^ml.\*" or "^ml.*|^mwp$").
+        in: query
+        name: wheretypemagnitudenameregexp
         required: false
         schema:
           format: string
@@ -723,6 +731,14 @@ paths:
         schema:
           format: string
           type: string
+      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+          "^ml.\*" or "^ml.*|^mwp$").
+        in: query
+        name: wheretypemagnitudenameregexp
+        required: false
+        schema:
+          format: string
+          type: string
       - description: "Filter by \"event.localspace.environment\" by comma separated\
           \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
           whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
@@ -1093,6 +1109,14 @@ paths:
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+          "^ml.\*" or "^ml.*|^mwp$").
+        in: query
+        name: wheretypemagnitudenameregexp
         required: false
         schema:
           format: string
@@ -1470,6 +1494,14 @@ paths:
         schema:
           format: string
           type: string
+      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+          "^ml.\*" or "^ml.*|^mwp$").
+        in: query
+        name: wheretypemagnitudenameregexp
+        required: false
+        schema:
+          format: string
+          type: string
       - description: "Filter by \"event.localspace.environment\" by comma separated\
           \ value (i.e. development,staging); this parameter is in \"OR\" with \"\
           whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\"\
@@ -1839,6 +1871,14 @@ paths:
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+          "^ml.\*" or "^ml.*|^mwp$").
+        in: query
+        name: wheretypemagnitudenameregexp
         required: false
         schema:
           format: string
@@ -2578,6 +2618,14 @@ paths:
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+          "^ml.\*" or "^ml.*|^mwp$").
+        in: query
+        name: wheretypemagnitudenameregexp
         required: false
         schema:
           format: string
@@ -6675,6 +6723,15 @@ components:
       description: "Filter by type_origin.version_value (i.e. 0,1,200)."
       in: query
       name: wheretypeoriginvaluein
+      required: false
+      schema:
+        format: string
+        type: string
+    wheretypemagnitudenameregexp:
+      description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+        "^ml.\*" or "^ml.*|^mwp$").
+      in: query
+      name: wheretypemagnitudenameregexp
       required: false
       schema:
         format: string
