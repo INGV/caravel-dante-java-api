@@ -341,6 +341,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -724,6 +746,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -1106,6 +1150,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -1487,6 +1553,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -1868,6 +1956,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -2615,6 +2725,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -6719,6 +6851,31 @@ components:
       required: false
       schema:
         $ref: '#/components/schemas/type_origin__version_value'
+    origindirectlinktoevent:
+      description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+      in: query
+      name: origindirectlinktoevent
+      required: false
+      schema:
+        default: false
+        type: boolean
+    magnitudedirectlinktoorigin:
+      description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+      in: query
+      name: magnitudedirectlinktoorigin
+      required: false
+      schema:
+        default: false
+        type: boolean
+    magnitudedirectlinktoevent:
+      description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+        -> origin.fk_event=event.id)
+      in: query
+      name: magnitudedirectlinktoevent
+      required: false
+      schema:
+        default: false
+        type: boolean
     wheretypeoriginvaluein:
       description: "Filter by type_origin.version_value (i.e. 0,1,200)."
       in: query

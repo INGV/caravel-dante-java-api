@@ -73,6 +73,9 @@ public class GetApiTest {
         Double maxdepth = null;
         Long mintypeoriginvalue = null;
         Long maxtypeoriginvalue = null;
+        Boolean origindirectlinktoevent = null;
+        Boolean magnitudedirectlinktoorigin = null;
+        Boolean magnitudedirectlinktoevent = null;
         String wheretypeoriginvaluein = null;
         String wheretypemagnitudenameregexp = null;
         List<String> whereeventlocalspaceenvironmentin = null;
@@ -91,7 +94,7 @@ public class GetApiTest {
         Long idLocalspace = null;
         Integer limit = null;
         Integer page = null;
-        GetEventsGroup200Response response = api.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        GetEventsGroup200Response response = api.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         // TODO: test validations
     }
 
@@ -122,6 +125,9 @@ public class GetApiTest {
         Double maxdepth = null;
         Long mintypeoriginvalue = null;
         Long maxtypeoriginvalue = null;
+        Boolean origindirectlinktoevent = null;
+        Boolean magnitudedirectlinktoorigin = null;
+        Boolean magnitudedirectlinktoevent = null;
         String wheretypeoriginvaluein = null;
         String wheretypemagnitudenameregexp = null;
         List<String> whereeventlocalspaceenvironmentin = null;
@@ -146,7 +152,7 @@ public class GetApiTest {
         String name = null;
         String doi = null;
         String wherenamelike = null;
-        GetCatalog200Response response = api.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
+        GetCatalog200Response response = api.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
         // TODO: test validations
     }
 
@@ -210,6 +216,9 @@ public class GetApiTest {
         Double maxdepth = null;
         Long mintypeoriginvalue = null;
         Long maxtypeoriginvalue = null;
+        Boolean origindirectlinktoevent = null;
+        Boolean magnitudedirectlinktoorigin = null;
+        Boolean magnitudedirectlinktoevent = null;
         String wheretypeoriginvaluein = null;
         String wheretypemagnitudenameregexp = null;
         List<String> whereeventlocalspaceenvironmentin = null;
@@ -228,7 +237,7 @@ public class GetApiTest {
         Long idLocalspace = null;
         Integer limit = null;
         Integer page = null;
-        GetEventsGroup200Response response = api.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        GetEventsGroup200Response response = api.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         // TODO: test validations
     }
 
@@ -259,6 +268,9 @@ public class GetApiTest {
         Double maxdepth = null;
         Long mintypeoriginvalue = null;
         Long maxtypeoriginvalue = null;
+        Boolean origindirectlinktoevent = null;
+        Boolean magnitudedirectlinktoorigin = null;
+        Boolean magnitudedirectlinktoevent = null;
         String wheretypeoriginvaluein = null;
         String wheretypemagnitudenameregexp = null;
         List<String> whereeventlocalspaceenvironmentin = null;
@@ -277,7 +289,7 @@ public class GetApiTest {
         Long idLocalspace = null;
         Integer limit = null;
         Integer page = null;
-        GetEventsGroup200Response response = api.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        GetEventsGroup200Response response = api.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         // TODO: test validations
     }
 
@@ -321,6 +333,9 @@ public class GetApiTest {
         Double maxdepth = null;
         Long mintypeoriginvalue = null;
         Long maxtypeoriginvalue = null;
+        Boolean origindirectlinktoevent = null;
+        Boolean magnitudedirectlinktoorigin = null;
+        Boolean magnitudedirectlinktoevent = null;
         String wheretypeoriginvaluein = null;
         String wheretypemagnitudenameregexp = null;
         List<String> whereeventlocalspaceenvironmentin = null;
@@ -339,7 +354,7 @@ public class GetApiTest {
         Long idLocalspace = null;
         Integer limit = null;
         Integer page = null;
-        GetEventsGroup200Response response = api.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        GetEventsGroup200Response response = api.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         // TODO: test validations
     }
 
@@ -419,6 +434,9 @@ public class GetApiTest {
         Double maxdepth = null;
         Long mintypeoriginvalue = null;
         Long maxtypeoriginvalue = null;
+        Boolean origindirectlinktoevent = null;
+        Boolean magnitudedirectlinktoorigin = null;
+        Boolean magnitudedirectlinktoevent = null;
         String wheretypeoriginvaluein = null;
         String wheretypemagnitudenameregexp = null;
         List<String> whereeventlocalspaceenvironmentin = null;
@@ -437,7 +455,7 @@ public class GetApiTest {
         Long idLocalspace = null;
         Integer limit = null;
         Integer page = null;
-        GetEventsGroup200Response response = api.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+        GetEventsGroup200Response response = api.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
         // TODO: test validations
     }
 
