@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 2.87.0
+  version: 2.88.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -341,6 +341,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -724,6 +746,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -1106,6 +1150,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -1487,6 +1553,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -1868,6 +1956,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -2615,6 +2725,28 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
+      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+        in: query
+        name: origindirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+        in: query
+        name: magnitudedirectlinktoorigin
+        required: false
+        schema:
+          default: false
+          type: boolean
+      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+          -> origin.fk_event=event.id)
+        in: query
+        name: magnitudedirectlinktoevent
+        required: false
+        schema:
+          default: false
+          type: boolean
       - description: "Filter by type_origin.version_value (i.e. 0,1,200)."
         in: query
         name: wheretypeoriginvaluein
@@ -6719,6 +6851,31 @@ components:
       required: false
       schema:
         $ref: '#/components/schemas/type_origin__version_value'
+    origindirectlinktoevent:
+      description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+      in: query
+      name: origindirectlinktoevent
+      required: false
+      schema:
+        default: false
+        type: boolean
+    magnitudedirectlinktoorigin:
+      description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+      in: query
+      name: magnitudedirectlinktoorigin
+      required: false
+      schema:
+        default: false
+        type: boolean
+    magnitudedirectlinktoevent:
+      description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+        -> origin.fk_event=event.id)
+      in: query
+      name: magnitudedirectlinktoevent
+      required: false
+      schema:
+        default: false
+        type: boolean
     wheretypeoriginvaluein:
       description: "Filter by type_origin.version_value (i.e. 0,1,200)."
       in: query
@@ -7481,6 +7638,7 @@ components:
       type: object
     ObjectMagnitudesOriginsEventsAndEventsGroup:
       example:
+        magnitudedirectlinktoorigin: false
         preferred_focalmechanism_id: 5
         origin:
           err_lon: 2.027123023002322
@@ -7523,7 +7681,9 @@ components:
           version: hew1_mole
           softwarename: software
         localspace: hew1_mole
+        magnitudedirectlinktoevent: false
         modified: 2016-06-22T16:52:06.26Z
+        origindirectlinktoevent: false
         magnitude:
           type_magnitude: ML-VAX
           upper_uncertainty: 0.53
@@ -7599,6 +7759,19 @@ components:
           description: Name | varchar(255)
           example: earthquake
           type: string
+        origindirectlinktoevent:
+          default: false
+          description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+          type: boolean
+        magnitudedirectlinktoorigin:
+          default: false
+          description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+          type: boolean
+        magnitudedirectlinktoevent:
+          default: false
+          description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+            -> origin.fk_event=event.id)
+          type: boolean
         modified:
           description: Last Review | timestamp
           example: 2016-06-22T16:52:06.26Z
@@ -12738,7 +12911,8 @@ components:
     getEventsGroup_200_response:
       example:
         data:
-        - preferred_focalmechanism_id: 5
+        - magnitudedirectlinktoorigin: false
+          preferred_focalmechanism_id: 5
           origin:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
@@ -12780,7 +12954,9 @@ components:
             version: hew1_mole
             softwarename: software
           localspace: hew1_mole
+          magnitudedirectlinktoevent: false
           modified: 2016-06-22T16:52:06.26Z
+          origindirectlinktoevent: false
           magnitude:
             type_magnitude: ML-VAX
             upper_uncertainty: 0.53
@@ -12800,7 +12976,8 @@ components:
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
-        - preferred_focalmechanism_id: 5
+        - magnitudedirectlinktoorigin: false
+          preferred_focalmechanism_id: 5
           origin:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
@@ -12842,7 +13019,9 @@ components:
             version: hew1_mole
             softwarename: software
           localspace: hew1_mole
+          magnitudedirectlinktoevent: false
           modified: 2016-06-22T16:52:06.26Z
+          origindirectlinktoevent: false
           magnitude:
             type_magnitude: ML-VAX
             upper_uncertainty: 0.53
