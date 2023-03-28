@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-28T11:01:35.586217Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-28T11:30:32.703911Z[Etc/UTC]")
 public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -92,6 +92,18 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
   private String typeEvent;
+
+  public static final String SERIALIZED_NAME_ORIGINDIRECTLINKTOEVENT = "origindirectlinktoevent";
+  @SerializedName(SERIALIZED_NAME_ORIGINDIRECTLINKTOEVENT)
+  private Boolean origindirectlinktoevent = false;
+
+  public static final String SERIALIZED_NAME_MAGNITUDEDIRECTLINKTOORIGIN = "magnitudedirectlinktoorigin";
+  @SerializedName(SERIALIZED_NAME_MAGNITUDEDIRECTLINKTOORIGIN)
+  private Boolean magnitudedirectlinktoorigin = false;
+
+  public static final String SERIALIZED_NAME_MAGNITUDEDIRECTLINKTOEVENT = "magnitudedirectlinktoevent";
+  @SerializedName(SERIALIZED_NAME_MAGNITUDEDIRECTLINKTOEVENT)
+  private Boolean magnitudedirectlinktoevent = false;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
@@ -304,6 +316,72 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   }
 
 
+  public ObjectMagnitudesOriginsEventsAndEventsGroup origindirectlinktoevent(Boolean origindirectlinktoevent) {
+    
+    this.origindirectlinktoevent = origindirectlinktoevent;
+    return this;
+  }
+
+   /**
+   * Origin entity is directly linked to Event entity (origin.fk_event&#x3D;event.id)
+   * @return origindirectlinktoevent
+  **/
+  @javax.annotation.Nullable
+
+  public Boolean getOrigindirectlinktoevent() {
+    return origindirectlinktoevent;
+  }
+
+
+  public void setOrigindirectlinktoevent(Boolean origindirectlinktoevent) {
+    this.origindirectlinktoevent = origindirectlinktoevent;
+  }
+
+
+  public ObjectMagnitudesOriginsEventsAndEventsGroup magnitudedirectlinktoorigin(Boolean magnitudedirectlinktoorigin) {
+    
+    this.magnitudedirectlinktoorigin = magnitudedirectlinktoorigin;
+    return this;
+  }
+
+   /**
+   * Magnitude entity is directly linked to Origin entity (magnitude.fk_origin&#x3D;origin.id)
+   * @return magnitudedirectlinktoorigin
+  **/
+  @javax.annotation.Nullable
+
+  public Boolean getMagnitudedirectlinktoorigin() {
+    return magnitudedirectlinktoorigin;
+  }
+
+
+  public void setMagnitudedirectlinktoorigin(Boolean magnitudedirectlinktoorigin) {
+    this.magnitudedirectlinktoorigin = magnitudedirectlinktoorigin;
+  }
+
+
+  public ObjectMagnitudesOriginsEventsAndEventsGroup magnitudedirectlinktoevent(Boolean magnitudedirectlinktoevent) {
+    
+    this.magnitudedirectlinktoevent = magnitudedirectlinktoevent;
+    return this;
+  }
+
+   /**
+   * Magnitude entity is directly linked to Event entity (magnitude.fk_origin&#x3D;origin.id -&gt; origin.fk_event&#x3D;event.id)
+   * @return magnitudedirectlinktoevent
+  **/
+  @javax.annotation.Nullable
+
+  public Boolean getMagnitudedirectlinktoevent() {
+    return magnitudedirectlinktoevent;
+  }
+
+
+  public void setMagnitudedirectlinktoevent(Boolean magnitudedirectlinktoevent) {
+    this.magnitudedirectlinktoevent = magnitudedirectlinktoevent;
+  }
+
+
    /**
    * Last Review | timestamp
    * @return modified
@@ -460,6 +538,9 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
         Objects.equals(this.flags, objectMagnitudesOriginsEventsAndEventsGroup.flags) &&
         Objects.equals(this.typeGroup, objectMagnitudesOriginsEventsAndEventsGroup.typeGroup) &&
         Objects.equals(this.typeEvent, objectMagnitudesOriginsEventsAndEventsGroup.typeEvent) &&
+        Objects.equals(this.origindirectlinktoevent, objectMagnitudesOriginsEventsAndEventsGroup.origindirectlinktoevent) &&
+        Objects.equals(this.magnitudedirectlinktoorigin, objectMagnitudesOriginsEventsAndEventsGroup.magnitudedirectlinktoorigin) &&
+        Objects.equals(this.magnitudedirectlinktoevent, objectMagnitudesOriginsEventsAndEventsGroup.magnitudedirectlinktoevent) &&
         Objects.equals(this.modified, objectMagnitudesOriginsEventsAndEventsGroup.modified) &&
         Objects.equals(this.inserted, objectMagnitudesOriginsEventsAndEventsGroup.inserted) &&
         Objects.equals(this.origin, objectMagnitudesOriginsEventsAndEventsGroup.origin) &&
@@ -474,7 +555,7 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idLocalspace, localspace, eventGroupId, preferredOriginId, preferredMagnitudeId, preferredFocalmechanismId, flags, typeGroup, typeEvent, modified, inserted, origin, magnitude, provenance, additionalProperties);
+    return Objects.hash(id, idLocalspace, localspace, eventGroupId, preferredOriginId, preferredMagnitudeId, preferredFocalmechanismId, flags, typeGroup, typeEvent, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, modified, inserted, origin, magnitude, provenance, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -498,6 +579,9 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
     sb.append("    flags: ").append(toIndentedString(flags)).append("\n");
     sb.append("    typeGroup: ").append(toIndentedString(typeGroup)).append("\n");
     sb.append("    typeEvent: ").append(toIndentedString(typeEvent)).append("\n");
+    sb.append("    origindirectlinktoevent: ").append(toIndentedString(origindirectlinktoevent)).append("\n");
+    sb.append("    magnitudedirectlinktoorigin: ").append(toIndentedString(magnitudedirectlinktoorigin)).append("\n");
+    sb.append("    magnitudedirectlinktoevent: ").append(toIndentedString(magnitudedirectlinktoevent)).append("\n");
     sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
     sb.append("    origin: ").append(toIndentedString(origin)).append("\n");
@@ -536,6 +620,9 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
     openapiFields.add("flags");
     openapiFields.add("type_group");
     openapiFields.add("type_event");
+    openapiFields.add("origindirectlinktoevent");
+    openapiFields.add("magnitudedirectlinktoorigin");
+    openapiFields.add("magnitudedirectlinktoevent");
     openapiFields.add("modified");
     openapiFields.add("inserted");
     openapiFields.add("origin");

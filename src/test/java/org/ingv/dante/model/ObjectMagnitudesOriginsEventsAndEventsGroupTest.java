@@ -123,6 +123,30 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroupTest {
     }
 
     /**
+     * Test the property 'origindirectlinktoevent'
+     */
+    @Test
+    public void origindirectlinktoeventTest() {
+        // TODO: test origindirectlinktoevent
+    }
+
+    /**
+     * Test the property 'magnitudedirectlinktoorigin'
+     */
+    @Test
+    public void magnitudedirectlinktooriginTest() {
+        // TODO: test magnitudedirectlinktoorigin
+    }
+
+    /**
+     * Test the property 'magnitudedirectlinktoevent'
+     */
+    @Test
+    public void magnitudedirectlinktoeventTest() {
+        // TODO: test magnitudedirectlinktoevent
+    }
+
+    /**
      * Test the property 'modified'
      */
     @Test

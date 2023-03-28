@@ -7638,6 +7638,7 @@ components:
       type: object
     ObjectMagnitudesOriginsEventsAndEventsGroup:
       example:
+        magnitudedirectlinktoorigin: false
         preferred_focalmechanism_id: 5
         origin:
           err_lon: 2.027123023002322
@@ -7680,7 +7681,9 @@ components:
           version: hew1_mole
           softwarename: software
         localspace: hew1_mole
+        magnitudedirectlinktoevent: false
         modified: 2016-06-22T16:52:06.26Z
+        origindirectlinktoevent: false
         magnitude:
           type_magnitude: ML-VAX
           upper_uncertainty: 0.53
@@ -7756,6 +7759,19 @@ components:
           description: Name | varchar(255)
           example: earthquake
           type: string
+        origindirectlinktoevent:
+          default: false
+          description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+          type: boolean
+        magnitudedirectlinktoorigin:
+          default: false
+          description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+          type: boolean
+        magnitudedirectlinktoevent:
+          default: false
+          description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+            -> origin.fk_event=event.id)
+          type: boolean
         modified:
           description: Last Review | timestamp
           example: 2016-06-22T16:52:06.26Z
@@ -12895,7 +12911,8 @@ components:
     getEventsGroup_200_response:
       example:
         data:
-        - preferred_focalmechanism_id: 5
+        - magnitudedirectlinktoorigin: false
+          preferred_focalmechanism_id: 5
           origin:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
@@ -12937,7 +12954,9 @@ components:
             version: hew1_mole
             softwarename: software
           localspace: hew1_mole
+          magnitudedirectlinktoevent: false
           modified: 2016-06-22T16:52:06.26Z
+          origindirectlinktoevent: false
           magnitude:
             type_magnitude: ML-VAX
             upper_uncertainty: 0.53
@@ -12957,7 +12976,8 @@ components:
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
-        - preferred_focalmechanism_id: 5
+        - magnitudedirectlinktoorigin: false
+          preferred_focalmechanism_id: 5
           origin:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
@@ -12999,7 +13019,9 @@ components:
             version: hew1_mole
             softwarename: software
           localspace: hew1_mole
+          magnitudedirectlinktoevent: false
           modified: 2016-06-22T16:52:06.26Z
+          origindirectlinktoevent: false
           magnitude:
             type_magnitude: ML-VAX
             upper_uncertainty: 0.53
