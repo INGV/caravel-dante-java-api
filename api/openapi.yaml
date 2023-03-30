@@ -251,15 +251,26 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to NOT select data within. \nEach\
-          \ poligon is '|' separated values, with values like <lon>,<lat> and last\
-          \ couple must be like the first one\nExample: \"12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8\""
+      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
+          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
         schema:
           format: string
           type: string
+        style: form
+      - description: "Specify a list of polygons to NOT select data within. \n\nEach\
+          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
+          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+        in: query
+        name: notinpolygon
+        required: false
+        schema:
+          format: string
+          type: string
+        style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
         in: query
@@ -665,15 +676,26 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to NOT select data within. \nEach\
-          \ poligon is '|' separated values, with values like <lon>,<lat> and last\
-          \ couple must be like the first one\nExample: \"12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8\""
+      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
+          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
         schema:
           format: string
           type: string
+        style: form
+      - description: "Specify a list of polygons to NOT select data within. \n\nEach\
+          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
+          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+        in: query
+        name: notinpolygon
+        required: false
+        schema:
+          format: string
+          type: string
+        style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
         in: query
@@ -1078,15 +1100,26 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to NOT select data within. \nEach\
-          \ poligon is '|' separated values, with values like <lon>,<lat> and last\
-          \ couple must be like the first one\nExample: \"12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8\""
+      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
+          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
         schema:
           format: string
           type: string
+        style: form
+      - description: "Specify a list of polygons to NOT select data within. \n\nEach\
+          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
+          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+        in: query
+        name: notinpolygon
+        required: false
+        schema:
+          format: string
+          type: string
+        style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
         in: query
@@ -1490,15 +1523,26 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to NOT select data within. \nEach\
-          \ poligon is '|' separated values, with values like <lon>,<lat> and last\
-          \ couple must be like the first one\nExample: \"12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8\""
+      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
+          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
         schema:
           format: string
           type: string
+        style: form
+      - description: "Specify a list of polygons to NOT select data within. \n\nEach\
+          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
+          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+        in: query
+        name: notinpolygon
+        required: false
+        schema:
+          format: string
+          type: string
+        style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
         in: query
@@ -1902,15 +1946,26 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to NOT select data within. \nEach\
-          \ poligon is '|' separated values, with values like <lon>,<lat> and last\
-          \ couple must be like the first one\nExample: \"12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8\""
+      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
+          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
         schema:
           format: string
           type: string
+        style: form
+      - description: "Specify a list of polygons to NOT select data within. \n\nEach\
+          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
+          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+        in: query
+        name: notinpolygon
+        required: false
+        schema:
+          format: string
+          type: string
+        style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
         in: query
@@ -2680,15 +2735,26 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to NOT select data within. \nEach\
-          \ poligon is '|' separated values, with values like <lon>,<lat> and last\
-          \ couple must be like the first one\nExample: \"12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8\""
+      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
+          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
         schema:
           format: string
           type: string
+        style: form
+      - description: "Specify a list of polygons to NOT select data within. \n\nEach\
+          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
+          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+        in: query
+        name: notinpolygon
+        required: false
+        schema:
+          format: string
+          type: string
+        style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
         in: query
@@ -6806,25 +6872,27 @@ components:
       schema:
         $ref: '#/components/schemas/longitude'
     orpolygon:
-      description: "Specify a list of polygons to select data. \nEach poligon is '|'\
-        \ separated values, with values like <lon>,<lat> and last couple must be like\
-        \ the first one\nExample: \"12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3\""
+      description: "Specify a list of polygons to select data. \n\nEach poligon is\
+        \ `|` separated values, with values like `<lon>,<lat>` and last couple must\
+        \ be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
       in: query
       name: orpolygon
       required: false
       schema:
         format: string
         type: string
+      style: form
     notinpolygon:
-      description: "Specify a list of polygons to NOT select data within. \nEach poligon\
-        \ is '|' separated values, with values like <lon>,<lat> and last couple must\
-        \ be like the first one\nExample: \"12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8\""
+      description: "Specify a list of polygons to NOT select data within. \n\nEach\
+        \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
+        \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
       in: query
-      name: orpolygon
+      name: notinpolygon
       required: false
       schema:
         format: string
         type: string
+      style: form
     lat:
       description: Specify the central latitude point for a radial search in WGS84
         (i.e. 42).
