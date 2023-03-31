@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 2.89.0-dev
+  version: 2.90.0-dev
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -252,8 +252,8 @@ paths:
         schema:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
-          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
-          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -262,8 +262,8 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
-          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -677,8 +677,8 @@ paths:
         schema:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
-          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
-          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -687,8 +687,8 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
-          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -1101,8 +1101,8 @@ paths:
         schema:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
-          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
-          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -1111,8 +1111,8 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
-          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -1524,8 +1524,8 @@ paths:
         schema:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
-          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
-          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -1534,8 +1534,8 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
-          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -1947,8 +1947,8 @@ paths:
         schema:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
-          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
-          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -1957,8 +1957,8 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
-          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -2736,8 +2736,8 @@ paths:
         schema:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
-          \ is `|` separated values, with values like `<lon>,<lat>` and last couple\
-          \ must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -2746,8 +2746,8 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
-          \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -6873,8 +6873,8 @@ components:
         $ref: '#/components/schemas/longitude'
     orpolygon:
       description: "Specify a list of polygons to select data. \n\nEach poligon is\
-        \ `|` separated values, with values like `<lon>,<lat>` and last couple must\
-        \ be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+        \ `|` separated values, with counterclockwise values like `<lon>,<lat>` and\
+        \ last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
       in: query
       name: orpolygon
       required: false
@@ -6884,8 +6884,8 @@ components:
       style: form
     notinpolygon:
       description: "Specify a list of polygons to NOT select data within. \n\nEach\
-        \ poligon is `|` separated values, with values like `<lon>,<lat>` and last\
-        \ couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+        \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+        \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
       in: query
       name: notinpolygon
       required: false
