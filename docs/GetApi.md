@@ -26,7 +26,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="getAll"></a>
 # **getAll**
-> GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all origins with all magnitude; one per line.
 
@@ -53,6 +53,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -87,7 +89,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getAll");
@@ -110,6 +112,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -170,7 +174,7 @@ No authorization required
 
 <a name="getCatalog"></a>
 # **getCatalog**
-> GetCatalog200Response getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike)
+> GetCatalog200Response getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike)
 
 This API returns the catalogs.
 
@@ -197,6 +201,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -237,7 +243,7 @@ public class Example {
     String doi = "doi_example"; // String | Catalog DOI.
     String wherenamelike = "wherenamelike_example"; // String | Select data by \"like\" operator.
     try {
-      GetCatalog200Response result = apiInstance.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
+      GetCatalog200Response result = apiInstance.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getCatalog");
@@ -260,6 +266,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -472,7 +480,7 @@ No authorization required
 
 <a name="getEvents"></a>
 # **getEvents**
-> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns the preferred origin and the preferred magnitude from the same instance.
 
@@ -499,6 +507,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -533,7 +543,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvents");
@@ -556,6 +566,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -616,7 +628,7 @@ No authorization required
 
 <a name="getEventsGroup"></a>
 # **getEventsGroup**
-> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -643,6 +655,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -677,7 +691,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEventsGroup");
@@ -700,6 +714,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -824,7 +840,7 @@ No authorization required
 
 <a name="getMagnitudes"></a>
 # **getMagnitudes**
-> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all origins with own preferred magnitude.
 
@@ -851,6 +867,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -885,7 +903,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getMagnitudes");
@@ -908,6 +926,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -1186,7 +1206,7 @@ No authorization required
 
 <a name="getOrigins"></a>
 # **getOrigins**
-> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
 
 This API returns all the preferred origins.
 
@@ -1213,6 +1233,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -1247,7 +1269,7 @@ public class Example {
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
     try {
-      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOrigins");
@@ -1270,6 +1292,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
