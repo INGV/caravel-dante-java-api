@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectPickEw
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-31T10:30:46.116278Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-05T13:46:55.429661Z[Etc/UTC]")
 public class ObjectPickEw {
   public static final String SERIALIZED_NAME_PAMP1 = "pamp1";
   @SerializedName(SERIALIZED_NAME_PAMP1)
