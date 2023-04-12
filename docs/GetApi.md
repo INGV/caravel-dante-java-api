@@ -53,8 +53,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
-    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
-    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -67,9 +67,9 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (origin.fk_event=event.id)
-    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
-    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id -> origin.fk_event=event.id)
+    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
+    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
+    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id AND origin.fk_event=event.id`)
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
@@ -112,8 +112,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
-| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
-| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;orpolygon&#x3D;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;notinpolygon&#x3D;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -126,9 +126,9 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (origin.fk_event&#x3D;event.id) | [optional] [default to false] |
-| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (magnitude.fk_origin&#x3D;origin.id) | [optional] [default to false] |
-| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity (magnitude.fk_origin&#x3D;origin.id -&gt; origin.fk_event&#x3D;event.id) | [optional] [default to false] |
+| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (&#x60;magnitude.fk_origin&#x3D;origin.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -201,8 +201,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
-    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
-    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -215,9 +215,9 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (origin.fk_event=event.id)
-    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
-    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id -> origin.fk_event=event.id)
+    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
+    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
+    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id AND origin.fk_event=event.id`)
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
@@ -266,8 +266,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
-| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
-| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;orpolygon&#x3D;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;notinpolygon&#x3D;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -280,9 +280,9 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (origin.fk_event&#x3D;event.id) | [optional] [default to false] |
-| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (magnitude.fk_origin&#x3D;origin.id) | [optional] [default to false] |
-| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity (magnitude.fk_origin&#x3D;origin.id -&gt; origin.fk_event&#x3D;event.id) | [optional] [default to false] |
+| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (&#x60;magnitude.fk_origin&#x3D;origin.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -507,8 +507,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
-    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
-    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -521,9 +521,9 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (origin.fk_event=event.id)
-    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
-    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id -> origin.fk_event=event.id)
+    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
+    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
+    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id AND origin.fk_event=event.id`)
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
@@ -566,8 +566,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
-| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
-| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;orpolygon&#x3D;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;notinpolygon&#x3D;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -580,9 +580,9 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (origin.fk_event&#x3D;event.id) | [optional] [default to false] |
-| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (magnitude.fk_origin&#x3D;origin.id) | [optional] [default to false] |
-| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity (magnitude.fk_origin&#x3D;origin.id -&gt; origin.fk_event&#x3D;event.id) | [optional] [default to false] |
+| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (&#x60;magnitude.fk_origin&#x3D;origin.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -655,8 +655,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
-    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
-    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -669,9 +669,9 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (origin.fk_event=event.id)
-    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
-    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id -> origin.fk_event=event.id)
+    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
+    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
+    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id AND origin.fk_event=event.id`)
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
@@ -714,8 +714,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
-| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
-| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;orpolygon&#x3D;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;notinpolygon&#x3D;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -728,9 +728,9 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (origin.fk_event&#x3D;event.id) | [optional] [default to false] |
-| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (magnitude.fk_origin&#x3D;origin.id) | [optional] [default to false] |
-| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity (magnitude.fk_origin&#x3D;origin.id -&gt; origin.fk_event&#x3D;event.id) | [optional] [default to false] |
+| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (&#x60;magnitude.fk_origin&#x3D;origin.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -867,8 +867,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
-    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
-    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -881,9 +881,9 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (origin.fk_event=event.id)
-    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
-    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id -> origin.fk_event=event.id)
+    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
+    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
+    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id AND origin.fk_event=event.id`)
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
@@ -926,8 +926,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
-| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
-| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;orpolygon&#x3D;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;notinpolygon&#x3D;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -940,9 +940,9 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (origin.fk_event&#x3D;event.id) | [optional] [default to false] |
-| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (magnitude.fk_origin&#x3D;origin.id) | [optional] [default to false] |
-| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity (magnitude.fk_origin&#x3D;origin.id -&gt; origin.fk_event&#x3D;event.id) | [optional] [default to false] |
+| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (&#x60;magnitude.fk_origin&#x3D;origin.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
@@ -1233,8 +1233,8 @@ public class Example {
     Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
     Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
     Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
-    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
-    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
+    String orpolygon = "orpolygon_example"; // String | Specify a list of polygons to select data.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`.
+    String notinpolygon = "notinpolygon_example"; // String | Specify a list of polygons to NOT select data within.   Each poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>` and last couple must be like the first one.  * Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
@@ -1247,9 +1247,9 @@ public class Example {
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
-    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (origin.fk_event=event.id)
-    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
-    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id -> origin.fk_event=event.id)
+    Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
+    Boolean magnitudedirectlinktoorigin = false; // Boolean | Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
+    Boolean magnitudedirectlinktoevent = false; // Boolean | Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id AND origin.fk_event=event.id`)
     String wheretypeoriginvaluein = "wheretypeoriginvaluein_example"; // String | Filter by type_origin.version_value (i.e. 0,1,200).
     String wheretypemagnitudenameregexp = "wheretypemagnitudenameregexp_example"; // String | Filter by type_magnitude.name using case-insensitive regexp (i.e. \"^ml.\\*\" or \"^ml.*|^mwp$\").
     List<String> whereeventlocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"event.localspace.environment\" by comma separated value (i.e. development,staging); this parameter is in \"OR\" with \"whereoriginlocalspaceenvironmentin\" and \"wheremagnitudelocalspaceenvironmentin\".
@@ -1292,8 +1292,8 @@ public class Example {
 | **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
 | **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
 | **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
-| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
-| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
+| **orpolygon** | **String**| Specify a list of polygons to select data.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;orpolygon&#x3D;12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3&#x60;. | [optional] |
+| **notinpolygon** | **String**| Specify a list of polygons to NOT select data within.   Each poligon is &#x60;|&#x60; separated values, with counterclockwise values like &#x60;&lt;lon&gt;,&lt;lat&gt;&#x60; and last couple must be like the first one.  * Example: &#x60;notinpolygon&#x3D;12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8&#x60; | [optional] |
 | **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
@@ -1306,9 +1306,9 @@ public class Example {
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
-| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (origin.fk_event&#x3D;event.id) | [optional] [default to false] |
-| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (magnitude.fk_origin&#x3D;origin.id) | [optional] [default to false] |
-| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity (magnitude.fk_origin&#x3D;origin.id -&gt; origin.fk_event&#x3D;event.id) | [optional] [default to false] |
+| **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoorigin** | **Boolean**| Magnitude entity is directly linked to Origin entity (&#x60;magnitude.fk_origin&#x3D;origin.id&#x60;) | [optional] [default to false] |
+| **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
 | **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |

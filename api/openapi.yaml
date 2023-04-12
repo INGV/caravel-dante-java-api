@@ -253,7 +253,7 @@ paths:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -263,7 +263,7 @@ paths:
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
           \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -361,22 +361,22 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
-      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+      - description: Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
         in: query
         name: origindirectlinktoevent
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+      - description: Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
         in: query
         name: magnitudedirectlinktoorigin
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
-          -> origin.fk_event=event.id)
+      - description: Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id
+          AND origin.fk_event=event.id`)
         in: query
         name: magnitudedirectlinktoevent
         required: false
@@ -678,7 +678,7 @@ paths:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -688,7 +688,7 @@ paths:
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
           \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -786,22 +786,22 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
-      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+      - description: Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
         in: query
         name: origindirectlinktoevent
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+      - description: Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
         in: query
         name: magnitudedirectlinktoorigin
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
-          -> origin.fk_event=event.id)
+      - description: Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id
+          AND origin.fk_event=event.id`)
         in: query
         name: magnitudedirectlinktoevent
         required: false
@@ -1102,7 +1102,7 @@ paths:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -1112,7 +1112,7 @@ paths:
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
           \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -1210,22 +1210,22 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
-      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+      - description: Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
         in: query
         name: origindirectlinktoevent
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+      - description: Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
         in: query
         name: magnitudedirectlinktoorigin
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
-          -> origin.fk_event=event.id)
+      - description: Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id
+          AND origin.fk_event=event.id`)
         in: query
         name: magnitudedirectlinktoevent
         required: false
@@ -1525,7 +1525,7 @@ paths:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -1535,7 +1535,7 @@ paths:
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
           \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -1633,22 +1633,22 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
-      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+      - description: Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
         in: query
         name: origindirectlinktoevent
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+      - description: Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
         in: query
         name: magnitudedirectlinktoorigin
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
-          -> origin.fk_event=event.id)
+      - description: Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id
+          AND origin.fk_event=event.id`)
         in: query
         name: magnitudedirectlinktoevent
         required: false
@@ -1948,7 +1948,7 @@ paths:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -1958,7 +1958,7 @@ paths:
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
           \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -2056,22 +2056,22 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
-      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+      - description: Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
         in: query
         name: origindirectlinktoevent
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+      - description: Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
         in: query
         name: magnitudedirectlinktoorigin
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
-          -> origin.fk_event=event.id)
+      - description: Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id
+          AND origin.fk_event=event.id`)
         in: query
         name: magnitudedirectlinktoevent
         required: false
@@ -2737,7 +2737,7 @@ paths:
           $ref: '#/components/schemas/longitude'
       - description: "Specify a list of polygons to select data. \n\nEach poligon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+          \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
         name: orpolygon
         required: false
@@ -2747,7 +2747,7 @@ paths:
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
           \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-          \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+          \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
         required: false
@@ -2845,22 +2845,22 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/type_origin__version_value'
-      - description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+      - description: Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
         in: query
         name: origindirectlinktoevent
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+      - description: Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
         in: query
         name: magnitudedirectlinktoorigin
         required: false
         schema:
           default: false
           type: boolean
-      - description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
-          -> origin.fk_event=event.id)
+      - description: Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id
+          AND origin.fk_event=event.id`)
         in: query
         name: magnitudedirectlinktoevent
         required: false
@@ -6874,7 +6874,7 @@ components:
     orpolygon:
       description: "Specify a list of polygons to select data. \n\nEach poligon is\
         \ `|` separated values, with counterclockwise values like `<lon>,<lat>` and\
-        \ last couple must be like the first one.\n\n* Example: `12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
+        \ last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
       in: query
       name: orpolygon
       required: false
@@ -6885,7 +6885,7 @@ components:
     notinpolygon:
       description: "Specify a list of polygons to NOT select data within. \n\nEach\
         \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
-        \ and last couple must be like the first one.\n\n* Example: `12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
+        \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
       in: query
       name: notinpolygon
       required: false
@@ -6994,7 +6994,7 @@ components:
       schema:
         $ref: '#/components/schemas/type_origin__version_value'
     origindirectlinktoevent:
-      description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+      description: Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
       in: query
       name: origindirectlinktoevent
       required: false
@@ -7002,7 +7002,7 @@ components:
         default: false
         type: boolean
     magnitudedirectlinktoorigin:
-      description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+      description: Magnitude entity is directly linked to Origin entity (`magnitude.fk_origin=origin.id`)
       in: query
       name: magnitudedirectlinktoorigin
       required: false
@@ -7010,8 +7010,8 @@ components:
         default: false
         type: boolean
     magnitudedirectlinktoevent:
-      description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
-        -> origin.fk_event=event.id)
+      description: Magnitude entity is directly linked to Event entity `(magnitude.fk_origin=origin.id
+        AND origin.fk_event=event.id`)
       in: query
       name: magnitudedirectlinktoevent
       required: false
@@ -12012,7 +12012,6 @@ components:
       type: number
     magnitude:
       description: Magnitude | double
-      example: 3.2
       format: double
       type: number
     type_origin__version_value:
