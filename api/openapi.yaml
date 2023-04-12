@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 2.89.0
+  version: 2.90.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -270,6 +270,25 @@ paths:
         schema:
           format: string
           type: string
+        style: form
+      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+          \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
+        explode: false
+        in: query
+        name: wherepolygonnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - settore_1_pol
+            - settore_2_pol
+            - settore_cat_pol
+            - aree_vulcaniche_italia_2020
+            - ov_aree_vulcani_mari
+            - area_vulcanica_italia
+            - area_confine_italia
+            type: string
+          type: array
         style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
@@ -696,6 +715,25 @@ paths:
           format: string
           type: string
         style: form
+      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+          \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
+        explode: false
+        in: query
+        name: wherepolygonnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - settore_1_pol
+            - settore_2_pol
+            - settore_cat_pol
+            - aree_vulcaniche_italia_2020
+            - ov_aree_vulcani_mari
+            - area_vulcanica_italia
+            - area_confine_italia
+            type: string
+          type: array
+        style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
         in: query
@@ -1120,6 +1158,25 @@ paths:
           format: string
           type: string
         style: form
+      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+          \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
+        explode: false
+        in: query
+        name: wherepolygonnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - settore_1_pol
+            - settore_2_pol
+            - settore_cat_pol
+            - aree_vulcaniche_italia_2020
+            - ov_aree_vulcani_mari
+            - area_vulcanica_italia
+            - area_confine_italia
+            type: string
+          type: array
+        style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
         in: query
@@ -1543,6 +1600,25 @@ paths:
           format: string
           type: string
         style: form
+      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+          \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
+        explode: false
+        in: query
+        name: wherepolygonnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - settore_1_pol
+            - settore_2_pol
+            - settore_cat_pol
+            - aree_vulcaniche_italia_2020
+            - ov_aree_vulcani_mari
+            - area_vulcanica_italia
+            - area_confine_italia
+            type: string
+          type: array
+        style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
         in: query
@@ -1965,6 +2041,25 @@ paths:
         schema:
           format: string
           type: string
+        style: form
+      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+          \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
+        explode: false
+        in: query
+        name: wherepolygonnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - settore_1_pol
+            - settore_2_pol
+            - settore_cat_pol
+            - aree_vulcaniche_italia_2020
+            - ov_aree_vulcani_mari
+            - area_vulcanica_italia
+            - area_confine_italia
+            type: string
+          type: array
         style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
@@ -2754,6 +2849,25 @@ paths:
         schema:
           format: string
           type: string
+        style: form
+      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+          \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
+        explode: false
+        in: query
+        name: wherepolygonnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - settore_1_pol
+            - settore_2_pol
+            - settore_cat_pol
+            - aree_vulcaniche_italia_2020
+            - ov_aree_vulcani_mari
+            - area_vulcanica_italia
+            - area_confine_italia
+            type: string
+          type: array
         style: form
       - description: Specify the central latitude point for a radial search in WGS84
           (i.e. 42).
@@ -6892,6 +7006,26 @@ components:
       schema:
         format: string
         type: string
+      style: form
+    wherepolygonnamein:
+      description: "Specify a list of pre-set polygons. \n\nEach poligon is `,` separated\
+        \ value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
+      explode: false
+      in: query
+      name: wherepolygonnamein
+      required: false
+      schema:
+        items:
+          enum:
+          - settore_1_pol
+          - settore_2_pol
+          - settore_cat_pol
+          - aree_vulcaniche_italia_2020
+          - ov_aree_vulcani_mari
+          - area_vulcanica_italia
+          - area_confine_italia
+          type: string
+        type: array
       style: form
     lat:
       description: Specify the central latitude point for a radial search in WGS84
