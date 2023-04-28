@@ -21,7 +21,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import org.ingv.dante.model.AddCatalogRequestData;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.AddCatalogRequestDataInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -47,18 +49,26 @@ import org.ingv.dante.JSON;
 /**
  * AddCatalogRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-12T09:54:05.977485Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-28T13:53:26.286228Z[Etc/UTC]")
 public class AddCatalogRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private AddCatalogRequestData data;
+  private List<AddCatalogRequestDataInner> data = new ArrayList<>();
 
   public AddCatalogRequest() {
   }
 
-  public AddCatalogRequest data(AddCatalogRequestData data) {
+  public AddCatalogRequest data(List<AddCatalogRequestDataInner> data) {
     
     this.data = data;
+    return this;
+  }
+
+  public AddCatalogRequest addDataItem(AddCatalogRequestDataInner dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<>();
+    }
+    this.data.add(dataItem);
     return this;
   }
 
@@ -68,12 +78,12 @@ public class AddCatalogRequest {
   **/
   @javax.annotation.Nullable
 
-  public AddCatalogRequestData getData() {
+  public List<AddCatalogRequestDataInner> getData() {
     return data;
   }
 
 
-  public void setData(AddCatalogRequestData data) {
+  public void setData(List<AddCatalogRequestDataInner> data) {
     this.data = data;
   }
 
@@ -187,9 +197,19 @@ public class AddCatalogRequest {
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddCatalogRequest is not found in the empty JSON string", AddCatalogRequest.openapiRequiredFields.toString()));
         }
       }
-      // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        AddCatalogRequestData.validateJsonObject(jsonObj.getAsJsonObject("data"));
+        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+        if (jsonArraydata != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("data").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
+          }
+
+          // validate the optional field `data` (array)
+          for (int i = 0; i < jsonArraydata.size(); i++) {
+            AddCatalogRequestDataInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 

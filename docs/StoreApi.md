@@ -5,7 +5,6 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
 | [**addCatalog**](StoreApi.md#addCatalog) | **POST** /quakedb/v1/catalog | Add a new catalog to the DB |
-| [**addCatalogMetadata**](StoreApi.md#addCatalogMetadata) | **POST** /quakedb/table/v1/catalog-metadata | Add a new catalog to the DB |
 | [**addEvent**](StoreApi.md#addEvent) | **POST** /quakedb/v1/event | Add a new event to the DB |
 | [**addFocalmechanism**](StoreApi.md#addFocalmechanism) | **POST** /quakedb/v1/focalmechanism | Add a new focalmechanism(s) to the DB |
 | [**addLocalspace**](StoreApi.md#addLocalspace) | **POST** /quakedb/table/v1/localspace | Add a new localspace to the DB |
@@ -85,75 +84,7 @@ No authorization required
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **503** | Service Unavailable |  * Retry-After -  <br>  |
 | **500** | Internal Server Error |  -  |
-| **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
-| **0** | Unexpected error |  -  |
-
-<a name="addCatalogMetadata"></a>
-# **addCatalogMetadata**
-> ObjectCatalogMetadata addCatalogMetadata(addCatalogMetadataRequest)
-
-Add a new catalog to the DB
-
-This API is used to add a catalog object.
-
-### Example
-```java
-// Import classes:
-import org.ingv.dante.ApiClient;
-import org.ingv.dante.ApiException;
-import org.ingv.dante.Configuration;
-import org.ingv.dante.models.*;
-import org.ingv.dante.api.StoreApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
-
-    StoreApi apiInstance = new StoreApi(defaultClient);
-    AddCatalogMetadataRequest addCatalogMetadataRequest = new AddCatalogMetadataRequest(); // AddCatalogMetadataRequest | JSON to store
-    try {
-      ObjectCatalogMetadata result = apiInstance.addCatalogMetadata(addCatalogMetadataRequest);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling StoreApi#addCatalogMetadata");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **addCatalogMetadataRequest** | [**AddCatalogMetadataRequest**](AddCatalogMetadataRequest.md)| JSON to store | |
-
-### Return type
-
-[**ObjectCatalogMetadata**](ObjectCatalogMetadata.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/problem+json, application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **400** | Bad Request |  -  |
-| **422** | Unprocessable Entity |  -  |
-| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
-| **503** | Service Unavailable |  * Retry-After -  <br>  |
-| **500** | Internal Server Error |  -  |
-| **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **201** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
 <a name="addEvent"></a>

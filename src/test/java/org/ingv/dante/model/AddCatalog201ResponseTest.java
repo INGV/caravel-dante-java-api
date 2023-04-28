@@ -19,7 +19,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import org.ingv.dante.model.ObjectCatalog;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.ObjectVwCatalogInner;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 

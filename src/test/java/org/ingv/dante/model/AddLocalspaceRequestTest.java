@@ -57,6 +57,14 @@ public class AddLocalspaceRequestTest {
     }
 
     /**
+     * Test the property 'doi'
+     */
+    @Test
+    public void doiTest() {
+        // TODO: test doi
+    }
+
+    /**
      * Test the property 'description'
      */
     @Test

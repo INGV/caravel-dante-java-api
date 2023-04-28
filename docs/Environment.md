@@ -15,5 +15,9 @@
 
 * `EXTERNAL` (value: `"external"`)
 
+* `CATALOG` (value: `"catalog"`)
+
+* `GENERIC` (value: `"generic"`)
+
 
 

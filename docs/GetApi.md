@@ -6,7 +6,6 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 |------------- | ------------- | -------------|
 | [**getAll**](GetApi.md#getAll) | **GET** /quakedb/v1/all | This API returns all origins with all magnitude; one per line. |
 | [**getCatalog**](GetApi.md#getCatalog) | **GET** /quakedb/v1/catalog | This API returns the catalogs. |
-| [**getCatalogMetadata**](GetApi.md#getCatalogMetadata) | **GET** /quakedb/v1/catalog-metadata | This API returns the catalog-metadata. |
 | [**getEvent**](GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events. |
 | [**getEvents**](GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance. |
 | [**getEventsGroup**](GetApi.md#getEventsGroup) | **GET** /quakedb/v1/events-group | This API returns the preferred origin and the preferred magnitude from all clusterd events. |
@@ -133,9 +132,9 @@ public class Example {
 | **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
-| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
+| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
 | **whereeventlocalspacenamein** | **String**| Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **whereoriginlocalspacenamein** | **String**| Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **wheremagnitudelocalspacenamein** | **String**| Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;whereoriginlocalspacenamein\&quot;. | [optional] |
@@ -176,7 +175,7 @@ No authorization required
 
 <a name="getCatalog"></a>
 # **getCatalog**
-> GetCatalog200Response getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike)
+> GetEventsGroup200Response getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, wherenamelike)
 
 This API returns the catalogs.
 
@@ -242,11 +241,10 @@ public class Example {
     Long eventid = 56L; // Long | Select by event id.
     Long originid = 56L; // Long | Select by origin id.
     Long magnitudeid = 56L; // Long | Select by magnitude id.
-    String name = "name_example"; // String | Catalog name.
-    String doi = "doi_example"; // String | Catalog DOI.
+    String doi = "doi_example"; // String | Doi.
     String wherenamelike = "wherenamelike_example"; // String | Select data by \"like\" operator.
     try {
-      GetCatalog200Response result = apiInstance.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, name, doi, wherenamelike);
+      GetEventsGroup200Response result = apiInstance.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, wherenamelike);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getCatalog");
@@ -289,9 +287,9 @@ public class Example {
 | **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
-| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
+| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
 | **whereeventlocalspacenamein** | **String**| Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **whereoriginlocalspacenamein** | **String**| Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **wheremagnitudelocalspacenamein** | **String**| Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;whereoriginlocalspacenamein\&quot;. | [optional] |
@@ -308,85 +306,12 @@ public class Example {
 | **eventid** | **Long**| Select by event id. | [optional] |
 | **originid** | **Long**| Select by origin id. | [optional] |
 | **magnitudeid** | **Long**| Select by magnitude id. | [optional] |
-| **name** | **String**| Catalog name. | [optional] |
-| **doi** | **String**| Catalog DOI. | [optional] |
+| **doi** | **String**| Doi. | [optional] |
 | **wherenamelike** | **String**| Select data by \&quot;like\&quot; operator. | [optional] |
 
 ### Return type
 
-[**GetCatalog200Response**](GetCatalog200Response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/problem+json, application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **400** | Bad Request |  -  |
-| **422** | Unprocessable Entity |  -  |
-| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
-| **503** | Service Unavailable |  * Retry-After -  <br>  |
-| **500** | Internal Server Error |  -  |
-| **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
-| **0** | Unexpected error |  -  |
-
-<a name="getCatalogMetadata"></a>
-# **getCatalogMetadata**
-> GetCatalogMetadata200Response getCatalogMetadata(name, doi, wherenamelike)
-
-This API returns the catalog-metadata.
-
-This API returns the catalog-metadata.
-
-### Example
-```java
-// Import classes:
-import org.ingv.dante.ApiClient;
-import org.ingv.dante.ApiException;
-import org.ingv.dante.Configuration;
-import org.ingv.dante.models.*;
-import org.ingv.dante.api.GetApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
-
-    GetApi apiInstance = new GetApi(defaultClient);
-    String name = "name_example"; // String | Catalog name.
-    String doi = "doi_example"; // String | Catalog DOI.
-    String wherenamelike = "wherenamelike_example"; // String | Select data by \"like\" operator.
-    try {
-      GetCatalogMetadata200Response result = apiInstance.getCatalogMetadata(name, doi, wherenamelike);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling GetApi#getCatalogMetadata");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **name** | **String**| Catalog name. | [optional] |
-| **doi** | **String**| Catalog DOI. | [optional] |
-| **wherenamelike** | **String**| Select data by \&quot;like\&quot; operator. | [optional] |
-
-### Return type
-
-[**GetCatalogMetadata200Response**](GetCatalogMetadata200Response.md)
+[**GetEventsGroup200Response**](GetEventsGroup200Response.md)
 
 ### Authorization
 
@@ -591,9 +516,9 @@ public class Example {
 | **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
-| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
+| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
 | **whereeventlocalspacenamein** | **String**| Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **whereoriginlocalspacenamein** | **String**| Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **wheremagnitudelocalspacenamein** | **String**| Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;whereoriginlocalspacenamein\&quot;. | [optional] |
@@ -741,9 +666,9 @@ public class Example {
 | **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
-| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
+| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
 | **whereeventlocalspacenamein** | **String**| Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **whereoriginlocalspacenamein** | **String**| Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **wheremagnitudelocalspacenamein** | **String**| Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;whereoriginlocalspacenamein\&quot;. | [optional] |
@@ -955,9 +880,9 @@ public class Example {
 | **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
-| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
+| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
 | **whereeventlocalspacenamein** | **String**| Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **whereoriginlocalspacenamein** | **String**| Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **wheremagnitudelocalspacenamein** | **String**| Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;whereoriginlocalspacenamein\&quot;. | [optional] |
@@ -1323,9 +1248,9 @@ public class Example {
 | **magnitudedirectlinktoevent** | **Boolean**| Magnitude entity is directly linked to Event entity &#x60;(magnitude.fk_origin&#x3D;origin.id AND origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
 | **wheretypeoriginvaluein** | **String**| Filter by type_origin.version_value (i.e. 0,1,200). | [optional] |
 | **wheretypemagnitudenameregexp** | **String**| Filter by type_magnitude.name using case-insensitive regexp (i.e. \&quot;^ml.\\*\&quot; or \&quot;^ml.*|^mwp$\&quot;). | [optional] |
-| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
-| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external] |
+| **whereeventlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;event.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **whereoriginlocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;wheremagnitudelocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **wheremagnitudelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;magnitude.localspace.environment\&quot; by comma separated value (i.e. development,staging); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspaceenvironmentin\&quot; and \&quot;whereoriginlocalspaceenvironmentin\&quot;. | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
 | **whereeventlocalspacenamein** | **String**| Filter by \&quot;event.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereoriginlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **whereoriginlocalspacenamein** | **String**| Filter by \&quot;origin.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;wheremagnitudelocalspacenamein\&quot;. | [optional] |
 | **wheremagnitudelocalspacenamein** | **String**| Filter by \&quot;magnitude.localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole); this parameter is in \&quot;OR\&quot; with \&quot;whereeventlocalspacenamein\&quot; and \&quot;whereoriginlocalspacenamein\&quot;. | [optional] |

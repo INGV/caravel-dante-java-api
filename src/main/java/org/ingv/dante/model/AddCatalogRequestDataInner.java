@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -46,10 +45,10 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * AddCatalogMetadataRequest
+ * AddCatalogRequestDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-12T09:54:05.977485Z[Etc/UTC]")
-public class AddCatalogMetadataRequest {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-28T13:53:26.286228Z[Etc/UTC]")
+public class AddCatalogRequestDataInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Long id;
@@ -62,9 +61,21 @@ public class AddCatalogMetadataRequest {
   @SerializedName(SERIALIZED_NAME_DOI)
   private String doi;
 
-  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
-  private String description;
+  public static final String SERIALIZED_NAME_EVENTID = "eventid";
+  @SerializedName(SERIALIZED_NAME_EVENTID)
+  private Long eventid;
+
+  public static final String SERIALIZED_NAME_ORIGINID = "originid";
+  @SerializedName(SERIALIZED_NAME_ORIGINID)
+  private Long originid;
+
+  public static final String SERIALIZED_NAME_MAGNITUDEID = "magnitudeid";
+  @SerializedName(SERIALIZED_NAME_MAGNITUDEID)
+  private Long magnitudeid;
+
+  public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
+  @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  private Long eventGroupId;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
@@ -74,17 +85,21 @@ public class AddCatalogMetadataRequest {
   @SerializedName(SERIALIZED_NAME_INSERTED)
   private OffsetDateTime inserted;
 
-  public AddCatalogMetadataRequest() {
+  public AddCatalogRequestDataInner() {
   }
 
   
-  public AddCatalogMetadataRequest(
+  public AddCatalogRequestDataInner(
      Long id, 
+     Long eventid, 
+     Long eventGroupId, 
      OffsetDateTime modified, 
      OffsetDateTime inserted
   ) {
     this();
     this.id = id;
+    this.eventid = eventid;
+    this.eventGroupId = eventGroupId;
     this.modified = modified;
     this.inserted = inserted;
   }
@@ -102,17 +117,17 @@ public class AddCatalogMetadataRequest {
 
 
 
-  public AddCatalogMetadataRequest name(String name) {
+  public AddCatalogRequestDataInner name(String name) {
     
     this.name = name;
     return this;
   }
 
    /**
-   * Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)
+   * Localspace name. i.e. hew1_mole, endeavour_mole | char(255)
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
 
   public String getName() {
     return name;
@@ -124,14 +139,14 @@ public class AddCatalogMetadataRequest {
   }
 
 
-  public AddCatalogMetadataRequest doi(String doi) {
+  public AddCatalogRequestDataInner doi(String doi) {
     
     this.doi = doi;
     return this;
   }
 
    /**
-   * DOI of Catalog. i.e. 10.13127/TDMT | varchar(255)
+   * DOI Resource. i.e. 10.13127/TDMT | varchar(255)
    * @return doi
   **/
   @javax.annotation.Nullable
@@ -146,26 +161,74 @@ public class AddCatalogMetadataRequest {
   }
 
 
-  public AddCatalogMetadataRequest description(String description) {
+   /**
+   * Unique incremental id | bigint(20)
+   * @return eventid
+  **/
+  @javax.annotation.Nullable
+
+  public Long getEventid() {
+    return eventid;
+  }
+
+
+
+
+  public AddCatalogRequestDataInner originid(Long originid) {
     
-    this.description = description;
+    this.originid = originid;
     return this;
   }
 
    /**
-   * Additional information | char(255)
-   * @return description
+   * Unique incremental id | bigint(20)
+   * @return originid
   **/
   @javax.annotation.Nullable
 
-  public String getDescription() {
-    return description;
+  public Long getOriginid() {
+    return originid;
   }
 
 
-  public void setDescription(String description) {
-    this.description = description;
+  public void setOriginid(Long originid) {
+    this.originid = originid;
   }
+
+
+  public AddCatalogRequestDataInner magnitudeid(Long magnitudeid) {
+    
+    this.magnitudeid = magnitudeid;
+    return this;
+  }
+
+   /**
+   * Unique incremental id | bigint(20)
+   * @return magnitudeid
+  **/
+  @javax.annotation.Nullable
+
+  public Long getMagnitudeid() {
+    return magnitudeid;
+  }
+
+
+  public void setMagnitudeid(Long magnitudeid) {
+    this.magnitudeid = magnitudeid;
+  }
+
+
+   /**
+   * Unique incremental id | bigint(20)
+   * @return eventGroupId
+  **/
+  @javax.annotation.Nullable
+
+  public Long getEventGroupId() {
+    return eventGroupId;
+  }
+
+
 
 
    /**
@@ -206,9 +269,9 @@ public class AddCatalogMetadataRequest {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the AddCatalogMetadataRequest instance itself
+   * @return the AddCatalogRequestDataInner instance itself
    */
-  public AddCatalogMetadataRequest putAdditionalProperty(String key, Object value) {
+  public AddCatalogRequestDataInner putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -247,40 +310,35 @@ public class AddCatalogMetadataRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AddCatalogMetadataRequest addCatalogMetadataRequest = (AddCatalogMetadataRequest) o;
-    return Objects.equals(this.id, addCatalogMetadataRequest.id) &&
-        Objects.equals(this.name, addCatalogMetadataRequest.name) &&
-        Objects.equals(this.doi, addCatalogMetadataRequest.doi) &&
-        Objects.equals(this.description, addCatalogMetadataRequest.description) &&
-        Objects.equals(this.modified, addCatalogMetadataRequest.modified) &&
-        Objects.equals(this.inserted, addCatalogMetadataRequest.inserted)&&
-        Objects.equals(this.additionalProperties, addCatalogMetadataRequest.additionalProperties);
-  }
-
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+    AddCatalogRequestDataInner addCatalogRequestDataInner = (AddCatalogRequestDataInner) o;
+    return Objects.equals(this.id, addCatalogRequestDataInner.id) &&
+        Objects.equals(this.name, addCatalogRequestDataInner.name) &&
+        Objects.equals(this.doi, addCatalogRequestDataInner.doi) &&
+        Objects.equals(this.eventid, addCatalogRequestDataInner.eventid) &&
+        Objects.equals(this.originid, addCatalogRequestDataInner.originid) &&
+        Objects.equals(this.magnitudeid, addCatalogRequestDataInner.magnitudeid) &&
+        Objects.equals(this.eventGroupId, addCatalogRequestDataInner.eventGroupId) &&
+        Objects.equals(this.modified, addCatalogRequestDataInner.modified) &&
+        Objects.equals(this.inserted, addCatalogRequestDataInner.inserted)&&
+        Objects.equals(this.additionalProperties, addCatalogRequestDataInner.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, doi, description, modified, inserted, additionalProperties);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+    return Objects.hash(id, name, doi, eventid, originid, magnitudeid, eventGroupId, modified, inserted, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AddCatalogMetadataRequest {\n");
+    sb.append("class AddCatalogRequestDataInner {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    doi: ").append(toIndentedString(doi)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    eventid: ").append(toIndentedString(eventid)).append("\n");
+    sb.append("    originid: ").append(toIndentedString(originid)).append("\n");
+    sb.append("    magnitudeid: ").append(toIndentedString(magnitudeid)).append("\n");
+    sb.append("    eventGroupId: ").append(toIndentedString(eventGroupId)).append("\n");
     sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
@@ -309,7 +367,10 @@ public class AddCatalogMetadataRequest {
     openapiFields.add("id");
     openapiFields.add("name");
     openapiFields.add("doi");
-    openapiFields.add("description");
+    openapiFields.add("eventid");
+    openapiFields.add("originid");
+    openapiFields.add("magnitudeid");
+    openapiFields.add("event_group_id");
     openapiFields.add("modified");
     openapiFields.add("inserted");
 
@@ -322,17 +383,17 @@ public class AddCatalogMetadataRequest {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddCatalogMetadataRequest
+  * @throws IOException if the JSON Object is invalid with respect to AddCatalogRequestDataInner
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (!AddCatalogMetadataRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AddCatalogMetadataRequest is not found in the empty JSON string", AddCatalogMetadataRequest.openapiRequiredFields.toString()));
+        if (!AddCatalogRequestDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in AddCatalogRequestDataInner is not found in the empty JSON string", AddCatalogRequestDataInner.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : AddCatalogMetadataRequest.openapiRequiredFields) {
+      for (String requiredField : AddCatalogRequestDataInner.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
@@ -343,25 +404,22 @@ public class AddCatalogMetadataRequest {
       if ((jsonObj.get("doi") != null && !jsonObj.get("doi").isJsonNull()) && !jsonObj.get("doi").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `doi` to be a primitive type in the JSON string but got `%s`", jsonObj.get("doi").toString()));
       }
-      if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
-      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!AddCatalogMetadataRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'AddCatalogMetadataRequest' and its subtypes
+       if (!AddCatalogRequestDataInner.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'AddCatalogRequestDataInner' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<AddCatalogMetadataRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(AddCatalogMetadataRequest.class));
+       final TypeAdapter<AddCatalogRequestDataInner> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(AddCatalogRequestDataInner.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<AddCatalogMetadataRequest>() {
+       return (TypeAdapter<T>) new TypeAdapter<AddCatalogRequestDataInner>() {
            @Override
-           public void write(JsonWriter out, AddCatalogMetadataRequest value) throws IOException {
+           public void write(JsonWriter out, AddCatalogRequestDataInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -384,11 +442,11 @@ public class AddCatalogMetadataRequest {
            }
 
            @Override
-           public AddCatalogMetadataRequest read(JsonReader in) throws IOException {
+           public AddCatalogRequestDataInner read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             AddCatalogMetadataRequest instance = thisAdapter.fromJsonTree(jsonObj);
+             AddCatalogRequestDataInner instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -415,18 +473,18 @@ public class AddCatalogMetadataRequest {
   }
 
  /**
-  * Create an instance of AddCatalogMetadataRequest given an JSON string
+  * Create an instance of AddCatalogRequestDataInner given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of AddCatalogMetadataRequest
-  * @throws IOException if the JSON string is invalid with respect to AddCatalogMetadataRequest
+  * @return An instance of AddCatalogRequestDataInner
+  * @throws IOException if the JSON string is invalid with respect to AddCatalogRequestDataInner
   */
-  public static AddCatalogMetadataRequest fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, AddCatalogMetadataRequest.class);
+  public static AddCatalogRequestDataInner fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AddCatalogRequestDataInner.class);
   }
 
  /**
-  * Convert an instance of AddCatalogMetadataRequest to an JSON string
+  * Convert an instance of AddCatalogRequestDataInner to an JSON string
   *
   * @return JSON string
   */

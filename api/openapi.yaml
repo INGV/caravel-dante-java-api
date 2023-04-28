@@ -433,6 +433,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
@@ -451,6 +453,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
@@ -469,6 +473,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
@@ -877,6 +883,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
@@ -895,6 +903,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
@@ -913,6 +923,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
@@ -1320,6 +1332,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
@@ -1338,6 +1352,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
@@ -1356,6 +1372,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
@@ -1762,6 +1780,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
@@ -1780,6 +1800,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
@@ -1798,6 +1820,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
@@ -2204,6 +2228,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
@@ -2222,6 +2248,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
@@ -2240,6 +2268,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
@@ -2420,372 +2450,6 @@ paths:
       summary: This API returns all origins with all magnitude; one per line.
       tags:
       - get
-      x-accepts: application/json
-  /quakedb/v1/catalog-metadata:
-    get:
-      description: This API returns the catalog-metadata.
-      operationId: getCatalogMetadata
-      parameters:
-      - description: Catalog name.
-        in: query
-        name: name
-        required: false
-        schema:
-          format: string
-          type: string
-      - description: Catalog DOI.
-        in: query
-        name: doi
-        required: false
-        schema:
-          format: string
-          type: string
-      - description: Select data by "like" operator.
-        explode: true
-        in: query
-        name: wherenamelike
-        required: false
-        schema:
-          format: string
-          type: string
-        style: form
-      responses:
-        "400":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Bad Request
-        "422":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unprocessable Entity
-        "429":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Too many requests
-          headers:
-            Retry-After:
-              $ref: '#/components/headers/Retry-After'
-            X-RateLimit-Limit:
-              $ref: '#/components/headers/X-RateLimit-Limit'
-            X-RateLimit-Remaining:
-              $ref: '#/components/headers/X-RateLimit-Remaining'
-            X-RateLimit-Reset:
-              $ref: '#/components/headers/X-RateLimit-Reset'
-        "503":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Service Unavailable
-          headers:
-            Retry-After:
-              $ref: '#/components/headers/Retry-After'
-        "500":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Internal Server Error
-        default:
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unexpected error
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/getCatalogMetadata_200_response'
-          description: Operation successful
-          headers:
-            Cache-Control:
-              $ref: '#/components/headers/Cache-Control'
-            X-RateLimit-Limit:
-              $ref: '#/components/headers/X-RateLimit-Limit'
-            X-RateLimit-Remaining:
-              $ref: '#/components/headers/X-RateLimit-Remaining'
-            X-RateLimit-Reset:
-              $ref: '#/components/headers/X-RateLimit-Reset'
-      summary: This API returns the catalog-metadata.
-      tags:
-      - get
-      x-accepts: application/json
-  /quakedb/table/v1/catalog-metadata:
-    post:
-      description: This API is used to add a catalog object.
-      operationId: addCatalogMetadata
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/addCatalogMetadata_request'
-        description: JSON to store
-        required: true
-      responses:
-        "400":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Bad Request
-        "422":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unprocessable Entity
-        "429":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Too many requests
-          headers:
-            Retry-After:
-              $ref: '#/components/headers/Retry-After'
-            X-RateLimit-Limit:
-              $ref: '#/components/headers/X-RateLimit-Limit'
-            X-RateLimit-Remaining:
-              $ref: '#/components/headers/X-RateLimit-Remaining'
-            X-RateLimit-Reset:
-              $ref: '#/components/headers/X-RateLimit-Reset'
-        "503":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Service Unavailable
-          headers:
-            Retry-After:
-              $ref: '#/components/headers/Retry-After'
-        "500":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Internal Server Error
-        default:
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unexpected error
-        "201":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ObjectCatalogMetadata'
-          description: record inserted
-          headers:
-            Cache-Control:
-              $ref: '#/components/headers/Cache-Control'
-            X-RateLimit-Limit:
-              $ref: '#/components/headers/X-RateLimit-Limit'
-            X-RateLimit-Remaining:
-              $ref: '#/components/headers/X-RateLimit-Remaining'
-            X-RateLimit-Reset:
-              $ref: '#/components/headers/X-RateLimit-Reset'
-      summary: Add a new catalog to the DB
-      tags:
-      - store
-      x-content-type: application/json
-      x-accepts: application/json
-  /quakedb/table/v1/catalog-metadata/{id}:
-    delete:
-      description: Delete an existing catalog_metadata.</br> To use this API you must
-        be authenticated.
-      operationId: deleteCatalogMetadata
-      parameters:
-      - description: INGV catalog_metadata id that need to be deleted.
-        explode: false
-        in: path
-        name: id
-        required: true
-        schema:
-          format: int64
-          type: integer
-        style: simple
-      responses:
-        "400":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Bad Request
-        "422":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unprocessable Entity
-        "429":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Too many requests
-          headers:
-            Retry-After:
-              $ref: '#/components/headers/Retry-After'
-            X-RateLimit-Limit:
-              $ref: '#/components/headers/X-RateLimit-Limit'
-            X-RateLimit-Remaining:
-              $ref: '#/components/headers/X-RateLimit-Remaining'
-            X-RateLimit-Reset:
-              $ref: '#/components/headers/X-RateLimit-Reset'
-        "503":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Service Unavailable
-          headers:
-            Retry-After:
-              $ref: '#/components/headers/Retry-After'
-        "500":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Internal Server Error
-        default:
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unexpected error
-        "204":
-          description: record deleted
-        "401":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unauthorized
-        "403":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Forbidden
-      security:
-      - BearerAuth:
-        - write
-      summary: Delete an existing catalog_metadata
-      tags:
-      - delete
-      x-accepts: application/problem+json
-    patch:
-      description: Update an existing catalog-metadata.</br> To use this API you must
-        be authenticated.
-      operationId: updateCatalogMetadata
-      parameters:
-      - description: INGV catalog-metadata id that need to be updated.
-        explode: false
-        in: path
-        name: id
-        required: true
-        schema:
-          format: int64
-          type: integer
-        style: simple
-      requestBody:
-        content:
-          application/merge-patch+json:
-            schema:
-              $ref: '#/components/schemas/ObjectCatalogMetadata'
-        description: JSON to update
-        required: true
-      responses:
-        "400":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Bad Request
-        "422":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unprocessable Entity
-        "429":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Too many requests
-          headers:
-            Retry-After:
-              $ref: '#/components/headers/Retry-After'
-            X-RateLimit-Limit:
-              $ref: '#/components/headers/X-RateLimit-Limit'
-            X-RateLimit-Remaining:
-              $ref: '#/components/headers/X-RateLimit-Remaining'
-            X-RateLimit-Reset:
-              $ref: '#/components/headers/X-RateLimit-Reset'
-        "503":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Service Unavailable
-          headers:
-            Retry-After:
-              $ref: '#/components/headers/Retry-After'
-        "500":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Internal Server Error
-        default:
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unexpected error
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ObjectCatalogMetadata'
-          description: record updated
-          headers:
-            Cache-Control:
-              $ref: '#/components/headers/Cache-Control'
-            X-RateLimit-Limit:
-              $ref: '#/components/headers/X-RateLimit-Limit'
-            X-RateLimit-Remaining:
-              $ref: '#/components/headers/X-RateLimit-Remaining'
-            X-RateLimit-Reset:
-              $ref: '#/components/headers/X-RateLimit-Reset'
-        "401":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Unauthorized
-        "403":
-          content:
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: Forbidden
-      security:
-      - BearerAuth:
-        - write
-      summary: Update an existing catalog-metadata
-      tags:
-      - update
-      x-content-type: application/merge-patch+json
       x-accepts: application/json
   /quakedb/v1/catalog:
     get:
@@ -3012,6 +2676,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"origin.localspace.environment\" by comma separated\
@@ -3030,6 +2696,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"magnitude.localspace.environment\" by comma separated\
@@ -3048,6 +2716,8 @@ paths:
             - staging
             - production
             - external
+            - catalog
+            - generic
             type: string
           type: array
       - description: "Filter by \"event.localspace.name\" by comma separated value\
@@ -3182,14 +2852,8 @@ paths:
         schema:
           format: int64
           type: integer
-      - description: Catalog name.
-        in: query
-        name: name
-        required: false
-        schema:
-          format: string
-          type: string
-      - description: Catalog DOI.
+      - description: Doi.
+        explode: false
         in: query
         name: doi
         required: false
@@ -3258,7 +2922,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getCatalog_200_response'
+                $ref: '#/components/schemas/getEventsGroup_200_response'
           description: Operation successful
           headers:
             Cache-Control:
@@ -3337,7 +3001,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/addCatalog_201_response'
-          description: record inserted
+          description: Operation successful
           headers:
             Cache-Control:
               $ref: '#/components/headers/Cache-Control'
@@ -7185,6 +6849,8 @@ components:
           - staging
           - production
           - external
+          - catalog
+          - generic
           type: string
         type: array
     whereoriginlocalspaceenvironmentin:
@@ -7203,6 +6869,8 @@ components:
           - staging
           - production
           - external
+          - catalog
+          - generic
           type: string
         type: array
     wheremagnitudelocalspaceenvironmentin:
@@ -7221,6 +6889,8 @@ components:
           - staging
           - production
           - external
+          - catalog
+          - generic
           type: string
         type: array
     whereeventlocalspacenamein:
@@ -7346,22 +7016,6 @@ components:
       schema:
         format: int32
         type: integer
-    catalog_metadata__name:
-      description: Catalog name.
-      in: query
-      name: name
-      required: false
-      schema:
-        format: string
-        type: string
-    catalog_metadata__doi:
-      description: Catalog DOI.
-      in: query
-      name: doi
-      required: false
-      schema:
-        format: string
-        type: string
     eventid:
       description: Select by event id.
       in: query
@@ -7386,6 +7040,15 @@ components:
       schema:
         format: int64
         type: integer
+    doi:
+      description: Doi.
+      explode: false
+      in: query
+      name: doi
+      required: false
+      schema:
+        format: string
+        type: string
     level:
       description: Select deep level
       in: query
@@ -7531,26 +7194,18 @@ components:
           $ref: '#/components/headers/X-RateLimit-Remaining'
         X-RateLimit-Reset:
           $ref: '#/components/headers/X-RateLimit-Reset'
-    "200CatalogMetadata":
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/getCatalogMetadata_200_response'
-      description: Operation successful
-      headers:
-        Cache-Control:
-          $ref: '#/components/headers/Cache-Control'
-        X-RateLimit-Limit:
-          $ref: '#/components/headers/X-RateLimit-Limit'
-        X-RateLimit-Remaining:
-          $ref: '#/components/headers/X-RateLimit-Remaining'
-        X-RateLimit-Reset:
-          $ref: '#/components/headers/X-RateLimit-Reset'
     "200Catalog":
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/getCatalog_200_response'
+            properties:
+              links:
+                $ref: '#/components/schemas/LinksDefinition'
+              meta:
+                $ref: '#/components/schemas/MetaDefinition'
+              data:
+                $ref: '#/components/schemas/ObjectVwCatalog'
+            type: object
       description: Operation successful
       headers:
         Cache-Control:
@@ -7650,103 +7305,6 @@ components:
           nullable: true
           type: string
           example: null
-      type: object
-    ObjectCatalogMetadata:
-      example:
-        inserted: 2016-06-22T16:52:06.26Z
-        name: TDMT-INGV
-        description: Auto added
-        modified: 2016-06-22T16:52:06.26Z
-        id: 14932631
-        doi: 10.13127/TDMT
-      properties:
-        id:
-          description: Unique incremental id | bigint(20)
-          example: 14932631
-          format: int64
-          readOnly: true
-          type: integer
-        name:
-          description: "Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)"
-          example: TDMT-INGV
-          type: string
-        doi:
-          description: DOI of Catalog. i.e. 10.13127/TDMT | varchar(255)
-          example: 10.13127/TDMT
-          type: string
-        description:
-          description: Additional information | char(255)
-          example: Auto added
-          nullable: true
-          type: string
-        modified:
-          description: Last Review | timestamp
-          example: 2016-06-22T16:52:06.26Z
-          format: date-time
-          readOnly: true
-          type: string
-        inserted:
-          description: Insert time | timestamp
-          example: 2016-06-22T16:52:06.26Z
-          format: date-time
-          readOnly: true
-          type: string
-      type: object
-    ObjectCatalog:
-      example:
-        eventid: 14932631
-        originid: 14932631
-        inserted: 2016-06-22T16:52:06.26Z
-        magnitudeid: 14932631
-        name: TDMT-INGV
-        modified: 2016-06-22T16:52:06.26Z
-        id: 14932631
-        event_group_id: 14932631
-      properties:
-        id:
-          description: Unique incremental id | bigint(20)
-          example: 14932631
-          format: int64
-          readOnly: true
-          type: integer
-        name:
-          description: "Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)"
-          example: TDMT-INGV
-          type: string
-        eventid:
-          description: Unique incremental id | bigint(20)
-          example: 14932631
-          format: int64
-          readOnly: true
-          type: integer
-        originid:
-          description: Unique incremental id | bigint(20)
-          example: 14932631
-          format: int64
-          type: integer
-        magnitudeid:
-          description: Unique incremental id | bigint(20)
-          example: 14932631
-          format: int64
-          type: integer
-        event_group_id:
-          description: Unique incremental id | bigint(20)
-          example: 14932631
-          format: int64
-          readOnly: true
-          type: integer
-        modified:
-          description: Last Review | timestamp
-          example: 2016-06-22T16:52:06.26Z
-          format: date-time
-          readOnly: true
-          type: string
-        inserted:
-          description: Insert time | timestamp
-          example: 2016-06-22T16:52:06.26Z
-          format: date-time
-          readOnly: true
-          type: string
       type: object
     ObjectVwCatalog:
       items:
@@ -8094,6 +7652,7 @@ components:
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
         priority: 0
+        doi: 10.13127/TDMT
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -8105,6 +7664,10 @@ components:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
           nullable: true
+          type: string
+        doi:
+          description: DOI Resource. i.e. 10.13127/TDMT | varchar(255)
+          example: 10.13127/TDMT
           type: string
         description:
           description: Additional information | char(255)
@@ -12153,22 +11716,44 @@ components:
         | bigint(20)
       format: int64
       type: integer
-    id:
+    id__READONLY:
       description: Unique incremental id | bigint(20)
       example: 14932631
       format: int64
-      type: integer
-    id_localspace:
-      description: Localspace Id | bigint(19)
-      example: 182491
-      format: int64
-      nullable: true
+      readOnly: true
       type: integer
     localspace__name:
       description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
       example: hew1_mole
       nullable: true
       type: string
+    doi:
+      description: DOI Resource. i.e. 10.13127/TDMT | varchar(255)
+      example: 10.13127/TDMT
+      type: string
+    id:
+      description: Unique incremental id | bigint(20)
+      example: 14932631
+      format: int64
+      type: integer
+    modified:
+      description: Last Review | timestamp
+      example: 2016-06-22T16:52:06.26Z
+      format: date-time
+      readOnly: true
+      type: string
+    inserted:
+      description: Insert time | timestamp
+      example: 2016-06-22T16:52:06.26Z
+      format: date-time
+      readOnly: true
+      type: string
+    id_localspace:
+      description: Localspace Id | bigint(19)
+      example: 182491
+      format: int64
+      nullable: true
+      type: integer
     municipio__name:
       description: Italian "municipio" name.
       example: Ladispoli
@@ -12556,37 +12141,6 @@ components:
       format: uri
       maxLength: 2048
       type: string
-    id__READONLY:
-      description: Unique incremental id | bigint(20)
-      example: 14932631
-      format: int64
-      readOnly: true
-      type: integer
-    catalog_metadata__name:
-      description: "Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)"
-      example: TDMT-INGV
-      type: string
-    catalog_metadata__doi:
-      description: DOI of Catalog. i.e. 10.13127/TDMT | varchar(255)
-      example: 10.13127/TDMT
-      type: string
-    description:
-      description: Additional information | char(255)
-      example: Auto added
-      nullable: true
-      type: string
-    modified:
-      description: Last Review | timestamp
-      example: 2016-06-22T16:52:06.26Z
-      format: date-time
-      readOnly: true
-      type: string
-    inserted:
-      description: Insert time | timestamp
-      example: 2016-06-22T16:52:06.26Z
-      format: date-time
-      readOnly: true
-      type: string
     provenance__name:
       default: INGV
       description: "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)"
@@ -12627,6 +12181,11 @@ components:
     provenance__hostname:
       description: Hostname | char(255)
       example: hew10.ingv.it
+      nullable: true
+      type: string
+    description:
+      description: Additional information | char(255)
+      example: Auto added
       nullable: true
       type: string
     priority:
@@ -12672,14 +12231,16 @@ components:
       type: integer
     environment:
       default: development
-      description: "Environment (es:development, testing, staging, production, external)\
-        \ | varchar(255)"
+      description: "Environment (es:development, testing, staging, production, external,\
+        \ catalog, generic) | varchar(255)"
       enum:
       - development
       - testing
       - staging
       - production
       - external
+      - catalog
+      - generic
       example: development
       type: string
     pickew__pamp:
@@ -13346,116 +12907,77 @@ components:
             $ref: '#/components/schemas/ObjectMagnitudesOriginsEventsAndEventsGroup'
           type: array
       type: object
-    getCatalogMetadata_200_response:
-      example:
-        data:
-        - inserted: 2016-06-22T16:52:06.26Z
-          name: TDMT-INGV
-          description: Auto added
-          modified: 2016-06-22T16:52:06.26Z
-          id: 14932631
-          doi: 10.13127/TDMT
-        - inserted: 2016-06-22T16:52:06.26Z
-          name: TDMT-INGV
-          description: Auto added
-          modified: 2016-06-22T16:52:06.26Z
-          id: 14932631
-          doi: 10.13127/TDMT
-        meta:
-          path: http://localhost:8585
-          per_page: 4000
-          total: 10000
-          last_page: 3
-          from: 1
-          links:
-          - active: "true"
-            label: "2"
-            url: http://localhost:8585
-          - active: "true"
-            label: "2"
-            url: http://localhost:8585
-          to: 4000
-          current_page: 2
-        links:
-          next: http://localhost:8585/api/quakedb/v1/events-group/?page=3
-          last: http://localhost:8585/api/quakedb/v1/events-group/?page=4
-          prev: http://localhost:8585/api/quakedb/v1/events-group/?page=1
-          first: http://localhost:8585/api/quakedb/v1/events-group/?page=2
+    addCatalog_request_data_inner:
       properties:
-        links:
-          $ref: '#/components/schemas/LinksDefinition'
-        meta:
-          $ref: '#/components/schemas/MetaDefinition'
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          readOnly: true
+          type: integer
+        name:
+          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
+          example: hew1_mole
+          nullable: true
+          type: string
+        doi:
+          description: DOI Resource. i.e. 10.13127/TDMT | varchar(255)
+          example: 10.13127/TDMT
+          type: string
+        eventid:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          readOnly: true
+          type: integer
+        originid:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        magnitudeid:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        event_group_id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          readOnly: true
+          type: integer
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+      required:
+      - name
+      type: object
+    addCatalog_request:
+      properties:
         data:
           items:
-            $ref: '#/components/schemas/ObjectCatalogMetadata'
+            $ref: '#/components/schemas/addCatalog_request_data_inner'
           type: array
-      type: object
-    addCatalogMetadata_request:
-      allOf:
-      - $ref: '#/components/schemas/ObjectCatalogMetadata'
-      - required:
-        - name
-        type: object
-    getCatalog_200_response:
+    addCatalog_201_response:
       example:
         data:
         - null
         - null
-        meta:
-          path: http://localhost:8585
-          per_page: 4000
-          total: 10000
-          last_page: 3
-          from: 1
-          links:
-          - active: "true"
-            label: "2"
-            url: http://localhost:8585
-          - active: "true"
-            label: "2"
-            url: http://localhost:8585
-          to: 4000
-          current_page: 2
-        links:
-          next: http://localhost:8585/api/quakedb/v1/events-group/?page=3
-          last: http://localhost:8585/api/quakedb/v1/events-group/?page=4
-          prev: http://localhost:8585/api/quakedb/v1/events-group/?page=1
-          first: http://localhost:8585/api/quakedb/v1/events-group/?page=2
       properties:
-        links:
-          $ref: '#/components/schemas/LinksDefinition'
-        meta:
-          $ref: '#/components/schemas/MetaDefinition'
         data:
           items:
             $ref: '#/components/schemas/ObjectVwCatalog_inner'
           type: array
       type: object
-    addCatalog_request_data:
-      allOf:
-      - $ref: '#/components/schemas/ObjectCatalog'
-      - required:
-        - name
-        type: object
-    addCatalog_request:
-      properties:
-        data:
-          $ref: '#/components/schemas/addCatalog_request_data'
-    addCatalog_201_response:
-      example:
-        data:
-          eventid: 14932631
-          originid: 14932631
-          inserted: 2016-06-22T16:52:06.26Z
-          magnitudeid: 14932631
-          name: TDMT-INGV
-          modified: 2016-06-22T16:52:06.26Z
-          id: 14932631
-          event_group_id: 14932631
-      properties:
-        data:
-          $ref: '#/components/schemas/ObjectCatalog'
     updateEventsGroup_request_data:
       properties:
         event_group_id:
@@ -16793,17 +16315,14 @@ components:
     ObjectVwCatalog_inner_allOf_catalog:
       properties:
         name:
-          description: "Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)"
-          example: TDMT-INGV
+          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
+          example: hew1_mole
+          nullable: true
           type: string
         doi:
-          description: DOI of Catalog. i.e. 10.13127/TDMT | varchar(255)
+          description: DOI Resource. i.e. 10.13127/TDMT | varchar(255)
           example: 10.13127/TDMT
           type: string
-        check_origin_eventid:
-          type: boolean
-        check_magnitude_originid:
-          type: boolean
       required:
       - name
       type: object

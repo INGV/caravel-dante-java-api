@@ -46,7 +46,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectVwCatalogInnerAllOfCatalog
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-12T09:54:05.977485Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-28T13:53:26.286228Z[Etc/UTC]")
 public class ObjectVwCatalogInnerAllOfCatalog {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -55,14 +55,6 @@ public class ObjectVwCatalogInnerAllOfCatalog {
   public static final String SERIALIZED_NAME_DOI = "doi";
   @SerializedName(SERIALIZED_NAME_DOI)
   private String doi;
-
-  public static final String SERIALIZED_NAME_CHECK_ORIGIN_EVENTID = "check_origin_eventid";
-  @SerializedName(SERIALIZED_NAME_CHECK_ORIGIN_EVENTID)
-  private Boolean checkOriginEventid;
-
-  public static final String SERIALIZED_NAME_CHECK_MAGNITUDE_ORIGINID = "check_magnitude_originid";
-  @SerializedName(SERIALIZED_NAME_CHECK_MAGNITUDE_ORIGINID)
-  private Boolean checkMagnitudeOriginid;
 
   public ObjectVwCatalogInnerAllOfCatalog() {
   }
@@ -74,10 +66,10 @@ public class ObjectVwCatalogInnerAllOfCatalog {
   }
 
    /**
-   * Name of Catalog. i.e. INGV, ETH, USGS | varchar(255)
+   * Localspace name. i.e. hew1_mole, endeavour_mole | char(255)
    * @return name
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
 
   public String getName() {
     return name;
@@ -96,7 +88,7 @@ public class ObjectVwCatalogInnerAllOfCatalog {
   }
 
    /**
-   * DOI of Catalog. i.e. 10.13127/TDMT | varchar(255)
+   * DOI Resource. i.e. 10.13127/TDMT | varchar(255)
    * @return doi
   **/
   @javax.annotation.Nullable
@@ -108,50 +100,6 @@ public class ObjectVwCatalogInnerAllOfCatalog {
 
   public void setDoi(String doi) {
     this.doi = doi;
-  }
-
-
-  public ObjectVwCatalogInnerAllOfCatalog checkOriginEventid(Boolean checkOriginEventid) {
-    
-    this.checkOriginEventid = checkOriginEventid;
-    return this;
-  }
-
-   /**
-   * Get checkOriginEventid
-   * @return checkOriginEventid
-  **/
-  @javax.annotation.Nullable
-
-  public Boolean getCheckOriginEventid() {
-    return checkOriginEventid;
-  }
-
-
-  public void setCheckOriginEventid(Boolean checkOriginEventid) {
-    this.checkOriginEventid = checkOriginEventid;
-  }
-
-
-  public ObjectVwCatalogInnerAllOfCatalog checkMagnitudeOriginid(Boolean checkMagnitudeOriginid) {
-    
-    this.checkMagnitudeOriginid = checkMagnitudeOriginid;
-    return this;
-  }
-
-   /**
-   * Get checkMagnitudeOriginid
-   * @return checkMagnitudeOriginid
-  **/
-  @javax.annotation.Nullable
-
-  public Boolean getCheckMagnitudeOriginid() {
-    return checkMagnitudeOriginid;
-  }
-
-
-  public void setCheckMagnitudeOriginid(Boolean checkMagnitudeOriginid) {
-    this.checkMagnitudeOriginid = checkMagnitudeOriginid;
   }
 
   /**
@@ -210,15 +158,13 @@ public class ObjectVwCatalogInnerAllOfCatalog {
     }
     ObjectVwCatalogInnerAllOfCatalog objectVwCatalogInnerAllOfCatalog = (ObjectVwCatalogInnerAllOfCatalog) o;
     return Objects.equals(this.name, objectVwCatalogInnerAllOfCatalog.name) &&
-        Objects.equals(this.doi, objectVwCatalogInnerAllOfCatalog.doi) &&
-        Objects.equals(this.checkOriginEventid, objectVwCatalogInnerAllOfCatalog.checkOriginEventid) &&
-        Objects.equals(this.checkMagnitudeOriginid, objectVwCatalogInnerAllOfCatalog.checkMagnitudeOriginid)&&
+        Objects.equals(this.doi, objectVwCatalogInnerAllOfCatalog.doi)&&
         Objects.equals(this.additionalProperties, objectVwCatalogInnerAllOfCatalog.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, doi, checkOriginEventid, checkMagnitudeOriginid, additionalProperties);
+    return Objects.hash(name, doi, additionalProperties);
   }
 
   @Override
@@ -227,8 +173,6 @@ public class ObjectVwCatalogInnerAllOfCatalog {
     sb.append("class ObjectVwCatalogInnerAllOfCatalog {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    doi: ").append(toIndentedString(doi)).append("\n");
-    sb.append("    checkOriginEventid: ").append(toIndentedString(checkOriginEventid)).append("\n");
-    sb.append("    checkMagnitudeOriginid: ").append(toIndentedString(checkMagnitudeOriginid)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -254,8 +198,6 @@ public class ObjectVwCatalogInnerAllOfCatalog {
     openapiFields = new HashSet<String>();
     openapiFields.add("name");
     openapiFields.add("doi");
-    openapiFields.add("check_origin_eventid");
-    openapiFields.add("check_magnitude_originid");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();

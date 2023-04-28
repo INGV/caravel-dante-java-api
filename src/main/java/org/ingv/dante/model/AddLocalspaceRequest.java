@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * AddLocalspaceRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-12T09:54:05.977485Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-28T13:53:26.286228Z[Etc/UTC]")
 public class AddLocalspaceRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -58,6 +58,10 @@ public class AddLocalspaceRequest {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
+  public static final String SERIALIZED_NAME_DOI = "doi";
+  @SerializedName(SERIALIZED_NAME_DOI)
+  private String doi;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
@@ -126,6 +130,28 @@ public class AddLocalspaceRequest {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+
+  public AddLocalspaceRequest doi(String doi) {
+    
+    this.doi = doi;
+    return this;
+  }
+
+   /**
+   * DOI Resource. i.e. 10.13127/TDMT | varchar(255)
+   * @return doi
+  **/
+  @javax.annotation.Nullable
+
+  public String getDoi() {
+    return doi;
+  }
+
+
+  public void setDoi(String doi) {
+    this.doi = doi;
   }
 
 
@@ -277,6 +303,7 @@ public class AddLocalspaceRequest {
     AddLocalspaceRequest addLocalspaceRequest = (AddLocalspaceRequest) o;
     return Objects.equals(this.id, addLocalspaceRequest.id) &&
         Objects.equals(this.name, addLocalspaceRequest.name) &&
+        Objects.equals(this.doi, addLocalspaceRequest.doi) &&
         Objects.equals(this.description, addLocalspaceRequest.description) &&
         Objects.equals(this.priority, addLocalspaceRequest.priority) &&
         Objects.equals(this.environment, addLocalspaceRequest.environment) &&
@@ -291,7 +318,7 @@ public class AddLocalspaceRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, description, priority, environment, modified, inserted, additionalProperties);
+    return Objects.hash(id, name, doi, description, priority, environment, modified, inserted, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -307,6 +334,7 @@ public class AddLocalspaceRequest {
     sb.append("class AddLocalspaceRequest {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    doi: ").append(toIndentedString(doi)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    environment: ").append(toIndentedString(environment)).append("\n");
@@ -337,6 +365,7 @@ public class AddLocalspaceRequest {
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
     openapiFields.add("name");
+    openapiFields.add("doi");
     openapiFields.add("description");
     openapiFields.add("priority");
     openapiFields.add("environment");
@@ -369,6 +398,9 @@ public class AddLocalspaceRequest {
       }
       if (!jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      if ((jsonObj.get("doi") != null && !jsonObj.get("doi").isJsonNull()) && !jsonObj.get("doi").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `doi` to be a primitive type in the JSON string but got `%s`", jsonObj.get("doi").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));

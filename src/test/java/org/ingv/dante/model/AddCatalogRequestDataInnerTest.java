@@ -19,51 +19,95 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import org.ingv.dante.model.LinksDefinition;
-import org.ingv.dante.model.MetaDefinition;
-import org.ingv.dante.model.ObjectVwCatalogInner;
+import java.time.OffsetDateTime;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for GetCatalog200Response
+ * Model tests for AddCatalogRequestDataInner
  */
-public class GetCatalog200ResponseTest {
-    private final GetCatalog200Response model = new GetCatalog200Response();
+public class AddCatalogRequestDataInnerTest {
+    private final AddCatalogRequestDataInner model = new AddCatalogRequestDataInner();
 
     /**
-     * Model tests for GetCatalog200Response
+     * Model tests for AddCatalogRequestDataInner
      */
     @Test
-    public void testGetCatalog200Response() {
-        // TODO: test GetCatalog200Response
+    public void testAddCatalogRequestDataInner() {
+        // TODO: test AddCatalogRequestDataInner
     }
 
     /**
-     * Test the property 'links'
+     * Test the property 'id'
      */
     @Test
-    public void linksTest() {
-        // TODO: test links
+    public void idTest() {
+        // TODO: test id
     }
 
     /**
-     * Test the property 'meta'
+     * Test the property 'name'
      */
     @Test
-    public void metaTest() {
-        // TODO: test meta
+    public void nameTest() {
+        // TODO: test name
     }
 
     /**
-     * Test the property 'data'
+     * Test the property 'doi'
      */
     @Test
-    public void dataTest() {
-        // TODO: test data
+    public void doiTest() {
+        // TODO: test doi
+    }
+
+    /**
+     * Test the property 'eventid'
+     */
+    @Test
+    public void eventidTest() {
+        // TODO: test eventid
+    }
+
+    /**
+     * Test the property 'originid'
+     */
+    @Test
+    public void originidTest() {
+        // TODO: test originid
+    }
+
+    /**
+     * Test the property 'magnitudeid'
+     */
+    @Test
+    public void magnitudeidTest() {
+        // TODO: test magnitudeid
+    }
+
+    /**
+     * Test the property 'eventGroupId'
+     */
+    @Test
+    public void eventGroupIdTest() {
+        // TODO: test eventGroupId
+    }
+
+    /**
+     * Test the property 'modified'
+     */
+    @Test
+    public void modifiedTest() {
+        // TODO: test modified
+    }
+
+    /**
+     * Test the property 'inserted'
+     */
+    @Test
+    public void insertedTest() {
+        // TODO: test inserted
     }
 
 }

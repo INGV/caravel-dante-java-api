@@ -14,7 +14,6 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
-import org.ingv.dante.model.ObjectCatalogMetadata;
 import org.ingv.dante.model.ObjectOriginFlag;
 import org.ingv.dante.model.ObjectTableLocalspace;
 import org.ingv.dante.model.ObjectTableProvenance;
@@ -40,21 +39,6 @@ import java.util.Map;
 public class UpdateApiTest {
 
     private final UpdateApi api = new UpdateApi();
-
-    /**
-     * Update an existing catalog-metadata
-     *
-     * Update an existing catalog-metadata.&lt;/br&gt; To use this API you must be authenticated.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void updateCatalogMetadataTest() throws ApiException {
-        Long id = null;
-        ObjectCatalogMetadata objectCatalogMetadata = null;
-        ObjectCatalogMetadata response = api.updateCatalogMetadata(id, objectCatalogMetadata);
-        // TODO: test validations
-    }
 
     /**
      * Update an existing event

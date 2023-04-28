@@ -24,7 +24,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * Environment (es:development, testing, staging, production, external) | varchar(255)
+ * Environment (es:development, testing, staging, production, external, catalog, generic) | varchar(255)
  */
 @JsonAdapter(Environment.Adapter.class)
 public enum Environment {
@@ -37,7 +37,11 @@ public enum Environment {
   
   PRODUCTION("production"),
   
-  EXTERNAL("external");
+  EXTERNAL("external"),
+  
+  CATALOG("catalog"),
+  
+  GENERIC("generic");
 
   private String value;
 

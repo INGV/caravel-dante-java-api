@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**data** | [**AddCatalogRequestData**](AddCatalogRequestData.md) |  |  [optional] |
+|**data** | [**List&lt;AddCatalogRequestDataInner&gt;**](AddCatalogRequestDataInner.md) |  |  [optional] |
 
 
 

@@ -53,20 +53,4 @@ public class ObjectVwCatalogInnerAllOfCatalogTest {
         // TODO: test doi
     }
 
-    /**
-     * Test the property 'checkOriginEventid'
-     */
-    @Test
-    public void checkOriginEventidTest() {
-        // TODO: test checkOriginEventid
-    }
-
-    /**
-     * Test the property 'checkMagnitudeOriginid'
-     */
-    @Test
-    public void checkMagnitudeOriginidTest() {
-        // TODO: test checkMagnitudeOriginid
-    }
-
 }

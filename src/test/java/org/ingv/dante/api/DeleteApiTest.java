@@ -32,20 +32,6 @@ public class DeleteApiTest {
     private final DeleteApi api = new DeleteApi();
 
     /**
-     * Delete an existing catalog_metadata
-     *
-     * Delete an existing catalog_metadata.&lt;/br&gt; To use this API you must be authenticated.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void deleteCatalogMetadataTest() throws ApiException {
-        Long id = null;
-        api.deleteCatalogMetadata(id);
-        // TODO: test validations
-    }
-
-    /**
      * Delete an existing localspace
      *
      * Delete an existing localspace.&lt;/br&gt; To use this API you must be authenticated.

@@ -15,7 +15,6 @@ package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
 import org.ingv.dante.model.AddCatalog201Response;
-import org.ingv.dante.model.AddCatalogMetadataRequest;
 import org.ingv.dante.model.AddCatalogRequest;
 import org.ingv.dante.model.AddEvent201Response;
 import org.ingv.dante.model.AddFocalmechanism201Response;
@@ -36,7 +35,6 @@ import org.ingv.dante.model.AddTypeEventRequest;
 import org.ingv.dante.model.AddTypeMagnitudeRequest;
 import org.ingv.dante.model.AddTypeOriginRequest;
 import org.ingv.dante.model.GetEvent200Response;
-import org.ingv.dante.model.ObjectCatalogMetadata;
 import org.ingv.dante.model.ObjectTableLocalspace;
 import org.ingv.dante.model.ObjectTableProvenance;
 import org.ingv.dante.model.ObjectTableTypeEvent;
@@ -70,20 +68,6 @@ public class StoreApiTest {
     public void addCatalogTest() throws ApiException {
         AddCatalogRequest addCatalogRequest = null;
         AddCatalog201Response response = api.addCatalog(addCatalogRequest);
-        // TODO: test validations
-    }
-
-    /**
-     * Add a new catalog to the DB
-     *
-     * This API is used to add a catalog object.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void addCatalogMetadataTest() throws ApiException {
-        AddCatalogMetadataRequest addCatalogMetadataRequest = null;
-        ObjectCatalogMetadata response = api.addCatalogMetadata(addCatalogMetadataRequest);
         // TODO: test validations
     }
 

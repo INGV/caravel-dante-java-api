@@ -21,7 +21,9 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import org.ingv.dante.model.ObjectCatalog;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.ObjectVwCatalogInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -47,18 +49,26 @@ import org.ingv.dante.JSON;
 /**
  * AddCatalog201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-12T09:54:05.977485Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-04-28T13:53:26.286228Z[Etc/UTC]")
 public class AddCatalog201Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private ObjectCatalog data;
+  private List<ObjectVwCatalogInner> data = new ArrayList<>();
 
   public AddCatalog201Response() {
   }
 
-  public AddCatalog201Response data(ObjectCatalog data) {
+  public AddCatalog201Response data(List<ObjectVwCatalogInner> data) {
     
     this.data = data;
+    return this;
+  }
+
+  public AddCatalog201Response addDataItem(ObjectVwCatalogInner dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<>();
+    }
+    this.data.add(dataItem);
     return this;
   }
 
@@ -68,12 +78,12 @@ public class AddCatalog201Response {
   **/
   @javax.annotation.Nullable
 
-  public ObjectCatalog getData() {
+  public List<ObjectVwCatalogInner> getData() {
     return data;
   }
 
 
-  public void setData(ObjectCatalog data) {
+  public void setData(List<ObjectVwCatalogInner> data) {
     this.data = data;
   }
 
@@ -187,9 +197,19 @@ public class AddCatalog201Response {
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddCatalog201Response is not found in the empty JSON string", AddCatalog201Response.openapiRequiredFields.toString()));
         }
       }
-      // validate the optional field `data`
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        ObjectCatalog.validateJsonObject(jsonObj.getAsJsonObject("data"));
+        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+        if (jsonArraydata != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("data").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
+          }
+
+          // validate the optional field `data` (array)
+          for (int i = 0; i < jsonArraydata.size(); i++) {
+            ObjectVwCatalogInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+          };
+        }
       }
   }
 
