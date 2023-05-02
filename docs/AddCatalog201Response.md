@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**data** | [**ObjectCatalog**](ObjectCatalog.md) |  |  [optional] |
+|**data** | [**List&lt;ObjectVwCatalogInner&gt;**](ObjectVwCatalogInner.md) |  |  [optional] |
 
 
 

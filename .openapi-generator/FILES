@@ -7,9 +7,8 @@ api/openapi.yaml
 build.gradle
 build.sbt
 docs/AddCatalog201Response.md
-docs/AddCatalogMetadataRequest.md
 docs/AddCatalogRequest.md
-docs/AddCatalogRequestData.md
+docs/AddCatalogRequestDataInner.md
 docs/AddEvent201Response.md
 docs/AddEvent201ResponseData.md
 docs/AddEvent201ResponseDataEvent.md
@@ -61,8 +60,6 @@ docs/DeleteApi.md
 docs/EarthwormApiApi.md
 docs/Environment.md
 docs/GetApi.md
-docs/GetCatalog200Response.md
-docs/GetCatalogMetadata200Response.md
 docs/GetEvent200Response.md
 docs/GetEvent200ResponseData.md
 docs/GetEventsGroup200Response.md
@@ -98,8 +95,6 @@ docs/MagnitudeSchemaEwMessage.md
 docs/MetaDefinition.md
 docs/MetaDefinitionLinksInner.md
 docs/ObjectArrival.md
-docs/ObjectCatalog.md
-docs/ObjectCatalogMetadata.md
 docs/ObjectEvent.md
 docs/ObjectFocalmechanism.md
 docs/ObjectFocalmechanismPostOutput.md
@@ -199,9 +194,8 @@ src/main/java/org/ingv/dante/auth/HttpBasicAuth.java
 src/main/java/org/ingv/dante/auth/HttpBearerAuth.java
 src/main/java/org/ingv/dante/model/AbstractOpenApiSchema.java
 src/main/java/org/ingv/dante/model/AddCatalog201Response.java
-src/main/java/org/ingv/dante/model/AddCatalogMetadataRequest.java
 src/main/java/org/ingv/dante/model/AddCatalogRequest.java
-src/main/java/org/ingv/dante/model/AddCatalogRequestData.java
+src/main/java/org/ingv/dante/model/AddCatalogRequestDataInner.java
 src/main/java/org/ingv/dante/model/AddEvent201Response.java
 src/main/java/org/ingv/dante/model/AddEvent201ResponseData.java
 src/main/java/org/ingv/dante/model/AddEvent201ResponseDataEvent.java
@@ -250,8 +244,6 @@ src/main/java/org/ingv/dante/model/AddTypeEventRequest.java
 src/main/java/org/ingv/dante/model/AddTypeMagnitudeRequest.java
 src/main/java/org/ingv/dante/model/AddTypeOriginRequest.java
 src/main/java/org/ingv/dante/model/Environment.java
-src/main/java/org/ingv/dante/model/GetCatalog200Response.java
-src/main/java/org/ingv/dante/model/GetCatalogMetadata200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200ResponseData.java
 src/main/java/org/ingv/dante/model/GetEventsGroup200Response.java
@@ -287,8 +279,6 @@ src/main/java/org/ingv/dante/model/MagnitudeSchemaEwMessage.java
 src/main/java/org/ingv/dante/model/MetaDefinition.java
 src/main/java/org/ingv/dante/model/MetaDefinitionLinksInner.java
 src/main/java/org/ingv/dante/model/ObjectArrival.java
-src/main/java/org/ingv/dante/model/ObjectCatalog.java
-src/main/java/org/ingv/dante/model/ObjectCatalogMetadata.java
 src/main/java/org/ingv/dante/model/ObjectEvent.java
 src/main/java/org/ingv/dante/model/ObjectFocalmechanism.java
 src/main/java/org/ingv/dante/model/ObjectFocalmechanismPostOutput.java
@@ -358,8 +348,7 @@ src/test/java/org/ingv/dante/api/StoreApiTest.java
 src/test/java/org/ingv/dante/api/UpdateApiTest.java
 src/test/java/org/ingv/dante/api/UserApiTest.java
 src/test/java/org/ingv/dante/model/AddCatalog201ResponseTest.java
-src/test/java/org/ingv/dante/model/AddCatalogMetadataRequestTest.java
-src/test/java/org/ingv/dante/model/AddCatalogRequestDataTest.java
+src/test/java/org/ingv/dante/model/AddCatalogRequestDataInnerTest.java
 src/test/java/org/ingv/dante/model/AddCatalogRequestTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventLocalspaceTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventOriginsInnerAllOfTest.java
@@ -409,8 +398,6 @@ src/test/java/org/ingv/dante/model/AddTypeEventRequestTest.java
 src/test/java/org/ingv/dante/model/AddTypeMagnitudeRequestTest.java
 src/test/java/org/ingv/dante/model/AddTypeOriginRequestTest.java
 src/test/java/org/ingv/dante/model/EnvironmentTest.java
-src/test/java/org/ingv/dante/model/GetCatalog200ResponseTest.java
-src/test/java/org/ingv/dante/model/GetCatalogMetadata200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseDataTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEventsGroup200ResponseTest.java
@@ -446,8 +433,6 @@ src/test/java/org/ingv/dante/model/MagnitudeSchemaTest.java
 src/test/java/org/ingv/dante/model/MetaDefinitionLinksInnerTest.java
 src/test/java/org/ingv/dante/model/MetaDefinitionTest.java
 src/test/java/org/ingv/dante/model/ObjectArrivalTest.java
-src/test/java/org/ingv/dante/model/ObjectCatalogMetadataTest.java
-src/test/java/org/ingv/dante/model/ObjectCatalogTest.java
 src/test/java/org/ingv/dante/model/ObjectEventTest.java
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputFocalmechanismsInnerTest.java
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputTest.java
