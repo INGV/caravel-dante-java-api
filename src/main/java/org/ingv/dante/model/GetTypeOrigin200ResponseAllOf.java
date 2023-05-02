@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeOrigin200ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-02T13:38:41.187038Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-02T14:46:38.869704Z[Etc/UTC]")
 public class GetTypeOrigin200ResponseAllOf {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
