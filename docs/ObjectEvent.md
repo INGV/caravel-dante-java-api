@@ -17,6 +17,8 @@
 |**preferredOriginId** | **Long** | Link: preferred origin. It can be NULL. | bigint(20) |  [optional] [readonly] |
 |**preferredMagnitudeId** | **Long** | Link: preferred magnitude. It can be NULL. | bigint(20) |  [optional] [readonly] |
 |**preferredFocalmechanismId** | **Long** | Link: preferred focalmechanism. It can be NULL. | bigint(20) |  [optional] [readonly] |
+|**setPreferredOriginIdLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
+|**setPreferredMagnitudeIdLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
 |**typeGroup** | **Long** | Group type. Used by clustering algorithm | tinyint(4) |  [optional] [readonly] |
 |**provenance** | [**ObjectProvenance**](ObjectProvenance.md) |  |  [optional] |
 |**localspace** | [**ObjectLocalspace**](ObjectLocalspace.md) |  |  [optional] |

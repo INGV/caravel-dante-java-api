@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-09T09:05:20.150967Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-12T09:29:36.873090Z[Etc/UTC]")
 public class ObjectEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -95,6 +95,14 @@ public class ObjectEvent {
   public static final String SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID = "preferred_focalmechanism_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID)
   private Long preferredFocalmechanismId;
+
+  public static final String SERIALIZED_NAME_SET_PREFERRED_ORIGIN_ID_LOCALSPACE = "set_preferred_origin_id_localspace";
+  @SerializedName(SERIALIZED_NAME_SET_PREFERRED_ORIGIN_ID_LOCALSPACE)
+  private Long setPreferredOriginIdLocalspace;
+
+  public static final String SERIALIZED_NAME_SET_PREFERRED_MAGNITUDE_ID_LOCALSPACE = "set_preferred_magnitude_id_localspace";
+  @SerializedName(SERIALIZED_NAME_SET_PREFERRED_MAGNITUDE_ID_LOCALSPACE)
+  private Long setPreferredMagnitudeIdLocalspace;
 
   public static final String SERIALIZED_NAME_TYPE_GROUP = "type_group";
   @SerializedName(SERIALIZED_NAME_TYPE_GROUP)
@@ -291,6 +299,50 @@ public class ObjectEvent {
 
 
 
+  public ObjectEvent setPreferredOriginIdLocalspace(Long setPreferredOriginIdLocalspace) {
+    
+    this.setPreferredOriginIdLocalspace = setPreferredOriginIdLocalspace;
+    return this;
+  }
+
+   /**
+   * Localspace Id | bigint(19)
+   * @return setPreferredOriginIdLocalspace
+  **/
+  @javax.annotation.Nullable
+
+  public Long getSetPreferredOriginIdLocalspace() {
+    return setPreferredOriginIdLocalspace;
+  }
+
+
+  public void setSetPreferredOriginIdLocalspace(Long setPreferredOriginIdLocalspace) {
+    this.setPreferredOriginIdLocalspace = setPreferredOriginIdLocalspace;
+  }
+
+
+  public ObjectEvent setPreferredMagnitudeIdLocalspace(Long setPreferredMagnitudeIdLocalspace) {
+    
+    this.setPreferredMagnitudeIdLocalspace = setPreferredMagnitudeIdLocalspace;
+    return this;
+  }
+
+   /**
+   * Localspace Id | bigint(19)
+   * @return setPreferredMagnitudeIdLocalspace
+  **/
+  @javax.annotation.Nullable
+
+  public Long getSetPreferredMagnitudeIdLocalspace() {
+    return setPreferredMagnitudeIdLocalspace;
+  }
+
+
+  public void setSetPreferredMagnitudeIdLocalspace(Long setPreferredMagnitudeIdLocalspace) {
+    this.setPreferredMagnitudeIdLocalspace = setPreferredMagnitudeIdLocalspace;
+  }
+
+
    /**
    * Group type. Used by clustering algorithm | tinyint(4)
    * @return typeGroup
@@ -472,6 +524,8 @@ public class ObjectEvent {
         Objects.equals(this.preferredOriginId, objectEvent.preferredOriginId) &&
         Objects.equals(this.preferredMagnitudeId, objectEvent.preferredMagnitudeId) &&
         Objects.equals(this.preferredFocalmechanismId, objectEvent.preferredFocalmechanismId) &&
+        Objects.equals(this.setPreferredOriginIdLocalspace, objectEvent.setPreferredOriginIdLocalspace) &&
+        Objects.equals(this.setPreferredMagnitudeIdLocalspace, objectEvent.setPreferredMagnitudeIdLocalspace) &&
         Objects.equals(this.typeGroup, objectEvent.typeGroup) &&
         Objects.equals(this.provenance, objectEvent.provenance) &&
         Objects.equals(this.localspace, objectEvent.localspace) &&
@@ -486,7 +540,7 @@ public class ObjectEvent {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, idLocalspace, typeEvent, flags, eventGroupId, preferredOriginId, preferredMagnitudeId, preferredFocalmechanismId, typeGroup, provenance, localspace, origins, strongmotions, additionalProperties);
+    return Objects.hash(id, modified, inserted, idLocalspace, typeEvent, flags, eventGroupId, preferredOriginId, preferredMagnitudeId, preferredFocalmechanismId, setPreferredOriginIdLocalspace, setPreferredMagnitudeIdLocalspace, typeGroup, provenance, localspace, origins, strongmotions, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -510,6 +564,8 @@ public class ObjectEvent {
     sb.append("    preferredOriginId: ").append(toIndentedString(preferredOriginId)).append("\n");
     sb.append("    preferredMagnitudeId: ").append(toIndentedString(preferredMagnitudeId)).append("\n");
     sb.append("    preferredFocalmechanismId: ").append(toIndentedString(preferredFocalmechanismId)).append("\n");
+    sb.append("    setPreferredOriginIdLocalspace: ").append(toIndentedString(setPreferredOriginIdLocalspace)).append("\n");
+    sb.append("    setPreferredMagnitudeIdLocalspace: ").append(toIndentedString(setPreferredMagnitudeIdLocalspace)).append("\n");
     sb.append("    typeGroup: ").append(toIndentedString(typeGroup)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
@@ -548,6 +604,8 @@ public class ObjectEvent {
     openapiFields.add("preferred_origin_id");
     openapiFields.add("preferred_magnitude_id");
     openapiFields.add("preferred_focalmechanism_id");
+    openapiFields.add("set_preferred_origin_id_localspace");
+    openapiFields.add("set_preferred_magnitude_id_localspace");
     openapiFields.add("type_group");
     openapiFields.add("provenance");
     openapiFields.add("localspace");

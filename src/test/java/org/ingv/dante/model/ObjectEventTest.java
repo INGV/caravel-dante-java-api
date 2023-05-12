@@ -126,6 +126,22 @@ public class ObjectEventTest {
     }
 
     /**
+     * Test the property 'setPreferredOriginIdLocalspace'
+     */
+    @Test
+    public void setPreferredOriginIdLocalspaceTest() {
+        // TODO: test setPreferredOriginIdLocalspace
+    }
+
+    /**
+     * Test the property 'setPreferredMagnitudeIdLocalspace'
+     */
+    @Test
+    public void setPreferredMagnitudeIdLocalspaceTest() {
+        // TODO: test setPreferredMagnitudeIdLocalspace
+    }
+
+    /**
      * Test the property 'typeGroup'
      */
     @Test
