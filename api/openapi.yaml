@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 2.92.0
+  version: 2.93.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -7744,6 +7744,7 @@ components:
           version: hew1_mole
           parameters: ToDo
           username: ew
+        set_preferred_magnitude_id_localspace: 182491
         strongmotions:
         - sta: ACER
           loc: "00"
@@ -7831,6 +7832,7 @@ components:
           name: hew1_mole
           description: Auto added
         modified: 2016-06-22T16:52:06.26Z
+        set_preferred_origin_id_localspace: 182491
         origins:
         - e1_dip: 7.386281948385884
           err_lon_deg: 9.965781217890562
@@ -9049,6 +9051,18 @@ components:
           format: int64
           nullable: true
           readOnly: true
+          type: integer
+        set_preferred_origin_id_localspace:
+          description: Localspace Id | bigint(19)
+          example: 182491
+          format: int64
+          nullable: true
+          type: integer
+        set_preferred_magnitude_id_localspace:
+          description: Localspace Id | bigint(19)
+          example: 182491
+          format: int64
+          nullable: true
           type: integer
         type_group:
           default: 0
@@ -13111,6 +13125,7 @@ components:
             version: hew1_mole
             parameters: ToDo
             username: ew
+          set_preferred_magnitude_id_localspace: 182491
           strongmotions:
           - sta: ACER
             loc: "00"
@@ -13198,6 +13213,7 @@ components:
             name: hew1_mole
             description: Auto added
           modified: 2016-06-22T16:52:06.26Z
+          set_preferred_origin_id_localspace: 182491
           origins:
           - e1_dip: 7.386281948385884
             err_lon_deg: 9.965781217890562
@@ -14386,6 +14402,7 @@ components:
               version: hew1_mole
               parameters: ToDo
               username: ew
+            set_preferred_magnitude_id_localspace: 182491
             strongmotions:
             - sta: ACER
               loc: "00"
@@ -14473,6 +14490,7 @@ components:
               name: hew1_mole
               description: Auto added
             modified: 2016-06-22T16:52:06.26Z
+            set_preferred_origin_id_localspace: 182491
             origins:
             - e1_dip: 7.386281948385884
               err_lon_deg: 9.965781217890562
