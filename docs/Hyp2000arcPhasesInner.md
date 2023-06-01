@@ -34,8 +34,8 @@
 |**swt** | **Double** | Todo description | ??? |  [optional] |
 |**pamp** | **Double** | Todo description | ??? |  [optional] |
 |**codalenObs** | **Double** | Todo description | ??? |  [optional] |
-|**ccntr** | **List** |  |  [optional] |
-|**caav** | **List** |  |  [optional] |
+|**ccntr** | **List&lt;Long&gt;** |  |  [optional] |
+|**caav** | **List&lt;Long&gt;** |  |  [optional] |
 |**amplitude** | **Float** | Amplitude (Normally peak-to-peak) | col55 F7.2 |  [optional] |
 |**ampUnitsCode** | **Long** | Amp units code. 0&#x3D;PP mm, 1&#x3D;0 to peak mm (UCB), 2&#x3D;digital counts | col62 I2 |  [optional] |
 |**ampType** | **Long** | Amplitude type 0&#x3D;unspecified 1&#x3D;Wood-Anderson 2&#x3D;velocity 3&#x3D;acceleration 4&#x3D;no magnitude | col114 I2 |  [optional] |

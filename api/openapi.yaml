@@ -17031,7 +17031,9 @@ components:
           - 0
           - 0
           - 0
-          format: int64
+          items:
+            format: int64
+            type: integer
           type: array
         caav:
           example:
@@ -17041,7 +17043,9 @@ components:
           - 0
           - 0
           - 0
-          format: int64
+          items:
+            format: int64
+            type: integer
           type: array
         amplitude:
           description: Amplitude (Normally peak-to-peak) | col55 F7.2
