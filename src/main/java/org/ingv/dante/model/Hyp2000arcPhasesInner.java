@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -48,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcPhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-05-29T16:26:17.977455Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-01T08:23:24.350715Z[Etc/UTC]")
 public class Hyp2000arcPhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -160,11 +161,11 @@ public class Hyp2000arcPhasesInner {
 
   public static final String SERIALIZED_NAME_CCNTR = "ccntr";
   @SerializedName(SERIALIZED_NAME_CCNTR)
-  private List ccntr = null;
+  private List<Long> ccntr = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CAAV = "caav";
   @SerializedName(SERIALIZED_NAME_CAAV)
-  private List caav = null;
+  private List<Long> caav = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_AMPLITUDE = "amplitude";
   @SerializedName(SERIALIZED_NAME_AMPLITUDE)
@@ -791,9 +792,17 @@ public class Hyp2000arcPhasesInner {
   }
 
 
-  public Hyp2000arcPhasesInner ccntr(List ccntr) {
+  public Hyp2000arcPhasesInner ccntr(List<Long> ccntr) {
     
     this.ccntr = ccntr;
+    return this;
+  }
+
+  public Hyp2000arcPhasesInner addCcntrItem(Long ccntrItem) {
+    if (this.ccntr == null) {
+      this.ccntr = new ArrayList<>();
+    }
+    this.ccntr.add(ccntrItem);
     return this;
   }
 
@@ -803,19 +812,27 @@ public class Hyp2000arcPhasesInner {
   **/
   @javax.annotation.Nullable
 
-  public List getCcntr() {
+  public List<Long> getCcntr() {
     return ccntr;
   }
 
 
-  public void setCcntr(List ccntr) {
+  public void setCcntr(List<Long> ccntr) {
     this.ccntr = ccntr;
   }
 
 
-  public Hyp2000arcPhasesInner caav(List caav) {
+  public Hyp2000arcPhasesInner caav(List<Long> caav) {
     
     this.caav = caav;
+    return this;
+  }
+
+  public Hyp2000arcPhasesInner addCaavItem(Long caavItem) {
+    if (this.caav == null) {
+      this.caav = new ArrayList<>();
+    }
+    this.caav.add(caavItem);
     return this;
   }
 
@@ -825,12 +842,12 @@ public class Hyp2000arcPhasesInner {
   **/
   @javax.annotation.Nullable
 
-  public List getCaav() {
+  public List<Long> getCaav() {
     return caav;
   }
 
 
-  public void setCaav(List caav) {
+  public void setCaav(List<Long> caav) {
     this.caav = caav;
   }
 
@@ -1246,6 +1263,14 @@ public class Hyp2000arcPhasesInner {
       }
       if ((jsonObj.get("datasrc") != null && !jsonObj.get("datasrc").isJsonNull()) && !jsonObj.get("datasrc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `datasrc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasrc").toString()));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("ccntr") != null && !jsonObj.get("ccntr").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `ccntr` to be an array in the JSON string but got `%s`", jsonObj.get("ccntr").toString()));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("caav") != null && !jsonObj.get("caav").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `caav` to be an array in the JSON string but got `%s`", jsonObj.get("caav").toString()));
       }
   }
 
