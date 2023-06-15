@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEwQuake2kRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-12T16:56:59.494120Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T19:17:39.498240Z[Etc/UTC]")
 public class AddEwQuake2kRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
