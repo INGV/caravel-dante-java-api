@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * AddHEwPickScnl201ResponseDataPicksInnerAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-06-15T19:21:00.921365Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-04T14:49:32.391578Z[Etc/UTC]")
 public class AddHEwPickScnl201ResponseDataPicksInnerAllOf {
   public static final String SERIALIZED_NAME_PICK_EW = "pick_ew";
   @SerializedName(SERIALIZED_NAME_PICK_EW)
