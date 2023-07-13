@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * AddCatalog201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-04T14:46:09.812148Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-13T16:08:23.801272Z[Etc/UTC]")
 public class AddCatalog201Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
