@@ -19,23 +19,24 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import org.ingv.dante.model.TypeAmplitudeCategory;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectStationmagnitudeTypeAmplitude
+ * Model tests for ObjectAmplitudeTypeAmplitude
  */
-public class ObjectStationmagnitudeTypeAmplitudeTest {
-    private final ObjectStationmagnitudeTypeAmplitude model = new ObjectStationmagnitudeTypeAmplitude();
+public class ObjectAmplitudeTypeAmplitudeTest {
+    private final ObjectAmplitudeTypeAmplitude model = new ObjectAmplitudeTypeAmplitude();
 
     /**
-     * Model tests for ObjectStationmagnitudeTypeAmplitude
+     * Model tests for ObjectAmplitudeTypeAmplitude
      */
     @Test
-    public void testObjectStationmagnitudeTypeAmplitude() {
-        // TODO: test ObjectStationmagnitudeTypeAmplitude
+    public void testObjectAmplitudeTypeAmplitude() {
+        // TODO: test ObjectAmplitudeTypeAmplitude
     }
 
     /**
@@ -52,6 +53,14 @@ public class ObjectStationmagnitudeTypeAmplitudeTest {
     @Test
     public void unitTest() {
         // TODO: test unit
+    }
+
+    /**
+     * Test the property 'category'
+     */
+    @Test
+    public void categoryTest() {
+        // TODO: test category
     }
 
 }

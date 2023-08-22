@@ -21,6 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import org.ingv.dante.model.TypeAmplitudeCategory;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -45,10 +46,10 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * ObjectStationmagnitudeTypeAmplitude
+ * ObjectAmplitudeTypeAmplitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-05T10:52:57.212121Z[Etc/UTC]")
-public class ObjectStationmagnitudeTypeAmplitude {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-22T11:13:55.542808Z[Etc/UTC]")
+public class ObjectAmplitudeTypeAmplitude {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -57,10 +58,14 @@ public class ObjectStationmagnitudeTypeAmplitude {
   @SerializedName(SERIALIZED_NAME_UNIT)
   private String unit;
 
-  public ObjectStationmagnitudeTypeAmplitude() {
+  public static final String SERIALIZED_NAME_CATEGORY = "category";
+  @SerializedName(SERIALIZED_NAME_CATEGORY)
+  private TypeAmplitudeCategory category;
+
+  public ObjectAmplitudeTypeAmplitude() {
   }
 
-  public ObjectStationmagnitudeTypeAmplitude name(String name) {
+  public ObjectAmplitudeTypeAmplitude name(String name) {
     
     this.name = name;
     return this;
@@ -82,7 +87,7 @@ public class ObjectStationmagnitudeTypeAmplitude {
   }
 
 
-  public ObjectStationmagnitudeTypeAmplitude unit(String unit) {
+  public ObjectAmplitudeTypeAmplitude unit(String unit) {
     
     this.unit = unit;
     return this;
@@ -103,6 +108,28 @@ public class ObjectStationmagnitudeTypeAmplitude {
     this.unit = unit;
   }
 
+
+  public ObjectAmplitudeTypeAmplitude category(TypeAmplitudeCategory category) {
+    
+    this.category = category;
+    return this;
+  }
+
+   /**
+   * Get category
+   * @return category
+  **/
+  @javax.annotation.Nullable
+
+  public TypeAmplitudeCategory getCategory() {
+    return category;
+  }
+
+
+  public void setCategory(TypeAmplitudeCategory category) {
+    this.category = category;
+  }
+
   /**
    * A container for additional, undeclared properties.
    * This is a holder for any undeclared properties as specified with
@@ -116,9 +143,9 @@ public class ObjectStationmagnitudeTypeAmplitude {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the ObjectStationmagnitudeTypeAmplitude instance itself
+   * @return the ObjectAmplitudeTypeAmplitude instance itself
    */
-  public ObjectStationmagnitudeTypeAmplitude putAdditionalProperty(String key, Object value) {
+  public ObjectAmplitudeTypeAmplitude putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -157,10 +184,11 @@ public class ObjectStationmagnitudeTypeAmplitude {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectStationmagnitudeTypeAmplitude objectStationmagnitudeTypeAmplitude = (ObjectStationmagnitudeTypeAmplitude) o;
-    return Objects.equals(this.name, objectStationmagnitudeTypeAmplitude.name) &&
-        Objects.equals(this.unit, objectStationmagnitudeTypeAmplitude.unit)&&
-        Objects.equals(this.additionalProperties, objectStationmagnitudeTypeAmplitude.additionalProperties);
+    ObjectAmplitudeTypeAmplitude objectAmplitudeTypeAmplitude = (ObjectAmplitudeTypeAmplitude) o;
+    return Objects.equals(this.name, objectAmplitudeTypeAmplitude.name) &&
+        Objects.equals(this.unit, objectAmplitudeTypeAmplitude.unit) &&
+        Objects.equals(this.category, objectAmplitudeTypeAmplitude.category)&&
+        Objects.equals(this.additionalProperties, objectAmplitudeTypeAmplitude.additionalProperties);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -169,7 +197,7 @@ public class ObjectStationmagnitudeTypeAmplitude {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, unit, additionalProperties);
+    return Objects.hash(name, unit, category, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -182,9 +210,10 @@ public class ObjectStationmagnitudeTypeAmplitude {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectStationmagnitudeTypeAmplitude {\n");
+    sb.append("class ObjectAmplitudeTypeAmplitude {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    unit: ").append(toIndentedString(unit)).append("\n");
+    sb.append("    category: ").append(toIndentedString(category)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -210,6 +239,7 @@ public class ObjectStationmagnitudeTypeAmplitude {
     openapiFields = new HashSet<String>();
     openapiFields.add("name");
     openapiFields.add("unit");
+    openapiFields.add("category");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -220,17 +250,17 @@ public class ObjectStationmagnitudeTypeAmplitude {
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectStationmagnitudeTypeAmplitude
+  * @throws IOException if the JSON Object is invalid with respect to ObjectAmplitudeTypeAmplitude
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (!ObjectStationmagnitudeTypeAmplitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectStationmagnitudeTypeAmplitude is not found in the empty JSON string", ObjectStationmagnitudeTypeAmplitude.openapiRequiredFields.toString()));
+        if (!ObjectAmplitudeTypeAmplitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectAmplitudeTypeAmplitude is not found in the empty JSON string", ObjectAmplitudeTypeAmplitude.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectStationmagnitudeTypeAmplitude.openapiRequiredFields) {
+      for (String requiredField : ObjectAmplitudeTypeAmplitude.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
@@ -247,16 +277,16 @@ public class ObjectStationmagnitudeTypeAmplitude {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectStationmagnitudeTypeAmplitude.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectStationmagnitudeTypeAmplitude' and its subtypes
+       if (!ObjectAmplitudeTypeAmplitude.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectAmplitudeTypeAmplitude' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectStationmagnitudeTypeAmplitude> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectStationmagnitudeTypeAmplitude.class));
+       final TypeAdapter<ObjectAmplitudeTypeAmplitude> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectAmplitudeTypeAmplitude.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectStationmagnitudeTypeAmplitude>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectAmplitudeTypeAmplitude>() {
            @Override
-           public void write(JsonWriter out, ObjectStationmagnitudeTypeAmplitude value) throws IOException {
+           public void write(JsonWriter out, ObjectAmplitudeTypeAmplitude value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -279,11 +309,11 @@ public class ObjectStationmagnitudeTypeAmplitude {
            }
 
            @Override
-           public ObjectStationmagnitudeTypeAmplitude read(JsonReader in) throws IOException {
+           public ObjectAmplitudeTypeAmplitude read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             ObjectStationmagnitudeTypeAmplitude instance = thisAdapter.fromJsonTree(jsonObj);
+             ObjectAmplitudeTypeAmplitude instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -310,18 +340,18 @@ public class ObjectStationmagnitudeTypeAmplitude {
   }
 
  /**
-  * Create an instance of ObjectStationmagnitudeTypeAmplitude given an JSON string
+  * Create an instance of ObjectAmplitudeTypeAmplitude given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectStationmagnitudeTypeAmplitude
-  * @throws IOException if the JSON string is invalid with respect to ObjectStationmagnitudeTypeAmplitude
+  * @return An instance of ObjectAmplitudeTypeAmplitude
+  * @throws IOException if the JSON string is invalid with respect to ObjectAmplitudeTypeAmplitude
   */
-  public static ObjectStationmagnitudeTypeAmplitude fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectStationmagnitudeTypeAmplitude.class);
+  public static ObjectAmplitudeTypeAmplitude fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectAmplitudeTypeAmplitude.class);
   }
 
  /**
-  * Convert an instance of ObjectStationmagnitudeTypeAmplitude to an JSON string
+  * Convert an instance of ObjectAmplitudeTypeAmplitude to an JSON string
   *
   * @return JSON string
   */

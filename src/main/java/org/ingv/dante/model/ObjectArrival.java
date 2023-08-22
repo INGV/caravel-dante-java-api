@@ -23,10 +23,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
+import org.ingv.dante.model.ObjectPick;
 import org.ingv.dante.model.ObjectPickEw;
 import org.ingv.dante.model.ObjectProvenance;
-import org.ingv.dante.model.PickEmersio;
-import org.ingv.dante.model.PickFirstmotion;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -53,24 +52,8 @@ import org.ingv.dante.JSON;
 /**
  * ObjectArrival
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-05T10:52:57.212121Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-22T11:13:55.542808Z[Etc/UTC]")
 public class ObjectArrival {
-  public static final String SERIALIZED_NAME_NET = "net";
-  @SerializedName(SERIALIZED_NAME_NET)
-  private String net;
-
-  public static final String SERIALIZED_NAME_STA = "sta";
-  @SerializedName(SERIALIZED_NAME_STA)
-  private String sta;
-
-  public static final String SERIALIZED_NAME_CHA = "cha";
-  @SerializedName(SERIALIZED_NAME_CHA)
-  private String cha;
-
-  public static final String SERIALIZED_NAME_LOC = "loc";
-  @SerializedName(SERIALIZED_NAME_LOC)
-  private String loc = "--";
-
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Long id;
@@ -83,41 +66,9 @@ public class ObjectArrival {
   @SerializedName(SERIALIZED_NAME_INSERTED)
   private OffsetDateTime inserted;
 
-  public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
-  @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
-  private Long idLocalspace;
-
   public static final String SERIALIZED_NAME_ISC_CODE = "isc_code";
   @SerializedName(SERIALIZED_NAME_ISC_CODE)
   private String iscCode;
-
-  public static final String SERIALIZED_NAME_QUALITY_CLASS = "quality_class";
-  @SerializedName(SERIALIZED_NAME_QUALITY_CLASS)
-  private Integer qualityClass;
-
-  public static final String SERIALIZED_NAME_LOWER_UNCERTAINTY = "lower_uncertainty";
-  @SerializedName(SERIALIZED_NAME_LOWER_UNCERTAINTY)
-  private Float lowerUncertainty;
-
-  public static final String SERIALIZED_NAME_UPPER_UNCERTAINTY = "upper_uncertainty";
-  @SerializedName(SERIALIZED_NAME_UPPER_UNCERTAINTY)
-  private Float upperUncertainty;
-
-  public static final String SERIALIZED_NAME_CONFIDENCE_LEVEL = "confidence_level";
-  @SerializedName(SERIALIZED_NAME_CONFIDENCE_LEVEL)
-  private Float confidenceLevel = 68.3f;
-
-  public static final String SERIALIZED_NAME_ARRIVAL_TIME = "arrival_time";
-  @SerializedName(SERIALIZED_NAME_ARRIVAL_TIME)
-  private OffsetDateTime arrivalTime;
-
-  public static final String SERIALIZED_NAME_FIRSTMOTION = "firstmotion";
-  @SerializedName(SERIALIZED_NAME_FIRSTMOTION)
-  private PickFirstmotion firstmotion;
-
-  public static final String SERIALIZED_NAME_EMERSIO = "emersio";
-  @SerializedName(SERIALIZED_NAME_EMERSIO)
-  private PickEmersio emersio;
 
   public static final String SERIALIZED_NAME_EP_DISTANCE_KM = "ep_distance_km";
   @SerializedName(SERIALIZED_NAME_EP_DISTANCE_KM)
@@ -167,6 +118,10 @@ public class ObjectArrival {
   @SerializedName(SERIALIZED_NAME_PICK_EW)
   private ObjectPickEw pickEw;
 
+  public static final String SERIALIZED_NAME_PICK = "pick";
+  @SerializedName(SERIALIZED_NAME_PICK)
+  private ObjectPick pick;
+
   public ObjectArrival() {
   }
 
@@ -181,94 +136,6 @@ public class ObjectArrival {
     this.modified = modified;
     this.inserted = inserted;
   }
-
-  public ObjectArrival net(String net) {
-    
-    this.net = net;
-    return this;
-  }
-
-   /**
-   * Channel net code | char(2)
-   * @return net
-  **/
-  @javax.annotation.Nonnull
-
-  public String getNet() {
-    return net;
-  }
-
-
-  public void setNet(String net) {
-    this.net = net;
-  }
-
-
-  public ObjectArrival sta(String sta) {
-    
-    this.sta = sta;
-    return this;
-  }
-
-   /**
-   * Channel station code | varchar(5)
-   * @return sta
-  **/
-  @javax.annotation.Nonnull
-
-  public String getSta() {
-    return sta;
-  }
-
-
-  public void setSta(String sta) {
-    this.sta = sta;
-  }
-
-
-  public ObjectArrival cha(String cha) {
-    
-    this.cha = cha;
-    return this;
-  }
-
-   /**
-   * Channel code | char(3)
-   * @return cha
-  **/
-  @javax.annotation.Nonnull
-
-  public String getCha() {
-    return cha;
-  }
-
-
-  public void setCha(String cha) {
-    this.cha = cha;
-  }
-
-
-  public ObjectArrival loc(String loc) {
-    
-    this.loc = loc;
-    return this;
-  }
-
-   /**
-   * Channel location | char(2)
-   * @return loc
-  **/
-  @javax.annotation.Nullable
-
-  public String getLoc() {
-    return loc;
-  }
-
-
-  public void setLoc(String loc) {
-    this.loc = loc;
-  }
-
 
    /**
    * Unique incremental id | bigint(20)
@@ -309,28 +176,6 @@ public class ObjectArrival {
 
 
 
-  public ObjectArrival idLocalspace(Long idLocalspace) {
-    
-    this.idLocalspace = idLocalspace;
-    return this;
-  }
-
-   /**
-   * Localspace Id | bigint(19)
-   * @return idLocalspace
-  **/
-  @javax.annotation.Nullable
-
-  public Long getIdLocalspace() {
-    return idLocalspace;
-  }
-
-
-  public void setIdLocalspace(Long idLocalspace) {
-    this.idLocalspace = idLocalspace;
-  }
-
-
   public ObjectArrival iscCode(String iscCode) {
     
     this.iscCode = iscCode;
@@ -350,160 +195,6 @@ public class ObjectArrival {
 
   public void setIscCode(String iscCode) {
     this.iscCode = iscCode;
-  }
-
-
-  public ObjectArrival qualityClass(Integer qualityClass) {
-    
-    this.qualityClass = qualityClass;
-    return this;
-  }
-
-   /**
-   * Pick quality class | bigint
-   * @return qualityClass
-  **/
-  @javax.annotation.Nullable
-
-  public Integer getQualityClass() {
-    return qualityClass;
-  }
-
-
-  public void setQualityClass(Integer qualityClass) {
-    this.qualityClass = qualityClass;
-  }
-
-
-  public ObjectArrival lowerUncertainty(Float lowerUncertainty) {
-    
-    this.lowerUncertainty = lowerUncertainty;
-    return this;
-  }
-
-   /**
-   * Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)
-   * @return lowerUncertainty
-  **/
-  @javax.annotation.Nullable
-
-  public Float getLowerUncertainty() {
-    return lowerUncertainty;
-  }
-
-
-  public void setLowerUncertainty(Float lowerUncertainty) {
-    this.lowerUncertainty = lowerUncertainty;
-  }
-
-
-  public ObjectArrival upperUncertainty(Float upperUncertainty) {
-    
-    this.upperUncertainty = upperUncertainty;
-    return this;
-  }
-
-   /**
-   * Uncertainty as the absolute value of deviation from the mainvalue towards larger values. | decimal(8,3)
-   * @return upperUncertainty
-  **/
-  @javax.annotation.Nullable
-
-  public Float getUpperUncertainty() {
-    return upperUncertainty;
-  }
-
-
-  public void setUpperUncertainty(Float upperUncertainty) {
-    this.upperUncertainty = upperUncertainty;
-  }
-
-
-  public ObjectArrival confidenceLevel(Float confidenceLevel) {
-    
-    this.confidenceLevel = confidenceLevel;
-    return this;
-  }
-
-   /**
-   * Integer numer for confidence level type (68.3 1 sigma, xx &#x3D;2 sigma, 99% 3 sigma) | decimal(5.2)
-   * @return confidenceLevel
-  **/
-  @javax.annotation.Nullable
-
-  public Float getConfidenceLevel() {
-    return confidenceLevel;
-  }
-
-
-  public void setConfidenceLevel(Float confidenceLevel) {
-    this.confidenceLevel = confidenceLevel;
-  }
-
-
-  public ObjectArrival arrivalTime(OffsetDateTime arrivalTime) {
-    
-    this.arrivalTime = arrivalTime;
-    return this;
-  }
-
-   /**
-   * Arrival time with microseconds | datetime(3)
-   * @return arrivalTime
-  **/
-  @javax.annotation.Nonnull
-
-  public OffsetDateTime getArrivalTime() {
-    return arrivalTime;
-  }
-
-
-  public void setArrivalTime(OffsetDateTime arrivalTime) {
-    this.arrivalTime = arrivalTime;
-  }
-
-
-  public ObjectArrival firstmotion(PickFirstmotion firstmotion) {
-    
-    this.firstmotion = firstmotion;
-    return this;
-  }
-
-   /**
-   * Get firstmotion
-   * @return firstmotion
-  **/
-  @javax.annotation.Nullable
-
-  public PickFirstmotion getFirstmotion() {
-    return firstmotion;
-  }
-
-
-  public void setFirstmotion(PickFirstmotion firstmotion) {
-    this.firstmotion = firstmotion;
-  }
-
-
-  public ObjectArrival emersio(PickEmersio emersio) {
-    
-    this.emersio = emersio;
-    return this;
-  }
-
-   /**
-   * Get emersio
-   * @return emersio
-  **/
-  @javax.annotation.Nullable
-
-  public PickEmersio getEmersio() {
-    return emersio;
-  }
-
-
-  public void setEmersio(PickEmersio emersio) {
-    this.emersio = emersio;
   }
 
 
@@ -770,6 +461,28 @@ public class ObjectArrival {
     this.pickEw = pickEw;
   }
 
+
+  public ObjectArrival pick(ObjectPick pick) {
+    
+    this.pick = pick;
+    return this;
+  }
+
+   /**
+   * Get pick
+   * @return pick
+  **/
+  @javax.annotation.Nullable
+
+  public ObjectPick getPick() {
+    return pick;
+  }
+
+
+  public void setPick(ObjectPick pick) {
+    this.pick = pick;
+  }
+
   /**
    * A container for additional, undeclared properties.
    * This is a holder for any undeclared properties as specified with
@@ -825,22 +538,10 @@ public class ObjectArrival {
       return false;
     }
     ObjectArrival objectArrival = (ObjectArrival) o;
-    return Objects.equals(this.net, objectArrival.net) &&
-        Objects.equals(this.sta, objectArrival.sta) &&
-        Objects.equals(this.cha, objectArrival.cha) &&
-        Objects.equals(this.loc, objectArrival.loc) &&
-        Objects.equals(this.id, objectArrival.id) &&
+    return Objects.equals(this.id, objectArrival.id) &&
         Objects.equals(this.modified, objectArrival.modified) &&
         Objects.equals(this.inserted, objectArrival.inserted) &&
-        Objects.equals(this.idLocalspace, objectArrival.idLocalspace) &&
         Objects.equals(this.iscCode, objectArrival.iscCode) &&
-        Objects.equals(this.qualityClass, objectArrival.qualityClass) &&
-        Objects.equals(this.lowerUncertainty, objectArrival.lowerUncertainty) &&
-        Objects.equals(this.upperUncertainty, objectArrival.upperUncertainty) &&
-        Objects.equals(this.confidenceLevel, objectArrival.confidenceLevel) &&
-        Objects.equals(this.arrivalTime, objectArrival.arrivalTime) &&
-        Objects.equals(this.firstmotion, objectArrival.firstmotion) &&
-        Objects.equals(this.emersio, objectArrival.emersio) &&
         Objects.equals(this.epDistanceKm, objectArrival.epDistanceKm) &&
         Objects.equals(this.epDistanceDelta, objectArrival.epDistanceDelta) &&
         Objects.equals(this.origDistance, objectArrival.origDistance) &&
@@ -852,7 +553,8 @@ public class ObjectArrival {
         Objects.equals(this.weight, objectArrival.weight) &&
         Objects.equals(this.localspace, objectArrival.localspace) &&
         Objects.equals(this.provenance, objectArrival.provenance) &&
-        Objects.equals(this.pickEw, objectArrival.pickEw)&&
+        Objects.equals(this.pickEw, objectArrival.pickEw) &&
+        Objects.equals(this.pick, objectArrival.pick)&&
         Objects.equals(this.additionalProperties, objectArrival.additionalProperties);
   }
 
@@ -862,7 +564,7 @@ public class ObjectArrival {
 
   @Override
   public int hashCode() {
-    return Objects.hash(net, sta, cha, loc, id, modified, inserted, idLocalspace, iscCode, qualityClass, lowerUncertainty, upperUncertainty, confidenceLevel, arrivalTime, firstmotion, emersio, epDistanceKm, epDistanceDelta, origDistance, azimut, takeOff, polarityIsUsed, arrTimeIsUsed, residual, weight, localspace, provenance, pickEw, additionalProperties);
+    return Objects.hash(id, modified, inserted, iscCode, epDistanceKm, epDistanceDelta, origDistance, azimut, takeOff, polarityIsUsed, arrTimeIsUsed, residual, weight, localspace, provenance, pickEw, pick, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -876,22 +578,10 @@ public class ObjectArrival {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ObjectArrival {\n");
-    sb.append("    net: ").append(toIndentedString(net)).append("\n");
-    sb.append("    sta: ").append(toIndentedString(sta)).append("\n");
-    sb.append("    cha: ").append(toIndentedString(cha)).append("\n");
-    sb.append("    loc: ").append(toIndentedString(loc)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
-    sb.append("    idLocalspace: ").append(toIndentedString(idLocalspace)).append("\n");
     sb.append("    iscCode: ").append(toIndentedString(iscCode)).append("\n");
-    sb.append("    qualityClass: ").append(toIndentedString(qualityClass)).append("\n");
-    sb.append("    lowerUncertainty: ").append(toIndentedString(lowerUncertainty)).append("\n");
-    sb.append("    upperUncertainty: ").append(toIndentedString(upperUncertainty)).append("\n");
-    sb.append("    confidenceLevel: ").append(toIndentedString(confidenceLevel)).append("\n");
-    sb.append("    arrivalTime: ").append(toIndentedString(arrivalTime)).append("\n");
-    sb.append("    firstmotion: ").append(toIndentedString(firstmotion)).append("\n");
-    sb.append("    emersio: ").append(toIndentedString(emersio)).append("\n");
     sb.append("    epDistanceKm: ").append(toIndentedString(epDistanceKm)).append("\n");
     sb.append("    epDistanceDelta: ").append(toIndentedString(epDistanceDelta)).append("\n");
     sb.append("    origDistance: ").append(toIndentedString(origDistance)).append("\n");
@@ -904,6 +594,7 @@ public class ObjectArrival {
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
     sb.append("    pickEw: ").append(toIndentedString(pickEw)).append("\n");
+    sb.append("    pick: ").append(toIndentedString(pick)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -927,22 +618,10 @@ public class ObjectArrival {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("net");
-    openapiFields.add("sta");
-    openapiFields.add("cha");
-    openapiFields.add("loc");
     openapiFields.add("id");
     openapiFields.add("modified");
     openapiFields.add("inserted");
-    openapiFields.add("id_localspace");
     openapiFields.add("isc_code");
-    openapiFields.add("quality_class");
-    openapiFields.add("lower_uncertainty");
-    openapiFields.add("upper_uncertainty");
-    openapiFields.add("confidence_level");
-    openapiFields.add("arrival_time");
-    openapiFields.add("firstmotion");
-    openapiFields.add("emersio");
     openapiFields.add("ep_distance_km");
     openapiFields.add("ep_distance_delta");
     openapiFields.add("orig_distance");
@@ -955,14 +634,11 @@ public class ObjectArrival {
     openapiFields.add("localspace");
     openapiFields.add("provenance");
     openapiFields.add("pick_ew");
+    openapiFields.add("pick");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("net");
-    openapiRequiredFields.add("sta");
-    openapiRequiredFields.add("cha");
     openapiRequiredFields.add("isc_code");
-    openapiRequiredFields.add("arrival_time");
   }
 
  /**
@@ -984,18 +660,6 @@ public class ObjectArrival {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if (!jsonObj.get("net").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
-      }
-      if (!jsonObj.get("sta").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
-      }
-      if (!jsonObj.get("cha").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `cha` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cha").toString()));
-      }
-      if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
-      }
       if (!jsonObj.get("isc_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `isc_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("isc_code").toString()));
       }
@@ -1010,6 +674,10 @@ public class ObjectArrival {
       // validate the optional field `pick_ew`
       if (jsonObj.get("pick_ew") != null && !jsonObj.get("pick_ew").isJsonNull()) {
         ObjectPickEw.validateJsonObject(jsonObj.getAsJsonObject("pick_ew"));
+      }
+      // validate the optional field `pick`
+      if (jsonObj.get("pick") != null && !jsonObj.get("pick").isJsonNull()) {
+        ObjectPick.validateJsonObject(jsonObj.getAsJsonObject("pick"));
       }
   }
 

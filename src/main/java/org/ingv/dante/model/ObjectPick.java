@@ -22,11 +22,10 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.util.ArrayList;
-import java.util.List;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
-import org.ingv.dante.model.ObjectStationmagnitude;
+import org.ingv.dante.model.PickEmersio;
+import org.ingv.dante.model.PickFirstmotion;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -51,10 +50,26 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * ObjectMagnitude
+ * ObjectPick
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-22T11:13:55.542808Z[Etc/UTC]")
-public class ObjectMagnitude {
+public class ObjectPick {
+  public static final String SERIALIZED_NAME_NET = "net";
+  @SerializedName(SERIALIZED_NAME_NET)
+  private String net;
+
+  public static final String SERIALIZED_NAME_STA = "sta";
+  @SerializedName(SERIALIZED_NAME_STA)
+  private String sta;
+
+  public static final String SERIALIZED_NAME_CHA = "cha";
+  @SerializedName(SERIALIZED_NAME_CHA)
+  private String cha;
+
+  public static final String SERIALIZED_NAME_LOC = "loc";
+  @SerializedName(SERIALIZED_NAME_LOC)
+  private String loc = "--";
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Long id;
@@ -71,57 +86,33 @@ public class ObjectMagnitude {
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
   private Long idLocalspace;
 
-  public static final String SERIALIZED_NAME_MAG = "mag";
-  @SerializedName(SERIALIZED_NAME_MAG)
-  private Double mag;
+  public static final String SERIALIZED_NAME_QUALITY_CLASS = "quality_class";
+  @SerializedName(SERIALIZED_NAME_QUALITY_CLASS)
+  private Integer qualityClass;
 
   public static final String SERIALIZED_NAME_LOWER_UNCERTAINTY = "lower_uncertainty";
   @SerializedName(SERIALIZED_NAME_LOWER_UNCERTAINTY)
-  private Double lowerUncertainty;
+  private Float lowerUncertainty;
 
   public static final String SERIALIZED_NAME_UPPER_UNCERTAINTY = "upper_uncertainty";
   @SerializedName(SERIALIZED_NAME_UPPER_UNCERTAINTY)
-  private Double upperUncertainty;
+  private Float upperUncertainty;
 
   public static final String SERIALIZED_NAME_CONFIDENCE_LEVEL = "confidence_level";
   @SerializedName(SERIALIZED_NAME_CONFIDENCE_LEVEL)
   private Float confidenceLevel = 68.3f;
 
-  public static final String SERIALIZED_NAME_QUALITY = "quality";
-  @SerializedName(SERIALIZED_NAME_QUALITY)
-  private Double quality;
+  public static final String SERIALIZED_NAME_ARRIVAL_TIME = "arrival_time";
+  @SerializedName(SERIALIZED_NAME_ARRIVAL_TIME)
+  private OffsetDateTime arrivalTime;
 
-  public static final String SERIALIZED_NAME_MIN_DIST = "min_dist";
-  @SerializedName(SERIALIZED_NAME_MIN_DIST)
-  private Double minDist;
+  public static final String SERIALIZED_NAME_FIRSTMOTION = "firstmotion";
+  @SerializedName(SERIALIZED_NAME_FIRSTMOTION)
+  private PickFirstmotion firstmotion;
 
-  public static final String SERIALIZED_NAME_AZIMUT = "azimut";
-  @SerializedName(SERIALIZED_NAME_AZIMUT)
-  private Float azimut;
-
-  public static final String SERIALIZED_NAME_NSTA = "nsta";
-  @SerializedName(SERIALIZED_NAME_NSTA)
-  private Long nsta;
-
-  public static final String SERIALIZED_NAME_NCHA = "ncha";
-  @SerializedName(SERIALIZED_NAME_NCHA)
-  private Long ncha;
-
-  public static final String SERIALIZED_NAME_NSTA_USED = "nsta_used";
-  @SerializedName(SERIALIZED_NAME_NSTA_USED)
-  private Long nstaUsed;
-
-  public static final String SERIALIZED_NAME_NCHA_USED = "ncha_used";
-  @SerializedName(SERIALIZED_NAME_NCHA_USED)
-  private Long nchaUsed;
-
-  public static final String SERIALIZED_NAME_MAG_QUALITY = "mag_quality";
-  @SerializedName(SERIALIZED_NAME_MAG_QUALITY)
-  private String magQuality;
-
-  public static final String SERIALIZED_NAME_TYPE_MAGNITUDE = "type_magnitude";
-  @SerializedName(SERIALIZED_NAME_TYPE_MAGNITUDE)
-  private String typeMagnitude;
+  public static final String SERIALIZED_NAME_EMERSIO = "emersio";
+  @SerializedName(SERIALIZED_NAME_EMERSIO)
+  private PickEmersio emersio;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
@@ -131,15 +122,11 @@ public class ObjectMagnitude {
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
   private ObjectProvenance provenance;
 
-  public static final String SERIALIZED_NAME_STATIONMAGNITUDES = "stationmagnitudes";
-  @SerializedName(SERIALIZED_NAME_STATIONMAGNITUDES)
-  private List<ObjectStationmagnitude> stationmagnitudes = new ArrayList<>();
-
-  public ObjectMagnitude() {
+  public ObjectPick() {
   }
 
   
-  public ObjectMagnitude(
+  public ObjectPick(
      Long id, 
      OffsetDateTime modified, 
      OffsetDateTime inserted
@@ -149,6 +136,94 @@ public class ObjectMagnitude {
     this.modified = modified;
     this.inserted = inserted;
   }
+
+  public ObjectPick net(String net) {
+    
+    this.net = net;
+    return this;
+  }
+
+   /**
+   * Channel net code | char(2)
+   * @return net
+  **/
+  @javax.annotation.Nonnull
+
+  public String getNet() {
+    return net;
+  }
+
+
+  public void setNet(String net) {
+    this.net = net;
+  }
+
+
+  public ObjectPick sta(String sta) {
+    
+    this.sta = sta;
+    return this;
+  }
+
+   /**
+   * Channel station code | varchar(5)
+   * @return sta
+  **/
+  @javax.annotation.Nonnull
+
+  public String getSta() {
+    return sta;
+  }
+
+
+  public void setSta(String sta) {
+    this.sta = sta;
+  }
+
+
+  public ObjectPick cha(String cha) {
+    
+    this.cha = cha;
+    return this;
+  }
+
+   /**
+   * Channel code | char(3)
+   * @return cha
+  **/
+  @javax.annotation.Nonnull
+
+  public String getCha() {
+    return cha;
+  }
+
+
+  public void setCha(String cha) {
+    this.cha = cha;
+  }
+
+
+  public ObjectPick loc(String loc) {
+    
+    this.loc = loc;
+    return this;
+  }
+
+   /**
+   * Channel location | char(2)
+   * @return loc
+  **/
+  @javax.annotation.Nullable
+
+  public String getLoc() {
+    return loc;
+  }
+
+
+  public void setLoc(String loc) {
+    this.loc = loc;
+  }
+
 
    /**
    * Unique incremental id | bigint(20)
@@ -189,7 +264,7 @@ public class ObjectMagnitude {
 
 
 
-  public ObjectMagnitude idLocalspace(Long idLocalspace) {
+  public ObjectPick idLocalspace(Long idLocalspace) {
     
     this.idLocalspace = idLocalspace;
     return this;
@@ -211,73 +286,73 @@ public class ObjectMagnitude {
   }
 
 
-  public ObjectMagnitude mag(Double mag) {
+  public ObjectPick qualityClass(Integer qualityClass) {
     
-    this.mag = mag;
+    this.qualityClass = qualityClass;
     return this;
   }
 
    /**
-   * Magnitude value | double
-   * @return mag
+   * Pick quality class | bigint
+   * @return qualityClass
   **/
-  @javax.annotation.Nonnull
+  @javax.annotation.Nullable
 
-  public Double getMag() {
-    return mag;
+  public Integer getQualityClass() {
+    return qualityClass;
   }
 
 
-  public void setMag(Double mag) {
-    this.mag = mag;
+  public void setQualityClass(Integer qualityClass) {
+    this.qualityClass = qualityClass;
   }
 
 
-  public ObjectMagnitude lowerUncertainty(Double lowerUncertainty) {
+  public ObjectPick lowerUncertainty(Float lowerUncertainty) {
     
     this.lowerUncertainty = lowerUncertainty;
     return this;
   }
 
    /**
-   * Magnitude lower_uncertainty | double
+   * Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)
    * @return lowerUncertainty
   **/
   @javax.annotation.Nullable
 
-  public Double getLowerUncertainty() {
+  public Float getLowerUncertainty() {
     return lowerUncertainty;
   }
 
 
-  public void setLowerUncertainty(Double lowerUncertainty) {
+  public void setLowerUncertainty(Float lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
   }
 
 
-  public ObjectMagnitude upperUncertainty(Double upperUncertainty) {
+  public ObjectPick upperUncertainty(Float upperUncertainty) {
     
     this.upperUncertainty = upperUncertainty;
     return this;
   }
 
    /**
-   * Magnitude upper_uncertainty | double
+   * Uncertainty as the absolute value of deviation from the mainvalue towards larger values. | decimal(8,3)
    * @return upperUncertainty
   **/
   @javax.annotation.Nullable
 
-  public Double getUpperUncertainty() {
+  public Float getUpperUncertainty() {
     return upperUncertainty;
   }
 
 
-  public void setUpperUncertainty(Double upperUncertainty) {
+  public void setUpperUncertainty(Float upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
   }
 
 
-  public ObjectMagnitude confidenceLevel(Float confidenceLevel) {
+  public ObjectPick confidenceLevel(Float confidenceLevel) {
     
     this.confidenceLevel = confidenceLevel;
     return this;
@@ -299,205 +374,73 @@ public class ObjectMagnitude {
   }
 
 
-  public ObjectMagnitude quality(Double quality) {
+  public ObjectPick arrivalTime(OffsetDateTime arrivalTime) {
     
-    this.quality = quality;
+    this.arrivalTime = arrivalTime;
     return this;
   }
 
    /**
-   * quality | double
-   * @return quality
-  **/
-  @javax.annotation.Nullable
-
-  public Double getQuality() {
-    return quality;
-  }
-
-
-  public void setQuality(Double quality) {
-    this.quality = quality;
-  }
-
-
-  public ObjectMagnitude minDist(Double minDist) {
-    
-    this.minDist = minDist;
-    return this;
-  }
-
-   /**
-   * Minimal distance from station to origin | double
-   * @return minDist
-  **/
-  @javax.annotation.Nullable
-
-  public Double getMinDist() {
-    return minDist;
-  }
-
-
-  public void setMinDist(Double minDist) {
-    this.minDist = minDist;
-  }
-
-
-  public ObjectMagnitude azimut(Float azimut) {
-    
-    this.azimut = azimut;
-    return this;
-  }
-
-   /**
-   * Azimutal gap | float4
-   * @return azimut
-  **/
-  @javax.annotation.Nullable
-
-  public Float getAzimut() {
-    return azimut;
-  }
-
-
-  public void setAzimut(Float azimut) {
-    this.azimut = azimut;
-  }
-
-
-  public ObjectMagnitude nsta(Long nsta) {
-    
-    this.nsta = nsta;
-    return this;
-  }
-
-   /**
-   * Number of the stations on magnitudo calculation | int(11)
-   * @return nsta
-  **/
-  @javax.annotation.Nullable
-
-  public Long getNsta() {
-    return nsta;
-  }
-
-
-  public void setNsta(Long nsta) {
-    this.nsta = nsta;
-  }
-
-
-  public ObjectMagnitude ncha(Long ncha) {
-    
-    this.ncha = ncha;
-    return this;
-  }
-
-   /**
-   * Number of the channel on magnitudo calculation | int(11)
-   * @return ncha
-  **/
-  @javax.annotation.Nullable
-
-  public Long getNcha() {
-    return ncha;
-  }
-
-
-  public void setNcha(Long ncha) {
-    this.ncha = ncha;
-  }
-
-
-  public ObjectMagnitude nstaUsed(Long nstaUsed) {
-    
-    this.nstaUsed = nstaUsed;
-    return this;
-  }
-
-   /**
-   * Number of the stations used on magnitudo calculation | int(11)
-   * @return nstaUsed
-  **/
-  @javax.annotation.Nullable
-
-  public Long getNstaUsed() {
-    return nstaUsed;
-  }
-
-
-  public void setNstaUsed(Long nstaUsed) {
-    this.nstaUsed = nstaUsed;
-  }
-
-
-  public ObjectMagnitude nchaUsed(Long nchaUsed) {
-    
-    this.nchaUsed = nchaUsed;
-    return this;
-  }
-
-   /**
-   * Number of the channels used on magnitude calculation | int(11)
-   * @return nchaUsed
-  **/
-  @javax.annotation.Nullable
-
-  public Long getNchaUsed() {
-    return nchaUsed;
-  }
-
-
-  public void setNchaUsed(Long nchaUsed) {
-    this.nchaUsed = nchaUsed;
-  }
-
-
-  public ObjectMagnitude magQuality(String magQuality) {
-    
-    this.magQuality = magQuality;
-    return this;
-  }
-
-   /**
-   * INGV quality code of the magnitude (computed by ew2moledb) | char(2)
-   * @return magQuality
-  **/
-  @javax.annotation.Nullable
-
-  public String getMagQuality() {
-    return magQuality;
-  }
-
-
-  public void setMagQuality(String magQuality) {
-    this.magQuality = magQuality;
-  }
-
-
-  public ObjectMagnitude typeMagnitude(String typeMagnitude) {
-    
-    this.typeMagnitude = typeMagnitude;
-    return this;
-  }
-
-   /**
-   * Type of the magnitude | varchar(255)
-   * @return typeMagnitude
+   * Arrival time with microseconds | datetime(3)
+   * @return arrivalTime
   **/
   @javax.annotation.Nonnull
 
-  public String getTypeMagnitude() {
-    return typeMagnitude;
+  public OffsetDateTime getArrivalTime() {
+    return arrivalTime;
   }
 
 
-  public void setTypeMagnitude(String typeMagnitude) {
-    this.typeMagnitude = typeMagnitude;
+  public void setArrivalTime(OffsetDateTime arrivalTime) {
+    this.arrivalTime = arrivalTime;
   }
 
 
-  public ObjectMagnitude localspace(ObjectLocalspace localspace) {
+  public ObjectPick firstmotion(PickFirstmotion firstmotion) {
+    
+    this.firstmotion = firstmotion;
+    return this;
+  }
+
+   /**
+   * Get firstmotion
+   * @return firstmotion
+  **/
+  @javax.annotation.Nullable
+
+  public PickFirstmotion getFirstmotion() {
+    return firstmotion;
+  }
+
+
+  public void setFirstmotion(PickFirstmotion firstmotion) {
+    this.firstmotion = firstmotion;
+  }
+
+
+  public ObjectPick emersio(PickEmersio emersio) {
+    
+    this.emersio = emersio;
+    return this;
+  }
+
+   /**
+   * Get emersio
+   * @return emersio
+  **/
+  @javax.annotation.Nullable
+
+  public PickEmersio getEmersio() {
+    return emersio;
+  }
+
+
+  public void setEmersio(PickEmersio emersio) {
+    this.emersio = emersio;
+  }
+
+
+  public ObjectPick localspace(ObjectLocalspace localspace) {
     
     this.localspace = localspace;
     return this;
@@ -519,7 +462,7 @@ public class ObjectMagnitude {
   }
 
 
-  public ObjectMagnitude provenance(ObjectProvenance provenance) {
+  public ObjectPick provenance(ObjectProvenance provenance) {
     
     this.provenance = provenance;
     return this;
@@ -540,36 +483,6 @@ public class ObjectMagnitude {
     this.provenance = provenance;
   }
 
-
-  public ObjectMagnitude stationmagnitudes(List<ObjectStationmagnitude> stationmagnitudes) {
-    
-    this.stationmagnitudes = stationmagnitudes;
-    return this;
-  }
-
-  public ObjectMagnitude addStationmagnitudesItem(ObjectStationmagnitude stationmagnitudesItem) {
-    if (this.stationmagnitudes == null) {
-      this.stationmagnitudes = new ArrayList<>();
-    }
-    this.stationmagnitudes.add(stationmagnitudesItem);
-    return this;
-  }
-
-   /**
-   * Get stationmagnitudes
-   * @return stationmagnitudes
-  **/
-  @javax.annotation.Nullable
-
-  public List<ObjectStationmagnitude> getStationmagnitudes() {
-    return stationmagnitudes;
-  }
-
-
-  public void setStationmagnitudes(List<ObjectStationmagnitude> stationmagnitudes) {
-    this.stationmagnitudes = stationmagnitudes;
-  }
-
   /**
    * A container for additional, undeclared properties.
    * This is a holder for any undeclared properties as specified with
@@ -583,9 +496,9 @@ public class ObjectMagnitude {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the ObjectMagnitude instance itself
+   * @return the ObjectPick instance itself
    */
-  public ObjectMagnitude putAdditionalProperty(String key, Object value) {
+  public ObjectPick putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -624,28 +537,25 @@ public class ObjectMagnitude {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectMagnitude objectMagnitude = (ObjectMagnitude) o;
-    return Objects.equals(this.id, objectMagnitude.id) &&
-        Objects.equals(this.modified, objectMagnitude.modified) &&
-        Objects.equals(this.inserted, objectMagnitude.inserted) &&
-        Objects.equals(this.idLocalspace, objectMagnitude.idLocalspace) &&
-        Objects.equals(this.mag, objectMagnitude.mag) &&
-        Objects.equals(this.lowerUncertainty, objectMagnitude.lowerUncertainty) &&
-        Objects.equals(this.upperUncertainty, objectMagnitude.upperUncertainty) &&
-        Objects.equals(this.confidenceLevel, objectMagnitude.confidenceLevel) &&
-        Objects.equals(this.quality, objectMagnitude.quality) &&
-        Objects.equals(this.minDist, objectMagnitude.minDist) &&
-        Objects.equals(this.azimut, objectMagnitude.azimut) &&
-        Objects.equals(this.nsta, objectMagnitude.nsta) &&
-        Objects.equals(this.ncha, objectMagnitude.ncha) &&
-        Objects.equals(this.nstaUsed, objectMagnitude.nstaUsed) &&
-        Objects.equals(this.nchaUsed, objectMagnitude.nchaUsed) &&
-        Objects.equals(this.magQuality, objectMagnitude.magQuality) &&
-        Objects.equals(this.typeMagnitude, objectMagnitude.typeMagnitude) &&
-        Objects.equals(this.localspace, objectMagnitude.localspace) &&
-        Objects.equals(this.provenance, objectMagnitude.provenance) &&
-        Objects.equals(this.stationmagnitudes, objectMagnitude.stationmagnitudes)&&
-        Objects.equals(this.additionalProperties, objectMagnitude.additionalProperties);
+    ObjectPick objectPick = (ObjectPick) o;
+    return Objects.equals(this.net, objectPick.net) &&
+        Objects.equals(this.sta, objectPick.sta) &&
+        Objects.equals(this.cha, objectPick.cha) &&
+        Objects.equals(this.loc, objectPick.loc) &&
+        Objects.equals(this.id, objectPick.id) &&
+        Objects.equals(this.modified, objectPick.modified) &&
+        Objects.equals(this.inserted, objectPick.inserted) &&
+        Objects.equals(this.idLocalspace, objectPick.idLocalspace) &&
+        Objects.equals(this.qualityClass, objectPick.qualityClass) &&
+        Objects.equals(this.lowerUncertainty, objectPick.lowerUncertainty) &&
+        Objects.equals(this.upperUncertainty, objectPick.upperUncertainty) &&
+        Objects.equals(this.confidenceLevel, objectPick.confidenceLevel) &&
+        Objects.equals(this.arrivalTime, objectPick.arrivalTime) &&
+        Objects.equals(this.firstmotion, objectPick.firstmotion) &&
+        Objects.equals(this.emersio, objectPick.emersio) &&
+        Objects.equals(this.localspace, objectPick.localspace) &&
+        Objects.equals(this.provenance, objectPick.provenance)&&
+        Objects.equals(this.additionalProperties, objectPick.additionalProperties);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -654,7 +564,7 @@ public class ObjectMagnitude {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, idLocalspace, mag, lowerUncertainty, upperUncertainty, confidenceLevel, quality, minDist, azimut, nsta, ncha, nstaUsed, nchaUsed, magQuality, typeMagnitude, localspace, provenance, stationmagnitudes, additionalProperties);
+    return Objects.hash(net, sta, cha, loc, id, modified, inserted, idLocalspace, qualityClass, lowerUncertainty, upperUncertainty, confidenceLevel, arrivalTime, firstmotion, emersio, localspace, provenance, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -667,27 +577,24 @@ public class ObjectMagnitude {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectMagnitude {\n");
+    sb.append("class ObjectPick {\n");
+    sb.append("    net: ").append(toIndentedString(net)).append("\n");
+    sb.append("    sta: ").append(toIndentedString(sta)).append("\n");
+    sb.append("    cha: ").append(toIndentedString(cha)).append("\n");
+    sb.append("    loc: ").append(toIndentedString(loc)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
     sb.append("    idLocalspace: ").append(toIndentedString(idLocalspace)).append("\n");
-    sb.append("    mag: ").append(toIndentedString(mag)).append("\n");
+    sb.append("    qualityClass: ").append(toIndentedString(qualityClass)).append("\n");
     sb.append("    lowerUncertainty: ").append(toIndentedString(lowerUncertainty)).append("\n");
     sb.append("    upperUncertainty: ").append(toIndentedString(upperUncertainty)).append("\n");
     sb.append("    confidenceLevel: ").append(toIndentedString(confidenceLevel)).append("\n");
-    sb.append("    quality: ").append(toIndentedString(quality)).append("\n");
-    sb.append("    minDist: ").append(toIndentedString(minDist)).append("\n");
-    sb.append("    azimut: ").append(toIndentedString(azimut)).append("\n");
-    sb.append("    nsta: ").append(toIndentedString(nsta)).append("\n");
-    sb.append("    ncha: ").append(toIndentedString(ncha)).append("\n");
-    sb.append("    nstaUsed: ").append(toIndentedString(nstaUsed)).append("\n");
-    sb.append("    nchaUsed: ").append(toIndentedString(nchaUsed)).append("\n");
-    sb.append("    magQuality: ").append(toIndentedString(magQuality)).append("\n");
-    sb.append("    typeMagnitude: ").append(toIndentedString(typeMagnitude)).append("\n");
+    sb.append("    arrivalTime: ").append(toIndentedString(arrivalTime)).append("\n");
+    sb.append("    firstmotion: ").append(toIndentedString(firstmotion)).append("\n");
+    sb.append("    emersio: ").append(toIndentedString(emersio)).append("\n");
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
-    sb.append("    stationmagnitudes: ").append(toIndentedString(stationmagnitudes)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -711,57 +618,62 @@ public class ObjectMagnitude {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("net");
+    openapiFields.add("sta");
+    openapiFields.add("cha");
+    openapiFields.add("loc");
     openapiFields.add("id");
     openapiFields.add("modified");
     openapiFields.add("inserted");
     openapiFields.add("id_localspace");
-    openapiFields.add("mag");
+    openapiFields.add("quality_class");
     openapiFields.add("lower_uncertainty");
     openapiFields.add("upper_uncertainty");
     openapiFields.add("confidence_level");
-    openapiFields.add("quality");
-    openapiFields.add("min_dist");
-    openapiFields.add("azimut");
-    openapiFields.add("nsta");
-    openapiFields.add("ncha");
-    openapiFields.add("nsta_used");
-    openapiFields.add("ncha_used");
-    openapiFields.add("mag_quality");
-    openapiFields.add("type_magnitude");
+    openapiFields.add("arrival_time");
+    openapiFields.add("firstmotion");
+    openapiFields.add("emersio");
     openapiFields.add("localspace");
     openapiFields.add("provenance");
-    openapiFields.add("stationmagnitudes");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("mag");
-    openapiRequiredFields.add("type_magnitude");
+    openapiRequiredFields.add("net");
+    openapiRequiredFields.add("sta");
+    openapiRequiredFields.add("cha");
+    openapiRequiredFields.add("arrival_time");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectMagnitude
+  * @throws IOException if the JSON Object is invalid with respect to ObjectPick
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (!ObjectMagnitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMagnitude is not found in the empty JSON string", ObjectMagnitude.openapiRequiredFields.toString()));
+        if (!ObjectPick.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectPick is not found in the empty JSON string", ObjectPick.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectMagnitude.openapiRequiredFields) {
+      for (String requiredField : ObjectPick.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("mag_quality") != null && !jsonObj.get("mag_quality").isJsonNull()) && !jsonObj.get("mag_quality").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `mag_quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mag_quality").toString()));
+      if (!jsonObj.get("net").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
-      if (!jsonObj.get("type_magnitude").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type_magnitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_magnitude").toString()));
+      if (!jsonObj.get("sta").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
+      }
+      if (!jsonObj.get("cha").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `cha` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cha").toString()));
+      }
+      if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
@@ -771,36 +683,22 @@ public class ObjectMagnitude {
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
         ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
-      if (jsonObj.get("stationmagnitudes") != null && !jsonObj.get("stationmagnitudes").isJsonNull()) {
-        JsonArray jsonArraystationmagnitudes = jsonObj.getAsJsonArray("stationmagnitudes");
-        if (jsonArraystationmagnitudes != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("stationmagnitudes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `stationmagnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("stationmagnitudes").toString()));
-          }
-
-          // validate the optional field `stationmagnitudes` (array)
-          for (int i = 0; i < jsonArraystationmagnitudes.size(); i++) {
-            ObjectStationmagnitude.validateJsonObject(jsonArraystationmagnitudes.get(i).getAsJsonObject());
-          };
-        }
-      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectMagnitude.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectMagnitude' and its subtypes
+       if (!ObjectPick.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectPick' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectMagnitude> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectMagnitude.class));
+       final TypeAdapter<ObjectPick> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectPick.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectMagnitude>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectPick>() {
            @Override
-           public void write(JsonWriter out, ObjectMagnitude value) throws IOException {
+           public void write(JsonWriter out, ObjectPick value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -823,11 +721,11 @@ public class ObjectMagnitude {
            }
 
            @Override
-           public ObjectMagnitude read(JsonReader in) throws IOException {
+           public ObjectPick read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             ObjectMagnitude instance = thisAdapter.fromJsonTree(jsonObj);
+             ObjectPick instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -854,18 +752,18 @@ public class ObjectMagnitude {
   }
 
  /**
-  * Create an instance of ObjectMagnitude given an JSON string
+  * Create an instance of ObjectPick given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectMagnitude
-  * @throws IOException if the JSON string is invalid with respect to ObjectMagnitude
+  * @return An instance of ObjectPick
+  * @throws IOException if the JSON string is invalid with respect to ObjectPick
   */
-  public static ObjectMagnitude fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectMagnitude.class);
+  public static ObjectPick fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectPick.class);
   }
 
  /**
-  * Convert an instance of ObjectMagnitude to an JSON string
+  * Convert an instance of ObjectPick to an JSON string
   *
   * @return JSON string
   */

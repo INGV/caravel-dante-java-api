@@ -20,7 +20,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import org.ingv.dante.model.ObjectAmplitude;
+import org.ingv.dante.model.ObjectAmplitudeTypeAmplitude;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -29,17 +29,17 @@ import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectStationmagnitude
+ * Model tests for ObjectAmplitude
  */
-public class ObjectStationmagnitudeTest {
-    private final ObjectStationmagnitude model = new ObjectStationmagnitude();
+public class ObjectAmplitudeTest {
+    private final ObjectAmplitude model = new ObjectAmplitude();
 
     /**
-     * Model tests for ObjectStationmagnitude
+     * Model tests for ObjectAmplitude
      */
     @Test
-    public void testObjectStationmagnitude() {
-        // TODO: test ObjectStationmagnitude
+    public void testObjectAmplitude() {
+        // TODO: test ObjectAmplitude
     }
 
     /**
@@ -51,75 +51,107 @@ public class ObjectStationmagnitudeTest {
     }
 
     /**
-     * Test the property 'epDistance'
+     * Test the property 'idLocalspace'
      */
     @Test
-    public void epDistanceTest() {
-        // TODO: test epDistance
+    public void idLocalspaceTest() {
+        // TODO: test idLocalspace
     }
 
     /**
-     * Test the property 'origDistance'
+     * Test the property 'net'
      */
     @Test
-    public void origDistanceTest() {
-        // TODO: test origDistance
+    public void netTest() {
+        // TODO: test net
     }
 
     /**
-     * Test the property 'azimut'
+     * Test the property 'sta'
      */
     @Test
-    public void azimutTest() {
-        // TODO: test azimut
+    public void staTest() {
+        // TODO: test sta
     }
 
     /**
-     * Test the property 'mag'
+     * Test the property 'cha'
      */
     @Test
-    public void magTest() {
-        // TODO: test mag
+    public void chaTest() {
+        // TODO: test cha
     }
 
     /**
-     * Test the property 'errMag'
+     * Test the property 'loc'
      */
     @Test
-    public void errMagTest() {
-        // TODO: test errMag
+    public void locTest() {
+        // TODO: test loc
     }
 
     /**
-     * Test the property 'weight'
+     * Test the property 'time1'
      */
     @Test
-    public void weightTest() {
-        // TODO: test weight
+    public void time1Test() {
+        // TODO: test time1
     }
 
     /**
-     * Test the property 'magCorrection'
+     * Test the property 'amp1'
      */
     @Test
-    public void magCorrectionTest() {
-        // TODO: test magCorrection
+    public void amp1Test() {
+        // TODO: test amp1
     }
 
     /**
-     * Test the property 'isUsed'
+     * Test the property 'time2'
      */
     @Test
-    public void isUsedTest() {
-        // TODO: test isUsed
+    public void time2Test() {
+        // TODO: test time2
     }
 
     /**
-     * Test the property 'typeMagnitude'
+     * Test the property 'amp2'
      */
     @Test
-    public void typeMagnitudeTest() {
-        // TODO: test typeMagnitude
+    public void amp2Test() {
+        // TODO: test amp2
+    }
+
+    /**
+     * Test the property 'pickId'
+     */
+    @Test
+    public void pickIdTest() {
+        // TODO: test pickId
+    }
+
+    /**
+     * Test the property 'period'
+     */
+    @Test
+    public void periodTest() {
+        // TODO: test period
+    }
+
+    /**
+     * Test the property 'revised'
+     */
+    @Test
+    public void revisedTest() {
+        // TODO: test revised
+    }
+
+    /**
+     * Test the property 'typeAmplitude'
+     */
+    @Test
+    public void typeAmplitudeTest() {
+        // TODO: test typeAmplitude
     }
 
     /**
@@ -155,11 +187,11 @@ public class ObjectStationmagnitudeTest {
     }
 
     /**
-     * Test the property 'amplitude'
+     * Test the property 'timewindowReference'
      */
     @Test
-    public void amplitudeTest() {
-        // TODO: test amplitude
+    public void timewindowReferenceTest() {
+        // TODO: test timewindowReference
     }
 
 }

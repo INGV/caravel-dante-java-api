@@ -20,26 +20,59 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import org.ingv.dante.model.ObjectAmplitude;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
+import org.ingv.dante.model.PickEmersio;
+import org.ingv.dante.model.PickFirstmotion;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectStationmagnitude
+ * Model tests for ObjectPick
  */
-public class ObjectStationmagnitudeTest {
-    private final ObjectStationmagnitude model = new ObjectStationmagnitude();
+public class ObjectPickTest {
+    private final ObjectPick model = new ObjectPick();
 
     /**
-     * Model tests for ObjectStationmagnitude
+     * Model tests for ObjectPick
      */
     @Test
-    public void testObjectStationmagnitude() {
-        // TODO: test ObjectStationmagnitude
+    public void testObjectPick() {
+        // TODO: test ObjectPick
+    }
+
+    /**
+     * Test the property 'net'
+     */
+    @Test
+    public void netTest() {
+        // TODO: test net
+    }
+
+    /**
+     * Test the property 'sta'
+     */
+    @Test
+    public void staTest() {
+        // TODO: test sta
+    }
+
+    /**
+     * Test the property 'cha'
+     */
+    @Test
+    public void chaTest() {
+        // TODO: test cha
+    }
+
+    /**
+     * Test the property 'loc'
+     */
+    @Test
+    public void locTest() {
+        // TODO: test loc
     }
 
     /**
@@ -48,94 +81,6 @@ public class ObjectStationmagnitudeTest {
     @Test
     public void idTest() {
         // TODO: test id
-    }
-
-    /**
-     * Test the property 'epDistance'
-     */
-    @Test
-    public void epDistanceTest() {
-        // TODO: test epDistance
-    }
-
-    /**
-     * Test the property 'origDistance'
-     */
-    @Test
-    public void origDistanceTest() {
-        // TODO: test origDistance
-    }
-
-    /**
-     * Test the property 'azimut'
-     */
-    @Test
-    public void azimutTest() {
-        // TODO: test azimut
-    }
-
-    /**
-     * Test the property 'mag'
-     */
-    @Test
-    public void magTest() {
-        // TODO: test mag
-    }
-
-    /**
-     * Test the property 'errMag'
-     */
-    @Test
-    public void errMagTest() {
-        // TODO: test errMag
-    }
-
-    /**
-     * Test the property 'weight'
-     */
-    @Test
-    public void weightTest() {
-        // TODO: test weight
-    }
-
-    /**
-     * Test the property 'magCorrection'
-     */
-    @Test
-    public void magCorrectionTest() {
-        // TODO: test magCorrection
-    }
-
-    /**
-     * Test the property 'isUsed'
-     */
-    @Test
-    public void isUsedTest() {
-        // TODO: test isUsed
-    }
-
-    /**
-     * Test the property 'typeMagnitude'
-     */
-    @Test
-    public void typeMagnitudeTest() {
-        // TODO: test typeMagnitude
-    }
-
-    /**
-     * Test the property 'localspace'
-     */
-    @Test
-    public void localspaceTest() {
-        // TODO: test localspace
-    }
-
-    /**
-     * Test the property 'provenance'
-     */
-    @Test
-    public void provenanceTest() {
-        // TODO: test provenance
     }
 
     /**
@@ -155,11 +100,83 @@ public class ObjectStationmagnitudeTest {
     }
 
     /**
-     * Test the property 'amplitude'
+     * Test the property 'idLocalspace'
      */
     @Test
-    public void amplitudeTest() {
-        // TODO: test amplitude
+    public void idLocalspaceTest() {
+        // TODO: test idLocalspace
+    }
+
+    /**
+     * Test the property 'qualityClass'
+     */
+    @Test
+    public void qualityClassTest() {
+        // TODO: test qualityClass
+    }
+
+    /**
+     * Test the property 'lowerUncertainty'
+     */
+    @Test
+    public void lowerUncertaintyTest() {
+        // TODO: test lowerUncertainty
+    }
+
+    /**
+     * Test the property 'upperUncertainty'
+     */
+    @Test
+    public void upperUncertaintyTest() {
+        // TODO: test upperUncertainty
+    }
+
+    /**
+     * Test the property 'confidenceLevel'
+     */
+    @Test
+    public void confidenceLevelTest() {
+        // TODO: test confidenceLevel
+    }
+
+    /**
+     * Test the property 'arrivalTime'
+     */
+    @Test
+    public void arrivalTimeTest() {
+        // TODO: test arrivalTime
+    }
+
+    /**
+     * Test the property 'firstmotion'
+     */
+    @Test
+    public void firstmotionTest() {
+        // TODO: test firstmotion
+    }
+
+    /**
+     * Test the property 'emersio'
+     */
+    @Test
+    public void emersioTest() {
+        // TODO: test emersio
+    }
+
+    /**
+     * Test the property 'localspace'
+     */
+    @Test
+    public void localspaceTest() {
+        // TODO: test localspace
+    }
+
+    /**
+     * Test the property 'provenance'
+     */
+    @Test
+    public void provenanceTest() {
+        // TODO: test provenance
     }
 
 }

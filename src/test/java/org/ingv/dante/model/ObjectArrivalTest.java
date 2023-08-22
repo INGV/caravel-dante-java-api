@@ -21,10 +21,9 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
+import org.ingv.dante.model.ObjectPick;
 import org.ingv.dante.model.ObjectPickEw;
 import org.ingv.dante.model.ObjectProvenance;
-import org.ingv.dante.model.PickEmersio;
-import org.ingv.dante.model.PickFirstmotion;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -42,38 +41,6 @@ public class ObjectArrivalTest {
     @Test
     public void testObjectArrival() {
         // TODO: test ObjectArrival
-    }
-
-    /**
-     * Test the property 'net'
-     */
-    @Test
-    public void netTest() {
-        // TODO: test net
-    }
-
-    /**
-     * Test the property 'sta'
-     */
-    @Test
-    public void staTest() {
-        // TODO: test sta
-    }
-
-    /**
-     * Test the property 'cha'
-     */
-    @Test
-    public void chaTest() {
-        // TODO: test cha
-    }
-
-    /**
-     * Test the property 'loc'
-     */
-    @Test
-    public void locTest() {
-        // TODO: test loc
     }
 
     /**
@@ -101,75 +68,11 @@ public class ObjectArrivalTest {
     }
 
     /**
-     * Test the property 'idLocalspace'
-     */
-    @Test
-    public void idLocalspaceTest() {
-        // TODO: test idLocalspace
-    }
-
-    /**
      * Test the property 'iscCode'
      */
     @Test
     public void iscCodeTest() {
         // TODO: test iscCode
-    }
-
-    /**
-     * Test the property 'qualityClass'
-     */
-    @Test
-    public void qualityClassTest() {
-        // TODO: test qualityClass
-    }
-
-    /**
-     * Test the property 'lowerUncertainty'
-     */
-    @Test
-    public void lowerUncertaintyTest() {
-        // TODO: test lowerUncertainty
-    }
-
-    /**
-     * Test the property 'upperUncertainty'
-     */
-    @Test
-    public void upperUncertaintyTest() {
-        // TODO: test upperUncertainty
-    }
-
-    /**
-     * Test the property 'confidenceLevel'
-     */
-    @Test
-    public void confidenceLevelTest() {
-        // TODO: test confidenceLevel
-    }
-
-    /**
-     * Test the property 'arrivalTime'
-     */
-    @Test
-    public void arrivalTimeTest() {
-        // TODO: test arrivalTime
-    }
-
-    /**
-     * Test the property 'firstmotion'
-     */
-    @Test
-    public void firstmotionTest() {
-        // TODO: test firstmotion
-    }
-
-    /**
-     * Test the property 'emersio'
-     */
-    @Test
-    public void emersioTest() {
-        // TODO: test emersio
     }
 
     /**
@@ -266,6 +169,14 @@ public class ObjectArrivalTest {
     @Test
     public void pickEwTest() {
         // TODO: test pickEw
+    }
+
+    /**
+     * Test the property 'pick'
+     */
+    @Test
+    public void pickTest() {
+        // TODO: test pick
     }
 
 }

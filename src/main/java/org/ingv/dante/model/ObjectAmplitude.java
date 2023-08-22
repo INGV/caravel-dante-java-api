@@ -22,7 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import org.ingv.dante.model.ObjectAmplitude;
+import org.ingv.dante.model.ObjectAmplitudeTypeAmplitude;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -49,49 +49,65 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * ObjectStationmagnitude
+ * ObjectAmplitude
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-22T11:13:55.542808Z[Etc/UTC]")
-public class ObjectStationmagnitude {
+public class ObjectAmplitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Long id;
 
-  public static final String SERIALIZED_NAME_EP_DISTANCE = "ep_distance";
-  @SerializedName(SERIALIZED_NAME_EP_DISTANCE)
-  private Float epDistance;
+  public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
+  @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  private Long idLocalspace;
 
-  public static final String SERIALIZED_NAME_ORIG_DISTANCE = "orig_distance";
-  @SerializedName(SERIALIZED_NAME_ORIG_DISTANCE)
-  private Double origDistance;
+  public static final String SERIALIZED_NAME_NET = "net";
+  @SerializedName(SERIALIZED_NAME_NET)
+  private String net;
 
-  public static final String SERIALIZED_NAME_AZIMUT = "azimut";
-  @SerializedName(SERIALIZED_NAME_AZIMUT)
-  private Float azimut;
+  public static final String SERIALIZED_NAME_STA = "sta";
+  @SerializedName(SERIALIZED_NAME_STA)
+  private String sta;
 
-  public static final String SERIALIZED_NAME_MAG = "mag";
-  @SerializedName(SERIALIZED_NAME_MAG)
-  private Double mag;
+  public static final String SERIALIZED_NAME_CHA = "cha";
+  @SerializedName(SERIALIZED_NAME_CHA)
+  private String cha;
 
-  public static final String SERIALIZED_NAME_ERR_MAG = "err_mag";
-  @SerializedName(SERIALIZED_NAME_ERR_MAG)
-  private Double errMag;
+  public static final String SERIALIZED_NAME_LOC = "loc";
+  @SerializedName(SERIALIZED_NAME_LOC)
+  private String loc = "--";
 
-  public static final String SERIALIZED_NAME_WEIGHT = "weight";
-  @SerializedName(SERIALIZED_NAME_WEIGHT)
-  private Double weight;
+  public static final String SERIALIZED_NAME_TIME1 = "time1";
+  @SerializedName(SERIALIZED_NAME_TIME1)
+  private OffsetDateTime time1;
 
-  public static final String SERIALIZED_NAME_MAG_CORRECTION = "mag_correction";
-  @SerializedName(SERIALIZED_NAME_MAG_CORRECTION)
-  private Double magCorrection;
+  public static final String SERIALIZED_NAME_AMP1 = "amp1";
+  @SerializedName(SERIALIZED_NAME_AMP1)
+  private Double amp1;
 
-  public static final String SERIALIZED_NAME_IS_USED = "is_used";
-  @SerializedName(SERIALIZED_NAME_IS_USED)
-  private Boolean isUsed = false;
+  public static final String SERIALIZED_NAME_TIME2 = "time2";
+  @SerializedName(SERIALIZED_NAME_TIME2)
+  private OffsetDateTime time2;
 
-  public static final String SERIALIZED_NAME_TYPE_MAGNITUDE = "type_magnitude";
-  @SerializedName(SERIALIZED_NAME_TYPE_MAGNITUDE)
-  private String typeMagnitude;
+  public static final String SERIALIZED_NAME_AMP2 = "amp2";
+  @SerializedName(SERIALIZED_NAME_AMP2)
+  private Double amp2;
+
+  public static final String SERIALIZED_NAME_PICK_ID = "pick_id";
+  @SerializedName(SERIALIZED_NAME_PICK_ID)
+  private Long pickId;
+
+  public static final String SERIALIZED_NAME_PERIOD = "period";
+  @SerializedName(SERIALIZED_NAME_PERIOD)
+  private Double period;
+
+  public static final String SERIALIZED_NAME_REVISED = "revised";
+  @SerializedName(SERIALIZED_NAME_REVISED)
+  private Integer revised;
+
+  public static final String SERIALIZED_NAME_TYPE_AMPLITUDE = "type_amplitude";
+  @SerializedName(SERIALIZED_NAME_TYPE_AMPLITUDE)
+  private ObjectAmplitudeTypeAmplitude typeAmplitude;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
@@ -109,23 +125,25 @@ public class ObjectStationmagnitude {
   @SerializedName(SERIALIZED_NAME_INSERTED)
   private OffsetDateTime inserted;
 
-  public static final String SERIALIZED_NAME_AMPLITUDE = "amplitude";
-  @SerializedName(SERIALIZED_NAME_AMPLITUDE)
-  private ObjectAmplitude amplitude;
+  public static final String SERIALIZED_NAME_TIMEWINDOW_REFERENCE = "timewindow_reference";
+  @SerializedName(SERIALIZED_NAME_TIMEWINDOW_REFERENCE)
+  private OffsetDateTime timewindowReference;
 
-  public ObjectStationmagnitude() {
+  public ObjectAmplitude() {
   }
 
   
-  public ObjectStationmagnitude(
+  public ObjectAmplitude(
      Long id, 
      OffsetDateTime modified, 
-     OffsetDateTime inserted
+     OffsetDateTime inserted, 
+     OffsetDateTime timewindowReference
   ) {
     this();
     this.id = id;
     this.modified = modified;
     this.inserted = inserted;
+    this.timewindowReference = timewindowReference;
   }
 
    /**
@@ -141,205 +159,293 @@ public class ObjectStationmagnitude {
 
 
 
-  public ObjectStationmagnitude epDistance(Float epDistance) {
+  public ObjectAmplitude idLocalspace(Long idLocalspace) {
     
-    this.epDistance = epDistance;
+    this.idLocalspace = idLocalspace;
     return this;
   }
 
    /**
-   * Distance from epicenter of the station expressed in Km | double
-   * @return epDistance
+   * Localspace Id | bigint(19)
+   * @return idLocalspace
   **/
   @javax.annotation.Nullable
 
-  public Float getEpDistance() {
-    return epDistance;
+  public Long getIdLocalspace() {
+    return idLocalspace;
   }
 
 
-  public void setEpDistance(Float epDistance) {
-    this.epDistance = epDistance;
+  public void setIdLocalspace(Long idLocalspace) {
+    this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectStationmagnitude origDistance(Double origDistance) {
+  public ObjectAmplitude net(String net) {
     
-    this.origDistance = origDistance;
+    this.net = net;
     return this;
   }
 
    /**
-   * Distance from origin of the station | double
-   * @return origDistance
+   * Channel net code | char(2)
+   * @return net
   **/
   @javax.annotation.Nullable
 
-  public Double getOrigDistance() {
-    return origDistance;
+  public String getNet() {
+    return net;
   }
 
 
-  public void setOrigDistance(Double origDistance) {
-    this.origDistance = origDistance;
+  public void setNet(String net) {
+    this.net = net;
   }
 
 
-  public ObjectStationmagnitude azimut(Float azimut) {
+  public ObjectAmplitude sta(String sta) {
     
-    this.azimut = azimut;
+    this.sta = sta;
     return this;
   }
 
    /**
-   * Station origin azimut | double
-   * @return azimut
+   * Channel station code | varchar(5)
+   * @return sta
   **/
   @javax.annotation.Nullable
 
-  public Float getAzimut() {
-    return azimut;
+  public String getSta() {
+    return sta;
   }
 
 
-  public void setAzimut(Float azimut) {
-    this.azimut = azimut;
+  public void setSta(String sta) {
+    this.sta = sta;
   }
 
 
-  public ObjectStationmagnitude mag(Double mag) {
+  public ObjectAmplitude cha(String cha) {
     
-    this.mag = mag;
+    this.cha = cha;
     return this;
   }
 
    /**
-   * Amplitude magnitude value | double
-   * @return mag
+   * Channel code | char(3)
+   * @return cha
+  **/
+  @javax.annotation.Nullable
+
+  public String getCha() {
+    return cha;
+  }
+
+
+  public void setCha(String cha) {
+    this.cha = cha;
+  }
+
+
+  public ObjectAmplitude loc(String loc) {
+    
+    this.loc = loc;
+    return this;
+  }
+
+   /**
+   * Channel location | char(2)
+   * @return loc
+  **/
+  @javax.annotation.Nullable
+
+  public String getLoc() {
+    return loc;
+  }
+
+
+  public void setLoc(String loc) {
+    this.loc = loc;
+  }
+
+
+  public ObjectAmplitude time1(OffsetDateTime time1) {
+    
+    this.time1 = time1;
+    return this;
+  }
+
+   /**
+   *  | datetime(3)
+   * @return time1
   **/
   @javax.annotation.Nonnull
 
-  public Double getMag() {
-    return mag;
+  public OffsetDateTime getTime1() {
+    return time1;
   }
 
 
-  public void setMag(Double mag) {
-    this.mag = mag;
+  public void setTime1(OffsetDateTime time1) {
+    this.time1 = time1;
   }
 
 
-  public ObjectStationmagnitude errMag(Double errMag) {
+  public ObjectAmplitude amp1(Double amp1) {
     
-    this.errMag = errMag;
+    this.amp1 = amp1;
     return this;
   }
 
    /**
-   * magnitude error | double
-   * @return errMag
+   * Amplitude value | double
+   * @return amp1
   **/
   @javax.annotation.Nullable
 
-  public Double getErrMag() {
-    return errMag;
+  public Double getAmp1() {
+    return amp1;
   }
 
 
-  public void setErrMag(Double errMag) {
-    this.errMag = errMag;
+  public void setAmp1(Double amp1) {
+    this.amp1 = amp1;
   }
 
 
-  public ObjectStationmagnitude weight(Double weight) {
+  public ObjectAmplitude time2(OffsetDateTime time2) {
     
-    this.weight = weight;
+    this.time2 = time2;
     return this;
   }
 
    /**
-   * Weight | double
-   * @return weight
+   *  | datetime(3)
+   * @return time2
   **/
   @javax.annotation.Nullable
 
-  public Double getWeight() {
-    return weight;
+  public OffsetDateTime getTime2() {
+    return time2;
   }
 
 
-  public void setWeight(Double weight) {
-    this.weight = weight;
+  public void setTime2(OffsetDateTime time2) {
+    this.time2 = time2;
   }
 
 
-  public ObjectStationmagnitude magCorrection(Double magCorrection) {
+  public ObjectAmplitude amp2(Double amp2) {
     
-    this.magCorrection = magCorrection;
+    this.amp2 = amp2;
     return this;
   }
 
    /**
-   * magnitude correction | double
-   * @return magCorrection
+   * Amplitude value | double
+   * @return amp2
   **/
   @javax.annotation.Nullable
 
-  public Double getMagCorrection() {
-    return magCorrection;
+  public Double getAmp2() {
+    return amp2;
   }
 
 
-  public void setMagCorrection(Double magCorrection) {
-    this.magCorrection = magCorrection;
+  public void setAmp2(Double amp2) {
+    this.amp2 = amp2;
   }
 
 
-  public ObjectStationmagnitude isUsed(Boolean isUsed) {
+  public ObjectAmplitude pickId(Long pickId) {
     
-    this.isUsed = isUsed;
+    this.pickId = pickId;
     return this;
   }
 
    /**
-   * true if used | boolean
-   * @return isUsed
+   * Unique incremental id | bigint(20)
+   * @return pickId
   **/
   @javax.annotation.Nullable
 
-  public Boolean getIsUsed() {
-    return isUsed;
+  public Long getPickId() {
+    return pickId;
   }
 
 
-  public void setIsUsed(Boolean isUsed) {
-    this.isUsed = isUsed;
+  public void setPickId(Long pickId) {
+    this.pickId = pickId;
   }
 
 
-  public ObjectStationmagnitude typeMagnitude(String typeMagnitude) {
+  public ObjectAmplitude period(Double period) {
     
-    this.typeMagnitude = typeMagnitude;
+    this.period = period;
     return this;
   }
 
    /**
-   * Type of the magnitude | varchar(255)
-   * @return typeMagnitude
+   * Amlitude period | double
+   * @return period
   **/
   @javax.annotation.Nullable
 
-  public String getTypeMagnitude() {
-    return typeMagnitude;
+  public Double getPeriod() {
+    return period;
   }
 
 
-  public void setTypeMagnitude(String typeMagnitude) {
-    this.typeMagnitude = typeMagnitude;
+  public void setPeriod(Double period) {
+    this.period = period;
   }
 
 
-  public ObjectStationmagnitude localspace(ObjectLocalspace localspace) {
+  public ObjectAmplitude revised(Integer revised) {
+    
+    this.revised = revised;
+    return this;
+  }
+
+   /**
+   * Dichiara se tale ampiezza è stata rivista dall&#39;analista, eventualmente anche non modificata, oppure no. (1/0, true/false) | tinyint(3)
+   * @return revised
+  **/
+  @javax.annotation.Nullable
+
+  public Integer getRevised() {
+    return revised;
+  }
+
+
+  public void setRevised(Integer revised) {
+    this.revised = revised;
+  }
+
+
+  public ObjectAmplitude typeAmplitude(ObjectAmplitudeTypeAmplitude typeAmplitude) {
+    
+    this.typeAmplitude = typeAmplitude;
+    return this;
+  }
+
+   /**
+   * Get typeAmplitude
+   * @return typeAmplitude
+  **/
+  @javax.annotation.Nullable
+
+  public ObjectAmplitudeTypeAmplitude getTypeAmplitude() {
+    return typeAmplitude;
+  }
+
+
+  public void setTypeAmplitude(ObjectAmplitudeTypeAmplitude typeAmplitude) {
+    this.typeAmplitude = typeAmplitude;
+  }
+
+
+  public ObjectAmplitude localspace(ObjectLocalspace localspace) {
     
     this.localspace = localspace;
     return this;
@@ -361,7 +467,7 @@ public class ObjectStationmagnitude {
   }
 
 
-  public ObjectStationmagnitude provenance(ObjectProvenance provenance) {
+  public ObjectAmplitude provenance(ObjectProvenance provenance) {
     
     this.provenance = provenance;
     return this;
@@ -409,26 +515,17 @@ public class ObjectStationmagnitude {
 
 
 
-  public ObjectStationmagnitude amplitude(ObjectAmplitude amplitude) {
-    
-    this.amplitude = amplitude;
-    return this;
-  }
-
    /**
-   * Get amplitude
-   * @return amplitude
+   * Describes a time window for amplitude measurements, given by a central point in time
+   * @return timewindowReference
   **/
   @javax.annotation.Nullable
 
-  public ObjectAmplitude getAmplitude() {
-    return amplitude;
+  public OffsetDateTime getTimewindowReference() {
+    return timewindowReference;
   }
 
 
-  public void setAmplitude(ObjectAmplitude amplitude) {
-    this.amplitude = amplitude;
-  }
 
   /**
    * A container for additional, undeclared properties.
@@ -443,9 +540,9 @@ public class ObjectStationmagnitude {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the ObjectStationmagnitude instance itself
+   * @return the ObjectAmplitude instance itself
    */
-  public ObjectStationmagnitude putAdditionalProperty(String key, Object value) {
+  public ObjectAmplitude putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -484,23 +581,27 @@ public class ObjectStationmagnitude {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectStationmagnitude objectStationmagnitude = (ObjectStationmagnitude) o;
-    return Objects.equals(this.id, objectStationmagnitude.id) &&
-        Objects.equals(this.epDistance, objectStationmagnitude.epDistance) &&
-        Objects.equals(this.origDistance, objectStationmagnitude.origDistance) &&
-        Objects.equals(this.azimut, objectStationmagnitude.azimut) &&
-        Objects.equals(this.mag, objectStationmagnitude.mag) &&
-        Objects.equals(this.errMag, objectStationmagnitude.errMag) &&
-        Objects.equals(this.weight, objectStationmagnitude.weight) &&
-        Objects.equals(this.magCorrection, objectStationmagnitude.magCorrection) &&
-        Objects.equals(this.isUsed, objectStationmagnitude.isUsed) &&
-        Objects.equals(this.typeMagnitude, objectStationmagnitude.typeMagnitude) &&
-        Objects.equals(this.localspace, objectStationmagnitude.localspace) &&
-        Objects.equals(this.provenance, objectStationmagnitude.provenance) &&
-        Objects.equals(this.modified, objectStationmagnitude.modified) &&
-        Objects.equals(this.inserted, objectStationmagnitude.inserted) &&
-        Objects.equals(this.amplitude, objectStationmagnitude.amplitude)&&
-        Objects.equals(this.additionalProperties, objectStationmagnitude.additionalProperties);
+    ObjectAmplitude objectAmplitude = (ObjectAmplitude) o;
+    return Objects.equals(this.id, objectAmplitude.id) &&
+        Objects.equals(this.idLocalspace, objectAmplitude.idLocalspace) &&
+        Objects.equals(this.net, objectAmplitude.net) &&
+        Objects.equals(this.sta, objectAmplitude.sta) &&
+        Objects.equals(this.cha, objectAmplitude.cha) &&
+        Objects.equals(this.loc, objectAmplitude.loc) &&
+        Objects.equals(this.time1, objectAmplitude.time1) &&
+        Objects.equals(this.amp1, objectAmplitude.amp1) &&
+        Objects.equals(this.time2, objectAmplitude.time2) &&
+        Objects.equals(this.amp2, objectAmplitude.amp2) &&
+        Objects.equals(this.pickId, objectAmplitude.pickId) &&
+        Objects.equals(this.period, objectAmplitude.period) &&
+        Objects.equals(this.revised, objectAmplitude.revised) &&
+        Objects.equals(this.typeAmplitude, objectAmplitude.typeAmplitude) &&
+        Objects.equals(this.localspace, objectAmplitude.localspace) &&
+        Objects.equals(this.provenance, objectAmplitude.provenance) &&
+        Objects.equals(this.modified, objectAmplitude.modified) &&
+        Objects.equals(this.inserted, objectAmplitude.inserted) &&
+        Objects.equals(this.timewindowReference, objectAmplitude.timewindowReference)&&
+        Objects.equals(this.additionalProperties, objectAmplitude.additionalProperties);
   }
 
   private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
@@ -509,7 +610,7 @@ public class ObjectStationmagnitude {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, epDistance, origDistance, azimut, mag, errMag, weight, magCorrection, isUsed, typeMagnitude, localspace, provenance, modified, inserted, amplitude, additionalProperties);
+    return Objects.hash(id, idLocalspace, net, sta, cha, loc, time1, amp1, time2, amp2, pickId, period, revised, typeAmplitude, localspace, provenance, modified, inserted, timewindowReference, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -522,22 +623,26 @@ public class ObjectStationmagnitude {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectStationmagnitude {\n");
+    sb.append("class ObjectAmplitude {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    epDistance: ").append(toIndentedString(epDistance)).append("\n");
-    sb.append("    origDistance: ").append(toIndentedString(origDistance)).append("\n");
-    sb.append("    azimut: ").append(toIndentedString(azimut)).append("\n");
-    sb.append("    mag: ").append(toIndentedString(mag)).append("\n");
-    sb.append("    errMag: ").append(toIndentedString(errMag)).append("\n");
-    sb.append("    weight: ").append(toIndentedString(weight)).append("\n");
-    sb.append("    magCorrection: ").append(toIndentedString(magCorrection)).append("\n");
-    sb.append("    isUsed: ").append(toIndentedString(isUsed)).append("\n");
-    sb.append("    typeMagnitude: ").append(toIndentedString(typeMagnitude)).append("\n");
+    sb.append("    idLocalspace: ").append(toIndentedString(idLocalspace)).append("\n");
+    sb.append("    net: ").append(toIndentedString(net)).append("\n");
+    sb.append("    sta: ").append(toIndentedString(sta)).append("\n");
+    sb.append("    cha: ").append(toIndentedString(cha)).append("\n");
+    sb.append("    loc: ").append(toIndentedString(loc)).append("\n");
+    sb.append("    time1: ").append(toIndentedString(time1)).append("\n");
+    sb.append("    amp1: ").append(toIndentedString(amp1)).append("\n");
+    sb.append("    time2: ").append(toIndentedString(time2)).append("\n");
+    sb.append("    amp2: ").append(toIndentedString(amp2)).append("\n");
+    sb.append("    pickId: ").append(toIndentedString(pickId)).append("\n");
+    sb.append("    period: ").append(toIndentedString(period)).append("\n");
+    sb.append("    revised: ").append(toIndentedString(revised)).append("\n");
+    sb.append("    typeAmplitude: ").append(toIndentedString(typeAmplitude)).append("\n");
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
     sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
-    sb.append("    amplitude: ").append(toIndentedString(amplitude)).append("\n");
+    sb.append("    timewindowReference: ").append(toIndentedString(timewindowReference)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -562,47 +667,64 @@ public class ObjectStationmagnitude {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
-    openapiFields.add("ep_distance");
-    openapiFields.add("orig_distance");
-    openapiFields.add("azimut");
-    openapiFields.add("mag");
-    openapiFields.add("err_mag");
-    openapiFields.add("weight");
-    openapiFields.add("mag_correction");
-    openapiFields.add("is_used");
-    openapiFields.add("type_magnitude");
+    openapiFields.add("id_localspace");
+    openapiFields.add("net");
+    openapiFields.add("sta");
+    openapiFields.add("cha");
+    openapiFields.add("loc");
+    openapiFields.add("time1");
+    openapiFields.add("amp1");
+    openapiFields.add("time2");
+    openapiFields.add("amp2");
+    openapiFields.add("pick_id");
+    openapiFields.add("period");
+    openapiFields.add("revised");
+    openapiFields.add("type_amplitude");
     openapiFields.add("localspace");
     openapiFields.add("provenance");
     openapiFields.add("modified");
     openapiFields.add("inserted");
-    openapiFields.add("amplitude");
+    openapiFields.add("timewindow_reference");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("mag");
+    openapiRequiredFields.add("time1");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectStationmagnitude
+  * @throws IOException if the JSON Object is invalid with respect to ObjectAmplitude
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (!ObjectStationmagnitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectStationmagnitude is not found in the empty JSON string", ObjectStationmagnitude.openapiRequiredFields.toString()));
+        if (!ObjectAmplitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectAmplitude is not found in the empty JSON string", ObjectAmplitude.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectStationmagnitude.openapiRequiredFields) {
+      for (String requiredField : ObjectAmplitude.openapiRequiredFields) {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-      if ((jsonObj.get("type_magnitude") != null && !jsonObj.get("type_magnitude").isJsonNull()) && !jsonObj.get("type_magnitude").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type_magnitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_magnitude").toString()));
+      if ((jsonObj.get("net") != null && !jsonObj.get("net").isJsonNull()) && !jsonObj.get("net").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
+      }
+      if ((jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonNull()) && !jsonObj.get("sta").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
+      }
+      if ((jsonObj.get("cha") != null && !jsonObj.get("cha").isJsonNull()) && !jsonObj.get("cha").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `cha` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cha").toString()));
+      }
+      if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
+      }
+      // validate the optional field `type_amplitude`
+      if (jsonObj.get("type_amplitude") != null && !jsonObj.get("type_amplitude").isJsonNull()) {
+        ObjectAmplitudeTypeAmplitude.validateJsonObject(jsonObj.getAsJsonObject("type_amplitude"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
@@ -612,26 +734,22 @@ public class ObjectStationmagnitude {
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
         ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
-      // validate the optional field `amplitude`
-      if (jsonObj.get("amplitude") != null && !jsonObj.get("amplitude").isJsonNull()) {
-        ObjectAmplitude.validateJsonObject(jsonObj.getAsJsonObject("amplitude"));
-      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectStationmagnitude.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectStationmagnitude' and its subtypes
+       if (!ObjectAmplitude.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectAmplitude' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectStationmagnitude> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectStationmagnitude.class));
+       final TypeAdapter<ObjectAmplitude> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectAmplitude.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectStationmagnitude>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectAmplitude>() {
            @Override
-           public void write(JsonWriter out, ObjectStationmagnitude value) throws IOException {
+           public void write(JsonWriter out, ObjectAmplitude value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -654,11 +772,11 @@ public class ObjectStationmagnitude {
            }
 
            @Override
-           public ObjectStationmagnitude read(JsonReader in) throws IOException {
+           public ObjectAmplitude read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             ObjectStationmagnitude instance = thisAdapter.fromJsonTree(jsonObj);
+             ObjectAmplitude instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -685,18 +803,18 @@ public class ObjectStationmagnitude {
   }
 
  /**
-  * Create an instance of ObjectStationmagnitude given an JSON string
+  * Create an instance of ObjectAmplitude given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectStationmagnitude
-  * @throws IOException if the JSON string is invalid with respect to ObjectStationmagnitude
+  * @return An instance of ObjectAmplitude
+  * @throws IOException if the JSON string is invalid with respect to ObjectAmplitude
   */
-  public static ObjectStationmagnitude fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectStationmagnitude.class);
+  public static ObjectAmplitude fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectAmplitude.class);
   }
 
  /**
-  * Convert an instance of ObjectStationmagnitude to an JSON string
+  * Convert an instance of ObjectAmplitude to an JSON string
   *
   * @return JSON string
   */
