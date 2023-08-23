@@ -22,6 +22,7 @@
 |**arrivalTime** | **OffsetDateTime** | Arrival time with microseconds | datetime(3) |  |
 |**firstmotion** | **PickFirstmotion** |  |  [optional] |
 |**emersio** | **PickEmersio** |  |  [optional] |
+|**pickEw** | [**ObjectPickEw**](ObjectPickEw.md) |  |  [optional] |
 |**localspace** | [**ObjectLocalspace**](ObjectLocalspace.md) |  |  [optional] |
 |**provenance** | [**ObjectProvenance**](ObjectProvenance.md) |  |  [optional] |
 

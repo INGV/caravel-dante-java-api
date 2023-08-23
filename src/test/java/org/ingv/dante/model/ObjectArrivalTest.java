@@ -20,10 +20,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectPick;
-import org.ingv.dante.model.ObjectPickEw;
-import org.ingv.dante.model.ObjectProvenance;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -145,30 +142,6 @@ public class ObjectArrivalTest {
     @Test
     public void weightTest() {
         // TODO: test weight
-    }
-
-    /**
-     * Test the property 'localspace'
-     */
-    @Test
-    public void localspaceTest() {
-        // TODO: test localspace
-    }
-
-    /**
-     * Test the property 'provenance'
-     */
-    @Test
-    public void provenanceTest() {
-        // TODO: test provenance
-    }
-
-    /**
-     * Test the property 'pickEw'
-     */
-    @Test
-    public void pickEwTest() {
-        // TODO: test pickEw
     }
 
     /**

@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
+import org.ingv.dante.model.ObjectPickEw;
 import org.ingv.dante.model.ObjectProvenance;
 import org.ingv.dante.model.PickEmersio;
 import org.ingv.dante.model.PickFirstmotion;
@@ -52,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectPick
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-22T11:13:55.542808Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-23T11:30:19.732239Z[Etc/UTC]")
 public class ObjectPick {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -113,6 +114,10 @@ public class ObjectPick {
   public static final String SERIALIZED_NAME_EMERSIO = "emersio";
   @SerializedName(SERIALIZED_NAME_EMERSIO)
   private PickEmersio emersio;
+
+  public static final String SERIALIZED_NAME_PICK_EW = "pick_ew";
+  @SerializedName(SERIALIZED_NAME_PICK_EW)
+  private ObjectPickEw pickEw;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
@@ -440,6 +445,28 @@ public class ObjectPick {
   }
 
 
+  public ObjectPick pickEw(ObjectPickEw pickEw) {
+    
+    this.pickEw = pickEw;
+    return this;
+  }
+
+   /**
+   * Get pickEw
+   * @return pickEw
+  **/
+  @javax.annotation.Nullable
+
+  public ObjectPickEw getPickEw() {
+    return pickEw;
+  }
+
+
+  public void setPickEw(ObjectPickEw pickEw) {
+    this.pickEw = pickEw;
+  }
+
+
   public ObjectPick localspace(ObjectLocalspace localspace) {
     
     this.localspace = localspace;
@@ -553,6 +580,7 @@ public class ObjectPick {
         Objects.equals(this.arrivalTime, objectPick.arrivalTime) &&
         Objects.equals(this.firstmotion, objectPick.firstmotion) &&
         Objects.equals(this.emersio, objectPick.emersio) &&
+        Objects.equals(this.pickEw, objectPick.pickEw) &&
         Objects.equals(this.localspace, objectPick.localspace) &&
         Objects.equals(this.provenance, objectPick.provenance)&&
         Objects.equals(this.additionalProperties, objectPick.additionalProperties);
@@ -564,7 +592,7 @@ public class ObjectPick {
 
   @Override
   public int hashCode() {
-    return Objects.hash(net, sta, cha, loc, id, modified, inserted, idLocalspace, qualityClass, lowerUncertainty, upperUncertainty, confidenceLevel, arrivalTime, firstmotion, emersio, localspace, provenance, additionalProperties);
+    return Objects.hash(net, sta, cha, loc, id, modified, inserted, idLocalspace, qualityClass, lowerUncertainty, upperUncertainty, confidenceLevel, arrivalTime, firstmotion, emersio, pickEw, localspace, provenance, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -593,6 +621,7 @@ public class ObjectPick {
     sb.append("    arrivalTime: ").append(toIndentedString(arrivalTime)).append("\n");
     sb.append("    firstmotion: ").append(toIndentedString(firstmotion)).append("\n");
     sb.append("    emersio: ").append(toIndentedString(emersio)).append("\n");
+    sb.append("    pickEw: ").append(toIndentedString(pickEw)).append("\n");
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
@@ -633,6 +662,7 @@ public class ObjectPick {
     openapiFields.add("arrival_time");
     openapiFields.add("firstmotion");
     openapiFields.add("emersio");
+    openapiFields.add("pick_ew");
     openapiFields.add("localspace");
     openapiFields.add("provenance");
 
@@ -674,6 +704,10 @@ public class ObjectPick {
       }
       if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
+      }
+      // validate the optional field `pick_ew`
+      if (jsonObj.get("pick_ew") != null && !jsonObj.get("pick_ew").isJsonNull()) {
+        ObjectPickEw.validateJsonObject(jsonObj.getAsJsonObject("pick_ew"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {

@@ -22,10 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectPick;
-import org.ingv.dante.model.ObjectPickEw;
-import org.ingv.dante.model.ObjectProvenance;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -52,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectArrival
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-22T11:13:55.542808Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-23T11:30:19.732239Z[Etc/UTC]")
 public class ObjectArrival {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -105,18 +102,6 @@ public class ObjectArrival {
   public static final String SERIALIZED_NAME_WEIGHT = "weight";
   @SerializedName(SERIALIZED_NAME_WEIGHT)
   private Double weight;
-
-  public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
-  @SerializedName(SERIALIZED_NAME_LOCALSPACE)
-  private ObjectLocalspace localspace;
-
-  public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
-  @SerializedName(SERIALIZED_NAME_PROVENANCE)
-  private ObjectProvenance provenance;
-
-  public static final String SERIALIZED_NAME_PICK_EW = "pick_ew";
-  @SerializedName(SERIALIZED_NAME_PICK_EW)
-  private ObjectPickEw pickEw;
 
   public static final String SERIALIZED_NAME_PICK = "pick";
   @SerializedName(SERIALIZED_NAME_PICK)
@@ -396,72 +381,6 @@ public class ObjectArrival {
   }
 
 
-  public ObjectArrival localspace(ObjectLocalspace localspace) {
-    
-    this.localspace = localspace;
-    return this;
-  }
-
-   /**
-   * Get localspace
-   * @return localspace
-  **/
-  @javax.annotation.Nullable
-
-  public ObjectLocalspace getLocalspace() {
-    return localspace;
-  }
-
-
-  public void setLocalspace(ObjectLocalspace localspace) {
-    this.localspace = localspace;
-  }
-
-
-  public ObjectArrival provenance(ObjectProvenance provenance) {
-    
-    this.provenance = provenance;
-    return this;
-  }
-
-   /**
-   * Get provenance
-   * @return provenance
-  **/
-  @javax.annotation.Nullable
-
-  public ObjectProvenance getProvenance() {
-    return provenance;
-  }
-
-
-  public void setProvenance(ObjectProvenance provenance) {
-    this.provenance = provenance;
-  }
-
-
-  public ObjectArrival pickEw(ObjectPickEw pickEw) {
-    
-    this.pickEw = pickEw;
-    return this;
-  }
-
-   /**
-   * Get pickEw
-   * @return pickEw
-  **/
-  @javax.annotation.Nullable
-
-  public ObjectPickEw getPickEw() {
-    return pickEw;
-  }
-
-
-  public void setPickEw(ObjectPickEw pickEw) {
-    this.pickEw = pickEw;
-  }
-
-
   public ObjectArrival pick(ObjectPick pick) {
     
     this.pick = pick;
@@ -551,9 +470,6 @@ public class ObjectArrival {
         Objects.equals(this.arrTimeIsUsed, objectArrival.arrTimeIsUsed) &&
         Objects.equals(this.residual, objectArrival.residual) &&
         Objects.equals(this.weight, objectArrival.weight) &&
-        Objects.equals(this.localspace, objectArrival.localspace) &&
-        Objects.equals(this.provenance, objectArrival.provenance) &&
-        Objects.equals(this.pickEw, objectArrival.pickEw) &&
         Objects.equals(this.pick, objectArrival.pick)&&
         Objects.equals(this.additionalProperties, objectArrival.additionalProperties);
   }
@@ -564,7 +480,7 @@ public class ObjectArrival {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, iscCode, epDistanceKm, epDistanceDelta, origDistance, azimut, takeOff, polarityIsUsed, arrTimeIsUsed, residual, weight, localspace, provenance, pickEw, pick, additionalProperties);
+    return Objects.hash(id, modified, inserted, iscCode, epDistanceKm, epDistanceDelta, origDistance, azimut, takeOff, polarityIsUsed, arrTimeIsUsed, residual, weight, pick, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -591,9 +507,6 @@ public class ObjectArrival {
     sb.append("    arrTimeIsUsed: ").append(toIndentedString(arrTimeIsUsed)).append("\n");
     sb.append("    residual: ").append(toIndentedString(residual)).append("\n");
     sb.append("    weight: ").append(toIndentedString(weight)).append("\n");
-    sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
-    sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
-    sb.append("    pickEw: ").append(toIndentedString(pickEw)).append("\n");
     sb.append("    pick: ").append(toIndentedString(pick)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
@@ -631,9 +544,6 @@ public class ObjectArrival {
     openapiFields.add("arr_time_is_used");
     openapiFields.add("residual");
     openapiFields.add("weight");
-    openapiFields.add("localspace");
-    openapiFields.add("provenance");
-    openapiFields.add("pick_ew");
     openapiFields.add("pick");
 
     // a set of required properties/fields (JSON key names)
@@ -662,18 +572,6 @@ public class ObjectArrival {
       }
       if (!jsonObj.get("isc_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `isc_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("isc_code").toString()));
-      }
-      // validate the optional field `localspace`
-      if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
-      }
-      // validate the optional field `provenance`
-      if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
-      }
-      // validate the optional field `pick_ew`
-      if (jsonObj.get("pick_ew") != null && !jsonObj.get("pick_ew").isJsonNull()) {
-        ObjectPickEw.validateJsonObject(jsonObj.getAsJsonObject("pick_ew"));
       }
       // validate the optional field `pick`
       if (jsonObj.get("pick") != null && !jsonObj.get("pick").isJsonNull()) {

@@ -23,8 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectAmplitude;
-import org.ingv.dante.model.ObjectLocalspace;
-import org.ingv.dante.model.ObjectProvenance;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -51,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStationmagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-22T11:13:55.542808Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-23T11:30:19.732239Z[Etc/UTC]")
 public class ObjectStationmagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -92,14 +90,6 @@ public class ObjectStationmagnitude {
   public static final String SERIALIZED_NAME_TYPE_MAGNITUDE = "type_magnitude";
   @SerializedName(SERIALIZED_NAME_TYPE_MAGNITUDE)
   private String typeMagnitude;
-
-  public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
-  @SerializedName(SERIALIZED_NAME_LOCALSPACE)
-  private ObjectLocalspace localspace;
-
-  public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
-  @SerializedName(SERIALIZED_NAME_PROVENANCE)
-  private ObjectProvenance provenance;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
@@ -339,50 +329,6 @@ public class ObjectStationmagnitude {
   }
 
 
-  public ObjectStationmagnitude localspace(ObjectLocalspace localspace) {
-    
-    this.localspace = localspace;
-    return this;
-  }
-
-   /**
-   * Get localspace
-   * @return localspace
-  **/
-  @javax.annotation.Nullable
-
-  public ObjectLocalspace getLocalspace() {
-    return localspace;
-  }
-
-
-  public void setLocalspace(ObjectLocalspace localspace) {
-    this.localspace = localspace;
-  }
-
-
-  public ObjectStationmagnitude provenance(ObjectProvenance provenance) {
-    
-    this.provenance = provenance;
-    return this;
-  }
-
-   /**
-   * Get provenance
-   * @return provenance
-  **/
-  @javax.annotation.Nullable
-
-  public ObjectProvenance getProvenance() {
-    return provenance;
-  }
-
-
-  public void setProvenance(ObjectProvenance provenance) {
-    this.provenance = provenance;
-  }
-
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -495,8 +441,6 @@ public class ObjectStationmagnitude {
         Objects.equals(this.magCorrection, objectStationmagnitude.magCorrection) &&
         Objects.equals(this.isUsed, objectStationmagnitude.isUsed) &&
         Objects.equals(this.typeMagnitude, objectStationmagnitude.typeMagnitude) &&
-        Objects.equals(this.localspace, objectStationmagnitude.localspace) &&
-        Objects.equals(this.provenance, objectStationmagnitude.provenance) &&
         Objects.equals(this.modified, objectStationmagnitude.modified) &&
         Objects.equals(this.inserted, objectStationmagnitude.inserted) &&
         Objects.equals(this.amplitude, objectStationmagnitude.amplitude)&&
@@ -509,7 +453,7 @@ public class ObjectStationmagnitude {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, epDistance, origDistance, azimut, mag, errMag, weight, magCorrection, isUsed, typeMagnitude, localspace, provenance, modified, inserted, amplitude, additionalProperties);
+    return Objects.hash(id, epDistance, origDistance, azimut, mag, errMag, weight, magCorrection, isUsed, typeMagnitude, modified, inserted, amplitude, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -533,8 +477,6 @@ public class ObjectStationmagnitude {
     sb.append("    magCorrection: ").append(toIndentedString(magCorrection)).append("\n");
     sb.append("    isUsed: ").append(toIndentedString(isUsed)).append("\n");
     sb.append("    typeMagnitude: ").append(toIndentedString(typeMagnitude)).append("\n");
-    sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
-    sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
     sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
     sb.append("    amplitude: ").append(toIndentedString(amplitude)).append("\n");
@@ -571,8 +513,6 @@ public class ObjectStationmagnitude {
     openapiFields.add("mag_correction");
     openapiFields.add("is_used");
     openapiFields.add("type_magnitude");
-    openapiFields.add("localspace");
-    openapiFields.add("provenance");
     openapiFields.add("modified");
     openapiFields.add("inserted");
     openapiFields.add("amplitude");
@@ -603,14 +543,6 @@ public class ObjectStationmagnitude {
       }
       if ((jsonObj.get("type_magnitude") != null && !jsonObj.get("type_magnitude").isJsonNull()) && !jsonObj.get("type_magnitude").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_magnitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_magnitude").toString()));
-      }
-      // validate the optional field `localspace`
-      if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
-      }
-      // validate the optional field `provenance`
-      if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
       // validate the optional field `amplitude`
       if (jsonObj.get("amplitude") != null && !jsonObj.get("amplitude").isJsonNull()) {

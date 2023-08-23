@@ -17,8 +17,6 @@
 |**magCorrection** | **Double** | magnitude correction | double |  [optional] |
 |**isUsed** | **Boolean** | true if used | boolean |  [optional] |
 |**typeMagnitude** | **String** | Type of the magnitude | varchar(255) |  [optional] |
-|**localspace** | [**ObjectLocalspace**](ObjectLocalspace.md) |  |  [optional] |
-|**provenance** | [**ObjectProvenance**](ObjectProvenance.md) |  |  [optional] |
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
 |**amplitude** | [**ObjectAmplitude**](ObjectAmplitude.md) |  |  [optional] |

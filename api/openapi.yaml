@@ -7889,22 +7889,7 @@ components:
                 net: IV
                 revised: 0
                 cha: HHZ
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               inserted: 2016-06-22T16:52:06.26Z
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ep_distance: 223.3
@@ -7952,22 +7937,7 @@ components:
                 net: IV
                 revised: 0
                 cha: HHZ
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               inserted: 2016-06-22T16:52:06.26Z
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ep_distance: 223.3
@@ -8048,22 +8018,7 @@ components:
                 net: IV
                 revised: 0
                 cha: HHZ
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               inserted: 2016-06-22T16:52:06.26Z
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ep_distance: 223.3
@@ -8111,22 +8066,7 @@ components:
                 net: IV
                 revised: 0
                 cha: HHZ
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               inserted: 2016-06-22T16:52:06.26Z
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ep_distance: 223.3
@@ -8190,18 +8130,6 @@ components:
             isc_code: S
             azimut: 161
             inserted: 2016-06-22T16:52:06.26Z
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
             pick:
               sta: ACER
               loc: "00"
@@ -8229,20 +8157,17 @@ components:
                 description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              pick_ew:
+                pamp1: 283
+                pamp2: 283
+                pamp3: 283
               net: IV
               cha: HHZ
               emersio: E
               lower_uncertainty: 0.52
             ep_distance_km: 223.3
-            localspace:
-              name: hew1_mole
-              description: Auto added
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            pick_ew:
-              pamp1: 283
-              pamp2: 283
-              pamp3: 283
           - take_off: 94
             ep_distance_delta: 2
             polarity_is_used: false
@@ -8253,18 +8178,6 @@ components:
             isc_code: S
             azimut: 161
             inserted: 2016-06-22T16:52:06.26Z
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
             pick:
               sta: ACER
               loc: "00"
@@ -8292,20 +8205,17 @@ components:
                 description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              pick_ew:
+                pamp1: 283
+                pamp2: 283
+                pamp3: 283
               net: IV
               cha: HHZ
               emersio: E
               lower_uncertainty: 0.52
             ep_distance_km: 223.3
-            localspace:
-              name: hew1_mole
-              description: Auto added
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            pick_ew:
-              pamp1: 283
-              pamp2: 283
-              pamp3: 283
           confidence_level: 68.3
           flags: "DPC,twitter,shakemap4,FM"
           e1_az: 4.145608
@@ -8582,22 +8492,7 @@ components:
                 net: IV
                 revised: 0
                 cha: HHZ
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               inserted: 2016-06-22T16:52:06.26Z
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ep_distance: 223.3
@@ -8645,22 +8540,7 @@ components:
                 net: IV
                 revised: 0
                 cha: HHZ
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               inserted: 2016-06-22T16:52:06.26Z
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ep_distance: 223.3
@@ -8741,22 +8621,7 @@ components:
                 net: IV
                 revised: 0
                 cha: HHZ
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               inserted: 2016-06-22T16:52:06.26Z
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ep_distance: 223.3
@@ -8804,22 +8669,7 @@ components:
                 net: IV
                 revised: 0
                 cha: HHZ
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               inserted: 2016-06-22T16:52:06.26Z
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ep_distance: 223.3
@@ -8883,18 +8733,6 @@ components:
             isc_code: S
             azimut: 161
             inserted: 2016-06-22T16:52:06.26Z
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
             pick:
               sta: ACER
               loc: "00"
@@ -8922,20 +8760,17 @@ components:
                 description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              pick_ew:
+                pamp1: 283
+                pamp2: 283
+                pamp3: 283
               net: IV
               cha: HHZ
               emersio: E
               lower_uncertainty: 0.52
             ep_distance_km: 223.3
-            localspace:
-              name: hew1_mole
-              description: Auto added
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            pick_ew:
-              pamp1: 283
-              pamp2: 283
-              pamp3: 283
           - take_off: 94
             ep_distance_delta: 2
             polarity_is_used: false
@@ -8946,18 +8781,6 @@ components:
             isc_code: S
             azimut: 161
             inserted: 2016-06-22T16:52:06.26Z
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
             pick:
               sta: ACER
               loc: "00"
@@ -8985,20 +8808,17 @@ components:
                 description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              pick_ew:
+                pamp1: 283
+                pamp2: 283
+                pamp3: 283
               net: IV
               cha: HHZ
               emersio: E
               lower_uncertainty: 0.52
             ep_distance_km: 223.3
-            localspace:
-              name: hew1_mole
-              description: Auto added
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            pick_ew:
-              pamp1: 283
-              pamp2: 283
-              pamp3: 283
           confidence_level: 68.3
           flags: "DPC,twitter,shakemap4,FM"
           e1_az: 4.145608
@@ -9286,12 +9106,14 @@ components:
           format: int64
           nullable: true
           type: integer
+          writeOnly: true
         set_preferred_magnitude_id_localspace:
           description: Localspace Id | bigint(19)
           example: 182491
           format: int64
           nullable: true
           type: integer
+          writeOnly: true
         type_group:
           default: 0
           description: Group type. Used by clustering algorithm | tinyint(4)
@@ -9370,22 +9192,7 @@ components:
               net: IV
               revised: 0
               cha: HHZ
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
             inserted: 2016-06-22T16:52:06.26Z
-            localspace:
-              name: hew1_mole
-              description: Auto added
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ep_distance: 223.3
@@ -9433,22 +9240,7 @@ components:
               net: IV
               revised: 0
               cha: HHZ
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
             inserted: 2016-06-22T16:52:06.26Z
-            localspace:
-              name: hew1_mole
-              description: Auto added
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ep_distance: 223.3
@@ -9529,22 +9321,7 @@ components:
               net: IV
               revised: 0
               cha: HHZ
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
             inserted: 2016-06-22T16:52:06.26Z
-            localspace:
-              name: hew1_mole
-              description: Auto added
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ep_distance: 223.3
@@ -9592,22 +9369,7 @@ components:
               net: IV
               revised: 0
               cha: HHZ
-            provenance:
-              hostname: hew10.ingv.it
-              method: ToDo
-              name: INGV
-              description: Auto added
-              model: prem
-              program: IPO-EW__tdmt_invc.c
-              priority: 0
-              softwarename: software
-              version: hew1_mole
-              parameters: ToDo
-              username: ew
             inserted: 2016-06-22T16:52:06.26Z
-            localspace:
-              name: hew1_mole
-              description: Auto added
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ep_distance: 223.3
@@ -9671,18 +9433,6 @@ components:
           isc_code: S
           azimut: 161
           inserted: 2016-06-22T16:52:06.26Z
-          provenance:
-            hostname: hew10.ingv.it
-            method: ToDo
-            name: INGV
-            description: Auto added
-            model: prem
-            program: IPO-EW__tdmt_invc.c
-            priority: 0
-            softwarename: software
-            version: hew1_mole
-            parameters: ToDo
-            username: ew
           pick:
             sta: ACER
             loc: "00"
@@ -9710,20 +9460,17 @@ components:
               description: Auto added
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            pick_ew:
+              pamp1: 283
+              pamp2: 283
+              pamp3: 283
             net: IV
             cha: HHZ
             emersio: E
             lower_uncertainty: 0.52
           ep_distance_km: 223.3
-          localspace:
-            name: hew1_mole
-            description: Auto added
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
-          pick_ew:
-            pamp1: 283
-            pamp2: 283
-            pamp3: 283
         - take_off: 94
           ep_distance_delta: 2
           polarity_is_used: false
@@ -9734,18 +9481,6 @@ components:
           isc_code: S
           azimut: 161
           inserted: 2016-06-22T16:52:06.26Z
-          provenance:
-            hostname: hew10.ingv.it
-            method: ToDo
-            name: INGV
-            description: Auto added
-            model: prem
-            program: IPO-EW__tdmt_invc.c
-            priority: 0
-            softwarename: software
-            version: hew1_mole
-            parameters: ToDo
-            username: ew
           pick:
             sta: ACER
             loc: "00"
@@ -9773,20 +9508,17 @@ components:
               description: Auto added
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            pick_ew:
+              pamp1: 283
+              pamp2: 283
+              pamp3: 283
             net: IV
             cha: HHZ
             emersio: E
             lower_uncertainty: 0.52
           ep_distance_km: 223.3
-          localspace:
-            name: hew1_mole
-            description: Auto added
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
-          pick_ew:
-            pamp1: 283
-            pamp2: 283
-            pamp3: 283
         confidence_level: 68.3
         flags: "DPC,twitter,shakemap4,FM"
         e1_az: 4.145608
@@ -10519,22 +10251,7 @@ components:
             net: IV
             revised: 0
             cha: HHZ
-          provenance:
-            hostname: hew10.ingv.it
-            method: ToDo
-            name: INGV
-            description: Auto added
-            model: prem
-            program: IPO-EW__tdmt_invc.c
-            priority: 0
-            softwarename: software
-            version: hew1_mole
-            parameters: ToDo
-            username: ew
           inserted: 2016-06-22T16:52:06.26Z
-          localspace:
-            name: hew1_mole
-            description: Auto added
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           ep_distance: 223.3
@@ -10582,22 +10299,7 @@ components:
             net: IV
             revised: 0
             cha: HHZ
-          provenance:
-            hostname: hew10.ingv.it
-            method: ToDo
-            name: INGV
-            description: Auto added
-            model: prem
-            program: IPO-EW__tdmt_invc.c
-            priority: 0
-            softwarename: software
-            version: hew1_mole
-            parameters: ToDo
-            username: ew
           inserted: 2016-06-22T16:52:06.26Z
-          localspace:
-            name: hew1_mole
-            description: Auto added
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           ep_distance: 223.3
@@ -11485,22 +11187,7 @@ components:
           net: IV
           revised: 0
           cha: HHZ
-        provenance:
-          hostname: hew10.ingv.it
-          method: ToDo
-          name: INGV
-          description: Auto added
-          model: prem
-          program: IPO-EW__tdmt_invc.c
-          priority: 0
-          softwarename: software
-          version: hew1_mole
-          parameters: ToDo
-          username: ew
         inserted: 2016-06-22T16:52:06.26Z
-        localspace:
-          name: hew1_mole
-          description: Auto added
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
         ep_distance: 223.3
@@ -11555,10 +11242,6 @@ components:
           description: Type of the magnitude | varchar(255)
           example: ML-VAX
           type: string
-        localspace:
-          $ref: '#/components/schemas/ObjectLocalspace'
-        provenance:
-          $ref: '#/components/schemas/ObjectProvenance'
         modified:
           description: Last Review | timestamp
           example: 2016-06-22T16:52:06.26Z
@@ -11604,6 +11287,10 @@ components:
           description: Auto added
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
+        pick_ew:
+          pamp1: 283
+          pamp2: 283
+          pamp3: 283
         net: IV
         cha: HHZ
         emersio: E
@@ -11685,6 +11372,8 @@ components:
           $ref: '#/components/schemas/pick__firstmotion'
         emersio:
           $ref: '#/components/schemas/pick__emersio'
+        pick_ew:
+          $ref: '#/components/schemas/ObjectPickEw'
         localspace:
           $ref: '#/components/schemas/ObjectLocalspace'
         provenance:
@@ -11707,18 +11396,6 @@ components:
         isc_code: S
         azimut: 161
         inserted: 2016-06-22T16:52:06.26Z
-        provenance:
-          hostname: hew10.ingv.it
-          method: ToDo
-          name: INGV
-          description: Auto added
-          model: prem
-          program: IPO-EW__tdmt_invc.c
-          priority: 0
-          softwarename: software
-          version: hew1_mole
-          parameters: ToDo
-          username: ew
         pick:
           sta: ACER
           loc: "00"
@@ -11746,20 +11423,17 @@ components:
             description: Auto added
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
+          pick_ew:
+            pamp1: 283
+            pamp2: 283
+            pamp3: 283
           net: IV
           cha: HHZ
           emersio: E
           lower_uncertainty: 0.52
         ep_distance_km: 223.3
-        localspace:
-          name: hew1_mole
-          description: Auto added
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
-        pick_ew:
-          pamp1: 283
-          pamp2: 283
-          pamp3: 283
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -11830,12 +11504,6 @@ components:
           example: 0.88
           format: double
           type: number
-        localspace:
-          $ref: '#/components/schemas/ObjectLocalspace'
-        provenance:
-          $ref: '#/components/schemas/ObjectProvenance'
-        pick_ew:
-          $ref: '#/components/schemas/ObjectPickEw'
         pick:
           $ref: '#/components/schemas/ObjectPick'
       required:
@@ -12802,6 +12470,13 @@ components:
       format: float
       nullable: true
       type: number
+    id_localspace__WRITEONLY:
+      description: Localspace Id | bigint(19)
+      example: 182491
+      format: int64
+      nullable: true
+      type: integer
+      writeOnly: true
     confidence_level:
       default: 68.3
       description: "Integer numer for confidence level type (68.3 1 sigma, xx =2 sigma,\
@@ -13809,22 +13484,7 @@ components:
                   net: IV
                   revised: 0
                   cha: HHZ
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 inserted: 2016-06-22T16:52:06.26Z
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ep_distance: 223.3
@@ -13872,22 +13532,7 @@ components:
                   net: IV
                   revised: 0
                   cha: HHZ
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 inserted: 2016-06-22T16:52:06.26Z
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ep_distance: 223.3
@@ -13968,22 +13613,7 @@ components:
                   net: IV
                   revised: 0
                   cha: HHZ
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 inserted: 2016-06-22T16:52:06.26Z
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ep_distance: 223.3
@@ -14031,22 +13661,7 @@ components:
                   net: IV
                   revised: 0
                   cha: HHZ
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 inserted: 2016-06-22T16:52:06.26Z
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ep_distance: 223.3
@@ -14110,18 +13725,6 @@ components:
               isc_code: S
               azimut: 161
               inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               pick:
                 sta: ACER
                 loc: "00"
@@ -14149,20 +13752,17 @@ components:
                   description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                pick_ew:
+                  pamp1: 283
+                  pamp2: 283
+                  pamp3: 283
                 net: IV
                 cha: HHZ
                 emersio: E
                 lower_uncertainty: 0.52
               ep_distance_km: 223.3
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              pick_ew:
-                pamp1: 283
-                pamp2: 283
-                pamp3: 283
             - take_off: 94
               ep_distance_delta: 2
               polarity_is_used: false
@@ -14173,18 +13773,6 @@ components:
               isc_code: S
               azimut: 161
               inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               pick:
                 sta: ACER
                 loc: "00"
@@ -14212,20 +13800,17 @@ components:
                   description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                pick_ew:
+                  pamp1: 283
+                  pamp2: 283
+                  pamp3: 283
                 net: IV
                 cha: HHZ
                 emersio: E
                 lower_uncertainty: 0.52
               ep_distance_km: 223.3
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              pick_ew:
-                pamp1: 283
-                pamp2: 283
-                pamp3: 283
             confidence_level: 68.3
             flags: "DPC,twitter,shakemap4,FM"
             e1_az: 4.145608
@@ -14502,22 +14087,7 @@ components:
                   net: IV
                   revised: 0
                   cha: HHZ
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 inserted: 2016-06-22T16:52:06.26Z
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ep_distance: 223.3
@@ -14565,22 +14135,7 @@ components:
                   net: IV
                   revised: 0
                   cha: HHZ
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 inserted: 2016-06-22T16:52:06.26Z
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ep_distance: 223.3
@@ -14661,22 +14216,7 @@ components:
                   net: IV
                   revised: 0
                   cha: HHZ
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 inserted: 2016-06-22T16:52:06.26Z
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ep_distance: 223.3
@@ -14724,22 +14264,7 @@ components:
                   net: IV
                   revised: 0
                   cha: HHZ
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 inserted: 2016-06-22T16:52:06.26Z
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ep_distance: 223.3
@@ -14803,18 +14328,6 @@ components:
               isc_code: S
               azimut: 161
               inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               pick:
                 sta: ACER
                 loc: "00"
@@ -14842,20 +14355,17 @@ components:
                   description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                pick_ew:
+                  pamp1: 283
+                  pamp2: 283
+                  pamp3: 283
                 net: IV
                 cha: HHZ
                 emersio: E
                 lower_uncertainty: 0.52
               ep_distance_km: 223.3
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              pick_ew:
-                pamp1: 283
-                pamp2: 283
-                pamp3: 283
             - take_off: 94
               ep_distance_delta: 2
               polarity_is_used: false
@@ -14866,18 +14376,6 @@ components:
               isc_code: S
               azimut: 161
               inserted: 2016-06-22T16:52:06.26Z
-              provenance:
-                hostname: hew10.ingv.it
-                method: ToDo
-                name: INGV
-                description: Auto added
-                model: prem
-                program: IPO-EW__tdmt_invc.c
-                priority: 0
-                softwarename: software
-                version: hew1_mole
-                parameters: ToDo
-                username: ew
               pick:
                 sta: ACER
                 loc: "00"
@@ -14905,20 +14403,17 @@ components:
                   description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                pick_ew:
+                  pamp1: 283
+                  pamp2: 283
+                  pamp3: 283
                 net: IV
                 cha: HHZ
                 emersio: E
                 lower_uncertainty: 0.52
               ep_distance_km: 223.3
-              localspace:
-                name: hew1_mole
-                description: Auto added
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              pick_ew:
-                pamp1: 283
-                pamp2: 283
-                pamp3: 283
             confidence_level: 68.3
             flags: "DPC,twitter,shakemap4,FM"
             e1_az: 4.145608
@@ -15314,22 +14809,7 @@ components:
                     net: IV
                     revised: 0
                     cha: HHZ
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
                   inserted: 2016-06-22T16:52:06.26Z
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   ep_distance: 223.3
@@ -15377,22 +14857,7 @@ components:
                     net: IV
                     revised: 0
                     cha: HHZ
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
                   inserted: 2016-06-22T16:52:06.26Z
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   ep_distance: 223.3
@@ -15473,22 +14938,7 @@ components:
                     net: IV
                     revised: 0
                     cha: HHZ
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
                   inserted: 2016-06-22T16:52:06.26Z
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   ep_distance: 223.3
@@ -15536,22 +14986,7 @@ components:
                     net: IV
                     revised: 0
                     cha: HHZ
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
                   inserted: 2016-06-22T16:52:06.26Z
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   ep_distance: 223.3
@@ -15615,18 +15050,6 @@ components:
                 isc_code: S
                 azimut: 161
                 inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 pick:
                   sta: ACER
                   loc: "00"
@@ -15654,20 +15077,17 @@ components:
                     description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
+                  pick_ew:
+                    pamp1: 283
+                    pamp2: 283
+                    pamp3: 283
                   net: IV
                   cha: HHZ
                   emersio: E
                   lower_uncertainty: 0.52
                 ep_distance_km: 223.3
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                pick_ew:
-                  pamp1: 283
-                  pamp2: 283
-                  pamp3: 283
               - take_off: 94
                 ep_distance_delta: 2
                 polarity_is_used: false
@@ -15678,18 +15098,6 @@ components:
                 isc_code: S
                 azimut: 161
                 inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 pick:
                   sta: ACER
                   loc: "00"
@@ -15717,20 +15125,17 @@ components:
                     description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
+                  pick_ew:
+                    pamp1: 283
+                    pamp2: 283
+                    pamp3: 283
                   net: IV
                   cha: HHZ
                   emersio: E
                   lower_uncertainty: 0.52
                 ep_distance_km: 223.3
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                pick_ew:
-                  pamp1: 283
-                  pamp2: 283
-                  pamp3: 283
               confidence_level: 68.3
               flags: "DPC,twitter,shakemap4,FM"
               e1_az: 4.145608
@@ -16007,22 +15412,7 @@ components:
                     net: IV
                     revised: 0
                     cha: HHZ
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
                   inserted: 2016-06-22T16:52:06.26Z
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   ep_distance: 223.3
@@ -16070,22 +15460,7 @@ components:
                     net: IV
                     revised: 0
                     cha: HHZ
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
                   inserted: 2016-06-22T16:52:06.26Z
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   ep_distance: 223.3
@@ -16166,22 +15541,7 @@ components:
                     net: IV
                     revised: 0
                     cha: HHZ
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
                   inserted: 2016-06-22T16:52:06.26Z
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   ep_distance: 223.3
@@ -16229,22 +15589,7 @@ components:
                     net: IV
                     revised: 0
                     cha: HHZ
-                  provenance:
-                    hostname: hew10.ingv.it
-                    method: ToDo
-                    name: INGV
-                    description: Auto added
-                    model: prem
-                    program: IPO-EW__tdmt_invc.c
-                    priority: 0
-                    softwarename: software
-                    version: hew1_mole
-                    parameters: ToDo
-                    username: ew
                   inserted: 2016-06-22T16:52:06.26Z
-                  localspace:
-                    name: hew1_mole
-                    description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   ep_distance: 223.3
@@ -16308,18 +15653,6 @@ components:
                 isc_code: S
                 azimut: 161
                 inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 pick:
                   sta: ACER
                   loc: "00"
@@ -16347,20 +15680,17 @@ components:
                     description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
+                  pick_ew:
+                    pamp1: 283
+                    pamp2: 283
+                    pamp3: 283
                   net: IV
                   cha: HHZ
                   emersio: E
                   lower_uncertainty: 0.52
                 ep_distance_km: 223.3
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                pick_ew:
-                  pamp1: 283
-                  pamp2: 283
-                  pamp3: 283
               - take_off: 94
                 ep_distance_delta: 2
                 polarity_is_used: false
@@ -16371,18 +15701,6 @@ components:
                 isc_code: S
                 azimut: 161
                 inserted: 2016-06-22T16:52:06.26Z
-                provenance:
-                  hostname: hew10.ingv.it
-                  method: ToDo
-                  name: INGV
-                  description: Auto added
-                  model: prem
-                  program: IPO-EW__tdmt_invc.c
-                  priority: 0
-                  softwarename: software
-                  version: hew1_mole
-                  parameters: ToDo
-                  username: ew
                 pick:
                   sta: ACER
                   loc: "00"
@@ -16410,20 +15728,17 @@ components:
                     description: Auto added
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
+                  pick_ew:
+                    pamp1: 283
+                    pamp2: 283
+                    pamp3: 283
                   net: IV
                   cha: HHZ
                   emersio: E
                   lower_uncertainty: 0.52
                 ep_distance_km: 223.3
-                localspace:
-                  name: hew1_mole
-                  description: Auto added
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                pick_ew:
-                  pamp1: 283
-                  pamp2: 283
-                  pamp3: 283
               confidence_level: 68.3
               flags: "DPC,twitter,shakemap4,FM"
               e1_az: 4.145608

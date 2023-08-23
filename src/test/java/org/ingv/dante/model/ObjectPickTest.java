@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectLocalspace;
+import org.ingv.dante.model.ObjectPickEw;
 import org.ingv.dante.model.ObjectProvenance;
 import org.ingv.dante.model.PickEmersio;
 import org.ingv.dante.model.PickFirstmotion;
@@ -161,6 +162,14 @@ public class ObjectPickTest {
     @Test
     public void emersioTest() {
         // TODO: test emersio
+    }
+
+    /**
+     * Test the property 'pickEw'
+     */
+    @Test
+    public void pickEwTest() {
+        // TODO: test pickEw
     }
 
     /**

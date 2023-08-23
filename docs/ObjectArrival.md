@@ -20,9 +20,6 @@
 |**arrTimeIsUsed** | **Boolean** | 1 if it is used for origin calculation | boolean |  [optional] |
 |**residual** | **Double** | Residual | double |  [optional] |
 |**weight** | **Double** | Weight | double |  [optional] |
-|**localspace** | [**ObjectLocalspace**](ObjectLocalspace.md) |  |  [optional] |
-|**provenance** | [**ObjectProvenance**](ObjectProvenance.md) |  |  [optional] |
-|**pickEw** | [**ObjectPickEw**](ObjectPickEw.md) |  |  [optional] |
 |**pick** | [**ObjectPick**](ObjectPick.md) |  |  [optional] |
 
 

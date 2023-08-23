@@ -21,8 +21,6 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.ObjectAmplitude;
-import org.ingv.dante.model.ObjectLocalspace;
-import org.ingv.dante.model.ObjectProvenance;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -120,22 +118,6 @@ public class ObjectStationmagnitudeTest {
     @Test
     public void typeMagnitudeTest() {
         // TODO: test typeMagnitude
-    }
-
-    /**
-     * Test the property 'localspace'
-     */
-    @Test
-    public void localspaceTest() {
-        // TODO: test localspace
-    }
-
-    /**
-     * Test the property 'provenance'
-     */
-    @Test
-    public void provenanceTest() {
-        // TODO: test provenance
     }
 
     /**
