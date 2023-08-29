@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 2.95.0
-  - Build date: 2023-08-23T11:33:09.948333Z[Etc/UTC]
+- API version: 2.96.0
+  - Build date: 2023-08-29T12:32:35.068091Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>2.95.0</version>
+  <version>2.96.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.95.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:2.96.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-2.95.0.jar`
+* `target/java-openapi-generator-cli-dante-2.96.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -278,6 +278,8 @@ Class | Method | HTTP request | Description
  - [MagnitudeSchemaEwMessage](docs/MagnitudeSchemaEwMessage.md)
  - [MetaDefinition](docs/MetaDefinition.md)
  - [MetaDefinitionLinksInner](docs/MetaDefinitionLinksInner.md)
+ - [ObjectAmplitude](docs/ObjectAmplitude.md)
+ - [ObjectAmplitudeTypeAmplitude](docs/ObjectAmplitudeTypeAmplitude.md)
  - [ObjectArrival](docs/ObjectArrival.md)
  - [ObjectEvent](docs/ObjectEvent.md)
  - [ObjectFocalmechanism](docs/ObjectFocalmechanism.md)
@@ -299,11 +301,11 @@ Class | Method | HTTP request | Description
  - [ObjectOriginFlagPostOutput](docs/ObjectOriginFlagPostOutput.md)
  - [ObjectOriginFlagPostOutputOriginFlagInner](docs/ObjectOriginFlagPostOutputOriginFlagInner.md)
  - [ObjectOriginForMagnitudesOriginsEventsAndEventsGroup](docs/ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.md)
+ - [ObjectPick](docs/ObjectPick.md)
  - [ObjectPickEw](docs/ObjectPickEw.md)
  - [ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup](docs/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectProvenance](docs/ObjectProvenance.md)
  - [ObjectStationmagnitude](docs/ObjectStationmagnitude.md)
- - [ObjectStationmagnitudeTypeAmplitude](docs/ObjectStationmagnitudeTypeAmplitude.md)
  - [ObjectStatus](docs/ObjectStatus.md)
  - [ObjectStatusDbHost](docs/ObjectStatusDbHost.md)
  - [ObjectStrongmotion](docs/ObjectStrongmotion.md)

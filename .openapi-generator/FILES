@@ -94,6 +94,8 @@ docs/MagnitudeSchemaEwLogo.md
 docs/MagnitudeSchemaEwMessage.md
 docs/MetaDefinition.md
 docs/MetaDefinitionLinksInner.md
+docs/ObjectAmplitude.md
+docs/ObjectAmplitudeTypeAmplitude.md
 docs/ObjectArrival.md
 docs/ObjectEvent.md
 docs/ObjectFocalmechanism.md
@@ -115,11 +117,11 @@ docs/ObjectOriginFlag.md
 docs/ObjectOriginFlagPostOutput.md
 docs/ObjectOriginFlagPostOutputOriginFlagInner.md
 docs/ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.md
+docs/ObjectPick.md
 docs/ObjectPickEw.md
 docs/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.md
 docs/ObjectProvenance.md
 docs/ObjectStationmagnitude.md
-docs/ObjectStationmagnitudeTypeAmplitude.md
 docs/ObjectStatus.md
 docs/ObjectStatusDbHost.md
 docs/ObjectStrongmotion.md
@@ -278,6 +280,8 @@ src/main/java/org/ingv/dante/model/MagnitudeSchemaEwLogo.java
 src/main/java/org/ingv/dante/model/MagnitudeSchemaEwMessage.java
 src/main/java/org/ingv/dante/model/MetaDefinition.java
 src/main/java/org/ingv/dante/model/MetaDefinitionLinksInner.java
+src/main/java/org/ingv/dante/model/ObjectAmplitude.java
+src/main/java/org/ingv/dante/model/ObjectAmplitudeTypeAmplitude.java
 src/main/java/org/ingv/dante/model/ObjectArrival.java
 src/main/java/org/ingv/dante/model/ObjectEvent.java
 src/main/java/org/ingv/dante/model/ObjectFocalmechanism.java
@@ -299,11 +303,11 @@ src/main/java/org/ingv/dante/model/ObjectOriginFlag.java
 src/main/java/org/ingv/dante/model/ObjectOriginFlagPostOutput.java
 src/main/java/org/ingv/dante/model/ObjectOriginFlagPostOutputOriginFlagInner.java
 src/main/java/org/ingv/dante/model/ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.java
+src/main/java/org/ingv/dante/model/ObjectPick.java
 src/main/java/org/ingv/dante/model/ObjectPickEw.java
 src/main/java/org/ingv/dante/model/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.java
 src/main/java/org/ingv/dante/model/ObjectProvenance.java
 src/main/java/org/ingv/dante/model/ObjectStationmagnitude.java
-src/main/java/org/ingv/dante/model/ObjectStationmagnitudeTypeAmplitude.java
 src/main/java/org/ingv/dante/model/ObjectStatus.java
 src/main/java/org/ingv/dante/model/ObjectStatusDbHost.java
 src/main/java/org/ingv/dante/model/ObjectStrongmotion.java
@@ -432,6 +436,8 @@ src/test/java/org/ingv/dante/model/MagnitudeSchemaEwMessageTest.java
 src/test/java/org/ingv/dante/model/MagnitudeSchemaTest.java
 src/test/java/org/ingv/dante/model/MetaDefinitionLinksInnerTest.java
 src/test/java/org/ingv/dante/model/MetaDefinitionTest.java
+src/test/java/org/ingv/dante/model/ObjectAmplitudeTest.java
+src/test/java/org/ingv/dante/model/ObjectAmplitudeTypeAmplitudeTest.java
 src/test/java/org/ingv/dante/model/ObjectArrivalTest.java
 src/test/java/org/ingv/dante/model/ObjectEventTest.java
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputFocalmechanismsInnerTest.java
@@ -454,10 +460,10 @@ src/test/java/org/ingv/dante/model/ObjectOriginFlagTest.java
 src/test/java/org/ingv/dante/model/ObjectOriginForMagnitudesOriginsEventsAndEventsGroupTest.java
 src/test/java/org/ingv/dante/model/ObjectOriginTest.java
 src/test/java/org/ingv/dante/model/ObjectPickEwTest.java
+src/test/java/org/ingv/dante/model/ObjectPickTest.java
 src/test/java/org/ingv/dante/model/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroupTest.java
 src/test/java/org/ingv/dante/model/ObjectProvenanceTest.java
 src/test/java/org/ingv/dante/model/ObjectStationmagnitudeTest.java
-src/test/java/org/ingv/dante/model/ObjectStationmagnitudeTypeAmplitudeTest.java
 src/test/java/org/ingv/dante/model/ObjectStatusDbHostTest.java
 src/test/java/org/ingv/dante/model/ObjectStatusTest.java
 src/test/java/org/ingv/dante/model/ObjectStrongmotionAlternativeTest.java
