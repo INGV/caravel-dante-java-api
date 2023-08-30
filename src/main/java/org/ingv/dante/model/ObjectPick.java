@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectPick
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-30T14:11:14.318677Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-08-30T16:08:14.903970Z[Etc/UTC]")
 public class ObjectPick {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
