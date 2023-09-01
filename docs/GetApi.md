@@ -82,7 +82,7 @@ public class Example {
     OffsetDateTime originupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"origin.modified\" after; if \"eventupdatedafter\" and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\" is used.
     OffsetDateTime magnitudeupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\" and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is used.
     String updatedafteroperator = "and"; // String | Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\" and \"magnitudeupdatedafter\" are set.
-    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \"OR\".
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
@@ -142,7 +142,7 @@ public class Example {
 | **originupdatedafter** | **OffsetDateTime**| Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **magnitudeupdatedafter** | **OffsetDateTime**| Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **updatedafteroperator** | **String**| Set the \&quot;operator\&quot; to use when \&quot;eventupdatedafter\&quot;, \&quot;originupdatedafter\&quot; and \&quot;magnitudeupdatedafter\&quot; are set. | [optional] [default to or] [enum: and, or] |
-| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \&quot;OR\&quot;. | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -232,7 +232,7 @@ public class Example {
     OffsetDateTime originupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"origin.modified\" after; if \"eventupdatedafter\" and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\" is used.
     OffsetDateTime magnitudeupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\" and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is used.
     String updatedafteroperator = "and"; // String | Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\" and \"magnitudeupdatedafter\" are set.
-    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \"OR\".
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
@@ -297,7 +297,7 @@ public class Example {
 | **originupdatedafter** | **OffsetDateTime**| Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **magnitudeupdatedafter** | **OffsetDateTime**| Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **updatedafteroperator** | **String**| Set the \&quot;operator\&quot; to use when \&quot;eventupdatedafter\&quot;, \&quot;originupdatedafter\&quot; and \&quot;magnitudeupdatedafter\&quot; are set. | [optional] [default to or] [enum: and, or] |
-| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \&quot;OR\&quot;. | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -466,7 +466,7 @@ public class Example {
     OffsetDateTime originupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"origin.modified\" after; if \"eventupdatedafter\" and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\" is used.
     OffsetDateTime magnitudeupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\" and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is used.
     String updatedafteroperator = "and"; // String | Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\" and \"magnitudeupdatedafter\" are set.
-    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \"OR\".
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
@@ -526,7 +526,7 @@ public class Example {
 | **originupdatedafter** | **OffsetDateTime**| Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **magnitudeupdatedafter** | **OffsetDateTime**| Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **updatedafteroperator** | **String**| Set the \&quot;operator\&quot; to use when \&quot;eventupdatedafter\&quot;, \&quot;originupdatedafter\&quot; and \&quot;magnitudeupdatedafter\&quot; are set. | [optional] [default to or] [enum: and, or] |
-| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \&quot;OR\&quot;. | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -616,7 +616,7 @@ public class Example {
     OffsetDateTime originupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"origin.modified\" after; if \"eventupdatedafter\" and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\" is used.
     OffsetDateTime magnitudeupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\" and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is used.
     String updatedafteroperator = "and"; // String | Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\" and \"magnitudeupdatedafter\" are set.
-    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \"OR\".
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
@@ -676,7 +676,7 @@ public class Example {
 | **originupdatedafter** | **OffsetDateTime**| Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **magnitudeupdatedafter** | **OffsetDateTime**| Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **updatedafteroperator** | **String**| Set the \&quot;operator\&quot; to use when \&quot;eventupdatedafter\&quot;, \&quot;originupdatedafter\&quot; and \&quot;magnitudeupdatedafter\&quot; are set. | [optional] [default to or] [enum: and, or] |
-| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \&quot;OR\&quot;. | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -830,7 +830,7 @@ public class Example {
     OffsetDateTime originupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"origin.modified\" after; if \"eventupdatedafter\" and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\" is used.
     OffsetDateTime magnitudeupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\" and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is used.
     String updatedafteroperator = "and"; // String | Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\" and \"magnitudeupdatedafter\" are set.
-    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \"OR\".
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
@@ -890,7 +890,7 @@ public class Example {
 | **originupdatedafter** | **OffsetDateTime**| Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **magnitudeupdatedafter** | **OffsetDateTime**| Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **updatedafteroperator** | **String**| Set the \&quot;operator\&quot; to use when \&quot;eventupdatedafter\&quot;, \&quot;originupdatedafter\&quot; and \&quot;magnitudeupdatedafter\&quot; are set. | [optional] [default to or] [enum: and, or] |
-| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \&quot;OR\&quot;. | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
@@ -1198,7 +1198,7 @@ public class Example {
     OffsetDateTime originupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"origin.modified\" after; if \"eventupdatedafter\" and/or \"magnitudeupdatedafter\" are set, the \"updatedafteroperator\" is used.
     OffsetDateTime magnitudeupdatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"magnitude.modified\" after; if \"eventupdatedafter\" and/or \"originupdatedafter\" are set, the \"updatedafteroperator\" is used.
     String updatedafteroperator = "and"; // String | Set the \"operator\" to use when \"eventupdatedafter\", \"originupdatedafter\" and \"magnitudeupdatedafter\" are set.
-    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated value (i.e. DPC,twitter,shakemap4).
+    String whereflagsin = "whereflagsin_example"; // String | Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \"OR\".
     String orderby = "orderby_example"; // String | Select \"order by\"; multiple \"order\" contatenation available (i.e. event_id-desc,type_origin_version_value-asc)
     Long eventGroupId = 56L; // Long | Select events with same event_group_id.
     Long idLocalspace = 56L; // Long | Localspace Id.
@@ -1258,7 +1258,7 @@ public class Example {
 | **originupdatedafter** | **OffsetDateTime**| Limit data to \&quot;origin.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;magnitudeupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **magnitudeupdatedafter** | **OffsetDateTime**| Limit data to \&quot;magnitude.modified\&quot; after; if \&quot;eventupdatedafter\&quot; and/or \&quot;originupdatedafter\&quot; are set, the \&quot;updatedafteroperator\&quot; is used. | [optional] |
 | **updatedafteroperator** | **String**| Set the \&quot;operator\&quot; to use when \&quot;eventupdatedafter\&quot;, \&quot;originupdatedafter\&quot; and \&quot;magnitudeupdatedafter\&quot; are set. | [optional] [default to or] [enum: and, or] |
-| **whereflagsin** | **String**| Filter flags by comma separated value (i.e. DPC,twitter,shakemap4). | [optional] |
+| **whereflagsin** | **String**| Filter flags by comma separated values (i.e. DPC,twitter,shakemap4); values are in \&quot;OR\&quot;. | [optional] |
 | **orderby** | **String**| Select \&quot;order by\&quot;; multiple \&quot;order\&quot; contatenation available (i.e. event_id-desc,type_origin_version_value-asc) | [optional] |
 | **eventGroupId** | **Long**| Select events with same event_group_id. | [optional] |
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |

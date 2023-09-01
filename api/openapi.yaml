@@ -545,7 +545,8 @@ paths:
           - and
           - or
           type: string
-      - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+      - description: "Filter flags by comma separated values (i.e. DPC,twitter,shakemap4);\
+          \ values are in \"OR\"."
         in: query
         name: whereflagsin
         required: false
@@ -995,7 +996,8 @@ paths:
           - and
           - or
           type: string
-      - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+      - description: "Filter flags by comma separated values (i.e. DPC,twitter,shakemap4);\
+          \ values are in \"OR\"."
         in: query
         name: whereflagsin
         required: false
@@ -1444,7 +1446,8 @@ paths:
           - and
           - or
           type: string
-      - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+      - description: "Filter flags by comma separated values (i.e. DPC,twitter,shakemap4);\
+          \ values are in \"OR\"."
         in: query
         name: whereflagsin
         required: false
@@ -1892,7 +1895,8 @@ paths:
           - and
           - or
           type: string
-      - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+      - description: "Filter flags by comma separated values (i.e. DPC,twitter,shakemap4);\
+          \ values are in \"OR\"."
         in: query
         name: whereflagsin
         required: false
@@ -2340,7 +2344,8 @@ paths:
           - and
           - or
           type: string
-      - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+      - description: "Filter flags by comma separated values (i.e. DPC,twitter,shakemap4);\
+          \ values are in \"OR\"."
         in: query
         name: whereflagsin
         required: false
@@ -2788,7 +2793,8 @@ paths:
           - and
           - or
           type: string
-      - description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+      - description: "Filter flags by comma separated values (i.e. DPC,twitter,shakemap4);\
+          \ values are in \"OR\"."
         in: query
         name: whereflagsin
         required: false
@@ -6968,7 +6974,8 @@ components:
         - or
         type: string
     whereflagsin:
-      description: "Filter flags by comma separated value (i.e. DPC,twitter,shakemap4)."
+      description: "Filter flags by comma separated values (i.e. DPC,twitter,shakemap4);\
+        \ values are in \"OR\"."
       in: query
       name: whereflagsin
       required: false
