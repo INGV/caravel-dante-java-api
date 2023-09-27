@@ -8,8 +8,8 @@
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] [readonly] |
-|**epDistance** | **Float** | Distance from epicenter of the station expressed in Km | double |  [optional] |
-|**origDistance** | **Double** | Distance from origin of the station | double |  [optional] |
+|**epDistanceKm** | **Float** | Distance from epicenter of the station expressed in Km | double |  [optional] |
+|**origDistanceKm** | **Double** | Distance from origin of the station (km) | double |  [optional] |
 |**azimut** | **Float** | Station origin azimut | double |  [optional] |
 |**mag** | **Double** | Amplitude magnitude value | double |  |
 |**errMag** | **Double** | magnitude error | double |  [optional] |

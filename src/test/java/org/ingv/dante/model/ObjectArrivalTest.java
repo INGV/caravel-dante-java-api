@@ -89,11 +89,11 @@ public class ObjectArrivalTest {
     }
 
     /**
-     * Test the property 'origDistance'
+     * Test the property 'origDistanceKm'
      */
     @Test
-    public void origDistanceTest() {
-        // TODO: test origDistance
+    public void origDistanceKmTest() {
+        // TODO: test origDistanceKm
     }
 
     /**

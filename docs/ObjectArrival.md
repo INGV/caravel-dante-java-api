@@ -13,7 +13,7 @@
 |**iscCode** | **String** | ISC arrival code | varchar(8) |  |
 |**epDistanceKm** | **Float** | Distance from epicenter of the station expressed in Km | double |  [optional] |
 |**epDistanceDelta** | **Float** | Distance from epicenter of the station expressed in Degrees | double |  [optional] |
-|**origDistance** | **Double** | Distance from origin of the station | double |  [optional] |
+|**origDistanceKm** | **Double** | Distance from origin of the station (km) | double |  [optional] |
 |**azimut** | **Float** | Station origin azimut | double |  [optional] |
 |**takeOff** | **Float** | Take off angle | double |  [optional] |
 |**polarityIsUsed** | **Boolean** | 1 if it is used for polarity calculation | boolean |  [optional] |

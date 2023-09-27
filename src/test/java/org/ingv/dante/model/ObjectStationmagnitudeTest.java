@@ -49,19 +49,19 @@ public class ObjectStationmagnitudeTest {
     }
 
     /**
-     * Test the property 'epDistance'
+     * Test the property 'epDistanceKm'
      */
     @Test
-    public void epDistanceTest() {
-        // TODO: test epDistance
+    public void epDistanceKmTest() {
+        // TODO: test epDistanceKm
     }
 
     /**
-     * Test the property 'origDistance'
+     * Test the property 'origDistanceKm'
      */
     @Test
-    public void origDistanceTest() {
-        // TODO: test origDistance
+    public void origDistanceKmTest() {
+        // TODO: test origDistanceKm
     }
 
     /**

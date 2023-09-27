@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectArrival
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-20T16:40:04.026713Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-27T13:38:46.607539Z[Etc/UTC]")
 public class ObjectArrival {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -75,9 +75,9 @@ public class ObjectArrival {
   @SerializedName(SERIALIZED_NAME_EP_DISTANCE_DELTA)
   private Float epDistanceDelta;
 
-  public static final String SERIALIZED_NAME_ORIG_DISTANCE = "orig_distance";
-  @SerializedName(SERIALIZED_NAME_ORIG_DISTANCE)
-  private Double origDistance;
+  public static final String SERIALIZED_NAME_ORIG_DISTANCE_KM = "orig_distance_km";
+  @SerializedName(SERIALIZED_NAME_ORIG_DISTANCE_KM)
+  private Double origDistanceKm;
 
   public static final String SERIALIZED_NAME_AZIMUT = "azimut";
   @SerializedName(SERIALIZED_NAME_AZIMUT)
@@ -227,25 +227,25 @@ public class ObjectArrival {
   }
 
 
-  public ObjectArrival origDistance(Double origDistance) {
+  public ObjectArrival origDistanceKm(Double origDistanceKm) {
     
-    this.origDistance = origDistance;
+    this.origDistanceKm = origDistanceKm;
     return this;
   }
 
    /**
-   * Distance from origin of the station | double
-   * @return origDistance
+   * Distance from origin of the station (km) | double
+   * @return origDistanceKm
   **/
   @javax.annotation.Nullable
 
-  public Double getOrigDistance() {
-    return origDistance;
+  public Double getOrigDistanceKm() {
+    return origDistanceKm;
   }
 
 
-  public void setOrigDistance(Double origDistance) {
-    this.origDistance = origDistance;
+  public void setOrigDistanceKm(Double origDistanceKm) {
+    this.origDistanceKm = origDistanceKm;
   }
 
 
@@ -463,7 +463,7 @@ public class ObjectArrival {
         Objects.equals(this.iscCode, objectArrival.iscCode) &&
         Objects.equals(this.epDistanceKm, objectArrival.epDistanceKm) &&
         Objects.equals(this.epDistanceDelta, objectArrival.epDistanceDelta) &&
-        Objects.equals(this.origDistance, objectArrival.origDistance) &&
+        Objects.equals(this.origDistanceKm, objectArrival.origDistanceKm) &&
         Objects.equals(this.azimut, objectArrival.azimut) &&
         Objects.equals(this.takeOff, objectArrival.takeOff) &&
         Objects.equals(this.polarityIsUsed, objectArrival.polarityIsUsed) &&
@@ -480,7 +480,7 @@ public class ObjectArrival {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, iscCode, epDistanceKm, epDistanceDelta, origDistance, azimut, takeOff, polarityIsUsed, arrTimeIsUsed, residual, weight, pick, additionalProperties);
+    return Objects.hash(id, modified, inserted, iscCode, epDistanceKm, epDistanceDelta, origDistanceKm, azimut, takeOff, polarityIsUsed, arrTimeIsUsed, residual, weight, pick, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -500,7 +500,7 @@ public class ObjectArrival {
     sb.append("    iscCode: ").append(toIndentedString(iscCode)).append("\n");
     sb.append("    epDistanceKm: ").append(toIndentedString(epDistanceKm)).append("\n");
     sb.append("    epDistanceDelta: ").append(toIndentedString(epDistanceDelta)).append("\n");
-    sb.append("    origDistance: ").append(toIndentedString(origDistance)).append("\n");
+    sb.append("    origDistanceKm: ").append(toIndentedString(origDistanceKm)).append("\n");
     sb.append("    azimut: ").append(toIndentedString(azimut)).append("\n");
     sb.append("    takeOff: ").append(toIndentedString(takeOff)).append("\n");
     sb.append("    polarityIsUsed: ").append(toIndentedString(polarityIsUsed)).append("\n");
@@ -537,7 +537,7 @@ public class ObjectArrival {
     openapiFields.add("isc_code");
     openapiFields.add("ep_distance_km");
     openapiFields.add("ep_distance_delta");
-    openapiFields.add("orig_distance");
+    openapiFields.add("orig_distance_km");
     openapiFields.add("azimut");
     openapiFields.add("take_off");
     openapiFields.add("polarity_is_used");

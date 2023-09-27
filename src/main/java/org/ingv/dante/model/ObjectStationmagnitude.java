@@ -49,19 +49,19 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStationmagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-20T16:40:04.026713Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-27T13:38:46.607539Z[Etc/UTC]")
 public class ObjectStationmagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Long id;
 
-  public static final String SERIALIZED_NAME_EP_DISTANCE = "ep_distance";
-  @SerializedName(SERIALIZED_NAME_EP_DISTANCE)
-  private Float epDistance;
+  public static final String SERIALIZED_NAME_EP_DISTANCE_KM = "ep_distance_km";
+  @SerializedName(SERIALIZED_NAME_EP_DISTANCE_KM)
+  private Float epDistanceKm;
 
-  public static final String SERIALIZED_NAME_ORIG_DISTANCE = "orig_distance";
-  @SerializedName(SERIALIZED_NAME_ORIG_DISTANCE)
-  private Double origDistance;
+  public static final String SERIALIZED_NAME_ORIG_DISTANCE_KM = "orig_distance_km";
+  @SerializedName(SERIALIZED_NAME_ORIG_DISTANCE_KM)
+  private Double origDistanceKm;
 
   public static final String SERIALIZED_NAME_AZIMUT = "azimut";
   @SerializedName(SERIALIZED_NAME_AZIMUT)
@@ -131,47 +131,47 @@ public class ObjectStationmagnitude {
 
 
 
-  public ObjectStationmagnitude epDistance(Float epDistance) {
+  public ObjectStationmagnitude epDistanceKm(Float epDistanceKm) {
     
-    this.epDistance = epDistance;
+    this.epDistanceKm = epDistanceKm;
     return this;
   }
 
    /**
    * Distance from epicenter of the station expressed in Km | double
-   * @return epDistance
+   * @return epDistanceKm
   **/
   @javax.annotation.Nullable
 
-  public Float getEpDistance() {
-    return epDistance;
+  public Float getEpDistanceKm() {
+    return epDistanceKm;
   }
 
 
-  public void setEpDistance(Float epDistance) {
-    this.epDistance = epDistance;
+  public void setEpDistanceKm(Float epDistanceKm) {
+    this.epDistanceKm = epDistanceKm;
   }
 
 
-  public ObjectStationmagnitude origDistance(Double origDistance) {
+  public ObjectStationmagnitude origDistanceKm(Double origDistanceKm) {
     
-    this.origDistance = origDistance;
+    this.origDistanceKm = origDistanceKm;
     return this;
   }
 
    /**
-   * Distance from origin of the station | double
-   * @return origDistance
+   * Distance from origin of the station (km) | double
+   * @return origDistanceKm
   **/
   @javax.annotation.Nullable
 
-  public Double getOrigDistance() {
-    return origDistance;
+  public Double getOrigDistanceKm() {
+    return origDistanceKm;
   }
 
 
-  public void setOrigDistance(Double origDistance) {
-    this.origDistance = origDistance;
+  public void setOrigDistanceKm(Double origDistanceKm) {
+    this.origDistanceKm = origDistanceKm;
   }
 
 
@@ -432,8 +432,8 @@ public class ObjectStationmagnitude {
     }
     ObjectStationmagnitude objectStationmagnitude = (ObjectStationmagnitude) o;
     return Objects.equals(this.id, objectStationmagnitude.id) &&
-        Objects.equals(this.epDistance, objectStationmagnitude.epDistance) &&
-        Objects.equals(this.origDistance, objectStationmagnitude.origDistance) &&
+        Objects.equals(this.epDistanceKm, objectStationmagnitude.epDistanceKm) &&
+        Objects.equals(this.origDistanceKm, objectStationmagnitude.origDistanceKm) &&
         Objects.equals(this.azimut, objectStationmagnitude.azimut) &&
         Objects.equals(this.mag, objectStationmagnitude.mag) &&
         Objects.equals(this.errMag, objectStationmagnitude.errMag) &&
@@ -453,7 +453,7 @@ public class ObjectStationmagnitude {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, epDistance, origDistance, azimut, mag, errMag, weight, magCorrection, isUsed, typeMagnitude, modified, inserted, amplitude, additionalProperties);
+    return Objects.hash(id, epDistanceKm, origDistanceKm, azimut, mag, errMag, weight, magCorrection, isUsed, typeMagnitude, modified, inserted, amplitude, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -468,8 +468,8 @@ public class ObjectStationmagnitude {
     StringBuilder sb = new StringBuilder();
     sb.append("class ObjectStationmagnitude {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    epDistance: ").append(toIndentedString(epDistance)).append("\n");
-    sb.append("    origDistance: ").append(toIndentedString(origDistance)).append("\n");
+    sb.append("    epDistanceKm: ").append(toIndentedString(epDistanceKm)).append("\n");
+    sb.append("    origDistanceKm: ").append(toIndentedString(origDistanceKm)).append("\n");
     sb.append("    azimut: ").append(toIndentedString(azimut)).append("\n");
     sb.append("    mag: ").append(toIndentedString(mag)).append("\n");
     sb.append("    errMag: ").append(toIndentedString(errMag)).append("\n");
@@ -504,8 +504,8 @@ public class ObjectStationmagnitude {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
-    openapiFields.add("ep_distance");
-    openapiFields.add("orig_distance");
+    openapiFields.add("ep_distance_km");
+    openapiFields.add("orig_distance_km");
     openapiFields.add("azimut");
     openapiFields.add("mag");
     openapiFields.add("err_mag");
