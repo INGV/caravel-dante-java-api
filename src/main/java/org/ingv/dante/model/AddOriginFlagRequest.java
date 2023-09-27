@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * AddOriginFlagRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-27T14:13:31.071800Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-27T14:49:11.323698Z[Etc/UTC]")
 public class AddOriginFlagRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
