@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 2.97.0
+  version: 2.98.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -7856,8 +7856,8 @@ components:
               mag_correction: 0
               err_mag: 7.058770351582356
               weight: 0.88
-              orig_distance: 161
               is_used: false
+              orig_distance_km: 161
               azimut: 161
               mag: 3.04
               amplitude:
@@ -7897,15 +7897,15 @@ components:
                 revised: 0
                 cha: HHZ
               inserted: 2016-06-22T16:52:06.26Z
+              ep_distance_km: 223.3
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              ep_distance: 223.3
             - type_magnitude: ML-VAX
               mag_correction: 0
               err_mag: 7.058770351582356
               weight: 0.88
-              orig_distance: 161
               is_used: false
+              orig_distance_km: 161
               azimut: 161
               mag: 3.04
               amplitude:
@@ -7945,9 +7945,9 @@ components:
                 revised: 0
                 cha: HHZ
               inserted: 2016-06-22T16:52:06.26Z
+              ep_distance_km: 223.3
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              ep_distance: 223.3
             confidence_level: 68.3
             upper_uncertainty: 0.53
             mag_quality: BB
@@ -7985,8 +7985,8 @@ components:
               mag_correction: 0
               err_mag: 7.058770351582356
               weight: 0.88
-              orig_distance: 161
               is_used: false
+              orig_distance_km: 161
               azimut: 161
               mag: 3.04
               amplitude:
@@ -8026,15 +8026,15 @@ components:
                 revised: 0
                 cha: HHZ
               inserted: 2016-06-22T16:52:06.26Z
+              ep_distance_km: 223.3
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              ep_distance: 223.3
             - type_magnitude: ML-VAX
               mag_correction: 0
               err_mag: 7.058770351582356
               weight: 0.88
-              orig_distance: 161
               is_used: false
+              orig_distance_km: 161
               azimut: 161
               mag: 3.04
               amplitude:
@@ -8074,9 +8074,9 @@ components:
                 revised: 0
                 cha: HHZ
               inserted: 2016-06-22T16:52:06.26Z
+              ep_distance_km: 223.3
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              ep_distance: 223.3
             confidence_level: 68.3
             upper_uncertainty: 0.53
             mag_quality: BB
@@ -8133,7 +8133,7 @@ components:
             arr_time_is_used: false
             weight: 0.88
             residual: 6.19
-            orig_distance: 161
+            orig_distance_km: 161
             isc_code: S
             azimut: 161
             inserted: 2016-06-22T16:52:06.26Z
@@ -8181,7 +8181,7 @@ components:
             arr_time_is_used: false
             weight: 0.88
             residual: 6.19
-            orig_distance: 161
+            orig_distance_km: 161
             isc_code: S
             azimut: 161
             inserted: 2016-06-22T16:52:06.26Z
@@ -8459,8 +8459,8 @@ components:
               mag_correction: 0
               err_mag: 7.058770351582356
               weight: 0.88
-              orig_distance: 161
               is_used: false
+              orig_distance_km: 161
               azimut: 161
               mag: 3.04
               amplitude:
@@ -8500,15 +8500,15 @@ components:
                 revised: 0
                 cha: HHZ
               inserted: 2016-06-22T16:52:06.26Z
+              ep_distance_km: 223.3
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              ep_distance: 223.3
             - type_magnitude: ML-VAX
               mag_correction: 0
               err_mag: 7.058770351582356
               weight: 0.88
-              orig_distance: 161
               is_used: false
+              orig_distance_km: 161
               azimut: 161
               mag: 3.04
               amplitude:
@@ -8548,9 +8548,9 @@ components:
                 revised: 0
                 cha: HHZ
               inserted: 2016-06-22T16:52:06.26Z
+              ep_distance_km: 223.3
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              ep_distance: 223.3
             confidence_level: 68.3
             upper_uncertainty: 0.53
             mag_quality: BB
@@ -8588,8 +8588,8 @@ components:
               mag_correction: 0
               err_mag: 7.058770351582356
               weight: 0.88
-              orig_distance: 161
               is_used: false
+              orig_distance_km: 161
               azimut: 161
               mag: 3.04
               amplitude:
@@ -8629,15 +8629,15 @@ components:
                 revised: 0
                 cha: HHZ
               inserted: 2016-06-22T16:52:06.26Z
+              ep_distance_km: 223.3
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              ep_distance: 223.3
             - type_magnitude: ML-VAX
               mag_correction: 0
               err_mag: 7.058770351582356
               weight: 0.88
-              orig_distance: 161
               is_used: false
+              orig_distance_km: 161
               azimut: 161
               mag: 3.04
               amplitude:
@@ -8677,9 +8677,9 @@ components:
                 revised: 0
                 cha: HHZ
               inserted: 2016-06-22T16:52:06.26Z
+              ep_distance_km: 223.3
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
-              ep_distance: 223.3
             confidence_level: 68.3
             upper_uncertainty: 0.53
             mag_quality: BB
@@ -8736,7 +8736,7 @@ components:
             arr_time_is_used: false
             weight: 0.88
             residual: 6.19
-            orig_distance: 161
+            orig_distance_km: 161
             isc_code: S
             azimut: 161
             inserted: 2016-06-22T16:52:06.26Z
@@ -8784,7 +8784,7 @@ components:
             arr_time_is_used: false
             weight: 0.88
             residual: 6.19
-            orig_distance: 161
+            orig_distance_km: 161
             isc_code: S
             azimut: 161
             inserted: 2016-06-22T16:52:06.26Z
@@ -9159,8 +9159,8 @@ components:
             mag_correction: 0
             err_mag: 7.058770351582356
             weight: 0.88
-            orig_distance: 161
             is_used: false
+            orig_distance_km: 161
             azimut: 161
             mag: 3.04
             amplitude:
@@ -9200,15 +9200,15 @@ components:
               revised: 0
               cha: HHZ
             inserted: 2016-06-22T16:52:06.26Z
+            ep_distance_km: 223.3
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            ep_distance: 223.3
           - type_magnitude: ML-VAX
             mag_correction: 0
             err_mag: 7.058770351582356
             weight: 0.88
-            orig_distance: 161
             is_used: false
+            orig_distance_km: 161
             azimut: 161
             mag: 3.04
             amplitude:
@@ -9248,9 +9248,9 @@ components:
               revised: 0
               cha: HHZ
             inserted: 2016-06-22T16:52:06.26Z
+            ep_distance_km: 223.3
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            ep_distance: 223.3
           confidence_level: 68.3
           upper_uncertainty: 0.53
           mag_quality: BB
@@ -9288,8 +9288,8 @@ components:
             mag_correction: 0
             err_mag: 7.058770351582356
             weight: 0.88
-            orig_distance: 161
             is_used: false
+            orig_distance_km: 161
             azimut: 161
             mag: 3.04
             amplitude:
@@ -9329,15 +9329,15 @@ components:
               revised: 0
               cha: HHZ
             inserted: 2016-06-22T16:52:06.26Z
+            ep_distance_km: 223.3
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            ep_distance: 223.3
           - type_magnitude: ML-VAX
             mag_correction: 0
             err_mag: 7.058770351582356
             weight: 0.88
-            orig_distance: 161
             is_used: false
+            orig_distance_km: 161
             azimut: 161
             mag: 3.04
             amplitude:
@@ -9377,9 +9377,9 @@ components:
               revised: 0
               cha: HHZ
             inserted: 2016-06-22T16:52:06.26Z
+            ep_distance_km: 223.3
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
-            ep_distance: 223.3
           confidence_level: 68.3
           upper_uncertainty: 0.53
           mag_quality: BB
@@ -9436,7 +9436,7 @@ components:
           arr_time_is_used: false
           weight: 0.88
           residual: 6.19
-          orig_distance: 161
+          orig_distance_km: 161
           isc_code: S
           azimut: 161
           inserted: 2016-06-22T16:52:06.26Z
@@ -9484,7 +9484,7 @@ components:
           arr_time_is_used: false
           weight: 0.88
           residual: 6.19
-          orig_distance: 161
+          orig_distance_km: 161
           isc_code: S
           azimut: 161
           inserted: 2016-06-22T16:52:06.26Z
@@ -10218,8 +10218,8 @@ components:
           mag_correction: 0
           err_mag: 7.058770351582356
           weight: 0.88
-          orig_distance: 161
           is_used: false
+          orig_distance_km: 161
           azimut: 161
           mag: 3.04
           amplitude:
@@ -10259,15 +10259,15 @@ components:
             revised: 0
             cha: HHZ
           inserted: 2016-06-22T16:52:06.26Z
+          ep_distance_km: 223.3
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
-          ep_distance: 223.3
         - type_magnitude: ML-VAX
           mag_correction: 0
           err_mag: 7.058770351582356
           weight: 0.88
-          orig_distance: 161
           is_used: false
+          orig_distance_km: 161
           azimut: 161
           mag: 3.04
           amplitude:
@@ -10307,9 +10307,9 @@ components:
             revised: 0
             cha: HHZ
           inserted: 2016-06-22T16:52:06.26Z
+          ep_distance_km: 223.3
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
-          ep_distance: 223.3
         confidence_level: 68.3
         upper_uncertainty: 0.53
         mag_quality: BB
@@ -11154,8 +11154,8 @@ components:
         mag_correction: 0
         err_mag: 7.058770351582356
         weight: 0.88
-        orig_distance: 161
         is_used: false
+        orig_distance_km: 161
         azimut: 161
         mag: 3.04
         amplitude:
@@ -11195,9 +11195,9 @@ components:
           revised: 0
           cha: HHZ
         inserted: 2016-06-22T16:52:06.26Z
+        ep_distance_km: 223.3
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
-        ep_distance: 223.3
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -11205,13 +11205,13 @@ components:
           format: int64
           readOnly: true
           type: integer
-        ep_distance:
+        ep_distance_km:
           description: Distance from epicenter of the station expressed in Km | double
           example: 223.3
           format: float
           type: number
-        orig_distance:
-          description: Distance from origin of the station | double
+        orig_distance_km:
+          description: Distance from origin of the station (km) | double
           example: 161
           format: double
           nullable: true
@@ -11399,7 +11399,7 @@ components:
         arr_time_is_used: false
         weight: 0.88
         residual: 6.19
-        orig_distance: 161
+        orig_distance_km: 161
         isc_code: S
         azimut: 161
         inserted: 2016-06-22T16:52:06.26Z
@@ -11475,8 +11475,8 @@ components:
           example: 2
           format: float
           type: number
-        orig_distance:
-          description: Distance from origin of the station | double
+        orig_distance_km:
+          description: Distance from origin of the station (km) | double
           example: 161
           format: double
           nullable: true
@@ -12849,8 +12849,8 @@ components:
       example: other
       nullable: true
       type: string
-    arrival-stationmagnitude-st_dur_mag__orig_distance:
-      description: Distance from origin of the station | double
+    arrival-stationmagnitude-st_dur_mag__orig_distance_km:
+      description: Distance from origin of the station (km) | double
       example: 161
       format: double
       nullable: true
@@ -13451,8 +13451,8 @@ components:
                 mag_correction: 0
                 err_mag: 7.058770351582356
                 weight: 0.88
-                orig_distance: 161
                 is_used: false
+                orig_distance_km: 161
                 azimut: 161
                 mag: 3.04
                 amplitude:
@@ -13492,15 +13492,15 @@ components:
                   revised: 0
                   cha: HHZ
                 inserted: 2016-06-22T16:52:06.26Z
+                ep_distance_km: 223.3
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                ep_distance: 223.3
               - type_magnitude: ML-VAX
                 mag_correction: 0
                 err_mag: 7.058770351582356
                 weight: 0.88
-                orig_distance: 161
                 is_used: false
+                orig_distance_km: 161
                 azimut: 161
                 mag: 3.04
                 amplitude:
@@ -13540,9 +13540,9 @@ components:
                   revised: 0
                   cha: HHZ
                 inserted: 2016-06-22T16:52:06.26Z
+                ep_distance_km: 223.3
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                ep_distance: 223.3
               confidence_level: 68.3
               upper_uncertainty: 0.53
               mag_quality: BB
@@ -13580,8 +13580,8 @@ components:
                 mag_correction: 0
                 err_mag: 7.058770351582356
                 weight: 0.88
-                orig_distance: 161
                 is_used: false
+                orig_distance_km: 161
                 azimut: 161
                 mag: 3.04
                 amplitude:
@@ -13621,15 +13621,15 @@ components:
                   revised: 0
                   cha: HHZ
                 inserted: 2016-06-22T16:52:06.26Z
+                ep_distance_km: 223.3
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                ep_distance: 223.3
               - type_magnitude: ML-VAX
                 mag_correction: 0
                 err_mag: 7.058770351582356
                 weight: 0.88
-                orig_distance: 161
                 is_used: false
+                orig_distance_km: 161
                 azimut: 161
                 mag: 3.04
                 amplitude:
@@ -13669,9 +13669,9 @@ components:
                   revised: 0
                   cha: HHZ
                 inserted: 2016-06-22T16:52:06.26Z
+                ep_distance_km: 223.3
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                ep_distance: 223.3
               confidence_level: 68.3
               upper_uncertainty: 0.53
               mag_quality: BB
@@ -13728,7 +13728,7 @@ components:
               arr_time_is_used: false
               weight: 0.88
               residual: 6.19
-              orig_distance: 161
+              orig_distance_km: 161
               isc_code: S
               azimut: 161
               inserted: 2016-06-22T16:52:06.26Z
@@ -13776,7 +13776,7 @@ components:
               arr_time_is_used: false
               weight: 0.88
               residual: 6.19
-              orig_distance: 161
+              orig_distance_km: 161
               isc_code: S
               azimut: 161
               inserted: 2016-06-22T16:52:06.26Z
@@ -14054,8 +14054,8 @@ components:
                 mag_correction: 0
                 err_mag: 7.058770351582356
                 weight: 0.88
-                orig_distance: 161
                 is_used: false
+                orig_distance_km: 161
                 azimut: 161
                 mag: 3.04
                 amplitude:
@@ -14095,15 +14095,15 @@ components:
                   revised: 0
                   cha: HHZ
                 inserted: 2016-06-22T16:52:06.26Z
+                ep_distance_km: 223.3
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                ep_distance: 223.3
               - type_magnitude: ML-VAX
                 mag_correction: 0
                 err_mag: 7.058770351582356
                 weight: 0.88
-                orig_distance: 161
                 is_used: false
+                orig_distance_km: 161
                 azimut: 161
                 mag: 3.04
                 amplitude:
@@ -14143,9 +14143,9 @@ components:
                   revised: 0
                   cha: HHZ
                 inserted: 2016-06-22T16:52:06.26Z
+                ep_distance_km: 223.3
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                ep_distance: 223.3
               confidence_level: 68.3
               upper_uncertainty: 0.53
               mag_quality: BB
@@ -14183,8 +14183,8 @@ components:
                 mag_correction: 0
                 err_mag: 7.058770351582356
                 weight: 0.88
-                orig_distance: 161
                 is_used: false
+                orig_distance_km: 161
                 azimut: 161
                 mag: 3.04
                 amplitude:
@@ -14224,15 +14224,15 @@ components:
                   revised: 0
                   cha: HHZ
                 inserted: 2016-06-22T16:52:06.26Z
+                ep_distance_km: 223.3
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                ep_distance: 223.3
               - type_magnitude: ML-VAX
                 mag_correction: 0
                 err_mag: 7.058770351582356
                 weight: 0.88
-                orig_distance: 161
                 is_used: false
+                orig_distance_km: 161
                 azimut: 161
                 mag: 3.04
                 amplitude:
@@ -14272,9 +14272,9 @@ components:
                   revised: 0
                   cha: HHZ
                 inserted: 2016-06-22T16:52:06.26Z
+                ep_distance_km: 223.3
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
-                ep_distance: 223.3
               confidence_level: 68.3
               upper_uncertainty: 0.53
               mag_quality: BB
@@ -14331,7 +14331,7 @@ components:
               arr_time_is_used: false
               weight: 0.88
               residual: 6.19
-              orig_distance: 161
+              orig_distance_km: 161
               isc_code: S
               azimut: 161
               inserted: 2016-06-22T16:52:06.26Z
@@ -14379,7 +14379,7 @@ components:
               arr_time_is_used: false
               weight: 0.88
               residual: 6.19
-              orig_distance: 161
+              orig_distance_km: 161
               isc_code: S
               azimut: 161
               inserted: 2016-06-22T16:52:06.26Z
@@ -14776,8 +14776,8 @@ components:
                   mag_correction: 0
                   err_mag: 7.058770351582356
                   weight: 0.88
-                  orig_distance: 161
                   is_used: false
+                  orig_distance_km: 161
                   azimut: 161
                   mag: 3.04
                   amplitude:
@@ -14817,15 +14817,15 @@ components:
                     revised: 0
                     cha: HHZ
                   inserted: 2016-06-22T16:52:06.26Z
+                  ep_distance_km: 223.3
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
-                  ep_distance: 223.3
                 - type_magnitude: ML-VAX
                   mag_correction: 0
                   err_mag: 7.058770351582356
                   weight: 0.88
-                  orig_distance: 161
                   is_used: false
+                  orig_distance_km: 161
                   azimut: 161
                   mag: 3.04
                   amplitude:
@@ -14865,9 +14865,9 @@ components:
                     revised: 0
                     cha: HHZ
                   inserted: 2016-06-22T16:52:06.26Z
+                  ep_distance_km: 223.3
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
-                  ep_distance: 223.3
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
                 mag_quality: BB
@@ -14905,8 +14905,8 @@ components:
                   mag_correction: 0
                   err_mag: 7.058770351582356
                   weight: 0.88
-                  orig_distance: 161
                   is_used: false
+                  orig_distance_km: 161
                   azimut: 161
                   mag: 3.04
                   amplitude:
@@ -14946,15 +14946,15 @@ components:
                     revised: 0
                     cha: HHZ
                   inserted: 2016-06-22T16:52:06.26Z
+                  ep_distance_km: 223.3
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
-                  ep_distance: 223.3
                 - type_magnitude: ML-VAX
                   mag_correction: 0
                   err_mag: 7.058770351582356
                   weight: 0.88
-                  orig_distance: 161
                   is_used: false
+                  orig_distance_km: 161
                   azimut: 161
                   mag: 3.04
                   amplitude:
@@ -14994,9 +14994,9 @@ components:
                     revised: 0
                     cha: HHZ
                   inserted: 2016-06-22T16:52:06.26Z
+                  ep_distance_km: 223.3
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
-                  ep_distance: 223.3
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
                 mag_quality: BB
@@ -15053,7 +15053,7 @@ components:
                 arr_time_is_used: false
                 weight: 0.88
                 residual: 6.19
-                orig_distance: 161
+                orig_distance_km: 161
                 isc_code: S
                 azimut: 161
                 inserted: 2016-06-22T16:52:06.26Z
@@ -15101,7 +15101,7 @@ components:
                 arr_time_is_used: false
                 weight: 0.88
                 residual: 6.19
-                orig_distance: 161
+                orig_distance_km: 161
                 isc_code: S
                 azimut: 161
                 inserted: 2016-06-22T16:52:06.26Z
@@ -15379,8 +15379,8 @@ components:
                   mag_correction: 0
                   err_mag: 7.058770351582356
                   weight: 0.88
-                  orig_distance: 161
                   is_used: false
+                  orig_distance_km: 161
                   azimut: 161
                   mag: 3.04
                   amplitude:
@@ -15420,15 +15420,15 @@ components:
                     revised: 0
                     cha: HHZ
                   inserted: 2016-06-22T16:52:06.26Z
+                  ep_distance_km: 223.3
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
-                  ep_distance: 223.3
                 - type_magnitude: ML-VAX
                   mag_correction: 0
                   err_mag: 7.058770351582356
                   weight: 0.88
-                  orig_distance: 161
                   is_used: false
+                  orig_distance_km: 161
                   azimut: 161
                   mag: 3.04
                   amplitude:
@@ -15468,9 +15468,9 @@ components:
                     revised: 0
                     cha: HHZ
                   inserted: 2016-06-22T16:52:06.26Z
+                  ep_distance_km: 223.3
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
-                  ep_distance: 223.3
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
                 mag_quality: BB
@@ -15508,8 +15508,8 @@ components:
                   mag_correction: 0
                   err_mag: 7.058770351582356
                   weight: 0.88
-                  orig_distance: 161
                   is_used: false
+                  orig_distance_km: 161
                   azimut: 161
                   mag: 3.04
                   amplitude:
@@ -15549,15 +15549,15 @@ components:
                     revised: 0
                     cha: HHZ
                   inserted: 2016-06-22T16:52:06.26Z
+                  ep_distance_km: 223.3
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
-                  ep_distance: 223.3
                 - type_magnitude: ML-VAX
                   mag_correction: 0
                   err_mag: 7.058770351582356
                   weight: 0.88
-                  orig_distance: 161
                   is_used: false
+                  orig_distance_km: 161
                   azimut: 161
                   mag: 3.04
                   amplitude:
@@ -15597,9 +15597,9 @@ components:
                     revised: 0
                     cha: HHZ
                   inserted: 2016-06-22T16:52:06.26Z
+                  ep_distance_km: 223.3
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
-                  ep_distance: 223.3
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
                 mag_quality: BB
@@ -15656,7 +15656,7 @@ components:
                 arr_time_is_used: false
                 weight: 0.88
                 residual: 6.19
-                orig_distance: 161
+                orig_distance_km: 161
                 isc_code: S
                 azimut: 161
                 inserted: 2016-06-22T16:52:06.26Z
@@ -15704,7 +15704,7 @@ components:
                 arr_time_is_used: false
                 weight: 0.88
                 residual: 6.19
-                orig_distance: 161
+                orig_distance_km: 161
                 isc_code: S
                 azimut: 161
                 inserted: 2016-06-22T16:52:06.26Z
