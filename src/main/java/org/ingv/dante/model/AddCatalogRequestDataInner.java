@@ -47,7 +47,7 @@ import org.ingv.dante.JSON;
 /**
  * AddCatalogRequestDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-27T14:49:11.323698Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-28T11:11:22.590390Z[Etc/UTC]")
 public class AddCatalogRequestDataInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
