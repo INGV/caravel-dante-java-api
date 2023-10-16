@@ -589,6 +589,27 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: Select by event id.
+        in: query
+        name: eventid
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Select by origin id.
+        in: query
+        name: originid
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Select by magnitude id.
+        in: query
+        name: magnitudeid
+        required: false
+        schema:
+          format: int64
+          type: integer
       responses:
         "400":
           content:
@@ -1040,6 +1061,27 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: Select by event id.
+        in: query
+        name: eventid
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Select by origin id.
+        in: query
+        name: originid
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Select by magnitude id.
+        in: query
+        name: magnitudeid
+        required: false
+        schema:
+          format: int64
+          type: integer
       responses:
         "400":
           content:
@@ -1490,6 +1532,27 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: Select by event id.
+        in: query
+        name: eventid
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Select by origin id.
+        in: query
+        name: originid
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Select by magnitude id.
+        in: query
+        name: magnitudeid
+        required: false
+        schema:
+          format: int64
+          type: integer
       responses:
         "400":
           content:
@@ -1939,6 +2002,27 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: Select by event id.
+        in: query
+        name: eventid
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Select by origin id.
+        in: query
+        name: originid
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Select by magnitude id.
+        in: query
+        name: magnitudeid
+        required: false
+        schema:
+          format: int64
+          type: integer
       responses:
         "400":
           content:
@@ -2387,6 +2471,27 @@ paths:
         required: false
         schema:
           format: int32
+          type: integer
+      - description: Select by event id.
+        in: query
+        name: eventid
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Select by origin id.
+        in: query
+        name: originid
+        required: false
+        schema:
+          format: int64
+          type: integer
+      - description: Select by magnitude id.
+        in: query
+        name: magnitudeid
+        required: false
+        schema:
+          format: int64
           type: integer
       responses:
         "400":
@@ -10844,7 +10949,7 @@ components:
         rcmt:
           $ref: '#/components/schemas/ObjectMomenttensor_rcmt'
       required:
-      - version
+      - type_momenttensor
       type: object
     ObjectMomenttensorPostOutput:
       example:

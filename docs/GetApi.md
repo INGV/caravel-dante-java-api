@@ -25,7 +25,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a name="getAll"></a>
 # **getAll**
-> GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
 This API returns all origins with all magnitude; one per line.
 
@@ -88,8 +88,11 @@ public class Example {
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
+    Long eventid = 56L; // Long | Select by event id.
+    Long originid = 56L; // Long | Select by origin id.
+    Long magnitudeid = 56L; // Long | Select by magnitude id.
     try {
-      GetEventsGroup200Response result = apiInstance.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getAll");
@@ -148,6 +151,9 @@ public class Example {
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
 | **page** | **Integer**| Pagination. | [optional] |
+| **eventid** | **Long**| Select by event id. | [optional] |
+| **originid** | **Long**| Select by origin id. | [optional] |
+| **magnitudeid** | **Long**| Select by magnitude id. | [optional] |
 
 ### Return type
 
@@ -409,7 +415,7 @@ No authorization required
 
 <a name="getEvents"></a>
 # **getEvents**
-> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
 This API returns the preferred origin and the preferred magnitude from the same instance.
 
@@ -472,8 +478,11 @@ public class Example {
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
+    Long eventid = 56L; // Long | Select by event id.
+    Long originid = 56L; // Long | Select by origin id.
+    Long magnitudeid = 56L; // Long | Select by magnitude id.
     try {
-      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvents");
@@ -532,6 +541,9 @@ public class Example {
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
 | **page** | **Integer**| Pagination. | [optional] |
+| **eventid** | **Long**| Select by event id. | [optional] |
+| **originid** | **Long**| Select by origin id. | [optional] |
+| **magnitudeid** | **Long**| Select by magnitude id. | [optional] |
 
 ### Return type
 
@@ -559,7 +571,7 @@ No authorization required
 
 <a name="getEventsGroup"></a>
 # **getEventsGroup**
-> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -622,8 +634,11 @@ public class Example {
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
+    Long eventid = 56L; // Long | Select by event id.
+    Long originid = 56L; // Long | Select by origin id.
+    Long magnitudeid = 56L; // Long | Select by magnitude id.
     try {
-      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEventsGroup");
@@ -682,6 +697,9 @@ public class Example {
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
 | **page** | **Integer**| Pagination. | [optional] |
+| **eventid** | **Long**| Select by event id. | [optional] |
+| **originid** | **Long**| Select by origin id. | [optional] |
+| **magnitudeid** | **Long**| Select by magnitude id. | [optional] |
 
 ### Return type
 
@@ -773,7 +791,7 @@ No authorization required
 
 <a name="getMagnitudes"></a>
 # **getMagnitudes**
-> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
 This API returns all origins with own preferred magnitude.
 
@@ -836,8 +854,11 @@ public class Example {
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
+    Long eventid = 56L; // Long | Select by event id.
+    Long originid = 56L; // Long | Select by origin id.
+    Long magnitudeid = 56L; // Long | Select by magnitude id.
     try {
-      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getMagnitudes");
@@ -896,6 +917,9 @@ public class Example {
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
 | **page** | **Integer**| Pagination. | [optional] |
+| **eventid** | **Long**| Select by event id. | [optional] |
+| **originid** | **Long**| Select by origin id. | [optional] |
+| **magnitudeid** | **Long**| Select by magnitude id. | [optional] |
 
 ### Return type
 
@@ -1141,7 +1165,7 @@ No authorization required
 
 <a name="getOrigins"></a>
 # **getOrigins**
-> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page)
+> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
 This API returns all the preferred origins.
 
@@ -1204,8 +1228,11 @@ public class Example {
     Long idLocalspace = 56L; // Long | Localspace Id.
     Integer limit = 56; // Integer | Limit the results to the specified number of records.
     Integer page = 56; // Integer | Pagination.
+    Long eventid = 56L; // Long | Select by event id.
+    Long originid = 56L; // Long | Select by origin id.
+    Long magnitudeid = 56L; // Long | Select by magnitude id.
     try {
-      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page);
+      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOrigins");
@@ -1264,6 +1291,9 @@ public class Example {
 | **idLocalspace** | **Long**| Localspace Id. | [optional] |
 | **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
 | **page** | **Integer**| Pagination. | [optional] |
+| **eventid** | **Long**| Select by event id. | [optional] |
+| **originid** | **Long**| Select by origin id. | [optional] |
+| **magnitudeid** | **Long**| Select by magnitude id. | [optional] |
 
 ### Return type
 

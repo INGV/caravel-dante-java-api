@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-28T12:16:14.416385Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-16T07:38:15.166160Z[Etc/UTC]")
 public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -514,7 +514,7 @@ public class ObjectMomenttensor {
    * Type of Moment Tensor | varchar(50)
    * @return typeMomenttensor
   **/
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
 
   public String getTypeMomenttensor() {
     return typeMomenttensor;
@@ -783,6 +783,7 @@ public class ObjectMomenttensor {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("type_momenttensor");
   }
 
  /**
@@ -797,7 +798,14 @@ public class ObjectMomenttensor {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMomenttensor is not found in the empty JSON string", ObjectMomenttensor.openapiRequiredFields.toString()));
         }
       }
-      if ((jsonObj.get("type_momenttensor") != null && !jsonObj.get("type_momenttensor").isJsonNull()) && !jsonObj.get("type_momenttensor").isJsonPrimitive()) {
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ObjectMomenttensor.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      if (!jsonObj.get("type_momenttensor").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_momenttensor` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_momenttensor").toString()));
       }
       // validate the optional field `localspace`
