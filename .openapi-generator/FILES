@@ -60,6 +60,7 @@ docs/DeleteApi.md
 docs/EarthwormApiApi.md
 docs/Environment.md
 docs/GetApi.md
+docs/GetCatalog200Response.md
 docs/GetEvent200Response.md
 docs/GetEvent200ResponseData.md
 docs/GetEventsGroup200Response.md
@@ -102,6 +103,8 @@ docs/ObjectFocalmechanism.md
 docs/ObjectFocalmechanismPostOutput.md
 docs/ObjectFocalmechanismPostOutputFocalmechanismsInner.md
 docs/ObjectLocalspace.md
+docs/ObjectLocalspaceForVw.md
+docs/ObjectLocalspaceForVwWithDOI.md
 docs/ObjectMagnitude.md
 docs/ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.md
 docs/ObjectMagnitudePostOutput.md
@@ -134,9 +137,7 @@ docs/ObjectTableTypeEvent.md
 docs/ObjectTableTypeMagnitude.md
 docs/ObjectTableTypeOrigin.md
 docs/ObjectTypeOrigin.md
-docs/ObjectVwCatalogInner.md
-docs/ObjectVwCatalogInnerAllOf.md
-docs/ObjectVwCatalogInnerAllOfCatalog.md
+docs/ObjectVwEventCatalogInner.md
 docs/PickEmersio.md
 docs/PickFirstmotion.md
 docs/PickScnlSchema.md
@@ -246,6 +247,7 @@ src/main/java/org/ingv/dante/model/AddTypeEventRequest.java
 src/main/java/org/ingv/dante/model/AddTypeMagnitudeRequest.java
 src/main/java/org/ingv/dante/model/AddTypeOriginRequest.java
 src/main/java/org/ingv/dante/model/Environment.java
+src/main/java/org/ingv/dante/model/GetCatalog200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200ResponseData.java
 src/main/java/org/ingv/dante/model/GetEventsGroup200Response.java
@@ -288,6 +290,8 @@ src/main/java/org/ingv/dante/model/ObjectFocalmechanism.java
 src/main/java/org/ingv/dante/model/ObjectFocalmechanismPostOutput.java
 src/main/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputFocalmechanismsInner.java
 src/main/java/org/ingv/dante/model/ObjectLocalspace.java
+src/main/java/org/ingv/dante/model/ObjectLocalspaceForVw.java
+src/main/java/org/ingv/dante/model/ObjectLocalspaceForVwWithDOI.java
 src/main/java/org/ingv/dante/model/ObjectMagnitude.java
 src/main/java/org/ingv/dante/model/ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.java
 src/main/java/org/ingv/dante/model/ObjectMagnitudePostOutput.java
@@ -320,9 +324,7 @@ src/main/java/org/ingv/dante/model/ObjectTableTypeEvent.java
 src/main/java/org/ingv/dante/model/ObjectTableTypeMagnitude.java
 src/main/java/org/ingv/dante/model/ObjectTableTypeOrigin.java
 src/main/java/org/ingv/dante/model/ObjectTypeOrigin.java
-src/main/java/org/ingv/dante/model/ObjectVwCatalogInner.java
-src/main/java/org/ingv/dante/model/ObjectVwCatalogInnerAllOf.java
-src/main/java/org/ingv/dante/model/ObjectVwCatalogInnerAllOfCatalog.java
+src/main/java/org/ingv/dante/model/ObjectVwEventCatalogInner.java
 src/main/java/org/ingv/dante/model/PickEmersio.java
 src/main/java/org/ingv/dante/model/PickFirstmotion.java
 src/main/java/org/ingv/dante/model/PickScnlSchema.java
@@ -402,6 +404,7 @@ src/test/java/org/ingv/dante/model/AddTypeEventRequestTest.java
 src/test/java/org/ingv/dante/model/AddTypeMagnitudeRequestTest.java
 src/test/java/org/ingv/dante/model/AddTypeOriginRequestTest.java
 src/test/java/org/ingv/dante/model/EnvironmentTest.java
+src/test/java/org/ingv/dante/model/GetCatalog200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseDataTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEventsGroup200ResponseTest.java
@@ -443,6 +446,8 @@ src/test/java/org/ingv/dante/model/ObjectEventTest.java
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputFocalmechanismsInnerTest.java
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismPostOutputTest.java
 src/test/java/org/ingv/dante/model/ObjectFocalmechanismTest.java
+src/test/java/org/ingv/dante/model/ObjectLocalspaceForVwTest.java
+src/test/java/org/ingv/dante/model/ObjectLocalspaceForVwWithDOITest.java
 src/test/java/org/ingv/dante/model/ObjectLocalspaceTest.java
 src/test/java/org/ingv/dante/model/ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroupTest.java
 src/test/java/org/ingv/dante/model/ObjectMagnitudePostOutputTest.java
@@ -476,9 +481,7 @@ src/test/java/org/ingv/dante/model/ObjectTableTypeEventTest.java
 src/test/java/org/ingv/dante/model/ObjectTableTypeMagnitudeTest.java
 src/test/java/org/ingv/dante/model/ObjectTableTypeOriginTest.java
 src/test/java/org/ingv/dante/model/ObjectTypeOriginTest.java
-src/test/java/org/ingv/dante/model/ObjectVwCatalogInnerAllOfCatalogTest.java
-src/test/java/org/ingv/dante/model/ObjectVwCatalogInnerAllOfTest.java
-src/test/java/org/ingv/dante/model/ObjectVwCatalogInnerTest.java
+src/test/java/org/ingv/dante/model/ObjectVwEventCatalogInnerTest.java
 src/test/java/org/ingv/dante/model/PickEmersioTest.java
 src/test/java/org/ingv/dante/model/PickFirstmotionTest.java
 src/test/java/org/ingv/dante/model/PickScnlSchemaEwLogoTest.java

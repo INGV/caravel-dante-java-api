@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import org.ingv.dante.model.GetCatalog200Response;
 import org.ingv.dante.model.GetEvent200Response;
 import org.ingv.dante.model.GetEventsGroup200Response;
 import org.ingv.dante.model.GetLocalspace200Response;
@@ -632,7 +633,6 @@ public class GetApi {
      * @param originid Select by origin id. (optional)
      * @param magnitudeid Select by magnitude id. (optional)
      * @param doi Doi. (optional)
-     * @param wherenamelike Select data by \&quot;like\&quot; operator. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -648,7 +648,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCatalogCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi, String wherenamelike, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getCatalogCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -857,10 +857,6 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("doi", doi));
         }
 
-        if (wherenamelike != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherenamelike", wherenamelike));
-        }
-
         final String[] localVarAccepts = {
             "application/problem+json",
             "application/json"
@@ -882,14 +878,14 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getCatalogValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi, String wherenamelike, final ApiCallback _callback) throws ApiException {
-        return getCatalogCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, wherenamelike, _callback);
+    private okhttp3.Call getCatalogValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi, final ApiCallback _callback) throws ApiException {
+        return getCatalogCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, _callback);
 
     }
 
     /**
      * This API returns the catalogs.
-     * This API returns the catalogs.
+     * This API returns only the \&quot;catalogs\&quot;.   All &#x60;catalogs&#x60; are identified by &#x60;event.localspace.environment&#x3D;catalog&#x60; and the name of catalog is &#x60;event.localspace.name&#x60;.    To search a specific catalog, use &#x60;whereeventlocalspacenamein&#x60; parameter and/or &#x60;doi&#x60; paramenter.
      * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
@@ -936,8 +932,7 @@ public class GetApi {
      * @param originid Select by origin id. (optional)
      * @param magnitudeid Select by magnitude id. (optional)
      * @param doi Doi. (optional)
-     * @param wherenamelike Select data by \&quot;like\&quot; operator. (optional)
-     * @return GetEventsGroup200Response
+     * @return GetCatalog200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -951,14 +946,14 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEventsGroup200Response getCatalog(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi, String wherenamelike) throws ApiException {
-        ApiResponse<GetEventsGroup200Response> localVarResp = getCatalogWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, wherenamelike);
+    public GetCatalog200Response getCatalog(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi) throws ApiException {
+        ApiResponse<GetCatalog200Response> localVarResp = getCatalogWithHttpInfo(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi);
         return localVarResp.getData();
     }
 
     /**
      * This API returns the catalogs.
-     * This API returns the catalogs.
+     * This API returns only the \&quot;catalogs\&quot;.   All &#x60;catalogs&#x60; are identified by &#x60;event.localspace.environment&#x3D;catalog&#x60; and the name of catalog is &#x60;event.localspace.name&#x60;.    To search a specific catalog, use &#x60;whereeventlocalspacenamein&#x60; parameter and/or &#x60;doi&#x60; paramenter.
      * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
@@ -1005,8 +1000,7 @@ public class GetApi {
      * @param originid Select by origin id. (optional)
      * @param magnitudeid Select by magnitude id. (optional)
      * @param doi Doi. (optional)
-     * @param wherenamelike Select data by \&quot;like\&quot; operator. (optional)
-     * @return ApiResponse&lt;GetEventsGroup200Response&gt;
+     * @return ApiResponse&lt;GetCatalog200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1020,15 +1014,15 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEventsGroup200Response> getCatalogWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi, String wherenamelike) throws ApiException {
-        okhttp3.Call localVarCall = getCatalogValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, wherenamelike, null);
-        Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
+    public ApiResponse<GetCatalog200Response> getCatalogWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi) throws ApiException {
+        okhttp3.Call localVarCall = getCatalogValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, null);
+        Type localVarReturnType = new TypeToken<GetCatalog200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
      * This API returns the catalogs. (asynchronously)
-     * This API returns the catalogs.
+     * This API returns only the \&quot;catalogs\&quot;.   All &#x60;catalogs&#x60; are identified by &#x60;event.localspace.environment&#x3D;catalog&#x60; and the name of catalog is &#x60;event.localspace.name&#x60;.    To search a specific catalog, use &#x60;whereeventlocalspacenamein&#x60; parameter and/or &#x60;doi&#x60; paramenter.
      * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
      * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
@@ -1075,7 +1069,6 @@ public class GetApi {
      * @param originid Select by origin id. (optional)
      * @param magnitudeid Select by magnitude id. (optional)
      * @param doi Doi. (optional)
-     * @param wherenamelike Select data by \&quot;like\&quot; operator. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1091,10 +1084,10 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getCatalogAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi, String wherenamelike, final ApiCallback<GetEventsGroup200Response> _callback) throws ApiException {
+    public okhttp3.Call getCatalogAsync(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi, final ApiCallback<GetCatalog200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getCatalogValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, wherenamelike, _callback);
-        Type localVarReturnType = new TypeToken<GetEventsGroup200Response>(){}.getType();
+        okhttp3.Call localVarCall = getCatalogValidateBeforeCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, _callback);
+        Type localVarReturnType = new TypeToken<GetCatalog200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

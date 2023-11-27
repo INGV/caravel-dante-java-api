@@ -20,6 +20,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import org.ingv.dante.model.ObjectLocalspaceForVw;
 import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
 import org.ingv.dante.model.ObjectTypeOrigin;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -55,14 +56,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroupTest {
     @Test
     public void idLocalspaceTest() {
         // TODO: test idLocalspace
-    }
-
-    /**
-     * Test the property 'localspace'
-     */
-    @Test
-    public void localspaceTest() {
-        // TODO: test localspace
     }
 
     /**
@@ -207,6 +200,14 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroupTest {
     @Test
     public void typeOriginTest() {
         // TODO: test typeOrigin
+    }
+
+    /**
+     * Test the property 'localspace'
+     */
+    @Test
+    public void localspaceTest() {
+        // TODO: test localspace
     }
 
     /**

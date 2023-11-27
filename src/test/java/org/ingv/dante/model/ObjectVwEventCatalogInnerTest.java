@@ -20,35 +20,27 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import org.ingv.dante.model.ObjectLocalspaceForVwWithDOI;
 import org.ingv.dante.model.ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup;
 import org.ingv.dante.model.ObjectOriginForMagnitudesOriginsEventsAndEventsGroup;
 import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
-import org.ingv.dante.model.ObjectVwCatalogInnerAllOfCatalog;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectVwCatalogInner
+ * Model tests for ObjectVwEventCatalogInner
  */
-public class ObjectVwCatalogInnerTest {
-    private final ObjectVwCatalogInner model = new ObjectVwCatalogInner();
+public class ObjectVwEventCatalogInnerTest {
+    private final ObjectVwEventCatalogInner model = new ObjectVwEventCatalogInner();
 
     /**
-     * Model tests for ObjectVwCatalogInner
+     * Model tests for ObjectVwEventCatalogInner
      */
     @Test
-    public void testObjectVwCatalogInner() {
-        // TODO: test ObjectVwCatalogInner
-    }
-
-    /**
-     * Test the property 'catalog'
-     */
-    @Test
-    public void catalogTest() {
-        // TODO: test catalog
+    public void testObjectVwEventCatalogInner() {
+        // TODO: test ObjectVwEventCatalogInner
     }
 
     /**
@@ -65,14 +57,6 @@ public class ObjectVwCatalogInnerTest {
     @Test
     public void idLocalspaceTest() {
         // TODO: test idLocalspace
-    }
-
-    /**
-     * Test the property 'localspace'
-     */
-    @Test
-    public void localspaceTest() {
-        // TODO: test localspace
     }
 
     /**
@@ -172,6 +156,22 @@ public class ObjectVwCatalogInnerTest {
     }
 
     /**
+     * Test the property 'localspace'
+     */
+    @Test
+    public void localspaceTest() {
+        // TODO: test localspace
+    }
+
+    /**
+     * Test the property 'provenance'
+     */
+    @Test
+    public void provenanceTest() {
+        // TODO: test provenance
+    }
+
+    /**
      * Test the property 'origin'
      */
     @Test
@@ -185,14 +185,6 @@ public class ObjectVwCatalogInnerTest {
     @Test
     public void magnitudeTest() {
         // TODO: test magnitude
-    }
-
-    /**
-     * Test the property 'provenance'
-     */
-    @Test
-    public void provenanceTest() {
-        // TODO: test provenance
     }
 
 }

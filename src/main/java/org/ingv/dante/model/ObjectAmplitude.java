@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectAmplitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T15:17:27.435930Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T17:53:31.045500Z[Etc/UTC]")
 public class ObjectAmplitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

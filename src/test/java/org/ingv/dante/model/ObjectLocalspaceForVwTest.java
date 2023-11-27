@@ -19,31 +19,39 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import org.ingv.dante.model.ObjectVwCatalogInnerAllOfCatalog;
+import org.ingv.dante.model.Environment;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for ObjectVwCatalogInnerAllOf
+ * Model tests for ObjectLocalspaceForVw
  */
-public class ObjectVwCatalogInnerAllOfTest {
-    private final ObjectVwCatalogInnerAllOf model = new ObjectVwCatalogInnerAllOf();
+public class ObjectLocalspaceForVwTest {
+    private final ObjectLocalspaceForVw model = new ObjectLocalspaceForVw();
 
     /**
-     * Model tests for ObjectVwCatalogInnerAllOf
+     * Model tests for ObjectLocalspaceForVw
      */
     @Test
-    public void testObjectVwCatalogInnerAllOf() {
-        // TODO: test ObjectVwCatalogInnerAllOf
+    public void testObjectLocalspaceForVw() {
+        // TODO: test ObjectLocalspaceForVw
     }
 
     /**
-     * Test the property 'catalog'
+     * Test the property 'name'
      */
     @Test
-    public void catalogTest() {
-        // TODO: test catalog
+    public void nameTest() {
+        // TODO: test name
+    }
+
+    /**
+     * Test the property 'environment'
+     */
+    @Test
+    public void environmentTest() {
+        // TODO: test environment
     }
 
 }

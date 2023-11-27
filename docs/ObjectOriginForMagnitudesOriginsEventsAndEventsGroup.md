@@ -9,7 +9,6 @@
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] |
 |**idLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
-|**localspace** | **String** | Localspace name. i.e. hew1_mole, endeavour_mole | char(255) |  [optional] |
 |**ot** | **OffsetDateTime** | Origin time | datetime(3) |  [optional] |
 |**lat** | **Double** | Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  [optional] |
 |**lon** | **Double** | Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  [optional] |
@@ -28,6 +27,7 @@
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
 |**typeOrigin** | [**ObjectTypeOrigin**](ObjectTypeOrigin.md) |  |  [optional] |
+|**localspace** | [**ObjectLocalspaceForVw**](ObjectLocalspaceForVw.md) |  |  [optional] |
 |**provenance** | [**ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup**](ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.md) |  |  [optional] |
 
 

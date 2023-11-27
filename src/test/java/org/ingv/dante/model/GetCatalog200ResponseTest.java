@@ -21,23 +21,41 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.ingv.dante.model.LinksDefinition;
+import org.ingv.dante.model.MetaDefinition;
 import org.ingv.dante.model.ObjectVwEventCatalogInner;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 
 /**
- * Model tests for AddCatalog201Response
+ * Model tests for GetCatalog200Response
  */
-public class AddCatalog201ResponseTest {
-    private final AddCatalog201Response model = new AddCatalog201Response();
+public class GetCatalog200ResponseTest {
+    private final GetCatalog200Response model = new GetCatalog200Response();
 
     /**
-     * Model tests for AddCatalog201Response
+     * Model tests for GetCatalog200Response
      */
     @Test
-    public void testAddCatalog201Response() {
-        // TODO: test AddCatalog201Response
+    public void testGetCatalog200Response() {
+        // TODO: test GetCatalog200Response
+    }
+
+    /**
+     * Test the property 'links'
+     */
+    @Test
+    public void linksTest() {
+        // TODO: test links
+    }
+
+    /**
+     * Test the property 'meta'
+     */
+    @Test
+    public void metaTest() {
+        // TODO: test meta
     }
 
     /**

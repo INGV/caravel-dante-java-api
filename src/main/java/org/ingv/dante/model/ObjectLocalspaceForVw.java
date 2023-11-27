@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import org.ingv.dante.model.ObjectVwCatalogInnerAllOfCatalog;
+import org.ingv.dante.model.Environment;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -45,36 +45,62 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * ObjectVwCatalogInnerAllOf
+ * ObjectLocalspaceForVw
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T15:17:27.435930Z[Etc/UTC]")
-public class ObjectVwCatalogInnerAllOf {
-  public static final String SERIALIZED_NAME_CATALOG = "catalog";
-  @SerializedName(SERIALIZED_NAME_CATALOG)
-  private ObjectVwCatalogInnerAllOfCatalog catalog;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T17:53:31.045500Z[Etc/UTC]")
+public class ObjectLocalspaceForVw {
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
-  public ObjectVwCatalogInnerAllOf() {
+  public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
+  @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
+  private Environment environment = Environment.DEVELOPMENT;
+
+  public ObjectLocalspaceForVw() {
   }
 
-  public ObjectVwCatalogInnerAllOf catalog(ObjectVwCatalogInnerAllOfCatalog catalog) {
+  public ObjectLocalspaceForVw name(String name) {
     
-    this.catalog = catalog;
+    this.name = name;
     return this;
   }
 
    /**
-   * Get catalog
-   * @return catalog
+   * Localspace name. i.e. hew1_mole, endeavour_mole | char(255)
+   * @return name
   **/
   @javax.annotation.Nullable
 
-  public ObjectVwCatalogInnerAllOfCatalog getCatalog() {
-    return catalog;
+  public String getName() {
+    return name;
   }
 
 
-  public void setCatalog(ObjectVwCatalogInnerAllOfCatalog catalog) {
-    this.catalog = catalog;
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+  public ObjectLocalspaceForVw environment(Environment environment) {
+    
+    this.environment = environment;
+    return this;
+  }
+
+   /**
+   * Get environment
+   * @return environment
+  **/
+  @javax.annotation.Nullable
+
+  public Environment getEnvironment() {
+    return environment;
+  }
+
+
+  public void setEnvironment(Environment environment) {
+    this.environment = environment;
   }
 
   /**
@@ -90,9 +116,9 @@ public class ObjectVwCatalogInnerAllOf {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the ObjectVwCatalogInnerAllOf instance itself
+   * @return the ObjectLocalspaceForVw instance itself
    */
-  public ObjectVwCatalogInnerAllOf putAdditionalProperty(String key, Object value) {
+  public ObjectLocalspaceForVw putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -131,21 +157,23 @@ public class ObjectVwCatalogInnerAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectVwCatalogInnerAllOf objectVwCatalogInnerAllOf = (ObjectVwCatalogInnerAllOf) o;
-    return Objects.equals(this.catalog, objectVwCatalogInnerAllOf.catalog)&&
-        Objects.equals(this.additionalProperties, objectVwCatalogInnerAllOf.additionalProperties);
+    ObjectLocalspaceForVw objectLocalspaceForVw = (ObjectLocalspaceForVw) o;
+    return Objects.equals(this.name, objectLocalspaceForVw.name) &&
+        Objects.equals(this.environment, objectLocalspaceForVw.environment)&&
+        Objects.equals(this.additionalProperties, objectLocalspaceForVw.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(catalog, additionalProperties);
+    return Objects.hash(name, environment, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectVwCatalogInnerAllOf {\n");
-    sb.append("    catalog: ").append(toIndentedString(catalog)).append("\n");
+    sb.append("class ObjectLocalspaceForVw {\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    environment: ").append(toIndentedString(environment)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -169,27 +197,35 @@ public class ObjectVwCatalogInnerAllOf {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("catalog");
+    openapiFields.add("name");
+    openapiFields.add("environment");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("name");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectVwCatalogInnerAllOf
+  * @throws IOException if the JSON Object is invalid with respect to ObjectLocalspaceForVw
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (!ObjectVwCatalogInnerAllOf.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectVwCatalogInnerAllOf is not found in the empty JSON string", ObjectVwCatalogInnerAllOf.openapiRequiredFields.toString()));
+        if (!ObjectLocalspaceForVw.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectLocalspaceForVw is not found in the empty JSON string", ObjectLocalspaceForVw.openapiRequiredFields.toString()));
         }
       }
-      // validate the optional field `catalog`
-      if (jsonObj.get("catalog") != null && !jsonObj.get("catalog").isJsonNull()) {
-        ObjectVwCatalogInnerAllOfCatalog.validateJsonObject(jsonObj.getAsJsonObject("catalog"));
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ObjectLocalspaceForVw.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+      if (!jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
   }
 
@@ -197,16 +233,16 @@ public class ObjectVwCatalogInnerAllOf {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectVwCatalogInnerAllOf.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectVwCatalogInnerAllOf' and its subtypes
+       if (!ObjectLocalspaceForVw.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectLocalspaceForVw' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectVwCatalogInnerAllOf> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectVwCatalogInnerAllOf.class));
+       final TypeAdapter<ObjectLocalspaceForVw> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectLocalspaceForVw.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectVwCatalogInnerAllOf>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectLocalspaceForVw>() {
            @Override
-           public void write(JsonWriter out, ObjectVwCatalogInnerAllOf value) throws IOException {
+           public void write(JsonWriter out, ObjectLocalspaceForVw value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -229,11 +265,11 @@ public class ObjectVwCatalogInnerAllOf {
            }
 
            @Override
-           public ObjectVwCatalogInnerAllOf read(JsonReader in) throws IOException {
+           public ObjectLocalspaceForVw read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             ObjectVwCatalogInnerAllOf instance = thisAdapter.fromJsonTree(jsonObj);
+             ObjectLocalspaceForVw instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -260,18 +296,18 @@ public class ObjectVwCatalogInnerAllOf {
   }
 
  /**
-  * Create an instance of ObjectVwCatalogInnerAllOf given an JSON string
+  * Create an instance of ObjectLocalspaceForVw given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectVwCatalogInnerAllOf
-  * @throws IOException if the JSON string is invalid with respect to ObjectVwCatalogInnerAllOf
+  * @return An instance of ObjectLocalspaceForVw
+  * @throws IOException if the JSON string is invalid with respect to ObjectLocalspaceForVw
   */
-  public static ObjectVwCatalogInnerAllOf fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectVwCatalogInnerAllOf.class);
+  public static ObjectLocalspaceForVw fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectLocalspaceForVw.class);
   }
 
  /**
-  * Convert an instance of ObjectVwCatalogInnerAllOf to an JSON string
+  * Convert an instance of ObjectLocalspaceForVw to an JSON string
   *
   * @return JSON string
   */

@@ -21,11 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import org.ingv.dante.model.LinksDefinition;
-import org.ingv.dante.model.MetaDefinition;
-import org.ingv.dante.model.ObjectMagnitudesOriginsEventsAndEventsGroup;
+import org.ingv.dante.model.Environment;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -49,96 +45,88 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * GetEventsGroup200Response
+ * ObjectLocalspaceForVwWithDOI
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T17:53:31.045500Z[Etc/UTC]")
-public class GetEventsGroup200Response {
-  public static final String SERIALIZED_NAME_LINKS = "links";
-  @SerializedName(SERIALIZED_NAME_LINKS)
-  private LinksDefinition links;
+public class ObjectLocalspaceForVwWithDOI {
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
-  public static final String SERIALIZED_NAME_META = "meta";
-  @SerializedName(SERIALIZED_NAME_META)
-  private MetaDefinition meta;
+  public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
+  @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
+  private Environment environment = Environment.DEVELOPMENT;
 
-  public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
-  private List<ObjectMagnitudesOriginsEventsAndEventsGroup> data = new ArrayList<>();
+  public static final String SERIALIZED_NAME_DOI = "doi";
+  @SerializedName(SERIALIZED_NAME_DOI)
+  private String doi;
 
-  public GetEventsGroup200Response() {
+  public ObjectLocalspaceForVwWithDOI() {
   }
 
-  public GetEventsGroup200Response links(LinksDefinition links) {
+  public ObjectLocalspaceForVwWithDOI name(String name) {
     
-    this.links = links;
+    this.name = name;
     return this;
   }
 
    /**
-   * Get links
-   * @return links
+   * Localspace name. i.e. hew1_mole, endeavour_mole | char(255)
+   * @return name
   **/
   @javax.annotation.Nullable
 
-  public LinksDefinition getLinks() {
-    return links;
+  public String getName() {
+    return name;
   }
 
 
-  public void setLinks(LinksDefinition links) {
-    this.links = links;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
-  public GetEventsGroup200Response meta(MetaDefinition meta) {
+  public ObjectLocalspaceForVwWithDOI environment(Environment environment) {
     
-    this.meta = meta;
+    this.environment = environment;
     return this;
   }
 
    /**
-   * Get meta
-   * @return meta
+   * Get environment
+   * @return environment
   **/
   @javax.annotation.Nullable
 
-  public MetaDefinition getMeta() {
-    return meta;
+  public Environment getEnvironment() {
+    return environment;
   }
 
 
-  public void setMeta(MetaDefinition meta) {
-    this.meta = meta;
+  public void setEnvironment(Environment environment) {
+    this.environment = environment;
   }
 
 
-  public GetEventsGroup200Response data(List<ObjectMagnitudesOriginsEventsAndEventsGroup> data) {
+  public ObjectLocalspaceForVwWithDOI doi(String doi) {
     
-    this.data = data;
-    return this;
-  }
-
-  public GetEventsGroup200Response addDataItem(ObjectMagnitudesOriginsEventsAndEventsGroup dataItem) {
-    if (this.data == null) {
-      this.data = new ArrayList<>();
-    }
-    this.data.add(dataItem);
+    this.doi = doi;
     return this;
   }
 
    /**
-   * Get data
-   * @return data
+   * DOI Resource. i.e. 10.13127/TDMT | varchar(255)
+   * @return doi
   **/
   @javax.annotation.Nullable
 
-  public List<ObjectMagnitudesOriginsEventsAndEventsGroup> getData() {
-    return data;
+  public String getDoi() {
+    return doi;
   }
 
 
-  public void setData(List<ObjectMagnitudesOriginsEventsAndEventsGroup> data) {
-    this.data = data;
+  public void setDoi(String doi) {
+    this.doi = doi;
   }
 
   /**
@@ -154,9 +142,9 @@ public class GetEventsGroup200Response {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the GetEventsGroup200Response instance itself
+   * @return the ObjectLocalspaceForVwWithDOI instance itself
    */
-  public GetEventsGroup200Response putAdditionalProperty(String key, Object value) {
+  public ObjectLocalspaceForVwWithDOI putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -195,25 +183,25 @@ public class GetEventsGroup200Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    GetEventsGroup200Response getEventsGroup200Response = (GetEventsGroup200Response) o;
-    return Objects.equals(this.links, getEventsGroup200Response.links) &&
-        Objects.equals(this.meta, getEventsGroup200Response.meta) &&
-        Objects.equals(this.data, getEventsGroup200Response.data)&&
-        Objects.equals(this.additionalProperties, getEventsGroup200Response.additionalProperties);
+    ObjectLocalspaceForVwWithDOI objectLocalspaceForVwWithDOI = (ObjectLocalspaceForVwWithDOI) o;
+    return Objects.equals(this.name, objectLocalspaceForVwWithDOI.name) &&
+        Objects.equals(this.environment, objectLocalspaceForVwWithDOI.environment) &&
+        Objects.equals(this.doi, objectLocalspaceForVwWithDOI.doi)&&
+        Objects.equals(this.additionalProperties, objectLocalspaceForVwWithDOI.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(links, meta, data, additionalProperties);
+    return Objects.hash(name, environment, doi, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class GetEventsGroup200Response {\n");
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
-    sb.append("    meta: ").append(toIndentedString(meta)).append("\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("class ObjectLocalspaceForVwWithDOI {\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    environment: ").append(toIndentedString(environment)).append("\n");
+    sb.append("    doi: ").append(toIndentedString(doi)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -237,47 +225,39 @@ public class GetEventsGroup200Response {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("links");
-    openapiFields.add("meta");
-    openapiFields.add("data");
+    openapiFields.add("name");
+    openapiFields.add("environment");
+    openapiFields.add("doi");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("name");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to GetEventsGroup200Response
+  * @throws IOException if the JSON Object is invalid with respect to ObjectLocalspaceForVwWithDOI
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (!GetEventsGroup200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in GetEventsGroup200Response is not found in the empty JSON string", GetEventsGroup200Response.openapiRequiredFields.toString()));
+        if (!ObjectLocalspaceForVwWithDOI.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectLocalspaceForVwWithDOI is not found in the empty JSON string", ObjectLocalspaceForVwWithDOI.openapiRequiredFields.toString()));
         }
       }
-      // validate the optional field `links`
-      if (jsonObj.get("links") != null && !jsonObj.get("links").isJsonNull()) {
-        LinksDefinition.validateJsonObject(jsonObj.getAsJsonObject("links"));
-      }
-      // validate the optional field `meta`
-      if (jsonObj.get("meta") != null && !jsonObj.get("meta").isJsonNull()) {
-        MetaDefinition.validateJsonObject(jsonObj.getAsJsonObject("meta"));
-      }
-      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
-        if (jsonArraydata != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
-          }
 
-          // validate the optional field `data` (array)
-          for (int i = 0; i < jsonArraydata.size(); i++) {
-            ObjectMagnitudesOriginsEventsAndEventsGroup.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
-          };
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ObjectLocalspaceForVwWithDOI.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      if (!jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      if ((jsonObj.get("doi") != null && !jsonObj.get("doi").isJsonNull()) && !jsonObj.get("doi").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `doi` to be a primitive type in the JSON string but got `%s`", jsonObj.get("doi").toString()));
       }
   }
 
@@ -285,16 +265,16 @@ public class GetEventsGroup200Response {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!GetEventsGroup200Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'GetEventsGroup200Response' and its subtypes
+       if (!ObjectLocalspaceForVwWithDOI.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectLocalspaceForVwWithDOI' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<GetEventsGroup200Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(GetEventsGroup200Response.class));
+       final TypeAdapter<ObjectLocalspaceForVwWithDOI> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectLocalspaceForVwWithDOI.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<GetEventsGroup200Response>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectLocalspaceForVwWithDOI>() {
            @Override
-           public void write(JsonWriter out, GetEventsGroup200Response value) throws IOException {
+           public void write(JsonWriter out, ObjectLocalspaceForVwWithDOI value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -317,11 +297,11 @@ public class GetEventsGroup200Response {
            }
 
            @Override
-           public GetEventsGroup200Response read(JsonReader in) throws IOException {
+           public ObjectLocalspaceForVwWithDOI read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             GetEventsGroup200Response instance = thisAdapter.fromJsonTree(jsonObj);
+             ObjectLocalspaceForVwWithDOI instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -348,18 +328,18 @@ public class GetEventsGroup200Response {
   }
 
  /**
-  * Create an instance of GetEventsGroup200Response given an JSON string
+  * Create an instance of ObjectLocalspaceForVwWithDOI given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of GetEventsGroup200Response
-  * @throws IOException if the JSON string is invalid with respect to GetEventsGroup200Response
+  * @return An instance of ObjectLocalspaceForVwWithDOI
+  * @throws IOException if the JSON string is invalid with respect to ObjectLocalspaceForVwWithDOI
   */
-  public static GetEventsGroup200Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, GetEventsGroup200Response.class);
+  public static ObjectLocalspaceForVwWithDOI fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectLocalspaceForVwWithDOI.class);
   }
 
  /**
-  * Convert an instance of GetEventsGroup200Response to an JSON string
+  * Convert an instance of ObjectLocalspaceForVwWithDOI to an JSON string
   *
   * @return JSON string
   */

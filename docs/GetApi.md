@@ -181,11 +181,11 @@ No authorization required
 
 <a name="getCatalog"></a>
 # **getCatalog**
-> GetEventsGroup200Response getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, wherenamelike)
+> GetCatalog200Response getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi)
 
 This API returns the catalogs.
 
-This API returns the catalogs.
+This API returns only the \&quot;catalogs\&quot;.   All &#x60;catalogs&#x60; are identified by &#x60;event.localspace.environment&#x3D;catalog&#x60; and the name of catalog is &#x60;event.localspace.name&#x60;.    To search a specific catalog, use &#x60;whereeventlocalspacenamein&#x60; parameter and/or &#x60;doi&#x60; paramenter.
 
 ### Example
 ```java
@@ -248,9 +248,8 @@ public class Example {
     Long originid = 56L; // Long | Select by origin id.
     Long magnitudeid = 56L; // Long | Select by magnitude id.
     String doi = "doi_example"; // String | Doi.
-    String wherenamelike = "wherenamelike_example"; // String | Select data by \"like\" operator.
     try {
-      GetEventsGroup200Response result = apiInstance.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, wherenamelike);
+      GetCatalog200Response result = apiInstance.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getCatalog");
@@ -313,11 +312,10 @@ public class Example {
 | **originid** | **Long**| Select by origin id. | [optional] |
 | **magnitudeid** | **Long**| Select by magnitude id. | [optional] |
 | **doi** | **String**| Doi. | [optional] |
-| **wherenamelike** | **String**| Select data by \&quot;like\&quot; operator. | [optional] |
 
 ### Return type
 
-[**GetEventsGroup200Response**](GetEventsGroup200Response.md)
+[**GetCatalog200Response**](GetCatalog200Response.md)
 
 ### Authorization
 

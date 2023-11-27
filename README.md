@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 3.1.0-dev
-  - Build date: 2023-10-27T15:17:27.435930Z[Etc/UTC]
+  - Build date: 2023-11-27T17:53:31.045500Z[Etc/UTC]
 
   
 
@@ -244,6 +244,7 @@ Class | Method | HTTP request | Description
  - [AddTypeMagnitudeRequest](docs/AddTypeMagnitudeRequest.md)
  - [AddTypeOriginRequest](docs/AddTypeOriginRequest.md)
  - [Environment](docs/Environment.md)
+ - [GetCatalog200Response](docs/GetCatalog200Response.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)
  - [GetEvent200ResponseData](docs/GetEvent200ResponseData.md)
  - [GetEventsGroup200Response](docs/GetEventsGroup200Response.md)
@@ -286,6 +287,8 @@ Class | Method | HTTP request | Description
  - [ObjectFocalmechanismPostOutput](docs/ObjectFocalmechanismPostOutput.md)
  - [ObjectFocalmechanismPostOutputFocalmechanismsInner](docs/ObjectFocalmechanismPostOutputFocalmechanismsInner.md)
  - [ObjectLocalspace](docs/ObjectLocalspace.md)
+ - [ObjectLocalspaceForVw](docs/ObjectLocalspaceForVw.md)
+ - [ObjectLocalspaceForVwWithDOI](docs/ObjectLocalspaceForVwWithDOI.md)
  - [ObjectMagnitude](docs/ObjectMagnitude.md)
  - [ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup](docs/ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectMagnitudePostOutput](docs/ObjectMagnitudePostOutput.md)
@@ -318,9 +321,7 @@ Class | Method | HTTP request | Description
  - [ObjectTableTypeMagnitude](docs/ObjectTableTypeMagnitude.md)
  - [ObjectTableTypeOrigin](docs/ObjectTableTypeOrigin.md)
  - [ObjectTypeOrigin](docs/ObjectTypeOrigin.md)
- - [ObjectVwCatalogInner](docs/ObjectVwCatalogInner.md)
- - [ObjectVwCatalogInnerAllOf](docs/ObjectVwCatalogInnerAllOf.md)
- - [ObjectVwCatalogInnerAllOfCatalog](docs/ObjectVwCatalogInnerAllOfCatalog.md)
+ - [ObjectVwEventCatalogInner](docs/ObjectVwEventCatalogInner.md)
  - [PickEmersio](docs/PickEmersio.md)
  - [PickFirstmotion](docs/PickFirstmotion.md)
  - [PickScnlSchema](docs/PickScnlSchema.md)

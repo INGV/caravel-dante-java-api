@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import org.ingv.dante.model.ObjectLocalspaceForVw;
 import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
 import org.ingv.dante.model.ObjectTypeOrigin;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -50,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T15:17:27.435930Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T17:53:31.045500Z[Etc/UTC]")
 public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -59,10 +60,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
   private Long idLocalspace;
-
-  public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
-  @SerializedName(SERIALIZED_NAME_LOCALSPACE)
-  private String localspace;
 
   public static final String SERIALIZED_NAME_OT = "ot";
   @SerializedName(SERIALIZED_NAME_OT)
@@ -136,6 +133,10 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   @SerializedName(SERIALIZED_NAME_TYPE_ORIGIN)
   private ObjectTypeOrigin typeOrigin;
 
+  public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
+  @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  private ObjectLocalspaceForVw localspace;
+
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
   private ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance;
@@ -194,28 +195,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
-  }
-
-
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup localspace(String localspace) {
-    
-    this.localspace = localspace;
-    return this;
-  }
-
-   /**
-   * Localspace name. i.e. hew1_mole, endeavour_mole | char(255)
-   * @return localspace
-  **/
-  @javax.annotation.Nullable
-
-  public String getLocalspace() {
-    return localspace;
-  }
-
-
-  public void setLocalspace(String localspace) {
-    this.localspace = localspace;
   }
 
 
@@ -601,6 +580,28 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   }
 
 
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup localspace(ObjectLocalspaceForVw localspace) {
+    
+    this.localspace = localspace;
+    return this;
+  }
+
+   /**
+   * Get localspace
+   * @return localspace
+  **/
+  @javax.annotation.Nullable
+
+  public ObjectLocalspaceForVw getLocalspace() {
+    return localspace;
+  }
+
+
+  public void setLocalspace(ObjectLocalspaceForVw localspace) {
+    this.localspace = localspace;
+  }
+
+
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup provenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     
     this.provenance = provenance;
@@ -679,7 +680,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     ObjectOriginForMagnitudesOriginsEventsAndEventsGroup objectOriginForMagnitudesOriginsEventsAndEventsGroup = (ObjectOriginForMagnitudesOriginsEventsAndEventsGroup) o;
     return Objects.equals(this.id, objectOriginForMagnitudesOriginsEventsAndEventsGroup.id) &&
         Objects.equals(this.idLocalspace, objectOriginForMagnitudesOriginsEventsAndEventsGroup.idLocalspace) &&
-        Objects.equals(this.localspace, objectOriginForMagnitudesOriginsEventsAndEventsGroup.localspace) &&
         Objects.equals(this.ot, objectOriginForMagnitudesOriginsEventsAndEventsGroup.ot) &&
         Objects.equals(this.lat, objectOriginForMagnitudesOriginsEventsAndEventsGroup.lat) &&
         Objects.equals(this.lon, objectOriginForMagnitudesOriginsEventsAndEventsGroup.lon) &&
@@ -698,6 +698,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
         Objects.equals(this.modified, objectOriginForMagnitudesOriginsEventsAndEventsGroup.modified) &&
         Objects.equals(this.inserted, objectOriginForMagnitudesOriginsEventsAndEventsGroup.inserted) &&
         Objects.equals(this.typeOrigin, objectOriginForMagnitudesOriginsEventsAndEventsGroup.typeOrigin) &&
+        Objects.equals(this.localspace, objectOriginForMagnitudesOriginsEventsAndEventsGroup.localspace) &&
         Objects.equals(this.provenance, objectOriginForMagnitudesOriginsEventsAndEventsGroup.provenance)&&
         Objects.equals(this.additionalProperties, objectOriginForMagnitudesOriginsEventsAndEventsGroup.additionalProperties);
   }
@@ -708,7 +709,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idLocalspace, localspace, ot, lat, lon, depth, errOt, errH, errZ, errLat, errLon, quality, associatedPhaseCount, associatedStationCount, usedPhaseCount, usedStationCount, region, modified, inserted, typeOrigin, provenance, additionalProperties);
+    return Objects.hash(id, idLocalspace, ot, lat, lon, depth, errOt, errH, errZ, errLat, errLon, quality, associatedPhaseCount, associatedStationCount, usedPhaseCount, usedStationCount, region, modified, inserted, typeOrigin, localspace, provenance, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -724,7 +725,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     sb.append("class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idLocalspace: ").append(toIndentedString(idLocalspace)).append("\n");
-    sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    ot: ").append(toIndentedString(ot)).append("\n");
     sb.append("    lat: ").append(toIndentedString(lat)).append("\n");
     sb.append("    lon: ").append(toIndentedString(lon)).append("\n");
@@ -743,6 +743,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
     sb.append("    inserted: ").append(toIndentedString(inserted)).append("\n");
     sb.append("    typeOrigin: ").append(toIndentedString(typeOrigin)).append("\n");
+    sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
     sb.append("    provenance: ").append(toIndentedString(provenance)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
@@ -769,7 +770,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
     openapiFields.add("id_localspace");
-    openapiFields.add("localspace");
     openapiFields.add("ot");
     openapiFields.add("lat");
     openapiFields.add("lon");
@@ -788,6 +788,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     openapiFields.add("modified");
     openapiFields.add("inserted");
     openapiFields.add("type_origin");
+    openapiFields.add("localspace");
     openapiFields.add("provenance");
 
     // a set of required properties/fields (JSON key names)
@@ -806,9 +807,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectOriginForMagnitudesOriginsEventsAndEventsGroup is not found in the empty JSON string", ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.toString()));
         }
       }
-      if ((jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) && !jsonObj.get("localspace").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `localspace` to be a primitive type in the JSON string but got `%s`", jsonObj.get("localspace").toString()));
-      }
       if ((jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonNull()) && !jsonObj.get("quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));
       }
@@ -818,6 +816,10 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
       // validate the optional field `type_origin`
       if (jsonObj.get("type_origin") != null && !jsonObj.get("type_origin").isJsonNull()) {
         ObjectTypeOrigin.validateJsonObject(jsonObj.getAsJsonObject("type_origin"));
+      }
+      // validate the optional field `localspace`
+      if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
+        ObjectLocalspaceForVw.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {

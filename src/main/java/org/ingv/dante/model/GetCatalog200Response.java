@@ -21,6 +21,11 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.LinksDefinition;
+import org.ingv.dante.model.MetaDefinition;
+import org.ingv.dante.model.ObjectVwEventCatalogInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -44,62 +49,96 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * ObjectVwCatalogInnerAllOfCatalog
+ * GetCatalog200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T15:17:27.435930Z[Etc/UTC]")
-public class ObjectVwCatalogInnerAllOfCatalog {
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T17:53:31.045500Z[Etc/UTC]")
+public class GetCatalog200Response {
+  public static final String SERIALIZED_NAME_LINKS = "links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  private LinksDefinition links;
 
-  public static final String SERIALIZED_NAME_DOI = "doi";
-  @SerializedName(SERIALIZED_NAME_DOI)
-  private String doi;
+  public static final String SERIALIZED_NAME_META = "meta";
+  @SerializedName(SERIALIZED_NAME_META)
+  private MetaDefinition meta;
 
-  public ObjectVwCatalogInnerAllOfCatalog() {
+  public static final String SERIALIZED_NAME_DATA = "data";
+  @SerializedName(SERIALIZED_NAME_DATA)
+  private List<ObjectVwEventCatalogInner> data = new ArrayList<>();
+
+  public GetCatalog200Response() {
   }
 
-  public ObjectVwCatalogInnerAllOfCatalog name(String name) {
+  public GetCatalog200Response links(LinksDefinition links) {
     
-    this.name = name;
+    this.links = links;
     return this;
   }
 
    /**
-   * Localspace name. i.e. hew1_mole, endeavour_mole | char(255)
-   * @return name
+   * Get links
+   * @return links
   **/
   @javax.annotation.Nullable
 
-  public String getName() {
-    return name;
+  public LinksDefinition getLinks() {
+    return links;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setLinks(LinksDefinition links) {
+    this.links = links;
   }
 
 
-  public ObjectVwCatalogInnerAllOfCatalog doi(String doi) {
+  public GetCatalog200Response meta(MetaDefinition meta) {
     
-    this.doi = doi;
+    this.meta = meta;
     return this;
   }
 
    /**
-   * DOI Resource. i.e. 10.13127/TDMT | varchar(255)
-   * @return doi
+   * Get meta
+   * @return meta
   **/
   @javax.annotation.Nullable
 
-  public String getDoi() {
-    return doi;
+  public MetaDefinition getMeta() {
+    return meta;
   }
 
 
-  public void setDoi(String doi) {
-    this.doi = doi;
+  public void setMeta(MetaDefinition meta) {
+    this.meta = meta;
+  }
+
+
+  public GetCatalog200Response data(List<ObjectVwEventCatalogInner> data) {
+    
+    this.data = data;
+    return this;
+  }
+
+  public GetCatalog200Response addDataItem(ObjectVwEventCatalogInner dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<>();
+    }
+    this.data.add(dataItem);
+    return this;
+  }
+
+   /**
+   * Get data
+   * @return data
+  **/
+  @javax.annotation.Nullable
+
+  public List<ObjectVwEventCatalogInner> getData() {
+    return data;
+  }
+
+
+  public void setData(List<ObjectVwEventCatalogInner> data) {
+    this.data = data;
   }
 
   /**
@@ -115,9 +154,9 @@ public class ObjectVwCatalogInnerAllOfCatalog {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the ObjectVwCatalogInnerAllOfCatalog instance itself
+   * @return the GetCatalog200Response instance itself
    */
-  public ObjectVwCatalogInnerAllOfCatalog putAdditionalProperty(String key, Object value) {
+  public GetCatalog200Response putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -156,23 +195,25 @@ public class ObjectVwCatalogInnerAllOfCatalog {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectVwCatalogInnerAllOfCatalog objectVwCatalogInnerAllOfCatalog = (ObjectVwCatalogInnerAllOfCatalog) o;
-    return Objects.equals(this.name, objectVwCatalogInnerAllOfCatalog.name) &&
-        Objects.equals(this.doi, objectVwCatalogInnerAllOfCatalog.doi)&&
-        Objects.equals(this.additionalProperties, objectVwCatalogInnerAllOfCatalog.additionalProperties);
+    GetCatalog200Response getCatalog200Response = (GetCatalog200Response) o;
+    return Objects.equals(this.links, getCatalog200Response.links) &&
+        Objects.equals(this.meta, getCatalog200Response.meta) &&
+        Objects.equals(this.data, getCatalog200Response.data)&&
+        Objects.equals(this.additionalProperties, getCatalog200Response.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, doi, additionalProperties);
+    return Objects.hash(links, meta, data, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectVwCatalogInnerAllOfCatalog {\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    doi: ").append(toIndentedString(doi)).append("\n");
+    sb.append("class GetCatalog200Response {\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    meta: ").append(toIndentedString(meta)).append("\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -196,38 +237,47 @@ public class ObjectVwCatalogInnerAllOfCatalog {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("name");
-    openapiFields.add("doi");
+    openapiFields.add("links");
+    openapiFields.add("meta");
+    openapiFields.add("data");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("name");
   }
 
  /**
   * Validates the JSON Object and throws an exception if issues found
   *
   * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectVwCatalogInnerAllOfCatalog
+  * @throws IOException if the JSON Object is invalid with respect to GetCatalog200Response
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
       if (jsonObj == null) {
-        if (!ObjectVwCatalogInnerAllOfCatalog.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectVwCatalogInnerAllOfCatalog is not found in the empty JSON string", ObjectVwCatalogInnerAllOfCatalog.openapiRequiredFields.toString()));
+        if (!GetCatalog200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in GetCatalog200Response is not found in the empty JSON string", GetCatalog200Response.openapiRequiredFields.toString()));
         }
       }
+      // validate the optional field `links`
+      if (jsonObj.get("links") != null && !jsonObj.get("links").isJsonNull()) {
+        LinksDefinition.validateJsonObject(jsonObj.getAsJsonObject("links"));
+      }
+      // validate the optional field `meta`
+      if (jsonObj.get("meta") != null && !jsonObj.get("meta").isJsonNull()) {
+        MetaDefinition.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      }
+      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
+        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+        if (jsonArraydata != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("data").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
+          }
 
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ObjectVwCatalogInnerAllOfCatalog.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+          // validate the optional field `data` (array)
+          for (int i = 0; i < jsonArraydata.size(); i++) {
+            ObjectVwEventCatalogInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+          };
         }
-      }
-      if (!jsonObj.get("name").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
-      }
-      if ((jsonObj.get("doi") != null && !jsonObj.get("doi").isJsonNull()) && !jsonObj.get("doi").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `doi` to be a primitive type in the JSON string but got `%s`", jsonObj.get("doi").toString()));
       }
   }
 
@@ -235,16 +285,16 @@ public class ObjectVwCatalogInnerAllOfCatalog {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectVwCatalogInnerAllOfCatalog.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectVwCatalogInnerAllOfCatalog' and its subtypes
+       if (!GetCatalog200Response.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'GetCatalog200Response' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectVwCatalogInnerAllOfCatalog> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectVwCatalogInnerAllOfCatalog.class));
+       final TypeAdapter<GetCatalog200Response> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(GetCatalog200Response.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectVwCatalogInnerAllOfCatalog>() {
+       return (TypeAdapter<T>) new TypeAdapter<GetCatalog200Response>() {
            @Override
-           public void write(JsonWriter out, ObjectVwCatalogInnerAllOfCatalog value) throws IOException {
+           public void write(JsonWriter out, GetCatalog200Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -267,11 +317,11 @@ public class ObjectVwCatalogInnerAllOfCatalog {
            }
 
            @Override
-           public ObjectVwCatalogInnerAllOfCatalog read(JsonReader in) throws IOException {
+           public GetCatalog200Response read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             ObjectVwCatalogInnerAllOfCatalog instance = thisAdapter.fromJsonTree(jsonObj);
+             GetCatalog200Response instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -298,18 +348,18 @@ public class ObjectVwCatalogInnerAllOfCatalog {
   }
 
  /**
-  * Create an instance of ObjectVwCatalogInnerAllOfCatalog given an JSON string
+  * Create an instance of GetCatalog200Response given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectVwCatalogInnerAllOfCatalog
-  * @throws IOException if the JSON string is invalid with respect to ObjectVwCatalogInnerAllOfCatalog
+  * @return An instance of GetCatalog200Response
+  * @throws IOException if the JSON string is invalid with respect to GetCatalog200Response
   */
-  public static ObjectVwCatalogInnerAllOfCatalog fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectVwCatalogInnerAllOfCatalog.class);
+  public static GetCatalog200Response fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, GetCatalog200Response.class);
   }
 
  /**
-  * Convert an instance of ObjectVwCatalogInnerAllOfCatalog to an JSON string
+  * Convert an instance of GetCatalog200Response to an JSON string
   *
   * @return JSON string
   */

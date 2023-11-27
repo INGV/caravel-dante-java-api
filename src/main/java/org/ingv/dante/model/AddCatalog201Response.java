@@ -23,7 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import org.ingv.dante.model.ObjectVwCatalogInner;
+import org.ingv.dante.model.ObjectVwEventCatalogInner;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -49,22 +49,22 @@ import org.ingv.dante.JSON;
 /**
  * AddCatalog201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-10-27T15:17:27.435930Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-27T17:53:31.045500Z[Etc/UTC]")
 public class AddCatalog201Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<ObjectVwCatalogInner> data = new ArrayList<>();
+  private List<ObjectVwEventCatalogInner> data = new ArrayList<>();
 
   public AddCatalog201Response() {
   }
 
-  public AddCatalog201Response data(List<ObjectVwCatalogInner> data) {
+  public AddCatalog201Response data(List<ObjectVwEventCatalogInner> data) {
     
     this.data = data;
     return this;
   }
 
-  public AddCatalog201Response addDataItem(ObjectVwCatalogInner dataItem) {
+  public AddCatalog201Response addDataItem(ObjectVwEventCatalogInner dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -78,12 +78,12 @@ public class AddCatalog201Response {
   **/
   @javax.annotation.Nullable
 
-  public List<ObjectVwCatalogInner> getData() {
+  public List<ObjectVwEventCatalogInner> getData() {
     return data;
   }
 
 
-  public void setData(List<ObjectVwCatalogInner> data) {
+  public void setData(List<ObjectVwEventCatalogInner> data) {
     this.data = data;
   }
 
@@ -207,7 +207,7 @@ public class AddCatalog201Response {
 
           // validate the optional field `data` (array)
           for (int i = 0; i < jsonArraydata.size(); i++) {
-            ObjectVwCatalogInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+            ObjectVwEventCatalogInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
           };
         }
       }

@@ -9,7 +9,6 @@
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] |
 |**idLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
-|**localspace** | **String** | Localspace name. i.e. hew1_mole, endeavour_mole | char(255) |  [optional] |
 |**mag** | **Double** | Magnitude value | double |  [optional] |
 |**typeMagnitude** | **String** | Type of the magnitude | varchar(255) |  [optional] |
 |**lowerUncertainty** | **Double** | Magnitude lower_uncertainty | double |  [optional] |
@@ -19,6 +18,7 @@
 |**originid** | **Long** | Unique incremental id | bigint(20) |  [optional] |
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
+|**localspace** | [**ObjectLocalspaceForVw**](ObjectLocalspaceForVw.md) |  |  [optional] |
 |**provenance** | [**ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup**](ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.md) |  |  [optional] |
 
 

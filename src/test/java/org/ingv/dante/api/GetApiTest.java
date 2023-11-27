@@ -14,6 +14,7 @@
 package org.ingv.dante.api;
 
 import org.ingv.dante.ApiException;
+import org.ingv.dante.model.GetCatalog200Response;
 import org.ingv.dante.model.GetEvent200Response;
 import org.ingv.dante.model.GetEventsGroup200Response;
 import org.ingv.dante.model.GetLocalspace200Response;
@@ -105,7 +106,7 @@ public class GetApiTest {
     /**
      * This API returns the catalogs.
      *
-     * This API returns the catalogs.
+     * This API returns only the \&quot;catalogs\&quot;.   All &#x60;catalogs&#x60; are identified by &#x60;event.localspace.environment&#x3D;catalog&#x60; and the name of catalog is &#x60;event.localspace.name&#x60;.    To search a specific catalog, use &#x60;whereeventlocalspacenamein&#x60; parameter and/or &#x60;doi&#x60; paramenter.
      *
      * @throws ApiException if the Api call fails
      */
@@ -157,8 +158,7 @@ public class GetApiTest {
         Long originid = null;
         Long magnitudeid = null;
         String doi = null;
-        String wherenamelike = null;
-        GetEventsGroup200Response response = api.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, wherenamelike);
+        GetCatalog200Response response = api.getCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi);
         // TODO: test validations
     }
 

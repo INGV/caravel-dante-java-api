@@ -143,6 +143,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.AddTypeEventRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.AddTypeMagnitudeRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.AddTypeOriginRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetCatalog200Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetEvent200Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetEvent200ResponseData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetEventsGroup200Response.CustomTypeAdapterFactory());
@@ -185,6 +186,8 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectFocalmechanismPostOutput.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectFocalmechanismPostOutputFocalmechanismsInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectLocalspace.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectLocalspaceForVw.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectLocalspaceForVwWithDOI.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectMagnitude.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectMagnitudePostOutput.CustomTypeAdapterFactory());
@@ -217,9 +220,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectTableTypeMagnitude.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectTableTypeOrigin.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectTypeOrigin.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectVwCatalogInner.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectVwCatalogInnerAllOf.CustomTypeAdapterFactory());
-        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectVwCatalogInnerAllOfCatalog.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectVwEventCatalogInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.PickScnlSchema.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.PickScnlSchemaEwLogo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.PickScnlSchemaEwMessage.CustomTypeAdapterFactory());
