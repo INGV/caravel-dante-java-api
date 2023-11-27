@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 3.0.1
-  - Build date: 2023-11-27T17:56:53.026778Z[Etc/UTC]
+- API version: 3.1.0
+  - Build date: 2023-11-27T18:48:12.413442Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>3.0.1</version>
+  <version>3.1.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.0.1"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.1.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-3.0.1.jar`
+* `target/java-openapi-generator-cli-dante-3.1.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -151,9 +151,9 @@ Class | Method | HTTP request | Description
 *EarthwormApiApi* | [**addHEwPickScnl**](docs/EarthwormApiApi.md#addHEwPickScnl) | **POST** /quakedb/ew/v1/pick-scnl | Insert a new pick-scnl message to the DB using ew2openapi module
 *EarthwormApiApi* | [**addHEwStrongmotionii**](docs/EarthwormApiApi.md#addHEwStrongmotionii) | **POST** /quakedb/ew/v1/strongmotionii | Insert a new strongmotionii message to the DB using ew2openapi module
 *GetApi* | [**getAll**](docs/GetApi.md#getAll) | **GET** /quakedb/v1/all | This API returns all origins with all magnitude; one per line.
-*GetApi* | [**getCatalog**](docs/GetApi.md#getCatalog) | **GET** /quakedb/v1/catalog | This API returns the catalogs.
 *GetApi* | [**getEvent**](docs/GetApi.md#getEvent) | **GET** /quakedb/v1/event | This API returns the preferred origin and the preferred magnitude from all clusterd events.
 *GetApi* | [**getEvents**](docs/GetApi.md#getEvents) | **GET** /quakedb/v1/events | This API returns the preferred origin and the preferred magnitude from the same instance.
+*GetApi* | [**getEventsCatalog**](docs/GetApi.md#getEventsCatalog) | **GET** /quakedb/v1/events-catalog | This API returns the catalogs.
 *GetApi* | [**getEventsGroup**](docs/GetApi.md#getEventsGroup) | **GET** /quakedb/v1/events-group | This API returns the preferred origin and the preferred magnitude from all clusterd events.
 *GetApi* | [**getLocalspace**](docs/GetApi.md#getLocalspace) | **GET** /quakedb/table/v1/localspace | This API returns all the localspace(s).
 *GetApi* | [**getMagnitudes**](docs/GetApi.md#getMagnitudes) | **GET** /quakedb/v1/magnitudes | This API returns all origins with own preferred magnitude.
@@ -167,7 +167,7 @@ Class | Method | HTTP request | Description
 *GetApi* | [**getTypeEvent**](docs/GetApi.md#getTypeEvent) | **GET** /quakedb/table/v1/type-event | This API returns all the type_event(s).
 *GetApi* | [**getTypeMagnitude**](docs/GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s).
 *GetApi* | [**getTypeOrigin**](docs/GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s).
-*StoreApi* | [**addCatalog**](docs/StoreApi.md#addCatalog) | **POST** /quakedb/v1/catalog | Add a new catalog to the DB
+*StoreApi* | [**addCatalog**](docs/StoreApi.md#addCatalog) | **POST** /quakedb/v1/events-catalog | Add a new catalog to the DB
 *StoreApi* | [**addEvent**](docs/StoreApi.md#addEvent) | **POST** /quakedb/v1/event | Add a new event to the DB
 *StoreApi* | [**addFocalmechanism**](docs/StoreApi.md#addFocalmechanism) | **POST** /quakedb/v1/focalmechanism | Add a new focalmechanism(s) to the DB
 *StoreApi* | [**addLocalspace**](docs/StoreApi.md#addLocalspace) | **POST** /quakedb/table/v1/localspace | Add a new localspace to the DB
@@ -246,6 +246,7 @@ Class | Method | HTTP request | Description
  - [Environment](docs/Environment.md)
  - [GetEvent200Response](docs/GetEvent200Response.md)
  - [GetEvent200ResponseData](docs/GetEvent200ResponseData.md)
+ - [GetEventsCatalog200Response](docs/GetEventsCatalog200Response.md)
  - [GetEventsGroup200Response](docs/GetEventsGroup200Response.md)
  - [GetLocalspace200Response](docs/GetLocalspace200Response.md)
  - [GetLocalspace200ResponseAllOf](docs/GetLocalspace200ResponseAllOf.md)
@@ -286,6 +287,8 @@ Class | Method | HTTP request | Description
  - [ObjectFocalmechanismPostOutput](docs/ObjectFocalmechanismPostOutput.md)
  - [ObjectFocalmechanismPostOutputFocalmechanismsInner](docs/ObjectFocalmechanismPostOutputFocalmechanismsInner.md)
  - [ObjectLocalspace](docs/ObjectLocalspace.md)
+ - [ObjectLocalspaceForVw](docs/ObjectLocalspaceForVw.md)
+ - [ObjectLocalspaceForVwWithDOI](docs/ObjectLocalspaceForVwWithDOI.md)
  - [ObjectMagnitude](docs/ObjectMagnitude.md)
  - [ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup](docs/ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.md)
  - [ObjectMagnitudePostOutput](docs/ObjectMagnitudePostOutput.md)
@@ -318,9 +321,7 @@ Class | Method | HTTP request | Description
  - [ObjectTableTypeMagnitude](docs/ObjectTableTypeMagnitude.md)
  - [ObjectTableTypeOrigin](docs/ObjectTableTypeOrigin.md)
  - [ObjectTypeOrigin](docs/ObjectTypeOrigin.md)
- - [ObjectVwCatalogInner](docs/ObjectVwCatalogInner.md)
- - [ObjectVwCatalogInnerAllOf](docs/ObjectVwCatalogInnerAllOf.md)
- - [ObjectVwCatalogInnerAllOfCatalog](docs/ObjectVwCatalogInnerAllOfCatalog.md)
+ - [ObjectVwEventCatalogInner](docs/ObjectVwEventCatalogInner.md)
  - [PickEmersio](docs/PickEmersio.md)
  - [PickFirstmotion](docs/PickFirstmotion.md)
  - [PickScnlSchema](docs/PickScnlSchema.md)

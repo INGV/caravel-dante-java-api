@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.0.1
+  version: 3.1.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -2561,10 +2561,13 @@ paths:
       tags:
       - get
       x-accepts: application/json
-  /quakedb/v1/catalog:
+  /quakedb/v1/events-catalog:
     get:
-      description: This API returns the catalogs.
-      operationId: getCatalog
+      description: "This API returns only the \"catalogs\". \n All `catalogs` are\
+        \ identified by `event.localspace.environment=catalog` and the name of catalog\
+        \ is `event.localspace.name`. \n\n To search a specific catalog, use `whereeventlocalspacenamein`\
+        \ parameter and/or `doi` paramenter."
+      operationId: getEventsCatalog
       parameters:
       - description: Select date start (i.e. 2016-06-22T16:52:06.260Z).
         in: query
@@ -2971,15 +2974,6 @@ paths:
         schema:
           format: string
           type: string
-      - description: Select data by "like" operator.
-        explode: true
-        in: query
-        name: wherenamelike
-        required: false
-        schema:
-          format: string
-          type: string
-        style: form
       responses:
         "400":
           content:
@@ -3033,7 +3027,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getEventsGroup_200_response'
+                $ref: '#/components/schemas/getEventsCatalog_200_response'
           description: Operation successful
           headers:
             Cache-Control:
@@ -7306,18 +7300,26 @@ components:
           $ref: '#/components/headers/X-RateLimit-Remaining'
         X-RateLimit-Reset:
           $ref: '#/components/headers/X-RateLimit-Reset'
-    "200Catalog":
+    "200EventsCatalog":
       content:
         application/json:
           schema:
-            properties:
-              links:
-                $ref: '#/components/schemas/LinksDefinition'
-              meta:
-                $ref: '#/components/schemas/MetaDefinition'
-              data:
-                $ref: '#/components/schemas/ObjectVwCatalog'
-            type: object
+            $ref: '#/components/schemas/getEventsCatalog_200_response'
+      description: Operation successful
+      headers:
+        Cache-Control:
+          $ref: '#/components/headers/Cache-Control'
+        X-RateLimit-Limit:
+          $ref: '#/components/headers/X-RateLimit-Limit'
+        X-RateLimit-Remaining:
+          $ref: '#/components/headers/X-RateLimit-Remaining'
+        X-RateLimit-Reset:
+          $ref: '#/components/headers/X-RateLimit-Reset'
+    "201EventsCatalog":
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/addCatalog_201_response'
       description: Operation successful
       headers:
         Cache-Control:
@@ -7418,9 +7420,9 @@ components:
           type: string
           example: null
       type: object
-    ObjectVwCatalog:
+    ObjectVwEventCatalog:
       items:
-        $ref: '#/components/schemas/ObjectVwCatalog_inner'
+        $ref: '#/components/schemas/ObjectVwEventCatalog_inner'
       type: array
     ObjectProvenance:
       example:
@@ -7604,7 +7606,9 @@ components:
             version: hew1_mole
             softwarename: software
           err_lat: 3.616076749251911
-          localspace: hew1_mole
+          localspace:
+            environment: development
+            name: hew1_mole
           modified: 2016-06-22T16:52:06.26Z
           usedStationCount: 1
           id: 14932631
@@ -7626,7 +7630,9 @@ components:
           name: INGV
           version: hew1_mole
           softwarename: software
-        localspace: hew1_mole
+        localspace:
+          environment: development
+          name: hew1_mole
         magnitudedirectlinktoevent: false
         modified: 2016-06-22T16:52:06.26Z
         origindirectlinktoevent: false
@@ -7643,7 +7649,9 @@ components:
             name: INGV
             version: hew1_mole
             softwarename: software
-          localspace: hew1_mole
+          localspace:
+            environment: development
+            name: hew1_mole
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           lower_uncertainty: 0.52
@@ -7661,11 +7669,6 @@ components:
           format: int64
           nullable: true
           type: integer
-        localspace:
-          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
-          example: hew1_mole
-          nullable: true
-          type: string
         event_group_id:
           default: 0
           description: Link event group | bigint(20)
@@ -7730,12 +7733,14 @@ components:
           format: date-time
           readOnly: true
           type: string
+        localspace:
+          $ref: '#/components/schemas/ObjectLocalspaceForVw'
+        provenance:
+          $ref: '#/components/schemas/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup'
         origin:
           $ref: '#/components/schemas/ObjectOriginForMagnitudesOriginsEventsAndEventsGroup'
         magnitude:
           $ref: '#/components/schemas/ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup'
-        provenance:
-          $ref: '#/components/schemas/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup'
       type: object
     ObjectLocalspace:
       example:
@@ -7751,6 +7756,41 @@ components:
           description: Additional information | char(255)
           example: Auto added
           nullable: true
+          type: string
+      required:
+      - name
+      type: object
+    ObjectLocalspaceForVw:
+      example:
+        environment: development
+        name: hew1_mole
+      properties:
+        name:
+          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
+          example: hew1_mole
+          nullable: true
+          type: string
+        environment:
+          $ref: '#/components/schemas/environment'
+      required:
+      - name
+      type: object
+    ObjectLocalspaceForVwWithDOI:
+      example:
+        environment: development
+        name: hew1_mole
+        doi: 10.13127/TDMT
+      properties:
+        name:
+          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
+          example: hew1_mole
+          nullable: true
+          type: string
+        environment:
+          $ref: '#/components/schemas/environment'
+        doi:
+          description: DOI Resource. i.e. 10.13127/TDMT | varchar(255)
+          example: 10.13127/TDMT
           type: string
       required:
       - name
@@ -11640,7 +11680,9 @@ components:
           version: hew1_mole
           softwarename: software
         err_lat: 3.616076749251911
-        localspace: hew1_mole
+        localspace:
+          environment: development
+          name: hew1_mole
         modified: 2016-06-22T16:52:06.26Z
         usedStationCount: 1
         id: 14932631
@@ -11663,11 +11705,6 @@ components:
           format: int64
           nullable: true
           type: integer
-        localspace:
-          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
-          example: hew1_mole
-          nullable: true
-          type: string
         ot:
           description: Origin time | datetime(3)
           example: 2016-06-22T16:52:06.26Z
@@ -11765,6 +11802,8 @@ components:
           type: string
         type_origin:
           $ref: '#/components/schemas/ObjectTypeOrigin'
+        localspace:
+          $ref: '#/components/schemas/ObjectLocalspaceForVw'
         provenance:
           $ref: '#/components/schemas/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup'
       type: object
@@ -11802,7 +11841,9 @@ components:
           name: INGV
           version: hew1_mole
           softwarename: software
-        localspace: hew1_mole
+        localspace:
+          environment: development
+          name: hew1_mole
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
         lower_uncertainty: 0.52
@@ -11818,11 +11859,6 @@ components:
           format: int64
           nullable: true
           type: integer
-        localspace:
-          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
-          example: hew1_mole
-          nullable: true
-          type: string
         mag:
           description: Magnitude value | double
           example: 3.01
@@ -11868,6 +11904,8 @@ components:
           format: date-time
           readOnly: true
           type: string
+        localspace:
+          $ref: '#/components/schemas/ObjectLocalspaceForVw'
         provenance:
           $ref: '#/components/schemas/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup'
       type: object
@@ -12474,6 +12512,41 @@ components:
       format: uri
       maxLength: 2048
       type: string
+    event__fk_event_group__READONLY:
+      default: 0
+      description: Link event group | bigint(20)
+      format: int64
+      readOnly: true
+      type: integer
+    event__fk_origin_preferred__READONLY:
+      description: "Link: preferred origin. It can be NULL. | bigint(20)"
+      format: int64
+      nullable: true
+      readOnly: true
+      type: integer
+    event__fk_magnitude_preferred__READONLY:
+      description: "Link: preferred magnitude. It can be NULL. | bigint(20)"
+      format: int64
+      nullable: true
+      readOnly: true
+      type: integer
+    event__fk_focalmechanism_preferred__READONLY:
+      description: "Link: preferred focalmechanism. It can be NULL. | bigint(20)"
+      format: int64
+      nullable: true
+      readOnly: true
+      type: integer
+    flags:
+      description: Flags for origin | varchar(255)
+      example: "DPC,twitter,shakemap4,FM"
+      readOnly: true
+      type: string
+    event__type_group:
+      default: 0
+      description: Group type. Used by clustering algorithm | tinyint(4)
+      format: int64
+      readOnly: true
+      type: integer
     provenance__name:
       default: INGV
       description: "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)"
@@ -12526,41 +12599,6 @@ components:
       description: Priority | int(8)
       example: 0
       format: int64
-      type: integer
-    event__fk_event_group__READONLY:
-      default: 0
-      description: Link event group | bigint(20)
-      format: int64
-      readOnly: true
-      type: integer
-    event__fk_origin_preferred__READONLY:
-      description: "Link: preferred origin. It can be NULL. | bigint(20)"
-      format: int64
-      nullable: true
-      readOnly: true
-      type: integer
-    event__fk_magnitude_preferred__READONLY:
-      description: "Link: preferred magnitude. It can be NULL. | bigint(20)"
-      format: int64
-      nullable: true
-      readOnly: true
-      type: integer
-    event__fk_focalmechanism_preferred__READONLY:
-      description: "Link: preferred focalmechanism. It can be NULL. | bigint(20)"
-      format: int64
-      nullable: true
-      readOnly: true
-      type: integer
-    flags:
-      description: Flags for origin | varchar(255)
-      example: "DPC,twitter,shakemap4,FM"
-      readOnly: true
-      type: string
-    event__type_group:
-      default: 0
-      description: Group type. Used by clustering algorithm | tinyint(4)
-      format: int64
-      readOnly: true
       type: integer
     environment:
       default: development
@@ -13107,7 +13145,9 @@ components:
               version: hew1_mole
               softwarename: software
             err_lat: 3.616076749251911
-            localspace: hew1_mole
+            localspace:
+              environment: development
+              name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             usedStationCount: 1
             id: 14932631
@@ -13129,7 +13169,9 @@ components:
             name: INGV
             version: hew1_mole
             softwarename: software
-          localspace: hew1_mole
+          localspace:
+            environment: development
+            name: hew1_mole
           magnitudedirectlinktoevent: false
           modified: 2016-06-22T16:52:06.26Z
           origindirectlinktoevent: false
@@ -13146,7 +13188,9 @@ components:
               name: INGV
               version: hew1_mole
               softwarename: software
-            localspace: hew1_mole
+            localspace:
+              environment: development
+              name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             lower_uncertainty: 0.52
@@ -13172,7 +13216,9 @@ components:
               version: hew1_mole
               softwarename: software
             err_lat: 3.616076749251911
-            localspace: hew1_mole
+            localspace:
+              environment: development
+              name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             usedStationCount: 1
             id: 14932631
@@ -13194,7 +13240,9 @@ components:
             name: INGV
             version: hew1_mole
             softwarename: software
-          localspace: hew1_mole
+          localspace:
+            environment: development
+            name: hew1_mole
           magnitudedirectlinktoevent: false
           modified: 2016-06-22T16:52:06.26Z
           origindirectlinktoevent: false
@@ -13211,7 +13259,9 @@ components:
               name: INGV
               version: hew1_mole
               softwarename: software
-            localspace: hew1_mole
+            localspace:
+              environment: development
+              name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             lower_uncertainty: 0.52
@@ -13245,6 +13295,183 @@ components:
         data:
           items:
             $ref: '#/components/schemas/ObjectMagnitudesOriginsEventsAndEventsGroup'
+          type: array
+      type: object
+    getEventsCatalog_200_response:
+      example:
+        data:
+        - magnitudedirectlinktoorigin: false
+          preferred_focalmechanism_id: 5
+          origin:
+            err_lon: 2.027123023002322
+            err_z: 9.301444243932576
+            ot: 2016-06-22T16:52:06.26Z
+            associatedStationCount: 7
+            lon: 9.19289
+            err_ot: 2.3021358869347655
+            err_h: 7.061401241503109
+            quality: AB
+            id_localspace: 182491
+            depth: 0.02
+            usedPhaseCount: 1
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              name: INGV
+              version: hew1_mole
+              softwarename: software
+            err_lat: 3.616076749251911
+            localspace:
+              environment: development
+              name: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
+            usedStationCount: 1
+            id: 14932631
+            type_origin:
+              version_value: 1
+              version_name: ew prelim
+              name: hypocenter
+            region: Norcia
+            lat: 45.492599
+            associatedPhaseCount: 4
+          flags: "DPC,twitter,shakemap4,FM"
+          preferred_origin_id: 6
+          type_group: 5
+          type_event: earthquake
+          id_localspace: 182491
+          preferred_magnitude_id: 1
+          inserted: 2016-06-22T16:52:06.26Z
+          provenance:
+            name: INGV
+            version: hew1_mole
+            softwarename: software
+          localspace:
+            environment: development
+            name: hew1_mole
+            doi: 10.13127/TDMT
+          magnitudedirectlinktoevent: false
+          modified: 2016-06-22T16:52:06.26Z
+          origindirectlinktoevent: false
+          magnitude:
+            type_magnitude: ML-VAX
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.84685269835264
+            id_localspace: 182491
+            mag: 3.01
+            originid: 14932631
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              name: INGV
+              version: hew1_mole
+              softwarename: software
+            localspace:
+              environment: development
+              name: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            lower_uncertainty: 0.52
+          id: 14932631
+          event_group_id: 0
+        - magnitudedirectlinktoorigin: false
+          preferred_focalmechanism_id: 5
+          origin:
+            err_lon: 2.027123023002322
+            err_z: 9.301444243932576
+            ot: 2016-06-22T16:52:06.26Z
+            associatedStationCount: 7
+            lon: 9.19289
+            err_ot: 2.3021358869347655
+            err_h: 7.061401241503109
+            quality: AB
+            id_localspace: 182491
+            depth: 0.02
+            usedPhaseCount: 1
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              name: INGV
+              version: hew1_mole
+              softwarename: software
+            err_lat: 3.616076749251911
+            localspace:
+              environment: development
+              name: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
+            usedStationCount: 1
+            id: 14932631
+            type_origin:
+              version_value: 1
+              version_name: ew prelim
+              name: hypocenter
+            region: Norcia
+            lat: 45.492599
+            associatedPhaseCount: 4
+          flags: "DPC,twitter,shakemap4,FM"
+          preferred_origin_id: 6
+          type_group: 5
+          type_event: earthquake
+          id_localspace: 182491
+          preferred_magnitude_id: 1
+          inserted: 2016-06-22T16:52:06.26Z
+          provenance:
+            name: INGV
+            version: hew1_mole
+            softwarename: software
+          localspace:
+            environment: development
+            name: hew1_mole
+            doi: 10.13127/TDMT
+          magnitudedirectlinktoevent: false
+          modified: 2016-06-22T16:52:06.26Z
+          origindirectlinktoevent: false
+          magnitude:
+            type_magnitude: ML-VAX
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.84685269835264
+            id_localspace: 182491
+            mag: 3.01
+            originid: 14932631
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              name: INGV
+              version: hew1_mole
+              softwarename: software
+            localspace:
+              environment: development
+              name: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            lower_uncertainty: 0.52
+          id: 14932631
+          event_group_id: 0
+        meta:
+          path: http://localhost:8585
+          per_page: 4000
+          total: 10000
+          last_page: 3
+          from: 1
+          links:
+          - active: "true"
+            label: "2"
+            url: http://localhost:8585
+          - active: "true"
+            label: "2"
+            url: http://localhost:8585
+          to: 4000
+          current_page: 2
+        links:
+          next: http://localhost:8585/api/quakedb/v1/events-group/?page=3
+          last: http://localhost:8585/api/quakedb/v1/events-group/?page=4
+          prev: http://localhost:8585/api/quakedb/v1/events-group/?page=1
+          first: http://localhost:8585/api/quakedb/v1/events-group/?page=2
+      properties:
+        links:
+          $ref: '#/components/schemas/LinksDefinition'
+        meta:
+          $ref: '#/components/schemas/MetaDefinition'
+        data:
+          items:
+            $ref: '#/components/schemas/ObjectVwEventCatalog_inner'
           type: array
       type: object
     addCatalog_request_data_inner:
@@ -13310,12 +13537,154 @@ components:
     addCatalog_201_response:
       example:
         data:
-        - null
-        - null
+        - magnitudedirectlinktoorigin: false
+          preferred_focalmechanism_id: 5
+          origin:
+            err_lon: 2.027123023002322
+            err_z: 9.301444243932576
+            ot: 2016-06-22T16:52:06.26Z
+            associatedStationCount: 7
+            lon: 9.19289
+            err_ot: 2.3021358869347655
+            err_h: 7.061401241503109
+            quality: AB
+            id_localspace: 182491
+            depth: 0.02
+            usedPhaseCount: 1
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              name: INGV
+              version: hew1_mole
+              softwarename: software
+            err_lat: 3.616076749251911
+            localspace:
+              environment: development
+              name: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
+            usedStationCount: 1
+            id: 14932631
+            type_origin:
+              version_value: 1
+              version_name: ew prelim
+              name: hypocenter
+            region: Norcia
+            lat: 45.492599
+            associatedPhaseCount: 4
+          flags: "DPC,twitter,shakemap4,FM"
+          preferred_origin_id: 6
+          type_group: 5
+          type_event: earthquake
+          id_localspace: 182491
+          preferred_magnitude_id: 1
+          inserted: 2016-06-22T16:52:06.26Z
+          provenance:
+            name: INGV
+            version: hew1_mole
+            softwarename: software
+          localspace:
+            environment: development
+            name: hew1_mole
+            doi: 10.13127/TDMT
+          magnitudedirectlinktoevent: false
+          modified: 2016-06-22T16:52:06.26Z
+          origindirectlinktoevent: false
+          magnitude:
+            type_magnitude: ML-VAX
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.84685269835264
+            id_localspace: 182491
+            mag: 3.01
+            originid: 14932631
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              name: INGV
+              version: hew1_mole
+              softwarename: software
+            localspace:
+              environment: development
+              name: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            lower_uncertainty: 0.52
+          id: 14932631
+          event_group_id: 0
+        - magnitudedirectlinktoorigin: false
+          preferred_focalmechanism_id: 5
+          origin:
+            err_lon: 2.027123023002322
+            err_z: 9.301444243932576
+            ot: 2016-06-22T16:52:06.26Z
+            associatedStationCount: 7
+            lon: 9.19289
+            err_ot: 2.3021358869347655
+            err_h: 7.061401241503109
+            quality: AB
+            id_localspace: 182491
+            depth: 0.02
+            usedPhaseCount: 1
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              name: INGV
+              version: hew1_mole
+              softwarename: software
+            err_lat: 3.616076749251911
+            localspace:
+              environment: development
+              name: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
+            usedStationCount: 1
+            id: 14932631
+            type_origin:
+              version_value: 1
+              version_name: ew prelim
+              name: hypocenter
+            region: Norcia
+            lat: 45.492599
+            associatedPhaseCount: 4
+          flags: "DPC,twitter,shakemap4,FM"
+          preferred_origin_id: 6
+          type_group: 5
+          type_event: earthquake
+          id_localspace: 182491
+          preferred_magnitude_id: 1
+          inserted: 2016-06-22T16:52:06.26Z
+          provenance:
+            name: INGV
+            version: hew1_mole
+            softwarename: software
+          localspace:
+            environment: development
+            name: hew1_mole
+            doi: 10.13127/TDMT
+          magnitudedirectlinktoevent: false
+          modified: 2016-06-22T16:52:06.26Z
+          origindirectlinktoevent: false
+          magnitude:
+            type_magnitude: ML-VAX
+            upper_uncertainty: 0.53
+            mag_quality: BB
+            quality: 6.84685269835264
+            id_localspace: 182491
+            mag: 3.01
+            originid: 14932631
+            inserted: 2016-06-22T16:52:06.26Z
+            provenance:
+              name: INGV
+              version: hew1_mole
+              softwarename: software
+            localspace:
+              environment: development
+              name: hew1_mole
+            modified: 2016-06-22T16:52:06.26Z
+            id: 14932631
+            lower_uncertainty: 0.52
+          id: 14932631
+          event_group_id: 0
       properties:
         data:
           items:
-            $ref: '#/components/schemas/ObjectVwCatalog_inner'
+            $ref: '#/components/schemas/ObjectVwEventCatalog_inner'
           type: array
       type: object
     updateEventsGroup_request_data:
@@ -16752,28 +17121,164 @@ components:
             example: cluster-hdb.int.ingv.it
             type: string
           type: array
-    ObjectVwCatalog_inner_allOf_catalog:
+    ObjectVwEventCatalog_inner:
+      example:
+        magnitudedirectlinktoorigin: false
+        preferred_focalmechanism_id: 5
+        origin:
+          err_lon: 2.027123023002322
+          err_z: 9.301444243932576
+          ot: 2016-06-22T16:52:06.26Z
+          associatedStationCount: 7
+          lon: 9.19289
+          err_ot: 2.3021358869347655
+          err_h: 7.061401241503109
+          quality: AB
+          id_localspace: 182491
+          depth: 0.02
+          usedPhaseCount: 1
+          inserted: 2016-06-22T16:52:06.26Z
+          provenance:
+            name: INGV
+            version: hew1_mole
+            softwarename: software
+          err_lat: 3.616076749251911
+          localspace:
+            environment: development
+            name: hew1_mole
+          modified: 2016-06-22T16:52:06.26Z
+          usedStationCount: 1
+          id: 14932631
+          type_origin:
+            version_value: 1
+            version_name: ew prelim
+            name: hypocenter
+          region: Norcia
+          lat: 45.492599
+          associatedPhaseCount: 4
+        flags: "DPC,twitter,shakemap4,FM"
+        preferred_origin_id: 6
+        type_group: 5
+        type_event: earthquake
+        id_localspace: 182491
+        preferred_magnitude_id: 1
+        inserted: 2016-06-22T16:52:06.26Z
+        provenance:
+          name: INGV
+          version: hew1_mole
+          softwarename: software
+        localspace:
+          environment: development
+          name: hew1_mole
+          doi: 10.13127/TDMT
+        magnitudedirectlinktoevent: false
+        modified: 2016-06-22T16:52:06.26Z
+        origindirectlinktoevent: false
+        magnitude:
+          type_magnitude: ML-VAX
+          upper_uncertainty: 0.53
+          mag_quality: BB
+          quality: 6.84685269835264
+          id_localspace: 182491
+          mag: 3.01
+          originid: 14932631
+          inserted: 2016-06-22T16:52:06.26Z
+          provenance:
+            name: INGV
+            version: hew1_mole
+            softwarename: software
+          localspace:
+            environment: development
+            name: hew1_mole
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          lower_uncertainty: 0.52
+        id: 14932631
+        event_group_id: 0
       properties:
-        name:
-          description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
-          example: hew1_mole
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        id_localspace:
+          description: Localspace Id | bigint(19)
+          example: 182491
+          format: int64
           nullable: true
+          type: integer
+        event_group_id:
+          default: 0
+          description: Link event group | bigint(20)
+          format: int64
+          readOnly: true
+          type: integer
+        preferred_origin_id:
+          description: "Link: preferred origin. It can be NULL. | bigint(20)"
+          format: int64
+          nullable: true
+          readOnly: true
+          type: integer
+        preferred_magnitude_id:
+          description: "Link: preferred magnitude. It can be NULL. | bigint(20)"
+          format: int64
+          nullable: true
+          readOnly: true
+          type: integer
+        preferred_focalmechanism_id:
+          description: "Link: preferred focalmechanism. It can be NULL. | bigint(20)"
+          format: int64
+          nullable: true
+          readOnly: true
+          type: integer
+        flags:
+          description: Flags for origin | varchar(255)
+          example: "DPC,twitter,shakemap4,FM"
+          readOnly: true
           type: string
-        doi:
-          description: DOI Resource. i.e. 10.13127/TDMT | varchar(255)
-          example: 10.13127/TDMT
+        type_group:
+          default: 0
+          description: Group type. Used by clustering algorithm | tinyint(4)
+          format: int64
+          readOnly: true
+          type: integer
+        type_event:
+          description: Name | varchar(255)
+          example: earthquake
           type: string
-      required:
-      - name
-      type: object
-    ObjectVwCatalog_inner_allOf:
-      properties:
-        catalog:
-          $ref: '#/components/schemas/ObjectVwCatalog_inner_allOf_catalog'
-    ObjectVwCatalog_inner:
-      allOf:
-      - $ref: '#/components/schemas/ObjectVwCatalog_inner_allOf'
-      - $ref: '#/components/schemas/ObjectMagnitudesOriginsEventsAndEventsGroup'
+        origindirectlinktoevent:
+          default: false
+          description: Origin entity is directly linked to Event entity (origin.fk_event=event.id)
+          type: boolean
+        magnitudedirectlinktoorigin:
+          default: false
+          description: Magnitude entity is directly linked to Origin entity (magnitude.fk_origin=origin.id)
+          type: boolean
+        magnitudedirectlinktoevent:
+          default: false
+          description: Magnitude entity is directly linked to Event entity (magnitude.fk_origin=origin.id
+            -> origin.fk_event=event.id)
+          type: boolean
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        localspace:
+          $ref: '#/components/schemas/ObjectLocalspaceForVwWithDOI'
+        provenance:
+          $ref: '#/components/schemas/ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup'
+        origin:
+          $ref: '#/components/schemas/ObjectOriginForMagnitudesOriginsEventsAndEventsGroup'
+        magnitude:
+          $ref: '#/components/schemas/ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup'
     ObjectOriginFlagPostOutput_origin_flag_inner:
       example:
         note: my note
