@@ -60,9 +60,9 @@ docs/DeleteApi.md
 docs/EarthwormApiApi.md
 docs/Environment.md
 docs/GetApi.md
-docs/GetCatalog200Response.md
 docs/GetEvent200Response.md
 docs/GetEvent200ResponseData.md
+docs/GetEventsCatalog200Response.md
 docs/GetEventsGroup200Response.md
 docs/GetLocalspace200Response.md
 docs/GetLocalspace200ResponseAllOf.md
@@ -247,9 +247,9 @@ src/main/java/org/ingv/dante/model/AddTypeEventRequest.java
 src/main/java/org/ingv/dante/model/AddTypeMagnitudeRequest.java
 src/main/java/org/ingv/dante/model/AddTypeOriginRequest.java
 src/main/java/org/ingv/dante/model/Environment.java
-src/main/java/org/ingv/dante/model/GetCatalog200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200Response.java
 src/main/java/org/ingv/dante/model/GetEvent200ResponseData.java
+src/main/java/org/ingv/dante/model/GetEventsCatalog200Response.java
 src/main/java/org/ingv/dante/model/GetEventsGroup200Response.java
 src/main/java/org/ingv/dante/model/GetLocalspace200Response.java
 src/main/java/org/ingv/dante/model/GetLocalspace200ResponseAllOf.java
@@ -404,9 +404,9 @@ src/test/java/org/ingv/dante/model/AddTypeEventRequestTest.java
 src/test/java/org/ingv/dante/model/AddTypeMagnitudeRequestTest.java
 src/test/java/org/ingv/dante/model/AddTypeOriginRequestTest.java
 src/test/java/org/ingv/dante/model/EnvironmentTest.java
-src/test/java/org/ingv/dante/model/GetCatalog200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseDataTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseTest.java
+src/test/java/org/ingv/dante/model/GetEventsCatalog200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEventsGroup200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetLocalspace200ResponseAllOfTest.java
 src/test/java/org/ingv/dante/model/GetLocalspace200ResponseTest.java

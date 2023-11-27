@@ -1,6 +1,6 @@
 
 
-# GetCatalog200Response
+# GetEventsCatalog200Response
 
 
 ## Properties

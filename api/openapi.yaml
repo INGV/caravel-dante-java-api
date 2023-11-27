@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.1.0-dev
+  version: 3.2.0-dev
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -2561,13 +2561,13 @@ paths:
       tags:
       - get
       x-accepts: application/json
-  /quakedb/v1/catalog:
+  /quakedb/v1/events-catalog:
     get:
       description: "This API returns only the \"catalogs\". \n All `catalogs` are\
         \ identified by `event.localspace.environment=catalog` and the name of catalog\
         \ is `event.localspace.name`. \n\n To search a specific catalog, use `whereeventlocalspacenamein`\
         \ parameter and/or `doi` paramenter."
-      operationId: getCatalog
+      operationId: getEventsCatalog
       parameters:
       - description: Select date start (i.e. 2016-06-22T16:52:06.260Z).
         in: query
@@ -3027,7 +3027,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getCatalog_200_response'
+                $ref: '#/components/schemas/getEventsCatalog_200_response'
           description: Operation successful
           headers:
             Cache-Control:
@@ -7304,7 +7304,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/getCatalog_200_response'
+            $ref: '#/components/schemas/getEventsCatalog_200_response'
       description: Operation successful
       headers:
         Cache-Control:
@@ -13297,7 +13297,7 @@ components:
             $ref: '#/components/schemas/ObjectMagnitudesOriginsEventsAndEventsGroup'
           type: array
       type: object
-    getCatalog_200_response:
+    getEventsCatalog_200_response:
       example:
         data:
         - magnitudedirectlinktoorigin: false

@@ -4,7 +4,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**addCatalog**](StoreApi.md#addCatalog) | **POST** /quakedb/v1/catalog | Add a new catalog to the DB |
+| [**addCatalog**](StoreApi.md#addCatalog) | **POST** /quakedb/v1/events-catalog | Add a new catalog to the DB |
 | [**addEvent**](StoreApi.md#addEvent) | **POST** /quakedb/v1/event | Add a new event to the DB |
 | [**addFocalmechanism**](StoreApi.md#addFocalmechanism) | **POST** /quakedb/v1/focalmechanism | Add a new focalmechanism(s) to the DB |
 | [**addLocalspace**](StoreApi.md#addLocalspace) | **POST** /quakedb/table/v1/localspace | Add a new localspace to the DB |
