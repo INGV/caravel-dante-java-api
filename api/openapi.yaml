@@ -7770,6 +7770,8 @@ components:
           type: string
         environment:
           $ref: '#/components/schemas/environment'
+      required:
+      - name
       type: object
     ObjectLocalspaceForVwWithDOI:
       example:
@@ -7787,6 +7789,8 @@ components:
           description: DOI Resource. i.e. 10.13127/TDMT | varchar(255)
           example: 10.13127/TDMT
           type: string
+      required:
+      - name
       type: object
     ObjectTableLocalspace:
       example:
@@ -7838,6 +7842,8 @@ components:
           format: date-time
           readOnly: true
           type: string
+      required:
+      - name
       type: object
     ObjectPickEw:
       example:
