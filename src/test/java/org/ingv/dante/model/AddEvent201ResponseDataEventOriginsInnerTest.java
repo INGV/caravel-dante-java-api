@@ -20,14 +20,14 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
 import org.ingv.dante.model.ObjectFocalmechanismPostOutputFocalmechanismsInner;
+import org.ingv.dante.model.UpdateEvent200ResponseDataEvent;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for AddEvent201ResponseDataEventOriginsInner
@@ -41,6 +41,22 @@ public class AddEvent201ResponseDataEventOriginsInnerTest {
     @Test
     public void testAddEvent201ResponseDataEventOriginsInner() {
         // TODO: test AddEvent201ResponseDataEventOriginsInner
+    }
+
+    /**
+     * Test the property 'magnitudes'
+     */
+    @Test
+    public void magnitudesTest() {
+        // TODO: test magnitudes
+    }
+
+    /**
+     * Test the property 'focalmechanisms'
+     */
+    @Test
+    public void focalmechanismsTest() {
+        // TODO: test focalmechanisms
     }
 
     /**
@@ -65,22 +81,6 @@ public class AddEvent201ResponseDataEventOriginsInnerTest {
     @Test
     public void localspaceTest() {
         // TODO: test localspace
-    }
-
-    /**
-     * Test the property 'magnitudes'
-     */
-    @Test
-    public void magnitudesTest() {
-        // TODO: test magnitudes
-    }
-
-    /**
-     * Test the property 'focalmechanisms'
-     */
-    @Test
-    public void focalmechanismsTest() {
-        // TODO: test focalmechanisms
     }
 
 }

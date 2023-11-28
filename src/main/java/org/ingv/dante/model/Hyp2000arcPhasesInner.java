@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -35,13 +35,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcPhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:01:25.778231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class Hyp2000arcPhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -161,11 +164,11 @@ public class Hyp2000arcPhasesInner {
 
   public static final String SERIALIZED_NAME_CCNTR = "ccntr";
   @SerializedName(SERIALIZED_NAME_CCNTR)
-  private List<Long> ccntr = new ArrayList<>();
+  private List<Long> ccntr;
 
   public static final String SERIALIZED_NAME_CAAV = "caav";
   @SerializedName(SERIALIZED_NAME_CAAV)
-  private List<Long> caav = new ArrayList<>();
+  private List<Long> caav;
 
   public static final String SERIALIZED_NAME_AMPLITUDE = "amplitude";
   @SerializedName(SERIALIZED_NAME_AMPLITUDE)
@@ -209,7 +212,6 @@ public class Hyp2000arcPhasesInner {
    * @return net
   **/
   @javax.annotation.Nonnull
-
   public String getNet() {
     return net;
   }
@@ -231,7 +233,6 @@ public class Hyp2000arcPhasesInner {
    * @return sta
   **/
   @javax.annotation.Nonnull
-
   public String getSta() {
     return sta;
   }
@@ -253,7 +254,6 @@ public class Hyp2000arcPhasesInner {
    * @return comp
   **/
   @javax.annotation.Nonnull
-
   public String getComp() {
     return comp;
   }
@@ -275,7 +275,6 @@ public class Hyp2000arcPhasesInner {
    * @return loc
   **/
   @javax.annotation.Nonnull
-
   public String getLoc() {
     return loc;
   }
@@ -297,7 +296,6 @@ public class Hyp2000arcPhasesInner {
    * @return plabel
   **/
   @javax.annotation.Nullable
-
   public String getPlabel() {
     return plabel;
   }
@@ -319,7 +317,6 @@ public class Hyp2000arcPhasesInner {
    * @return slabel
   **/
   @javax.annotation.Nullable
-
   public String getSlabel() {
     return slabel;
   }
@@ -341,7 +338,6 @@ public class Hyp2000arcPhasesInner {
    * @return ponset
   **/
   @javax.annotation.Nullable
-
   public String getPonset() {
     return ponset;
   }
@@ -363,7 +359,6 @@ public class Hyp2000arcPhasesInner {
    * @return sonset
   **/
   @javax.annotation.Nullable
-
   public String getSonset() {
     return sonset;
   }
@@ -385,7 +380,6 @@ public class Hyp2000arcPhasesInner {
    * @return pat
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getPat() {
     return pat;
   }
@@ -407,7 +401,6 @@ public class Hyp2000arcPhasesInner {
    * @return sat
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getSat() {
     return sat;
   }
@@ -429,7 +422,6 @@ public class Hyp2000arcPhasesInner {
    * @return pres
   **/
   @javax.annotation.Nullable
-
   public Double getPres() {
     return pres;
   }
@@ -451,7 +443,6 @@ public class Hyp2000arcPhasesInner {
    * @return sres
   **/
   @javax.annotation.Nullable
-
   public Double getSres() {
     return sres;
   }
@@ -473,7 +464,6 @@ public class Hyp2000arcPhasesInner {
    * @return pqual
   **/
   @javax.annotation.Nullable
-
   public Double getPqual() {
     return pqual;
   }
@@ -495,7 +485,6 @@ public class Hyp2000arcPhasesInner {
    * @return squal
   **/
   @javax.annotation.Nullable
-
   public Double getSqual() {
     return squal;
   }
@@ -517,7 +506,6 @@ public class Hyp2000arcPhasesInner {
    * @return codalen
   **/
   @javax.annotation.Nullable
-
   public Double getCodalen() {
     return codalen;
   }
@@ -539,7 +527,6 @@ public class Hyp2000arcPhasesInner {
    * @return codawt
   **/
   @javax.annotation.Nullable
-
   public Double getCodawt() {
     return codawt;
   }
@@ -561,7 +548,6 @@ public class Hyp2000arcPhasesInner {
    * @return pfm
   **/
   @javax.annotation.Nullable
-
   public String getPfm() {
     return pfm;
   }
@@ -583,7 +569,6 @@ public class Hyp2000arcPhasesInner {
    * @return sfm
   **/
   @javax.annotation.Nullable
-
   public String getSfm() {
     return sfm;
   }
@@ -605,7 +590,6 @@ public class Hyp2000arcPhasesInner {
    * @return datasrc
   **/
   @javax.annotation.Nullable
-
   public String getDatasrc() {
     return datasrc;
   }
@@ -627,7 +611,6 @@ public class Hyp2000arcPhasesInner {
    * @return md
   **/
   @javax.annotation.Nullable
-
   public Double getMd() {
     return md;
   }
@@ -649,7 +632,6 @@ public class Hyp2000arcPhasesInner {
    * @return azm
   **/
   @javax.annotation.Nullable
-
   public Double getAzm() {
     return azm;
   }
@@ -671,7 +653,6 @@ public class Hyp2000arcPhasesInner {
    * @return takeoff
   **/
   @javax.annotation.Nullable
-
   public Double getTakeoff() {
     return takeoff;
   }
@@ -693,7 +674,6 @@ public class Hyp2000arcPhasesInner {
    * @return dist
   **/
   @javax.annotation.Nullable
-
   public Double getDist() {
     return dist;
   }
@@ -715,7 +695,6 @@ public class Hyp2000arcPhasesInner {
    * @return pwt
   **/
   @javax.annotation.Nullable
-
   public Double getPwt() {
     return pwt;
   }
@@ -737,7 +716,6 @@ public class Hyp2000arcPhasesInner {
    * @return swt
   **/
   @javax.annotation.Nullable
-
   public Double getSwt() {
     return swt;
   }
@@ -759,7 +737,6 @@ public class Hyp2000arcPhasesInner {
    * @return pamp
   **/
   @javax.annotation.Nullable
-
   public Double getPamp() {
     return pamp;
   }
@@ -781,7 +758,6 @@ public class Hyp2000arcPhasesInner {
    * @return codalenObs
   **/
   @javax.annotation.Nullable
-
   public Double getCodalenObs() {
     return codalenObs;
   }
@@ -811,7 +787,6 @@ public class Hyp2000arcPhasesInner {
    * @return ccntr
   **/
   @javax.annotation.Nullable
-
   public List<Long> getCcntr() {
     return ccntr;
   }
@@ -841,7 +816,6 @@ public class Hyp2000arcPhasesInner {
    * @return caav
   **/
   @javax.annotation.Nullable
-
   public List<Long> getCaav() {
     return caav;
   }
@@ -863,7 +837,6 @@ public class Hyp2000arcPhasesInner {
    * @return amplitude
   **/
   @javax.annotation.Nullable
-
   public Float getAmplitude() {
     return amplitude;
   }
@@ -885,7 +858,6 @@ public class Hyp2000arcPhasesInner {
    * @return ampUnitsCode
   **/
   @javax.annotation.Nullable
-
   public Long getAmpUnitsCode() {
     return ampUnitsCode;
   }
@@ -907,7 +879,6 @@ public class Hyp2000arcPhasesInner {
    * @return ampType
   **/
   @javax.annotation.Nullable
-
   public Long getAmpType() {
     return ampType;
   }
@@ -929,7 +900,6 @@ public class Hyp2000arcPhasesInner {
    * @return ampMag
   **/
   @javax.annotation.Nullable
-
   public Float getAmpMag() {
     return ampMag;
   }
@@ -951,7 +921,6 @@ public class Hyp2000arcPhasesInner {
    * @return ampMagWeightCode
   **/
   @javax.annotation.Nullable
-
   public Long getAmpMagWeightCode() {
     return ampMagWeightCode;
   }
@@ -973,7 +942,6 @@ public class Hyp2000arcPhasesInner {
    * @return importanceP
   **/
   @javax.annotation.Nullable
-
   public Float getImportanceP() {
     return importanceP;
   }
@@ -995,7 +963,6 @@ public class Hyp2000arcPhasesInner {
    * @return importanceS
   **/
   @javax.annotation.Nullable
-
   public Float getImportanceS() {
     return importanceS;
   }
@@ -1213,24 +1180,25 @@ public class Hyp2000arcPhasesInner {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to Hyp2000arcPhasesInner
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to Hyp2000arcPhasesInner
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!Hyp2000arcPhasesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!Hyp2000arcPhasesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in Hyp2000arcPhasesInner is not found in the empty JSON string", Hyp2000arcPhasesInner.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : Hyp2000arcPhasesInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
@@ -1265,11 +1233,11 @@ public class Hyp2000arcPhasesInner {
         throw new IllegalArgumentException(String.format("Expected the field `datasrc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasrc").toString()));
       }
       // ensure the optional json data is an array if present
-      if (jsonObj.get("ccntr") != null && !jsonObj.get("ccntr").isJsonArray()) {
+      if (jsonObj.get("ccntr") != null && !jsonObj.get("ccntr").isJsonNull() && !jsonObj.get("ccntr").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `ccntr` to be an array in the JSON string but got `%s`", jsonObj.get("ccntr").toString()));
       }
       // ensure the optional json data is an array if present
-      if (jsonObj.get("caav") != null && !jsonObj.get("caav").isJsonArray()) {
+      if (jsonObj.get("caav") != null && !jsonObj.get("caav").isJsonNull() && !jsonObj.get("caav").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `caav` to be an array in the JSON string but got `%s`", jsonObj.get("caav").toString()));
       }
   }
@@ -1311,8 +1279,9 @@ public class Hyp2000arcPhasesInner {
 
            @Override
            public Hyp2000arcPhasesInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              Hyp2000arcPhasesInner instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

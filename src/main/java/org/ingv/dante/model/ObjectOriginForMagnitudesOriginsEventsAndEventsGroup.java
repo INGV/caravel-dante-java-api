@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspaceForVw;
 import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
 import org.ingv.dante.model.ObjectTypeOrigin;
@@ -37,13 +37,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -51,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:01:25.778231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -165,7 +168,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -187,7 +189,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
@@ -209,7 +210,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return ot
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getOt() {
     return ot;
   }
@@ -233,7 +233,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return lat
   **/
   @javax.annotation.Nullable
-
   public Double getLat() {
     return lat;
   }
@@ -257,7 +256,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return lon
   **/
   @javax.annotation.Nullable
-
   public Double getLon() {
     return lon;
   }
@@ -279,7 +277,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return depth
   **/
   @javax.annotation.Nullable
-
   public Double getDepth() {
     return depth;
   }
@@ -301,7 +298,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return errOt
   **/
   @javax.annotation.Nullable
-
   public Double getErrOt() {
     return errOt;
   }
@@ -323,7 +319,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return errH
   **/
   @javax.annotation.Nullable
-
   public Double getErrH() {
     return errH;
   }
@@ -345,7 +340,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return errZ
   **/
   @javax.annotation.Nullable
-
   public Double getErrZ() {
     return errZ;
   }
@@ -367,7 +361,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return errLat
   **/
   @javax.annotation.Nullable
-
   public Double getErrLat() {
     return errLat;
   }
@@ -389,7 +382,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return errLon
   **/
   @javax.annotation.Nullable
-
   public Double getErrLon() {
     return errLon;
   }
@@ -411,7 +403,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return quality
   **/
   @javax.annotation.Nullable
-
   public String getQuality() {
     return quality;
   }
@@ -433,7 +424,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return associatedPhaseCount
   **/
   @javax.annotation.Nullable
-
   public Long getAssociatedPhaseCount() {
     return associatedPhaseCount;
   }
@@ -455,7 +445,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return associatedStationCount
   **/
   @javax.annotation.Nullable
-
   public Long getAssociatedStationCount() {
     return associatedStationCount;
   }
@@ -477,7 +466,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return usedPhaseCount
   **/
   @javax.annotation.Nullable
-
   public Long getUsedPhaseCount() {
     return usedPhaseCount;
   }
@@ -499,7 +487,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return usedStationCount
   **/
   @javax.annotation.Nullable
-
   public Long getUsedStationCount() {
     return usedStationCount;
   }
@@ -521,7 +508,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return region
   **/
   @javax.annotation.Nullable
-
   public String getRegion() {
     return region;
   }
@@ -537,7 +523,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return modified
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getModified() {
     return modified;
   }
@@ -550,7 +535,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return inserted
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
@@ -569,7 +553,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return typeOrigin
   **/
   @javax.annotation.Nullable
-
   public ObjectTypeOrigin getTypeOrigin() {
     return typeOrigin;
   }
@@ -591,7 +574,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return localspace
   **/
   @javax.annotation.Nullable
-
   public ObjectLocalspaceForVw getLocalspace() {
     return localspace;
   }
@@ -613,7 +595,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return provenance
   **/
   @javax.annotation.Nullable
-
   public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup getProvenance() {
     return provenance;
   }
@@ -796,17 +777,18 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectOriginForMagnitudesOriginsEventsAndEventsGroup is not found in the empty JSON string", ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonNull()) && !jsonObj.get("quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));
       }
@@ -815,15 +797,15 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
       }
       // validate the optional field `type_origin`
       if (jsonObj.get("type_origin") != null && !jsonObj.get("type_origin").isJsonNull()) {
-        ObjectTypeOrigin.validateJsonObject(jsonObj.getAsJsonObject("type_origin"));
+        ObjectTypeOrigin.validateJsonElement(jsonObj.get("type_origin"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspaceForVw.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspaceForVw.validateJsonElement(jsonObj.get("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.validateJsonElement(jsonObj.get("provenance"));
       }
   }
 
@@ -864,8 +846,9 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
            @Override
            public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectOriginForMagnitudesOriginsEventsAndEventsGroup instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

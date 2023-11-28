@@ -14,13 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import org.ingv.dante.model.Quake2kSchemaEwLogo;
 import org.ingv.dante.model.Quake2kSchemaEwMessage;
 
@@ -34,13 +34,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * Quake2kSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:01:25.778231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class Quake2kSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
@@ -72,7 +75,6 @@ public class Quake2kSchema {
    * @return ewMessage
   **/
   @javax.annotation.Nullable
-
   public Quake2kSchemaEwMessage getEwMessage() {
     return ewMessage;
   }
@@ -94,7 +96,6 @@ public class Quake2kSchema {
    * @return ewLogo
   **/
   @javax.annotation.Nullable
-
   public Quake2kSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
@@ -206,24 +207,25 @@ public class Quake2kSchema {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to Quake2kSchema
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to Quake2kSchema
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!Quake2kSchema.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!Quake2kSchema.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in Quake2kSchema is not found in the empty JSON string", Quake2kSchema.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `ewMessage`
       if (jsonObj.get("ewMessage") != null && !jsonObj.get("ewMessage").isJsonNull()) {
-        Quake2kSchemaEwMessage.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
+        Quake2kSchemaEwMessage.validateJsonElement(jsonObj.get("ewMessage"));
       }
       // validate the optional field `ewLogo`
       if (jsonObj.get("ewLogo") != null && !jsonObj.get("ewLogo").isJsonNull()) {
-        Quake2kSchemaEwLogo.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
+        Quake2kSchemaEwLogo.validateJsonElement(jsonObj.get("ewLogo"));
       }
   }
 
@@ -264,8 +266,9 @@ public class Quake2kSchema {
 
            @Override
            public Quake2kSchema read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              Quake2kSchema instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

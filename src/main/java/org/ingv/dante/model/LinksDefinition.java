@@ -14,13 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -33,13 +33,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -47,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * LinksDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:01:25.778231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class LinksDefinition {
   public static final String SERIALIZED_NAME_FIRST = "first";
   @SerializedName(SERIALIZED_NAME_FIRST)
@@ -79,7 +82,6 @@ public class LinksDefinition {
    * @return first
   **/
   @javax.annotation.Nullable
-
   public String getFirst() {
     return first;
   }
@@ -101,7 +103,6 @@ public class LinksDefinition {
    * @return last
   **/
   @javax.annotation.Nullable
-
   public String getLast() {
     return last;
   }
@@ -123,7 +124,6 @@ public class LinksDefinition {
    * @return prev
   **/
   @javax.annotation.Nullable
-
   public String getPrev() {
     return prev;
   }
@@ -145,7 +145,6 @@ public class LinksDefinition {
    * @return next
   **/
   @javax.annotation.Nullable
-
   public String getNext() {
     return next;
   }
@@ -274,17 +273,18 @@ public class LinksDefinition {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to LinksDefinition
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to LinksDefinition
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!LinksDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!LinksDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in LinksDefinition is not found in the empty JSON string", LinksDefinition.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("first") != null && !jsonObj.get("first").isJsonNull()) && !jsonObj.get("first").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `first` to be a primitive type in the JSON string but got `%s`", jsonObj.get("first").toString()));
       }
@@ -336,8 +336,9 @@ public class LinksDefinition {
 
            @Override
            public LinksDefinition read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              LinksDefinition instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

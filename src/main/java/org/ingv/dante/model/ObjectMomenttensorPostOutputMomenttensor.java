@@ -14,13 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -34,13 +34,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorPostOutputMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:01:25.778231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class ObjectMomenttensorPostOutputMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -76,7 +79,6 @@ public class ObjectMomenttensorPostOutputMomenttensor {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -98,7 +100,6 @@ public class ObjectMomenttensorPostOutputMomenttensor {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
@@ -120,7 +121,6 @@ public class ObjectMomenttensorPostOutputMomenttensor {
    * @return localspace
   **/
   @javax.annotation.Nullable
-
   public AddEvent201ResponseDataEventLocalspace getLocalspace() {
     return localspace;
   }
@@ -246,20 +246,21 @@ public class ObjectMomenttensorPostOutputMomenttensor {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectMomenttensorPostOutputMomenttensor
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectMomenttensorPostOutputMomenttensor
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectMomenttensorPostOutputMomenttensor.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectMomenttensorPostOutputMomenttensor.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMomenttensorPostOutputMomenttensor is not found in the empty JSON string", ObjectMomenttensorPostOutputMomenttensor.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        AddEvent201ResponseDataEventLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        AddEvent201ResponseDataEventLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
   }
 
@@ -300,8 +301,9 @@ public class ObjectMomenttensorPostOutputMomenttensor {
 
            @Override
            public ObjectMomenttensorPostOutputMomenttensor read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectMomenttensorPostOutputMomenttensor instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

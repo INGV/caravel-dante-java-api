@@ -13,8 +13,10 @@
 
 package org.ingv.dante;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T10:58:46.290844Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class Configuration {
+    public static final String VERSION = "3.1.0";
+
     private static ApiClient defaultApiClient = new ApiClient();
 
     /**

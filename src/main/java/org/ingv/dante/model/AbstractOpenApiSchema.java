@@ -17,14 +17,13 @@ import org.ingv.dante.ApiException;
 import java.util.Objects;
 import java.lang.reflect.Type;
 import java.util.Map;
-import javax.ws.rs.core.GenericType;
 
 //import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
  * Abstract class for oneOf,anyOf schemas defined in OpenAPI spec
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T10:58:46.290844Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public abstract class AbstractOpenApiSchema {
 
     // store the actual instance of the schema/object
@@ -46,7 +45,7 @@ public abstract class AbstractOpenApiSchema {
      *
      * @return an instance of the actual schema/object
      */
-    public abstract Map<String, GenericType> getSchemas();
+    public abstract Map<String, Class<?>> getSchemas();
 
     /**
      * Get the actual instance

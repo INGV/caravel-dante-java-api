@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.AddHEwPickScnl201ResponseDataPicksInner;
 
@@ -35,13 +35,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,11 +52,11 @@ import org.ingv.dante.JSON;
 /**
  * AddHEwPickScnl201ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:01:25.778231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class AddHEwPickScnl201ResponseData {
   public static final String SERIALIZED_NAME_PICKS = "picks";
   @SerializedName(SERIALIZED_NAME_PICKS)
-  private List<AddHEwPickScnl201ResponseDataPicksInner> picks = new ArrayList<>();
+  private List<AddHEwPickScnl201ResponseDataPicksInner> picks;
 
   public AddHEwPickScnl201ResponseData() {
   }
@@ -77,7 +80,6 @@ public class AddHEwPickScnl201ResponseData {
    * @return picks
   **/
   @javax.annotation.Nullable
-
   public List<AddHEwPickScnl201ResponseDataPicksInner> getPicks() {
     return picks;
   }
@@ -186,17 +188,18 @@ public class AddHEwPickScnl201ResponseData {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddHEwPickScnl201ResponseData
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to AddHEwPickScnl201ResponseData
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!AddHEwPickScnl201ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AddHEwPickScnl201ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddHEwPickScnl201ResponseData is not found in the empty JSON string", AddHEwPickScnl201ResponseData.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (jsonObj.get("picks") != null && !jsonObj.get("picks").isJsonNull()) {
         JsonArray jsonArraypicks = jsonObj.getAsJsonArray("picks");
         if (jsonArraypicks != null) {
@@ -207,7 +210,7 @@ public class AddHEwPickScnl201ResponseData {
 
           // validate the optional field `picks` (array)
           for (int i = 0; i < jsonArraypicks.size(); i++) {
-            AddHEwPickScnl201ResponseDataPicksInner.validateJsonObject(jsonArraypicks.get(i).getAsJsonObject());
+            AddHEwPickScnl201ResponseDataPicksInner.validateJsonElement(jsonArraypicks.get(i));
           };
         }
       }
@@ -250,8 +253,9 @@ public class AddHEwPickScnl201ResponseData {
 
            @Override
            public AddHEwPickScnl201ResponseData read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              AddHEwPickScnl201ResponseData instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

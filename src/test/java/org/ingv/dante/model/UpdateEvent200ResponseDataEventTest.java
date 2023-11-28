@@ -19,33 +19,48 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import org.ingv.dante.model.ObjectTableTypeOrigin;
+import java.util.Arrays;
+import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-
 /**
- * Model tests for GetTypeOrigin200ResponseAllOf
+ * Model tests for UpdateEvent200ResponseDataEvent
  */
-public class GetTypeOrigin200ResponseAllOfTest {
-    private final GetTypeOrigin200ResponseAllOf model = new GetTypeOrigin200ResponseAllOf();
+public class UpdateEvent200ResponseDataEventTest {
+    private final UpdateEvent200ResponseDataEvent model = new UpdateEvent200ResponseDataEvent();
 
     /**
-     * Model tests for GetTypeOrigin200ResponseAllOf
+     * Model tests for UpdateEvent200ResponseDataEvent
      */
     @Test
-    public void testGetTypeOrigin200ResponseAllOf() {
-        // TODO: test GetTypeOrigin200ResponseAllOf
+    public void testUpdateEvent200ResponseDataEvent() {
+        // TODO: test UpdateEvent200ResponseDataEvent
     }
 
     /**
-     * Test the property 'data'
+     * Test the property 'id'
      */
     @Test
-    public void dataTest() {
-        // TODO: test data
+    public void idTest() {
+        // TODO: test id
+    }
+
+    /**
+     * Test the property 'idLocalspace'
+     */
+    @Test
+    public void idLocalspaceTest() {
+        // TODO: test idLocalspace
+    }
+
+    /**
+     * Test the property 'localspace'
+     */
+    @Test
+    public void localspaceTest() {
+        // TODO: test localspace
     }
 
 }

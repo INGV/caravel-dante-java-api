@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.ObjectOrigin;
 
@@ -35,13 +35,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * AddOriginRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:01:25.778231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class AddOriginRequestData {
   public static final String SERIALIZED_NAME_EVENTID = "eventid";
   @SerializedName(SERIALIZED_NAME_EVENTID)
@@ -57,7 +60,7 @@ public class AddOriginRequestData {
 
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<ObjectOrigin> origins = new ArrayList<>();
+  private List<ObjectOrigin> origins;
 
   public AddOriginRequestData() {
   }
@@ -73,7 +76,6 @@ public class AddOriginRequestData {
    * @return eventid
   **/
   @javax.annotation.Nullable
-
   public Long getEventid() {
     return eventid;
   }
@@ -103,7 +105,6 @@ public class AddOriginRequestData {
    * @return origins
   **/
   @javax.annotation.Nullable
-
   public List<ObjectOrigin> getOrigins() {
     return origins;
   }
@@ -215,17 +216,18 @@ public class AddOriginRequestData {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddOriginRequestData
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to AddOriginRequestData
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!AddOriginRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AddOriginRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddOriginRequestData is not found in the empty JSON string", AddOriginRequestData.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (jsonObj.get("origins") != null && !jsonObj.get("origins").isJsonNull()) {
         JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
         if (jsonArrayorigins != null) {
@@ -236,7 +238,7 @@ public class AddOriginRequestData {
 
           // validate the optional field `origins` (array)
           for (int i = 0; i < jsonArrayorigins.size(); i++) {
-            ObjectOrigin.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
+            ObjectOrigin.validateJsonElement(jsonArrayorigins.get(i));
           };
         }
       }
@@ -279,8 +281,9 @@ public class AddOriginRequestData {
 
            @Override
            public AddOriginRequestData read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              AddOriginRequestData instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

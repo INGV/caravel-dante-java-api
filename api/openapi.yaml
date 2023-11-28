@@ -10593,7 +10593,7 @@ components:
       properties:
         magnitudes:
           items:
-            $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
+            $ref: '#/components/schemas/updateEvent_200_response_data_event'
           type: array
     ObjectFocalmechanism:
       example:
@@ -11158,7 +11158,7 @@ components:
       properties:
         strongmotions:
           items:
-            $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
+            $ref: '#/components/schemas/updateEvent_200_response_data_event'
           type: array
     ObjectAmplitude:
       example:
@@ -13710,80 +13710,70 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/updateEventsGroup_request_data'
-    getTypeEvent_200_response_allOf:
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/ObjectTableTypeEvent'
-          type: array
     getTypeEvent_200_response:
       allOf:
       - $ref: '#/components/schemas/MetaDefinition'
-      - $ref: '#/components/schemas/getTypeEvent_200_response_allOf'
+      - properties:
+          data:
+            items:
+              $ref: '#/components/schemas/ObjectTableTypeEvent'
+            type: array
     addTypeEvent_request:
       allOf:
       - $ref: '#/components/schemas/ObjectTableTypeEvent'
       - required:
         - name
         type: object
-    getTypeOrigin_200_response_allOf:
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/ObjectTableTypeOrigin'
-          type: array
     getTypeOrigin_200_response:
       allOf:
       - $ref: '#/components/schemas/MetaDefinition'
-      - $ref: '#/components/schemas/getTypeOrigin_200_response_allOf'
+      - properties:
+          data:
+            items:
+              $ref: '#/components/schemas/ObjectTableTypeOrigin'
+            type: array
     addTypeOrigin_request:
       allOf:
       - $ref: '#/components/schemas/ObjectTableTypeOrigin'
       - required:
         - name
         type: object
-    getTypeMagnitude_200_response_allOf:
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/ObjectTableTypeMagnitude'
-          type: array
     getTypeMagnitude_200_response:
       allOf:
       - $ref: '#/components/schemas/MetaDefinition'
-      - $ref: '#/components/schemas/getTypeMagnitude_200_response_allOf'
+      - properties:
+          data:
+            items:
+              $ref: '#/components/schemas/ObjectTableTypeMagnitude'
+            type: array
     addTypeMagnitude_request:
       allOf:
       - $ref: '#/components/schemas/ObjectTableTypeMagnitude'
       - required:
         - name
         type: object
-    getLocalspace_200_response_allOf:
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/ObjectTableLocalspace'
-          type: array
     getLocalspace_200_response:
       allOf:
       - $ref: '#/components/schemas/MetaDefinition'
-      - $ref: '#/components/schemas/getLocalspace_200_response_allOf'
+      - properties:
+          data:
+            items:
+              $ref: '#/components/schemas/ObjectTableLocalspace'
+            type: array
     addLocalspace_request:
       allOf:
       - $ref: '#/components/schemas/ObjectTableLocalspace'
       - required:
         - name
         type: object
-    getProvenance_200_response_allOf:
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/ObjectTableProvenance'
-          type: array
     getProvenance_200_response:
       allOf:
       - $ref: '#/components/schemas/MetaDefinition'
-      - $ref: '#/components/schemas/getProvenance_200_response_allOf'
+      - properties:
+          data:
+            items:
+              $ref: '#/components/schemas/ObjectTableProvenance'
+            type: array
     addProvenance_request:
       allOf:
       - $ref: '#/components/schemas/ObjectTableProvenance'
@@ -16448,29 +16438,15 @@ components:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
           type: string
-    addEvent_201_response_data_event_origins_inner_allOf:
-      example:
-        id_localspace: 182491
-        localspace:
-          name: hew1_mole
-        id: 14932631
-      properties:
-        id:
-          description: Unique incremental id | bigint(20)
-          example: 14932631
-          format: int64
-          type: integer
-        id_localspace:
-          description: Localspace Id | bigint(19)
-          example: 182491
-          format: int64
-          nullable: true
-          type: integer
-        localspace:
-          $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
     addEvent_201_response_data_event_origins_inner:
       allOf:
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
+      - properties:
+          id:
+            $ref: '#/components/schemas/id'
+          id_localspace:
+            $ref: '#/components/schemas/id_localspace'
+          localspace:
+            $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
       - $ref: '#/components/schemas/ObjectMagnitudePostOutput'
       - $ref: '#/components/schemas/ObjectFocalmechanismPostOutput'
     addEvent_201_response_data_event:
@@ -16826,6 +16802,26 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/updateEvent_request_data'
+    updateEvent_200_response_data_event:
+      example:
+        id_localspace: 182491
+        localspace:
+          name: hew1_mole
+        id: 14932631
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        id_localspace:
+          description: Localspace Id | bigint(19)
+          example: 182491
+          format: int64
+          nullable: true
+          type: integer
+        localspace:
+          $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
     updateEvent_200_response_data:
       example:
         event:
@@ -16835,7 +16831,7 @@ components:
           id: 14932631
       properties:
         event:
-          $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
+          $ref: '#/components/schemas/updateEvent_200_response_data_event'
     updateEvent_200_response:
       example:
         data:
@@ -16862,16 +16858,11 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/addOrigin_request_data'
-    addOrigin_201_response_data_origins_inner_allOf:
-      properties:
-        id:
-          description: Unique incremental id | bigint(20)
-          example: 14932631
-          format: int64
-          type: integer
     addOrigin_201_response_data_origins_inner:
       allOf:
-      - $ref: '#/components/schemas/addOrigin_201_response_data_origins_inner_allOf'
+      - properties:
+          id:
+            $ref: '#/components/schemas/id'
       - $ref: '#/components/schemas/ObjectMagnitudePostOutput'
     addOrigin_201_response_data:
       example:
@@ -17008,16 +16999,20 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/hyp2000arcSchema'
-    addEwHyp2000arc_201_response_data_event_allOf:
-      properties:
-        origins:
-          items:
-            $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
-          type: array
     addEwHyp2000arc_201_response_data_event:
       allOf:
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
-      - $ref: '#/components/schemas/addEwHyp2000arc_201_response_data_event_allOf'
+      - properties:
+          id:
+            $ref: '#/components/schemas/id'
+          id_localspace:
+            $ref: '#/components/schemas/id_localspace'
+          localspace:
+            $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
+      - properties:
+          origins:
+            items:
+              $ref: '#/components/schemas/updateEvent_200_response_data_event'
+            type: array
     addEwHyp2000arc_201_response_data:
       example:
         event: null
@@ -17039,14 +17034,25 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/pick_scnlSchema'
-    addHEwPickScnl_201_response_data_picks_inner_allOf:
+    addHEwPickScnl_201_response_data_picks_inner_allOf_pick_ew:
       properties:
-        pick_ew:
-          $ref: '#/components/schemas/addOrigin_201_response_data_origins_inner_allOf'
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
     addHEwPickScnl_201_response_data_picks_inner:
       allOf:
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
-      - $ref: '#/components/schemas/addHEwPickScnl_201_response_data_picks_inner_allOf'
+      - properties:
+          id:
+            $ref: '#/components/schemas/id'
+          id_localspace:
+            $ref: '#/components/schemas/id_localspace'
+          localspace:
+            $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
+      - properties:
+          pick_ew:
+            $ref: '#/components/schemas/addHEwPickScnl_201_response_data_picks_inner_allOf_pick_ew'
     addHEwPickScnl_201_response_data:
       example:
         picks:
@@ -17084,7 +17090,7 @@ components:
       properties:
         strongmotions:
           items:
-            $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
+            $ref: '#/components/schemas/updateEvent_200_response_data_event'
           type: array
     addHEwStrongmotionii_201_response:
       example:
@@ -17300,7 +17306,13 @@ components:
           type: number
     ObjectFocalmechanismPostOutput_focalmechanisms_inner:
       allOf:
-      - $ref: '#/components/schemas/addEvent_201_response_data_event_origins_inner_allOf'
+      - properties:
+          id:
+            $ref: '#/components/schemas/id'
+          id_localspace:
+            $ref: '#/components/schemas/id_localspace'
+          localspace:
+            $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
       - $ref: '#/components/schemas/ObjectMomenttensorPostOutput'
     ObjectMomenttensor_tdmt_stations_inner:
       example:

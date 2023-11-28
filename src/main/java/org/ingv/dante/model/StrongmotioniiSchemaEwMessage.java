@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.StrongmotioniiSchemaEwMessageRSAInner;
 import org.ingv.dante.model.TypeOriginName;
@@ -37,13 +37,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -51,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:01:25.778231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class StrongmotioniiSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -119,7 +122,7 @@ public class StrongmotioniiSchemaEwMessage {
 
   public static final String SERIALIZED_NAME_R_S_A = "RSA";
   @SerializedName(SERIALIZED_NAME_R_S_A)
-  private List<StrongmotioniiSchemaEwMessageRSAInner> RSA = new ArrayList<>();
+  private List<StrongmotioniiSchemaEwMessageRSAInner> RSA;
 
   public StrongmotioniiSchemaEwMessage() {
   }
@@ -135,7 +138,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return quakeId
   **/
   @javax.annotation.Nullable
-
   public Long getQuakeId() {
     return quakeId;
   }
@@ -157,7 +159,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return version
   **/
   @javax.annotation.Nonnull
-
   public TypeOriginName getVersion() {
     return version;
   }
@@ -179,7 +180,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return network
   **/
   @javax.annotation.Nullable
-
   public String getNetwork() {
     return network;
   }
@@ -201,7 +201,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return station
   **/
   @javax.annotation.Nullable
-
   public String getStation() {
     return station;
   }
@@ -223,7 +222,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return component
   **/
   @javax.annotation.Nullable
-
   public String getComponent() {
     return component;
   }
@@ -245,7 +243,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return location
   **/
   @javax.annotation.Nullable
-
   public String getLocation() {
     return location;
   }
@@ -267,7 +264,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return qAuthor
   **/
   @javax.annotation.Nullable
-
   public String getqAuthor() {
     return qAuthor;
   }
@@ -289,7 +285,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return time
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getTime() {
     return time;
   }
@@ -311,7 +306,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return alternateTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getAlternateTime() {
     return alternateTime;
   }
@@ -333,7 +327,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return alternateCode
   **/
   @javax.annotation.Nullable
-
   public Long getAlternateCode() {
     return alternateCode;
   }
@@ -355,7 +348,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return pga
   **/
   @javax.annotation.Nullable
-
   public Float getPga() {
     return pga;
   }
@@ -377,7 +369,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return pgaTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getPgaTime() {
     return pgaTime;
   }
@@ -399,7 +390,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return pgv
   **/
   @javax.annotation.Nullable
-
   public Float getPgv() {
     return pgv;
   }
@@ -421,7 +411,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return pgvTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getPgvTime() {
     return pgvTime;
   }
@@ -443,7 +432,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return pgd
   **/
   @javax.annotation.Nullable
-
   public Float getPgd() {
     return pgd;
   }
@@ -465,7 +453,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return pgdTime
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getPgdTime() {
     return pgdTime;
   }
@@ -495,7 +482,6 @@ public class StrongmotioniiSchemaEwMessage {
    * @return RSA
   **/
   @javax.annotation.Nullable
-
   public List<StrongmotioniiSchemaEwMessageRSAInner> getRSA() {
     return RSA;
   }
@@ -654,24 +640,27 @@ public class StrongmotioniiSchemaEwMessage {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to StrongmotioniiSchemaEwMessage
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to StrongmotioniiSchemaEwMessage
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!StrongmotioniiSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!StrongmotioniiSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in StrongmotioniiSchemaEwMessage is not found in the empty JSON string", StrongmotioniiSchemaEwMessage.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : StrongmotioniiSchemaEwMessage.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `version`
+      TypeOriginName.validateJsonElement(jsonObj.get("version"));
       if ((jsonObj.get("network") != null && !jsonObj.get("network").isJsonNull()) && !jsonObj.get("network").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `network` to be a primitive type in the JSON string but got `%s`", jsonObj.get("network").toString()));
       }
@@ -697,7 +686,7 @@ public class StrongmotioniiSchemaEwMessage {
 
           // validate the optional field `RSA` (array)
           for (int i = 0; i < jsonArrayRSA.size(); i++) {
-            StrongmotioniiSchemaEwMessageRSAInner.validateJsonObject(jsonArrayRSA.get(i).getAsJsonObject());
+            StrongmotioniiSchemaEwMessageRSAInner.validateJsonElement(jsonArrayRSA.get(i));
           };
         }
       }
@@ -740,8 +729,9 @@ public class StrongmotioniiSchemaEwMessage {
 
            @Override
            public StrongmotioniiSchemaEwMessage read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              StrongmotioniiSchemaEwMessage instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

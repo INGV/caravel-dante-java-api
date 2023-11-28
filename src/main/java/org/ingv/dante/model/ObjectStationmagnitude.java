@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectAmplitude;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -35,13 +35,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStationmagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:01:25.778231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class ObjectStationmagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -123,7 +126,6 @@ public class ObjectStationmagnitude {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -142,7 +144,6 @@ public class ObjectStationmagnitude {
    * @return epDistanceKm
   **/
   @javax.annotation.Nullable
-
   public Float getEpDistanceKm() {
     return epDistanceKm;
   }
@@ -164,7 +165,6 @@ public class ObjectStationmagnitude {
    * @return origDistanceKm
   **/
   @javax.annotation.Nullable
-
   public Double getOrigDistanceKm() {
     return origDistanceKm;
   }
@@ -186,7 +186,6 @@ public class ObjectStationmagnitude {
    * @return azimut
   **/
   @javax.annotation.Nullable
-
   public Float getAzimut() {
     return azimut;
   }
@@ -208,7 +207,6 @@ public class ObjectStationmagnitude {
    * @return mag
   **/
   @javax.annotation.Nonnull
-
   public Double getMag() {
     return mag;
   }
@@ -230,7 +228,6 @@ public class ObjectStationmagnitude {
    * @return errMag
   **/
   @javax.annotation.Nullable
-
   public Double getErrMag() {
     return errMag;
   }
@@ -252,7 +249,6 @@ public class ObjectStationmagnitude {
    * @return weight
   **/
   @javax.annotation.Nullable
-
   public Double getWeight() {
     return weight;
   }
@@ -274,7 +270,6 @@ public class ObjectStationmagnitude {
    * @return magCorrection
   **/
   @javax.annotation.Nullable
-
   public Double getMagCorrection() {
     return magCorrection;
   }
@@ -296,7 +291,6 @@ public class ObjectStationmagnitude {
    * @return isUsed
   **/
   @javax.annotation.Nullable
-
   public Boolean getIsUsed() {
     return isUsed;
   }
@@ -318,7 +312,6 @@ public class ObjectStationmagnitude {
    * @return typeMagnitude
   **/
   @javax.annotation.Nullable
-
   public String getTypeMagnitude() {
     return typeMagnitude;
   }
@@ -334,7 +327,6 @@ public class ObjectStationmagnitude {
    * @return modified
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getModified() {
     return modified;
   }
@@ -347,7 +339,6 @@ public class ObjectStationmagnitude {
    * @return inserted
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
@@ -366,7 +357,6 @@ public class ObjectStationmagnitude {
    * @return amplitude
   **/
   @javax.annotation.Nullable
-
   public ObjectAmplitude getAmplitude() {
     return amplitude;
   }
@@ -523,30 +513,31 @@ public class ObjectStationmagnitude {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectStationmagnitude
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectStationmagnitude
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectStationmagnitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectStationmagnitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectStationmagnitude is not found in the empty JSON string", ObjectStationmagnitude.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectStationmagnitude.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("type_magnitude") != null && !jsonObj.get("type_magnitude").isJsonNull()) && !jsonObj.get("type_magnitude").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_magnitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_magnitude").toString()));
       }
       // validate the optional field `amplitude`
       if (jsonObj.get("amplitude") != null && !jsonObj.get("amplitude").isJsonNull()) {
-        ObjectAmplitude.validateJsonObject(jsonObj.getAsJsonObject("amplitude"));
+        ObjectAmplitude.validateJsonElement(jsonObj.get("amplitude"));
       }
   }
 
@@ -587,8 +578,9 @@ public class ObjectStationmagnitude {
 
            @Override
            public ObjectStationmagnitude read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectStationmagnitude instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

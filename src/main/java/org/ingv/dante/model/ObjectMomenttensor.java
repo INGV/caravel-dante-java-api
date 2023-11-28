@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectMomenttensorRcmt;
 import org.ingv.dante.model.ObjectMomenttensorTdmt;
@@ -38,13 +38,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -52,7 +55,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:01:25.778231Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:45:18.786919Z[Etc/UTC]")
 public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -162,7 +165,6 @@ public class ObjectMomenttensor {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -175,7 +177,6 @@ public class ObjectMomenttensor {
    * @return modified
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getModified() {
     return modified;
   }
@@ -188,7 +189,6 @@ public class ObjectMomenttensor {
    * @return inserted
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
@@ -207,7 +207,6 @@ public class ObjectMomenttensor {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
@@ -229,7 +228,6 @@ public class ObjectMomenttensor {
    * @return originidOut
   **/
   @javax.annotation.Nullable
-
   public Long getOriginidOut() {
     return originidOut;
   }
@@ -251,7 +249,6 @@ public class ObjectMomenttensor {
    * @return magnitudeidOut
   **/
   @javax.annotation.Nullable
-
   public Long getMagnitudeidOut() {
     return magnitudeidOut;
   }
@@ -273,7 +270,6 @@ public class ObjectMomenttensor {
    * @return scalarmoment
   **/
   @javax.annotation.Nullable
-
   public Double getScalarmoment() {
     return scalarmoment;
   }
@@ -295,7 +291,6 @@ public class ObjectMomenttensor {
    * @return mrr
   **/
   @javax.annotation.Nullable
-
   public Double getMrr() {
     return mrr;
   }
@@ -317,7 +312,6 @@ public class ObjectMomenttensor {
    * @return mtt
   **/
   @javax.annotation.Nullable
-
   public Double getMtt() {
     return mtt;
   }
@@ -339,7 +333,6 @@ public class ObjectMomenttensor {
    * @return mpp
   **/
   @javax.annotation.Nullable
-
   public Double getMpp() {
     return mpp;
   }
@@ -361,7 +354,6 @@ public class ObjectMomenttensor {
    * @return mrt
   **/
   @javax.annotation.Nullable
-
   public Double getMrt() {
     return mrt;
   }
@@ -383,7 +375,6 @@ public class ObjectMomenttensor {
    * @return mrp
   **/
   @javax.annotation.Nullable
-
   public Double getMrp() {
     return mrp;
   }
@@ -405,7 +396,6 @@ public class ObjectMomenttensor {
    * @return mtp
   **/
   @javax.annotation.Nullable
-
   public Double getMtp() {
     return mtp;
   }
@@ -427,7 +417,6 @@ public class ObjectMomenttensor {
    * @return clvd
   **/
   @javax.annotation.Nullable
-
   public Double getClvd() {
     return clvd;
   }
@@ -449,7 +438,6 @@ public class ObjectMomenttensor {
    * @return iso
   **/
   @javax.annotation.Nullable
-
   public Double getIso() {
     return iso;
   }
@@ -471,7 +459,6 @@ public class ObjectMomenttensor {
    * @return varianceReduction
   **/
   @javax.annotation.Nullable
-
   public Double getVarianceReduction() {
     return varianceReduction;
   }
@@ -493,7 +480,6 @@ public class ObjectMomenttensor {
    * @return doubleCouple
   **/
   @javax.annotation.Nullable
-
   public Double getDoubleCouple() {
     return doubleCouple;
   }
@@ -515,7 +501,6 @@ public class ObjectMomenttensor {
    * @return typeMomenttensor
   **/
   @javax.annotation.Nonnull
-
   public String getTypeMomenttensor() {
     return typeMomenttensor;
   }
@@ -537,7 +522,6 @@ public class ObjectMomenttensor {
    * @return localspace
   **/
   @javax.annotation.Nullable
-
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
@@ -559,7 +543,6 @@ public class ObjectMomenttensor {
    * @return provenance
   **/
   @javax.annotation.Nullable
-
   public ObjectProvenance getProvenance() {
     return provenance;
   }
@@ -581,7 +564,6 @@ public class ObjectMomenttensor {
    * @return tdmt
   **/
   @javax.annotation.Nullable
-
   public ObjectMomenttensorTdmt getTdmt() {
     return tdmt;
   }
@@ -603,7 +585,6 @@ public class ObjectMomenttensor {
    * @return rcmt
   **/
   @javax.annotation.Nullable
-
   public ObjectMomenttensorRcmt getRcmt() {
     return rcmt;
   }
@@ -787,42 +768,43 @@ public class ObjectMomenttensor {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectMomenttensor
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectMomenttensor
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectMomenttensor.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectMomenttensor.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMomenttensor is not found in the empty JSON string", ObjectMomenttensor.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectMomenttensor.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("type_momenttensor").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_momenttensor` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_momenttensor").toString()));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
       }
       // validate the optional field `tdmt`
       if (jsonObj.get("tdmt") != null && !jsonObj.get("tdmt").isJsonNull()) {
-        ObjectMomenttensorTdmt.validateJsonObject(jsonObj.getAsJsonObject("tdmt"));
+        ObjectMomenttensorTdmt.validateJsonElement(jsonObj.get("tdmt"));
       }
       // validate the optional field `rcmt`
       if (jsonObj.get("rcmt") != null && !jsonObj.get("rcmt").isJsonNull()) {
-        ObjectMomenttensorRcmt.validateJsonObject(jsonObj.getAsJsonObject("rcmt"));
+        ObjectMomenttensorRcmt.validateJsonElement(jsonObj.get("rcmt"));
       }
   }
 
@@ -863,8 +845,9 @@ public class ObjectMomenttensor {
 
            @Override
            public ObjectMomenttensor read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectMomenttensor instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
