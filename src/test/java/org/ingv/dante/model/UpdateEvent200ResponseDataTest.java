@@ -19,10 +19,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
+import java.util.Arrays;
+import org.ingv.dante.model.UpdateEvent200ResponseDataEvent;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 
 /**
  * Model tests for UpdateEvent200ResponseData

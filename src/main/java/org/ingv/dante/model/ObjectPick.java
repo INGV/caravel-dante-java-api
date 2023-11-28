@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectPickEw;
 import org.ingv.dante.model.ObjectProvenance;
@@ -39,13 +39,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -53,7 +56,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectPick
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class ObjectPick {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -153,7 +156,6 @@ public class ObjectPick {
    * @return net
   **/
   @javax.annotation.Nonnull
-
   public String getNet() {
     return net;
   }
@@ -175,7 +177,6 @@ public class ObjectPick {
    * @return sta
   **/
   @javax.annotation.Nonnull
-
   public String getSta() {
     return sta;
   }
@@ -197,7 +198,6 @@ public class ObjectPick {
    * @return cha
   **/
   @javax.annotation.Nonnull
-
   public String getCha() {
     return cha;
   }
@@ -219,7 +219,6 @@ public class ObjectPick {
    * @return loc
   **/
   @javax.annotation.Nullable
-
   public String getLoc() {
     return loc;
   }
@@ -235,7 +234,6 @@ public class ObjectPick {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -248,7 +246,6 @@ public class ObjectPick {
    * @return modified
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getModified() {
     return modified;
   }
@@ -261,7 +258,6 @@ public class ObjectPick {
    * @return inserted
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
@@ -280,7 +276,6 @@ public class ObjectPick {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
@@ -302,7 +297,6 @@ public class ObjectPick {
    * @return qualityClass
   **/
   @javax.annotation.Nullable
-
   public Integer getQualityClass() {
     return qualityClass;
   }
@@ -324,7 +318,6 @@ public class ObjectPick {
    * @return lowerUncertainty
   **/
   @javax.annotation.Nullable
-
   public Float getLowerUncertainty() {
     return lowerUncertainty;
   }
@@ -346,7 +339,6 @@ public class ObjectPick {
    * @return upperUncertainty
   **/
   @javax.annotation.Nullable
-
   public Float getUpperUncertainty() {
     return upperUncertainty;
   }
@@ -368,7 +360,6 @@ public class ObjectPick {
    * @return confidenceLevel
   **/
   @javax.annotation.Nullable
-
   public Float getConfidenceLevel() {
     return confidenceLevel;
   }
@@ -390,7 +381,6 @@ public class ObjectPick {
    * @return arrivalTime
   **/
   @javax.annotation.Nonnull
-
   public OffsetDateTime getArrivalTime() {
     return arrivalTime;
   }
@@ -412,7 +402,6 @@ public class ObjectPick {
    * @return firstmotion
   **/
   @javax.annotation.Nullable
-
   public PickFirstmotion getFirstmotion() {
     return firstmotion;
   }
@@ -434,7 +423,6 @@ public class ObjectPick {
    * @return emersio
   **/
   @javax.annotation.Nullable
-
   public PickEmersio getEmersio() {
     return emersio;
   }
@@ -456,7 +444,6 @@ public class ObjectPick {
    * @return pickEw
   **/
   @javax.annotation.Nullable
-
   public ObjectPickEw getPickEw() {
     return pickEw;
   }
@@ -478,7 +465,6 @@ public class ObjectPick {
    * @return localspace
   **/
   @javax.annotation.Nullable
-
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
@@ -500,7 +486,6 @@ public class ObjectPick {
    * @return provenance
   **/
   @javax.annotation.Nullable
-
   public ObjectProvenance getProvenance() {
     return provenance;
   }
@@ -675,24 +660,25 @@ public class ObjectPick {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectPick
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectPick
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectPick.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectPick.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectPick is not found in the empty JSON string", ObjectPick.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectPick.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
@@ -705,17 +691,25 @@ public class ObjectPick {
       if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
       }
+      // validate the optional field `firstmotion`
+      if (jsonObj.get("firstmotion") != null && !jsonObj.get("firstmotion").isJsonNull()) {
+        PickFirstmotion.validateJsonElement(jsonObj.get("firstmotion"));
+      }
+      // validate the optional field `emersio`
+      if (jsonObj.get("emersio") != null && !jsonObj.get("emersio").isJsonNull()) {
+        PickEmersio.validateJsonElement(jsonObj.get("emersio"));
+      }
       // validate the optional field `pick_ew`
       if (jsonObj.get("pick_ew") != null && !jsonObj.get("pick_ew").isJsonNull()) {
-        ObjectPickEw.validateJsonObject(jsonObj.getAsJsonObject("pick_ew"));
+        ObjectPickEw.validateJsonElement(jsonObj.get("pick_ew"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
       }
   }
 
@@ -756,8 +750,9 @@ public class ObjectPick {
 
            @Override
            public ObjectPick read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectPick instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

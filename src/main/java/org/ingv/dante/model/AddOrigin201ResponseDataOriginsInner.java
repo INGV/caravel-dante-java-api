@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,8 +21,9 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
+import org.ingv.dante.model.UpdateEvent200ResponseDataEvent;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,13 +35,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,48 +52,26 @@ import org.ingv.dante.JSON;
 /**
  * AddOrigin201ResponseDataOriginsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class AddOrigin201ResponseDataOriginsInner {
+  public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
+  @SerializedName(SERIALIZED_NAME_MAGNITUDES)
+  private List<UpdateEvent200ResponseDataEvent> magnitudes;
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Long id;
 
-  public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
-  @SerializedName(SERIALIZED_NAME_MAGNITUDES)
-  private List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes = new ArrayList<>();
-
   public AddOrigin201ResponseDataOriginsInner() {
   }
 
-  public AddOrigin201ResponseDataOriginsInner id(Long id) {
-    
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Unique incremental id | bigint(20)
-   * @return id
-  **/
-  @javax.annotation.Nullable
-
-  public Long getId() {
-    return id;
-  }
-
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-
-  public AddOrigin201ResponseDataOriginsInner magnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {
+  public AddOrigin201ResponseDataOriginsInner magnitudes(List<UpdateEvent200ResponseDataEvent> magnitudes) {
     
     this.magnitudes = magnitudes;
     return this;
   }
 
-  public AddOrigin201ResponseDataOriginsInner addMagnitudesItem(AddEvent201ResponseDataEventOriginsInnerAllOf magnitudesItem) {
+  public AddOrigin201ResponseDataOriginsInner addMagnitudesItem(UpdateEvent200ResponseDataEvent magnitudesItem) {
     if (this.magnitudes == null) {
       this.magnitudes = new ArrayList<>();
     }
@@ -103,14 +84,34 @@ public class AddOrigin201ResponseDataOriginsInner {
    * @return magnitudes
   **/
   @javax.annotation.Nullable
-
-  public List<AddEvent201ResponseDataEventOriginsInnerAllOf> getMagnitudes() {
+  public List<UpdateEvent200ResponseDataEvent> getMagnitudes() {
     return magnitudes;
   }
 
 
-  public void setMagnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {
+  public void setMagnitudes(List<UpdateEvent200ResponseDataEvent> magnitudes) {
     this.magnitudes = magnitudes;
+  }
+
+
+  public AddOrigin201ResponseDataOriginsInner id(Long id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Unique incremental id | bigint(20)
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  public Long getId() {
+    return id;
+  }
+
+
+  public void setId(Long id) {
+    this.id = id;
   }
 
   /**
@@ -168,22 +169,22 @@ public class AddOrigin201ResponseDataOriginsInner {
       return false;
     }
     AddOrigin201ResponseDataOriginsInner addOrigin201ResponseDataOriginsInner = (AddOrigin201ResponseDataOriginsInner) o;
-    return Objects.equals(this.id, addOrigin201ResponseDataOriginsInner.id) &&
-        Objects.equals(this.magnitudes, addOrigin201ResponseDataOriginsInner.magnitudes)&&
+    return Objects.equals(this.magnitudes, addOrigin201ResponseDataOriginsInner.magnitudes) &&
+        Objects.equals(this.id, addOrigin201ResponseDataOriginsInner.id)&&
         Objects.equals(this.additionalProperties, addOrigin201ResponseDataOriginsInner.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, magnitudes, additionalProperties);
+    return Objects.hash(magnitudes, id, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddOrigin201ResponseDataOriginsInner {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    magnitudes: ").append(toIndentedString(magnitudes)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -207,25 +208,26 @@ public class AddOrigin201ResponseDataOriginsInner {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("id");
     openapiFields.add("magnitudes");
+    openapiFields.add("id");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddOrigin201ResponseDataOriginsInner
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to AddOrigin201ResponseDataOriginsInner
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!AddOrigin201ResponseDataOriginsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AddOrigin201ResponseDataOriginsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddOrigin201ResponseDataOriginsInner is not found in the empty JSON string", AddOrigin201ResponseDataOriginsInner.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (jsonObj.get("magnitudes") != null && !jsonObj.get("magnitudes").isJsonNull()) {
         JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
         if (jsonArraymagnitudes != null) {
@@ -236,7 +238,7 @@ public class AddOrigin201ResponseDataOriginsInner {
 
           // validate the optional field `magnitudes` (array)
           for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
-            AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
+            UpdateEvent200ResponseDataEvent.validateJsonElement(jsonArraymagnitudes.get(i));
           };
         }
       }
@@ -279,8 +281,9 @@ public class AddOrigin201ResponseDataOriginsInner {
 
            @Override
            public AddOrigin201ResponseDataOriginsInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              AddOrigin201ResponseDataOriginsInner instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
@@ -40,13 +40,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -54,7 +57,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class ObjectStrongmotion {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -142,7 +145,7 @@ public class ObjectStrongmotion {
 
   public static final String SERIALIZED_NAME_RSA = "rsa";
   @SerializedName(SERIALIZED_NAME_RSA)
-  private List<ObjectStrongmotionRsaInner> rsa = new ArrayList<>();
+  private List<ObjectStrongmotionRsaInner> rsa;
 
   public ObjectStrongmotion() {
   }
@@ -170,7 +173,6 @@ public class ObjectStrongmotion {
    * @return net
   **/
   @javax.annotation.Nullable
-
   public String getNet() {
     return net;
   }
@@ -192,7 +194,6 @@ public class ObjectStrongmotion {
    * @return sta
   **/
   @javax.annotation.Nullable
-
   public String getSta() {
     return sta;
   }
@@ -214,7 +215,6 @@ public class ObjectStrongmotion {
    * @return cha
   **/
   @javax.annotation.Nullable
-
   public String getCha() {
     return cha;
   }
@@ -236,7 +236,6 @@ public class ObjectStrongmotion {
    * @return loc
   **/
   @javax.annotation.Nullable
-
   public String getLoc() {
     return loc;
   }
@@ -252,7 +251,6 @@ public class ObjectStrongmotion {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -265,7 +263,6 @@ public class ObjectStrongmotion {
    * @return modified
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getModified() {
     return modified;
   }
@@ -278,7 +275,6 @@ public class ObjectStrongmotion {
    * @return inserted
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
@@ -297,7 +293,6 @@ public class ObjectStrongmotion {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
@@ -319,7 +314,6 @@ public class ObjectStrongmotion {
    * @return tDt
   **/
   @javax.annotation.Nonnull
-
   public OffsetDateTime gettDt() {
     return tDt;
   }
@@ -341,7 +335,6 @@ public class ObjectStrongmotion {
    * @return pga
   **/
   @javax.annotation.Nullable
-
   public Float getPga() {
     return pga;
   }
@@ -363,7 +356,6 @@ public class ObjectStrongmotion {
    * @return tpgaDt
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getTpgaDt() {
     return tpgaDt;
   }
@@ -385,7 +377,6 @@ public class ObjectStrongmotion {
    * @return pgv
   **/
   @javax.annotation.Nullable
-
   public Float getPgv() {
     return pgv;
   }
@@ -407,7 +398,6 @@ public class ObjectStrongmotion {
    * @return tpgvDt
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getTpgvDt() {
     return tpgvDt;
   }
@@ -429,7 +419,6 @@ public class ObjectStrongmotion {
    * @return pgd
   **/
   @javax.annotation.Nullable
-
   public Float getPgd() {
     return pgd;
   }
@@ -451,7 +440,6 @@ public class ObjectStrongmotion {
    * @return tpgdDt
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getTpgdDt() {
     return tpgdDt;
   }
@@ -473,7 +461,6 @@ public class ObjectStrongmotion {
    * @return rsa030
   **/
   @javax.annotation.Nullable
-
   public Float getRsa030() {
     return rsa030;
   }
@@ -495,7 +482,6 @@ public class ObjectStrongmotion {
    * @return rsa100
   **/
   @javax.annotation.Nullable
-
   public Float getRsa100() {
     return rsa100;
   }
@@ -517,7 +503,6 @@ public class ObjectStrongmotion {
    * @return rsa300
   **/
   @javax.annotation.Nullable
-
   public Float getRsa300() {
     return rsa300;
   }
@@ -539,7 +524,6 @@ public class ObjectStrongmotion {
    * @return localspace
   **/
   @javax.annotation.Nullable
-
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
@@ -561,7 +545,6 @@ public class ObjectStrongmotion {
    * @return provenance
   **/
   @javax.annotation.Nullable
-
   public ObjectProvenance getProvenance() {
     return provenance;
   }
@@ -583,7 +566,6 @@ public class ObjectStrongmotion {
    * @return alternative
   **/
   @javax.annotation.Nullable
-
   public ObjectStrongmotionAlternative getAlternative() {
     return alternative;
   }
@@ -613,7 +595,6 @@ public class ObjectStrongmotion {
    * @return rsa
   **/
   @javax.annotation.Nullable
-
   public List<ObjectStrongmotionRsaInner> getRsa() {
     return rsa;
   }
@@ -797,24 +778,25 @@ public class ObjectStrongmotion {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectStrongmotion
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectStrongmotion
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectStrongmotion.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectStrongmotion.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectStrongmotion is not found in the empty JSON string", ObjectStrongmotion.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectStrongmotion.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("net") != null && !jsonObj.get("net").isJsonNull()) && !jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
@@ -829,15 +811,15 @@ public class ObjectStrongmotion {
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
       }
       // validate the optional field `alternative`
       if (jsonObj.get("alternative") != null && !jsonObj.get("alternative").isJsonNull()) {
-        ObjectStrongmotionAlternative.validateJsonObject(jsonObj.getAsJsonObject("alternative"));
+        ObjectStrongmotionAlternative.validateJsonElement(jsonObj.get("alternative"));
       }
       if (jsonObj.get("rsa") != null && !jsonObj.get("rsa").isJsonNull()) {
         JsonArray jsonArrayrsa = jsonObj.getAsJsonArray("rsa");
@@ -849,7 +831,7 @@ public class ObjectStrongmotion {
 
           // validate the optional field `rsa` (array)
           for (int i = 0; i < jsonArrayrsa.size(); i++) {
-            ObjectStrongmotionRsaInner.validateJsonObject(jsonArrayrsa.get(i).getAsJsonObject());
+            ObjectStrongmotionRsaInner.validateJsonElement(jsonArrayrsa.get(i));
           };
         }
       }
@@ -892,8 +874,9 @@ public class ObjectStrongmotion {
 
            @Override
            public ObjectStrongmotion read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectStrongmotion instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

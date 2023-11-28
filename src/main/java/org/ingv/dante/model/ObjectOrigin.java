@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.ObjectArrival;
 import org.ingv.dante.model.ObjectFocalmechanism;
@@ -42,13 +42,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -56,7 +59,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class ObjectOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -244,15 +247,15 @@ public class ObjectOrigin {
 
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
-  private List<ObjectMagnitude> magnitudes = new ArrayList<>();
+  private List<ObjectMagnitude> magnitudes;
 
   public static final String SERIALIZED_NAME_ARRIVALS = "arrivals";
   @SerializedName(SERIALIZED_NAME_ARRIVALS)
-  private List<ObjectArrival> arrivals = new ArrayList<>();
+  private List<ObjectArrival> arrivals;
 
   public static final String SERIALIZED_NAME_FOCALMECHANISMS = "focalmechanisms";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)
-  private List<ObjectFocalmechanism> focalmechanisms = new ArrayList<>();
+  private List<ObjectFocalmechanism> focalmechanisms;
 
   public ObjectOrigin() {
   }
@@ -280,7 +283,6 @@ public class ObjectOrigin {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -293,7 +295,6 @@ public class ObjectOrigin {
    * @return modified
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getModified() {
     return modified;
   }
@@ -306,7 +307,6 @@ public class ObjectOrigin {
    * @return inserted
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
@@ -325,7 +325,6 @@ public class ObjectOrigin {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
@@ -347,7 +346,6 @@ public class ObjectOrigin {
    * @return azimGap
   **/
   @javax.annotation.Nullable
-
   public Float getAzimGap() {
     return azimGap;
   }
@@ -369,7 +367,6 @@ public class ObjectOrigin {
    * @return confidenceLevel
   **/
   @javax.annotation.Nullable
-
   public Float getConfidenceLevel() {
     return confidenceLevel;
   }
@@ -391,7 +388,6 @@ public class ObjectOrigin {
    * @return depth
   **/
   @javax.annotation.Nonnull
-
   public Double getDepth() {
     return depth;
   }
@@ -413,7 +409,6 @@ public class ObjectOrigin {
    * @return e0
   **/
   @javax.annotation.Nullable
-
   public Double getE0() {
     return e0;
   }
@@ -435,7 +430,6 @@ public class ObjectOrigin {
    * @return e0Az
   **/
   @javax.annotation.Nullable
-
   public Float getE0Az() {
     return e0Az;
   }
@@ -457,7 +451,6 @@ public class ObjectOrigin {
    * @return e0Dip
   **/
   @javax.annotation.Nullable
-
   public Double getE0Dip() {
     return e0Dip;
   }
@@ -479,7 +472,6 @@ public class ObjectOrigin {
    * @return e1
   **/
   @javax.annotation.Nullable
-
   public Double getE1() {
     return e1;
   }
@@ -501,7 +493,6 @@ public class ObjectOrigin {
    * @return e1Az
   **/
   @javax.annotation.Nullable
-
   public Float getE1Az() {
     return e1Az;
   }
@@ -523,7 +514,6 @@ public class ObjectOrigin {
    * @return e1Dip
   **/
   @javax.annotation.Nullable
-
   public Double getE1Dip() {
     return e1Dip;
   }
@@ -545,7 +535,6 @@ public class ObjectOrigin {
    * @return e2
   **/
   @javax.annotation.Nullable
-
   public Double getE2() {
     return e2;
   }
@@ -567,7 +556,6 @@ public class ObjectOrigin {
    * @return e2Az
   **/
   @javax.annotation.Nullable
-
   public Float getE2Az() {
     return e2Az;
   }
@@ -589,7 +577,6 @@ public class ObjectOrigin {
    * @return e2Dip
   **/
   @javax.annotation.Nullable
-
   public Long getE2Dip() {
     return e2Dip;
   }
@@ -611,7 +598,6 @@ public class ObjectOrigin {
    * @return errDepth
   **/
   @javax.annotation.Nullable
-
   public Double getErrDepth() {
     return errDepth;
   }
@@ -633,7 +619,6 @@ public class ObjectOrigin {
    * @return errH
   **/
   @javax.annotation.Nullable
-
   public Double getErrH() {
     return errH;
   }
@@ -655,7 +640,6 @@ public class ObjectOrigin {
    * @return errLat
   **/
   @javax.annotation.Nullable
-
   public Double getErrLat() {
     return errLat;
   }
@@ -677,7 +661,6 @@ public class ObjectOrigin {
    * @return errLon
   **/
   @javax.annotation.Nullable
-
   public Double getErrLon() {
     return errLon;
   }
@@ -693,7 +676,6 @@ public class ObjectOrigin {
    * @return errLatDeg
   **/
   @javax.annotation.Nullable
-
   public Double getErrLatDeg() {
     return errLatDeg;
   }
@@ -706,7 +688,6 @@ public class ObjectOrigin {
    * @return errLonDeg
   **/
   @javax.annotation.Nullable
-
   public Double getErrLonDeg() {
     return errLonDeg;
   }
@@ -725,7 +706,6 @@ public class ObjectOrigin {
    * @return errOt
   **/
   @javax.annotation.Nullable
-
   public Double getErrOt() {
     return errOt;
   }
@@ -747,7 +727,6 @@ public class ObjectOrigin {
    * @return errZ
   **/
   @javax.annotation.Nullable
-
   public Double getErrZ() {
     return errZ;
   }
@@ -769,7 +748,6 @@ public class ObjectOrigin {
    * @return fixDepth
   **/
   @javax.annotation.Nullable
-
   public Boolean getFixDepth() {
     return fixDepth;
   }
@@ -791,7 +769,6 @@ public class ObjectOrigin {
    * @return isCentroid
   **/
   @javax.annotation.Nullable
-
   public Boolean getIsCentroid() {
     return isCentroid;
   }
@@ -815,7 +792,6 @@ public class ObjectOrigin {
    * @return lat
   **/
   @javax.annotation.Nonnull
-
   public Double getLat() {
     return lat;
   }
@@ -839,7 +815,6 @@ public class ObjectOrigin {
    * @return lon
   **/
   @javax.annotation.Nonnull
-
   public Double getLon() {
     return lon;
   }
@@ -861,7 +836,6 @@ public class ObjectOrigin {
    * @return maxDistance
   **/
   @javax.annotation.Nullable
-
   public Double getMaxDistance() {
     return maxDistance;
   }
@@ -883,7 +857,6 @@ public class ObjectOrigin {
    * @return medDistance
   **/
   @javax.annotation.Nullable
-
   public Double getMedDistance() {
     return medDistance;
   }
@@ -905,7 +878,6 @@ public class ObjectOrigin {
    * @return minDistance
   **/
   @javax.annotation.Nullable
-
   public Double getMinDistance() {
     return minDistance;
   }
@@ -927,7 +899,6 @@ public class ObjectOrigin {
    * @return nph
   **/
   @javax.annotation.Nullable
-
   public Long getNph() {
     return nph;
   }
@@ -949,7 +920,6 @@ public class ObjectOrigin {
    * @return nphFm
   **/
   @javax.annotation.Nullable
-
   public Long getNphFm() {
     return nphFm;
   }
@@ -971,7 +941,6 @@ public class ObjectOrigin {
    * @return nphS
   **/
   @javax.annotation.Nullable
-
   public Long getNphS() {
     return nphS;
   }
@@ -993,7 +962,6 @@ public class ObjectOrigin {
    * @return nphTot
   **/
   @javax.annotation.Nullable
-
   public Long getNphTot() {
     return nphTot;
   }
@@ -1015,7 +983,6 @@ public class ObjectOrigin {
    * @return ot
   **/
   @javax.annotation.Nonnull
-
   public OffsetDateTime getOt() {
     return ot;
   }
@@ -1037,7 +1004,6 @@ public class ObjectOrigin {
    * @return quality
   **/
   @javax.annotation.Nullable
-
   public String getQuality() {
     return quality;
   }
@@ -1059,7 +1025,6 @@ public class ObjectOrigin {
    * @return qualityNumeric
   **/
   @javax.annotation.Nullable
-
   public Long getQualityNumeric() {
     return qualityNumeric;
   }
@@ -1081,7 +1046,6 @@ public class ObjectOrigin {
    * @return region
   **/
   @javax.annotation.Nullable
-
   public String getRegion() {
     return region;
   }
@@ -1103,7 +1067,6 @@ public class ObjectOrigin {
    * @return rms
   **/
   @javax.annotation.Nullable
-
   public Double getRms() {
     return rms;
   }
@@ -1125,7 +1088,6 @@ public class ObjectOrigin {
    * @return secAzimGap
   **/
   @javax.annotation.Nullable
-
   public Float getSecAzimGap() {
     return secAzimGap;
   }
@@ -1147,7 +1109,6 @@ public class ObjectOrigin {
    * @return wRms
   **/
   @javax.annotation.Nullable
-
   public Double getwRms() {
     return wRms;
   }
@@ -1169,7 +1130,6 @@ public class ObjectOrigin {
    * @return typeOrigin
   **/
   @javax.annotation.Nullable
-
   public ObjectTypeOrigin getTypeOrigin() {
     return typeOrigin;
   }
@@ -1191,7 +1151,6 @@ public class ObjectOrigin {
    * @return localspace
   **/
   @javax.annotation.Nullable
-
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
@@ -1213,7 +1172,6 @@ public class ObjectOrigin {
    * @return provenance
   **/
   @javax.annotation.Nullable
-
   public ObjectProvenance getProvenance() {
     return provenance;
   }
@@ -1229,7 +1187,6 @@ public class ObjectOrigin {
    * @return flags
   **/
   @javax.annotation.Nullable
-
   public String getFlags() {
     return flags;
   }
@@ -1256,7 +1213,6 @@ public class ObjectOrigin {
    * @return magnitudes
   **/
   @javax.annotation.Nullable
-
   public List<ObjectMagnitude> getMagnitudes() {
     return magnitudes;
   }
@@ -1286,7 +1242,6 @@ public class ObjectOrigin {
    * @return arrivals
   **/
   @javax.annotation.Nullable
-
   public List<ObjectArrival> getArrivals() {
     return arrivals;
   }
@@ -1316,7 +1271,6 @@ public class ObjectOrigin {
    * @return focalmechanisms
   **/
   @javax.annotation.Nullable
-
   public List<ObjectFocalmechanism> getFocalmechanisms() {
     return focalmechanisms;
   }
@@ -1584,24 +1538,25 @@ public class ObjectOrigin {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectOrigin
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectOrigin
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectOrigin.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectOrigin.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectOrigin is not found in the empty JSON string", ObjectOrigin.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectOrigin.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonNull()) && !jsonObj.get("quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));
       }
@@ -1610,15 +1565,15 @@ public class ObjectOrigin {
       }
       // validate the optional field `type_origin`
       if (jsonObj.get("type_origin") != null && !jsonObj.get("type_origin").isJsonNull()) {
-        ObjectTypeOrigin.validateJsonObject(jsonObj.getAsJsonObject("type_origin"));
+        ObjectTypeOrigin.validateJsonElement(jsonObj.get("type_origin"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
       }
       if ((jsonObj.get("flags") != null && !jsonObj.get("flags").isJsonNull()) && !jsonObj.get("flags").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `flags` to be a primitive type in the JSON string but got `%s`", jsonObj.get("flags").toString()));
@@ -1633,7 +1588,7 @@ public class ObjectOrigin {
 
           // validate the optional field `magnitudes` (array)
           for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
-            ObjectMagnitude.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
+            ObjectMagnitude.validateJsonElement(jsonArraymagnitudes.get(i));
           };
         }
       }
@@ -1647,7 +1602,7 @@ public class ObjectOrigin {
 
           // validate the optional field `arrivals` (array)
           for (int i = 0; i < jsonArrayarrivals.size(); i++) {
-            ObjectArrival.validateJsonObject(jsonArrayarrivals.get(i).getAsJsonObject());
+            ObjectArrival.validateJsonElement(jsonArrayarrivals.get(i));
           };
         }
       }
@@ -1661,7 +1616,7 @@ public class ObjectOrigin {
 
           // validate the optional field `focalmechanisms` (array)
           for (int i = 0; i < jsonArrayfocalmechanisms.size(); i++) {
-            ObjectFocalmechanism.validateJsonObject(jsonArrayfocalmechanisms.get(i).getAsJsonObject());
+            ObjectFocalmechanism.validateJsonElement(jsonArrayfocalmechanisms.get(i));
           };
         }
       }
@@ -1704,8 +1659,9 @@ public class ObjectOrigin {
 
            @Override
            public ObjectOrigin read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectOrigin instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

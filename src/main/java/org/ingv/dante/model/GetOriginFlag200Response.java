@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.LinksDefinition;
 import org.ingv.dante.model.MetaDefinition;
@@ -37,13 +37,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -51,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * GetOriginFlag200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class GetOriginFlag200Response {
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -63,7 +66,7 @@ public class GetOriginFlag200Response {
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<ObjectOriginFlag> data = new ArrayList<>();
+  private List<ObjectOriginFlag> data;
 
   public GetOriginFlag200Response() {
   }
@@ -79,7 +82,6 @@ public class GetOriginFlag200Response {
    * @return links
   **/
   @javax.annotation.Nullable
-
   public LinksDefinition getLinks() {
     return links;
   }
@@ -101,7 +103,6 @@ public class GetOriginFlag200Response {
    * @return meta
   **/
   @javax.annotation.Nullable
-
   public MetaDefinition getMeta() {
     return meta;
   }
@@ -131,7 +132,6 @@ public class GetOriginFlag200Response {
    * @return data
   **/
   @javax.annotation.Nullable
-
   public List<ObjectOriginFlag> getData() {
     return data;
   }
@@ -246,24 +246,25 @@ public class GetOriginFlag200Response {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to GetOriginFlag200Response
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to GetOriginFlag200Response
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!GetOriginFlag200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!GetOriginFlag200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in GetOriginFlag200Response is not found in the empty JSON string", GetOriginFlag200Response.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `links`
       if (jsonObj.get("links") != null && !jsonObj.get("links").isJsonNull()) {
-        LinksDefinition.validateJsonObject(jsonObj.getAsJsonObject("links"));
+        LinksDefinition.validateJsonElement(jsonObj.get("links"));
       }
       // validate the optional field `meta`
       if (jsonObj.get("meta") != null && !jsonObj.get("meta").isJsonNull()) {
-        MetaDefinition.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+        MetaDefinition.validateJsonElement(jsonObj.get("meta"));
       }
       if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
         JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
@@ -275,7 +276,7 @@ public class GetOriginFlag200Response {
 
           // validate the optional field `data` (array)
           for (int i = 0; i < jsonArraydata.size(); i++) {
-            ObjectOriginFlag.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+            ObjectOriginFlag.validateJsonElement(jsonArraydata.get(i));
           };
         }
       }
@@ -318,8 +319,9 @@ public class GetOriginFlag200Response {
 
            @Override
            public GetOriginFlag200Response read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              GetOriginFlag200Response instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

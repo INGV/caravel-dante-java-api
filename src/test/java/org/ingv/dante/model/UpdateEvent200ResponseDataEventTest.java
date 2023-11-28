@@ -19,24 +19,24 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-
 /**
- * Model tests for AddEvent201ResponseDataEventOriginsInnerAllOf
+ * Model tests for UpdateEvent200ResponseDataEvent
  */
-public class AddEvent201ResponseDataEventOriginsInnerAllOfTest {
-    private final AddEvent201ResponseDataEventOriginsInnerAllOf model = new AddEvent201ResponseDataEventOriginsInnerAllOf();
+public class UpdateEvent200ResponseDataEventTest {
+    private final UpdateEvent200ResponseDataEvent model = new UpdateEvent200ResponseDataEvent();
 
     /**
-     * Model tests for AddEvent201ResponseDataEventOriginsInnerAllOf
+     * Model tests for UpdateEvent200ResponseDataEvent
      */
     @Test
-    public void testAddEvent201ResponseDataEventOriginsInnerAllOf() {
-        // TODO: test AddEvent201ResponseDataEventOriginsInnerAllOf
+    public void testUpdateEvent200ResponseDataEvent() {
+        // TODO: test UpdateEvent200ResponseDataEvent
     }
 
     /**

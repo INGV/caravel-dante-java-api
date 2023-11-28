@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspaceForVw;
 import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -36,13 +36,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -50,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -128,7 +131,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -150,7 +152,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
@@ -172,7 +173,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return mag
   **/
   @javax.annotation.Nullable
-
   public Double getMag() {
     return mag;
   }
@@ -194,7 +194,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return typeMagnitude
   **/
   @javax.annotation.Nullable
-
   public String getTypeMagnitude() {
     return typeMagnitude;
   }
@@ -216,7 +215,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return lowerUncertainty
   **/
   @javax.annotation.Nullable
-
   public Double getLowerUncertainty() {
     return lowerUncertainty;
   }
@@ -238,7 +236,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return upperUncertainty
   **/
   @javax.annotation.Nullable
-
   public Double getUpperUncertainty() {
     return upperUncertainty;
   }
@@ -260,7 +257,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return quality
   **/
   @javax.annotation.Nullable
-
   public Double getQuality() {
     return quality;
   }
@@ -282,7 +278,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return magQuality
   **/
   @javax.annotation.Nullable
-
   public String getMagQuality() {
     return magQuality;
   }
@@ -304,7 +299,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return originid
   **/
   @javax.annotation.Nullable
-
   public Long getOriginid() {
     return originid;
   }
@@ -320,7 +314,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return modified
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getModified() {
     return modified;
   }
@@ -333,7 +326,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return inserted
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
@@ -352,7 +344,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return localspace
   **/
   @javax.annotation.Nullable
-
   public ObjectLocalspaceForVw getLocalspace() {
     return localspace;
   }
@@ -374,7 +365,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
    * @return provenance
   **/
   @javax.annotation.Nullable
-
   public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup getProvenance() {
     return provenance;
   }
@@ -530,17 +520,18 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup is not found in the empty JSON string", ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("type_magnitude") != null && !jsonObj.get("type_magnitude").isJsonNull()) && !jsonObj.get("type_magnitude").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_magnitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_magnitude").toString()));
       }
@@ -549,11 +540,11 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspaceForVw.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspaceForVw.validateJsonElement(jsonObj.get("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.validateJsonElement(jsonObj.get("provenance"));
       }
   }
 
@@ -594,8 +585,9 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
 
            @Override
            public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

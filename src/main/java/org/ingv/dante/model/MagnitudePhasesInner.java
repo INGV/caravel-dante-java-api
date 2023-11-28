@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -33,13 +33,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -47,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudePhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class MagnitudePhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -115,7 +118,6 @@ public class MagnitudePhasesInner {
    * @return net
   **/
   @javax.annotation.Nonnull
-
   public String getNet() {
     return net;
   }
@@ -137,7 +139,6 @@ public class MagnitudePhasesInner {
    * @return sta
   **/
   @javax.annotation.Nonnull
-
   public String getSta() {
     return sta;
   }
@@ -159,7 +160,6 @@ public class MagnitudePhasesInner {
    * @return comp
   **/
   @javax.annotation.Nonnull
-
   public String getComp() {
     return comp;
   }
@@ -181,7 +181,6 @@ public class MagnitudePhasesInner {
    * @return loc
   **/
   @javax.annotation.Nonnull
-
   public String getLoc() {
     return loc;
   }
@@ -203,7 +202,6 @@ public class MagnitudePhasesInner {
    * @return mag
   **/
   @javax.annotation.Nullable
-
   public Double getMag() {
     return mag;
   }
@@ -225,7 +223,6 @@ public class MagnitudePhasesInner {
    * @return dist
   **/
   @javax.annotation.Nullable
-
   public Float getDist() {
     return dist;
   }
@@ -247,7 +244,6 @@ public class MagnitudePhasesInner {
    * @return corr
   **/
   @javax.annotation.Nullable
-
   public Double getCorr() {
     return corr;
   }
@@ -269,7 +265,6 @@ public class MagnitudePhasesInner {
    * @return time1
   **/
   @javax.annotation.Nonnull
-
   public OffsetDateTime getTime1() {
     return time1;
   }
@@ -291,7 +286,6 @@ public class MagnitudePhasesInner {
    * @return amp1
   **/
   @javax.annotation.Nonnull
-
   public Double getAmp1() {
     return amp1;
   }
@@ -313,7 +307,6 @@ public class MagnitudePhasesInner {
    * @return period1
   **/
   @javax.annotation.Nullable
-
   public Double getPeriod1() {
     return period1;
   }
@@ -335,7 +328,6 @@ public class MagnitudePhasesInner {
    * @return time2
   **/
   @javax.annotation.Nonnull
-
   public OffsetDateTime getTime2() {
     return time2;
   }
@@ -357,7 +349,6 @@ public class MagnitudePhasesInner {
    * @return amp2
   **/
   @javax.annotation.Nonnull
-
   public Double getAmp2() {
     return amp2;
   }
@@ -379,7 +370,6 @@ public class MagnitudePhasesInner {
    * @return period2
   **/
   @javax.annotation.Nullable
-
   public Double getPeriod2() {
     return period2;
   }
@@ -532,24 +522,25 @@ public class MagnitudePhasesInner {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to MagnitudePhasesInner
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to MagnitudePhasesInner
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!MagnitudePhasesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!MagnitudePhasesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in MagnitudePhasesInner is not found in the empty JSON string", MagnitudePhasesInner.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : MagnitudePhasesInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
@@ -601,8 +592,9 @@ public class MagnitudePhasesInner {
 
            @Override
            public MagnitudePhasesInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              MagnitudePhasesInner instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

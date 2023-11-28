@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -23,6 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectOrigin;
@@ -40,13 +40,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -54,7 +57,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class ObjectEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -118,11 +121,11 @@ public class ObjectEvent {
 
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<ObjectOrigin> origins = new ArrayList<>();
+  private List<ObjectOrigin> origins;
 
   public static final String SERIALIZED_NAME_STRONGMOTIONS = "strongmotions";
   @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
-  private List<ObjectStrongmotion> strongmotions = new ArrayList<>();
+  private List<ObjectStrongmotion> strongmotions;
 
   public ObjectEvent() {
   }
@@ -156,7 +159,6 @@ public class ObjectEvent {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -169,7 +171,6 @@ public class ObjectEvent {
    * @return modified
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getModified() {
     return modified;
   }
@@ -182,7 +183,6 @@ public class ObjectEvent {
    * @return inserted
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
@@ -201,7 +201,6 @@ public class ObjectEvent {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
@@ -223,7 +222,6 @@ public class ObjectEvent {
    * @return typeEvent
   **/
   @javax.annotation.Nonnull
-
   public String getTypeEvent() {
     return typeEvent;
   }
@@ -239,7 +237,6 @@ public class ObjectEvent {
    * @return flags
   **/
   @javax.annotation.Nullable
-
   public String getFlags() {
     return flags;
   }
@@ -252,7 +249,6 @@ public class ObjectEvent {
    * @return eventGroupId
   **/
   @javax.annotation.Nullable
-
   public Long getEventGroupId() {
     return eventGroupId;
   }
@@ -265,7 +261,6 @@ public class ObjectEvent {
    * @return preferredOriginId
   **/
   @javax.annotation.Nullable
-
   public Long getPreferredOriginId() {
     return preferredOriginId;
   }
@@ -278,7 +273,6 @@ public class ObjectEvent {
    * @return preferredMagnitudeId
   **/
   @javax.annotation.Nullable
-
   public Long getPreferredMagnitudeId() {
     return preferredMagnitudeId;
   }
@@ -291,7 +285,6 @@ public class ObjectEvent {
    * @return preferredFocalmechanismId
   **/
   @javax.annotation.Nullable
-
   public Long getPreferredFocalmechanismId() {
     return preferredFocalmechanismId;
   }
@@ -310,7 +303,6 @@ public class ObjectEvent {
    * @return setPreferredOriginIdLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getSetPreferredOriginIdLocalspace() {
     return setPreferredOriginIdLocalspace;
   }
@@ -332,7 +324,6 @@ public class ObjectEvent {
    * @return setPreferredMagnitudeIdLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getSetPreferredMagnitudeIdLocalspace() {
     return setPreferredMagnitudeIdLocalspace;
   }
@@ -348,7 +339,6 @@ public class ObjectEvent {
    * @return typeGroup
   **/
   @javax.annotation.Nullable
-
   public Long getTypeGroup() {
     return typeGroup;
   }
@@ -367,7 +357,6 @@ public class ObjectEvent {
    * @return provenance
   **/
   @javax.annotation.Nullable
-
   public ObjectProvenance getProvenance() {
     return provenance;
   }
@@ -389,7 +378,6 @@ public class ObjectEvent {
    * @return localspace
   **/
   @javax.annotation.Nullable
-
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
@@ -419,7 +407,6 @@ public class ObjectEvent {
    * @return origins
   **/
   @javax.annotation.Nullable
-
   public List<ObjectOrigin> getOrigins() {
     return origins;
   }
@@ -449,7 +436,6 @@ public class ObjectEvent {
    * @return strongmotions
   **/
   @javax.annotation.Nullable
-
   public List<ObjectStrongmotion> getStrongmotions() {
     return strongmotions;
   }
@@ -618,24 +604,25 @@ public class ObjectEvent {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectEvent
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectEvent
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectEvent is not found in the empty JSON string", ObjectEvent.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectEvent.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("type_event").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_event` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_event").toString()));
       }
@@ -644,11 +631,11 @@ public class ObjectEvent {
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
       if (jsonObj.get("origins") != null && !jsonObj.get("origins").isJsonNull()) {
         JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
@@ -660,7 +647,7 @@ public class ObjectEvent {
 
           // validate the optional field `origins` (array)
           for (int i = 0; i < jsonArrayorigins.size(); i++) {
-            ObjectOrigin.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
+            ObjectOrigin.validateJsonElement(jsonArrayorigins.get(i));
           };
         }
       }
@@ -674,7 +661,7 @@ public class ObjectEvent {
 
           // validate the optional field `strongmotions` (array)
           for (int i = 0; i < jsonArraystrongmotions.size(); i++) {
-            ObjectStrongmotion.validateJsonObject(jsonArraystrongmotions.get(i).getAsJsonObject());
+            ObjectStrongmotion.validateJsonElement(jsonArraystrongmotions.get(i));
           };
         }
       }
@@ -717,8 +704,9 @@ public class ObjectEvent {
 
            @Override
            public ObjectEvent read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectEvent instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

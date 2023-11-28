@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -34,13 +34,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventsGroupRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class UpdateEventsGroupRequestData {
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
@@ -56,11 +59,11 @@ public class UpdateEventsGroupRequestData {
 
   public static final String SERIALIZED_NAME_EVENTIDS = "eventids";
   @SerializedName(SERIALIZED_NAME_EVENTIDS)
-  private List<Long> eventids = new ArrayList<>();
+  private List<Long> eventids;
 
   public static final String SERIALIZED_NAME_EVENT_GROUP_IDS = "event_group_ids";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_IDS)
-  private List<Long> eventGroupIds = new ArrayList<>();
+  private List<Long> eventGroupIds;
 
   public UpdateEventsGroupRequestData() {
   }
@@ -76,7 +79,6 @@ public class UpdateEventsGroupRequestData {
    * @return eventGroupId
   **/
   @javax.annotation.Nullable
-
   public Long getEventGroupId() {
     return eventGroupId;
   }
@@ -106,7 +108,6 @@ public class UpdateEventsGroupRequestData {
    * @return eventids
   **/
   @javax.annotation.Nullable
-
   public List<Long> getEventids() {
     return eventids;
   }
@@ -136,7 +137,6 @@ public class UpdateEventsGroupRequestData {
    * @return eventGroupIds
   **/
   @javax.annotation.Nullable
-
   public List<Long> getEventGroupIds() {
     return eventGroupIds;
   }
@@ -251,23 +251,24 @@ public class UpdateEventsGroupRequestData {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to UpdateEventsGroupRequestData
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to UpdateEventsGroupRequestData
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!UpdateEventsGroupRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!UpdateEventsGroupRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateEventsGroupRequestData is not found in the empty JSON string", UpdateEventsGroupRequestData.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // ensure the optional json data is an array if present
-      if (jsonObj.get("eventids") != null && !jsonObj.get("eventids").isJsonArray()) {
+      if (jsonObj.get("eventids") != null && !jsonObj.get("eventids").isJsonNull() && !jsonObj.get("eventids").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `eventids` to be an array in the JSON string but got `%s`", jsonObj.get("eventids").toString()));
       }
       // ensure the optional json data is an array if present
-      if (jsonObj.get("event_group_ids") != null && !jsonObj.get("event_group_ids").isJsonArray()) {
+      if (jsonObj.get("event_group_ids") != null && !jsonObj.get("event_group_ids").isJsonNull() && !jsonObj.get("event_group_ids").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `event_group_ids` to be an array in the JSON string but got `%s`", jsonObj.get("event_group_ids").toString()));
       }
   }
@@ -309,8 +310,9 @@ public class UpdateEventsGroupRequestData {
 
            @Override
            public UpdateEventsGroupRequestData read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              UpdateEventsGroupRequestData instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

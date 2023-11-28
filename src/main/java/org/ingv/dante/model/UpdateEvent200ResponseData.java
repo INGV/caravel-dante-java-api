@@ -14,14 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
+import java.util.Arrays;
+import org.ingv.dante.model.UpdateEvent200ResponseDataEvent;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -33,13 +33,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -47,16 +50,16 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEvent200ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class UpdateEvent200ResponseData {
   public static final String SERIALIZED_NAME_EVENT = "event";
   @SerializedName(SERIALIZED_NAME_EVENT)
-  private AddEvent201ResponseDataEventOriginsInnerAllOf event;
+  private UpdateEvent200ResponseDataEvent event;
 
   public UpdateEvent200ResponseData() {
   }
 
-  public UpdateEvent200ResponseData event(AddEvent201ResponseDataEventOriginsInnerAllOf event) {
+  public UpdateEvent200ResponseData event(UpdateEvent200ResponseDataEvent event) {
     
     this.event = event;
     return this;
@@ -67,13 +70,12 @@ public class UpdateEvent200ResponseData {
    * @return event
   **/
   @javax.annotation.Nullable
-
-  public AddEvent201ResponseDataEventOriginsInnerAllOf getEvent() {
+  public UpdateEvent200ResponseDataEvent getEvent() {
     return event;
   }
 
 
-  public void setEvent(AddEvent201ResponseDataEventOriginsInnerAllOf event) {
+  public void setEvent(UpdateEvent200ResponseDataEvent event) {
     this.event = event;
   }
 
@@ -176,20 +178,21 @@ public class UpdateEvent200ResponseData {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to UpdateEvent200ResponseData
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to UpdateEvent200ResponseData
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!UpdateEvent200ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!UpdateEvent200ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateEvent200ResponseData is not found in the empty JSON string", UpdateEvent200ResponseData.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `event`
       if (jsonObj.get("event") != null && !jsonObj.get("event").isJsonNull()) {
-        AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonObj.getAsJsonObject("event"));
+        UpdateEvent200ResponseDataEvent.validateJsonElement(jsonObj.get("event"));
       }
   }
 
@@ -230,8 +233,9 @@ public class UpdateEvent200ResponseData {
 
            @Override
            public UpdateEvent200ResponseData read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              UpdateEvent200ResponseData instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

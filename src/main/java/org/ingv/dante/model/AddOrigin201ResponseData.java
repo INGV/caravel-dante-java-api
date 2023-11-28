@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.AddOrigin201ResponseDataOriginsInner;
 
@@ -35,13 +35,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,11 +52,11 @@ import org.ingv.dante.JSON;
 /**
  * AddOrigin201ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class AddOrigin201ResponseData {
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<AddOrigin201ResponseDataOriginsInner> origins = new ArrayList<>();
+  private List<AddOrigin201ResponseDataOriginsInner> origins;
 
   public AddOrigin201ResponseData() {
   }
@@ -77,7 +80,6 @@ public class AddOrigin201ResponseData {
    * @return origins
   **/
   @javax.annotation.Nullable
-
   public List<AddOrigin201ResponseDataOriginsInner> getOrigins() {
     return origins;
   }
@@ -186,17 +188,18 @@ public class AddOrigin201ResponseData {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddOrigin201ResponseData
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to AddOrigin201ResponseData
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!AddOrigin201ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AddOrigin201ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddOrigin201ResponseData is not found in the empty JSON string", AddOrigin201ResponseData.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (jsonObj.get("origins") != null && !jsonObj.get("origins").isJsonNull()) {
         JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
         if (jsonArrayorigins != null) {
@@ -207,7 +210,7 @@ public class AddOrigin201ResponseData {
 
           // validate the optional field `origins` (array)
           for (int i = 0; i < jsonArrayorigins.size(); i++) {
-            AddOrigin201ResponseDataOriginsInner.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
+            AddOrigin201ResponseDataOriginsInner.validateJsonElement(jsonArrayorigins.get(i));
           };
         }
       }
@@ -250,8 +253,9 @@ public class AddOrigin201ResponseData {
 
            @Override
            public AddOrigin201ResponseData read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              AddOrigin201ResponseData instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

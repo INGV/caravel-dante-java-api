@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectPick;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -35,13 +35,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectArrival
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class ObjectArrival {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -127,7 +130,6 @@ public class ObjectArrival {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -140,7 +142,6 @@ public class ObjectArrival {
    * @return modified
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getModified() {
     return modified;
   }
@@ -153,7 +154,6 @@ public class ObjectArrival {
    * @return inserted
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
@@ -172,7 +172,6 @@ public class ObjectArrival {
    * @return iscCode
   **/
   @javax.annotation.Nonnull
-
   public String getIscCode() {
     return iscCode;
   }
@@ -194,7 +193,6 @@ public class ObjectArrival {
    * @return epDistanceKm
   **/
   @javax.annotation.Nullable
-
   public Float getEpDistanceKm() {
     return epDistanceKm;
   }
@@ -216,7 +214,6 @@ public class ObjectArrival {
    * @return epDistanceDelta
   **/
   @javax.annotation.Nullable
-
   public Float getEpDistanceDelta() {
     return epDistanceDelta;
   }
@@ -238,7 +235,6 @@ public class ObjectArrival {
    * @return origDistanceKm
   **/
   @javax.annotation.Nullable
-
   public Double getOrigDistanceKm() {
     return origDistanceKm;
   }
@@ -260,7 +256,6 @@ public class ObjectArrival {
    * @return azimut
   **/
   @javax.annotation.Nullable
-
   public Float getAzimut() {
     return azimut;
   }
@@ -282,7 +277,6 @@ public class ObjectArrival {
    * @return takeOff
   **/
   @javax.annotation.Nullable
-
   public Float getTakeOff() {
     return takeOff;
   }
@@ -304,7 +298,6 @@ public class ObjectArrival {
    * @return polarityIsUsed
   **/
   @javax.annotation.Nullable
-
   public Boolean getPolarityIsUsed() {
     return polarityIsUsed;
   }
@@ -326,7 +319,6 @@ public class ObjectArrival {
    * @return arrTimeIsUsed
   **/
   @javax.annotation.Nullable
-
   public Boolean getArrTimeIsUsed() {
     return arrTimeIsUsed;
   }
@@ -348,7 +340,6 @@ public class ObjectArrival {
    * @return residual
   **/
   @javax.annotation.Nullable
-
   public Double getResidual() {
     return residual;
   }
@@ -370,7 +361,6 @@ public class ObjectArrival {
    * @return weight
   **/
   @javax.annotation.Nullable
-
   public Double getWeight() {
     return weight;
   }
@@ -392,7 +382,6 @@ public class ObjectArrival {
    * @return pick
   **/
   @javax.annotation.Nullable
-
   public ObjectPick getPick() {
     return pick;
   }
@@ -552,30 +541,31 @@ public class ObjectArrival {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectArrival
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectArrival
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectArrival.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectArrival.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectArrival is not found in the empty JSON string", ObjectArrival.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectArrival.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("isc_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `isc_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("isc_code").toString()));
       }
       // validate the optional field `pick`
       if (jsonObj.get("pick") != null && !jsonObj.get("pick").isJsonNull()) {
-        ObjectPick.validateJsonObject(jsonObj.getAsJsonObject("pick"));
+        ObjectPick.validateJsonElement(jsonObj.get("pick"));
       }
   }
 
@@ -616,8 +606,9 @@ public class ObjectArrival {
 
            @Override
            public ObjectArrival read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectArrival instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

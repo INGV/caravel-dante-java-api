@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,8 +21,9 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
+import org.ingv.dante.model.UpdateEvent200ResponseDataEvent;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,13 +35,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,22 +52,22 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudePostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class ObjectMagnitudePostOutput {
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
-  private List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes = new ArrayList<>();
+  private List<UpdateEvent200ResponseDataEvent> magnitudes;
 
   public ObjectMagnitudePostOutput() {
   }
 
-  public ObjectMagnitudePostOutput magnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {
+  public ObjectMagnitudePostOutput magnitudes(List<UpdateEvent200ResponseDataEvent> magnitudes) {
     
     this.magnitudes = magnitudes;
     return this;
   }
 
-  public ObjectMagnitudePostOutput addMagnitudesItem(AddEvent201ResponseDataEventOriginsInnerAllOf magnitudesItem) {
+  public ObjectMagnitudePostOutput addMagnitudesItem(UpdateEvent200ResponseDataEvent magnitudesItem) {
     if (this.magnitudes == null) {
       this.magnitudes = new ArrayList<>();
     }
@@ -77,13 +80,12 @@ public class ObjectMagnitudePostOutput {
    * @return magnitudes
   **/
   @javax.annotation.Nullable
-
-  public List<AddEvent201ResponseDataEventOriginsInnerAllOf> getMagnitudes() {
+  public List<UpdateEvent200ResponseDataEvent> getMagnitudes() {
     return magnitudes;
   }
 
 
-  public void setMagnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {
+  public void setMagnitudes(List<UpdateEvent200ResponseDataEvent> magnitudes) {
     this.magnitudes = magnitudes;
   }
 
@@ -186,17 +188,18 @@ public class ObjectMagnitudePostOutput {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectMagnitudePostOutput
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectMagnitudePostOutput
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectMagnitudePostOutput.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectMagnitudePostOutput.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMagnitudePostOutput is not found in the empty JSON string", ObjectMagnitudePostOutput.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (jsonObj.get("magnitudes") != null && !jsonObj.get("magnitudes").isJsonNull()) {
         JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
         if (jsonArraymagnitudes != null) {
@@ -207,7 +210,7 @@ public class ObjectMagnitudePostOutput {
 
           // validate the optional field `magnitudes` (array)
           for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
-            AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
+            UpdateEvent200ResponseDataEvent.validateJsonElement(jsonArraymagnitudes.get(i));
           };
         }
       }
@@ -250,8 +253,9 @@ public class ObjectMagnitudePostOutput {
 
            @Override
            public ObjectMagnitudePostOutput read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectMagnitudePostOutput instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

@@ -14,13 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import org.ingv.dante.model.Hyp2000arcSchemaEwLogo;
 import org.ingv.dante.model.Hyp2000arcSchemaEwMessage;
 
@@ -34,13 +34,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class Hyp2000arcSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
@@ -72,7 +75,6 @@ public class Hyp2000arcSchema {
    * @return ewMessage
   **/
   @javax.annotation.Nullable
-
   public Hyp2000arcSchemaEwMessage getEwMessage() {
     return ewMessage;
   }
@@ -94,7 +96,6 @@ public class Hyp2000arcSchema {
    * @return ewLogo
   **/
   @javax.annotation.Nullable
-
   public Hyp2000arcSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
@@ -206,24 +207,25 @@ public class Hyp2000arcSchema {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to Hyp2000arcSchema
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to Hyp2000arcSchema
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!Hyp2000arcSchema.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!Hyp2000arcSchema.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in Hyp2000arcSchema is not found in the empty JSON string", Hyp2000arcSchema.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `ewMessage`
       if (jsonObj.get("ewMessage") != null && !jsonObj.get("ewMessage").isJsonNull()) {
-        Hyp2000arcSchemaEwMessage.validateJsonObject(jsonObj.getAsJsonObject("ewMessage"));
+        Hyp2000arcSchemaEwMessage.validateJsonElement(jsonObj.get("ewMessage"));
       }
       // validate the optional field `ewLogo`
       if (jsonObj.get("ewLogo") != null && !jsonObj.get("ewLogo").isJsonNull()) {
-        Hyp2000arcSchemaEwLogo.validateJsonObject(jsonObj.getAsJsonObject("ewLogo"));
+        Hyp2000arcSchemaEwLogo.validateJsonElement(jsonObj.get("ewLogo"));
       }
   }
 
@@ -264,8 +266,9 @@ public class Hyp2000arcSchema {
 
            @Override
            public Hyp2000arcSchema read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              Hyp2000arcSchema instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

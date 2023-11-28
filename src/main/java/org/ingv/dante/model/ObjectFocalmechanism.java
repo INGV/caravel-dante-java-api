@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectMomenttensor;
 import org.ingv.dante.model.ObjectProvenance;
@@ -37,13 +37,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -51,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanism
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class ObjectFocalmechanism {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -157,7 +160,6 @@ public class ObjectFocalmechanism {
    * @return id
   **/
   @javax.annotation.Nullable
-
   public Long getId() {
     return id;
   }
@@ -170,7 +172,6 @@ public class ObjectFocalmechanism {
    * @return modified
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getModified() {
     return modified;
   }
@@ -183,7 +184,6 @@ public class ObjectFocalmechanism {
    * @return inserted
   **/
   @javax.annotation.Nullable
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
@@ -202,7 +202,6 @@ public class ObjectFocalmechanism {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
@@ -224,7 +223,6 @@ public class ObjectFocalmechanism {
    * @return strike1
   **/
   @javax.annotation.Nullable
-
   public Integer getStrike1() {
     return strike1;
   }
@@ -246,7 +244,6 @@ public class ObjectFocalmechanism {
    * @return dip1
   **/
   @javax.annotation.Nullable
-
   public Integer getDip1() {
     return dip1;
   }
@@ -268,7 +265,6 @@ public class ObjectFocalmechanism {
    * @return rake1
   **/
   @javax.annotation.Nullable
-
   public Integer getRake1() {
     return rake1;
   }
@@ -290,7 +286,6 @@ public class ObjectFocalmechanism {
    * @return strike2
   **/
   @javax.annotation.Nullable
-
   public Integer getStrike2() {
     return strike2;
   }
@@ -312,7 +307,6 @@ public class ObjectFocalmechanism {
    * @return dip2
   **/
   @javax.annotation.Nullable
-
   public Integer getDip2() {
     return dip2;
   }
@@ -334,7 +328,6 @@ public class ObjectFocalmechanism {
    * @return rake2
   **/
   @javax.annotation.Nullable
-
   public Integer getRake2() {
     return rake2;
   }
@@ -356,7 +349,6 @@ public class ObjectFocalmechanism {
    * @return azimGap
   **/
   @javax.annotation.Nullable
-
   public Float getAzimGap() {
     return azimGap;
   }
@@ -378,7 +370,6 @@ public class ObjectFocalmechanism {
    * @return nstaPolarity
   **/
   @javax.annotation.Nullable
-
   public Integer getNstaPolarity() {
     return nstaPolarity;
   }
@@ -400,7 +391,6 @@ public class ObjectFocalmechanism {
    * @return misfit
   **/
   @javax.annotation.Nullable
-
   public Double getMisfit() {
     return misfit;
   }
@@ -422,7 +412,6 @@ public class ObjectFocalmechanism {
    * @return stdr
   **/
   @javax.annotation.Nullable
-
   public Double getStdr() {
     return stdr;
   }
@@ -444,7 +433,6 @@ public class ObjectFocalmechanism {
    * @return rmsAngDiffAccPref
   **/
   @javax.annotation.Nullable
-
   public Double getRmsAngDiffAccPref() {
     return rmsAngDiffAccPref;
   }
@@ -466,7 +454,6 @@ public class ObjectFocalmechanism {
    * @return fracAcc30degPref
   **/
   @javax.annotation.Nullable
-
   public Double getFracAcc30degPref() {
     return fracAcc30degPref;
   }
@@ -488,7 +475,6 @@ public class ObjectFocalmechanism {
    * @return quality
   **/
   @javax.annotation.Nullable
-
   public String getQuality() {
     return quality;
   }
@@ -510,7 +496,6 @@ public class ObjectFocalmechanism {
    * @return url
   **/
   @javax.annotation.Nullable
-
   public String getUrl() {
     return url;
   }
@@ -532,7 +517,6 @@ public class ObjectFocalmechanism {
    * @return momenttensor
   **/
   @javax.annotation.Nullable
-
   public ObjectMomenttensor getMomenttensor() {
     return momenttensor;
   }
@@ -554,7 +538,6 @@ public class ObjectFocalmechanism {
    * @return localspace
   **/
   @javax.annotation.Nullable
-
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
@@ -576,7 +559,6 @@ public class ObjectFocalmechanism {
    * @return provenance
   **/
   @javax.annotation.Nullable
-
   public ObjectProvenance getProvenance() {
     return provenance;
   }
@@ -756,17 +738,18 @@ public class ObjectFocalmechanism {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectFocalmechanism
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectFocalmechanism
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectFocalmechanism.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectFocalmechanism.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectFocalmechanism is not found in the empty JSON string", ObjectFocalmechanism.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonNull()) && !jsonObj.get("quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));
       }
@@ -775,15 +758,15 @@ public class ObjectFocalmechanism {
       }
       // validate the optional field `momenttensor`
       if (jsonObj.get("momenttensor") != null && !jsonObj.get("momenttensor").isJsonNull()) {
-        ObjectMomenttensor.validateJsonObject(jsonObj.getAsJsonObject("momenttensor"));
+        ObjectMomenttensor.validateJsonElement(jsonObj.get("momenttensor"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
       }
   }
 
@@ -824,8 +807,9 @@ public class ObjectFocalmechanism {
 
            @Override
            public ObjectFocalmechanism read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectFocalmechanism instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

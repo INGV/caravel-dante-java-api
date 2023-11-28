@@ -14,16 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import org.ingv.dante.model.ObjectTableTypeEvent;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,56 +32,50 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
 
 /**
- * GetTypeEvent200ResponseAllOf
+ * AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
-public class GetTypeEvent200ResponseAllOf {
-  public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
-  private List<ObjectTableTypeEvent> data = new ArrayList<>();
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
+public class AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private Long id;
 
-  public GetTypeEvent200ResponseAllOf() {
+  public AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw() {
   }
 
-  public GetTypeEvent200ResponseAllOf data(List<ObjectTableTypeEvent> data) {
+  public AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw id(Long id) {
     
-    this.data = data;
-    return this;
-  }
-
-  public GetTypeEvent200ResponseAllOf addDataItem(ObjectTableTypeEvent dataItem) {
-    if (this.data == null) {
-      this.data = new ArrayList<>();
-    }
-    this.data.add(dataItem);
+    this.id = id;
     return this;
   }
 
    /**
-   * Get data
-   * @return data
+   * Unique incremental id | bigint(20)
+   * @return id
   **/
   @javax.annotation.Nullable
-
-  public List<ObjectTableTypeEvent> getData() {
-    return data;
+  public Long getId() {
+    return id;
   }
 
 
-  public void setData(List<ObjectTableTypeEvent> data) {
-    this.data = data;
+  public void setId(Long id) {
+    this.id = id;
   }
 
   /**
@@ -100,9 +91,9 @@ public class GetTypeEvent200ResponseAllOf {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the GetTypeEvent200ResponseAllOf instance itself
+   * @return the AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw instance itself
    */
-  public GetTypeEvent200ResponseAllOf putAdditionalProperty(String key, Object value) {
+  public AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -141,21 +132,21 @@ public class GetTypeEvent200ResponseAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    GetTypeEvent200ResponseAllOf getTypeEvent200ResponseAllOf = (GetTypeEvent200ResponseAllOf) o;
-    return Objects.equals(this.data, getTypeEvent200ResponseAllOf.data)&&
-        Objects.equals(this.additionalProperties, getTypeEvent200ResponseAllOf.additionalProperties);
+    AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw addHEwPickScnl201ResponseDataPicksInnerAllOfPickEw = (AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw) o;
+    return Objects.equals(this.id, addHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.id)&&
+        Objects.equals(this.additionalProperties, addHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, additionalProperties);
+    return Objects.hash(id, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class GetTypeEvent200ResponseAllOf {\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("class AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -179,54 +170,41 @@ public class GetTypeEvent200ResponseAllOf {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("data");
+    openapiFields.add("id");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to GetTypeEvent200ResponseAllOf
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!GetTypeEvent200ResponseAllOf.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in GetTypeEvent200ResponseAllOf is not found in the empty JSON string", GetTypeEvent200ResponseAllOf.openapiRequiredFields.toString()));
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw is not found in the empty JSON string", AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.openapiRequiredFields.toString()));
         }
       }
-      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
-        if (jsonArraydata != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
-          }
-
-          // validate the optional field `data` (array)
-          for (int i = 0; i < jsonArraydata.size(); i++) {
-            ObjectTableTypeEvent.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
-          };
-        }
-      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!GetTypeEvent200ResponseAllOf.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'GetTypeEvent200ResponseAllOf' and its subtypes
+       if (!AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<GetTypeEvent200ResponseAllOf> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(GetTypeEvent200ResponseAllOf.class));
+       final TypeAdapter<AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<GetTypeEvent200ResponseAllOf>() {
+       return (TypeAdapter<T>) new TypeAdapter<AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw>() {
            @Override
-           public void write(JsonWriter out, GetTypeEvent200ResponseAllOf value) throws IOException {
+           public void write(JsonWriter out, AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -249,11 +227,12 @@ public class GetTypeEvent200ResponseAllOf {
            }
 
            @Override
-           public GetTypeEvent200ResponseAllOf read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+           public AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
-             GetTypeEvent200ResponseAllOf instance = thisAdapter.fromJsonTree(jsonObj);
+             AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -280,18 +259,18 @@ public class GetTypeEvent200ResponseAllOf {
   }
 
  /**
-  * Create an instance of GetTypeEvent200ResponseAllOf given an JSON string
+  * Create an instance of AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of GetTypeEvent200ResponseAllOf
-  * @throws IOException if the JSON string is invalid with respect to GetTypeEvent200ResponseAllOf
+  * @return An instance of AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
+  * @throws IOException if the JSON string is invalid with respect to AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
   */
-  public static GetTypeEvent200ResponseAllOf fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, GetTypeEvent200ResponseAllOf.class);
+  public static AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.class);
   }
 
  /**
-  * Convert an instance of GetTypeEvent200ResponseAllOf to an JSON string
+  * Convert an instance of AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw to an JSON string
   *
   * @return JSON string
   */

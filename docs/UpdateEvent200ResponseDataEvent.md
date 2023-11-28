@@ -1,6 +1,6 @@
 
 
-# AddEvent201ResponseDataEventOriginsInnerAllOf
+# UpdateEvent200ResponseDataEvent
 
 
 ## Properties

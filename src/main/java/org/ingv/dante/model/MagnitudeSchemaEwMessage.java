@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.MagnitudePhasesInner;
 
@@ -35,13 +35,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class MagnitudeSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -113,7 +116,7 @@ public class MagnitudeSchemaEwMessage {
 
   public static final String SERIALIZED_NAME_PHASES = "phases";
   @SerializedName(SERIALIZED_NAME_PHASES)
-  private List<MagnitudePhasesInner> phases = new ArrayList<>();
+  private List<MagnitudePhasesInner> phases;
 
   public MagnitudeSchemaEwMessage() {
   }
@@ -129,7 +132,6 @@ public class MagnitudeSchemaEwMessage {
    * @return quakeId
   **/
   @javax.annotation.Nullable
-
   public Long getQuakeId() {
     return quakeId;
   }
@@ -151,7 +153,6 @@ public class MagnitudeSchemaEwMessage {
    * @return version
   **/
   @javax.annotation.Nonnull
-
   public String getVersion() {
     return version;
   }
@@ -173,7 +174,6 @@ public class MagnitudeSchemaEwMessage {
    * @return mag
   **/
   @javax.annotation.Nonnull
-
   public Double getMag() {
     return mag;
   }
@@ -195,7 +195,6 @@ public class MagnitudeSchemaEwMessage {
    * @return error
   **/
   @javax.annotation.Nullable
-
   public Double getError() {
     return error;
   }
@@ -217,7 +216,6 @@ public class MagnitudeSchemaEwMessage {
    * @return quality
   **/
   @javax.annotation.Nullable
-
   public Double getQuality() {
     return quality;
   }
@@ -239,7 +237,6 @@ public class MagnitudeSchemaEwMessage {
    * @return minDist
   **/
   @javax.annotation.Nullable
-
   public Double getMinDist() {
     return minDist;
   }
@@ -261,7 +258,6 @@ public class MagnitudeSchemaEwMessage {
    * @return azimuth
   **/
   @javax.annotation.Nullable
-
   public Float getAzimuth() {
     return azimuth;
   }
@@ -283,7 +279,6 @@ public class MagnitudeSchemaEwMessage {
    * @return nStations
   **/
   @javax.annotation.Nullable
-
   public Long getnStations() {
     return nStations;
   }
@@ -305,7 +300,6 @@ public class MagnitudeSchemaEwMessage {
    * @return nChannels
   **/
   @javax.annotation.Nullable
-
   public Long getnChannels() {
     return nChannels;
   }
@@ -327,7 +321,6 @@ public class MagnitudeSchemaEwMessage {
    * @return qAuthor
   **/
   @javax.annotation.Nullable
-
   public String getqAuthor() {
     return qAuthor;
   }
@@ -349,7 +342,6 @@ public class MagnitudeSchemaEwMessage {
    * @return qddsVersion
   **/
   @javax.annotation.Nullable
-
   public Double getQddsVersion() {
     return qddsVersion;
   }
@@ -371,7 +363,6 @@ public class MagnitudeSchemaEwMessage {
    * @return iMagType
   **/
   @javax.annotation.Nullable
-
   public Double getiMagType() {
     return iMagType;
   }
@@ -393,7 +384,6 @@ public class MagnitudeSchemaEwMessage {
    * @return magType
   **/
   @javax.annotation.Nullable
-
   public String getMagType() {
     return magType;
   }
@@ -415,7 +405,6 @@ public class MagnitudeSchemaEwMessage {
    * @return algorithm
   **/
   @javax.annotation.Nullable
-
   public Double getAlgorithm() {
     return algorithm;
   }
@@ -437,7 +426,6 @@ public class MagnitudeSchemaEwMessage {
    * @return ingvQuality
   **/
   @javax.annotation.Nullable
-
   public String getIngvQuality() {
     return ingvQuality;
   }
@@ -467,7 +455,6 @@ public class MagnitudeSchemaEwMessage {
    * @return phases
   **/
   @javax.annotation.Nullable
-
   public List<MagnitudePhasesInner> getPhases() {
     return phases;
   }
@@ -624,24 +611,25 @@ public class MagnitudeSchemaEwMessage {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to MagnitudeSchemaEwMessage
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to MagnitudeSchemaEwMessage
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!MagnitudeSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!MagnitudeSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in MagnitudeSchemaEwMessage is not found in the empty JSON string", MagnitudeSchemaEwMessage.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : MagnitudeSchemaEwMessage.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if (!jsonObj.get("version").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
@@ -667,7 +655,7 @@ public class MagnitudeSchemaEwMessage {
 
           // validate the optional field `phases` (array)
           for (int i = 0; i < jsonArrayphases.size(); i++) {
-            MagnitudePhasesInner.validateJsonObject(jsonArrayphases.get(i).getAsJsonObject());
+            MagnitudePhasesInner.validateJsonElement(jsonArrayphases.get(i));
           };
         }
       }
@@ -710,8 +698,9 @@ public class MagnitudeSchemaEwMessage {
 
            @Override
            public MagnitudeSchemaEwMessage read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              MagnitudeSchemaEwMessage instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

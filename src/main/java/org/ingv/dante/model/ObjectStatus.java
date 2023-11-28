@@ -14,7 +14,6 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -22,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectStatusDbHost;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -35,13 +35,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class ObjectStatus {
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
@@ -109,7 +112,6 @@ public class ObjectStatus {
    * @return detail
   **/
   @javax.annotation.Nullable
-
   public String getDetail() {
     return detail;
   }
@@ -131,7 +133,6 @@ public class ObjectStatus {
    * @return instance
   **/
   @javax.annotation.Nullable
-
   public URI getInstance() {
     return instance;
   }
@@ -155,7 +156,6 @@ public class ObjectStatus {
    * @return status
   **/
   @javax.annotation.Nullable
-
   public Integer getStatus() {
     return status;
   }
@@ -177,7 +177,6 @@ public class ObjectStatus {
    * @return title
   **/
   @javax.annotation.Nullable
-
   public String getTitle() {
     return title;
   }
@@ -199,7 +198,6 @@ public class ObjectStatus {
    * @return type
   **/
   @javax.annotation.Nullable
-
   public URI getType() {
     return type;
   }
@@ -221,7 +219,6 @@ public class ObjectStatus {
    * @return version
   **/
   @javax.annotation.Nullable
-
   public String getVersion() {
     return version;
   }
@@ -243,7 +240,6 @@ public class ObjectStatus {
    * @return dbConnection
   **/
   @javax.annotation.Nullable
-
   public String getDbConnection() {
     return dbConnection;
   }
@@ -265,7 +261,6 @@ public class ObjectStatus {
    * @return dbHost
   **/
   @javax.annotation.Nullable
-
   public ObjectStatusDbHost getDbHost() {
     return dbHost;
   }
@@ -287,7 +282,6 @@ public class ObjectStatus {
    * @return dbPort
   **/
   @javax.annotation.Nullable
-
   public Long getDbPort() {
     return dbPort;
   }
@@ -309,7 +303,6 @@ public class ObjectStatus {
    * @return dbName
   **/
   @javax.annotation.Nullable
-
   public String getDbName() {
     return dbName;
   }
@@ -331,7 +324,6 @@ public class ObjectStatus {
    * @return dbSchema
   **/
   @javax.annotation.Nullable
-
   public String getDbSchema() {
     return dbSchema;
   }
@@ -481,17 +473,18 @@ public class ObjectStatus {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectStatus
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to ObjectStatus
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!ObjectStatus.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectStatus.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectStatus is not found in the empty JSON string", ObjectStatus.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("detail") != null && !jsonObj.get("detail").isJsonNull()) && !jsonObj.get("detail").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detail").toString()));
       }
@@ -512,7 +505,7 @@ public class ObjectStatus {
       }
       // validate the optional field `db-host`
       if (jsonObj.get("db-host") != null && !jsonObj.get("db-host").isJsonNull()) {
-        ObjectStatusDbHost.validateJsonObject(jsonObj.getAsJsonObject("db-host"));
+        ObjectStatusDbHost.validateJsonElement(jsonObj.get("db-host"));
       }
       if ((jsonObj.get("db-name") != null && !jsonObj.get("db-name").isJsonNull()) && !jsonObj.get("db-name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `db-name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db-name").toString()));
@@ -559,8 +552,9 @@ public class ObjectStatus {
 
            @Override
            public ObjectStatus read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectStatus instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {

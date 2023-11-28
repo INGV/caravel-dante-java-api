@@ -7,7 +7,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 | [**getToken**](UserApi.md#getToken) | **POST** /login | Logs user into the system |
 
 
-<a name="getToken"></a>
+<a id="getToken"></a>
 # **getToken**
 > GetToken201Response getToken(getTokenRequest)
 

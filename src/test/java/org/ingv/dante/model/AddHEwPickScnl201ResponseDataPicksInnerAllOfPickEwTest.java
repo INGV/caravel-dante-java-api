@@ -19,33 +19,30 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
+import java.util.Arrays;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-
 /**
- * Model tests for AddEwHyp2000arc201ResponseDataEventAllOf
+ * Model tests for AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
  */
-public class AddEwHyp2000arc201ResponseDataEventAllOfTest {
-    private final AddEwHyp2000arc201ResponseDataEventAllOf model = new AddEwHyp2000arc201ResponseDataEventAllOf();
+public class AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEwTest {
+    private final AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw model = new AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw();
 
     /**
-     * Model tests for AddEwHyp2000arc201ResponseDataEventAllOf
+     * Model tests for AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
      */
     @Test
-    public void testAddEwHyp2000arc201ResponseDataEventAllOf() {
-        // TODO: test AddEwHyp2000arc201ResponseDataEventAllOf
+    public void testAddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw() {
+        // TODO: test AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
     }
 
     /**
-     * Test the property 'origins'
+     * Test the property 'id'
      */
     @Test
-    public void originsTest() {
-        // TODO: test origins
+    public void idTest() {
+        // TODO: test id
     }
 
 }

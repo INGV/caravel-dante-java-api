@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**magnitudes** | [**List&lt;AddEvent201ResponseDataEventOriginsInnerAllOf&gt;**](AddEvent201ResponseDataEventOriginsInnerAllOf.md) |  |  [optional] |
+|**magnitudes** | [**List&lt;UpdateEvent200ResponseDataEvent&gt;**](UpdateEvent200ResponseDataEvent.md) |  |  [optional] |
 
 
 

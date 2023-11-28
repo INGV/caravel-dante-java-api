@@ -14,13 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -32,13 +32,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -46,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipio200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T13:59:08.491574Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-11-28T14:44:12.123335Z[Etc/UTC]")
 public class GetMunicipio200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -90,7 +93,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return name
   **/
   @javax.annotation.Nullable
-
   public String getName() {
     return name;
   }
@@ -112,7 +114,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return provNameAbbr
   **/
   @javax.annotation.Nullable
-
   public String getProvNameAbbr() {
     return provNameAbbr;
   }
@@ -134,7 +135,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return provName
   **/
   @javax.annotation.Nullable
-
   public String getProvName() {
     return provName;
   }
@@ -156,7 +156,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return regionName
   **/
   @javax.annotation.Nullable
-
   public String getRegionName() {
     return regionName;
   }
@@ -178,7 +177,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return population
   **/
   @javax.annotation.Nullable
-
   public Long getPopulation() {
     return population;
   }
@@ -202,7 +200,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return lat
   **/
   @javax.annotation.Nullable
-
   public Double getLat() {
     return lat;
   }
@@ -226,7 +223,6 @@ public class GetMunicipio200ResponseDataInner {
    * @return lon
   **/
   @javax.annotation.Nullable
-
   public Double getLon() {
     return lon;
   }
@@ -353,17 +349,18 @@ public class GetMunicipio200ResponseDataInner {
   }
 
  /**
-  * Validates the JSON Object and throws an exception if issues found
+  * Validates the JSON Element and throws an exception if issues found
   *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to GetMunicipio200ResponseDataInner
+  * @param jsonElement JSON Element
+  * @throws IOException if the JSON Element is invalid with respect to GetMunicipio200ResponseDataInner
   */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (!GetMunicipio200ResponseDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON object is null
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!GetMunicipio200ResponseDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in GetMunicipio200ResponseDataInner is not found in the empty JSON string", GetMunicipio200ResponseDataInner.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
@@ -415,8 +412,9 @@ public class GetMunicipio200ResponseDataInner {
 
            @Override
            public GetMunicipio200ResponseDataInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              GetMunicipio200ResponseDataInner instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
