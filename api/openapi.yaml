@@ -7750,7 +7750,6 @@ components:
         name:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
-          nullable: true
           type: string
         description:
           description: Additional information | char(255)
@@ -7768,7 +7767,6 @@ components:
         name:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
-          nullable: true
           type: string
         environment:
           $ref: '#/components/schemas/environment'
@@ -7784,7 +7782,6 @@ components:
         name:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
-          nullable: true
           type: string
         environment:
           $ref: '#/components/schemas/environment'
@@ -7815,7 +7812,6 @@ components:
         name:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
-          nullable: true
           type: string
         doi:
           description: DOI Resource. i.e. 10.13127/TDMT | varchar(255)
@@ -12096,7 +12092,6 @@ components:
     localspace__name:
       description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
       example: hew1_mole
-      nullable: true
       type: string
     doi:
       description: DOI Resource. i.e. 10.13127/TDMT | varchar(255)
@@ -13485,7 +13480,6 @@ components:
         name:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
-          nullable: true
           type: string
         doi:
           description: DOI Resource. i.e. 10.13127/TDMT | varchar(255)
@@ -16453,7 +16447,6 @@ components:
         name:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
-          nullable: true
           type: string
     addEvent_201_response_data_event_origins_inner_allOf:
       example:
