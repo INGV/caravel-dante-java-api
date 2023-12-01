@@ -117,11 +117,11 @@ public class ObjectMagnitudeTest {
     }
 
     /**
-     * Test the property 'minDist'
+     * Test the property 'minDistance'
      */
     @Test
-    public void minDistTest() {
-        // TODO: test minDist
+    public void minDistanceTest() {
+        // TODO: test minDistance
     }
 
     /**
