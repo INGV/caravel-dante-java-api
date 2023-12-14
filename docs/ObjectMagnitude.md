@@ -16,7 +16,7 @@
 |**upperUncertainty** | **Double** | Magnitude upper_uncertainty | double |  [optional] |
 |**confidenceLevel** | **Float** | Integer numer for confidence level type (68.3 1 sigma, xx &#x3D;2 sigma, 99% 3 sigma) | decimal(5.2) |  [optional] |
 |**quality** | **Double** | quality | double |  [optional] |
-|**minDist** | **Double** | Minimal distance from station to origin | double |  [optional] |
+|**minDistance** | **Double** | Minimal distance from station to origin | double |  [optional] |
 |**azimut** | **Float** | Azimutal gap | float4 |  [optional] |
 |**nsta** | **Long** | Number of the stations on magnitudo calculation | int(11) |  [optional] |
 |**ncha** | **Long** | Number of the channel on magnitudo calculation | int(11) |  [optional] |

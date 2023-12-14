@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.1.0
+  version: 3.2.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -7842,6 +7842,8 @@ components:
           format: date-time
           readOnly: true
           type: string
+      required:
+      - name
       type: object
     ObjectPickEw:
       example:
@@ -8110,6 +8112,7 @@ components:
               version: hew1_mole
               parameters: ToDo
               username: ew
+            min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
               name: hew1_mole
@@ -8117,7 +8120,6 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ncha: 0
-            min_dist: 3.353193347011243
             lower_uncertainty: 0.52
           - type_magnitude: ML-VAX
             nsta: 7
@@ -8239,6 +8241,7 @@ components:
               version: hew1_mole
               parameters: ToDo
               username: ew
+            min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
               name: hew1_mole
@@ -8246,7 +8249,6 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ncha: 0
-            min_dist: 3.353193347011243
             lower_uncertainty: 0.52
           e0_dip: 3.616076749251911
           lat: 45.492599
@@ -8713,6 +8715,7 @@ components:
               version: hew1_mole
               parameters: ToDo
               username: ew
+            min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
               name: hew1_mole
@@ -8720,7 +8723,6 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ncha: 0
-            min_dist: 3.353193347011243
             lower_uncertainty: 0.52
           - type_magnitude: ML-VAX
             nsta: 7
@@ -8842,6 +8844,7 @@ components:
               version: hew1_mole
               parameters: ToDo
               username: ew
+            min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
               name: hew1_mole
@@ -8849,7 +8852,6 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ncha: 0
-            min_dist: 3.353193347011243
             lower_uncertainty: 0.52
           e0_dip: 3.616076749251911
           lat: 45.492599
@@ -9413,6 +9415,7 @@ components:
             version: hew1_mole
             parameters: ToDo
             username: ew
+          min_distance: 3.353193347011243
           ncha_used: 27
           localspace:
             name: hew1_mole
@@ -9420,7 +9423,6 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           ncha: 0
-          min_dist: 3.353193347011243
           lower_uncertainty: 0.52
         - type_magnitude: ML-VAX
           nsta: 7
@@ -9542,6 +9544,7 @@ components:
             version: hew1_mole
             parameters: ToDo
             username: ew
+          min_distance: 3.353193347011243
           ncha_used: 27
           localspace:
             name: hew1_mole
@@ -9549,7 +9552,6 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           ncha: 0
-          min_dist: 3.353193347011243
           lower_uncertainty: 0.52
         e0_dip: 3.616076749251911
         lat: 45.492599
@@ -10472,6 +10474,7 @@ components:
           version: hew1_mole
           parameters: ToDo
           username: ew
+        min_distance: 3.353193347011243
         ncha_used: 27
         localspace:
           name: hew1_mole
@@ -10479,7 +10482,6 @@ components:
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
         ncha: 0
-        min_dist: 3.353193347011243
         lower_uncertainty: 0.52
       properties:
         id:
@@ -10532,7 +10534,7 @@ components:
           description: quality | double
           format: double
           type: number
-        min_dist:
+        min_distance:
           description: Minimal distance from station to origin | double
           format: double
           type: number
@@ -14022,6 +14024,7 @@ components:
                 version: hew1_mole
                 parameters: ToDo
                 username: ew
+              min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
                 name: hew1_mole
@@ -14029,7 +14032,6 @@ components:
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ncha: 0
-              min_dist: 3.353193347011243
               lower_uncertainty: 0.52
             - type_magnitude: ML-VAX
               nsta: 7
@@ -14151,6 +14153,7 @@ components:
                 version: hew1_mole
                 parameters: ToDo
                 username: ew
+              min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
                 name: hew1_mole
@@ -14158,7 +14161,6 @@ components:
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ncha: 0
-              min_dist: 3.353193347011243
               lower_uncertainty: 0.52
             e0_dip: 3.616076749251911
             lat: 45.492599
@@ -14625,6 +14627,7 @@ components:
                 version: hew1_mole
                 parameters: ToDo
                 username: ew
+              min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
                 name: hew1_mole
@@ -14632,7 +14635,6 @@ components:
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ncha: 0
-              min_dist: 3.353193347011243
               lower_uncertainty: 0.52
             - type_magnitude: ML-VAX
               nsta: 7
@@ -14754,6 +14756,7 @@ components:
                 version: hew1_mole
                 parameters: ToDo
                 username: ew
+              min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
                 name: hew1_mole
@@ -14761,7 +14764,6 @@ components:
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ncha: 0
-              min_dist: 3.353193347011243
               lower_uncertainty: 0.52
             e0_dip: 3.616076749251911
             lat: 45.492599
@@ -15347,6 +15349,7 @@ components:
                   version: hew1_mole
                   parameters: ToDo
                   username: ew
+                min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
                   name: hew1_mole
@@ -15354,7 +15357,6 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ncha: 0
-                min_dist: 3.353193347011243
                 lower_uncertainty: 0.52
               - type_magnitude: ML-VAX
                 nsta: 7
@@ -15476,6 +15478,7 @@ components:
                   version: hew1_mole
                   parameters: ToDo
                   username: ew
+                min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
                   name: hew1_mole
@@ -15483,7 +15486,6 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ncha: 0
-                min_dist: 3.353193347011243
                 lower_uncertainty: 0.52
               e0_dip: 3.616076749251911
               lat: 45.492599
@@ -15950,6 +15952,7 @@ components:
                   version: hew1_mole
                   parameters: ToDo
                   username: ew
+                min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
                   name: hew1_mole
@@ -15957,7 +15960,6 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ncha: 0
-                min_dist: 3.353193347011243
                 lower_uncertainty: 0.52
               - type_magnitude: ML-VAX
                 nsta: 7
@@ -16079,6 +16081,7 @@ components:
                   version: hew1_mole
                   parameters: ToDo
                   username: ew
+                min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
                   name: hew1_mole
@@ -16086,7 +16089,6 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ncha: 0
-                min_dist: 3.353193347011243
                 lower_uncertainty: 0.52
               e0_dip: 3.616076749251911
               lat: 45.492599
