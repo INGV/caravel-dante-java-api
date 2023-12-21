@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-14T19:02:16.873525Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-12-21T11:02:51.143503Z[Etc/UTC]")
 public class Hyp2000arcSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
