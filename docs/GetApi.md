@@ -59,8 +59,8 @@ public class Example {
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
     Double maxradius = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5).
-    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
-    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers.
+    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers.
     Double minmag = 3.4D; // Double | Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5).
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
@@ -122,8 +122,8 @@ public class Example {
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
 | **maxradius** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). | [optional] |
-| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
-| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
+| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
+| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
 | **minmag** | **Double**| Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). | [optional] |
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
@@ -289,8 +289,8 @@ public class Example {
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
     Double maxradius = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5).
-    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
-    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers.
+    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers.
     Double minmag = 3.4D; // Double | Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5).
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
@@ -352,8 +352,8 @@ public class Example {
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
 | **maxradius** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). | [optional] |
-| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
-| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
+| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
+| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
 | **minmag** | **Double**| Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). | [optional] |
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
@@ -445,8 +445,8 @@ public class Example {
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
     Double maxradius = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5).
-    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
-    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers.
+    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers.
     Double minmag = 3.4D; // Double | Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5).
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
@@ -509,8 +509,8 @@ public class Example {
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
 | **maxradius** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). | [optional] |
-| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
-| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
+| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
+| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
 | **minmag** | **Double**| Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). | [optional] |
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
@@ -603,8 +603,8 @@ public class Example {
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
     Double maxradius = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5).
-    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
-    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers.
+    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers.
     Double minmag = 3.4D; // Double | Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5).
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
@@ -666,8 +666,8 @@ public class Example {
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
 | **maxradius** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). | [optional] |
-| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
-| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
+| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
+| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
 | **minmag** | **Double**| Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). | [optional] |
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
@@ -823,8 +823,8 @@ public class Example {
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
     Double maxradius = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5).
-    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
-    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers.
+    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers.
     Double minmag = 3.4D; // Double | Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5).
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
@@ -886,8 +886,8 @@ public class Example {
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
 | **maxradius** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). | [optional] |
-| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
-| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
+| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
+| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
 | **minmag** | **Double**| Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). | [optional] |
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
@@ -1197,8 +1197,8 @@ public class Example {
     Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
     Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
     Double maxradius = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5).
-    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
-    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers.
+    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers.
     Double minmag = 3.4D; // Double | Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5).
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
@@ -1260,8 +1260,8 @@ public class Example {
 | **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
 | **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
 | **maxradius** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). | [optional] |
-| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
-| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. **This is an INGV extension to the FDSN specification.** | [optional] |
+| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
+| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
 | **minmag** | **Double**| Limit to events with a magnitude larger than or equal to the specified minimum (i.e. 1.5). | [optional] |
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
