@@ -366,6 +366,47 @@ paths:
         schema:
           format: double
           type: number
+      - description: Specify minimum number of phases (P&S) with weight > 0.0.
+        in: query
+        name: minnphtot
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Specify minimum distance from the closest station (kilometers).
+        in: query
+        name: mindistance
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
+          \ AA,AB,BC)."
+        explode: false
+        in: query
+        name: whereoriginqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -837,6 +878,47 @@ paths:
         schema:
           format: double
           type: number
+      - description: Specify minimum number of phases (P&S) with weight > 0.0.
+        in: query
+        name: minnphtot
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Specify minimum distance from the closest station (kilometers).
+        in: query
+        name: mindistance
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
+          \ AA,AB,BC)."
+        explode: false
+        in: query
+        name: whereoriginqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -1307,6 +1389,47 @@ paths:
         schema:
           format: double
           type: number
+      - description: Specify minimum number of phases (P&S) with weight > 0.0.
+        in: query
+        name: minnphtot
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Specify minimum distance from the closest station (kilometers).
+        in: query
+        name: mindistance
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
+          \ AA,AB,BC)."
+        explode: false
+        in: query
+        name: whereoriginqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -1776,6 +1899,47 @@ paths:
         schema:
           format: double
           type: number
+      - description: Specify minimum number of phases (P&S) with weight > 0.0.
+        in: query
+        name: minnphtot
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Specify minimum distance from the closest station (kilometers).
+        in: query
+        name: mindistance
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
+          \ AA,AB,BC)."
+        explode: false
+        in: query
+        name: whereoriginqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -2245,6 +2409,47 @@ paths:
         schema:
           format: double
           type: number
+      - description: Specify minimum number of phases (P&S) with weight > 0.0.
+        in: query
+        name: minnphtot
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Specify minimum distance from the closest station (kilometers).
+        in: query
+        name: mindistance
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
+          \ AA,AB,BC)."
+        explode: false
+        in: query
+        name: whereoriginqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -2717,6 +2922,47 @@ paths:
         schema:
           format: double
           type: number
+      - description: Specify minimum number of phases (P&S) with weight > 0.0.
+        in: query
+        name: minnphtot
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Specify minimum distance from the closest station (kilometers).
+        in: query
+        name: mindistance
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
+          \ AA,AB,BC)."
+        explode: false
+        in: query
+        name: whereoriginqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -6876,6 +7122,49 @@ components:
       schema:
         format: double
         type: number
+    minnphtot:
+      description: Specify minimum number of phases (P&S) with weight > 0.0.
+      in: query
+      name: minnphtot
+      required: false
+      schema:
+        format: int32
+        type: integer
+    mindistance:
+      description: Specify minimum distance from the closest station (kilometers).
+      in: query
+      name: mindistance
+      required: false
+      schema:
+        format: double
+        type: number
+    whereoriginqualityin:
+      description: "Filter by \"origin.quality\" by comma separated value (i.e. AA,AB,BC)."
+      explode: false
+      in: query
+      name: whereoriginqualityin
+      required: false
+      schema:
+        items:
+          enum:
+          - AA
+          - AB
+          - AC
+          - AD
+          - BA
+          - BB
+          - BC
+          - BD
+          - CA
+          - CB
+          - CC
+          - CD
+          - DA
+          - DB
+          - DC
+          - DD
+          type: string
+        type: array
     mintypeoriginvalue:
       description: Filter the output to type_origin.version_value (i.e. 0).
       in: query
