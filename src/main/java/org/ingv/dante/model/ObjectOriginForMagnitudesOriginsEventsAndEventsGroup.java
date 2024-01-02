@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-02T16:30:38.021290Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-02T17:22:42.417182Z[Etc/UTC]")
 public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -99,6 +99,14 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ERR_LON = "err_lon";
   @SerializedName(SERIALIZED_NAME_ERR_LON)
   private Double errLon;
+
+  public static final String SERIALIZED_NAME_MIN_DISTANCE = "min_distance";
+  @SerializedName(SERIALIZED_NAME_MIN_DISTANCE)
+  private Double minDistance;
+
+  public static final String SERIALIZED_NAME_NPH_TOT = "nph_tot";
+  @SerializedName(SERIALIZED_NAME_NPH_TOT)
+  private Long nphTot;
 
   public static final String SERIALIZED_NAME_QUALITY = "quality";
   @SerializedName(SERIALIZED_NAME_QUALITY)
@@ -392,6 +400,48 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   }
 
 
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup minDistance(Double minDistance) {
+    
+    this.minDistance = minDistance;
+    return this;
+  }
+
+   /**
+   * Distance from the closest station (km) | double
+   * @return minDistance
+  **/
+  @javax.annotation.Nullable
+  public Double getMinDistance() {
+    return minDistance;
+  }
+
+
+  public void setMinDistance(Double minDistance) {
+    this.minDistance = minDistance;
+  }
+
+
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup nphTot(Long nphTot) {
+    
+    this.nphTot = nphTot;
+    return this;
+  }
+
+   /**
+   * # arrivals (P&amp;S) weight &gt;0.0 | int(11)
+   * @return nphTot
+  **/
+  @javax.annotation.Nullable
+  public Long getNphTot() {
+    return nphTot;
+  }
+
+
+  public void setNphTot(Long nphTot) {
+    this.nphTot = nphTot;
+  }
+
+
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup quality(String quality) {
     
     this.quality = quality;
@@ -670,6 +720,8 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
         Objects.equals(this.errZ, objectOriginForMagnitudesOriginsEventsAndEventsGroup.errZ) &&
         Objects.equals(this.errLat, objectOriginForMagnitudesOriginsEventsAndEventsGroup.errLat) &&
         Objects.equals(this.errLon, objectOriginForMagnitudesOriginsEventsAndEventsGroup.errLon) &&
+        Objects.equals(this.minDistance, objectOriginForMagnitudesOriginsEventsAndEventsGroup.minDistance) &&
+        Objects.equals(this.nphTot, objectOriginForMagnitudesOriginsEventsAndEventsGroup.nphTot) &&
         Objects.equals(this.quality, objectOriginForMagnitudesOriginsEventsAndEventsGroup.quality) &&
         Objects.equals(this.associatedPhaseCount, objectOriginForMagnitudesOriginsEventsAndEventsGroup.associatedPhaseCount) &&
         Objects.equals(this.associatedStationCount, objectOriginForMagnitudesOriginsEventsAndEventsGroup.associatedStationCount) &&
@@ -690,7 +742,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idLocalspace, ot, lat, lon, depth, errOt, errH, errZ, errLat, errLon, quality, associatedPhaseCount, associatedStationCount, usedPhaseCount, usedStationCount, region, modified, inserted, typeOrigin, localspace, provenance, additionalProperties);
+    return Objects.hash(id, idLocalspace, ot, lat, lon, depth, errOt, errH, errZ, errLat, errLon, minDistance, nphTot, quality, associatedPhaseCount, associatedStationCount, usedPhaseCount, usedStationCount, region, modified, inserted, typeOrigin, localspace, provenance, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -715,6 +767,8 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     sb.append("    errZ: ").append(toIndentedString(errZ)).append("\n");
     sb.append("    errLat: ").append(toIndentedString(errLat)).append("\n");
     sb.append("    errLon: ").append(toIndentedString(errLon)).append("\n");
+    sb.append("    minDistance: ").append(toIndentedString(minDistance)).append("\n");
+    sb.append("    nphTot: ").append(toIndentedString(nphTot)).append("\n");
     sb.append("    quality: ").append(toIndentedString(quality)).append("\n");
     sb.append("    associatedPhaseCount: ").append(toIndentedString(associatedPhaseCount)).append("\n");
     sb.append("    associatedStationCount: ").append(toIndentedString(associatedStationCount)).append("\n");
@@ -760,6 +814,8 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     openapiFields.add("err_z");
     openapiFields.add("err_lat");
     openapiFields.add("err_lon");
+    openapiFields.add("min_distance");
+    openapiFields.add("nph_tot");
     openapiFields.add("quality");
     openapiFields.add("associatedPhaseCount");
     openapiFields.add("associatedStationCount");

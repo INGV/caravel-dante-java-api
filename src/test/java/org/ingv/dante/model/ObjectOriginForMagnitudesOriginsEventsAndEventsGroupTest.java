@@ -131,6 +131,22 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroupTest {
     }
 
     /**
+     * Test the property 'minDistance'
+     */
+    @Test
+    public void minDistanceTest() {
+        // TODO: test minDistance
+    }
+
+    /**
+     * Test the property 'nphTot'
+     */
+    @Test
+    public void nphTotTest() {
+        // TODO: test nphTot
+    }
+
+    /**
      * Test the property 'quality'
      */
     @Test

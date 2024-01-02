@@ -18,6 +18,8 @@
 |**errZ** | **Double** | Depth error (km) | double |  [optional] |
 |**errLat** | **Double** | Latitude error (km) | double |  [optional] |
 |**errLon** | **Double** | Longitude error (km) | double |  [optional] |
+|**minDistance** | **Double** | Distance from the closest station (km) | double |  [optional] |
+|**nphTot** | **Long** | # arrivals (P&amp;S) weight &gt;0.0 | int(11) |  [optional] |
 |**quality** | **String** | Quality of the localization | char(2) |  [optional] |
 |**associatedPhaseCount** | **Long** | Number of associated phases, regardless of their use for origin computation | int(8)&#39; |  [optional] |
 |**associatedStationCount** | **Long** | Number of stations at which the event was observed | int(8)&#39; |  [optional] |

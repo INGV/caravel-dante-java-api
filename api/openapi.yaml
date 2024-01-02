@@ -7876,12 +7876,13 @@ components:
           err_lon: 2.027123023002322
           err_z: 9.301444243932576
           ot: 2016-06-22T16:52:06.26Z
-          associatedStationCount: 7
+          associatedStationCount: 1
           lon: 9.19289
           err_ot: 2.3021358869347655
           err_h: 7.061401241503109
           quality: AB
           id_localspace: 182491
+          nph_tot: 7
           depth: 0.02
           usedPhaseCount: 1
           inserted: 2016-06-22T16:52:06.26Z
@@ -7890,19 +7891,20 @@ components:
             version: hew1_mole
             softwarename: software
           err_lat: 3.616076749251911
+          min_distance: 4.145608029883936
           localspace:
             environment: development
             name: hew1_mole
           modified: 2016-06-22T16:52:06.26Z
-          usedStationCount: 1
+          usedStationCount: 6
           id: 14932631
           type_origin:
-            version_value: 1
+            version_value: 7
             version_name: ew prelim
             name: hypocenter
           region: Norcia
           lat: 45.492599
-          associatedPhaseCount: 4
+          associatedPhaseCount: 1
         flags: "DPC,twitter,shakemap4,FM"
         preferred_origin_id: 6
         type_group: 5
@@ -7924,7 +7926,7 @@ components:
           type_magnitude: ML-VAX
           upper_uncertainty: 0.53
           mag_quality: BB
-          quality: 6.84685269835264
+          quality: 1.1730742509559433
           id_localspace: 182491
           mag: 3.01
           originid: 14932631
@@ -8546,7 +8548,7 @@ components:
             name: hew1_mole
             description: Auto added
           type_origin:
-            version_value: 1
+            version_value: 7
             version_name: ew prelim
             name: hypocenter
           region: Norcia
@@ -9149,7 +9151,7 @@ components:
             name: hew1_mole
             description: Auto added
           type_origin:
-            version_value: 1
+            version_value: 7
             version_name: ew prelim
             name: hypocenter
           region: Norcia
@@ -9849,7 +9851,7 @@ components:
           name: hew1_mole
           description: Auto added
         type_origin:
-          version_value: 1
+          version_value: 7
           version_name: ew prelim
           name: hypocenter
         region: Norcia
@@ -10469,7 +10471,7 @@ components:
           type: array
     ObjectTypeOrigin:
       example:
-        version_value: 1
+        version_value: 7
         version_name: ew prelim
         name: hypocenter
       properties:
@@ -11948,12 +11950,13 @@ components:
         err_lon: 2.027123023002322
         err_z: 9.301444243932576
         ot: 2016-06-22T16:52:06.26Z
-        associatedStationCount: 7
+        associatedStationCount: 1
         lon: 9.19289
         err_ot: 2.3021358869347655
         err_h: 7.061401241503109
         quality: AB
         id_localspace: 182491
+        nph_tot: 7
         depth: 0.02
         usedPhaseCount: 1
         inserted: 2016-06-22T16:52:06.26Z
@@ -11962,19 +11965,20 @@ components:
           version: hew1_mole
           softwarename: software
         err_lat: 3.616076749251911
+        min_distance: 4.145608029883936
         localspace:
           environment: development
           name: hew1_mole
         modified: 2016-06-22T16:52:06.26Z
-        usedStationCount: 1
+        usedStationCount: 6
         id: 14932631
         type_origin:
-          version_value: 1
+          version_value: 7
           version_name: ew prelim
           name: hypocenter
         region: Norcia
         lat: 45.492599
-        associatedPhaseCount: 4
+        associatedPhaseCount: 1
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -12043,6 +12047,14 @@ components:
           description: Longitude error (km) | double
           format: double
           type: number
+        min_distance:
+          description: Distance from the closest station (km) | double
+          format: double
+          type: number
+        nph_tot:
+          description: '# arrivals (P&S) weight >0.0 | int(11)'
+          format: int64
+          type: integer
         quality:
           description: Quality of the localization | char(2)
           example: AB
@@ -12114,7 +12126,7 @@ components:
         type_magnitude: ML-VAX
         upper_uncertainty: 0.53
         mag_quality: BB
-        quality: 6.84685269835264
+        quality: 1.1730742509559433
         id_localspace: 182491
         mag: 3.01
         originid: 14932631
@@ -13412,12 +13424,13 @@ components:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
-            associatedStationCount: 7
+            associatedStationCount: 1
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
             quality: AB
             id_localspace: 182491
+            nph_tot: 7
             depth: 0.02
             usedPhaseCount: 1
             inserted: 2016-06-22T16:52:06.26Z
@@ -13426,19 +13439,20 @@ components:
               version: hew1_mole
               softwarename: software
             err_lat: 3.616076749251911
+            min_distance: 4.145608029883936
             localspace:
               environment: development
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
-            usedStationCount: 1
+            usedStationCount: 6
             id: 14932631
             type_origin:
-              version_value: 1
+              version_value: 7
               version_name: ew prelim
               name: hypocenter
             region: Norcia
             lat: 45.492599
-            associatedPhaseCount: 4
+            associatedPhaseCount: 1
           flags: "DPC,twitter,shakemap4,FM"
           preferred_origin_id: 6
           type_group: 5
@@ -13460,7 +13474,7 @@ components:
             type_magnitude: ML-VAX
             upper_uncertainty: 0.53
             mag_quality: BB
-            quality: 6.84685269835264
+            quality: 1.1730742509559433
             id_localspace: 182491
             mag: 3.01
             originid: 14932631
@@ -13483,12 +13497,13 @@ components:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
-            associatedStationCount: 7
+            associatedStationCount: 1
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
             quality: AB
             id_localspace: 182491
+            nph_tot: 7
             depth: 0.02
             usedPhaseCount: 1
             inserted: 2016-06-22T16:52:06.26Z
@@ -13497,19 +13512,20 @@ components:
               version: hew1_mole
               softwarename: software
             err_lat: 3.616076749251911
+            min_distance: 4.145608029883936
             localspace:
               environment: development
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
-            usedStationCount: 1
+            usedStationCount: 6
             id: 14932631
             type_origin:
-              version_value: 1
+              version_value: 7
               version_name: ew prelim
               name: hypocenter
             region: Norcia
             lat: 45.492599
-            associatedPhaseCount: 4
+            associatedPhaseCount: 1
           flags: "DPC,twitter,shakemap4,FM"
           preferred_origin_id: 6
           type_group: 5
@@ -13531,7 +13547,7 @@ components:
             type_magnitude: ML-VAX
             upper_uncertainty: 0.53
             mag_quality: BB
-            quality: 6.84685269835264
+            quality: 1.1730742509559433
             id_localspace: 182491
             mag: 3.01
             originid: 14932631
@@ -13587,12 +13603,13 @@ components:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
-            associatedStationCount: 7
+            associatedStationCount: 1
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
             quality: AB
             id_localspace: 182491
+            nph_tot: 7
             depth: 0.02
             usedPhaseCount: 1
             inserted: 2016-06-22T16:52:06.26Z
@@ -13601,19 +13618,20 @@ components:
               version: hew1_mole
               softwarename: software
             err_lat: 3.616076749251911
+            min_distance: 4.145608029883936
             localspace:
               environment: development
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
-            usedStationCount: 1
+            usedStationCount: 6
             id: 14932631
             type_origin:
-              version_value: 1
+              version_value: 7
               version_name: ew prelim
               name: hypocenter
             region: Norcia
             lat: 45.492599
-            associatedPhaseCount: 4
+            associatedPhaseCount: 1
           flags: "DPC,twitter,shakemap4,FM"
           preferred_origin_id: 6
           type_group: 5
@@ -13636,7 +13654,7 @@ components:
             type_magnitude: ML-VAX
             upper_uncertainty: 0.53
             mag_quality: BB
-            quality: 6.84685269835264
+            quality: 1.1730742509559433
             id_localspace: 182491
             mag: 3.01
             originid: 14932631
@@ -13659,12 +13677,13 @@ components:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
-            associatedStationCount: 7
+            associatedStationCount: 1
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
             quality: AB
             id_localspace: 182491
+            nph_tot: 7
             depth: 0.02
             usedPhaseCount: 1
             inserted: 2016-06-22T16:52:06.26Z
@@ -13673,19 +13692,20 @@ components:
               version: hew1_mole
               softwarename: software
             err_lat: 3.616076749251911
+            min_distance: 4.145608029883936
             localspace:
               environment: development
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
-            usedStationCount: 1
+            usedStationCount: 6
             id: 14932631
             type_origin:
-              version_value: 1
+              version_value: 7
               version_name: ew prelim
               name: hypocenter
             region: Norcia
             lat: 45.492599
-            associatedPhaseCount: 4
+            associatedPhaseCount: 1
           flags: "DPC,twitter,shakemap4,FM"
           preferred_origin_id: 6
           type_group: 5
@@ -13708,7 +13728,7 @@ components:
             type_magnitude: ML-VAX
             upper_uncertainty: 0.53
             mag_quality: BB
-            quality: 6.84685269835264
+            quality: 1.1730742509559433
             id_localspace: 182491
             mag: 3.01
             originid: 14932631
@@ -13823,12 +13843,13 @@ components:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
-            associatedStationCount: 7
+            associatedStationCount: 1
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
             quality: AB
             id_localspace: 182491
+            nph_tot: 7
             depth: 0.02
             usedPhaseCount: 1
             inserted: 2016-06-22T16:52:06.26Z
@@ -13837,19 +13858,20 @@ components:
               version: hew1_mole
               softwarename: software
             err_lat: 3.616076749251911
+            min_distance: 4.145608029883936
             localspace:
               environment: development
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
-            usedStationCount: 1
+            usedStationCount: 6
             id: 14932631
             type_origin:
-              version_value: 1
+              version_value: 7
               version_name: ew prelim
               name: hypocenter
             region: Norcia
             lat: 45.492599
-            associatedPhaseCount: 4
+            associatedPhaseCount: 1
           flags: "DPC,twitter,shakemap4,FM"
           preferred_origin_id: 6
           type_group: 5
@@ -13872,7 +13894,7 @@ components:
             type_magnitude: ML-VAX
             upper_uncertainty: 0.53
             mag_quality: BB
-            quality: 6.84685269835264
+            quality: 1.1730742509559433
             id_localspace: 182491
             mag: 3.01
             originid: 14932631
@@ -13895,12 +13917,13 @@ components:
             err_lon: 2.027123023002322
             err_z: 9.301444243932576
             ot: 2016-06-22T16:52:06.26Z
-            associatedStationCount: 7
+            associatedStationCount: 1
             lon: 9.19289
             err_ot: 2.3021358869347655
             err_h: 7.061401241503109
             quality: AB
             id_localspace: 182491
+            nph_tot: 7
             depth: 0.02
             usedPhaseCount: 1
             inserted: 2016-06-22T16:52:06.26Z
@@ -13909,19 +13932,20 @@ components:
               version: hew1_mole
               softwarename: software
             err_lat: 3.616076749251911
+            min_distance: 4.145608029883936
             localspace:
               environment: development
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
-            usedStationCount: 1
+            usedStationCount: 6
             id: 14932631
             type_origin:
-              version_value: 1
+              version_value: 7
               version_name: ew prelim
               name: hypocenter
             region: Norcia
             lat: 45.492599
-            associatedPhaseCount: 4
+            associatedPhaseCount: 1
           flags: "DPC,twitter,shakemap4,FM"
           preferred_origin_id: 6
           type_group: 5
@@ -13944,7 +13968,7 @@ components:
             type_magnitude: ML-VAX
             upper_uncertainty: 0.53
             mag_quality: BB
-            quality: 6.84685269835264
+            quality: 1.1730742509559433
             id_localspace: 182491
             mag: 3.01
             originid: 14932631
@@ -14458,7 +14482,7 @@ components:
               name: hew1_mole
               description: Auto added
             type_origin:
-              version_value: 1
+              version_value: 7
               version_name: ew prelim
               name: hypocenter
             region: Norcia
@@ -15061,7 +15085,7 @@ components:
               name: hew1_mole
               description: Auto added
             type_origin:
-              version_value: 1
+              version_value: 7
               version_name: ew prelim
               name: hypocenter
             region: Norcia
@@ -15783,7 +15807,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               type_origin:
-                version_value: 1
+                version_value: 7
                 version_name: ew prelim
                 name: hypocenter
               region: Norcia
@@ -16386,7 +16410,7 @@ components:
                 name: hew1_mole
                 description: Auto added
               type_origin:
-                version_value: 1
+                version_value: 7
                 version_name: ew prelim
                 name: hypocenter
               region: Norcia
@@ -17414,12 +17438,13 @@ components:
           err_lon: 2.027123023002322
           err_z: 9.301444243932576
           ot: 2016-06-22T16:52:06.26Z
-          associatedStationCount: 7
+          associatedStationCount: 1
           lon: 9.19289
           err_ot: 2.3021358869347655
           err_h: 7.061401241503109
           quality: AB
           id_localspace: 182491
+          nph_tot: 7
           depth: 0.02
           usedPhaseCount: 1
           inserted: 2016-06-22T16:52:06.26Z
@@ -17428,19 +17453,20 @@ components:
             version: hew1_mole
             softwarename: software
           err_lat: 3.616076749251911
+          min_distance: 4.145608029883936
           localspace:
             environment: development
             name: hew1_mole
           modified: 2016-06-22T16:52:06.26Z
-          usedStationCount: 1
+          usedStationCount: 6
           id: 14932631
           type_origin:
-            version_value: 1
+            version_value: 7
             version_name: ew prelim
             name: hypocenter
           region: Norcia
           lat: 45.492599
-          associatedPhaseCount: 4
+          associatedPhaseCount: 1
         flags: "DPC,twitter,shakemap4,FM"
         preferred_origin_id: 6
         type_group: 5
@@ -17463,7 +17489,7 @@ components:
           type_magnitude: ML-VAX
           upper_uncertainty: 0.53
           mag_quality: BB
-          quality: 6.84685269835264
+          quality: 1.1730742509559433
           id_localspace: 182491
           mag: 3.01
           originid: 14932631
