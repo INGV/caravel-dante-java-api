@@ -25,7 +25,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 
 <a id="getAll"></a>
 # **getAll**
-> GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
+> GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
 This API returns all origins with all magnitude; one per line.
 
@@ -65,6 +65,9 @@ public class Example {
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
+    Integer minnphtot = 56; // Integer | Specify minimum number of phases (P&S) with weight > 0.0.
+    Double mindistance = 3.4D; // Double | Specify minimum distance from the closest station (kilometers).
+    List<String> whereoriginqualityin = Arrays.asList(); // List<String> | Filter by \"origin.quality\" by comma separated value (i.e. AA,AB,BC).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
@@ -92,7 +95,7 @@ public class Example {
     Long originid = 56L; // Long | Select by origin id.
     Long magnitudeid = 56L; // Long | Select by magnitude id.
     try {
-      GetEventsGroup200Response result = apiInstance.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
+      GetEventsGroup200Response result = apiInstance.getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getAll");
@@ -128,6 +131,9 @@ public class Example {
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
+| **minnphtot** | **Integer**| Specify minimum number of phases (P&amp;S) with weight &gt; 0.0. | [optional] |
+| **mindistance** | **Double**| Specify minimum distance from the closest station (kilometers). | [optional] |
+| **whereoriginqualityin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.quality\&quot; by comma separated value (i.e. AA,AB,BC). | [optional] [enum: AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
@@ -255,7 +261,7 @@ No authorization required
 
 <a id="getEvents"></a>
 # **getEvents**
-> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
+> GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
 This API returns the preferred origin and the preferred magnitude from the same instance.
 
@@ -295,6 +301,9 @@ public class Example {
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
+    Integer minnphtot = 56; // Integer | Specify minimum number of phases (P&S) with weight > 0.0.
+    Double mindistance = 3.4D; // Double | Specify minimum distance from the closest station (kilometers).
+    List<String> whereoriginqualityin = Arrays.asList(); // List<String> | Filter by \"origin.quality\" by comma separated value (i.e. AA,AB,BC).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
@@ -322,7 +331,7 @@ public class Example {
     Long originid = 56L; // Long | Select by origin id.
     Long magnitudeid = 56L; // Long | Select by magnitude id.
     try {
-      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
+      GetEventsGroup200Response result = apiInstance.getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvents");
@@ -358,6 +367,9 @@ public class Example {
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
+| **minnphtot** | **Integer**| Specify minimum number of phases (P&amp;S) with weight &gt; 0.0. | [optional] |
+| **mindistance** | **Double**| Specify minimum distance from the closest station (kilometers). | [optional] |
+| **whereoriginqualityin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.quality\&quot; by comma separated value (i.e. AA,AB,BC). | [optional] [enum: AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
@@ -411,7 +423,7 @@ No authorization required
 
 <a id="getEventsCatalog"></a>
 # **getEventsCatalog**
-> GetEventsCatalog200Response getEventsCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi)
+> GetEventsCatalog200Response getEventsCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi)
 
 This API returns the catalogs.
 
@@ -451,6 +463,9 @@ public class Example {
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
+    Integer minnphtot = 56; // Integer | Specify minimum number of phases (P&S) with weight > 0.0.
+    Double mindistance = 3.4D; // Double | Specify minimum distance from the closest station (kilometers).
+    List<String> whereoriginqualityin = Arrays.asList(); // List<String> | Filter by \"origin.quality\" by comma separated value (i.e. AA,AB,BC).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
@@ -479,7 +494,7 @@ public class Example {
     Long magnitudeid = 56L; // Long | Select by magnitude id.
     String doi = "doi_example"; // String | Doi.
     try {
-      GetEventsCatalog200Response result = apiInstance.getEventsCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi);
+      GetEventsCatalog200Response result = apiInstance.getEventsCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEventsCatalog");
@@ -515,6 +530,9 @@ public class Example {
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
+| **minnphtot** | **Integer**| Specify minimum number of phases (P&amp;S) with weight &gt; 0.0. | [optional] |
+| **mindistance** | **Double**| Specify minimum distance from the closest station (kilometers). | [optional] |
+| **whereoriginqualityin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.quality\&quot; by comma separated value (i.e. AA,AB,BC). | [optional] [enum: AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
@@ -569,7 +587,7 @@ No authorization required
 
 <a id="getEventsGroup"></a>
 # **getEventsGroup**
-> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
+> GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -609,6 +627,9 @@ public class Example {
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
+    Integer minnphtot = 56; // Integer | Specify minimum number of phases (P&S) with weight > 0.0.
+    Double mindistance = 3.4D; // Double | Specify minimum distance from the closest station (kilometers).
+    List<String> whereoriginqualityin = Arrays.asList(); // List<String> | Filter by \"origin.quality\" by comma separated value (i.e. AA,AB,BC).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
@@ -636,7 +657,7 @@ public class Example {
     Long originid = 56L; // Long | Select by origin id.
     Long magnitudeid = 56L; // Long | Select by magnitude id.
     try {
-      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
+      GetEventsGroup200Response result = apiInstance.getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEventsGroup");
@@ -672,6 +693,9 @@ public class Example {
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
+| **minnphtot** | **Integer**| Specify minimum number of phases (P&amp;S) with weight &gt; 0.0. | [optional] |
+| **mindistance** | **Double**| Specify minimum distance from the closest station (kilometers). | [optional] |
+| **whereoriginqualityin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.quality\&quot; by comma separated value (i.e. AA,AB,BC). | [optional] [enum: AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
@@ -789,7 +813,7 @@ No authorization required
 
 <a id="getMagnitudes"></a>
 # **getMagnitudes**
-> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
+> GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
 This API returns all origins with own preferred magnitude.
 
@@ -829,6 +853,9 @@ public class Example {
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
+    Integer minnphtot = 56; // Integer | Specify minimum number of phases (P&S) with weight > 0.0.
+    Double mindistance = 3.4D; // Double | Specify minimum distance from the closest station (kilometers).
+    List<String> whereoriginqualityin = Arrays.asList(); // List<String> | Filter by \"origin.quality\" by comma separated value (i.e. AA,AB,BC).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
@@ -856,7 +883,7 @@ public class Example {
     Long originid = 56L; // Long | Select by origin id.
     Long magnitudeid = 56L; // Long | Select by magnitude id.
     try {
-      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
+      GetEventsGroup200Response result = apiInstance.getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getMagnitudes");
@@ -892,6 +919,9 @@ public class Example {
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
+| **minnphtot** | **Integer**| Specify minimum number of phases (P&amp;S) with weight &gt; 0.0. | [optional] |
+| **mindistance** | **Double**| Specify minimum distance from the closest station (kilometers). | [optional] |
+| **whereoriginqualityin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.quality\&quot; by comma separated value (i.e. AA,AB,BC). | [optional] [enum: AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
@@ -1163,7 +1193,7 @@ No authorization required
 
 <a id="getOrigins"></a>
 # **getOrigins**
-> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
+> GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
 This API returns all the preferred origins.
 
@@ -1203,6 +1233,9 @@ public class Example {
     Double maxmag = 3.4D; // Double | Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3).
     Double mindepth = 3.4D; // Double | Specify minimum depth (kilometers), values increase positively with depth (i.e. 0).
     Double maxdepth = 3.4D; // Double | Specify maximum depth (kilometers), values increase positively with depth (i.e. 50).
+    Integer minnphtot = 56; // Integer | Specify minimum number of phases (P&S) with weight > 0.0.
+    Double mindistance = 3.4D; // Double | Specify minimum distance from the closest station (kilometers).
+    List<String> whereoriginqualityin = Arrays.asList(); // List<String> | Filter by \"origin.quality\" by comma separated value (i.e. AA,AB,BC).
     Long mintypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 0).
     Long maxtypeoriginvalue = 56L; // Long | Filter the output to type_origin.version_value (i.e. 1000).
     Boolean origindirectlinktoevent = false; // Boolean | Origin entity is directly linked to Event entity (`origin.fk_event=event.id`)
@@ -1230,7 +1263,7 @@ public class Example {
     Long originid = 56L; // Long | Select by origin id.
     Long magnitudeid = 56L; // Long | Select by magnitude id.
     try {
-      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
+      GetEventsGroup200Response result = apiInstance.getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, whereoriginqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getOrigins");
@@ -1266,6 +1299,9 @@ public class Example {
 | **maxmag** | **Double**| Limit to events with a magnitude smaller than or equal to the specified maximum (i.e. 7.3). | [optional] |
 | **mindepth** | **Double**| Specify minimum depth (kilometers), values increase positively with depth (i.e. 0). | [optional] |
 | **maxdepth** | **Double**| Specify maximum depth (kilometers), values increase positively with depth (i.e. 50). | [optional] |
+| **minnphtot** | **Integer**| Specify minimum number of phases (P&amp;S) with weight &gt; 0.0. | [optional] |
+| **mindistance** | **Double**| Specify minimum distance from the closest station (kilometers). | [optional] |
+| **whereoriginqualityin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;origin.quality\&quot; by comma separated value (i.e. AA,AB,BC). | [optional] [enum: AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD] |
 | **mintypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 0). | [optional] |
 | **maxtypeoriginvalue** | **Long**| Filter the output to type_origin.version_value (i.e. 1000). | [optional] |
 | **origindirectlinktoevent** | **Boolean**| Origin entity is directly linked to Event entity (&#x60;origin.fk_event&#x3D;event.id&#x60;) | [optional] [default to false] |
