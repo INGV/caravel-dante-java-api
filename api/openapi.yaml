@@ -321,8 +321,7 @@ paths:
           format: double
           type: number
       - description: Specify minimum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: minradiuskm
         required: false
@@ -330,8 +329,7 @@ paths:
           format: double
           type: number
       - description: Specify maximum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: maxradiuskm
         required: false
@@ -409,7 +407,8 @@ paths:
         schema:
           format: string
           type: string
-      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+      - allowReserved: true
+        description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
           "^ml.\*" or "^ml.*|^mwp$").
         in: query
         name: wheretypemagnitudenameregexp
@@ -793,8 +792,7 @@ paths:
           format: double
           type: number
       - description: Specify minimum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: minradiuskm
         required: false
@@ -802,8 +800,7 @@ paths:
           format: double
           type: number
       - description: Specify maximum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: maxradiuskm
         required: false
@@ -881,7 +878,8 @@ paths:
         schema:
           format: string
           type: string
-      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+      - allowReserved: true
+        description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
           "^ml.\*" or "^ml.*|^mwp$").
         in: query
         name: wheretypemagnitudenameregexp
@@ -1264,8 +1262,7 @@ paths:
           format: double
           type: number
       - description: Specify minimum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: minradiuskm
         required: false
@@ -1273,8 +1270,7 @@ paths:
           format: double
           type: number
       - description: Specify maximum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: maxradiuskm
         required: false
@@ -1352,7 +1348,8 @@ paths:
         schema:
           format: string
           type: string
-      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+      - allowReserved: true
+        description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
           "^ml.\*" or "^ml.*|^mwp$").
         in: query
         name: wheretypemagnitudenameregexp
@@ -1734,8 +1731,7 @@ paths:
           format: double
           type: number
       - description: Specify minimum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: minradiuskm
         required: false
@@ -1743,8 +1739,7 @@ paths:
           format: double
           type: number
       - description: Specify maximum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: maxradiuskm
         required: false
@@ -1822,7 +1817,8 @@ paths:
         schema:
           format: string
           type: string
-      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+      - allowReserved: true
+        description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
           "^ml.\*" or "^ml.*|^mwp$").
         in: query
         name: wheretypemagnitudenameregexp
@@ -2204,8 +2200,7 @@ paths:
           format: double
           type: number
       - description: Specify minimum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: minradiuskm
         required: false
@@ -2213,8 +2208,7 @@ paths:
           format: double
           type: number
       - description: Specify maximum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: maxradiuskm
         required: false
@@ -2292,7 +2286,8 @@ paths:
         schema:
           format: string
           type: string
-      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+      - allowReserved: true
+        description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
           "^ml.\*" or "^ml.*|^mwp$").
         in: query
         name: wheretypemagnitudenameregexp
@@ -2677,8 +2672,7 @@ paths:
           format: double
           type: number
       - description: Specify minimum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: minradiuskm
         required: false
@@ -2686,8 +2680,7 @@ paths:
           format: double
           type: number
       - description: Specify maximum distance from the geographic point defined by
-          latitude and longitude. Kilometers. **This is an INGV extension to the FDSN
-          specification.**
+          latitude and longitude. Kilometers.
         in: query
         name: maxradiuskm
         required: false
@@ -2765,7 +2758,8 @@ paths:
         schema:
           format: string
           type: string
-      - description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
+      - allowReserved: true
+        description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
           "^ml.\*" or "^ml.*|^mwp$").
         in: query
         name: wheretypemagnitudenameregexp
@@ -6832,7 +6826,7 @@ components:
         type: number
     minradiuskm:
       description: Specify minimum distance from the geographic point defined by latitude
-        and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+        and longitude. Kilometers.
       in: query
       name: minradiuskm
       required: false
@@ -6841,7 +6835,7 @@ components:
         type: number
     maxradiuskm:
       description: Specify maximum distance from the geographic point defined by latitude
-        and longitude. Kilometers. **This is an INGV extension to the FDSN specification.**
+        and longitude. Kilometers.
       in: query
       name: maxradiuskm
       required: false
@@ -6930,6 +6924,7 @@ components:
         format: string
         type: string
     wheretypemagnitudenameregexp:
+      allowReserved: true
       description: Filter by type_magnitude.name using case-insensitive regexp (i.e.
         "^ml.\*" or "^ml.*|^mwp$").
       in: query
