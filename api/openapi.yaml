@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.3.0
+  version: 3.4.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -389,6 +389,37 @@ paths:
         schema:
           items:
             enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
             - AA
             - AB
             - AC
@@ -919,6 +950,37 @@ paths:
             - DD
             type: string
           type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -1412,6 +1474,37 @@ paths:
         schema:
           items:
             enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
             - AA
             - AB
             - AC
@@ -1940,6 +2033,37 @@ paths:
             - DD
             type: string
           type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -2432,6 +2556,37 @@ paths:
         schema:
           items:
             enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
             - AA
             - AB
             - AC
@@ -2945,6 +3100,37 @@ paths:
         schema:
           items:
             enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
             - AA
             - AB
             - AC
@@ -7147,6 +7333,38 @@ components:
       schema:
         items:
           enum:
+          - AA
+          - AB
+          - AC
+          - AD
+          - BA
+          - BB
+          - BC
+          - BD
+          - CA
+          - CB
+          - CC
+          - CD
+          - DA
+          - DB
+          - DC
+          - DD
+          type: string
+        type: array
+    wheremagnitudemagqualityin:
+      description: "Filter by \"magnitude.mag_quality\" by comma separated value (i.e.\
+        \ A,B,BC,DD)."
+      explode: false
+      in: query
+      name: wheremagnitudemagqualityin
+      required: false
+      schema:
+        items:
+          enum:
+          - A
+          - B
+          - C
+          - D
           - AA
           - AB
           - AC
