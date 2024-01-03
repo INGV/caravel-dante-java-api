@@ -407,6 +407,37 @@ paths:
             - DD
             type: string
           type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -901,6 +932,37 @@ paths:
         schema:
           items:
             enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
             - AA
             - AB
             - AC
@@ -1430,6 +1492,37 @@ paths:
             - DD
             type: string
           type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -1922,6 +2015,37 @@ paths:
         schema:
           items:
             enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
             - AA
             - AB
             - AC
@@ -2450,6 +2574,37 @@ paths:
             - DD
             type: string
           type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
       - description: Filter the output to type_origin.version_value (i.e. 0).
         in: query
         name: mintypeoriginvalue
@@ -2945,6 +3100,37 @@ paths:
         schema:
           items:
             enum:
+            - AA
+            - AB
+            - AC
+            - AD
+            - BA
+            - BB
+            - BC
+            - BD
+            - CA
+            - CB
+            - CC
+            - CD
+            - DA
+            - DB
+            - DC
+            - DD
+            type: string
+          type: array
+      - description: "Filter by \"magnitude.mag_quality\" by comma separated value\
+          \ (i.e. A,B,BC,DD)."
+        explode: false
+        in: query
+        name: wheremagnitudemagqualityin
+        required: false
+        schema:
+          items:
+            enum:
+            - A
+            - B
+            - C
+            - D
             - AA
             - AB
             - AC
@@ -7147,6 +7333,38 @@ components:
       schema:
         items:
           enum:
+          - AA
+          - AB
+          - AC
+          - AD
+          - BA
+          - BB
+          - BC
+          - BD
+          - CA
+          - CB
+          - CC
+          - CD
+          - DA
+          - DB
+          - DC
+          - DD
+          type: string
+        type: array
+    wheremagnitudemagqualityin:
+      description: "Filter by \"magnitude.mag_quality\" by comma separated value (i.e.\
+        \ A,B,BC,DD)."
+      explode: false
+      in: query
+      name: wheremagnitudemagqualityin
+      required: false
+      schema:
+        items:
+          enum:
+          - A
+          - B
+          - C
+          - D
           - AA
           - AB
           - AC
