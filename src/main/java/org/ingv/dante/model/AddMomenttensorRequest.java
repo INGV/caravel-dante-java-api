@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddMomenttensorRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-03T10:46:51.178279Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-10T13:33:23.961053Z[Etc/UTC]")
 public class AddMomenttensorRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
