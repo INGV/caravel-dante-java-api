@@ -380,6 +380,120 @@ paths:
         schema:
           format: double
           type: number
+      - description: "Filter by \"event.type_event\" by comma separated value (i.e.\
+          \ earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
+      - description: "Filter by \"event.type_event\" - not in - by comma separated\
+          \ value (i.e. earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamenotin
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
       - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
           \ AA,AB,BC)."
         explode: false
@@ -923,6 +1037,120 @@ paths:
         schema:
           format: double
           type: number
+      - description: "Filter by \"event.type_event\" by comma separated value (i.e.\
+          \ earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
+      - description: "Filter by \"event.type_event\" - not in - by comma separated\
+          \ value (i.e. earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamenotin
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
       - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
           \ AA,AB,BC)."
         explode: false
@@ -1465,6 +1693,120 @@ paths:
         schema:
           format: double
           type: number
+      - description: "Filter by \"event.type_event\" by comma separated value (i.e.\
+          \ earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
+      - description: "Filter by \"event.type_event\" - not in - by comma separated\
+          \ value (i.e. earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamenotin
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
       - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
           \ AA,AB,BC)."
         explode: false
@@ -2006,6 +2348,120 @@ paths:
         schema:
           format: double
           type: number
+      - description: "Filter by \"event.type_event\" by comma separated value (i.e.\
+          \ earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
+      - description: "Filter by \"event.type_event\" - not in - by comma separated\
+          \ value (i.e. earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamenotin
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
       - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
           \ AA,AB,BC)."
         explode: false
@@ -2547,6 +3003,120 @@ paths:
         schema:
           format: double
           type: number
+      - description: "Filter by \"event.type_event\" by comma separated value (i.e.\
+          \ earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
+      - description: "Filter by \"event.type_event\" - not in - by comma separated\
+          \ value (i.e. earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamenotin
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
       - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
           \ AA,AB,BC)."
         explode: false
@@ -3091,6 +3661,120 @@ paths:
         schema:
           format: double
           type: number
+      - description: "Filter by \"event.type_event\" by comma separated value (i.e.\
+          \ earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamein
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
+      - description: "Filter by \"event.type_event\" - not in - by comma separated\
+          \ value (i.e. earthquake,not reported,collapse,explosion)."
+        explode: false
+        in: query
+        name: wheretypeeventnamenotin
+        required: false
+        schema:
+          items:
+            enum:
+            - earthquake
+            - not reported
+            - anthropogenic event
+            - collapse
+            - cavity collapse
+            - mine collapse
+            - building collapse
+            - explosion
+            - accidental explosion
+            - chemical explosion
+            - controlled explosion
+            - experimental explosion
+            - industrial explosion
+            - mining explosion
+            - quarry blast
+            - road cut
+            - blasting levee
+            - nuclear explosion
+            - induced or triggered event
+            - rock burst
+            - reservoir loading
+            - fluid injection
+            - fluid extraction
+            - crash
+            - plane crash
+            - train crash
+            - boat crash
+            - other event
+            - atmospheric event
+            - sonic boom
+            - sonic blast
+            - acoustic noise
+            - thunder
+            - avalanche
+            - snow avalanche
+            - debris avalanche
+            - hydroacoustic event
+            - ice quake
+            - slide
+            - landslide
+            - rockslide
+            - meteorite
+            - volcanic eruption
+            - not existing
+            - testing
+            - duplicate earthquake
+            type: string
+          type: array
       - description: "Filter by \"origin.quality\" by comma separated value (i.e.\
           \ AA,AB,BC)."
         explode: false
@@ -7324,6 +8008,122 @@ components:
       schema:
         format: double
         type: number
+    wheretypeeventnamein:
+      description: "Filter by \"event.type_event\" by comma separated value (i.e.\
+        \ earthquake,not reported,collapse,explosion)."
+      explode: false
+      in: query
+      name: wheretypeeventnamein
+      required: false
+      schema:
+        items:
+          enum:
+          - earthquake
+          - not reported
+          - anthropogenic event
+          - collapse
+          - cavity collapse
+          - mine collapse
+          - building collapse
+          - explosion
+          - accidental explosion
+          - chemical explosion
+          - controlled explosion
+          - experimental explosion
+          - industrial explosion
+          - mining explosion
+          - quarry blast
+          - road cut
+          - blasting levee
+          - nuclear explosion
+          - induced or triggered event
+          - rock burst
+          - reservoir loading
+          - fluid injection
+          - fluid extraction
+          - crash
+          - plane crash
+          - train crash
+          - boat crash
+          - other event
+          - atmospheric event
+          - sonic boom
+          - sonic blast
+          - acoustic noise
+          - thunder
+          - avalanche
+          - snow avalanche
+          - debris avalanche
+          - hydroacoustic event
+          - ice quake
+          - slide
+          - landslide
+          - rockslide
+          - meteorite
+          - volcanic eruption
+          - not existing
+          - testing
+          - duplicate earthquake
+          type: string
+        type: array
+    wheretypeeventnamenotin:
+      description: "Filter by \"event.type_event\" - not in - by comma separated value\
+        \ (i.e. earthquake,not reported,collapse,explosion)."
+      explode: false
+      in: query
+      name: wheretypeeventnamenotin
+      required: false
+      schema:
+        items:
+          enum:
+          - earthquake
+          - not reported
+          - anthropogenic event
+          - collapse
+          - cavity collapse
+          - mine collapse
+          - building collapse
+          - explosion
+          - accidental explosion
+          - chemical explosion
+          - controlled explosion
+          - experimental explosion
+          - industrial explosion
+          - mining explosion
+          - quarry blast
+          - road cut
+          - blasting levee
+          - nuclear explosion
+          - induced or triggered event
+          - rock burst
+          - reservoir loading
+          - fluid injection
+          - fluid extraction
+          - crash
+          - plane crash
+          - train crash
+          - boat crash
+          - other event
+          - atmospheric event
+          - sonic boom
+          - sonic blast
+          - acoustic noise
+          - thunder
+          - avalanche
+          - snow avalanche
+          - debris avalanche
+          - hydroacoustic event
+          - ice quake
+          - slide
+          - landslide
+          - rockslide
+          - meteorite
+          - volcanic eruption
+          - not existing
+          - testing
+          - duplicate earthquake
+          type: string
+        type: array
     whereoriginqualityin:
       description: "Filter by \"origin.quality\" by comma separated value (i.e. AA,AB,BC)."
       explode: false
