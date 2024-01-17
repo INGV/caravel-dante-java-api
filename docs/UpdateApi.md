@@ -7,6 +7,7 @@ All URIs are relative to *http://caravel.int.ingv.it/api*
 | [**updateEvent**](UpdateApi.md#updateEvent) | **PATCH** /quakedb/v1/event/{id} | Update an existing event |
 | [**updateEventsGroup**](UpdateApi.md#updateEventsGroup) | **PATCH** /quakedb/v1/eventsgroup | Update/Create an events-group |
 | [**updateLocalspace**](UpdateApi.md#updateLocalspace) | **PATCH** /quakedb/table/v1/localspace/{id} | Update an existing localspace |
+| [**updateMomenttensor**](UpdateApi.md#updateMomenttensor) | **PATCH** /quakedb/v1/momenttensor/{id} | Update an existing momenttensor |
 | [**updateOriginFlag**](UpdateApi.md#updateOriginFlag) | **PATCH** /quakedb/table/v1/origin-flag/{id} | Update an existing origin-flag |
 | [**updateProvenance**](UpdateApi.md#updateProvenance) | **PATCH** /quakedb/table/v1/provenance/{id} | Update an existing provenance |
 | [**updateTypeEvent**](UpdateApi.md#updateTypeEvent) | **PATCH** /quakedb/table/v1/type-event/{id} | Update an existing type_event |
@@ -220,6 +221,83 @@ public class Example {
 ### Return type
 
 [**ObjectTableLocalspace**](ObjectTableLocalspace.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/merge-patch+json
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | record updated |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **401** | Unauthorized |  -  |
+| **403** | Forbidden |  -  |
+| **0** | Unexpected error |  -  |
+
+<a id="updateMomenttensor"></a>
+# **updateMomenttensor**
+> UpdateMomenttensor200Response updateMomenttensor(id, updateMomenttensorRequest)
+
+Update an existing momenttensor
+
+Update an existing momenttensor.&lt;/br&gt; To use this API you must be authenticated and \&quot;momenttensor.localspace_name\&quot; owner.
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.UpdateApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
+
+    UpdateApi apiInstance = new UpdateApi(defaultClient);
+    Long id = 56L; // Long | INGV momenttensor id that need to be updated.
+    UpdateMomenttensorRequest updateMomenttensorRequest = new UpdateMomenttensorRequest(); // UpdateMomenttensorRequest | JSON to update
+    try {
+      UpdateMomenttensor200Response result = apiInstance.updateMomenttensor(id, updateMomenttensorRequest);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UpdateApi#updateMomenttensor");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **Long**| INGV momenttensor id that need to be updated. | |
+| **updateMomenttensorRequest** | [**UpdateMomenttensorRequest**](UpdateMomenttensorRequest.md)| JSON to update | |
+
+### Return type
+
+[**UpdateMomenttensor200Response**](UpdateMomenttensor200Response.md)
 
 ### Authorization
 

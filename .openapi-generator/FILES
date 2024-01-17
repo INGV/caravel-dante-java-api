@@ -155,6 +155,11 @@ docs/UpdateEventRequestData.md
 docs/UpdateEventRequestDataEvent.md
 docs/UpdateEventsGroupRequest.md
 docs/UpdateEventsGroupRequestData.md
+docs/UpdateMomenttensor200Response.md
+docs/UpdateMomenttensor200ResponseData.md
+docs/UpdateMomenttensorRequest.md
+docs/UpdateMomenttensorRequestData.md
+docs/UpdateMomenttensorRequestDataMomenttensor.md
 docs/UserApi.md
 git_push.sh
 gradle.properties
@@ -333,6 +338,11 @@ src/main/java/org/ingv/dante/model/UpdateEventRequestData.java
 src/main/java/org/ingv/dante/model/UpdateEventRequestDataEvent.java
 src/main/java/org/ingv/dante/model/UpdateEventsGroupRequest.java
 src/main/java/org/ingv/dante/model/UpdateEventsGroupRequestData.java
+src/main/java/org/ingv/dante/model/UpdateMomenttensor200Response.java
+src/main/java/org/ingv/dante/model/UpdateMomenttensor200ResponseData.java
+src/main/java/org/ingv/dante/model/UpdateMomenttensorRequest.java
+src/main/java/org/ingv/dante/model/UpdateMomenttensorRequestData.java
+src/main/java/org/ingv/dante/model/UpdateMomenttensorRequestDataMomenttensor.java
 src/test/java/org/ingv/dante/api/DeleteApiTest.java
 src/test/java/org/ingv/dante/api/EarthwormApiApiTest.java
 src/test/java/org/ingv/dante/api/GetApiTest.java
@@ -483,3 +493,8 @@ src/test/java/org/ingv/dante/model/UpdateEventRequestDataTest.java
 src/test/java/org/ingv/dante/model/UpdateEventRequestTest.java
 src/test/java/org/ingv/dante/model/UpdateEventsGroupRequestDataTest.java
 src/test/java/org/ingv/dante/model/UpdateEventsGroupRequestTest.java
+src/test/java/org/ingv/dante/model/UpdateMomenttensor200ResponseDataTest.java
+src/test/java/org/ingv/dante/model/UpdateMomenttensor200ResponseTest.java
+src/test/java/org/ingv/dante/model/UpdateMomenttensorRequestDataMomenttensorTest.java
+src/test/java/org/ingv/dante/model/UpdateMomenttensorRequestDataTest.java
+src/test/java/org/ingv/dante/model/UpdateMomenttensorRequestTest.java

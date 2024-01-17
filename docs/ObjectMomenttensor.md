@@ -13,6 +13,8 @@
 |**idLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
 |**originidOut** | **Long** | Unique incremental id | bigint(20) |  [optional] |
 |**magnitudeidOut** | **Long** | Unique incremental id | bigint(20) |  [optional] |
+|**setOriginidOutByOriginIdLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
+|**setMagnitudeidOutByMagnitudeIdLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
 |**scalarmoment** | **Double** | Scalar moment as derived in moment tensor inversion. Unit, Nm | double(22) |  [optional] |
 |**mrr** | **Double** | mrr moment tensor component | double(22) |  [optional] |
 |**mtt** | **Double** | mtt moment tensor component | double(22) |  [optional] |

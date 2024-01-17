@@ -24,6 +24,8 @@ import org.ingv.dante.model.Problem;
 import org.ingv.dante.model.UpdateEvent200Response;
 import org.ingv.dante.model.UpdateEventRequest;
 import org.ingv.dante.model.UpdateEventsGroupRequest;
+import org.ingv.dante.model.UpdateMomenttensor200Response;
+import org.ingv.dante.model.UpdateMomenttensorRequest;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -81,6 +83,21 @@ public class UpdateApiTest {
         Long id = null;
         ObjectTableLocalspace objectTableLocalspace = null;
         ObjectTableLocalspace response = api.updateLocalspace(id, objectTableLocalspace);
+        // TODO: test validations
+    }
+
+    /**
+     * Update an existing momenttensor
+     *
+     * Update an existing momenttensor.&lt;/br&gt; To use this API you must be authenticated and \&quot;momenttensor.localspace_name\&quot; owner.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void updateMomenttensorTest() throws ApiException {
+        Long id = null;
+        UpdateMomenttensorRequest updateMomenttensorRequest = null;
+        UpdateMomenttensor200Response response = api.updateMomenttensor(id, updateMomenttensorRequest);
         // TODO: test validations
     }
 

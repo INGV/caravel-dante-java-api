@@ -92,6 +92,22 @@ public class ObjectMomenttensorTest {
     }
 
     /**
+     * Test the property 'setOriginidOutByOriginIdLocalspace'
+     */
+    @Test
+    public void setOriginidOutByOriginIdLocalspaceTest() {
+        // TODO: test setOriginidOutByOriginIdLocalspace
+    }
+
+    /**
+     * Test the property 'setMagnitudeidOutByMagnitudeIdLocalspace'
+     */
+    @Test
+    public void setMagnitudeidOutByMagnitudeIdLocalspaceTest() {
+        // TODO: test setMagnitudeidOutByMagnitudeIdLocalspace
+    }
+
+    /**
      * Test the property 'scalarmoment'
      */
     @Test

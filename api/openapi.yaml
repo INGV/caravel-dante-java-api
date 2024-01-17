@@ -6983,6 +6983,112 @@ paths:
       - update
       x-content-type: application/merge-patch+json
       x-accepts: application/json
+  /quakedb/v1/momenttensor/{id}:
+    patch:
+      description: Update an existing momenttensor.</br> To use this API you must
+        be authenticated and "momenttensor.localspace_name" owner.
+      operationId: updateMomenttensor
+      parameters:
+      - description: INGV momenttensor id that need to be updated.
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: int64
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/merge-patch+json:
+            schema:
+              $ref: '#/components/schemas/updateMomenttensor_request'
+        description: JSON to update
+        required: true
+      responses:
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/updateMomenttensor_200_response'
+          description: record updated
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "401":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unauthorized
+        "403":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Forbidden
+      security:
+      - BearerAuth:
+        - write
+      summary: Update an existing momenttensor
+      tags:
+      - update
+      x-content-type: application/merge-patch+json
+      x-accepts: application/json
   /quakedb/v1/origin:
     post:
       description: This API is used to add an origin object.
@@ -9735,6 +9841,7 @@ components:
                 region: Norcia
               mrt: 7.048
               double_couple: 0.76
+              set_originid_out_by_origin_id_localspace: 182491
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -9753,6 +9860,7 @@ components:
               localspace:
                 name: hew1_mole
                 description: Auto added
+              set_magnitudeid_out_by_magnitude_id_localspace: 182491
               modified: 2016-06-22T16:52:06.26Z
               magnitudeid_out: 14932631
               clvd: 0.24
@@ -9827,6 +9935,7 @@ components:
                 region: Norcia
               mrt: 7.048
               double_couple: 0.76
+              set_originid_out_by_origin_id_localspace: 182491
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -9845,6 +9954,7 @@ components:
               localspace:
                 name: hew1_mole
                 description: Auto added
+              set_magnitudeid_out_by_magnitude_id_localspace: 182491
               modified: 2016-06-22T16:52:06.26Z
               magnitudeid_out: 14932631
               clvd: 0.24
@@ -10338,6 +10448,7 @@ components:
                 region: Norcia
               mrt: 7.048
               double_couple: 0.76
+              set_originid_out_by_origin_id_localspace: 182491
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -10356,6 +10467,7 @@ components:
               localspace:
                 name: hew1_mole
                 description: Auto added
+              set_magnitudeid_out_by_magnitude_id_localspace: 182491
               modified: 2016-06-22T16:52:06.26Z
               magnitudeid_out: 14932631
               clvd: 0.24
@@ -10430,6 +10542,7 @@ components:
                 region: Norcia
               mrt: 7.048
               double_couple: 0.76
+              set_originid_out_by_origin_id_localspace: 182491
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -10448,6 +10561,7 @@ components:
               localspace:
                 name: hew1_mole
                 description: Auto added
+              set_magnitudeid_out_by_magnitude_id_localspace: 182491
               modified: 2016-06-22T16:52:06.26Z
               magnitudeid_out: 14932631
               clvd: 0.24
@@ -11038,6 +11152,7 @@ components:
               region: Norcia
             mrt: 7.048
             double_couple: 0.76
+            set_originid_out_by_origin_id_localspace: 182491
             id_localspace: 182491
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
@@ -11056,6 +11171,7 @@ components:
             localspace:
               name: hew1_mole
               description: Auto added
+            set_magnitudeid_out_by_magnitude_id_localspace: 182491
             modified: 2016-06-22T16:52:06.26Z
             magnitudeid_out: 14932631
             clvd: 0.24
@@ -11130,6 +11246,7 @@ components:
               region: Norcia
             mrt: 7.048
             double_couple: 0.76
+            set_originid_out_by_origin_id_localspace: 182491
             id_localspace: 182491
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
@@ -11148,6 +11265,7 @@ components:
             localspace:
               name: hew1_mole
               description: Auto added
+            set_magnitudeid_out_by_magnitude_id_localspace: 182491
             modified: 2016-06-22T16:52:06.26Z
             magnitudeid_out: 14932631
             clvd: 0.24
@@ -11938,6 +12056,7 @@ components:
             region: Norcia
           mrt: 7.048
           double_couple: 0.76
+          set_originid_out_by_origin_id_localspace: 182491
           id_localspace: 182491
           inserted: 2016-06-22T16:52:06.26Z
           provenance:
@@ -11956,6 +12075,7 @@ components:
           localspace:
             name: hew1_mole
             description: Auto added
+          set_magnitudeid_out_by_magnitude_id_localspace: 182491
           modified: 2016-06-22T16:52:06.26Z
           magnitudeid_out: 14932631
           clvd: 0.24
@@ -12148,6 +12268,7 @@ components:
           region: Norcia
         mrt: 7.048
         double_couple: 0.76
+        set_originid_out_by_origin_id_localspace: 182491
         id_localspace: 182491
         inserted: 2016-06-22T16:52:06.26Z
         provenance:
@@ -12166,6 +12287,7 @@ components:
         localspace:
           name: hew1_mole
           description: Auto added
+        set_magnitudeid_out_by_magnitude_id_localspace: 182491
         modified: 2016-06-22T16:52:06.26Z
         magnitudeid_out: 14932631
         clvd: 0.24
@@ -12207,6 +12329,20 @@ components:
           example: 14932631
           format: int64
           type: integer
+        set_originid_out_by_origin_id_localspace:
+          description: Localspace Id | bigint(19)
+          example: 182491
+          format: int64
+          nullable: true
+          type: integer
+          writeOnly: true
+        set_magnitudeid_out_by_magnitude_id_localspace:
+          description: Localspace Id | bigint(19)
+          example: 182491
+          format: int64
+          nullable: true
+          type: integer
+          writeOnly: true
         scalarmoment:
           description: "Scalar moment as derived in moment tensor inversion. Unit,\
             \ Nm | double(22)"
@@ -15669,6 +15805,7 @@ components:
                   region: Norcia
                 mrt: 7.048
                 double_couple: 0.76
+                set_originid_out_by_origin_id_localspace: 182491
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -15687,6 +15824,7 @@ components:
                 localspace:
                   name: hew1_mole
                   description: Auto added
+                set_magnitudeid_out_by_magnitude_id_localspace: 182491
                 modified: 2016-06-22T16:52:06.26Z
                 magnitudeid_out: 14932631
                 clvd: 0.24
@@ -15761,6 +15899,7 @@ components:
                   region: Norcia
                 mrt: 7.048
                 double_couple: 0.76
+                set_originid_out_by_origin_id_localspace: 182491
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -15779,6 +15918,7 @@ components:
                 localspace:
                   name: hew1_mole
                   description: Auto added
+                set_magnitudeid_out_by_magnitude_id_localspace: 182491
                 modified: 2016-06-22T16:52:06.26Z
                 magnitudeid_out: 14932631
                 clvd: 0.24
@@ -16272,6 +16412,7 @@ components:
                   region: Norcia
                 mrt: 7.048
                 double_couple: 0.76
+                set_originid_out_by_origin_id_localspace: 182491
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -16290,6 +16431,7 @@ components:
                 localspace:
                   name: hew1_mole
                   description: Auto added
+                set_magnitudeid_out_by_magnitude_id_localspace: 182491
                 modified: 2016-06-22T16:52:06.26Z
                 magnitudeid_out: 14932631
                 clvd: 0.24
@@ -16364,6 +16506,7 @@ components:
                   region: Norcia
                 mrt: 7.048
                 double_couple: 0.76
+                set_originid_out_by_origin_id_localspace: 182491
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -16382,6 +16525,7 @@ components:
                 localspace:
                   name: hew1_mole
                   description: Auto added
+                set_magnitudeid_out_by_magnitude_id_localspace: 182491
                 modified: 2016-06-22T16:52:06.26Z
                 magnitudeid_out: 14932631
                 clvd: 0.24
@@ -16994,6 +17138,7 @@ components:
                     region: Norcia
                   mrt: 7.048
                   double_couple: 0.76
+                  set_originid_out_by_origin_id_localspace: 182491
                   id_localspace: 182491
                   inserted: 2016-06-22T16:52:06.26Z
                   provenance:
@@ -17012,6 +17157,7 @@ components:
                   localspace:
                     name: hew1_mole
                     description: Auto added
+                  set_magnitudeid_out_by_magnitude_id_localspace: 182491
                   modified: 2016-06-22T16:52:06.26Z
                   magnitudeid_out: 14932631
                   clvd: 0.24
@@ -17086,6 +17232,7 @@ components:
                     region: Norcia
                   mrt: 7.048
                   double_couple: 0.76
+                  set_originid_out_by_origin_id_localspace: 182491
                   id_localspace: 182491
                   inserted: 2016-06-22T16:52:06.26Z
                   provenance:
@@ -17104,6 +17251,7 @@ components:
                   localspace:
                     name: hew1_mole
                     description: Auto added
+                  set_magnitudeid_out_by_magnitude_id_localspace: 182491
                   modified: 2016-06-22T16:52:06.26Z
                   magnitudeid_out: 14932631
                   clvd: 0.24
@@ -17597,6 +17745,7 @@ components:
                     region: Norcia
                   mrt: 7.048
                   double_couple: 0.76
+                  set_originid_out_by_origin_id_localspace: 182491
                   id_localspace: 182491
                   inserted: 2016-06-22T16:52:06.26Z
                   provenance:
@@ -17615,6 +17764,7 @@ components:
                   localspace:
                     name: hew1_mole
                     description: Auto added
+                  set_magnitudeid_out_by_magnitude_id_localspace: 182491
                   modified: 2016-06-22T16:52:06.26Z
                   magnitudeid_out: 14932631
                   clvd: 0.24
@@ -17689,6 +17839,7 @@ components:
                     region: Norcia
                   mrt: 7.048
                   double_couple: 0.76
+                  set_originid_out_by_origin_id_localspace: 182491
                   id_localspace: 182491
                   inserted: 2016-06-22T16:52:06.26Z
                   provenance:
@@ -17707,6 +17858,7 @@ components:
                   localspace:
                     name: hew1_mole
                     description: Auto added
+                  set_magnitudeid_out_by_magnitude_id_localspace: 182491
                   modified: 2016-06-22T16:52:06.26Z
                   magnitudeid_out: 14932631
                   clvd: 0.24
@@ -18171,6 +18323,47 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/updateEvent_200_response_data'
+    updateMomenttensor_request_data_momenttensor:
+      properties:
+        originid_out:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+        magnitudeid_out:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          type: integer
+    updateMomenttensor_request_data:
+      properties:
+        momenttensor:
+          $ref: '#/components/schemas/updateMomenttensor_request_data_momenttensor'
+    updateMomenttensor_request:
+      properties:
+        data:
+          $ref: '#/components/schemas/updateMomenttensor_request_data'
+    updateMomenttensor_200_response_data:
+      example:
+        momenttensor:
+          id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+      properties:
+        momenttensor:
+          $ref: '#/components/schemas/updateEvent_200_response_data_event'
+    updateMomenttensor_200_response:
+      example:
+        data:
+          momenttensor:
+            id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+      properties:
+        data:
+          $ref: '#/components/schemas/updateMomenttensor_200_response_data'
     addOrigin_request_data:
       properties:
         eventid:

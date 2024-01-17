@@ -37,6 +37,8 @@ import org.ingv.dante.model.Problem;
 import org.ingv.dante.model.UpdateEvent200Response;
 import org.ingv.dante.model.UpdateEventRequest;
 import org.ingv.dante.model.UpdateEventsGroupRequest;
+import org.ingv.dante.model.UpdateMomenttensor200Response;
+import org.ingv.dante.model.UpdateMomenttensorRequest;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -566,6 +568,172 @@ public class UpdateApi {
 
         okhttp3.Call localVarCall = updateLocalspaceValidateBeforeCall(id, objectTableLocalspace, _callback);
         Type localVarReturnType = new TypeToken<ObjectTableLocalspace>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for updateMomenttensor
+     * @param id INGV momenttensor id that need to be updated. (required)
+     * @param updateMomenttensorRequest JSON to update (required)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateMomenttensorCall(Long id, UpdateMomenttensorRequest updateMomenttensorRequest, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = updateMomenttensorRequest;
+
+        // create path and map variables
+        String localVarPath = "/quakedb/v1/momenttensor/{id}"
+            .replace("{" + "id" + "}", localVarApiClient.escapeString(id.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/problem+json",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+            "application/merge-patch+json"
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] { "BearerAuth" };
+        return localVarApiClient.buildCall(basePath, localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call updateMomenttensorValidateBeforeCall(Long id, UpdateMomenttensorRequest updateMomenttensorRequest, final ApiCallback _callback) throws ApiException {
+        // verify the required parameter 'id' is set
+        if (id == null) {
+            throw new ApiException("Missing the required parameter 'id' when calling updateMomenttensor(Async)");
+        }
+
+        // verify the required parameter 'updateMomenttensorRequest' is set
+        if (updateMomenttensorRequest == null) {
+            throw new ApiException("Missing the required parameter 'updateMomenttensorRequest' when calling updateMomenttensor(Async)");
+        }
+
+        return updateMomenttensorCall(id, updateMomenttensorRequest, _callback);
+
+    }
+
+    /**
+     * Update an existing momenttensor
+     * Update an existing momenttensor.&lt;/br&gt; To use this API you must be authenticated and \&quot;momenttensor.localspace_name\&quot; owner.
+     * @param id INGV momenttensor id that need to be updated. (required)
+     * @param updateMomenttensorRequest JSON to update (required)
+     * @return UpdateMomenttensor200Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public UpdateMomenttensor200Response updateMomenttensor(Long id, UpdateMomenttensorRequest updateMomenttensorRequest) throws ApiException {
+        ApiResponse<UpdateMomenttensor200Response> localVarResp = updateMomenttensorWithHttpInfo(id, updateMomenttensorRequest);
+        return localVarResp.getData();
+    }
+
+    /**
+     * Update an existing momenttensor
+     * Update an existing momenttensor.&lt;/br&gt; To use this API you must be authenticated and \&quot;momenttensor.localspace_name\&quot; owner.
+     * @param id INGV momenttensor id that need to be updated. (required)
+     * @param updateMomenttensorRequest JSON to update (required)
+     * @return ApiResponse&lt;UpdateMomenttensor200Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<UpdateMomenttensor200Response> updateMomenttensorWithHttpInfo(Long id, UpdateMomenttensorRequest updateMomenttensorRequest) throws ApiException {
+        okhttp3.Call localVarCall = updateMomenttensorValidateBeforeCall(id, updateMomenttensorRequest, null);
+        Type localVarReturnType = new TypeToken<UpdateMomenttensor200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * Update an existing momenttensor (asynchronously)
+     * Update an existing momenttensor.&lt;/br&gt; To use this API you must be authenticated and \&quot;momenttensor.localspace_name\&quot; owner.
+     * @param id INGV momenttensor id that need to be updated. (required)
+     * @param updateMomenttensorRequest JSON to update (required)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> record updated </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 401 </td><td> Unauthorized </td><td>  -  </td></tr>
+        <tr><td> 403 </td><td> Forbidden </td><td>  -  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call updateMomenttensorAsync(Long id, UpdateMomenttensorRequest updateMomenttensorRequest, final ApiCallback<UpdateMomenttensor200Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = updateMomenttensorValidateBeforeCall(id, updateMomenttensorRequest, _callback);
+        Type localVarReturnType = new TypeToken<UpdateMomenttensor200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -55,7 +55,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-10T16:31:48.572255Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-17T16:51:14.662288Z[Etc/UTC]")
 public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -80,6 +80,14 @@ public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_MAGNITUDEID_OUT = "magnitudeid_out";
   @SerializedName(SERIALIZED_NAME_MAGNITUDEID_OUT)
   private Long magnitudeidOut;
+
+  public static final String SERIALIZED_NAME_SET_ORIGINID_OUT_BY_ORIGIN_ID_LOCALSPACE = "set_originid_out_by_origin_id_localspace";
+  @SerializedName(SERIALIZED_NAME_SET_ORIGINID_OUT_BY_ORIGIN_ID_LOCALSPACE)
+  private Long setOriginidOutByOriginIdLocalspace;
+
+  public static final String SERIALIZED_NAME_SET_MAGNITUDEID_OUT_BY_MAGNITUDE_ID_LOCALSPACE = "set_magnitudeid_out_by_magnitude_id_localspace";
+  @SerializedName(SERIALIZED_NAME_SET_MAGNITUDEID_OUT_BY_MAGNITUDE_ID_LOCALSPACE)
+  private Long setMagnitudeidOutByMagnitudeIdLocalspace;
 
   public static final String SERIALIZED_NAME_SCALARMOMENT = "scalarmoment";
   @SerializedName(SERIALIZED_NAME_SCALARMOMENT)
@@ -256,6 +264,48 @@ public class ObjectMomenttensor {
 
   public void setMagnitudeidOut(Long magnitudeidOut) {
     this.magnitudeidOut = magnitudeidOut;
+  }
+
+
+  public ObjectMomenttensor setOriginidOutByOriginIdLocalspace(Long setOriginidOutByOriginIdLocalspace) {
+    
+    this.setOriginidOutByOriginIdLocalspace = setOriginidOutByOriginIdLocalspace;
+    return this;
+  }
+
+   /**
+   * Localspace Id | bigint(19)
+   * @return setOriginidOutByOriginIdLocalspace
+  **/
+  @javax.annotation.Nullable
+  public Long getSetOriginidOutByOriginIdLocalspace() {
+    return setOriginidOutByOriginIdLocalspace;
+  }
+
+
+  public void setSetOriginidOutByOriginIdLocalspace(Long setOriginidOutByOriginIdLocalspace) {
+    this.setOriginidOutByOriginIdLocalspace = setOriginidOutByOriginIdLocalspace;
+  }
+
+
+  public ObjectMomenttensor setMagnitudeidOutByMagnitudeIdLocalspace(Long setMagnitudeidOutByMagnitudeIdLocalspace) {
+    
+    this.setMagnitudeidOutByMagnitudeIdLocalspace = setMagnitudeidOutByMagnitudeIdLocalspace;
+    return this;
+  }
+
+   /**
+   * Localspace Id | bigint(19)
+   * @return setMagnitudeidOutByMagnitudeIdLocalspace
+  **/
+  @javax.annotation.Nullable
+  public Long getSetMagnitudeidOutByMagnitudeIdLocalspace() {
+    return setMagnitudeidOutByMagnitudeIdLocalspace;
+  }
+
+
+  public void setSetMagnitudeidOutByMagnitudeIdLocalspace(Long setMagnitudeidOutByMagnitudeIdLocalspace) {
+    this.setMagnitudeidOutByMagnitudeIdLocalspace = setMagnitudeidOutByMagnitudeIdLocalspace;
   }
 
 
@@ -655,6 +705,8 @@ public class ObjectMomenttensor {
         Objects.equals(this.idLocalspace, objectMomenttensor.idLocalspace) &&
         Objects.equals(this.originidOut, objectMomenttensor.originidOut) &&
         Objects.equals(this.magnitudeidOut, objectMomenttensor.magnitudeidOut) &&
+        Objects.equals(this.setOriginidOutByOriginIdLocalspace, objectMomenttensor.setOriginidOutByOriginIdLocalspace) &&
+        Objects.equals(this.setMagnitudeidOutByMagnitudeIdLocalspace, objectMomenttensor.setMagnitudeidOutByMagnitudeIdLocalspace) &&
         Objects.equals(this.scalarmoment, objectMomenttensor.scalarmoment) &&
         Objects.equals(this.mrr, objectMomenttensor.mrr) &&
         Objects.equals(this.mtt, objectMomenttensor.mtt) &&
@@ -680,7 +732,7 @@ public class ObjectMomenttensor {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, idLocalspace, originidOut, magnitudeidOut, scalarmoment, mrr, mtt, mpp, mrt, mrp, mtp, clvd, iso, varianceReduction, doubleCouple, typeMomenttensor, localspace, provenance, tdmt, rcmt, additionalProperties);
+    return Objects.hash(id, modified, inserted, idLocalspace, originidOut, magnitudeidOut, setOriginidOutByOriginIdLocalspace, setMagnitudeidOutByMagnitudeIdLocalspace, scalarmoment, mrr, mtt, mpp, mrt, mrp, mtp, clvd, iso, varianceReduction, doubleCouple, typeMomenttensor, localspace, provenance, tdmt, rcmt, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -700,6 +752,8 @@ public class ObjectMomenttensor {
     sb.append("    idLocalspace: ").append(toIndentedString(idLocalspace)).append("\n");
     sb.append("    originidOut: ").append(toIndentedString(originidOut)).append("\n");
     sb.append("    magnitudeidOut: ").append(toIndentedString(magnitudeidOut)).append("\n");
+    sb.append("    setOriginidOutByOriginIdLocalspace: ").append(toIndentedString(setOriginidOutByOriginIdLocalspace)).append("\n");
+    sb.append("    setMagnitudeidOutByMagnitudeIdLocalspace: ").append(toIndentedString(setMagnitudeidOutByMagnitudeIdLocalspace)).append("\n");
     sb.append("    scalarmoment: ").append(toIndentedString(scalarmoment)).append("\n");
     sb.append("    mrr: ").append(toIndentedString(mrr)).append("\n");
     sb.append("    mtt: ").append(toIndentedString(mtt)).append("\n");
@@ -745,6 +799,8 @@ public class ObjectMomenttensor {
     openapiFields.add("id_localspace");
     openapiFields.add("originid_out");
     openapiFields.add("magnitudeid_out");
+    openapiFields.add("set_originid_out_by_origin_id_localspace");
+    openapiFields.add("set_magnitudeid_out_by_magnitude_id_localspace");
     openapiFields.add("scalarmoment");
     openapiFields.add("mrr");
     openapiFields.add("mtt");
