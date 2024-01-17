@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-10T16:32:55.183957Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-17T16:52:16.414983Z[Etc/UTC]")
 public class ObjectStatus {
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
