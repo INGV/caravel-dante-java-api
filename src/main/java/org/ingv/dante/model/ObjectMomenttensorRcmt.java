@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorRcmt
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-18T07:52:35.464632Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-18T08:00:12.204133Z[Etc/UTC]")
 public class ObjectMomenttensorRcmt {
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
