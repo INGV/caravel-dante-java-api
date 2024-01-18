@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 3.5.0
-  - Build date: 2024-01-17T16:52:16.414983Z[Etc/UTC]
+- API version: 3.6.0
+  - Build date: 2024-01-18T07:52:35.464632Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>3.5.0</version>
+  <version>3.6.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.5.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.6.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-3.5.0.jar`
+* `target/java-openapi-generator-cli-dante-3.6.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -183,6 +183,7 @@ Class | Method | HTTP request | Description
 *UpdateApi* | [**updateEvent**](docs/UpdateApi.md#updateEvent) | **PATCH** /quakedb/v1/event/{id} | Update an existing event
 *UpdateApi* | [**updateEventsGroup**](docs/UpdateApi.md#updateEventsGroup) | **PATCH** /quakedb/v1/eventsgroup | Update/Create an events-group
 *UpdateApi* | [**updateLocalspace**](docs/UpdateApi.md#updateLocalspace) | **PATCH** /quakedb/table/v1/localspace/{id} | Update an existing localspace
+*UpdateApi* | [**updateMomenttensor**](docs/UpdateApi.md#updateMomenttensor) | **PATCH** /quakedb/v1/momenttensor/{id} | Update an existing momenttensor
 *UpdateApi* | [**updateOriginFlag**](docs/UpdateApi.md#updateOriginFlag) | **PATCH** /quakedb/table/v1/origin-flag/{id} | Update an existing origin-flag
 *UpdateApi* | [**updateProvenance**](docs/UpdateApi.md#updateProvenance) | **PATCH** /quakedb/table/v1/provenance/{id} | Update an existing provenance
 *UpdateApi* | [**updateTypeEvent**](docs/UpdateApi.md#updateTypeEvent) | **PATCH** /quakedb/table/v1/type-event/{id} | Update an existing type_event
@@ -337,6 +338,11 @@ Class | Method | HTTP request | Description
  - [UpdateEventRequestDataEvent](docs/UpdateEventRequestDataEvent.md)
  - [UpdateEventsGroupRequest](docs/UpdateEventsGroupRequest.md)
  - [UpdateEventsGroupRequestData](docs/UpdateEventsGroupRequestData.md)
+ - [UpdateMomenttensor200Response](docs/UpdateMomenttensor200Response.md)
+ - [UpdateMomenttensor200ResponseData](docs/UpdateMomenttensor200ResponseData.md)
+ - [UpdateMomenttensorRequest](docs/UpdateMomenttensorRequest.md)
+ - [UpdateMomenttensorRequestData](docs/UpdateMomenttensorRequestData.md)
+ - [UpdateMomenttensorRequestDataMomenttensor](docs/UpdateMomenttensorRequestDataMomenttensor.md)
 
 
 <a id="documentation-for-authorization"></a>
