@@ -9154,13 +9154,23 @@ components:
       type: object
     ObjectLocalspace:
       example:
+        environment: development
         name: hew1_mole
         description: Auto added
+        priority: 0
       properties:
         name:
           description: "Localspace name. i.e. hew1_mole, endeavour_mole | char(255)"
           example: hew1_mole
           type: string
+        priority:
+          default: 0
+          description: Priority | int(8)
+          example: 0
+          format: int64
+          type: integer
+        environment:
+          $ref: '#/components/schemas/environment'
         description:
           description: Additional information | char(255)
           example: Auto added
@@ -9339,8 +9349,10 @@ components:
             username: ew
           rsa_100: 0.003673
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           net: IV
@@ -9380,8 +9392,10 @@ components:
             username: ew
           rsa_100: 0.003673
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           net: IV
@@ -9389,8 +9403,10 @@ components:
           tpgd_dt: 2017-04-12T08:46:59.989Z
           pgv: 0.000034
         localspace:
+          environment: development
           name: hew1_mole
           description: Auto added
+          priority: 0
         modified: 2016-06-22T16:52:06.26Z
         set_preferred_origin_id_localspace: 182491
         origins:
@@ -9441,8 +9457,10 @@ components:
                   username: ew
                 inserted: 2016-06-22T16:52:06.26Z
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 timewindow_reference: 2000-01-23T04:56:07.000+00:00
                 id: 14932631
@@ -9489,8 +9507,10 @@ components:
                   username: ew
                 inserted: 2016-06-22T16:52:06.26Z
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 timewindow_reference: 2000-01-23T04:56:07.000+00:00
                 id: 14932631
@@ -9525,8 +9545,10 @@ components:
             min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ncha: 0
@@ -9570,8 +9592,10 @@ components:
                   username: ew
                 inserted: 2016-06-22T16:52:06.26Z
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 timewindow_reference: 2000-01-23T04:56:07.000+00:00
                 id: 14932631
@@ -9618,8 +9642,10 @@ components:
                   username: ew
                 inserted: 2016-06-22T16:52:06.26Z
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 timewindow_reference: 2000-01-23T04:56:07.000+00:00
                 id: 14932631
@@ -9654,8 +9680,10 @@ components:
             min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ncha: 0
@@ -9669,8 +9697,10 @@ components:
           med_distance: 9.018348186070783
           quality: AB
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           type_origin:
             version_value: 7
             version_name: ew prelim
@@ -9713,8 +9743,10 @@ components:
                 parameters: ToDo
                 username: ew
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               pick_ew:
@@ -9761,8 +9793,10 @@ components:
                 parameters: ToDo
                 username: ew
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               pick_ew:
@@ -9858,8 +9892,10 @@ components:
                 username: ew
               scalarmoment: 16607495309062.705
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               set_magnitudeid_out_by_magnitude_id_localspace: 182491
               modified: 2016-06-22T16:52:06.26Z
               magnitudeid_out: 14932631
@@ -9892,8 +9928,10 @@ components:
             strike2: 218
             azim_gap: 0.10263654
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             stdr: 7.740351818741173
             id: 14932631
@@ -9952,8 +9990,10 @@ components:
                 username: ew
               scalarmoment: 16607495309062.705
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               set_magnitudeid_out_by_magnitude_id_localspace: 182491
               modified: 2016-06-22T16:52:06.26Z
               magnitudeid_out: 14932631
@@ -9986,8 +10026,10 @@ components:
             strike2: 218
             azim_gap: 0.10263654
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             stdr: 7.740351818741173
             id: 14932631
@@ -10048,8 +10090,10 @@ components:
                   username: ew
                 inserted: 2016-06-22T16:52:06.26Z
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 timewindow_reference: 2000-01-23T04:56:07.000+00:00
                 id: 14932631
@@ -10096,8 +10140,10 @@ components:
                   username: ew
                 inserted: 2016-06-22T16:52:06.26Z
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 timewindow_reference: 2000-01-23T04:56:07.000+00:00
                 id: 14932631
@@ -10132,8 +10178,10 @@ components:
             min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ncha: 0
@@ -10177,8 +10225,10 @@ components:
                   username: ew
                 inserted: 2016-06-22T16:52:06.26Z
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 timewindow_reference: 2000-01-23T04:56:07.000+00:00
                 id: 14932631
@@ -10225,8 +10275,10 @@ components:
                   username: ew
                 inserted: 2016-06-22T16:52:06.26Z
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 timewindow_reference: 2000-01-23T04:56:07.000+00:00
                 id: 14932631
@@ -10261,8 +10313,10 @@ components:
             min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             ncha: 0
@@ -10276,8 +10330,10 @@ components:
           med_distance: 9.018348186070783
           quality: AB
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           type_origin:
             version_value: 7
             version_name: ew prelim
@@ -10320,8 +10376,10 @@ components:
                 parameters: ToDo
                 username: ew
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               pick_ew:
@@ -10368,8 +10426,10 @@ components:
                 parameters: ToDo
                 username: ew
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               pick_ew:
@@ -10465,8 +10525,10 @@ components:
                 username: ew
               scalarmoment: 16607495309062.705
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               set_magnitudeid_out_by_magnitude_id_localspace: 182491
               modified: 2016-06-22T16:52:06.26Z
               magnitudeid_out: 14932631
@@ -10499,8 +10561,10 @@ components:
             strike2: 218
             azim_gap: 0.10263654
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             stdr: 7.740351818741173
             id: 14932631
@@ -10559,8 +10623,10 @@ components:
                 username: ew
               scalarmoment: 16607495309062.705
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               set_magnitudeid_out_by_magnitude_id_localspace: 182491
               modified: 2016-06-22T16:52:06.26Z
               magnitudeid_out: 14932631
@@ -10593,8 +10659,10 @@ components:
             strike2: 218
             azim_gap: 0.10263654
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             stdr: 7.740351818741173
             id: 14932631
@@ -10752,8 +10820,10 @@ components:
                 username: ew
               inserted: 2016-06-22T16:52:06.26Z
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               timewindow_reference: 2000-01-23T04:56:07.000+00:00
               id: 14932631
@@ -10800,8 +10870,10 @@ components:
                 username: ew
               inserted: 2016-06-22T16:52:06.26Z
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               timewindow_reference: 2000-01-23T04:56:07.000+00:00
               id: 14932631
@@ -10836,8 +10908,10 @@ components:
           min_distance: 3.353193347011243
           ncha_used: 27
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           ncha: 0
@@ -10881,8 +10955,10 @@ components:
                 username: ew
               inserted: 2016-06-22T16:52:06.26Z
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               timewindow_reference: 2000-01-23T04:56:07.000+00:00
               id: 14932631
@@ -10929,8 +11005,10 @@ components:
                 username: ew
               inserted: 2016-06-22T16:52:06.26Z
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               timewindow_reference: 2000-01-23T04:56:07.000+00:00
               id: 14932631
@@ -10965,8 +11043,10 @@ components:
           min_distance: 3.353193347011243
           ncha_used: 27
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           ncha: 0
@@ -10980,8 +11060,10 @@ components:
         med_distance: 9.018348186070783
         quality: AB
         localspace:
+          environment: development
           name: hew1_mole
           description: Auto added
+          priority: 0
         type_origin:
           version_value: 7
           version_name: ew prelim
@@ -11024,8 +11106,10 @@ components:
               parameters: ToDo
               username: ew
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             pick_ew:
@@ -11072,8 +11156,10 @@ components:
               parameters: ToDo
               username: ew
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             pick_ew:
@@ -11169,8 +11255,10 @@ components:
               username: ew
             scalarmoment: 16607495309062.705
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             set_magnitudeid_out_by_magnitude_id_localspace: 182491
             modified: 2016-06-22T16:52:06.26Z
             magnitudeid_out: 14932631
@@ -11203,8 +11291,10 @@ components:
           strike2: 218
           azim_gap: 0.10263654
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           modified: 2016-06-22T16:52:06.26Z
           stdr: 7.740351818741173
           id: 14932631
@@ -11263,8 +11353,10 @@ components:
               username: ew
             scalarmoment: 16607495309062.705
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             set_magnitudeid_out_by_magnitude_id_localspace: 182491
             modified: 2016-06-22T16:52:06.26Z
             magnitudeid_out: 14932631
@@ -11297,8 +11389,10 @@ components:
           strike2: 218
           azim_gap: 0.10263654
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           modified: 2016-06-22T16:52:06.26Z
           stdr: 7.740351818741173
           id: 14932631
@@ -11815,8 +11909,10 @@ components:
               username: ew
             inserted: 2016-06-22T16:52:06.26Z
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             timewindow_reference: 2000-01-23T04:56:07.000+00:00
             id: 14932631
@@ -11863,8 +11959,10 @@ components:
               username: ew
             inserted: 2016-06-22T16:52:06.26Z
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             timewindow_reference: 2000-01-23T04:56:07.000+00:00
             id: 14932631
@@ -11899,8 +11997,10 @@ components:
         min_distance: 3.353193347011243
         ncha_used: 27
         localspace:
+          environment: development
           name: hew1_mole
           description: Auto added
+          priority: 0
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
         ncha: 0
@@ -12073,8 +12173,10 @@ components:
             username: ew
           scalarmoment: 16607495309062.705
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           set_magnitudeid_out_by_magnitude_id_localspace: 182491
           modified: 2016-06-22T16:52:06.26Z
           magnitudeid_out: 14932631
@@ -12107,8 +12209,10 @@ components:
         strike2: 218
         azim_gap: 0.10263654
         localspace:
+          environment: development
           name: hew1_mole
           description: Auto added
+          priority: 0
         modified: 2016-06-22T16:52:06.26Z
         stdr: 7.740351818741173
         id: 14932631
@@ -12285,8 +12389,10 @@ components:
           username: ew
         scalarmoment: 16607495309062.705
         localspace:
+          environment: development
           name: hew1_mole
           description: Auto added
+          priority: 0
         set_magnitudeid_out_by_magnitude_id_localspace: 182491
         modified: 2016-06-22T16:52:06.26Z
         magnitudeid_out: 14932631
@@ -12474,8 +12580,10 @@ components:
           username: ew
         rsa_100: 0.003673
         localspace:
+          environment: development
           name: hew1_mole
           description: Auto added
+          priority: 0
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
         net: IV
@@ -12631,8 +12739,10 @@ components:
           username: ew
         inserted: 2016-06-22T16:52:06.26Z
         localspace:
+          environment: development
           name: hew1_mole
           description: Auto added
+          priority: 0
         modified: 2016-06-22T16:52:06.26Z
         timewindow_reference: 2000-01-23T04:56:07.000+00:00
         id: 14932631
@@ -12769,8 +12879,10 @@ components:
             username: ew
           inserted: 2016-06-22T16:52:06.26Z
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           modified: 2016-06-22T16:52:06.26Z
           timewindow_reference: 2000-01-23T04:56:07.000+00:00
           id: 14932631
@@ -12873,8 +12985,10 @@ components:
           parameters: ToDo
           username: ew
         localspace:
+          environment: development
           name: hew1_mole
           description: Auto added
+          priority: 0
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
         pick_ew:
@@ -13009,8 +13123,10 @@ components:
             parameters: ToDo
             username: ew
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           pick_ew:
@@ -15303,8 +15419,10 @@ components:
               username: ew
             rsa_100: 0.003673
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             net: IV
@@ -15344,8 +15462,10 @@ components:
               username: ew
             rsa_100: 0.003673
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             net: IV
@@ -15353,8 +15473,10 @@ components:
             tpgd_dt: 2017-04-12T08:46:59.989Z
             pgv: 0.000034
           localspace:
+            environment: development
             name: hew1_mole
             description: Auto added
+            priority: 0
           modified: 2016-06-22T16:52:06.26Z
           set_preferred_origin_id_localspace: 182491
           origins:
@@ -15405,8 +15527,10 @@ components:
                     username: ew
                   inserted: 2016-06-22T16:52:06.26Z
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   timewindow_reference: 2000-01-23T04:56:07.000+00:00
                   id: 14932631
@@ -15453,8 +15577,10 @@ components:
                     username: ew
                   inserted: 2016-06-22T16:52:06.26Z
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   timewindow_reference: 2000-01-23T04:56:07.000+00:00
                   id: 14932631
@@ -15489,8 +15615,10 @@ components:
               min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ncha: 0
@@ -15534,8 +15662,10 @@ components:
                     username: ew
                   inserted: 2016-06-22T16:52:06.26Z
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   timewindow_reference: 2000-01-23T04:56:07.000+00:00
                   id: 14932631
@@ -15582,8 +15712,10 @@ components:
                     username: ew
                   inserted: 2016-06-22T16:52:06.26Z
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   timewindow_reference: 2000-01-23T04:56:07.000+00:00
                   id: 14932631
@@ -15618,8 +15750,10 @@ components:
               min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ncha: 0
@@ -15633,8 +15767,10 @@ components:
             med_distance: 9.018348186070783
             quality: AB
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             type_origin:
               version_value: 7
               version_name: ew prelim
@@ -15677,8 +15813,10 @@ components:
                   parameters: ToDo
                   username: ew
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 pick_ew:
@@ -15725,8 +15863,10 @@ components:
                   parameters: ToDo
                   username: ew
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 pick_ew:
@@ -15822,8 +15962,10 @@ components:
                   username: ew
                 scalarmoment: 16607495309062.705
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 set_magnitudeid_out_by_magnitude_id_localspace: 182491
                 modified: 2016-06-22T16:52:06.26Z
                 magnitudeid_out: 14932631
@@ -15856,8 +15998,10 @@ components:
               strike2: 218
               azim_gap: 0.10263654
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               stdr: 7.740351818741173
               id: 14932631
@@ -15916,8 +16060,10 @@ components:
                   username: ew
                 scalarmoment: 16607495309062.705
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 set_magnitudeid_out_by_magnitude_id_localspace: 182491
                 modified: 2016-06-22T16:52:06.26Z
                 magnitudeid_out: 14932631
@@ -15950,8 +16096,10 @@ components:
               strike2: 218
               azim_gap: 0.10263654
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               stdr: 7.740351818741173
               id: 14932631
@@ -16012,8 +16160,10 @@ components:
                     username: ew
                   inserted: 2016-06-22T16:52:06.26Z
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   timewindow_reference: 2000-01-23T04:56:07.000+00:00
                   id: 14932631
@@ -16060,8 +16210,10 @@ components:
                     username: ew
                   inserted: 2016-06-22T16:52:06.26Z
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   timewindow_reference: 2000-01-23T04:56:07.000+00:00
                   id: 14932631
@@ -16096,8 +16248,10 @@ components:
               min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ncha: 0
@@ -16141,8 +16295,10 @@ components:
                     username: ew
                   inserted: 2016-06-22T16:52:06.26Z
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   timewindow_reference: 2000-01-23T04:56:07.000+00:00
                   id: 14932631
@@ -16189,8 +16345,10 @@ components:
                     username: ew
                   inserted: 2016-06-22T16:52:06.26Z
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   timewindow_reference: 2000-01-23T04:56:07.000+00:00
                   id: 14932631
@@ -16225,8 +16383,10 @@ components:
               min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               ncha: 0
@@ -16240,8 +16400,10 @@ components:
             med_distance: 9.018348186070783
             quality: AB
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             type_origin:
               version_value: 7
               version_name: ew prelim
@@ -16284,8 +16446,10 @@ components:
                   parameters: ToDo
                   username: ew
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 pick_ew:
@@ -16332,8 +16496,10 @@ components:
                   parameters: ToDo
                   username: ew
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 pick_ew:
@@ -16429,8 +16595,10 @@ components:
                   username: ew
                 scalarmoment: 16607495309062.705
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 set_magnitudeid_out_by_magnitude_id_localspace: 182491
                 modified: 2016-06-22T16:52:06.26Z
                 magnitudeid_out: 14932631
@@ -16463,8 +16631,10 @@ components:
               strike2: 218
               azim_gap: 0.10263654
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               stdr: 7.740351818741173
               id: 14932631
@@ -16523,8 +16693,10 @@ components:
                   username: ew
                 scalarmoment: 16607495309062.705
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 set_magnitudeid_out_by_magnitude_id_localspace: 182491
                 modified: 2016-06-22T16:52:06.26Z
                 magnitudeid_out: 14932631
@@ -16557,8 +16729,10 @@ components:
               strike2: 218
               azim_gap: 0.10263654
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               stdr: 7.740351818741173
               id: 14932631
@@ -16636,8 +16810,10 @@ components:
                 username: ew
               rsa_100: 0.003673
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               net: IV
@@ -16677,8 +16853,10 @@ components:
                 username: ew
               rsa_100: 0.003673
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               net: IV
@@ -16686,8 +16864,10 @@ components:
               tpgd_dt: 2017-04-12T08:46:59.989Z
               pgv: 0.000034
             localspace:
+              environment: development
               name: hew1_mole
               description: Auto added
+              priority: 0
             modified: 2016-06-22T16:52:06.26Z
             set_preferred_origin_id_localspace: 182491
             origins:
@@ -16738,8 +16918,10 @@ components:
                       username: ew
                     inserted: 2016-06-22T16:52:06.26Z
                     localspace:
+                      environment: development
                       name: hew1_mole
                       description: Auto added
+                      priority: 0
                     modified: 2016-06-22T16:52:06.26Z
                     timewindow_reference: 2000-01-23T04:56:07.000+00:00
                     id: 14932631
@@ -16786,8 +16968,10 @@ components:
                       username: ew
                     inserted: 2016-06-22T16:52:06.26Z
                     localspace:
+                      environment: development
                       name: hew1_mole
                       description: Auto added
+                      priority: 0
                     modified: 2016-06-22T16:52:06.26Z
                     timewindow_reference: 2000-01-23T04:56:07.000+00:00
                     id: 14932631
@@ -16822,8 +17006,10 @@ components:
                 min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ncha: 0
@@ -16867,8 +17053,10 @@ components:
                       username: ew
                     inserted: 2016-06-22T16:52:06.26Z
                     localspace:
+                      environment: development
                       name: hew1_mole
                       description: Auto added
+                      priority: 0
                     modified: 2016-06-22T16:52:06.26Z
                     timewindow_reference: 2000-01-23T04:56:07.000+00:00
                     id: 14932631
@@ -16915,8 +17103,10 @@ components:
                       username: ew
                     inserted: 2016-06-22T16:52:06.26Z
                     localspace:
+                      environment: development
                       name: hew1_mole
                       description: Auto added
+                      priority: 0
                     modified: 2016-06-22T16:52:06.26Z
                     timewindow_reference: 2000-01-23T04:56:07.000+00:00
                     id: 14932631
@@ -16951,8 +17141,10 @@ components:
                 min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ncha: 0
@@ -16966,8 +17158,10 @@ components:
               med_distance: 9.018348186070783
               quality: AB
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               type_origin:
                 version_value: 7
                 version_name: ew prelim
@@ -17010,8 +17204,10 @@ components:
                     parameters: ToDo
                     username: ew
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   pick_ew:
@@ -17058,8 +17254,10 @@ components:
                     parameters: ToDo
                     username: ew
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   pick_ew:
@@ -17155,8 +17353,10 @@ components:
                     username: ew
                   scalarmoment: 16607495309062.705
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   set_magnitudeid_out_by_magnitude_id_localspace: 182491
                   modified: 2016-06-22T16:52:06.26Z
                   magnitudeid_out: 14932631
@@ -17189,8 +17389,10 @@ components:
                 strike2: 218
                 azim_gap: 0.10263654
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 stdr: 7.740351818741173
                 id: 14932631
@@ -17249,8 +17451,10 @@ components:
                     username: ew
                   scalarmoment: 16607495309062.705
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   set_magnitudeid_out_by_magnitude_id_localspace: 182491
                   modified: 2016-06-22T16:52:06.26Z
                   magnitudeid_out: 14932631
@@ -17283,8 +17487,10 @@ components:
                 strike2: 218
                 azim_gap: 0.10263654
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 stdr: 7.740351818741173
                 id: 14932631
@@ -17345,8 +17551,10 @@ components:
                       username: ew
                     inserted: 2016-06-22T16:52:06.26Z
                     localspace:
+                      environment: development
                       name: hew1_mole
                       description: Auto added
+                      priority: 0
                     modified: 2016-06-22T16:52:06.26Z
                     timewindow_reference: 2000-01-23T04:56:07.000+00:00
                     id: 14932631
@@ -17393,8 +17601,10 @@ components:
                       username: ew
                     inserted: 2016-06-22T16:52:06.26Z
                     localspace:
+                      environment: development
                       name: hew1_mole
                       description: Auto added
+                      priority: 0
                     modified: 2016-06-22T16:52:06.26Z
                     timewindow_reference: 2000-01-23T04:56:07.000+00:00
                     id: 14932631
@@ -17429,8 +17639,10 @@ components:
                 min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ncha: 0
@@ -17474,8 +17686,10 @@ components:
                       username: ew
                     inserted: 2016-06-22T16:52:06.26Z
                     localspace:
+                      environment: development
                       name: hew1_mole
                       description: Auto added
+                      priority: 0
                     modified: 2016-06-22T16:52:06.26Z
                     timewindow_reference: 2000-01-23T04:56:07.000+00:00
                     id: 14932631
@@ -17522,8 +17736,10 @@ components:
                       username: ew
                     inserted: 2016-06-22T16:52:06.26Z
                     localspace:
+                      environment: development
                       name: hew1_mole
                       description: Auto added
+                      priority: 0
                     modified: 2016-06-22T16:52:06.26Z
                     timewindow_reference: 2000-01-23T04:56:07.000+00:00
                     id: 14932631
@@ -17558,8 +17774,10 @@ components:
                 min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 ncha: 0
@@ -17573,8 +17791,10 @@ components:
               med_distance: 9.018348186070783
               quality: AB
               localspace:
+                environment: development
                 name: hew1_mole
                 description: Auto added
+                priority: 0
               type_origin:
                 version_value: 7
                 version_name: ew prelim
@@ -17617,8 +17837,10 @@ components:
                     parameters: ToDo
                     username: ew
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   pick_ew:
@@ -17665,8 +17887,10 @@ components:
                     parameters: ToDo
                     username: ew
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   modified: 2016-06-22T16:52:06.26Z
                   id: 14932631
                   pick_ew:
@@ -17762,8 +17986,10 @@ components:
                     username: ew
                   scalarmoment: 16607495309062.705
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   set_magnitudeid_out_by_magnitude_id_localspace: 182491
                   modified: 2016-06-22T16:52:06.26Z
                   magnitudeid_out: 14932631
@@ -17796,8 +18022,10 @@ components:
                 strike2: 218
                 azim_gap: 0.10263654
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 stdr: 7.740351818741173
                 id: 14932631
@@ -17856,8 +18084,10 @@ components:
                     username: ew
                   scalarmoment: 16607495309062.705
                   localspace:
+                    environment: development
                     name: hew1_mole
                     description: Auto added
+                    priority: 0
                   set_magnitudeid_out_by_magnitude_id_localspace: 182491
                   modified: 2016-06-22T16:52:06.26Z
                   magnitudeid_out: 14932631
@@ -17890,8 +18120,10 @@ components:
                 strike2: 218
                 azim_gap: 0.10263654
                 localspace:
+                  environment: development
                   name: hew1_mole
                   description: Auto added
+                  priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 stdr: 7.740351818741173
                 id: 14932631
