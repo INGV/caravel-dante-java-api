@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeMagnitude200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-22T16:42:09.839037Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-01-22T16:44:39.231032Z[Etc/UTC]")
 public class GetTypeMagnitude200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
