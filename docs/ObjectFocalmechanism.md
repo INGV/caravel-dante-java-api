@@ -24,7 +24,7 @@
 |**rmsAngDiffAccPref** | **Double** | rms_ang_diff_acc_pref | double(22) |  [optional] |
 |**fracAcc30degPref** | **Double** | frac_acc_30deg_pref | double(22) |  [optional] |
 |**quality** | **String** | quality | char(2) |  [optional] |
-|**url** | **String** | url pdf file | varchar(255) |  [optional] |
+|**url** | **String** | External URL Reference | varchar(512) |  [optional] |
 |**momenttensor** | [**ObjectMomenttensor**](ObjectMomenttensor.md) |  |  [optional] |
 |**localspace** | [**ObjectLocalspace**](ObjectLocalspace.md) |  |  [optional] |
 |**provenance** | [**ObjectProvenance**](ObjectProvenance.md) |  |  [optional] |

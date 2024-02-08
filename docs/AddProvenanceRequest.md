@@ -19,6 +19,8 @@
 |**hostname** | **String** | Hostname | char(255) |  [optional] |
 |**description** | **String** | Additional information | char(255) |  [optional] |
 |**priority** | **Long** | Priority | int(8) |  [optional] |
+|**evaluationmode** | **ProvenanceEvaluationmode** |  |  [optional] |
+|**url** | **String** | External URL Reference | varchar(512) |  [optional] |
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
 

@@ -11,31 +11,22 @@
  */
 
 
-package org.ingv.dante;
+package org.ingv.dante.model;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-08T14:51:16.911890Z[Etc/UTC]")
-public class Configuration {
-    public static final String VERSION = "3.10.0-dev";
+import com.google.gson.annotations.SerializedName;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-    private static ApiClient defaultApiClient = new ApiClient();
-
+/**
+ * Model tests for ProvenanceEvaluationmode
+ */
+public class ProvenanceEvaluationmodeTest {
     /**
-     * Get the default API client, which would be used when creating API
-     * instances without providing an API client.
-     *
-     * @return Default API client
+     * Model tests for ProvenanceEvaluationmode
      */
-    public static ApiClient getDefaultApiClient() {
-        return defaultApiClient;
+    @Test
+    public void testProvenanceEvaluationmode() {
+        // TODO: test ProvenanceEvaluationmode
     }
 
-    /**
-     * Set the default API client, which would be used when creating API
-     * instances without providing an API client.
-     *
-     * @param apiClient API client
-     */
-    public static void setDefaultApiClient(ApiClient apiClient) {
-        defaultApiClient = apiClient;
-    }
 }

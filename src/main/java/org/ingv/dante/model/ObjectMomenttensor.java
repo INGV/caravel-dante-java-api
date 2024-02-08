@@ -55,7 +55,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-02T16:13:29.454033Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-08T14:51:16.911890Z[Etc/UTC]")
 public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -124,6 +124,10 @@ public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_ISO = "iso";
   @SerializedName(SERIALIZED_NAME_ISO)
   private Double iso;
+
+  public static final String SERIALIZED_NAME_URL = "url";
+  @SerializedName(SERIALIZED_NAME_URL)
+  private String url;
 
   public static final String SERIALIZED_NAME_VARIANCE_REDUCTION = "variance_reduction";
   @SerializedName(SERIALIZED_NAME_VARIANCE_REDUCTION)
@@ -498,6 +502,27 @@ public class ObjectMomenttensor {
   }
 
 
+  public ObjectMomenttensor url(String url) {
+    
+    this.url = url;
+    return this;
+  }
+
+   /**
+   * External URL Reference | varchar(512)
+   * @return url
+  **/
+  @javax.annotation.Nullable
+  public String getUrl() {
+    return url;
+  }
+
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+
   public ObjectMomenttensor varianceReduction(Double varianceReduction) {
     
     this.varianceReduction = varianceReduction;
@@ -716,6 +741,7 @@ public class ObjectMomenttensor {
         Objects.equals(this.mtp, objectMomenttensor.mtp) &&
         Objects.equals(this.clvd, objectMomenttensor.clvd) &&
         Objects.equals(this.iso, objectMomenttensor.iso) &&
+        Objects.equals(this.url, objectMomenttensor.url) &&
         Objects.equals(this.varianceReduction, objectMomenttensor.varianceReduction) &&
         Objects.equals(this.doubleCouple, objectMomenttensor.doubleCouple) &&
         Objects.equals(this.typeMomenttensor, objectMomenttensor.typeMomenttensor) &&
@@ -732,7 +758,7 @@ public class ObjectMomenttensor {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, idLocalspace, originidOut, magnitudeidOut, setOriginidOutByOriginIdLocalspace, setMagnitudeidOutByMagnitudeIdLocalspace, scalarmoment, mrr, mtt, mpp, mrt, mrp, mtp, clvd, iso, varianceReduction, doubleCouple, typeMomenttensor, localspace, provenance, tdmt, rcmt, additionalProperties);
+    return Objects.hash(id, modified, inserted, idLocalspace, originidOut, magnitudeidOut, setOriginidOutByOriginIdLocalspace, setMagnitudeidOutByMagnitudeIdLocalspace, scalarmoment, mrr, mtt, mpp, mrt, mrp, mtp, clvd, iso, url, varianceReduction, doubleCouple, typeMomenttensor, localspace, provenance, tdmt, rcmt, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -763,6 +789,7 @@ public class ObjectMomenttensor {
     sb.append("    mtp: ").append(toIndentedString(mtp)).append("\n");
     sb.append("    clvd: ").append(toIndentedString(clvd)).append("\n");
     sb.append("    iso: ").append(toIndentedString(iso)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    varianceReduction: ").append(toIndentedString(varianceReduction)).append("\n");
     sb.append("    doubleCouple: ").append(toIndentedString(doubleCouple)).append("\n");
     sb.append("    typeMomenttensor: ").append(toIndentedString(typeMomenttensor)).append("\n");
@@ -810,6 +837,7 @@ public class ObjectMomenttensor {
     openapiFields.add("mtp");
     openapiFields.add("clvd");
     openapiFields.add("iso");
+    openapiFields.add("url");
     openapiFields.add("variance_reduction");
     openapiFields.add("double_couple");
     openapiFields.add("type_momenttensor");
@@ -843,6 +871,9 @@ public class ObjectMomenttensor {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if ((jsonObj.get("url") != null && !jsonObj.get("url").isJsonNull()) && !jsonObj.get("url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
+      }
       if (!jsonObj.get("type_momenttensor").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_momenttensor` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_momenttensor").toString()));
       }

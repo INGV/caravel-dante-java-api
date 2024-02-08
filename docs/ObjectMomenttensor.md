@@ -24,6 +24,7 @@
 |**mtp** | **Double** | mtp moment tensor component | double(22) |  [optional] |
 |**clvd** | **Double** | CLVD (compensated linear vector dipole) parameter obtained from moment tensor inversion (decimal fraction between 0 and 1) | double(22) |  [optional] |
 |**iso** | **Double** | Isotropic part obtained from moment tensor inversion (decimal fraction between 0 and 1) | double(22) |  [optional] |
+|**url** | **String** | External URL Reference | varchar(512) |  [optional] |
 |**varianceReduction** | **Double** | Variance reduction of moment tensor inversion, given in percent (Dreger 2003). This is a goodness-of-fit measure | double(22) |  [optional] |
 |**doubleCouple** | **Double** | Double couple parameter obtained from moment tensor inversion (decimal fraction between 0 and 1) | double(22) |  [optional] |
 |**typeMomenttensor** | **String** | Type of Moment Tensor | varchar(50) |  |

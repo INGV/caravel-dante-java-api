@@ -136,6 +136,7 @@ docs/PickScnlSchema.md
 docs/PickScnlSchemaEwLogo.md
 docs/PickScnlSchemaEwMessage.md
 docs/Problem.md
+docs/ProvenanceEvaluationmode.md
 docs/Quake2kSchema.md
 docs/Quake2kSchemaEwLogo.md
 docs/Quake2kSchemaEwMessage.md
@@ -321,6 +322,7 @@ src/main/java/org/ingv/dante/model/PickScnlSchema.java
 src/main/java/org/ingv/dante/model/PickScnlSchemaEwLogo.java
 src/main/java/org/ingv/dante/model/PickScnlSchemaEwMessage.java
 src/main/java/org/ingv/dante/model/Problem.java
+src/main/java/org/ingv/dante/model/ProvenanceEvaluationmode.java
 src/main/java/org/ingv/dante/model/Quake2kSchema.java
 src/main/java/org/ingv/dante/model/Quake2kSchemaEwLogo.java
 src/main/java/org/ingv/dante/model/Quake2kSchemaEwMessage.java
@@ -476,6 +478,7 @@ src/test/java/org/ingv/dante/model/PickScnlSchemaEwLogoTest.java
 src/test/java/org/ingv/dante/model/PickScnlSchemaEwMessageTest.java
 src/test/java/org/ingv/dante/model/PickScnlSchemaTest.java
 src/test/java/org/ingv/dante/model/ProblemTest.java
+src/test/java/org/ingv/dante/model/ProvenanceEvaluationmodeTest.java
 src/test/java/org/ingv/dante/model/Quake2kSchemaEwLogoTest.java
 src/test/java/org/ingv/dante/model/Quake2kSchemaEwMessageTest.java
 src/test/java/org/ingv/dante/model/Quake2kSchemaTest.java

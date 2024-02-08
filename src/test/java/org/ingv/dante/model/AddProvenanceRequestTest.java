@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.Arrays;
+import org.ingv.dante.model.ProvenanceEvaluationmode;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -133,6 +134,22 @@ public class AddProvenanceRequestTest {
     @Test
     public void priorityTest() {
         // TODO: test priority
+    }
+
+    /**
+     * Test the property 'evaluationmode'
+     */
+    @Test
+    public void evaluationmodeTest() {
+        // TODO: test evaluationmode
+    }
+
+    /**
+     * Test the property 'url'
+     */
+    @Test
+    public void urlTest() {
+        // TODO: test url
     }
 
     /**
