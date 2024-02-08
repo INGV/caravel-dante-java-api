@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 3.9.0
-  - Build date: 2024-01-29T15:39:25.898510Z[Etc/UTC]
+- API version: 3.10.0
+  - Build date: 2024-02-08T17:27:32.788439Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>3.9.0</version>
+  <version>3.10.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.9.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.10.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-3.9.0.jar`
+* `target/java-openapi-generator-cli-dante-3.10.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -321,6 +321,7 @@ Class | Method | HTTP request | Description
  - [PickScnlSchemaEwLogo](docs/PickScnlSchemaEwLogo.md)
  - [PickScnlSchemaEwMessage](docs/PickScnlSchemaEwMessage.md)
  - [Problem](docs/Problem.md)
+ - [ProvenanceEvaluationmode](docs/ProvenanceEvaluationmode.md)
  - [Quake2kSchema](docs/Quake2kSchema.md)
  - [Quake2kSchemaEwLogo](docs/Quake2kSchemaEwLogo.md)
  - [Quake2kSchemaEwMessage](docs/Quake2kSchemaEwMessage.md)
