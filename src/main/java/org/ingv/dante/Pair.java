@@ -13,7 +13,7 @@
 
 package org.ingv.dante;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:00:56.030588Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
 public class Pair {
     private String name = "";
     private String value = "";
