@@ -38,6 +38,7 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
     
+
     // Configure HTTP bearer authorization: BearerAuth
     HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
     BearerAuth.setBearerToken("BEARER TOKEN");
@@ -72,7 +73,7 @@ public class Example {
 
 ### Authorization
 
-[BearerAuth](../README.md#BearerAuth)
+[OIDC](../README.md#OIDC), [BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 

@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.11.0
+  version: 3.12.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -6977,6 +6977,8 @@ paths:
           description: Forbidden
       security:
       - BearerAuth:
+        - write
+      - OIDC:
         - write
       summary: Update an existing event
       tags:
@@ -20433,4 +20435,7 @@ components:
     BearerAuth:
       scheme: bearer
       type: http
+    OIDC:
+      openIdConnectUrl: https://ksso.ingv.it/auth/realms/ingv/.well-known/openid-configuration
+      type: openIdConnect
 
