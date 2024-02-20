@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorPostOutputMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectMomenttensorPostOutputMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -69,7 +69,6 @@ public class ObjectMomenttensorPostOutputMomenttensor {
   }
 
   public ObjectMomenttensorPostOutputMomenttensor id(Long id) {
-    
     this.id = id;
     return this;
   }
@@ -83,14 +82,12 @@ public class ObjectMomenttensorPostOutputMomenttensor {
     return id;
   }
 
-
   public void setId(Long id) {
     this.id = id;
   }
 
 
   public ObjectMomenttensorPostOutputMomenttensor idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -104,14 +101,12 @@ public class ObjectMomenttensorPostOutputMomenttensor {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectMomenttensorPostOutputMomenttensor localspace(AddEvent201ResponseDataEventLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -124,7 +119,6 @@ public class ObjectMomenttensorPostOutputMomenttensor {
   public AddEvent201ResponseDataEventLocalspace getLocalspace() {
     return localspace;
   }
-
 
   public void setLocalspace(AddEvent201ResponseDataEventLocalspace localspace) {
     this.localspace = localspace;
@@ -292,7 +286,12 @@ public class ObjectMomenttensorPostOutputMomenttensor {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

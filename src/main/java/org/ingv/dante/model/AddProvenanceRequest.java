@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * AddProvenanceRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class AddProvenanceRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -121,7 +121,6 @@ public class AddProvenanceRequest {
   public AddProvenanceRequest() {
   }
 
-  
   public AddProvenanceRequest(
      Long id, 
      OffsetDateTime modified, 
@@ -144,9 +143,7 @@ public class AddProvenanceRequest {
 
 
 
-
   public AddProvenanceRequest name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -160,14 +157,12 @@ public class AddProvenanceRequest {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public AddProvenanceRequest softwarename(String softwarename) {
-    
     this.softwarename = softwarename;
     return this;
   }
@@ -181,14 +176,12 @@ public class AddProvenanceRequest {
     return softwarename;
   }
 
-
   public void setSoftwarename(String softwarename) {
     this.softwarename = softwarename;
   }
 
 
   public AddProvenanceRequest version(String version) {
-    
     this.version = version;
     return this;
   }
@@ -202,14 +195,12 @@ public class AddProvenanceRequest {
     return version;
   }
 
-
   public void setVersion(String version) {
     this.version = version;
   }
 
 
   public AddProvenanceRequest model(String model) {
-    
     this.model = model;
     return this;
   }
@@ -223,14 +214,12 @@ public class AddProvenanceRequest {
     return model;
   }
 
-
   public void setModel(String model) {
     this.model = model;
   }
 
 
   public AddProvenanceRequest method(String method) {
-    
     this.method = method;
     return this;
   }
@@ -244,14 +233,12 @@ public class AddProvenanceRequest {
     return method;
   }
 
-
   public void setMethod(String method) {
     this.method = method;
   }
 
 
   public AddProvenanceRequest parameters(String parameters) {
-    
     this.parameters = parameters;
     return this;
   }
@@ -265,14 +252,12 @@ public class AddProvenanceRequest {
     return parameters;
   }
 
-
   public void setParameters(String parameters) {
     this.parameters = parameters;
   }
 
 
   public AddProvenanceRequest program(String program) {
-    
     this.program = program;
     return this;
   }
@@ -286,14 +271,12 @@ public class AddProvenanceRequest {
     return program;
   }
 
-
   public void setProgram(String program) {
     this.program = program;
   }
 
 
   public AddProvenanceRequest username(String username) {
-    
     this.username = username;
     return this;
   }
@@ -307,14 +290,12 @@ public class AddProvenanceRequest {
     return username;
   }
 
-
   public void setUsername(String username) {
     this.username = username;
   }
 
 
   public AddProvenanceRequest hostname(String hostname) {
-    
     this.hostname = hostname;
     return this;
   }
@@ -328,14 +309,12 @@ public class AddProvenanceRequest {
     return hostname;
   }
 
-
   public void setHostname(String hostname) {
     this.hostname = hostname;
   }
 
 
   public AddProvenanceRequest description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -349,14 +328,12 @@ public class AddProvenanceRequest {
     return description;
   }
 
-
   public void setDescription(String description) {
     this.description = description;
   }
 
 
   public AddProvenanceRequest priority(Long priority) {
-    
     this.priority = priority;
     return this;
   }
@@ -370,14 +347,12 @@ public class AddProvenanceRequest {
     return priority;
   }
 
-
   public void setPriority(Long priority) {
     this.priority = priority;
   }
 
 
   public AddProvenanceRequest evaluationmode(ProvenanceEvaluationmode evaluationmode) {
-    
     this.evaluationmode = evaluationmode;
     return this;
   }
@@ -391,14 +366,12 @@ public class AddProvenanceRequest {
     return evaluationmode;
   }
 
-
   public void setEvaluationmode(ProvenanceEvaluationmode evaluationmode) {
     this.evaluationmode = evaluationmode;
   }
 
 
   public AddProvenanceRequest url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -411,7 +384,6 @@ public class AddProvenanceRequest {
   public String getUrl() {
     return url;
   }
-
 
   public void setUrl(String url) {
     this.url = url;
@@ -429,7 +401,6 @@ public class AddProvenanceRequest {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -438,7 +409,6 @@ public class AddProvenanceRequest {
   public OffsetDateTime getInserted() {
     return inserted;
   }
-
 
 
   /**
@@ -684,7 +654,12 @@ public class AddProvenanceRequest {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

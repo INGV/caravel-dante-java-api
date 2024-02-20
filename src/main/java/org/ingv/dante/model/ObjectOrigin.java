@@ -59,7 +59,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -260,7 +260,6 @@ public class ObjectOrigin {
   public ObjectOrigin() {
   }
 
-  
   public ObjectOrigin(
      Long id, 
      OffsetDateTime modified, 
@@ -289,7 +288,6 @@ public class ObjectOrigin {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -298,7 +296,6 @@ public class ObjectOrigin {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
 
@@ -313,9 +310,7 @@ public class ObjectOrigin {
 
 
 
-
   public ObjectOrigin idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -329,14 +324,12 @@ public class ObjectOrigin {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectOrigin azimGap(Float azimGap) {
-    
     this.azimGap = azimGap;
     return this;
   }
@@ -350,14 +343,12 @@ public class ObjectOrigin {
     return azimGap;
   }
 
-
   public void setAzimGap(Float azimGap) {
     this.azimGap = azimGap;
   }
 
 
   public ObjectOrigin confidenceLevel(Float confidenceLevel) {
-    
     this.confidenceLevel = confidenceLevel;
     return this;
   }
@@ -371,14 +362,12 @@ public class ObjectOrigin {
     return confidenceLevel;
   }
 
-
   public void setConfidenceLevel(Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
   }
 
 
   public ObjectOrigin depth(Double depth) {
-    
     this.depth = depth;
     return this;
   }
@@ -392,14 +381,12 @@ public class ObjectOrigin {
     return depth;
   }
 
-
   public void setDepth(Double depth) {
     this.depth = depth;
   }
 
 
   public ObjectOrigin e0(Double e0) {
-    
     this.e0 = e0;
     return this;
   }
@@ -413,14 +400,12 @@ public class ObjectOrigin {
     return e0;
   }
 
-
   public void setE0(Double e0) {
     this.e0 = e0;
   }
 
 
   public ObjectOrigin e0Az(Float e0Az) {
-    
     this.e0Az = e0Az;
     return this;
   }
@@ -434,14 +419,12 @@ public class ObjectOrigin {
     return e0Az;
   }
 
-
   public void setE0Az(Float e0Az) {
     this.e0Az = e0Az;
   }
 
 
   public ObjectOrigin e0Dip(Double e0Dip) {
-    
     this.e0Dip = e0Dip;
     return this;
   }
@@ -455,14 +438,12 @@ public class ObjectOrigin {
     return e0Dip;
   }
 
-
   public void setE0Dip(Double e0Dip) {
     this.e0Dip = e0Dip;
   }
 
 
   public ObjectOrigin e1(Double e1) {
-    
     this.e1 = e1;
     return this;
   }
@@ -476,14 +457,12 @@ public class ObjectOrigin {
     return e1;
   }
 
-
   public void setE1(Double e1) {
     this.e1 = e1;
   }
 
 
   public ObjectOrigin e1Az(Float e1Az) {
-    
     this.e1Az = e1Az;
     return this;
   }
@@ -497,14 +476,12 @@ public class ObjectOrigin {
     return e1Az;
   }
 
-
   public void setE1Az(Float e1Az) {
     this.e1Az = e1Az;
   }
 
 
   public ObjectOrigin e1Dip(Double e1Dip) {
-    
     this.e1Dip = e1Dip;
     return this;
   }
@@ -518,14 +495,12 @@ public class ObjectOrigin {
     return e1Dip;
   }
 
-
   public void setE1Dip(Double e1Dip) {
     this.e1Dip = e1Dip;
   }
 
 
   public ObjectOrigin e2(Double e2) {
-    
     this.e2 = e2;
     return this;
   }
@@ -539,14 +514,12 @@ public class ObjectOrigin {
     return e2;
   }
 
-
   public void setE2(Double e2) {
     this.e2 = e2;
   }
 
 
   public ObjectOrigin e2Az(Float e2Az) {
-    
     this.e2Az = e2Az;
     return this;
   }
@@ -560,14 +533,12 @@ public class ObjectOrigin {
     return e2Az;
   }
 
-
   public void setE2Az(Float e2Az) {
     this.e2Az = e2Az;
   }
 
 
   public ObjectOrigin e2Dip(Long e2Dip) {
-    
     this.e2Dip = e2Dip;
     return this;
   }
@@ -581,14 +552,12 @@ public class ObjectOrigin {
     return e2Dip;
   }
 
-
   public void setE2Dip(Long e2Dip) {
     this.e2Dip = e2Dip;
   }
 
 
   public ObjectOrigin errDepth(Double errDepth) {
-    
     this.errDepth = errDepth;
     return this;
   }
@@ -602,14 +571,12 @@ public class ObjectOrigin {
     return errDepth;
   }
 
-
   public void setErrDepth(Double errDepth) {
     this.errDepth = errDepth;
   }
 
 
   public ObjectOrigin errH(Double errH) {
-    
     this.errH = errH;
     return this;
   }
@@ -623,14 +590,12 @@ public class ObjectOrigin {
     return errH;
   }
 
-
   public void setErrH(Double errH) {
     this.errH = errH;
   }
 
 
   public ObjectOrigin errLat(Double errLat) {
-    
     this.errLat = errLat;
     return this;
   }
@@ -644,14 +609,12 @@ public class ObjectOrigin {
     return errLat;
   }
 
-
   public void setErrLat(Double errLat) {
     this.errLat = errLat;
   }
 
 
   public ObjectOrigin errLon(Double errLon) {
-    
     this.errLon = errLon;
     return this;
   }
@@ -664,7 +627,6 @@ public class ObjectOrigin {
   public Double getErrLon() {
     return errLon;
   }
-
 
   public void setErrLon(Double errLon) {
     this.errLon = errLon;
@@ -682,7 +644,6 @@ public class ObjectOrigin {
 
 
 
-
    /**
    * Longitude error (deg) | double
    * @return errLonDeg
@@ -694,9 +655,7 @@ public class ObjectOrigin {
 
 
 
-
   public ObjectOrigin errOt(Double errOt) {
-    
     this.errOt = errOt;
     return this;
   }
@@ -710,14 +669,12 @@ public class ObjectOrigin {
     return errOt;
   }
 
-
   public void setErrOt(Double errOt) {
     this.errOt = errOt;
   }
 
 
   public ObjectOrigin errZ(Double errZ) {
-    
     this.errZ = errZ;
     return this;
   }
@@ -731,14 +688,12 @@ public class ObjectOrigin {
     return errZ;
   }
 
-
   public void setErrZ(Double errZ) {
     this.errZ = errZ;
   }
 
 
   public ObjectOrigin fixDepth(Boolean fixDepth) {
-    
     this.fixDepth = fixDepth;
     return this;
   }
@@ -752,14 +707,12 @@ public class ObjectOrigin {
     return fixDepth;
   }
 
-
   public void setFixDepth(Boolean fixDepth) {
     this.fixDepth = fixDepth;
   }
 
 
   public ObjectOrigin isCentroid(Boolean isCentroid) {
-    
     this.isCentroid = isCentroid;
     return this;
   }
@@ -773,14 +726,12 @@ public class ObjectOrigin {
     return isCentroid;
   }
 
-
   public void setIsCentroid(Boolean isCentroid) {
     this.isCentroid = isCentroid;
   }
 
 
   public ObjectOrigin lat(Double lat) {
-    
     this.lat = lat;
     return this;
   }
@@ -796,14 +747,12 @@ public class ObjectOrigin {
     return lat;
   }
 
-
   public void setLat(Double lat) {
     this.lat = lat;
   }
 
 
   public ObjectOrigin lon(Double lon) {
-    
     this.lon = lon;
     return this;
   }
@@ -819,14 +768,12 @@ public class ObjectOrigin {
     return lon;
   }
 
-
   public void setLon(Double lon) {
     this.lon = lon;
   }
 
 
   public ObjectOrigin maxDistance(Double maxDistance) {
-    
     this.maxDistance = maxDistance;
     return this;
   }
@@ -840,14 +787,12 @@ public class ObjectOrigin {
     return maxDistance;
   }
 
-
   public void setMaxDistance(Double maxDistance) {
     this.maxDistance = maxDistance;
   }
 
 
   public ObjectOrigin medDistance(Double medDistance) {
-    
     this.medDistance = medDistance;
     return this;
   }
@@ -861,14 +806,12 @@ public class ObjectOrigin {
     return medDistance;
   }
 
-
   public void setMedDistance(Double medDistance) {
     this.medDistance = medDistance;
   }
 
 
   public ObjectOrigin minDistance(Double minDistance) {
-    
     this.minDistance = minDistance;
     return this;
   }
@@ -882,14 +825,12 @@ public class ObjectOrigin {
     return minDistance;
   }
 
-
   public void setMinDistance(Double minDistance) {
     this.minDistance = minDistance;
   }
 
 
   public ObjectOrigin nph(Long nph) {
-    
     this.nph = nph;
     return this;
   }
@@ -903,14 +844,12 @@ public class ObjectOrigin {
     return nph;
   }
 
-
   public void setNph(Long nph) {
     this.nph = nph;
   }
 
 
   public ObjectOrigin nphFm(Long nphFm) {
-    
     this.nphFm = nphFm;
     return this;
   }
@@ -924,14 +863,12 @@ public class ObjectOrigin {
     return nphFm;
   }
 
-
   public void setNphFm(Long nphFm) {
     this.nphFm = nphFm;
   }
 
 
   public ObjectOrigin nphS(Long nphS) {
-    
     this.nphS = nphS;
     return this;
   }
@@ -945,14 +882,12 @@ public class ObjectOrigin {
     return nphS;
   }
 
-
   public void setNphS(Long nphS) {
     this.nphS = nphS;
   }
 
 
   public ObjectOrigin nphTot(Long nphTot) {
-    
     this.nphTot = nphTot;
     return this;
   }
@@ -966,14 +901,12 @@ public class ObjectOrigin {
     return nphTot;
   }
 
-
   public void setNphTot(Long nphTot) {
     this.nphTot = nphTot;
   }
 
 
   public ObjectOrigin ot(OffsetDateTime ot) {
-    
     this.ot = ot;
     return this;
   }
@@ -987,14 +920,12 @@ public class ObjectOrigin {
     return ot;
   }
 
-
   public void setOt(OffsetDateTime ot) {
     this.ot = ot;
   }
 
 
   public ObjectOrigin quality(String quality) {
-    
     this.quality = quality;
     return this;
   }
@@ -1008,14 +939,12 @@ public class ObjectOrigin {
     return quality;
   }
 
-
   public void setQuality(String quality) {
     this.quality = quality;
   }
 
 
   public ObjectOrigin qualityNumeric(Long qualityNumeric) {
-    
     this.qualityNumeric = qualityNumeric;
     return this;
   }
@@ -1029,14 +958,12 @@ public class ObjectOrigin {
     return qualityNumeric;
   }
 
-
   public void setQualityNumeric(Long qualityNumeric) {
     this.qualityNumeric = qualityNumeric;
   }
 
 
   public ObjectOrigin region(String region) {
-    
     this.region = region;
     return this;
   }
@@ -1050,14 +977,12 @@ public class ObjectOrigin {
     return region;
   }
 
-
   public void setRegion(String region) {
     this.region = region;
   }
 
 
   public ObjectOrigin rms(Double rms) {
-    
     this.rms = rms;
     return this;
   }
@@ -1071,14 +996,12 @@ public class ObjectOrigin {
     return rms;
   }
 
-
   public void setRms(Double rms) {
     this.rms = rms;
   }
 
 
   public ObjectOrigin secAzimGap(Float secAzimGap) {
-    
     this.secAzimGap = secAzimGap;
     return this;
   }
@@ -1092,14 +1015,12 @@ public class ObjectOrigin {
     return secAzimGap;
   }
 
-
   public void setSecAzimGap(Float secAzimGap) {
     this.secAzimGap = secAzimGap;
   }
 
 
   public ObjectOrigin wRms(Double wRms) {
-    
     this.wRms = wRms;
     return this;
   }
@@ -1113,14 +1034,12 @@ public class ObjectOrigin {
     return wRms;
   }
 
-
   public void setwRms(Double wRms) {
     this.wRms = wRms;
   }
 
 
   public ObjectOrigin typeOrigin(ObjectTypeOrigin typeOrigin) {
-    
     this.typeOrigin = typeOrigin;
     return this;
   }
@@ -1134,14 +1053,12 @@ public class ObjectOrigin {
     return typeOrigin;
   }
 
-
   public void setTypeOrigin(ObjectTypeOrigin typeOrigin) {
     this.typeOrigin = typeOrigin;
   }
 
 
   public ObjectOrigin localspace(ObjectLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -1155,14 +1072,12 @@ public class ObjectOrigin {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectOrigin provenance(ObjectProvenance provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -1175,7 +1090,6 @@ public class ObjectOrigin {
   public ObjectProvenance getProvenance() {
     return provenance;
   }
-
 
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
@@ -1193,9 +1107,7 @@ public class ObjectOrigin {
 
 
 
-
   public ObjectOrigin magnitudes(List<ObjectMagnitude> magnitudes) {
-    
     this.magnitudes = magnitudes;
     return this;
   }
@@ -1217,14 +1129,12 @@ public class ObjectOrigin {
     return magnitudes;
   }
 
-
   public void setMagnitudes(List<ObjectMagnitude> magnitudes) {
     this.magnitudes = magnitudes;
   }
 
 
   public ObjectOrigin arrivals(List<ObjectArrival> arrivals) {
-    
     this.arrivals = arrivals;
     return this;
   }
@@ -1246,14 +1156,12 @@ public class ObjectOrigin {
     return arrivals;
   }
 
-
   public void setArrivals(List<ObjectArrival> arrivals) {
     this.arrivals = arrivals;
   }
 
 
   public ObjectOrigin focalmechanisms(List<ObjectFocalmechanism> focalmechanisms) {
-    
     this.focalmechanisms = focalmechanisms;
     return this;
   }
@@ -1274,7 +1182,6 @@ public class ObjectOrigin {
   public List<ObjectFocalmechanism> getFocalmechanisms() {
     return focalmechanisms;
   }
-
 
   public void setFocalmechanisms(List<ObjectFocalmechanism> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
@@ -1650,7 +1557,12 @@ public class ObjectOrigin {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

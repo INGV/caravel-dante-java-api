@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectAmplitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectAmplitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -135,7 +135,6 @@ public class ObjectAmplitude {
   public ObjectAmplitude() {
   }
 
-  
   public ObjectAmplitude(
      Long id, 
      OffsetDateTime modified, 
@@ -160,9 +159,7 @@ public class ObjectAmplitude {
 
 
 
-
   public ObjectAmplitude idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -176,14 +173,12 @@ public class ObjectAmplitude {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectAmplitude net(String net) {
-    
     this.net = net;
     return this;
   }
@@ -197,14 +192,12 @@ public class ObjectAmplitude {
     return net;
   }
 
-
   public void setNet(String net) {
     this.net = net;
   }
 
 
   public ObjectAmplitude sta(String sta) {
-    
     this.sta = sta;
     return this;
   }
@@ -218,14 +211,12 @@ public class ObjectAmplitude {
     return sta;
   }
 
-
   public void setSta(String sta) {
     this.sta = sta;
   }
 
 
   public ObjectAmplitude cha(String cha) {
-    
     this.cha = cha;
     return this;
   }
@@ -239,14 +230,12 @@ public class ObjectAmplitude {
     return cha;
   }
 
-
   public void setCha(String cha) {
     this.cha = cha;
   }
 
 
   public ObjectAmplitude loc(String loc) {
-    
     this.loc = loc;
     return this;
   }
@@ -260,14 +249,12 @@ public class ObjectAmplitude {
     return loc;
   }
 
-
   public void setLoc(String loc) {
     this.loc = loc;
   }
 
 
   public ObjectAmplitude time1(OffsetDateTime time1) {
-    
     this.time1 = time1;
     return this;
   }
@@ -281,14 +268,12 @@ public class ObjectAmplitude {
     return time1;
   }
 
-
   public void setTime1(OffsetDateTime time1) {
     this.time1 = time1;
   }
 
 
   public ObjectAmplitude amp1(Double amp1) {
-    
     this.amp1 = amp1;
     return this;
   }
@@ -302,14 +287,12 @@ public class ObjectAmplitude {
     return amp1;
   }
 
-
   public void setAmp1(Double amp1) {
     this.amp1 = amp1;
   }
 
 
   public ObjectAmplitude time2(OffsetDateTime time2) {
-    
     this.time2 = time2;
     return this;
   }
@@ -323,14 +306,12 @@ public class ObjectAmplitude {
     return time2;
   }
 
-
   public void setTime2(OffsetDateTime time2) {
     this.time2 = time2;
   }
 
 
   public ObjectAmplitude amp2(Double amp2) {
-    
     this.amp2 = amp2;
     return this;
   }
@@ -344,14 +325,12 @@ public class ObjectAmplitude {
     return amp2;
   }
 
-
   public void setAmp2(Double amp2) {
     this.amp2 = amp2;
   }
 
 
   public ObjectAmplitude pickId(Long pickId) {
-    
     this.pickId = pickId;
     return this;
   }
@@ -365,14 +344,12 @@ public class ObjectAmplitude {
     return pickId;
   }
 
-
   public void setPickId(Long pickId) {
     this.pickId = pickId;
   }
 
 
   public ObjectAmplitude period(Double period) {
-    
     this.period = period;
     return this;
   }
@@ -386,14 +363,12 @@ public class ObjectAmplitude {
     return period;
   }
 
-
   public void setPeriod(Double period) {
     this.period = period;
   }
 
 
   public ObjectAmplitude revised(Integer revised) {
-    
     this.revised = revised;
     return this;
   }
@@ -407,14 +382,12 @@ public class ObjectAmplitude {
     return revised;
   }
 
-
   public void setRevised(Integer revised) {
     this.revised = revised;
   }
 
 
   public ObjectAmplitude typeAmplitude(ObjectAmplitudeTypeAmplitude typeAmplitude) {
-    
     this.typeAmplitude = typeAmplitude;
     return this;
   }
@@ -428,14 +401,12 @@ public class ObjectAmplitude {
     return typeAmplitude;
   }
 
-
   public void setTypeAmplitude(ObjectAmplitudeTypeAmplitude typeAmplitude) {
     this.typeAmplitude = typeAmplitude;
   }
 
 
   public ObjectAmplitude localspace(ObjectLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -449,14 +420,12 @@ public class ObjectAmplitude {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectAmplitude provenance(ObjectProvenance provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -469,7 +438,6 @@ public class ObjectAmplitude {
   public ObjectProvenance getProvenance() {
     return provenance;
   }
-
 
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
@@ -487,7 +455,6 @@ public class ObjectAmplitude {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -499,7 +466,6 @@ public class ObjectAmplitude {
 
 
 
-
    /**
    * Describes a time window for amplitude measurements, given by a central point in time
    * @return timewindowReference
@@ -508,7 +474,6 @@ public class ObjectAmplitude {
   public OffsetDateTime getTimewindowReference() {
     return timewindowReference;
   }
-
 
 
   /**
@@ -749,7 +714,12 @@ public class ObjectAmplitude {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

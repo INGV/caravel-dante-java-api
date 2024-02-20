@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorTdmt
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectMomenttensorTdmt {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -74,7 +74,6 @@ public class ObjectMomenttensorTdmt {
   public ObjectMomenttensorTdmt() {
   }
 
-  
   public ObjectMomenttensorTdmt(
      Long id, 
      OffsetDateTime modified, 
@@ -97,7 +96,6 @@ public class ObjectMomenttensorTdmt {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -106,7 +104,6 @@ public class ObjectMomenttensorTdmt {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
 
@@ -121,9 +118,7 @@ public class ObjectMomenttensorTdmt {
 
 
 
-
   public ObjectMomenttensorTdmt stations(List<ObjectMomenttensorTdmtStationsInner> stations) {
-    
     this.stations = stations;
     return this;
   }
@@ -144,7 +139,6 @@ public class ObjectMomenttensorTdmt {
   public List<ObjectMomenttensorTdmtStationsInner> getStations() {
     return stations;
   }
-
 
   public void setStations(List<ObjectMomenttensorTdmtStationsInner> stations) {
     this.stations = stations;
@@ -314,7 +308,12 @@ public class ObjectMomenttensorTdmt {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -155,7 +155,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup() {
   }
 
-  
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup(
      OffsetDateTime modified, 
      OffsetDateTime inserted
@@ -166,7 +165,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   }
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup id(Long id) {
-    
     this.id = id;
     return this;
   }
@@ -180,14 +178,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return id;
   }
 
-
   public void setId(Long id) {
     this.id = id;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -201,14 +197,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup ot(OffsetDateTime ot) {
-    
     this.ot = ot;
     return this;
   }
@@ -222,14 +216,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return ot;
   }
 
-
   public void setOt(OffsetDateTime ot) {
     this.ot = ot;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup lat(Double lat) {
-    
     this.lat = lat;
     return this;
   }
@@ -245,14 +237,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return lat;
   }
 
-
   public void setLat(Double lat) {
     this.lat = lat;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup lon(Double lon) {
-    
     this.lon = lon;
     return this;
   }
@@ -268,14 +258,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return lon;
   }
 
-
   public void setLon(Double lon) {
     this.lon = lon;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup depth(Double depth) {
-    
     this.depth = depth;
     return this;
   }
@@ -289,14 +277,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return depth;
   }
 
-
   public void setDepth(Double depth) {
     this.depth = depth;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errOt(Double errOt) {
-    
     this.errOt = errOt;
     return this;
   }
@@ -310,14 +296,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return errOt;
   }
 
-
   public void setErrOt(Double errOt) {
     this.errOt = errOt;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errH(Double errH) {
-    
     this.errH = errH;
     return this;
   }
@@ -331,14 +315,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return errH;
   }
 
-
   public void setErrH(Double errH) {
     this.errH = errH;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errZ(Double errZ) {
-    
     this.errZ = errZ;
     return this;
   }
@@ -352,14 +334,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return errZ;
   }
 
-
   public void setErrZ(Double errZ) {
     this.errZ = errZ;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errLat(Double errLat) {
-    
     this.errLat = errLat;
     return this;
   }
@@ -373,14 +353,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return errLat;
   }
 
-
   public void setErrLat(Double errLat) {
     this.errLat = errLat;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errLon(Double errLon) {
-    
     this.errLon = errLon;
     return this;
   }
@@ -394,14 +372,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return errLon;
   }
 
-
   public void setErrLon(Double errLon) {
     this.errLon = errLon;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup minDistance(Double minDistance) {
-    
     this.minDistance = minDistance;
     return this;
   }
@@ -415,14 +391,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return minDistance;
   }
 
-
   public void setMinDistance(Double minDistance) {
     this.minDistance = minDistance;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup nphTot(Long nphTot) {
-    
     this.nphTot = nphTot;
     return this;
   }
@@ -436,14 +410,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return nphTot;
   }
 
-
   public void setNphTot(Long nphTot) {
     this.nphTot = nphTot;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup quality(String quality) {
-    
     this.quality = quality;
     return this;
   }
@@ -457,14 +429,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return quality;
   }
 
-
   public void setQuality(String quality) {
     this.quality = quality;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup associatedPhaseCount(Long associatedPhaseCount) {
-    
     this.associatedPhaseCount = associatedPhaseCount;
     return this;
   }
@@ -478,14 +448,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return associatedPhaseCount;
   }
 
-
   public void setAssociatedPhaseCount(Long associatedPhaseCount) {
     this.associatedPhaseCount = associatedPhaseCount;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup associatedStationCount(Long associatedStationCount) {
-    
     this.associatedStationCount = associatedStationCount;
     return this;
   }
@@ -499,14 +467,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return associatedStationCount;
   }
 
-
   public void setAssociatedStationCount(Long associatedStationCount) {
     this.associatedStationCount = associatedStationCount;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup usedPhaseCount(Long usedPhaseCount) {
-    
     this.usedPhaseCount = usedPhaseCount;
     return this;
   }
@@ -520,14 +486,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return usedPhaseCount;
   }
 
-
   public void setUsedPhaseCount(Long usedPhaseCount) {
     this.usedPhaseCount = usedPhaseCount;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup usedStationCount(Long usedStationCount) {
-    
     this.usedStationCount = usedStationCount;
     return this;
   }
@@ -541,14 +505,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return usedStationCount;
   }
 
-
   public void setUsedStationCount(Long usedStationCount) {
     this.usedStationCount = usedStationCount;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup region(String region) {
-    
     this.region = region;
     return this;
   }
@@ -561,7 +523,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public String getRegion() {
     return region;
   }
-
 
   public void setRegion(String region) {
     this.region = region;
@@ -579,7 +540,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -591,9 +551,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup typeOrigin(ObjectTypeOrigin typeOrigin) {
-    
     this.typeOrigin = typeOrigin;
     return this;
   }
@@ -607,14 +565,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return typeOrigin;
   }
 
-
   public void setTypeOrigin(ObjectTypeOrigin typeOrigin) {
     this.typeOrigin = typeOrigin;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup localspace(ObjectLocalspaceForVw localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -628,14 +584,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspaceForVw localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup provenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -648,7 +602,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup getProvenance() {
     return provenance;
   }
-
 
   public void setProvenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     this.provenance = provenance;
@@ -893,7 +846,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

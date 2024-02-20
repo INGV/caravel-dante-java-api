@@ -55,7 +55,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -160,7 +160,6 @@ public class ObjectMomenttensor {
   public ObjectMomenttensor() {
   }
 
-  
   public ObjectMomenttensor(
      Long id, 
      OffsetDateTime modified, 
@@ -183,7 +182,6 @@ public class ObjectMomenttensor {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -192,7 +190,6 @@ public class ObjectMomenttensor {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
 
@@ -207,9 +204,7 @@ public class ObjectMomenttensor {
 
 
 
-
   public ObjectMomenttensor idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -223,14 +218,12 @@ public class ObjectMomenttensor {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectMomenttensor originidOut(Long originidOut) {
-    
     this.originidOut = originidOut;
     return this;
   }
@@ -244,14 +237,12 @@ public class ObjectMomenttensor {
     return originidOut;
   }
 
-
   public void setOriginidOut(Long originidOut) {
     this.originidOut = originidOut;
   }
 
 
   public ObjectMomenttensor magnitudeidOut(Long magnitudeidOut) {
-    
     this.magnitudeidOut = magnitudeidOut;
     return this;
   }
@@ -265,14 +256,12 @@ public class ObjectMomenttensor {
     return magnitudeidOut;
   }
 
-
   public void setMagnitudeidOut(Long magnitudeidOut) {
     this.magnitudeidOut = magnitudeidOut;
   }
 
 
   public ObjectMomenttensor setOriginidOutByOriginIdLocalspace(Long setOriginidOutByOriginIdLocalspace) {
-    
     this.setOriginidOutByOriginIdLocalspace = setOriginidOutByOriginIdLocalspace;
     return this;
   }
@@ -286,14 +275,12 @@ public class ObjectMomenttensor {
     return setOriginidOutByOriginIdLocalspace;
   }
 
-
   public void setSetOriginidOutByOriginIdLocalspace(Long setOriginidOutByOriginIdLocalspace) {
     this.setOriginidOutByOriginIdLocalspace = setOriginidOutByOriginIdLocalspace;
   }
 
 
   public ObjectMomenttensor setMagnitudeidOutByMagnitudeIdLocalspace(Long setMagnitudeidOutByMagnitudeIdLocalspace) {
-    
     this.setMagnitudeidOutByMagnitudeIdLocalspace = setMagnitudeidOutByMagnitudeIdLocalspace;
     return this;
   }
@@ -307,14 +294,12 @@ public class ObjectMomenttensor {
     return setMagnitudeidOutByMagnitudeIdLocalspace;
   }
 
-
   public void setSetMagnitudeidOutByMagnitudeIdLocalspace(Long setMagnitudeidOutByMagnitudeIdLocalspace) {
     this.setMagnitudeidOutByMagnitudeIdLocalspace = setMagnitudeidOutByMagnitudeIdLocalspace;
   }
 
 
   public ObjectMomenttensor scalarmoment(Double scalarmoment) {
-    
     this.scalarmoment = scalarmoment;
     return this;
   }
@@ -328,14 +313,12 @@ public class ObjectMomenttensor {
     return scalarmoment;
   }
 
-
   public void setScalarmoment(Double scalarmoment) {
     this.scalarmoment = scalarmoment;
   }
 
 
   public ObjectMomenttensor mrr(Double mrr) {
-    
     this.mrr = mrr;
     return this;
   }
@@ -349,14 +332,12 @@ public class ObjectMomenttensor {
     return mrr;
   }
 
-
   public void setMrr(Double mrr) {
     this.mrr = mrr;
   }
 
 
   public ObjectMomenttensor mtt(Double mtt) {
-    
     this.mtt = mtt;
     return this;
   }
@@ -370,14 +351,12 @@ public class ObjectMomenttensor {
     return mtt;
   }
 
-
   public void setMtt(Double mtt) {
     this.mtt = mtt;
   }
 
 
   public ObjectMomenttensor mpp(Double mpp) {
-    
     this.mpp = mpp;
     return this;
   }
@@ -391,14 +370,12 @@ public class ObjectMomenttensor {
     return mpp;
   }
 
-
   public void setMpp(Double mpp) {
     this.mpp = mpp;
   }
 
 
   public ObjectMomenttensor mrt(Double mrt) {
-    
     this.mrt = mrt;
     return this;
   }
@@ -412,14 +389,12 @@ public class ObjectMomenttensor {
     return mrt;
   }
 
-
   public void setMrt(Double mrt) {
     this.mrt = mrt;
   }
 
 
   public ObjectMomenttensor mrp(Double mrp) {
-    
     this.mrp = mrp;
     return this;
   }
@@ -433,14 +408,12 @@ public class ObjectMomenttensor {
     return mrp;
   }
 
-
   public void setMrp(Double mrp) {
     this.mrp = mrp;
   }
 
 
   public ObjectMomenttensor mtp(Double mtp) {
-    
     this.mtp = mtp;
     return this;
   }
@@ -454,14 +427,12 @@ public class ObjectMomenttensor {
     return mtp;
   }
 
-
   public void setMtp(Double mtp) {
     this.mtp = mtp;
   }
 
 
   public ObjectMomenttensor clvd(Double clvd) {
-    
     this.clvd = clvd;
     return this;
   }
@@ -475,14 +446,12 @@ public class ObjectMomenttensor {
     return clvd;
   }
 
-
   public void setClvd(Double clvd) {
     this.clvd = clvd;
   }
 
 
   public ObjectMomenttensor iso(Double iso) {
-    
     this.iso = iso;
     return this;
   }
@@ -496,14 +465,12 @@ public class ObjectMomenttensor {
     return iso;
   }
 
-
   public void setIso(Double iso) {
     this.iso = iso;
   }
 
 
   public ObjectMomenttensor url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -517,14 +484,12 @@ public class ObjectMomenttensor {
     return url;
   }
 
-
   public void setUrl(String url) {
     this.url = url;
   }
 
 
   public ObjectMomenttensor varianceReduction(Double varianceReduction) {
-    
     this.varianceReduction = varianceReduction;
     return this;
   }
@@ -538,14 +503,12 @@ public class ObjectMomenttensor {
     return varianceReduction;
   }
 
-
   public void setVarianceReduction(Double varianceReduction) {
     this.varianceReduction = varianceReduction;
   }
 
 
   public ObjectMomenttensor doubleCouple(Double doubleCouple) {
-    
     this.doubleCouple = doubleCouple;
     return this;
   }
@@ -559,14 +522,12 @@ public class ObjectMomenttensor {
     return doubleCouple;
   }
 
-
   public void setDoubleCouple(Double doubleCouple) {
     this.doubleCouple = doubleCouple;
   }
 
 
   public ObjectMomenttensor typeMomenttensor(String typeMomenttensor) {
-    
     this.typeMomenttensor = typeMomenttensor;
     return this;
   }
@@ -580,14 +541,12 @@ public class ObjectMomenttensor {
     return typeMomenttensor;
   }
 
-
   public void setTypeMomenttensor(String typeMomenttensor) {
     this.typeMomenttensor = typeMomenttensor;
   }
 
 
   public ObjectMomenttensor localspace(ObjectLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -601,14 +560,12 @@ public class ObjectMomenttensor {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectMomenttensor provenance(ObjectProvenance provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -622,14 +579,12 @@ public class ObjectMomenttensor {
     return provenance;
   }
 
-
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
   public ObjectMomenttensor tdmt(ObjectMomenttensorTdmt tdmt) {
-    
     this.tdmt = tdmt;
     return this;
   }
@@ -643,14 +598,12 @@ public class ObjectMomenttensor {
     return tdmt;
   }
 
-
   public void setTdmt(ObjectMomenttensorTdmt tdmt) {
     this.tdmt = tdmt;
   }
 
 
   public ObjectMomenttensor rcmt(ObjectMomenttensorRcmt rcmt) {
-    
     this.rcmt = rcmt;
     return this;
   }
@@ -663,7 +616,6 @@ public class ObjectMomenttensor {
   public ObjectMomenttensorRcmt getRcmt() {
     return rcmt;
   }
-
 
   public void setRcmt(ObjectMomenttensorRcmt rcmt) {
     this.rcmt = rcmt;
@@ -923,7 +875,12 @@ public class ObjectMomenttensor {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

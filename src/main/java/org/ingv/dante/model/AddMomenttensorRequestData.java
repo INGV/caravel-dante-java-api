@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddMomenttensorRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class AddMomenttensorRequestData {
   public static final String SERIALIZED_NAME_FOCALMECHANISMID = "focalmechanismid";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMID)
@@ -64,7 +64,6 @@ public class AddMomenttensorRequestData {
   }
 
   public AddMomenttensorRequestData focalmechanismid(Long focalmechanismid) {
-    
     this.focalmechanismid = focalmechanismid;
     return this;
   }
@@ -78,14 +77,12 @@ public class AddMomenttensorRequestData {
     return focalmechanismid;
   }
 
-
   public void setFocalmechanismid(Long focalmechanismid) {
     this.focalmechanismid = focalmechanismid;
   }
 
 
   public AddMomenttensorRequestData momenttensor(ObjectMomenttensor momenttensor) {
-    
     this.momenttensor = momenttensor;
     return this;
   }
@@ -98,7 +95,6 @@ public class AddMomenttensorRequestData {
   public ObjectMomenttensor getMomenttensor() {
     return momenttensor;
   }
-
 
   public void setMomenttensor(ObjectMomenttensor momenttensor) {
     this.momenttensor = momenttensor;
@@ -252,7 +248,12 @@ public class AddMomenttensorRequestData {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

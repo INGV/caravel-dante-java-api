@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEvent201ResponseDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class AddEvent201ResponseDataEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -76,7 +76,6 @@ public class AddEvent201ResponseDataEvent {
   }
 
   public AddEvent201ResponseDataEvent id(Long id) {
-    
     this.id = id;
     return this;
   }
@@ -90,14 +89,12 @@ public class AddEvent201ResponseDataEvent {
     return id;
   }
 
-
   public void setId(Long id) {
     this.id = id;
   }
 
 
   public AddEvent201ResponseDataEvent idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -111,14 +108,12 @@ public class AddEvent201ResponseDataEvent {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public AddEvent201ResponseDataEvent localspace(AddEvent201ResponseDataEventLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -132,14 +127,12 @@ public class AddEvent201ResponseDataEvent {
     return localspace;
   }
 
-
   public void setLocalspace(AddEvent201ResponseDataEventLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
   public AddEvent201ResponseDataEvent origins(List<AddEvent201ResponseDataEventOriginsInner> origins) {
-    
     this.origins = origins;
     return this;
   }
@@ -160,7 +153,6 @@ public class AddEvent201ResponseDataEvent {
   public List<AddEvent201ResponseDataEventOriginsInner> getOrigins() {
     return origins;
   }
-
 
   public void setOrigins(List<AddEvent201ResponseDataEventOriginsInner> origins) {
     this.origins = origins;
@@ -345,7 +337,12 @@ public class AddEvent201ResponseDataEvent {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

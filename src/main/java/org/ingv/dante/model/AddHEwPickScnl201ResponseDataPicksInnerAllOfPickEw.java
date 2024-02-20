@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -59,7 +59,6 @@ public class AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw {
   }
 
   public AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw id(Long id) {
-    
     this.id = id;
     return this;
   }
@@ -72,7 +71,6 @@ public class AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw {
   public Long getId() {
     return id;
   }
-
 
   public void setId(Long id) {
     this.id = id;
@@ -219,7 +217,12 @@ public class AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -57,7 +57,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -130,7 +130,6 @@ public class ObjectEvent {
   public ObjectEvent() {
   }
 
-  
   public ObjectEvent(
      Long id, 
      OffsetDateTime modified, 
@@ -165,7 +164,6 @@ public class ObjectEvent {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -174,7 +172,6 @@ public class ObjectEvent {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
 
@@ -189,9 +186,7 @@ public class ObjectEvent {
 
 
 
-
   public ObjectEvent idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -205,14 +200,12 @@ public class ObjectEvent {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectEvent typeEvent(String typeEvent) {
-    
     this.typeEvent = typeEvent;
     return this;
   }
@@ -225,7 +218,6 @@ public class ObjectEvent {
   public String getTypeEvent() {
     return typeEvent;
   }
-
 
   public void setTypeEvent(String typeEvent) {
     this.typeEvent = typeEvent;
@@ -243,7 +235,6 @@ public class ObjectEvent {
 
 
 
-
    /**
    * Link event group | bigint(20)
    * @return eventGroupId
@@ -252,7 +243,6 @@ public class ObjectEvent {
   public Long getEventGroupId() {
     return eventGroupId;
   }
-
 
 
 
@@ -267,7 +257,6 @@ public class ObjectEvent {
 
 
 
-
    /**
    * Link: preferred magnitude. It can be NULL. | bigint(20)
    * @return preferredMagnitudeId
@@ -276,7 +265,6 @@ public class ObjectEvent {
   public Long getPreferredMagnitudeId() {
     return preferredMagnitudeId;
   }
-
 
 
 
@@ -291,9 +279,7 @@ public class ObjectEvent {
 
 
 
-
   public ObjectEvent setPreferredOriginIdLocalspace(Long setPreferredOriginIdLocalspace) {
-    
     this.setPreferredOriginIdLocalspace = setPreferredOriginIdLocalspace;
     return this;
   }
@@ -307,14 +293,12 @@ public class ObjectEvent {
     return setPreferredOriginIdLocalspace;
   }
 
-
   public void setSetPreferredOriginIdLocalspace(Long setPreferredOriginIdLocalspace) {
     this.setPreferredOriginIdLocalspace = setPreferredOriginIdLocalspace;
   }
 
 
   public ObjectEvent setPreferredMagnitudeIdLocalspace(Long setPreferredMagnitudeIdLocalspace) {
-    
     this.setPreferredMagnitudeIdLocalspace = setPreferredMagnitudeIdLocalspace;
     return this;
   }
@@ -327,7 +311,6 @@ public class ObjectEvent {
   public Long getSetPreferredMagnitudeIdLocalspace() {
     return setPreferredMagnitudeIdLocalspace;
   }
-
 
   public void setSetPreferredMagnitudeIdLocalspace(Long setPreferredMagnitudeIdLocalspace) {
     this.setPreferredMagnitudeIdLocalspace = setPreferredMagnitudeIdLocalspace;
@@ -345,9 +328,7 @@ public class ObjectEvent {
 
 
 
-
   public ObjectEvent provenance(ObjectProvenance provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -361,14 +342,12 @@ public class ObjectEvent {
     return provenance;
   }
 
-
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
   public ObjectEvent localspace(ObjectLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -382,14 +361,12 @@ public class ObjectEvent {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectEvent origins(List<ObjectOrigin> origins) {
-    
     this.origins = origins;
     return this;
   }
@@ -411,14 +388,12 @@ public class ObjectEvent {
     return origins;
   }
 
-
   public void setOrigins(List<ObjectOrigin> origins) {
     this.origins = origins;
   }
 
 
   public ObjectEvent strongmotions(List<ObjectStrongmotion> strongmotions) {
-    
     this.strongmotions = strongmotions;
     return this;
   }
@@ -439,7 +414,6 @@ public class ObjectEvent {
   public List<ObjectStrongmotion> getStrongmotions() {
     return strongmotions;
   }
-
 
   public void setStrongmotions(List<ObjectStrongmotion> strongmotions) {
     this.strongmotions = strongmotions;
@@ -695,7 +669,12 @@ public class ObjectEvent {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

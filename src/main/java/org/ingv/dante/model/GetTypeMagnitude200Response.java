@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeMagnitude200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class GetTypeMagnitude200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
@@ -95,7 +95,6 @@ public class GetTypeMagnitude200Response {
   }
 
   public GetTypeMagnitude200Response currentPage(Integer currentPage) {
-    
     this.currentPage = currentPage;
     return this;
   }
@@ -109,14 +108,12 @@ public class GetTypeMagnitude200Response {
     return currentPage;
   }
 
-
   public void setCurrentPage(Integer currentPage) {
     this.currentPage = currentPage;
   }
 
 
   public GetTypeMagnitude200Response from(Integer from) {
-    
     this.from = from;
     return this;
   }
@@ -130,14 +127,12 @@ public class GetTypeMagnitude200Response {
     return from;
   }
 
-
   public void setFrom(Integer from) {
     this.from = from;
   }
 
 
   public GetTypeMagnitude200Response lastPage(Integer lastPage) {
-    
     this.lastPage = lastPage;
     return this;
   }
@@ -151,14 +146,12 @@ public class GetTypeMagnitude200Response {
     return lastPage;
   }
 
-
   public void setLastPage(Integer lastPage) {
     this.lastPage = lastPage;
   }
 
 
   public GetTypeMagnitude200Response links(List<MetaDefinitionLinksInner> links) {
-    
     this.links = links;
     return this;
   }
@@ -180,14 +173,12 @@ public class GetTypeMagnitude200Response {
     return links;
   }
 
-
   public void setLinks(List<MetaDefinitionLinksInner> links) {
     this.links = links;
   }
 
 
   public GetTypeMagnitude200Response path(String path) {
-    
     this.path = path;
     return this;
   }
@@ -201,14 +192,12 @@ public class GetTypeMagnitude200Response {
     return path;
   }
 
-
   public void setPath(String path) {
     this.path = path;
   }
 
 
   public GetTypeMagnitude200Response perPage(Integer perPage) {
-    
     this.perPage = perPage;
     return this;
   }
@@ -222,14 +211,12 @@ public class GetTypeMagnitude200Response {
     return perPage;
   }
 
-
   public void setPerPage(Integer perPage) {
     this.perPage = perPage;
   }
 
 
   public GetTypeMagnitude200Response to(Integer to) {
-    
     this.to = to;
     return this;
   }
@@ -243,14 +230,12 @@ public class GetTypeMagnitude200Response {
     return to;
   }
 
-
   public void setTo(Integer to) {
     this.to = to;
   }
 
 
   public GetTypeMagnitude200Response total(Integer total) {
-    
     this.total = total;
     return this;
   }
@@ -264,14 +249,12 @@ public class GetTypeMagnitude200Response {
     return total;
   }
 
-
   public void setTotal(Integer total) {
     this.total = total;
   }
 
 
   public GetTypeMagnitude200Response data(List<ObjectTableTypeMagnitude> data) {
-    
     this.data = data;
     return this;
   }
@@ -292,7 +275,6 @@ public class GetTypeMagnitude200Response {
   public List<ObjectTableTypeMagnitude> getData() {
     return data;
   }
-
 
   public void setData(List<ObjectTableTypeMagnitude> data) {
     this.data = data;
@@ -494,7 +476,12 @@ public class GetTypeMagnitude200Response {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

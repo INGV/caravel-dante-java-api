@@ -56,7 +56,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectPick
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectPick {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -133,7 +133,6 @@ public class ObjectPick {
   public ObjectPick() {
   }
 
-  
   public ObjectPick(
      Long id, 
      OffsetDateTime modified, 
@@ -146,7 +145,6 @@ public class ObjectPick {
   }
 
   public ObjectPick net(String net) {
-    
     this.net = net;
     return this;
   }
@@ -160,14 +158,12 @@ public class ObjectPick {
     return net;
   }
 
-
   public void setNet(String net) {
     this.net = net;
   }
 
 
   public ObjectPick sta(String sta) {
-    
     this.sta = sta;
     return this;
   }
@@ -181,14 +177,12 @@ public class ObjectPick {
     return sta;
   }
 
-
   public void setSta(String sta) {
     this.sta = sta;
   }
 
 
   public ObjectPick cha(String cha) {
-    
     this.cha = cha;
     return this;
   }
@@ -202,14 +196,12 @@ public class ObjectPick {
     return cha;
   }
 
-
   public void setCha(String cha) {
     this.cha = cha;
   }
 
 
   public ObjectPick loc(String loc) {
-    
     this.loc = loc;
     return this;
   }
@@ -222,7 +214,6 @@ public class ObjectPick {
   public String getLoc() {
     return loc;
   }
-
 
   public void setLoc(String loc) {
     this.loc = loc;
@@ -240,7 +231,6 @@ public class ObjectPick {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -249,7 +239,6 @@ public class ObjectPick {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
 
@@ -264,9 +253,7 @@ public class ObjectPick {
 
 
 
-
   public ObjectPick idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -280,14 +267,12 @@ public class ObjectPick {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectPick qualityClass(Integer qualityClass) {
-    
     this.qualityClass = qualityClass;
     return this;
   }
@@ -301,14 +286,12 @@ public class ObjectPick {
     return qualityClass;
   }
 
-
   public void setQualityClass(Integer qualityClass) {
     this.qualityClass = qualityClass;
   }
 
 
   public ObjectPick lowerUncertainty(Float lowerUncertainty) {
-    
     this.lowerUncertainty = lowerUncertainty;
     return this;
   }
@@ -322,14 +305,12 @@ public class ObjectPick {
     return lowerUncertainty;
   }
 
-
   public void setLowerUncertainty(Float lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
   }
 
 
   public ObjectPick upperUncertainty(Float upperUncertainty) {
-    
     this.upperUncertainty = upperUncertainty;
     return this;
   }
@@ -343,14 +324,12 @@ public class ObjectPick {
     return upperUncertainty;
   }
 
-
   public void setUpperUncertainty(Float upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
   }
 
 
   public ObjectPick confidenceLevel(Float confidenceLevel) {
-    
     this.confidenceLevel = confidenceLevel;
     return this;
   }
@@ -364,14 +343,12 @@ public class ObjectPick {
     return confidenceLevel;
   }
 
-
   public void setConfidenceLevel(Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
   }
 
 
   public ObjectPick arrivalTime(OffsetDateTime arrivalTime) {
-    
     this.arrivalTime = arrivalTime;
     return this;
   }
@@ -385,14 +362,12 @@ public class ObjectPick {
     return arrivalTime;
   }
 
-
   public void setArrivalTime(OffsetDateTime arrivalTime) {
     this.arrivalTime = arrivalTime;
   }
 
 
   public ObjectPick firstmotion(PickFirstmotion firstmotion) {
-    
     this.firstmotion = firstmotion;
     return this;
   }
@@ -406,14 +381,12 @@ public class ObjectPick {
     return firstmotion;
   }
 
-
   public void setFirstmotion(PickFirstmotion firstmotion) {
     this.firstmotion = firstmotion;
   }
 
 
   public ObjectPick emersio(PickEmersio emersio) {
-    
     this.emersio = emersio;
     return this;
   }
@@ -427,14 +400,12 @@ public class ObjectPick {
     return emersio;
   }
 
-
   public void setEmersio(PickEmersio emersio) {
     this.emersio = emersio;
   }
 
 
   public ObjectPick pickEw(ObjectPickEw pickEw) {
-    
     this.pickEw = pickEw;
     return this;
   }
@@ -448,14 +419,12 @@ public class ObjectPick {
     return pickEw;
   }
 
-
   public void setPickEw(ObjectPickEw pickEw) {
     this.pickEw = pickEw;
   }
 
 
   public ObjectPick localspace(ObjectLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -469,14 +438,12 @@ public class ObjectPick {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectPick provenance(ObjectProvenance provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -489,7 +456,6 @@ public class ObjectPick {
   public ObjectProvenance getProvenance() {
     return provenance;
   }
-
 
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
@@ -741,7 +707,12 @@ public class ObjectPick {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

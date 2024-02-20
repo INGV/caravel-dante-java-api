@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * DB Connection host(s)
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectStatusDbHost {
   public static final String SERIALIZED_NAME_READ = "read";
   @SerializedName(SERIALIZED_NAME_READ)
@@ -65,7 +65,6 @@ public class ObjectStatusDbHost {
   }
 
   public ObjectStatusDbHost read(List<String> read) {
-    
     this.read = read;
     return this;
   }
@@ -87,14 +86,12 @@ public class ObjectStatusDbHost {
     return read;
   }
 
-
   public void setRead(List<String> read) {
     this.read = read;
   }
 
 
   public ObjectStatusDbHost write(List<String> write) {
-    
     this.write = write;
     return this;
   }
@@ -115,7 +112,6 @@ public class ObjectStatusDbHost {
   public List<String> getWrite() {
     return write;
   }
-
 
   public void setWrite(List<String> write) {
     this.write = write;
@@ -273,7 +269,12 @@ public class ObjectStatusDbHost {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

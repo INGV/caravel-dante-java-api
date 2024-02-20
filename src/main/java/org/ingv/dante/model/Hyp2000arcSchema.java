@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class Hyp2000arcSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
@@ -65,7 +65,6 @@ public class Hyp2000arcSchema {
   }
 
   public Hyp2000arcSchema ewMessage(Hyp2000arcSchemaEwMessage ewMessage) {
-    
     this.ewMessage = ewMessage;
     return this;
   }
@@ -79,14 +78,12 @@ public class Hyp2000arcSchema {
     return ewMessage;
   }
 
-
   public void setEwMessage(Hyp2000arcSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
   }
 
 
   public Hyp2000arcSchema ewLogo(Hyp2000arcSchemaEwLogo ewLogo) {
-    
     this.ewLogo = ewLogo;
     return this;
   }
@@ -99,7 +96,6 @@ public class Hyp2000arcSchema {
   public Hyp2000arcSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
-
 
   public void setEwLogo(Hyp2000arcSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
@@ -257,7 +253,12 @@ public class Hyp2000arcSchema {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

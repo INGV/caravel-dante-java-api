@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginFlagPostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectOriginFlagPostOutput {
   public static final String SERIALIZED_NAME_ORIGIN_FLAG = "origin-flag";
   @SerializedName(SERIALIZED_NAME_ORIGIN_FLAG)
@@ -62,7 +62,6 @@ public class ObjectOriginFlagPostOutput {
   }
 
   public ObjectOriginFlagPostOutput originFlag(List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag) {
-    
     this.originFlag = originFlag;
     return this;
   }
@@ -83,7 +82,6 @@ public class ObjectOriginFlagPostOutput {
   public List<ObjectOriginFlagPostOutputOriginFlagInner> getOriginFlag() {
     return originFlag;
   }
-
 
   public void setOriginFlag(List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag) {
     this.originFlag = originFlag;
@@ -244,7 +242,12 @@ public class ObjectOriginFlagPostOutput {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

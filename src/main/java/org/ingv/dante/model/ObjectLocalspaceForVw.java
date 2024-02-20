@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectLocalspaceForVw
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectLocalspaceForVw {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -64,7 +64,6 @@ public class ObjectLocalspaceForVw {
   }
 
   public ObjectLocalspaceForVw name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -78,14 +77,12 @@ public class ObjectLocalspaceForVw {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ObjectLocalspaceForVw environment(Environment environment) {
-    
     this.environment = environment;
     return this;
   }
@@ -98,7 +95,6 @@ public class ObjectLocalspaceForVw {
   public Environment getEnvironment() {
     return environment;
   }
-
 
   public void setEnvironment(Environment environment) {
     this.environment = environment;
@@ -263,7 +259,12 @@ public class ObjectLocalspaceForVw {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

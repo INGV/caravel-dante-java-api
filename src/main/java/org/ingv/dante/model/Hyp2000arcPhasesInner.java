@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcPhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class Hyp2000arcPhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -202,7 +202,6 @@ public class Hyp2000arcPhasesInner {
   }
 
   public Hyp2000arcPhasesInner net(String net) {
-    
     this.net = net;
     return this;
   }
@@ -216,14 +215,12 @@ public class Hyp2000arcPhasesInner {
     return net;
   }
 
-
   public void setNet(String net) {
     this.net = net;
   }
 
 
   public Hyp2000arcPhasesInner sta(String sta) {
-    
     this.sta = sta;
     return this;
   }
@@ -237,14 +234,12 @@ public class Hyp2000arcPhasesInner {
     return sta;
   }
 
-
   public void setSta(String sta) {
     this.sta = sta;
   }
 
 
   public Hyp2000arcPhasesInner comp(String comp) {
-    
     this.comp = comp;
     return this;
   }
@@ -258,14 +253,12 @@ public class Hyp2000arcPhasesInner {
     return comp;
   }
 
-
   public void setComp(String comp) {
     this.comp = comp;
   }
 
 
   public Hyp2000arcPhasesInner loc(String loc) {
-    
     this.loc = loc;
     return this;
   }
@@ -279,14 +272,12 @@ public class Hyp2000arcPhasesInner {
     return loc;
   }
 
-
   public void setLoc(String loc) {
     this.loc = loc;
   }
 
 
   public Hyp2000arcPhasesInner plabel(String plabel) {
-    
     this.plabel = plabel;
     return this;
   }
@@ -300,14 +291,12 @@ public class Hyp2000arcPhasesInner {
     return plabel;
   }
 
-
   public void setPlabel(String plabel) {
     this.plabel = plabel;
   }
 
 
   public Hyp2000arcPhasesInner slabel(String slabel) {
-    
     this.slabel = slabel;
     return this;
   }
@@ -321,14 +310,12 @@ public class Hyp2000arcPhasesInner {
     return slabel;
   }
 
-
   public void setSlabel(String slabel) {
     this.slabel = slabel;
   }
 
 
   public Hyp2000arcPhasesInner ponset(String ponset) {
-    
     this.ponset = ponset;
     return this;
   }
@@ -342,14 +329,12 @@ public class Hyp2000arcPhasesInner {
     return ponset;
   }
 
-
   public void setPonset(String ponset) {
     this.ponset = ponset;
   }
 
 
   public Hyp2000arcPhasesInner sonset(String sonset) {
-    
     this.sonset = sonset;
     return this;
   }
@@ -363,14 +348,12 @@ public class Hyp2000arcPhasesInner {
     return sonset;
   }
 
-
   public void setSonset(String sonset) {
     this.sonset = sonset;
   }
 
 
   public Hyp2000arcPhasesInner pat(OffsetDateTime pat) {
-    
     this.pat = pat;
     return this;
   }
@@ -384,14 +367,12 @@ public class Hyp2000arcPhasesInner {
     return pat;
   }
 
-
   public void setPat(OffsetDateTime pat) {
     this.pat = pat;
   }
 
 
   public Hyp2000arcPhasesInner sat(OffsetDateTime sat) {
-    
     this.sat = sat;
     return this;
   }
@@ -405,14 +386,12 @@ public class Hyp2000arcPhasesInner {
     return sat;
   }
 
-
   public void setSat(OffsetDateTime sat) {
     this.sat = sat;
   }
 
 
   public Hyp2000arcPhasesInner pres(Double pres) {
-    
     this.pres = pres;
     return this;
   }
@@ -426,14 +405,12 @@ public class Hyp2000arcPhasesInner {
     return pres;
   }
 
-
   public void setPres(Double pres) {
     this.pres = pres;
   }
 
 
   public Hyp2000arcPhasesInner sres(Double sres) {
-    
     this.sres = sres;
     return this;
   }
@@ -447,14 +424,12 @@ public class Hyp2000arcPhasesInner {
     return sres;
   }
 
-
   public void setSres(Double sres) {
     this.sres = sres;
   }
 
 
   public Hyp2000arcPhasesInner pqual(Double pqual) {
-    
     this.pqual = pqual;
     return this;
   }
@@ -468,14 +443,12 @@ public class Hyp2000arcPhasesInner {
     return pqual;
   }
 
-
   public void setPqual(Double pqual) {
     this.pqual = pqual;
   }
 
 
   public Hyp2000arcPhasesInner squal(Double squal) {
-    
     this.squal = squal;
     return this;
   }
@@ -489,14 +462,12 @@ public class Hyp2000arcPhasesInner {
     return squal;
   }
 
-
   public void setSqual(Double squal) {
     this.squal = squal;
   }
 
 
   public Hyp2000arcPhasesInner codalen(Double codalen) {
-    
     this.codalen = codalen;
     return this;
   }
@@ -510,14 +481,12 @@ public class Hyp2000arcPhasesInner {
     return codalen;
   }
 
-
   public void setCodalen(Double codalen) {
     this.codalen = codalen;
   }
 
 
   public Hyp2000arcPhasesInner codawt(Double codawt) {
-    
     this.codawt = codawt;
     return this;
   }
@@ -531,14 +500,12 @@ public class Hyp2000arcPhasesInner {
     return codawt;
   }
 
-
   public void setCodawt(Double codawt) {
     this.codawt = codawt;
   }
 
 
   public Hyp2000arcPhasesInner pfm(String pfm) {
-    
     this.pfm = pfm;
     return this;
   }
@@ -552,14 +519,12 @@ public class Hyp2000arcPhasesInner {
     return pfm;
   }
 
-
   public void setPfm(String pfm) {
     this.pfm = pfm;
   }
 
 
   public Hyp2000arcPhasesInner sfm(String sfm) {
-    
     this.sfm = sfm;
     return this;
   }
@@ -573,14 +538,12 @@ public class Hyp2000arcPhasesInner {
     return sfm;
   }
 
-
   public void setSfm(String sfm) {
     this.sfm = sfm;
   }
 
 
   public Hyp2000arcPhasesInner datasrc(String datasrc) {
-    
     this.datasrc = datasrc;
     return this;
   }
@@ -594,14 +557,12 @@ public class Hyp2000arcPhasesInner {
     return datasrc;
   }
 
-
   public void setDatasrc(String datasrc) {
     this.datasrc = datasrc;
   }
 
 
   public Hyp2000arcPhasesInner md(Double md) {
-    
     this.md = md;
     return this;
   }
@@ -615,14 +576,12 @@ public class Hyp2000arcPhasesInner {
     return md;
   }
 
-
   public void setMd(Double md) {
     this.md = md;
   }
 
 
   public Hyp2000arcPhasesInner azm(Double azm) {
-    
     this.azm = azm;
     return this;
   }
@@ -636,14 +595,12 @@ public class Hyp2000arcPhasesInner {
     return azm;
   }
 
-
   public void setAzm(Double azm) {
     this.azm = azm;
   }
 
 
   public Hyp2000arcPhasesInner takeoff(Double takeoff) {
-    
     this.takeoff = takeoff;
     return this;
   }
@@ -657,14 +614,12 @@ public class Hyp2000arcPhasesInner {
     return takeoff;
   }
 
-
   public void setTakeoff(Double takeoff) {
     this.takeoff = takeoff;
   }
 
 
   public Hyp2000arcPhasesInner dist(Double dist) {
-    
     this.dist = dist;
     return this;
   }
@@ -678,14 +633,12 @@ public class Hyp2000arcPhasesInner {
     return dist;
   }
 
-
   public void setDist(Double dist) {
     this.dist = dist;
   }
 
 
   public Hyp2000arcPhasesInner pwt(Double pwt) {
-    
     this.pwt = pwt;
     return this;
   }
@@ -699,14 +652,12 @@ public class Hyp2000arcPhasesInner {
     return pwt;
   }
 
-
   public void setPwt(Double pwt) {
     this.pwt = pwt;
   }
 
 
   public Hyp2000arcPhasesInner swt(Double swt) {
-    
     this.swt = swt;
     return this;
   }
@@ -720,14 +671,12 @@ public class Hyp2000arcPhasesInner {
     return swt;
   }
 
-
   public void setSwt(Double swt) {
     this.swt = swt;
   }
 
 
   public Hyp2000arcPhasesInner pamp(Double pamp) {
-    
     this.pamp = pamp;
     return this;
   }
@@ -741,14 +690,12 @@ public class Hyp2000arcPhasesInner {
     return pamp;
   }
 
-
   public void setPamp(Double pamp) {
     this.pamp = pamp;
   }
 
 
   public Hyp2000arcPhasesInner codalenObs(Double codalenObs) {
-    
     this.codalenObs = codalenObs;
     return this;
   }
@@ -762,14 +709,12 @@ public class Hyp2000arcPhasesInner {
     return codalenObs;
   }
 
-
   public void setCodalenObs(Double codalenObs) {
     this.codalenObs = codalenObs;
   }
 
 
   public Hyp2000arcPhasesInner ccntr(List<Long> ccntr) {
-    
     this.ccntr = ccntr;
     return this;
   }
@@ -791,14 +736,12 @@ public class Hyp2000arcPhasesInner {
     return ccntr;
   }
 
-
   public void setCcntr(List<Long> ccntr) {
     this.ccntr = ccntr;
   }
 
 
   public Hyp2000arcPhasesInner caav(List<Long> caav) {
-    
     this.caav = caav;
     return this;
   }
@@ -820,14 +763,12 @@ public class Hyp2000arcPhasesInner {
     return caav;
   }
 
-
   public void setCaav(List<Long> caav) {
     this.caav = caav;
   }
 
 
   public Hyp2000arcPhasesInner amplitude(Float amplitude) {
-    
     this.amplitude = amplitude;
     return this;
   }
@@ -841,14 +782,12 @@ public class Hyp2000arcPhasesInner {
     return amplitude;
   }
 
-
   public void setAmplitude(Float amplitude) {
     this.amplitude = amplitude;
   }
 
 
   public Hyp2000arcPhasesInner ampUnitsCode(Long ampUnitsCode) {
-    
     this.ampUnitsCode = ampUnitsCode;
     return this;
   }
@@ -862,14 +801,12 @@ public class Hyp2000arcPhasesInner {
     return ampUnitsCode;
   }
 
-
   public void setAmpUnitsCode(Long ampUnitsCode) {
     this.ampUnitsCode = ampUnitsCode;
   }
 
 
   public Hyp2000arcPhasesInner ampType(Long ampType) {
-    
     this.ampType = ampType;
     return this;
   }
@@ -883,14 +820,12 @@ public class Hyp2000arcPhasesInner {
     return ampType;
   }
 
-
   public void setAmpType(Long ampType) {
     this.ampType = ampType;
   }
 
 
   public Hyp2000arcPhasesInner ampMag(Float ampMag) {
-    
     this.ampMag = ampMag;
     return this;
   }
@@ -904,14 +839,12 @@ public class Hyp2000arcPhasesInner {
     return ampMag;
   }
 
-
   public void setAmpMag(Float ampMag) {
     this.ampMag = ampMag;
   }
 
 
   public Hyp2000arcPhasesInner ampMagWeightCode(Long ampMagWeightCode) {
-    
     this.ampMagWeightCode = ampMagWeightCode;
     return this;
   }
@@ -925,14 +858,12 @@ public class Hyp2000arcPhasesInner {
     return ampMagWeightCode;
   }
 
-
   public void setAmpMagWeightCode(Long ampMagWeightCode) {
     this.ampMagWeightCode = ampMagWeightCode;
   }
 
 
   public Hyp2000arcPhasesInner importanceP(Float importanceP) {
-    
     this.importanceP = importanceP;
     return this;
   }
@@ -946,14 +877,12 @@ public class Hyp2000arcPhasesInner {
     return importanceP;
   }
 
-
   public void setImportanceP(Float importanceP) {
     this.importanceP = importanceP;
   }
 
 
   public Hyp2000arcPhasesInner importanceS(Float importanceS) {
-    
     this.importanceS = importanceS;
     return this;
   }
@@ -966,7 +895,6 @@ public class Hyp2000arcPhasesInner {
   public Float getImportanceS() {
     return importanceS;
   }
-
 
   public void setImportanceS(Float importanceS) {
     this.importanceS = importanceS;
@@ -1270,7 +1198,12 @@ public class Hyp2000arcPhasesInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

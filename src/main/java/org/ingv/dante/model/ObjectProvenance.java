@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectProvenance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectProvenance {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -109,7 +109,6 @@ public class ObjectProvenance {
   }
 
   public ObjectProvenance name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -123,14 +122,12 @@ public class ObjectProvenance {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ObjectProvenance softwarename(String softwarename) {
-    
     this.softwarename = softwarename;
     return this;
   }
@@ -144,14 +141,12 @@ public class ObjectProvenance {
     return softwarename;
   }
 
-
   public void setSoftwarename(String softwarename) {
     this.softwarename = softwarename;
   }
 
 
   public ObjectProvenance version(String version) {
-    
     this.version = version;
     return this;
   }
@@ -165,14 +160,12 @@ public class ObjectProvenance {
     return version;
   }
 
-
   public void setVersion(String version) {
     this.version = version;
   }
 
 
   public ObjectProvenance model(String model) {
-    
     this.model = model;
     return this;
   }
@@ -186,14 +179,12 @@ public class ObjectProvenance {
     return model;
   }
 
-
   public void setModel(String model) {
     this.model = model;
   }
 
 
   public ObjectProvenance method(String method) {
-    
     this.method = method;
     return this;
   }
@@ -207,14 +198,12 @@ public class ObjectProvenance {
     return method;
   }
 
-
   public void setMethod(String method) {
     this.method = method;
   }
 
 
   public ObjectProvenance parameters(String parameters) {
-    
     this.parameters = parameters;
     return this;
   }
@@ -228,14 +217,12 @@ public class ObjectProvenance {
     return parameters;
   }
 
-
   public void setParameters(String parameters) {
     this.parameters = parameters;
   }
 
 
   public ObjectProvenance program(String program) {
-    
     this.program = program;
     return this;
   }
@@ -249,14 +236,12 @@ public class ObjectProvenance {
     return program;
   }
 
-
   public void setProgram(String program) {
     this.program = program;
   }
 
 
   public ObjectProvenance username(String username) {
-    
     this.username = username;
     return this;
   }
@@ -270,14 +255,12 @@ public class ObjectProvenance {
     return username;
   }
 
-
   public void setUsername(String username) {
     this.username = username;
   }
 
 
   public ObjectProvenance hostname(String hostname) {
-    
     this.hostname = hostname;
     return this;
   }
@@ -291,14 +274,12 @@ public class ObjectProvenance {
     return hostname;
   }
 
-
   public void setHostname(String hostname) {
     this.hostname = hostname;
   }
 
 
   public ObjectProvenance description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -312,14 +293,12 @@ public class ObjectProvenance {
     return description;
   }
 
-
   public void setDescription(String description) {
     this.description = description;
   }
 
 
   public ObjectProvenance priority(Long priority) {
-    
     this.priority = priority;
     return this;
   }
@@ -333,14 +312,12 @@ public class ObjectProvenance {
     return priority;
   }
 
-
   public void setPriority(Long priority) {
     this.priority = priority;
   }
 
 
   public ObjectProvenance evaluationmode(ProvenanceEvaluationmode evaluationmode) {
-    
     this.evaluationmode = evaluationmode;
     return this;
   }
@@ -354,14 +331,12 @@ public class ObjectProvenance {
     return evaluationmode;
   }
 
-
   public void setEvaluationmode(ProvenanceEvaluationmode evaluationmode) {
     this.evaluationmode = evaluationmode;
   }
 
 
   public ObjectProvenance url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -374,7 +349,6 @@ public class ObjectProvenance {
   public String getUrl() {
     return url;
   }
-
 
   public void setUrl(String url) {
     this.url = url;
@@ -614,7 +588,12 @@ public class ObjectProvenance {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

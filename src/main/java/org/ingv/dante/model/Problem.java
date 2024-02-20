@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * This schema describes RFC7807 Problem Details for HTTP APIs. The specification is intentionally flexible, and allows to adapt the schema adding further properties, or not enforcing any of the properties below.  To make this schema safe by default, additionalProperties are forbidden though. In case you need them, you can either re-define Problem or extend it using &#x60;allOf&#x60;.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class Problem {
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
@@ -76,7 +76,6 @@ public class Problem {
   }
 
   public Problem detail(String detail) {
-    
     this.detail = detail;
     return this;
   }
@@ -90,14 +89,12 @@ public class Problem {
     return detail;
   }
 
-
   public void setDetail(String detail) {
     this.detail = detail;
   }
 
 
   public Problem instance(URI instance) {
-    
     this.instance = instance;
     return this;
   }
@@ -111,14 +108,12 @@ public class Problem {
     return instance;
   }
 
-
   public void setInstance(URI instance) {
     this.instance = instance;
   }
 
 
   public Problem status(Integer status) {
-    
     this.status = status;
     return this;
   }
@@ -134,14 +129,12 @@ public class Problem {
     return status;
   }
 
-
   public void setStatus(Integer status) {
     this.status = status;
   }
 
 
   public Problem title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -155,14 +148,12 @@ public class Problem {
     return title;
   }
 
-
   public void setTitle(String title) {
     this.title = title;
   }
 
 
   public Problem type(URI type) {
-    
     this.type = type;
     return this;
   }
@@ -175,7 +166,6 @@ public class Problem {
   public URI getType() {
     return type;
   }
-
 
   public void setType(URI type) {
     this.type = type;

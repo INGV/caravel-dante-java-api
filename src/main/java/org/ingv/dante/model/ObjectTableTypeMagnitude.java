@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableTypeMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectTableTypeMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -92,7 +92,6 @@ public class ObjectTableTypeMagnitude {
   public ObjectTableTypeMagnitude() {
   }
 
-  
   public ObjectTableTypeMagnitude(
      Long id, 
      OffsetDateTime modified, 
@@ -115,9 +114,7 @@ public class ObjectTableTypeMagnitude {
 
 
 
-
   public ObjectTableTypeMagnitude name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -131,14 +128,12 @@ public class ObjectTableTypeMagnitude {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ObjectTableTypeMagnitude priority(Long priority) {
-    
     this.priority = priority;
     return this;
   }
@@ -152,14 +147,12 @@ public class ObjectTableTypeMagnitude {
     return priority;
   }
 
-
   public void setPriority(Long priority) {
     this.priority = priority;
   }
 
 
   public ObjectTableTypeMagnitude minmag(Float minmag) {
-    
     this.minmag = minmag;
     return this;
   }
@@ -173,14 +166,12 @@ public class ObjectTableTypeMagnitude {
     return minmag;
   }
 
-
   public void setMinmag(Float minmag) {
     this.minmag = minmag;
   }
 
 
   public ObjectTableTypeMagnitude maxmag(Float maxmag) {
-    
     this.maxmag = maxmag;
     return this;
   }
@@ -194,14 +185,12 @@ public class ObjectTableTypeMagnitude {
     return maxmag;
   }
 
-
   public void setMaxmag(Float maxmag) {
     this.maxmag = maxmag;
   }
 
 
   public ObjectTableTypeMagnitude minreadings(Integer minreadings) {
-    
     this.minreadings = minreadings;
     return this;
   }
@@ -215,14 +204,12 @@ public class ObjectTableTypeMagnitude {
     return minreadings;
   }
 
-
   public void setMinreadings(Integer minreadings) {
     this.minreadings = minreadings;
   }
 
 
   public ObjectTableTypeMagnitude description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -235,7 +222,6 @@ public class ObjectTableTypeMagnitude {
   public String getDescription() {
     return description;
   }
-
 
   public void setDescription(String description) {
     this.description = description;
@@ -253,7 +239,6 @@ public class ObjectTableTypeMagnitude {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -262,7 +247,6 @@ public class ObjectTableTypeMagnitude {
   public OffsetDateTime getInserted() {
     return inserted;
   }
-
 
 
   /**
@@ -447,7 +431,12 @@ public class ObjectTableTypeMagnitude {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventsGroupRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class UpdateEventsGroupRequestData {
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
@@ -69,7 +69,6 @@ public class UpdateEventsGroupRequestData {
   }
 
   public UpdateEventsGroupRequestData eventGroupId(Long eventGroupId) {
-    
     this.eventGroupId = eventGroupId;
     return this;
   }
@@ -83,14 +82,12 @@ public class UpdateEventsGroupRequestData {
     return eventGroupId;
   }
 
-
   public void setEventGroupId(Long eventGroupId) {
     this.eventGroupId = eventGroupId;
   }
 
 
   public UpdateEventsGroupRequestData eventids(List<Long> eventids) {
-    
     this.eventids = eventids;
     return this;
   }
@@ -112,14 +109,12 @@ public class UpdateEventsGroupRequestData {
     return eventids;
   }
 
-
   public void setEventids(List<Long> eventids) {
     this.eventids = eventids;
   }
 
 
   public UpdateEventsGroupRequestData eventGroupIds(List<Long> eventGroupIds) {
-    
     this.eventGroupIds = eventGroupIds;
     return this;
   }
@@ -140,7 +135,6 @@ public class UpdateEventsGroupRequestData {
   public List<Long> getEventGroupIds() {
     return eventGroupIds;
   }
-
 
   public void setEventGroupIds(List<Long> eventGroupIds) {
     this.eventGroupIds = eventGroupIds;
@@ -301,7 +295,12 @@ public class UpdateEventsGroupRequestData {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

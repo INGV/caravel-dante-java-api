@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaEwLogo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class Hyp2000arcSchemaEwLogo {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -79,7 +79,6 @@ public class Hyp2000arcSchemaEwLogo {
   }
 
   public Hyp2000arcSchemaEwLogo type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -93,14 +92,12 @@ public class Hyp2000arcSchemaEwLogo {
     return type;
   }
 
-
   public void setType(String type) {
     this.type = type;
   }
 
 
   public Hyp2000arcSchemaEwLogo module(String module) {
-    
     this.module = module;
     return this;
   }
@@ -114,14 +111,12 @@ public class Hyp2000arcSchemaEwLogo {
     return module;
   }
 
-
   public void setModule(String module) {
     this.module = module;
   }
 
 
   public Hyp2000arcSchemaEwLogo installation(String installation) {
-    
     this.installation = installation;
     return this;
   }
@@ -135,14 +130,12 @@ public class Hyp2000arcSchemaEwLogo {
     return installation;
   }
 
-
   public void setInstallation(String installation) {
     this.installation = installation;
   }
 
 
   public Hyp2000arcSchemaEwLogo user(String user) {
-    
     this.user = user;
     return this;
   }
@@ -156,14 +149,12 @@ public class Hyp2000arcSchemaEwLogo {
     return user;
   }
 
-
   public void setUser(String user) {
     this.user = user;
   }
 
 
   public Hyp2000arcSchemaEwLogo hostname(String hostname) {
-    
     this.hostname = hostname;
     return this;
   }
@@ -177,14 +168,12 @@ public class Hyp2000arcSchemaEwLogo {
     return hostname;
   }
 
-
   public void setHostname(String hostname) {
     this.hostname = hostname;
   }
 
 
   public Hyp2000arcSchemaEwLogo instance(String instance) {
-    
     this.instance = instance;
     return this;
   }
@@ -197,7 +186,6 @@ public class Hyp2000arcSchemaEwLogo {
   public String getInstance() {
     return instance;
   }
-
 
   public void setInstance(String instance) {
     this.instance = instance;
@@ -388,7 +376,12 @@ public class Hyp2000arcSchemaEwLogo {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

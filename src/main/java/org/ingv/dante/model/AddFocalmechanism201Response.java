@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddFocalmechanism201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class AddFocalmechanism201Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -60,7 +60,6 @@ public class AddFocalmechanism201Response {
   }
 
   public AddFocalmechanism201Response data(ObjectFocalmechanismPostOutput data) {
-    
     this.data = data;
     return this;
   }
@@ -73,7 +72,6 @@ public class AddFocalmechanism201Response {
   public ObjectFocalmechanismPostOutput getData() {
     return data;
   }
-
 
   public void setData(ObjectFocalmechanismPostOutput data) {
     this.data = data;
@@ -224,7 +222,12 @@ public class AddFocalmechanism201Response {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

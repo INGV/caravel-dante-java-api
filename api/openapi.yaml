@@ -134,7 +134,7 @@ paths:
       tags:
       - user
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /status:
     get:
       description: Return the application status
@@ -863,7 +863,7 @@ paths:
         all clusterd events.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/events:
     get:
       description: This API returns the preferred origin and the preferred magnitude
@@ -1520,7 +1520,7 @@ paths:
         the same instance.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/origins:
     get:
       description: This API returns all the preferred origins
@@ -2175,7 +2175,7 @@ paths:
       summary: This API returns all the preferred origins.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/magnitudes:
     get:
       description: This API returns all the origins with own preferred magnitude
@@ -2830,7 +2830,7 @@ paths:
       summary: This API returns all origins with own preferred magnitude.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/all:
     get:
       description: This API returns all the origins with all magnitudes; one per line
@@ -3485,7 +3485,7 @@ paths:
       summary: This API returns all origins with all magnitude; one per line.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/events-catalog:
     get:
       description: "This API returns only the \"catalogs\". \n All `catalogs` are\
@@ -4151,7 +4151,7 @@ paths:
       summary: This API returns the catalogs.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
     post:
       description: This API is used to add a catalog object.
       operationId: addCatalog
@@ -4230,7 +4230,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/eventsgroup:
     patch:
       description: Create a new events-group or Update an existing one.</br> To use
@@ -4326,7 +4326,7 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/type-event:
     get:
       description: This API returns all the type_event(s).
@@ -4398,7 +4398,7 @@ paths:
       summary: This API returns all the type_event(s).
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
     post:
       description: This API is used to add an type_event object.
       operationId: addTypeEvent
@@ -4477,7 +4477,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/type-event/{id}:
     delete:
       description: Delete an existing type_event.</br> To use this API you must be
@@ -4667,7 +4667,7 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/type-origin:
     get:
       description: This API returns all the type_origin(s).
@@ -4739,7 +4739,7 @@ paths:
       summary: This API returns all the type_origin(s).
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
     post:
       description: This API is used to add an type_origin object.
       operationId: addTypeOrigin
@@ -4818,7 +4818,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/type-origin/{id}:
     delete:
       description: Delete an existing type_origin.</br> To use this API you must be
@@ -5008,7 +5008,7 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/type-magnitude:
     get:
       description: This API returns all the type_magnitude(s).
@@ -5080,7 +5080,7 @@ paths:
       summary: This API returns all the type_magnitude(s).
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
     post:
       description: This API is used to add an type_magnitude object.
       operationId: addTypeMagnitude
@@ -5159,7 +5159,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/type-magnitude/{id}:
     delete:
       description: Delete an existing type_magnitude.</br> To use this API you must
@@ -5349,7 +5349,7 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/localspace:
     get:
       description: This API returns all the localspace(s).
@@ -5421,7 +5421,7 @@ paths:
       summary: This API returns all the localspace(s).
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
     post:
       description: This API is used to add an localspace object.
       operationId: addLocalspace
@@ -5500,7 +5500,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/localspace/{id}:
     delete:
       description: Delete an existing localspace.</br> To use this API you must be
@@ -5690,7 +5690,7 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/provenance:
     get:
       description: This API returns all the provenance(s).
@@ -5762,7 +5762,7 @@ paths:
       summary: This API returns all the provenance(s).
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
     post:
       description: This API is used to add an provenance object.
       operationId: addProvenance
@@ -5841,7 +5841,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/provenance/{id}:
     delete:
       description: Delete an existing provenance.</br> To use this API you must be
@@ -6031,7 +6031,7 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/table/v1/origin-flag/{id}:
     delete:
       description: Delete an existing origin-flag.</br> To use this API you must be
@@ -6221,7 +6221,7 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/event:
     get:
       description: This API returns the preferred origin and the preferred magnitude
@@ -6336,7 +6336,7 @@ paths:
         all clusterd events.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
     post:
       description: This API is used to add an event object.
       operationId: addEvent
@@ -6415,7 +6415,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/origin-flag:
     get:
       description: This API returns the all the flags assosiated to the originid.
@@ -6522,7 +6522,7 @@ paths:
       summary: This API returns the all the flags assosiated to the originid.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
     post:
       description: This API is used to add one or more flags to origin.
       operationId: addOriginFlag
@@ -6601,7 +6601,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /boundaries/v1/region-name:
     get:
       description: This API returns the region name.
@@ -6688,7 +6688,7 @@ paths:
       summary: This API returns the region name used at INGV.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /boundaries/v1/municipi-distance-km-popolazione:
     get:
       description: This API returns the municipi-distance-km-popolazione.
@@ -6796,7 +6796,7 @@ paths:
       summary: This API returns the municipi-distance-km-popolazione used at INGV.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /boundaries/v1/municipio:
     get:
       description: "This API returns the Italian \"municipio\" information, by name."
@@ -6876,7 +6876,7 @@ paths:
       summary: This API returns the Italian "municipio" information by name.
       tags:
       - get
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/event/{id}:
     patch:
       description: Update an existing event.</br> To use this API you must be authenticated
@@ -6984,7 +6984,7 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/momenttensor/{id}:
     patch:
       description: Update an existing momenttensor.</br> To use this API you must
@@ -7090,7 +7090,7 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/origin:
     post:
       description: This API is used to add an origin object.
@@ -7170,7 +7170,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/magnitude:
     post:
       description: This API is used to add a magnitude object.
@@ -7250,7 +7250,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/strongmotion:
     post:
       description: This API is used to add a strongmotion object.
@@ -7330,7 +7330,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/focalmechanism:
     post:
       description: This API is used to add a focalmechanism object.
@@ -7410,7 +7410,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/v1/momenttensor:
     post:
       description: This API is used to add a momenttensor object.
@@ -7490,7 +7490,7 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/ew/v1/quake2k:
     post:
       description: This API is used to add an Earthworm quake2k object.
@@ -7570,7 +7570,7 @@ paths:
       tags:
       - earthworm api
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/ew/v1/hyp2000arc:
     post:
       description: This API is used to add an Earthworm hyp2000arc object.
@@ -7650,7 +7650,7 @@ paths:
       tags:
       - earthworm api
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/ew/v1/magnitude:
     post:
       description: This API is used to add an Earthworm magnitude object.
@@ -7730,7 +7730,7 @@ paths:
       tags:
       - earthworm api
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/ew/v1/pick-scnl:
     post:
       description: This API is used to add an Earthworm pick_scnl object.
@@ -7810,7 +7810,7 @@ paths:
       tags:
       - earthworm api
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
   /quakedb/ew/v1/strongmotionii:
     post:
       description: This API is used to add an Earthworm strongmotionii object.
@@ -7890,7 +7890,7 @@ paths:
       tags:
       - earthworm api
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts: "application/json,application/problem+json"
 components:
   headers:
     Retry-After:
@@ -12450,8 +12450,24 @@ components:
     ObjectFocalmechanismPostOutput:
       example:
         focalmechanisms:
-        - null
-        - null
+        - id_localspace: 182491
+          momenttensor:
+            id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          localspace:
+            name: hew1_mole
+          id: 14932631
+        - id_localspace: 182491
+          momenttensor:
+            id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          localspace:
+            name: hew1_mole
+          id: 14932631
       properties:
         focalmechanisms:
           items:
@@ -15445,6 +15461,32 @@ components:
             items:
               $ref: '#/components/schemas/ObjectTableTypeEvent'
             type: array
+      example:
+        path: http://localhost:8585
+        per_page: 4000
+        total: 10000
+        data:
+        - inserted: 2016-06-22T16:52:06.26Z
+          name: earthquake
+          description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+        - inserted: 2016-06-22T16:52:06.26Z
+          name: earthquake
+          description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+        last_page: 3
+        from: 1
+        links:
+        - active: "true"
+          label: "2"
+          url: http://localhost:8585
+        - active: "true"
+          label: "2"
+          url: http://localhost:8585
+        to: 4000
+        current_page: 2
     addTypeEvent_request:
       allOf:
       - $ref: '#/components/schemas/ObjectTableTypeEvent'
@@ -15459,6 +15501,38 @@ components:
             items:
               $ref: '#/components/schemas/ObjectTableTypeOrigin'
             type: array
+      example:
+        path: http://localhost:8585
+        per_page: 4000
+        total: 10000
+        data:
+        - version_value: 0
+          version_name: ew prelim
+          inserted: 2016-06-22T16:52:06.26Z
+          name: hypocenter
+          description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          priority: 0
+        - version_value: 0
+          version_name: ew prelim
+          inserted: 2016-06-22T16:52:06.26Z
+          name: hypocenter
+          description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          priority: 0
+        last_page: 3
+        from: 1
+        links:
+        - active: "true"
+          label: "2"
+          url: http://localhost:8585
+        - active: "true"
+          label: "2"
+          url: http://localhost:8585
+        to: 4000
+        current_page: 2
     addTypeOrigin_request:
       allOf:
       - $ref: '#/components/schemas/ObjectTableTypeOrigin'
@@ -15473,6 +15547,40 @@ components:
             items:
               $ref: '#/components/schemas/ObjectTableTypeMagnitude'
             type: array
+      example:
+        path: http://localhost:8585
+        per_page: 4000
+        total: 10000
+        data:
+        - maxmag: 2.2
+          minreadings: 0
+          inserted: 2016-06-22T16:52:06.26Z
+          name: ML-VAX
+          description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          minmag: 1.2
+          id: 14932631
+          priority: 0
+        - maxmag: 2.2
+          minreadings: 0
+          inserted: 2016-06-22T16:52:06.26Z
+          name: ML-VAX
+          description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          minmag: 1.2
+          id: 14932631
+          priority: 0
+        last_page: 3
+        from: 1
+        links:
+        - active: "true"
+          label: "2"
+          url: http://localhost:8585
+        - active: "true"
+          label: "2"
+          url: http://localhost:8585
+        to: 4000
+        current_page: 2
     addTypeMagnitude_request:
       allOf:
       - $ref: '#/components/schemas/ObjectTableTypeMagnitude'
@@ -15487,6 +15595,38 @@ components:
             items:
               $ref: '#/components/schemas/ObjectTableLocalspace'
             type: array
+      example:
+        path: http://localhost:8585
+        per_page: 4000
+        total: 10000
+        data:
+        - environment: development
+          inserted: 2016-06-22T16:52:06.26Z
+          name: hew1_mole
+          description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          priority: 0
+          doi: 10.13127/TDMT
+        - environment: development
+          inserted: 2016-06-22T16:52:06.26Z
+          name: hew1_mole
+          description: Auto added
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          priority: 0
+          doi: 10.13127/TDMT
+        last_page: 3
+        from: 1
+        links:
+        - active: "true"
+          label: "2"
+          url: http://localhost:8585
+        - active: "true"
+          label: "2"
+          url: http://localhost:8585
+        to: 4000
+        current_page: 2
     addLocalspace_request:
       allOf:
       - $ref: '#/components/schemas/ObjectTableLocalspace'
@@ -15501,6 +15641,54 @@ components:
             items:
               $ref: '#/components/schemas/ObjectTableProvenance'
             type: array
+      example:
+        path: http://localhost:8585
+        per_page: 4000
+        total: 10000
+        data:
+        - method: ToDo
+          description: Auto added
+          program: IPO-EW__tdmt_invc.c
+          priority: 0
+          version: hew1_mole
+          evaluationmode: automatic
+          url: http://mysite
+          hostname: hew10.ingv.it
+          inserted: 2016-06-22T16:52:06.26Z
+          name: INGV
+          modified: 2016-06-22T16:52:06.26Z
+          model: prem
+          id: 14932631
+          softwarename: software
+          parameters: ToDo
+          username: ew
+        - method: ToDo
+          description: Auto added
+          program: IPO-EW__tdmt_invc.c
+          priority: 0
+          version: hew1_mole
+          evaluationmode: automatic
+          url: http://mysite
+          hostname: hew10.ingv.it
+          inserted: 2016-06-22T16:52:06.26Z
+          name: INGV
+          modified: 2016-06-22T16:52:06.26Z
+          model: prem
+          id: 14932631
+          softwarename: software
+          parameters: ToDo
+          username: ew
+        last_page: 3
+        from: 1
+        links:
+        - active: "true"
+          label: "2"
+          url: http://localhost:8585
+        - active: "true"
+          label: "2"
+          url: http://localhost:8585
+        to: 4000
+        current_page: 2
     addProvenance_request:
       allOf:
       - $ref: '#/components/schemas/ObjectTableProvenance'
@@ -18432,14 +18620,109 @@ components:
             $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
       - $ref: '#/components/schemas/ObjectMagnitudePostOutput'
       - $ref: '#/components/schemas/ObjectFocalmechanismPostOutput'
+      example:
+        id_localspace: 182491
+        localspace:
+          name: hew1_mole
+        id: 14932631
+        focalmechanisms:
+        - id_localspace: 182491
+          momenttensor:
+            id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          localspace:
+            name: hew1_mole
+          id: 14932631
+        - id_localspace: 182491
+          momenttensor:
+            id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          localspace:
+            name: hew1_mole
+          id: 14932631
+        magnitudes:
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
     addEvent_201_response_data_event:
       example:
         id_localspace: 182491
         localspace:
           name: hew1_mole
         origins:
-        - null
-        - null
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+          focalmechanisms:
+          - id_localspace: 182491
+            momenttensor:
+              id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          - id_localspace: 182491
+            momenttensor:
+              id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          magnitudes:
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+          focalmechanisms:
+          - id_localspace: 182491
+            momenttensor:
+              id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          - id_localspace: 182491
+            momenttensor:
+              id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          magnitudes:
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
         id: 14932631
       properties:
         id:
@@ -18466,8 +18749,70 @@ components:
           localspace:
             name: hew1_mole
           origins:
-          - null
-          - null
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+            focalmechanisms:
+            - id_localspace: 182491
+              momenttensor:
+                id_localspace: 182491
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            - id_localspace: 182491
+              momenttensor:
+                id_localspace: 182491
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            magnitudes:
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+            focalmechanisms:
+            - id_localspace: 182491
+              momenttensor:
+                id_localspace: 182491
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            - id_localspace: 182491
+              momenttensor:
+                id_localspace: 182491
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            magnitudes:
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
           id: 14932631
       properties:
         event:
@@ -18480,8 +18825,70 @@ components:
             localspace:
               name: hew1_mole
             origins:
-            - null
-            - null
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+              focalmechanisms:
+              - id_localspace: 182491
+                momenttensor:
+                  id_localspace: 182491
+                  localspace:
+                    name: hew1_mole
+                  id: 14932631
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+              - id_localspace: 182491
+                momenttensor:
+                  id_localspace: 182491
+                  localspace:
+                    name: hew1_mole
+                  id: 14932631
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+              magnitudes:
+              - id_localspace: 182491
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+              - id_localspace: 182491
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+              focalmechanisms:
+              - id_localspace: 182491
+                momenttensor:
+                  id_localspace: 182491
+                  localspace:
+                    name: hew1_mole
+                  id: 14932631
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+              - id_localspace: 182491
+                momenttensor:
+                  id_localspace: 182491
+                  localspace:
+                    name: hew1_mole
+                  id: 14932631
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+              magnitudes:
+              - id_localspace: 182491
+                localspace:
+                  name: hew1_mole
+                id: 14932631
+              - id_localspace: 182491
+                localspace:
+                  name: hew1_mole
+                id: 14932631
             id: 14932631
       properties:
         data:
@@ -18888,11 +19295,40 @@ components:
           id:
             $ref: '#/components/schemas/id'
       - $ref: '#/components/schemas/ObjectMagnitudePostOutput'
+      example:
+        id: 14932631
+        magnitudes:
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
     addOrigin_201_response_data:
       example:
         origins:
-        - null
-        - null
+        - id: 14932631
+          magnitudes:
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+        - id: 14932631
+          magnitudes:
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
       properties:
         origins:
           items:
@@ -18902,8 +19338,26 @@ components:
       example:
         data:
           origins:
-          - null
-          - null
+          - id: 14932631
+            magnitudes:
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+          - id: 14932631
+            magnitudes:
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
       properties:
         data:
           $ref: '#/components/schemas/addOrigin_201_response_data'
@@ -18986,8 +19440,24 @@ components:
       example:
         data:
           focalmechanisms:
-          - null
-          - null
+          - id_localspace: 182491
+            momenttensor:
+              id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          - id_localspace: 182491
+            momenttensor:
+              id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            localspace:
+              name: hew1_mole
+            id: 14932631
       properties:
         data:
           $ref: '#/components/schemas/ObjectFocalmechanismPostOutput'
@@ -19037,16 +19507,56 @@ components:
             items:
               $ref: '#/components/schemas/updateEvent_200_response_data_event'
             type: array
+      example:
+        id_localspace: 182491
+        localspace:
+          name: hew1_mole
+        origins:
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+        id: 14932631
     addEwHyp2000arc_201_response_data:
       example:
-        event: null
+        event:
+          id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          origins:
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+          id: 14932631
       properties:
         event:
           $ref: '#/components/schemas/addEwHyp2000arc_201_response_data_event'
     addEwHyp2000arc_201_response:
       example:
         data:
-          event: null
+          event:
+            id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            origins:
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            - id_localspace: 182491
+              localspace:
+                name: hew1_mole
+              id: 14932631
+            id: 14932631
       properties:
         data:
           $ref: '#/components/schemas/addEwHyp2000arc_201_response_data'
@@ -19059,6 +19569,8 @@ components:
         data:
           $ref: '#/components/schemas/pick_scnlSchema'
     addHEwPickScnl_201_response_data_picks_inner_allOf_pick_ew:
+      example:
+        id: 14932631
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -19077,11 +19589,28 @@ components:
       - properties:
           pick_ew:
             $ref: '#/components/schemas/addHEwPickScnl_201_response_data_picks_inner_allOf_pick_ew'
+      example:
+        id_localspace: 182491
+        localspace:
+          name: hew1_mole
+        id: 14932631
+        pick_ew:
+          id: 14932631
     addHEwPickScnl_201_response_data:
       example:
         picks:
-        - null
-        - null
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+          pick_ew:
+            id: 14932631
+        - id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+          pick_ew:
+            id: 14932631
       properties:
         picks:
           items:
@@ -19091,8 +19620,18 @@ components:
       example:
         data:
           picks:
-          - null
-          - null
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+            pick_ew:
+              id: 14932631
+          - id_localspace: 182491
+            localspace:
+              name: hew1_mole
+            id: 14932631
+            pick_ew:
+              id: 14932631
       properties:
         data:
           $ref: '#/components/schemas/addHEwPickScnl_201_response_data'
@@ -19340,6 +19879,16 @@ components:
           localspace:
             $ref: '#/components/schemas/addEvent_201_response_data_event_localspace'
       - $ref: '#/components/schemas/ObjectMomenttensorPostOutput'
+      example:
+        id_localspace: 182491
+        momenttensor:
+          id_localspace: 182491
+          localspace:
+            name: hew1_mole
+          id: 14932631
+        localspace:
+          name: hew1_mole
+        id: 14932631
     ObjectMomenttensor_tdmt_stations_inner:
       example:
         sta: ACER

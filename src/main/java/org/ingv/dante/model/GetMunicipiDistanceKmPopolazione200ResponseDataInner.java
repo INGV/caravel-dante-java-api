@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipiDistanceKmPopolazione200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -91,7 +91,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   }
 
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -105,14 +104,12 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner siglaPro(String siglaPro) {
-    
     this.siglaPro = siglaPro;
     return this;
   }
@@ -126,14 +123,12 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     return siglaPro;
   }
 
-
   public void setSiglaPro(String siglaPro) {
     this.siglaPro = siglaPro;
   }
 
 
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner nomePro(String nomePro) {
-    
     this.nomePro = nomePro;
     return this;
   }
@@ -147,14 +142,12 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     return nomePro;
   }
 
-
   public void setNomePro(String nomePro) {
     this.nomePro = nomePro;
   }
 
 
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner popolazione(Long popolazione) {
-    
     this.popolazione = popolazione;
     return this;
   }
@@ -168,14 +161,12 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     return popolazione;
   }
 
-
   public void setPopolazione(Long popolazione) {
     this.popolazione = popolazione;
   }
 
 
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner lat(Double lat) {
-    
     this.lat = lat;
     return this;
   }
@@ -191,14 +182,12 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     return lat;
   }
 
-
   public void setLat(Double lat) {
     this.lat = lat;
   }
 
 
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner lon(Double lon) {
-    
     this.lon = lon;
     return this;
   }
@@ -214,14 +203,12 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     return lon;
   }
 
-
   public void setLon(Double lon) {
     this.lon = lon;
   }
 
 
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner distKm(Float distKm) {
-    
     this.distKm = distKm;
     return this;
   }
@@ -235,14 +222,12 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     return distKm;
   }
 
-
   public void setDistKm(Float distKm) {
     this.distKm = distKm;
   }
 
 
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner azm(Float azm) {
-    
     this.azm = azm;
     return this;
   }
@@ -256,14 +241,12 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     return azm;
   }
 
-
   public void setAzm(Float azm) {
     this.azm = azm;
   }
 
 
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner dir(String dir) {
-    
     this.dir = dir;
     return this;
   }
@@ -276,7 +259,6 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   public String getDir() {
     return dir;
   }
-
 
   public void setDir(String dir) {
     this.dir = dir;
@@ -459,7 +441,12 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

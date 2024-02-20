@@ -55,7 +55,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectVwEventCatalogInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectVwEventCatalogInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -132,7 +132,6 @@ public class ObjectVwEventCatalogInner {
   public ObjectVwEventCatalogInner() {
   }
 
-  
   public ObjectVwEventCatalogInner(
      Long eventGroupId, 
      Long preferredOriginId, 
@@ -155,7 +154,6 @@ public class ObjectVwEventCatalogInner {
   }
 
   public ObjectVwEventCatalogInner id(Long id) {
-    
     this.id = id;
     return this;
   }
@@ -169,14 +167,12 @@ public class ObjectVwEventCatalogInner {
     return id;
   }
 
-
   public void setId(Long id) {
     this.id = id;
   }
 
 
   public ObjectVwEventCatalogInner idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -189,7 +185,6 @@ public class ObjectVwEventCatalogInner {
   public Long getIdLocalspace() {
     return idLocalspace;
   }
-
 
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
@@ -207,7 +202,6 @@ public class ObjectVwEventCatalogInner {
 
 
 
-
    /**
    * Link: preferred origin. It can be NULL. | bigint(20)
    * @return preferredOriginId
@@ -216,7 +210,6 @@ public class ObjectVwEventCatalogInner {
   public Long getPreferredOriginId() {
     return preferredOriginId;
   }
-
 
 
 
@@ -231,7 +224,6 @@ public class ObjectVwEventCatalogInner {
 
 
 
-
    /**
    * Link: preferred focalmechanism. It can be NULL. | bigint(20)
    * @return preferredFocalmechanismId
@@ -240,7 +232,6 @@ public class ObjectVwEventCatalogInner {
   public Long getPreferredFocalmechanismId() {
     return preferredFocalmechanismId;
   }
-
 
 
 
@@ -255,7 +246,6 @@ public class ObjectVwEventCatalogInner {
 
 
 
-
    /**
    * Group type. Used by clustering algorithm | tinyint(4)
    * @return typeGroup
@@ -267,9 +257,7 @@ public class ObjectVwEventCatalogInner {
 
 
 
-
   public ObjectVwEventCatalogInner typeEvent(String typeEvent) {
-    
     this.typeEvent = typeEvent;
     return this;
   }
@@ -283,14 +271,12 @@ public class ObjectVwEventCatalogInner {
     return typeEvent;
   }
 
-
   public void setTypeEvent(String typeEvent) {
     this.typeEvent = typeEvent;
   }
 
 
   public ObjectVwEventCatalogInner origindirectlinktoevent(Boolean origindirectlinktoevent) {
-    
     this.origindirectlinktoevent = origindirectlinktoevent;
     return this;
   }
@@ -304,14 +290,12 @@ public class ObjectVwEventCatalogInner {
     return origindirectlinktoevent;
   }
 
-
   public void setOrigindirectlinktoevent(Boolean origindirectlinktoevent) {
     this.origindirectlinktoevent = origindirectlinktoevent;
   }
 
 
   public ObjectVwEventCatalogInner magnitudedirectlinktoorigin(Boolean magnitudedirectlinktoorigin) {
-    
     this.magnitudedirectlinktoorigin = magnitudedirectlinktoorigin;
     return this;
   }
@@ -325,14 +309,12 @@ public class ObjectVwEventCatalogInner {
     return magnitudedirectlinktoorigin;
   }
 
-
   public void setMagnitudedirectlinktoorigin(Boolean magnitudedirectlinktoorigin) {
     this.magnitudedirectlinktoorigin = magnitudedirectlinktoorigin;
   }
 
 
   public ObjectVwEventCatalogInner magnitudedirectlinktoevent(Boolean magnitudedirectlinktoevent) {
-    
     this.magnitudedirectlinktoevent = magnitudedirectlinktoevent;
     return this;
   }
@@ -345,7 +327,6 @@ public class ObjectVwEventCatalogInner {
   public Boolean getMagnitudedirectlinktoevent() {
     return magnitudedirectlinktoevent;
   }
-
 
   public void setMagnitudedirectlinktoevent(Boolean magnitudedirectlinktoevent) {
     this.magnitudedirectlinktoevent = magnitudedirectlinktoevent;
@@ -363,7 +344,6 @@ public class ObjectVwEventCatalogInner {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -375,9 +355,7 @@ public class ObjectVwEventCatalogInner {
 
 
 
-
   public ObjectVwEventCatalogInner localspace(ObjectLocalspaceForVwWithDOI localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -391,14 +369,12 @@ public class ObjectVwEventCatalogInner {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspaceForVwWithDOI localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectVwEventCatalogInner provenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -412,14 +388,12 @@ public class ObjectVwEventCatalogInner {
     return provenance;
   }
 
-
   public void setProvenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     this.provenance = provenance;
   }
 
 
   public ObjectVwEventCatalogInner origin(ObjectOriginForMagnitudesOriginsEventsAndEventsGroup origin) {
-    
     this.origin = origin;
     return this;
   }
@@ -433,14 +407,12 @@ public class ObjectVwEventCatalogInner {
     return origin;
   }
 
-
   public void setOrigin(ObjectOriginForMagnitudesOriginsEventsAndEventsGroup origin) {
     this.origin = origin;
   }
 
 
   public ObjectVwEventCatalogInner magnitude(ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup magnitude) {
-    
     this.magnitude = magnitude;
     return this;
   }
@@ -453,7 +425,6 @@ public class ObjectVwEventCatalogInner {
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup getMagnitude() {
     return magnitude;
   }
-
 
   public void setMagnitude(ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup magnitude) {
     this.magnitude = magnitude;
@@ -684,7 +655,12 @@ public class ObjectVwEventCatalogInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

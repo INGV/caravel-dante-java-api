@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class Hyp2000arcSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -215,7 +215,6 @@ public class Hyp2000arcSchemaEwMessage {
   }
 
   public Hyp2000arcSchemaEwMessage quakeId(Long quakeId) {
-    
     this.quakeId = quakeId;
     return this;
   }
@@ -229,14 +228,12 @@ public class Hyp2000arcSchemaEwMessage {
     return quakeId;
   }
 
-
   public void setQuakeId(Long quakeId) {
     this.quakeId = quakeId;
   }
 
 
   public Hyp2000arcSchemaEwMessage version(String version) {
-    
     this.version = version;
     return this;
   }
@@ -250,14 +247,12 @@ public class Hyp2000arcSchemaEwMessage {
     return version;
   }
 
-
   public void setVersion(String version) {
     this.version = version;
   }
 
 
   public Hyp2000arcSchemaEwMessage originId(Long originId) {
-    
     this.originId = originId;
     return this;
   }
@@ -271,14 +266,12 @@ public class Hyp2000arcSchemaEwMessage {
     return originId;
   }
 
-
   public void setOriginId(Long originId) {
     this.originId = originId;
   }
 
 
   public Hyp2000arcSchemaEwMessage originTime(OffsetDateTime originTime) {
-    
     this.originTime = originTime;
     return this;
   }
@@ -292,14 +285,12 @@ public class Hyp2000arcSchemaEwMessage {
     return originTime;
   }
 
-
   public void setOriginTime(OffsetDateTime originTime) {
     this.originTime = originTime;
   }
 
 
   public Hyp2000arcSchemaEwMessage latitude(Double latitude) {
-    
     this.latitude = latitude;
     return this;
   }
@@ -315,14 +306,12 @@ public class Hyp2000arcSchemaEwMessage {
     return latitude;
   }
 
-
   public void setLatitude(Double latitude) {
     this.latitude = latitude;
   }
 
 
   public Hyp2000arcSchemaEwMessage longitude(Double longitude) {
-    
     this.longitude = longitude;
     return this;
   }
@@ -338,14 +327,12 @@ public class Hyp2000arcSchemaEwMessage {
     return longitude;
   }
 
-
   public void setLongitude(Double longitude) {
     this.longitude = longitude;
   }
 
 
   public Hyp2000arcSchemaEwMessage depth(Double depth) {
-    
     this.depth = depth;
     return this;
   }
@@ -359,14 +346,12 @@ public class Hyp2000arcSchemaEwMessage {
     return depth;
   }
 
-
   public void setDepth(Double depth) {
     this.depth = depth;
   }
 
 
   public Hyp2000arcSchemaEwMessage nph(Long nph) {
-    
     this.nph = nph;
     return this;
   }
@@ -380,14 +365,12 @@ public class Hyp2000arcSchemaEwMessage {
     return nph;
   }
 
-
   public void setNph(Long nph) {
     this.nph = nph;
   }
 
 
   public Hyp2000arcSchemaEwMessage nphS(Long nphS) {
-    
     this.nphS = nphS;
     return this;
   }
@@ -401,14 +384,12 @@ public class Hyp2000arcSchemaEwMessage {
     return nphS;
   }
 
-
   public void setNphS(Long nphS) {
     this.nphS = nphS;
   }
 
 
   public Hyp2000arcSchemaEwMessage nphtot(Long nphtot) {
-    
     this.nphtot = nphtot;
     return this;
   }
@@ -422,14 +403,12 @@ public class Hyp2000arcSchemaEwMessage {
     return nphtot;
   }
 
-
   public void setNphtot(Long nphtot) {
     this.nphtot = nphtot;
   }
 
 
   public Hyp2000arcSchemaEwMessage nPfm(Long nPfm) {
-    
     this.nPfm = nPfm;
     return this;
   }
@@ -443,14 +422,12 @@ public class Hyp2000arcSchemaEwMessage {
     return nPfm;
   }
 
-
   public void setnPfm(Long nPfm) {
     this.nPfm = nPfm;
   }
 
 
   public Hyp2000arcSchemaEwMessage gap(Float gap) {
-    
     this.gap = gap;
     return this;
   }
@@ -464,14 +441,12 @@ public class Hyp2000arcSchemaEwMessage {
     return gap;
   }
 
-
   public void setGap(Float gap) {
     this.gap = gap;
   }
 
 
   public Hyp2000arcSchemaEwMessage dmin(Double dmin) {
-    
     this.dmin = dmin;
     return this;
   }
@@ -485,14 +460,12 @@ public class Hyp2000arcSchemaEwMessage {
     return dmin;
   }
 
-
   public void setDmin(Double dmin) {
     this.dmin = dmin;
   }
 
 
   public Hyp2000arcSchemaEwMessage rms(Double rms) {
-    
     this.rms = rms;
     return this;
   }
@@ -506,14 +479,12 @@ public class Hyp2000arcSchemaEwMessage {
     return rms;
   }
 
-
   public void setRms(Double rms) {
     this.rms = rms;
   }
 
 
   public Hyp2000arcSchemaEwMessage e0az(Float e0az) {
-    
     this.e0az = e0az;
     return this;
   }
@@ -527,14 +498,12 @@ public class Hyp2000arcSchemaEwMessage {
     return e0az;
   }
 
-
   public void setE0az(Float e0az) {
     this.e0az = e0az;
   }
 
 
   public Hyp2000arcSchemaEwMessage e0dp(Double e0dp) {
-    
     this.e0dp = e0dp;
     return this;
   }
@@ -548,14 +517,12 @@ public class Hyp2000arcSchemaEwMessage {
     return e0dp;
   }
 
-
   public void setE0dp(Double e0dp) {
     this.e0dp = e0dp;
   }
 
 
   public Hyp2000arcSchemaEwMessage e0(Double e0) {
-    
     this.e0 = e0;
     return this;
   }
@@ -569,14 +536,12 @@ public class Hyp2000arcSchemaEwMessage {
     return e0;
   }
 
-
   public void setE0(Double e0) {
     this.e0 = e0;
   }
 
 
   public Hyp2000arcSchemaEwMessage e1az(Float e1az) {
-    
     this.e1az = e1az;
     return this;
   }
@@ -590,14 +555,12 @@ public class Hyp2000arcSchemaEwMessage {
     return e1az;
   }
 
-
   public void setE1az(Float e1az) {
     this.e1az = e1az;
   }
 
 
   public Hyp2000arcSchemaEwMessage e1dp(Double e1dp) {
-    
     this.e1dp = e1dp;
     return this;
   }
@@ -611,14 +574,12 @@ public class Hyp2000arcSchemaEwMessage {
     return e1dp;
   }
 
-
   public void setE1dp(Double e1dp) {
     this.e1dp = e1dp;
   }
 
 
   public Hyp2000arcSchemaEwMessage e1(Double e1) {
-    
     this.e1 = e1;
     return this;
   }
@@ -632,14 +593,12 @@ public class Hyp2000arcSchemaEwMessage {
     return e1;
   }
 
-
   public void setE1(Double e1) {
     this.e1 = e1;
   }
 
 
   public Hyp2000arcSchemaEwMessage e2(Double e2) {
-    
     this.e2 = e2;
     return this;
   }
@@ -653,14 +612,12 @@ public class Hyp2000arcSchemaEwMessage {
     return e2;
   }
 
-
   public void setE2(Double e2) {
     this.e2 = e2;
   }
 
 
   public Hyp2000arcSchemaEwMessage erh(Double erh) {
-    
     this.erh = erh;
     return this;
   }
@@ -674,14 +631,12 @@ public class Hyp2000arcSchemaEwMessage {
     return erh;
   }
 
-
   public void setErh(Double erh) {
     this.erh = erh;
   }
 
 
   public Hyp2000arcSchemaEwMessage erz(Double erz) {
-    
     this.erz = erz;
     return this;
   }
@@ -695,14 +650,12 @@ public class Hyp2000arcSchemaEwMessage {
     return erz;
   }
 
-
   public void setErz(Double erz) {
     this.erz = erz;
   }
 
 
   public Hyp2000arcSchemaEwMessage md(Double md) {
-    
     this.md = md;
     return this;
   }
@@ -716,14 +669,12 @@ public class Hyp2000arcSchemaEwMessage {
     return md;
   }
 
-
   public void setMd(Double md) {
     this.md = md;
   }
 
 
   public Hyp2000arcSchemaEwMessage reg(String reg) {
-    
     this.reg = reg;
     return this;
   }
@@ -737,14 +688,12 @@ public class Hyp2000arcSchemaEwMessage {
     return reg;
   }
 
-
   public void setReg(String reg) {
     this.reg = reg;
   }
 
 
   public Hyp2000arcSchemaEwMessage labelpref(String labelpref) {
-    
     this.labelpref = labelpref;
     return this;
   }
@@ -758,14 +707,12 @@ public class Hyp2000arcSchemaEwMessage {
     return labelpref;
   }
 
-
   public void setLabelpref(String labelpref) {
     this.labelpref = labelpref;
   }
 
 
   public Hyp2000arcSchemaEwMessage mpref(Double mpref) {
-    
     this.mpref = mpref;
     return this;
   }
@@ -779,14 +726,12 @@ public class Hyp2000arcSchemaEwMessage {
     return mpref;
   }
 
-
   public void setMpref(Double mpref) {
     this.mpref = mpref;
   }
 
 
   public Hyp2000arcSchemaEwMessage wtpref(Double wtpref) {
-    
     this.wtpref = wtpref;
     return this;
   }
@@ -800,14 +745,12 @@ public class Hyp2000arcSchemaEwMessage {
     return wtpref;
   }
 
-
   public void setWtpref(Double wtpref) {
     this.wtpref = wtpref;
   }
 
 
   public Hyp2000arcSchemaEwMessage mdtype(String mdtype) {
-    
     this.mdtype = mdtype;
     return this;
   }
@@ -821,14 +764,12 @@ public class Hyp2000arcSchemaEwMessage {
     return mdtype;
   }
 
-
   public void setMdtype(String mdtype) {
     this.mdtype = mdtype;
   }
 
 
   public Hyp2000arcSchemaEwMessage mdmad(Double mdmad) {
-    
     this.mdmad = mdmad;
     return this;
   }
@@ -842,14 +783,12 @@ public class Hyp2000arcSchemaEwMessage {
     return mdmad;
   }
 
-
   public void setMdmad(Double mdmad) {
     this.mdmad = mdmad;
   }
 
 
   public Hyp2000arcSchemaEwMessage mdwt(Double mdwt) {
-    
     this.mdwt = mdwt;
     return this;
   }
@@ -863,14 +802,12 @@ public class Hyp2000arcSchemaEwMessage {
     return mdwt;
   }
 
-
   public void setMdwt(Double mdwt) {
     this.mdwt = mdwt;
   }
 
 
   public Hyp2000arcSchemaEwMessage ingvQuality(String ingvQuality) {
-    
     this.ingvQuality = ingvQuality;
     return this;
   }
@@ -884,14 +821,12 @@ public class Hyp2000arcSchemaEwMessage {
     return ingvQuality;
   }
 
-
   public void setIngvQuality(String ingvQuality) {
     this.ingvQuality = ingvQuality;
   }
 
 
   public Hyp2000arcSchemaEwMessage amplitudeMagnitude(Double amplitudeMagnitude) {
-    
     this.amplitudeMagnitude = amplitudeMagnitude;
     return this;
   }
@@ -905,14 +840,12 @@ public class Hyp2000arcSchemaEwMessage {
     return amplitudeMagnitude;
   }
 
-
   public void setAmplitudeMagnitude(Double amplitudeMagnitude) {
     this.amplitudeMagnitude = amplitudeMagnitude;
   }
 
 
   public Hyp2000arcSchemaEwMessage numberOfAmpMagWeightCode(Double numberOfAmpMagWeightCode) {
-    
     this.numberOfAmpMagWeightCode = numberOfAmpMagWeightCode;
     return this;
   }
@@ -926,14 +859,12 @@ public class Hyp2000arcSchemaEwMessage {
     return numberOfAmpMagWeightCode;
   }
 
-
   public void setNumberOfAmpMagWeightCode(Double numberOfAmpMagWeightCode) {
     this.numberOfAmpMagWeightCode = numberOfAmpMagWeightCode;
   }
 
 
   public Hyp2000arcSchemaEwMessage medianAbsDiffAmpMag(Double medianAbsDiffAmpMag) {
-    
     this.medianAbsDiffAmpMag = medianAbsDiffAmpMag;
     return this;
   }
@@ -947,14 +878,12 @@ public class Hyp2000arcSchemaEwMessage {
     return medianAbsDiffAmpMag;
   }
 
-
   public void setMedianAbsDiffAmpMag(Double medianAbsDiffAmpMag) {
     this.medianAbsDiffAmpMag = medianAbsDiffAmpMag;
   }
 
 
   public Hyp2000arcSchemaEwMessage preferredMagLabel(String preferredMagLabel) {
-    
     this.preferredMagLabel = preferredMagLabel;
     return this;
   }
@@ -968,14 +897,12 @@ public class Hyp2000arcSchemaEwMessage {
     return preferredMagLabel;
   }
 
-
   public void setPreferredMagLabel(String preferredMagLabel) {
     this.preferredMagLabel = preferredMagLabel;
   }
 
 
   public Hyp2000arcSchemaEwMessage preferredMag(Double preferredMag) {
-    
     this.preferredMag = preferredMag;
     return this;
   }
@@ -989,14 +916,12 @@ public class Hyp2000arcSchemaEwMessage {
     return preferredMag;
   }
 
-
   public void setPreferredMag(Double preferredMag) {
     this.preferredMag = preferredMag;
   }
 
 
   public Hyp2000arcSchemaEwMessage numberOfPreferredMags(Double numberOfPreferredMags) {
-    
     this.numberOfPreferredMags = numberOfPreferredMags;
     return this;
   }
@@ -1010,14 +935,12 @@ public class Hyp2000arcSchemaEwMessage {
     return numberOfPreferredMags;
   }
 
-
   public void setNumberOfPreferredMags(Double numberOfPreferredMags) {
     this.numberOfPreferredMags = numberOfPreferredMags;
   }
 
 
   public Hyp2000arcSchemaEwMessage phases(List<Hyp2000arcPhasesInner> phases) {
-    
     this.phases = phases;
     return this;
   }
@@ -1038,7 +961,6 @@ public class Hyp2000arcSchemaEwMessage {
   public List<Hyp2000arcPhasesInner> getPhases() {
     return phases;
   }
-
 
   public void setPhases(List<Hyp2000arcPhasesInner> phases) {
     this.phases = phases;
@@ -1344,7 +1266,12 @@ public class Hyp2000arcSchemaEwMessage {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateMomenttensor200ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class UpdateMomenttensor200ResponseData {
   public static final String SERIALIZED_NAME_MOMENTTENSOR = "momenttensor";
   @SerializedName(SERIALIZED_NAME_MOMENTTENSOR)
@@ -60,7 +60,6 @@ public class UpdateMomenttensor200ResponseData {
   }
 
   public UpdateMomenttensor200ResponseData momenttensor(UpdateEvent200ResponseDataEvent momenttensor) {
-    
     this.momenttensor = momenttensor;
     return this;
   }
@@ -73,7 +72,6 @@ public class UpdateMomenttensor200ResponseData {
   public UpdateEvent200ResponseDataEvent getMomenttensor() {
     return momenttensor;
   }
-
 
   public void setMomenttensor(UpdateEvent200ResponseDataEvent momenttensor) {
     this.momenttensor = momenttensor;
@@ -224,7 +222,12 @@ public class UpdateMomenttensor200ResponseData {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

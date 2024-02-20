@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class StrongmotioniiSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -128,7 +128,6 @@ public class StrongmotioniiSchemaEwMessage {
   }
 
   public StrongmotioniiSchemaEwMessage quakeId(Long quakeId) {
-    
     this.quakeId = quakeId;
     return this;
   }
@@ -142,14 +141,12 @@ public class StrongmotioniiSchemaEwMessage {
     return quakeId;
   }
 
-
   public void setQuakeId(Long quakeId) {
     this.quakeId = quakeId;
   }
 
 
   public StrongmotioniiSchemaEwMessage version(TypeOriginName version) {
-    
     this.version = version;
     return this;
   }
@@ -163,14 +160,12 @@ public class StrongmotioniiSchemaEwMessage {
     return version;
   }
 
-
   public void setVersion(TypeOriginName version) {
     this.version = version;
   }
 
 
   public StrongmotioniiSchemaEwMessage network(String network) {
-    
     this.network = network;
     return this;
   }
@@ -184,14 +179,12 @@ public class StrongmotioniiSchemaEwMessage {
     return network;
   }
 
-
   public void setNetwork(String network) {
     this.network = network;
   }
 
 
   public StrongmotioniiSchemaEwMessage station(String station) {
-    
     this.station = station;
     return this;
   }
@@ -205,14 +198,12 @@ public class StrongmotioniiSchemaEwMessage {
     return station;
   }
 
-
   public void setStation(String station) {
     this.station = station;
   }
 
 
   public StrongmotioniiSchemaEwMessage component(String component) {
-    
     this.component = component;
     return this;
   }
@@ -226,14 +217,12 @@ public class StrongmotioniiSchemaEwMessage {
     return component;
   }
 
-
   public void setComponent(String component) {
     this.component = component;
   }
 
 
   public StrongmotioniiSchemaEwMessage location(String location) {
-    
     this.location = location;
     return this;
   }
@@ -247,14 +236,12 @@ public class StrongmotioniiSchemaEwMessage {
     return location;
   }
 
-
   public void setLocation(String location) {
     this.location = location;
   }
 
 
   public StrongmotioniiSchemaEwMessage qAuthor(String qAuthor) {
-    
     this.qAuthor = qAuthor;
     return this;
   }
@@ -268,14 +255,12 @@ public class StrongmotioniiSchemaEwMessage {
     return qAuthor;
   }
 
-
   public void setqAuthor(String qAuthor) {
     this.qAuthor = qAuthor;
   }
 
 
   public StrongmotioniiSchemaEwMessage time(OffsetDateTime time) {
-    
     this.time = time;
     return this;
   }
@@ -289,14 +274,12 @@ public class StrongmotioniiSchemaEwMessage {
     return time;
   }
 
-
   public void setTime(OffsetDateTime time) {
     this.time = time;
   }
 
 
   public StrongmotioniiSchemaEwMessage alternateTime(OffsetDateTime alternateTime) {
-    
     this.alternateTime = alternateTime;
     return this;
   }
@@ -310,14 +293,12 @@ public class StrongmotioniiSchemaEwMessage {
     return alternateTime;
   }
 
-
   public void setAlternateTime(OffsetDateTime alternateTime) {
     this.alternateTime = alternateTime;
   }
 
 
   public StrongmotioniiSchemaEwMessage alternateCode(Long alternateCode) {
-    
     this.alternateCode = alternateCode;
     return this;
   }
@@ -331,14 +312,12 @@ public class StrongmotioniiSchemaEwMessage {
     return alternateCode;
   }
 
-
   public void setAlternateCode(Long alternateCode) {
     this.alternateCode = alternateCode;
   }
 
 
   public StrongmotioniiSchemaEwMessage pga(Float pga) {
-    
     this.pga = pga;
     return this;
   }
@@ -352,14 +331,12 @@ public class StrongmotioniiSchemaEwMessage {
     return pga;
   }
 
-
   public void setPga(Float pga) {
     this.pga = pga;
   }
 
 
   public StrongmotioniiSchemaEwMessage pgaTime(OffsetDateTime pgaTime) {
-    
     this.pgaTime = pgaTime;
     return this;
   }
@@ -373,14 +350,12 @@ public class StrongmotioniiSchemaEwMessage {
     return pgaTime;
   }
 
-
   public void setPgaTime(OffsetDateTime pgaTime) {
     this.pgaTime = pgaTime;
   }
 
 
   public StrongmotioniiSchemaEwMessage pgv(Float pgv) {
-    
     this.pgv = pgv;
     return this;
   }
@@ -394,14 +369,12 @@ public class StrongmotioniiSchemaEwMessage {
     return pgv;
   }
 
-
   public void setPgv(Float pgv) {
     this.pgv = pgv;
   }
 
 
   public StrongmotioniiSchemaEwMessage pgvTime(OffsetDateTime pgvTime) {
-    
     this.pgvTime = pgvTime;
     return this;
   }
@@ -415,14 +388,12 @@ public class StrongmotioniiSchemaEwMessage {
     return pgvTime;
   }
 
-
   public void setPgvTime(OffsetDateTime pgvTime) {
     this.pgvTime = pgvTime;
   }
 
 
   public StrongmotioniiSchemaEwMessage pgd(Float pgd) {
-    
     this.pgd = pgd;
     return this;
   }
@@ -436,14 +407,12 @@ public class StrongmotioniiSchemaEwMessage {
     return pgd;
   }
 
-
   public void setPgd(Float pgd) {
     this.pgd = pgd;
   }
 
 
   public StrongmotioniiSchemaEwMessage pgdTime(OffsetDateTime pgdTime) {
-    
     this.pgdTime = pgdTime;
     return this;
   }
@@ -457,14 +426,12 @@ public class StrongmotioniiSchemaEwMessage {
     return pgdTime;
   }
 
-
   public void setPgdTime(OffsetDateTime pgdTime) {
     this.pgdTime = pgdTime;
   }
 
 
   public StrongmotioniiSchemaEwMessage RSA(List<StrongmotioniiSchemaEwMessageRSAInner> RSA) {
-    
     this.RSA = RSA;
     return this;
   }
@@ -485,7 +452,6 @@ public class StrongmotioniiSchemaEwMessage {
   public List<StrongmotioniiSchemaEwMessageRSAInner> getRSA() {
     return RSA;
   }
-
 
   public void setRSA(List<StrongmotioniiSchemaEwMessageRSAInner> RSA) {
     this.RSA = RSA;
@@ -720,7 +686,12 @@ public class StrongmotioniiSchemaEwMessage {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -56,7 +56,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -141,7 +141,6 @@ public class ObjectMagnitude {
   public ObjectMagnitude() {
   }
 
-  
   public ObjectMagnitude(
      Long id, 
      OffsetDateTime modified, 
@@ -164,7 +163,6 @@ public class ObjectMagnitude {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -173,7 +171,6 @@ public class ObjectMagnitude {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
 
@@ -188,9 +185,7 @@ public class ObjectMagnitude {
 
 
 
-
   public ObjectMagnitude idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -204,14 +199,12 @@ public class ObjectMagnitude {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectMagnitude mag(Double mag) {
-    
     this.mag = mag;
     return this;
   }
@@ -225,14 +218,12 @@ public class ObjectMagnitude {
     return mag;
   }
 
-
   public void setMag(Double mag) {
     this.mag = mag;
   }
 
 
   public ObjectMagnitude lowerUncertainty(Double lowerUncertainty) {
-    
     this.lowerUncertainty = lowerUncertainty;
     return this;
   }
@@ -246,14 +237,12 @@ public class ObjectMagnitude {
     return lowerUncertainty;
   }
 
-
   public void setLowerUncertainty(Double lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
   }
 
 
   public ObjectMagnitude upperUncertainty(Double upperUncertainty) {
-    
     this.upperUncertainty = upperUncertainty;
     return this;
   }
@@ -267,14 +256,12 @@ public class ObjectMagnitude {
     return upperUncertainty;
   }
 
-
   public void setUpperUncertainty(Double upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
   }
 
 
   public ObjectMagnitude confidenceLevel(Float confidenceLevel) {
-    
     this.confidenceLevel = confidenceLevel;
     return this;
   }
@@ -288,14 +275,12 @@ public class ObjectMagnitude {
     return confidenceLevel;
   }
 
-
   public void setConfidenceLevel(Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
   }
 
 
   public ObjectMagnitude quality(Double quality) {
-    
     this.quality = quality;
     return this;
   }
@@ -309,14 +294,12 @@ public class ObjectMagnitude {
     return quality;
   }
 
-
   public void setQuality(Double quality) {
     this.quality = quality;
   }
 
 
   public ObjectMagnitude minDistance(Double minDistance) {
-    
     this.minDistance = minDistance;
     return this;
   }
@@ -330,14 +313,12 @@ public class ObjectMagnitude {
     return minDistance;
   }
 
-
   public void setMinDistance(Double minDistance) {
     this.minDistance = minDistance;
   }
 
 
   public ObjectMagnitude azimut(Float azimut) {
-    
     this.azimut = azimut;
     return this;
   }
@@ -351,14 +332,12 @@ public class ObjectMagnitude {
     return azimut;
   }
 
-
   public void setAzimut(Float azimut) {
     this.azimut = azimut;
   }
 
 
   public ObjectMagnitude nsta(Long nsta) {
-    
     this.nsta = nsta;
     return this;
   }
@@ -372,14 +351,12 @@ public class ObjectMagnitude {
     return nsta;
   }
 
-
   public void setNsta(Long nsta) {
     this.nsta = nsta;
   }
 
 
   public ObjectMagnitude ncha(Long ncha) {
-    
     this.ncha = ncha;
     return this;
   }
@@ -393,14 +370,12 @@ public class ObjectMagnitude {
     return ncha;
   }
 
-
   public void setNcha(Long ncha) {
     this.ncha = ncha;
   }
 
 
   public ObjectMagnitude nstaUsed(Long nstaUsed) {
-    
     this.nstaUsed = nstaUsed;
     return this;
   }
@@ -414,14 +389,12 @@ public class ObjectMagnitude {
     return nstaUsed;
   }
 
-
   public void setNstaUsed(Long nstaUsed) {
     this.nstaUsed = nstaUsed;
   }
 
 
   public ObjectMagnitude nchaUsed(Long nchaUsed) {
-    
     this.nchaUsed = nchaUsed;
     return this;
   }
@@ -435,14 +408,12 @@ public class ObjectMagnitude {
     return nchaUsed;
   }
 
-
   public void setNchaUsed(Long nchaUsed) {
     this.nchaUsed = nchaUsed;
   }
 
 
   public ObjectMagnitude magQuality(String magQuality) {
-    
     this.magQuality = magQuality;
     return this;
   }
@@ -456,14 +427,12 @@ public class ObjectMagnitude {
     return magQuality;
   }
 
-
   public void setMagQuality(String magQuality) {
     this.magQuality = magQuality;
   }
 
 
   public ObjectMagnitude typeMagnitude(String typeMagnitude) {
-    
     this.typeMagnitude = typeMagnitude;
     return this;
   }
@@ -477,14 +446,12 @@ public class ObjectMagnitude {
     return typeMagnitude;
   }
 
-
   public void setTypeMagnitude(String typeMagnitude) {
     this.typeMagnitude = typeMagnitude;
   }
 
 
   public ObjectMagnitude localspace(ObjectLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -498,14 +465,12 @@ public class ObjectMagnitude {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectMagnitude provenance(ObjectProvenance provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -519,14 +484,12 @@ public class ObjectMagnitude {
     return provenance;
   }
 
-
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
   public ObjectMagnitude stationmagnitudes(List<ObjectStationmagnitude> stationmagnitudes) {
-    
     this.stationmagnitudes = stationmagnitudes;
     return this;
   }
@@ -547,7 +510,6 @@ public class ObjectMagnitude {
   public List<ObjectStationmagnitude> getStationmagnitudes() {
     return stationmagnitudes;
   }
-
 
   public void setStationmagnitudes(List<ObjectStationmagnitude> stationmagnitudes) {
     this.stationmagnitudes = stationmagnitudes;
@@ -799,7 +761,12 @@ public class ObjectMagnitude {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

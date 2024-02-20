@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectAmplitudeTypeAmplitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:14:05.086341Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:41:53.252151237Z[Etc/UTC]")
 public class ObjectAmplitudeTypeAmplitude {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -69,7 +69,6 @@ public class ObjectAmplitudeTypeAmplitude {
   }
 
   public ObjectAmplitudeTypeAmplitude name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -83,14 +82,12 @@ public class ObjectAmplitudeTypeAmplitude {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ObjectAmplitudeTypeAmplitude unit(String unit) {
-    
     this.unit = unit;
     return this;
   }
@@ -104,14 +101,12 @@ public class ObjectAmplitudeTypeAmplitude {
     return unit;
   }
 
-
   public void setUnit(String unit) {
     this.unit = unit;
   }
 
 
   public ObjectAmplitudeTypeAmplitude category(TypeAmplitudeCategory category) {
-    
     this.category = category;
     return this;
   }
@@ -124,7 +119,6 @@ public class ObjectAmplitudeTypeAmplitude {
   public TypeAmplitudeCategory getCategory() {
     return category;
   }
-
 
   public void setCategory(TypeAmplitudeCategory category) {
     this.category = category;
@@ -306,7 +300,12 @@ public class ObjectAmplitudeTypeAmplitude {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
