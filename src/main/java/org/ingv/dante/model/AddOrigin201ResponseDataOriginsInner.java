@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * AddOrigin201ResponseDataOriginsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class AddOrigin201ResponseDataOriginsInner {
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
@@ -66,7 +66,6 @@ public class AddOrigin201ResponseDataOriginsInner {
   }
 
   public AddOrigin201ResponseDataOriginsInner magnitudes(List<UpdateEvent200ResponseDataEvent> magnitudes) {
-    
     this.magnitudes = magnitudes;
     return this;
   }
@@ -88,14 +87,12 @@ public class AddOrigin201ResponseDataOriginsInner {
     return magnitudes;
   }
 
-
   public void setMagnitudes(List<UpdateEvent200ResponseDataEvent> magnitudes) {
     this.magnitudes = magnitudes;
   }
 
 
   public AddOrigin201ResponseDataOriginsInner id(Long id) {
-    
     this.id = id;
     return this;
   }
@@ -108,7 +105,6 @@ public class AddOrigin201ResponseDataOriginsInner {
   public Long getId() {
     return id;
   }
-
 
   public void setId(Long id) {
     this.id = id;
@@ -272,7 +268,12 @@ public class AddOrigin201ResponseDataOriginsInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

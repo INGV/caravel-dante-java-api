@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotionAlternative
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectStrongmotionAlternative {
   public static final String SERIALIZED_NAME_TIME = "time";
   @SerializedName(SERIALIZED_NAME_TIME)
@@ -64,7 +64,6 @@ public class ObjectStrongmotionAlternative {
   }
 
   public ObjectStrongmotionAlternative time(OffsetDateTime time) {
-    
     this.time = time;
     return this;
   }
@@ -78,14 +77,12 @@ public class ObjectStrongmotionAlternative {
     return time;
   }
 
-
   public void setTime(OffsetDateTime time) {
     this.time = time;
   }
 
 
   public ObjectStrongmotionAlternative code(Long code) {
-    
     this.code = code;
     return this;
   }
@@ -98,7 +95,6 @@ public class ObjectStrongmotionAlternative {
   public Long getCode() {
     return code;
   }
-
 
   public void setCode(Long code) {
     this.code = code;
@@ -248,7 +244,12 @@ public class ObjectStrongmotionAlternative {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

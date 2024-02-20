@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * Quake2kSchemaEwLogo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class Quake2kSchemaEwLogo {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
@@ -79,7 +79,6 @@ public class Quake2kSchemaEwLogo {
   }
 
   public Quake2kSchemaEwLogo type(String type) {
-    
     this.type = type;
     return this;
   }
@@ -93,14 +92,12 @@ public class Quake2kSchemaEwLogo {
     return type;
   }
 
-
   public void setType(String type) {
     this.type = type;
   }
 
 
   public Quake2kSchemaEwLogo module(String module) {
-    
     this.module = module;
     return this;
   }
@@ -114,14 +111,12 @@ public class Quake2kSchemaEwLogo {
     return module;
   }
 
-
   public void setModule(String module) {
     this.module = module;
   }
 
 
   public Quake2kSchemaEwLogo installation(String installation) {
-    
     this.installation = installation;
     return this;
   }
@@ -135,14 +130,12 @@ public class Quake2kSchemaEwLogo {
     return installation;
   }
 
-
   public void setInstallation(String installation) {
     this.installation = installation;
   }
 
 
   public Quake2kSchemaEwLogo user(String user) {
-    
     this.user = user;
     return this;
   }
@@ -156,14 +149,12 @@ public class Quake2kSchemaEwLogo {
     return user;
   }
 
-
   public void setUser(String user) {
     this.user = user;
   }
 
 
   public Quake2kSchemaEwLogo hostname(String hostname) {
-    
     this.hostname = hostname;
     return this;
   }
@@ -177,14 +168,12 @@ public class Quake2kSchemaEwLogo {
     return hostname;
   }
 
-
   public void setHostname(String hostname) {
     this.hostname = hostname;
   }
 
 
   public Quake2kSchemaEwLogo instance(String instance) {
-    
     this.instance = instance;
     return this;
   }
@@ -197,7 +186,6 @@ public class Quake2kSchemaEwLogo {
   public String getInstance() {
     return instance;
   }
-
 
   public void setInstance(String instance) {
     this.instance = instance;
@@ -388,7 +376,12 @@ public class Quake2kSchemaEwLogo {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -55,7 +55,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -132,7 +132,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   public ObjectMagnitudesOriginsEventsAndEventsGroup() {
   }
 
-  
   public ObjectMagnitudesOriginsEventsAndEventsGroup(
      Long eventGroupId, 
      Long preferredOriginId, 
@@ -155,7 +154,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   }
 
   public ObjectMagnitudesOriginsEventsAndEventsGroup id(Long id) {
-    
     this.id = id;
     return this;
   }
@@ -169,14 +167,12 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
     return id;
   }
 
-
   public void setId(Long id) {
     this.id = id;
   }
 
 
   public ObjectMagnitudesOriginsEventsAndEventsGroup idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -189,7 +185,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   public Long getIdLocalspace() {
     return idLocalspace;
   }
-
 
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
@@ -207,7 +202,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-
    /**
    * Link: preferred origin. It can be NULL. | bigint(20)
    * @return preferredOriginId
@@ -216,7 +210,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   public Long getPreferredOriginId() {
     return preferredOriginId;
   }
-
 
 
 
@@ -231,7 +224,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-
    /**
    * Link: preferred focalmechanism. It can be NULL. | bigint(20)
    * @return preferredFocalmechanismId
@@ -240,7 +232,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   public Long getPreferredFocalmechanismId() {
     return preferredFocalmechanismId;
   }
-
 
 
 
@@ -255,7 +246,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-
    /**
    * Group type. Used by clustering algorithm | tinyint(4)
    * @return typeGroup
@@ -267,9 +257,7 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-
   public ObjectMagnitudesOriginsEventsAndEventsGroup typeEvent(String typeEvent) {
-    
     this.typeEvent = typeEvent;
     return this;
   }
@@ -283,14 +271,12 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
     return typeEvent;
   }
 
-
   public void setTypeEvent(String typeEvent) {
     this.typeEvent = typeEvent;
   }
 
 
   public ObjectMagnitudesOriginsEventsAndEventsGroup origindirectlinktoevent(Boolean origindirectlinktoevent) {
-    
     this.origindirectlinktoevent = origindirectlinktoevent;
     return this;
   }
@@ -304,14 +290,12 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
     return origindirectlinktoevent;
   }
 
-
   public void setOrigindirectlinktoevent(Boolean origindirectlinktoevent) {
     this.origindirectlinktoevent = origindirectlinktoevent;
   }
 
 
   public ObjectMagnitudesOriginsEventsAndEventsGroup magnitudedirectlinktoorigin(Boolean magnitudedirectlinktoorigin) {
-    
     this.magnitudedirectlinktoorigin = magnitudedirectlinktoorigin;
     return this;
   }
@@ -325,14 +309,12 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
     return magnitudedirectlinktoorigin;
   }
 
-
   public void setMagnitudedirectlinktoorigin(Boolean magnitudedirectlinktoorigin) {
     this.magnitudedirectlinktoorigin = magnitudedirectlinktoorigin;
   }
 
 
   public ObjectMagnitudesOriginsEventsAndEventsGroup magnitudedirectlinktoevent(Boolean magnitudedirectlinktoevent) {
-    
     this.magnitudedirectlinktoevent = magnitudedirectlinktoevent;
     return this;
   }
@@ -345,7 +327,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   public Boolean getMagnitudedirectlinktoevent() {
     return magnitudedirectlinktoevent;
   }
-
 
   public void setMagnitudedirectlinktoevent(Boolean magnitudedirectlinktoevent) {
     this.magnitudedirectlinktoevent = magnitudedirectlinktoevent;
@@ -363,7 +344,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -375,9 +355,7 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-
   public ObjectMagnitudesOriginsEventsAndEventsGroup localspace(ObjectLocalspaceForVw localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -391,14 +369,12 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspaceForVw localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectMagnitudesOriginsEventsAndEventsGroup provenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -412,14 +388,12 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
     return provenance;
   }
 
-
   public void setProvenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     this.provenance = provenance;
   }
 
 
   public ObjectMagnitudesOriginsEventsAndEventsGroup origin(ObjectOriginForMagnitudesOriginsEventsAndEventsGroup origin) {
-    
     this.origin = origin;
     return this;
   }
@@ -433,14 +407,12 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
     return origin;
   }
 
-
   public void setOrigin(ObjectOriginForMagnitudesOriginsEventsAndEventsGroup origin) {
     this.origin = origin;
   }
 
 
   public ObjectMagnitudesOriginsEventsAndEventsGroup magnitude(ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup magnitude) {
-    
     this.magnitude = magnitude;
     return this;
   }
@@ -453,7 +425,6 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup getMagnitude() {
     return magnitude;
   }
-
 
   public void setMagnitude(ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup magnitude) {
     this.magnitude = magnitude;
@@ -684,7 +655,12 @@ public class ObjectMagnitudesOriginsEventsAndEventsGroup {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

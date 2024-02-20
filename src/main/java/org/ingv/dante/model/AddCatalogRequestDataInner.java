@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddCatalogRequestDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class AddCatalogRequestDataInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -91,7 +91,6 @@ public class AddCatalogRequestDataInner {
   public AddCatalogRequestDataInner() {
   }
 
-  
   public AddCatalogRequestDataInner(
      Long id, 
      Long eventid, 
@@ -118,9 +117,7 @@ public class AddCatalogRequestDataInner {
 
 
 
-
   public AddCatalogRequestDataInner name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -134,14 +131,12 @@ public class AddCatalogRequestDataInner {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public AddCatalogRequestDataInner doi(String doi) {
-    
     this.doi = doi;
     return this;
   }
@@ -154,7 +149,6 @@ public class AddCatalogRequestDataInner {
   public String getDoi() {
     return doi;
   }
-
 
   public void setDoi(String doi) {
     this.doi = doi;
@@ -172,9 +166,7 @@ public class AddCatalogRequestDataInner {
 
 
 
-
   public AddCatalogRequestDataInner originid(Long originid) {
-    
     this.originid = originid;
     return this;
   }
@@ -188,14 +180,12 @@ public class AddCatalogRequestDataInner {
     return originid;
   }
 
-
   public void setOriginid(Long originid) {
     this.originid = originid;
   }
 
 
   public AddCatalogRequestDataInner magnitudeid(Long magnitudeid) {
-    
     this.magnitudeid = magnitudeid;
     return this;
   }
@@ -208,7 +198,6 @@ public class AddCatalogRequestDataInner {
   public Long getMagnitudeid() {
     return magnitudeid;
   }
-
 
   public void setMagnitudeid(Long magnitudeid) {
     this.magnitudeid = magnitudeid;
@@ -226,7 +215,6 @@ public class AddCatalogRequestDataInner {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -238,7 +226,6 @@ public class AddCatalogRequestDataInner {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -247,7 +234,6 @@ public class AddCatalogRequestDataInner {
   public OffsetDateTime getInserted() {
     return inserted;
   }
-
 
 
   /**
@@ -429,7 +415,12 @@ public class AddCatalogRequestDataInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

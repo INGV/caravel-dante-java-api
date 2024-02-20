@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class StrongmotioniiSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
@@ -65,7 +65,6 @@ public class StrongmotioniiSchema {
   }
 
   public StrongmotioniiSchema ewMessage(StrongmotioniiSchemaEwMessage ewMessage) {
-    
     this.ewMessage = ewMessage;
     return this;
   }
@@ -79,14 +78,12 @@ public class StrongmotioniiSchema {
     return ewMessage;
   }
 
-
   public void setEwMessage(StrongmotioniiSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
   }
 
 
   public StrongmotioniiSchema ewLogo(StrongmotioniiSchemaEwLogo ewLogo) {
-    
     this.ewLogo = ewLogo;
     return this;
   }
@@ -99,7 +96,6 @@ public class StrongmotioniiSchema {
   public StrongmotioniiSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
-
 
   public void setEwLogo(StrongmotioniiSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
@@ -257,7 +253,12 @@ public class StrongmotioniiSchema {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventRequestDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class UpdateEventRequestDataEvent {
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
@@ -76,7 +76,6 @@ public class UpdateEventRequestDataEvent {
   }
 
   public UpdateEventRequestDataEvent typeEvent(String typeEvent) {
-    
     this.typeEvent = typeEvent;
     return this;
   }
@@ -90,14 +89,12 @@ public class UpdateEventRequestDataEvent {
     return typeEvent;
   }
 
-
   public void setTypeEvent(String typeEvent) {
     this.typeEvent = typeEvent;
   }
 
 
   public UpdateEventRequestDataEvent eventGroupId(Long eventGroupId) {
-    
     this.eventGroupId = eventGroupId;
     return this;
   }
@@ -111,14 +108,12 @@ public class UpdateEventRequestDataEvent {
     return eventGroupId;
   }
 
-
   public void setEventGroupId(Long eventGroupId) {
     this.eventGroupId = eventGroupId;
   }
 
 
   public UpdateEventRequestDataEvent preferredOriginId(Long preferredOriginId) {
-    
     this.preferredOriginId = preferredOriginId;
     return this;
   }
@@ -132,14 +127,12 @@ public class UpdateEventRequestDataEvent {
     return preferredOriginId;
   }
 
-
   public void setPreferredOriginId(Long preferredOriginId) {
     this.preferredOriginId = preferredOriginId;
   }
 
 
   public UpdateEventRequestDataEvent preferredMagnitudeId(Long preferredMagnitudeId) {
-    
     this.preferredMagnitudeId = preferredMagnitudeId;
     return this;
   }
@@ -153,14 +146,12 @@ public class UpdateEventRequestDataEvent {
     return preferredMagnitudeId;
   }
 
-
   public void setPreferredMagnitudeId(Long preferredMagnitudeId) {
     this.preferredMagnitudeId = preferredMagnitudeId;
   }
 
 
   public UpdateEventRequestDataEvent preferredFocalmechanismId(Long preferredFocalmechanismId) {
-    
     this.preferredFocalmechanismId = preferredFocalmechanismId;
     return this;
   }
@@ -173,7 +164,6 @@ public class UpdateEventRequestDataEvent {
   public Long getPreferredFocalmechanismId() {
     return preferredFocalmechanismId;
   }
-
 
   public void setPreferredFocalmechanismId(Long preferredFocalmechanismId) {
     this.preferredFocalmechanismId = preferredFocalmechanismId;
@@ -346,7 +336,12 @@ public class UpdateEventRequestDataEvent {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

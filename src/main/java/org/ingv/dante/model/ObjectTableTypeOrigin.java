@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableTypeOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectTableTypeOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -89,7 +89,6 @@ public class ObjectTableTypeOrigin {
   public ObjectTableTypeOrigin() {
   }
 
-  
   public ObjectTableTypeOrigin(
      Long id, 
      OffsetDateTime modified, 
@@ -112,9 +111,7 @@ public class ObjectTableTypeOrigin {
 
 
 
-
   public ObjectTableTypeOrigin name(TypeOriginName name) {
-    
     this.name = name;
     return this;
   }
@@ -128,14 +125,12 @@ public class ObjectTableTypeOrigin {
     return name;
   }
 
-
   public void setName(TypeOriginName name) {
     this.name = name;
   }
 
 
   public ObjectTableTypeOrigin versionName(String versionName) {
-    
     this.versionName = versionName;
     return this;
   }
@@ -149,14 +144,12 @@ public class ObjectTableTypeOrigin {
     return versionName;
   }
 
-
   public void setVersionName(String versionName) {
     this.versionName = versionName;
   }
 
 
   public ObjectTableTypeOrigin versionValue(Long versionValue) {
-    
     this.versionValue = versionValue;
     return this;
   }
@@ -170,14 +163,12 @@ public class ObjectTableTypeOrigin {
     return versionValue;
   }
 
-
   public void setVersionValue(Long versionValue) {
     this.versionValue = versionValue;
   }
 
 
   public ObjectTableTypeOrigin description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -191,14 +182,12 @@ public class ObjectTableTypeOrigin {
     return description;
   }
 
-
   public void setDescription(String description) {
     this.description = description;
   }
 
 
   public ObjectTableTypeOrigin priority(Long priority) {
-    
     this.priority = priority;
     return this;
   }
@@ -211,7 +200,6 @@ public class ObjectTableTypeOrigin {
   public Long getPriority() {
     return priority;
   }
-
 
   public void setPriority(Long priority) {
     this.priority = priority;
@@ -229,7 +217,6 @@ public class ObjectTableTypeOrigin {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -238,7 +225,6 @@ public class ObjectTableTypeOrigin {
   public OffsetDateTime getInserted() {
     return inserted;
   }
-
 
 
   /**
@@ -424,7 +410,12 @@ public class ObjectTableTypeOrigin {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

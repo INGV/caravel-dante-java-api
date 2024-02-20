@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * GetToken201ResponseUser
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class GetToken201ResponseUser {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -67,7 +67,6 @@ public class GetToken201ResponseUser {
   }
 
   public GetToken201ResponseUser id(String id) {
-    
     this.id = id;
     return this;
   }
@@ -81,14 +80,12 @@ public class GetToken201ResponseUser {
     return id;
   }
 
-
   public void setId(String id) {
     this.id = id;
   }
 
 
   public GetToken201ResponseUser name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -102,14 +99,12 @@ public class GetToken201ResponseUser {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public GetToken201ResponseUser email(String email) {
-    
     this.email = email;
     return this;
   }
@@ -122,7 +117,6 @@ public class GetToken201ResponseUser {
   public String getEmail() {
     return email;
   }
-
 
   public void setEmail(String email) {
     this.email = email;
@@ -284,7 +278,12 @@ public class GetToken201ResponseUser {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

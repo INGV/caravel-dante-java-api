@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class PickScnlSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
@@ -65,7 +65,6 @@ public class PickScnlSchema {
   }
 
   public PickScnlSchema ewMessage(PickScnlSchemaEwMessage ewMessage) {
-    
     this.ewMessage = ewMessage;
     return this;
   }
@@ -79,14 +78,12 @@ public class PickScnlSchema {
     return ewMessage;
   }
 
-
   public void setEwMessage(PickScnlSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
   }
 
 
   public PickScnlSchema ewLogo(PickScnlSchemaEwLogo ewLogo) {
-    
     this.ewLogo = ewLogo;
     return this;
   }
@@ -99,7 +96,6 @@ public class PickScnlSchema {
   public PickScnlSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
-
 
   public void setEwLogo(PickScnlSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
@@ -257,7 +253,12 @@ public class PickScnlSchema {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * GetToken201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class GetToken201Response {
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
@@ -68,7 +68,6 @@ public class GetToken201Response {
   }
 
   public GetToken201Response user(GetToken201ResponseUser user) {
-    
     this.user = user;
     return this;
   }
@@ -82,14 +81,12 @@ public class GetToken201Response {
     return user;
   }
 
-
   public void setUser(GetToken201ResponseUser user) {
     this.user = user;
   }
 
 
   public GetToken201Response token(String token) {
-    
     this.token = token;
     return this;
   }
@@ -103,14 +100,12 @@ public class GetToken201Response {
     return token;
   }
 
-
   public void setToken(String token) {
     this.token = token;
   }
 
 
   public GetToken201Response tokenType(String tokenType) {
-    
     this.tokenType = tokenType;
     return this;
   }
@@ -123,7 +118,6 @@ public class GetToken201Response {
   public String getTokenType() {
     return tokenType;
   }
-
 
   public void setTokenType(String tokenType) {
     this.tokenType = tokenType;
@@ -286,7 +280,12 @@ public class GetToken201Response {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

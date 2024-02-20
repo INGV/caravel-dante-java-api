@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectLocalspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectLocalspace {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -73,7 +73,6 @@ public class ObjectLocalspace {
   }
 
   public ObjectLocalspace name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -87,14 +86,12 @@ public class ObjectLocalspace {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ObjectLocalspace priority(Long priority) {
-    
     this.priority = priority;
     return this;
   }
@@ -108,14 +105,12 @@ public class ObjectLocalspace {
     return priority;
   }
 
-
   public void setPriority(Long priority) {
     this.priority = priority;
   }
 
 
   public ObjectLocalspace environment(Environment environment) {
-    
     this.environment = environment;
     return this;
   }
@@ -129,14 +124,12 @@ public class ObjectLocalspace {
     return environment;
   }
 
-
   public void setEnvironment(Environment environment) {
     this.environment = environment;
   }
 
 
   public ObjectLocalspace description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -149,7 +142,6 @@ public class ObjectLocalspace {
   public String getDescription() {
     return description;
   }
-
 
   public void setDescription(String description) {
     this.description = description;
@@ -334,7 +326,12 @@ public class ObjectLocalspace {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

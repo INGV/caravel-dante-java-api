@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectPickEw
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectPickEw {
   public static final String SERIALIZED_NAME_PAMP1 = "pamp1";
   @SerializedName(SERIALIZED_NAME_PAMP1)
@@ -68,7 +68,6 @@ public class ObjectPickEw {
   }
 
   public ObjectPickEw pamp1(Float pamp1) {
-    
     this.pamp1 = pamp1;
     return this;
   }
@@ -82,14 +81,12 @@ public class ObjectPickEw {
     return pamp1;
   }
 
-
   public void setPamp1(Float pamp1) {
     this.pamp1 = pamp1;
   }
 
 
   public ObjectPickEw pamp2(Float pamp2) {
-    
     this.pamp2 = pamp2;
     return this;
   }
@@ -103,14 +100,12 @@ public class ObjectPickEw {
     return pamp2;
   }
 
-
   public void setPamp2(Float pamp2) {
     this.pamp2 = pamp2;
   }
 
 
   public ObjectPickEw pamp3(Float pamp3) {
-    
     this.pamp3 = pamp3;
     return this;
   }
@@ -123,7 +118,6 @@ public class ObjectPickEw {
   public Float getPamp3() {
     return pamp3;
   }
-
 
   public void setPamp3(Float pamp3) {
     this.pamp3 = pamp3;
@@ -295,7 +289,12 @@ public class ObjectPickEw {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

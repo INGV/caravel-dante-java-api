@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudePhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class MagnitudePhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -108,7 +108,6 @@ public class MagnitudePhasesInner {
   }
 
   public MagnitudePhasesInner net(String net) {
-    
     this.net = net;
     return this;
   }
@@ -122,14 +121,12 @@ public class MagnitudePhasesInner {
     return net;
   }
 
-
   public void setNet(String net) {
     this.net = net;
   }
 
 
   public MagnitudePhasesInner sta(String sta) {
-    
     this.sta = sta;
     return this;
   }
@@ -143,14 +140,12 @@ public class MagnitudePhasesInner {
     return sta;
   }
 
-
   public void setSta(String sta) {
     this.sta = sta;
   }
 
 
   public MagnitudePhasesInner comp(String comp) {
-    
     this.comp = comp;
     return this;
   }
@@ -164,14 +159,12 @@ public class MagnitudePhasesInner {
     return comp;
   }
 
-
   public void setComp(String comp) {
     this.comp = comp;
   }
 
 
   public MagnitudePhasesInner loc(String loc) {
-    
     this.loc = loc;
     return this;
   }
@@ -185,14 +178,12 @@ public class MagnitudePhasesInner {
     return loc;
   }
 
-
   public void setLoc(String loc) {
     this.loc = loc;
   }
 
 
   public MagnitudePhasesInner mag(Double mag) {
-    
     this.mag = mag;
     return this;
   }
@@ -206,14 +197,12 @@ public class MagnitudePhasesInner {
     return mag;
   }
 
-
   public void setMag(Double mag) {
     this.mag = mag;
   }
 
 
   public MagnitudePhasesInner dist(Float dist) {
-    
     this.dist = dist;
     return this;
   }
@@ -227,14 +216,12 @@ public class MagnitudePhasesInner {
     return dist;
   }
 
-
   public void setDist(Float dist) {
     this.dist = dist;
   }
 
 
   public MagnitudePhasesInner corr(Double corr) {
-    
     this.corr = corr;
     return this;
   }
@@ -248,14 +235,12 @@ public class MagnitudePhasesInner {
     return corr;
   }
 
-
   public void setCorr(Double corr) {
     this.corr = corr;
   }
 
 
   public MagnitudePhasesInner time1(OffsetDateTime time1) {
-    
     this.time1 = time1;
     return this;
   }
@@ -269,14 +254,12 @@ public class MagnitudePhasesInner {
     return time1;
   }
 
-
   public void setTime1(OffsetDateTime time1) {
     this.time1 = time1;
   }
 
 
   public MagnitudePhasesInner amp1(Double amp1) {
-    
     this.amp1 = amp1;
     return this;
   }
@@ -290,14 +273,12 @@ public class MagnitudePhasesInner {
     return amp1;
   }
 
-
   public void setAmp1(Double amp1) {
     this.amp1 = amp1;
   }
 
 
   public MagnitudePhasesInner period1(Double period1) {
-    
     this.period1 = period1;
     return this;
   }
@@ -311,14 +292,12 @@ public class MagnitudePhasesInner {
     return period1;
   }
 
-
   public void setPeriod1(Double period1) {
     this.period1 = period1;
   }
 
 
   public MagnitudePhasesInner time2(OffsetDateTime time2) {
-    
     this.time2 = time2;
     return this;
   }
@@ -332,14 +311,12 @@ public class MagnitudePhasesInner {
     return time2;
   }
 
-
   public void setTime2(OffsetDateTime time2) {
     this.time2 = time2;
   }
 
 
   public MagnitudePhasesInner amp2(Double amp2) {
-    
     this.amp2 = amp2;
     return this;
   }
@@ -353,14 +330,12 @@ public class MagnitudePhasesInner {
     return amp2;
   }
 
-
   public void setAmp2(Double amp2) {
     this.amp2 = amp2;
   }
 
 
   public MagnitudePhasesInner period2(Double period2) {
-    
     this.period2 = period2;
     return this;
   }
@@ -373,7 +348,6 @@ public class MagnitudePhasesInner {
   public Double getPeriod2() {
     return period2;
   }
-
 
   public void setPeriod2(Double period2) {
     this.period2 = period2;
@@ -583,7 +557,12 @@ public class MagnitudePhasesInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

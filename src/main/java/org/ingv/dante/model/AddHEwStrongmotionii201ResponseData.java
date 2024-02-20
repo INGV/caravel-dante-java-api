@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * AddHEwStrongmotionii201ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class AddHEwStrongmotionii201ResponseData {
   public static final String SERIALIZED_NAME_STRONGMOTIONS = "strongmotions";
   @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
@@ -62,7 +62,6 @@ public class AddHEwStrongmotionii201ResponseData {
   }
 
   public AddHEwStrongmotionii201ResponseData strongmotions(List<UpdateEvent200ResponseDataEvent> strongmotions) {
-    
     this.strongmotions = strongmotions;
     return this;
   }
@@ -83,7 +82,6 @@ public class AddHEwStrongmotionii201ResponseData {
   public List<UpdateEvent200ResponseDataEvent> getStrongmotions() {
     return strongmotions;
   }
-
 
   public void setStrongmotions(List<UpdateEvent200ResponseDataEvent> strongmotions) {
     this.strongmotions = strongmotions;
@@ -244,7 +242,12 @@ public class AddHEwStrongmotionii201ResponseData {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

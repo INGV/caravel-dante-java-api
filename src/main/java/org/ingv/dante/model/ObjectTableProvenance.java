@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableProvenance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectTableProvenance {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -121,7 +121,6 @@ public class ObjectTableProvenance {
   public ObjectTableProvenance() {
   }
 
-  
   public ObjectTableProvenance(
      Long id, 
      OffsetDateTime modified, 
@@ -144,9 +143,7 @@ public class ObjectTableProvenance {
 
 
 
-
   public ObjectTableProvenance name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -160,14 +157,12 @@ public class ObjectTableProvenance {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ObjectTableProvenance softwarename(String softwarename) {
-    
     this.softwarename = softwarename;
     return this;
   }
@@ -181,14 +176,12 @@ public class ObjectTableProvenance {
     return softwarename;
   }
 
-
   public void setSoftwarename(String softwarename) {
     this.softwarename = softwarename;
   }
 
 
   public ObjectTableProvenance version(String version) {
-    
     this.version = version;
     return this;
   }
@@ -202,14 +195,12 @@ public class ObjectTableProvenance {
     return version;
   }
 
-
   public void setVersion(String version) {
     this.version = version;
   }
 
 
   public ObjectTableProvenance model(String model) {
-    
     this.model = model;
     return this;
   }
@@ -223,14 +214,12 @@ public class ObjectTableProvenance {
     return model;
   }
 
-
   public void setModel(String model) {
     this.model = model;
   }
 
 
   public ObjectTableProvenance method(String method) {
-    
     this.method = method;
     return this;
   }
@@ -244,14 +233,12 @@ public class ObjectTableProvenance {
     return method;
   }
 
-
   public void setMethod(String method) {
     this.method = method;
   }
 
 
   public ObjectTableProvenance parameters(String parameters) {
-    
     this.parameters = parameters;
     return this;
   }
@@ -265,14 +252,12 @@ public class ObjectTableProvenance {
     return parameters;
   }
 
-
   public void setParameters(String parameters) {
     this.parameters = parameters;
   }
 
 
   public ObjectTableProvenance program(String program) {
-    
     this.program = program;
     return this;
   }
@@ -286,14 +271,12 @@ public class ObjectTableProvenance {
     return program;
   }
 
-
   public void setProgram(String program) {
     this.program = program;
   }
 
 
   public ObjectTableProvenance username(String username) {
-    
     this.username = username;
     return this;
   }
@@ -307,14 +290,12 @@ public class ObjectTableProvenance {
     return username;
   }
 
-
   public void setUsername(String username) {
     this.username = username;
   }
 
 
   public ObjectTableProvenance hostname(String hostname) {
-    
     this.hostname = hostname;
     return this;
   }
@@ -328,14 +309,12 @@ public class ObjectTableProvenance {
     return hostname;
   }
 
-
   public void setHostname(String hostname) {
     this.hostname = hostname;
   }
 
 
   public ObjectTableProvenance description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -349,14 +328,12 @@ public class ObjectTableProvenance {
     return description;
   }
 
-
   public void setDescription(String description) {
     this.description = description;
   }
 
 
   public ObjectTableProvenance priority(Long priority) {
-    
     this.priority = priority;
     return this;
   }
@@ -370,14 +347,12 @@ public class ObjectTableProvenance {
     return priority;
   }
 
-
   public void setPriority(Long priority) {
     this.priority = priority;
   }
 
 
   public ObjectTableProvenance evaluationmode(ProvenanceEvaluationmode evaluationmode) {
-    
     this.evaluationmode = evaluationmode;
     return this;
   }
@@ -391,14 +366,12 @@ public class ObjectTableProvenance {
     return evaluationmode;
   }
 
-
   public void setEvaluationmode(ProvenanceEvaluationmode evaluationmode) {
     this.evaluationmode = evaluationmode;
   }
 
 
   public ObjectTableProvenance url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -411,7 +384,6 @@ public class ObjectTableProvenance {
   public String getUrl() {
     return url;
   }
-
 
   public void setUrl(String url) {
     this.url = url;
@@ -429,7 +401,6 @@ public class ObjectTableProvenance {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -438,7 +409,6 @@ public class ObjectTableProvenance {
   public OffsetDateTime getInserted() {
     return inserted;
   }
-
 
 
   /**
@@ -675,7 +645,12 @@ public class ObjectTableProvenance {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

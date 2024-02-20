@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * AddCatalogRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class AddCatalogRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
@@ -62,7 +62,6 @@ public class AddCatalogRequest {
   }
 
   public AddCatalogRequest data(List<AddCatalogRequestDataInner> data) {
-    
     this.data = data;
     return this;
   }
@@ -83,7 +82,6 @@ public class AddCatalogRequest {
   public List<AddCatalogRequestDataInner> getData() {
     return data;
   }
-
 
   public void setData(List<AddCatalogRequestDataInner> data) {
     this.data = data;
@@ -244,7 +242,12 @@ public class AddCatalogRequest {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

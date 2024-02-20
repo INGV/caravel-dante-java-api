@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectArrival
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectArrival {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -113,7 +113,6 @@ public class ObjectArrival {
   public ObjectArrival() {
   }
 
-  
   public ObjectArrival(
      Long id, 
      OffsetDateTime modified, 
@@ -136,7 +135,6 @@ public class ObjectArrival {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -145,7 +143,6 @@ public class ObjectArrival {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
 
@@ -160,9 +157,7 @@ public class ObjectArrival {
 
 
 
-
   public ObjectArrival iscCode(String iscCode) {
-    
     this.iscCode = iscCode;
     return this;
   }
@@ -176,14 +171,12 @@ public class ObjectArrival {
     return iscCode;
   }
 
-
   public void setIscCode(String iscCode) {
     this.iscCode = iscCode;
   }
 
 
   public ObjectArrival epDistanceKm(Float epDistanceKm) {
-    
     this.epDistanceKm = epDistanceKm;
     return this;
   }
@@ -197,14 +190,12 @@ public class ObjectArrival {
     return epDistanceKm;
   }
 
-
   public void setEpDistanceKm(Float epDistanceKm) {
     this.epDistanceKm = epDistanceKm;
   }
 
 
   public ObjectArrival epDistanceDelta(Float epDistanceDelta) {
-    
     this.epDistanceDelta = epDistanceDelta;
     return this;
   }
@@ -218,14 +209,12 @@ public class ObjectArrival {
     return epDistanceDelta;
   }
 
-
   public void setEpDistanceDelta(Float epDistanceDelta) {
     this.epDistanceDelta = epDistanceDelta;
   }
 
 
   public ObjectArrival origDistanceKm(Double origDistanceKm) {
-    
     this.origDistanceKm = origDistanceKm;
     return this;
   }
@@ -239,14 +228,12 @@ public class ObjectArrival {
     return origDistanceKm;
   }
 
-
   public void setOrigDistanceKm(Double origDistanceKm) {
     this.origDistanceKm = origDistanceKm;
   }
 
 
   public ObjectArrival azimut(Float azimut) {
-    
     this.azimut = azimut;
     return this;
   }
@@ -260,14 +247,12 @@ public class ObjectArrival {
     return azimut;
   }
 
-
   public void setAzimut(Float azimut) {
     this.azimut = azimut;
   }
 
 
   public ObjectArrival takeOff(Float takeOff) {
-    
     this.takeOff = takeOff;
     return this;
   }
@@ -281,14 +266,12 @@ public class ObjectArrival {
     return takeOff;
   }
 
-
   public void setTakeOff(Float takeOff) {
     this.takeOff = takeOff;
   }
 
 
   public ObjectArrival polarityIsUsed(Boolean polarityIsUsed) {
-    
     this.polarityIsUsed = polarityIsUsed;
     return this;
   }
@@ -302,14 +285,12 @@ public class ObjectArrival {
     return polarityIsUsed;
   }
 
-
   public void setPolarityIsUsed(Boolean polarityIsUsed) {
     this.polarityIsUsed = polarityIsUsed;
   }
 
 
   public ObjectArrival arrTimeIsUsed(Boolean arrTimeIsUsed) {
-    
     this.arrTimeIsUsed = arrTimeIsUsed;
     return this;
   }
@@ -323,14 +304,12 @@ public class ObjectArrival {
     return arrTimeIsUsed;
   }
 
-
   public void setArrTimeIsUsed(Boolean arrTimeIsUsed) {
     this.arrTimeIsUsed = arrTimeIsUsed;
   }
 
 
   public ObjectArrival residual(Double residual) {
-    
     this.residual = residual;
     return this;
   }
@@ -344,14 +323,12 @@ public class ObjectArrival {
     return residual;
   }
 
-
   public void setResidual(Double residual) {
     this.residual = residual;
   }
 
 
   public ObjectArrival weight(Double weight) {
-    
     this.weight = weight;
     return this;
   }
@@ -365,14 +342,12 @@ public class ObjectArrival {
     return weight;
   }
 
-
   public void setWeight(Double weight) {
     this.weight = weight;
   }
 
 
   public ObjectArrival pick(ObjectPick pick) {
-    
     this.pick = pick;
     return this;
   }
@@ -385,7 +360,6 @@ public class ObjectArrival {
   public ObjectPick getPick() {
     return pick;
   }
-
 
   public void setPick(ObjectPick pick) {
     this.pick = pick;
@@ -597,7 +571,12 @@ public class ObjectArrival {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

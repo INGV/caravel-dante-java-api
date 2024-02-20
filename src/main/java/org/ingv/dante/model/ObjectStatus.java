@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectStatus {
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
@@ -102,7 +102,6 @@ public class ObjectStatus {
   }
 
   public ObjectStatus detail(String detail) {
-    
     this.detail = detail;
     return this;
   }
@@ -116,14 +115,12 @@ public class ObjectStatus {
     return detail;
   }
 
-
   public void setDetail(String detail) {
     this.detail = detail;
   }
 
 
   public ObjectStatus instance(URI instance) {
-    
     this.instance = instance;
     return this;
   }
@@ -137,14 +134,12 @@ public class ObjectStatus {
     return instance;
   }
 
-
   public void setInstance(URI instance) {
     this.instance = instance;
   }
 
 
   public ObjectStatus status(Integer status) {
-    
     this.status = status;
     return this;
   }
@@ -160,14 +155,12 @@ public class ObjectStatus {
     return status;
   }
 
-
   public void setStatus(Integer status) {
     this.status = status;
   }
 
 
   public ObjectStatus title(String title) {
-    
     this.title = title;
     return this;
   }
@@ -181,14 +174,12 @@ public class ObjectStatus {
     return title;
   }
 
-
   public void setTitle(String title) {
     this.title = title;
   }
 
 
   public ObjectStatus type(URI type) {
-    
     this.type = type;
     return this;
   }
@@ -202,14 +193,12 @@ public class ObjectStatus {
     return type;
   }
 
-
   public void setType(URI type) {
     this.type = type;
   }
 
 
   public ObjectStatus version(String version) {
-    
     this.version = version;
     return this;
   }
@@ -223,14 +212,12 @@ public class ObjectStatus {
     return version;
   }
 
-
   public void setVersion(String version) {
     this.version = version;
   }
 
 
   public ObjectStatus dbConnection(String dbConnection) {
-    
     this.dbConnection = dbConnection;
     return this;
   }
@@ -244,14 +231,12 @@ public class ObjectStatus {
     return dbConnection;
   }
 
-
   public void setDbConnection(String dbConnection) {
     this.dbConnection = dbConnection;
   }
 
 
   public ObjectStatus dbHost(ObjectStatusDbHost dbHost) {
-    
     this.dbHost = dbHost;
     return this;
   }
@@ -265,14 +250,12 @@ public class ObjectStatus {
     return dbHost;
   }
 
-
   public void setDbHost(ObjectStatusDbHost dbHost) {
     this.dbHost = dbHost;
   }
 
 
   public ObjectStatus dbPort(Long dbPort) {
-    
     this.dbPort = dbPort;
     return this;
   }
@@ -286,14 +269,12 @@ public class ObjectStatus {
     return dbPort;
   }
 
-
   public void setDbPort(Long dbPort) {
     this.dbPort = dbPort;
   }
 
 
   public ObjectStatus dbName(String dbName) {
-    
     this.dbName = dbName;
     return this;
   }
@@ -307,14 +288,12 @@ public class ObjectStatus {
     return dbName;
   }
 
-
   public void setDbName(String dbName) {
     this.dbName = dbName;
   }
 
 
   public ObjectStatus dbSchema(String dbSchema) {
-    
     this.dbSchema = dbSchema;
     return this;
   }
@@ -327,7 +306,6 @@ public class ObjectStatus {
   public String getDbSchema() {
     return dbSchema;
   }
-
 
   public void setDbSchema(String dbSchema) {
     this.dbSchema = dbSchema;
@@ -543,7 +521,12 @@ public class ObjectStatus {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

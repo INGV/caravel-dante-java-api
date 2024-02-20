@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaEwMessageRSAInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class StrongmotioniiSchemaEwMessageRSAInner {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
@@ -63,7 +63,6 @@ public class StrongmotioniiSchemaEwMessageRSAInner {
   }
 
   public StrongmotioniiSchemaEwMessageRSAInner value(Double value) {
-    
     this.value = value;
     return this;
   }
@@ -77,14 +76,12 @@ public class StrongmotioniiSchemaEwMessageRSAInner {
     return value;
   }
 
-
   public void setValue(Double value) {
     this.value = value;
   }
 
 
   public StrongmotioniiSchemaEwMessageRSAInner period(Double period) {
-    
     this.period = period;
     return this;
   }
@@ -97,7 +94,6 @@ public class StrongmotioniiSchemaEwMessageRSAInner {
   public Double getPeriod() {
     return period;
   }
-
 
   public void setPeriod(Double period) {
     this.period = period;
@@ -247,7 +243,12 @@ public class StrongmotioniiSchemaEwMessageRSAInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableTypeEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectTableTypeEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -76,7 +76,6 @@ public class ObjectTableTypeEvent {
   public ObjectTableTypeEvent() {
   }
 
-  
   public ObjectTableTypeEvent(
      Long id, 
      OffsetDateTime modified, 
@@ -99,9 +98,7 @@ public class ObjectTableTypeEvent {
 
 
 
-
   public ObjectTableTypeEvent name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -115,14 +112,12 @@ public class ObjectTableTypeEvent {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ObjectTableTypeEvent description(String description) {
-    
     this.description = description;
     return this;
   }
@@ -135,7 +130,6 @@ public class ObjectTableTypeEvent {
   public String getDescription() {
     return description;
   }
-
 
   public void setDescription(String description) {
     this.description = description;
@@ -153,7 +147,6 @@ public class ObjectTableTypeEvent {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -162,7 +155,6 @@ public class ObjectTableTypeEvent {
   public OffsetDateTime getInserted() {
     return inserted;
   }
-
 
 
   /**
@@ -335,7 +327,12 @@ public class ObjectTableTypeEvent {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

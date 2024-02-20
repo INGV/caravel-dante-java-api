@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * LinksDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class LinksDefinition {
   public static final String SERIALIZED_NAME_FIRST = "first";
   @SerializedName(SERIALIZED_NAME_FIRST)
@@ -72,7 +72,6 @@ public class LinksDefinition {
   }
 
   public LinksDefinition first(String first) {
-    
     this.first = first;
     return this;
   }
@@ -86,14 +85,12 @@ public class LinksDefinition {
     return first;
   }
 
-
   public void setFirst(String first) {
     this.first = first;
   }
 
 
   public LinksDefinition last(String last) {
-    
     this.last = last;
     return this;
   }
@@ -107,14 +104,12 @@ public class LinksDefinition {
     return last;
   }
 
-
   public void setLast(String last) {
     this.last = last;
   }
 
 
   public LinksDefinition prev(String prev) {
-    
     this.prev = prev;
     return this;
   }
@@ -128,14 +123,12 @@ public class LinksDefinition {
     return prev;
   }
 
-
   public void setPrev(String prev) {
     this.prev = prev;
   }
 
 
   public LinksDefinition next(String next) {
-    
     this.next = next;
     return this;
   }
@@ -148,7 +141,6 @@ public class LinksDefinition {
   public String getNext() {
     return next;
   }
-
 
   public void setNext(String next) {
     this.next = next;
@@ -327,7 +319,12 @@ public class LinksDefinition {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

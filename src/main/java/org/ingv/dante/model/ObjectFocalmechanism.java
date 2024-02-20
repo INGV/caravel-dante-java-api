@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanism
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectFocalmechanism {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -143,7 +143,6 @@ public class ObjectFocalmechanism {
   public ObjectFocalmechanism() {
   }
 
-  
   public ObjectFocalmechanism(
      Long id, 
      OffsetDateTime modified, 
@@ -166,7 +165,6 @@ public class ObjectFocalmechanism {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -175,7 +173,6 @@ public class ObjectFocalmechanism {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
 
@@ -190,9 +187,7 @@ public class ObjectFocalmechanism {
 
 
 
-
   public ObjectFocalmechanism idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -206,14 +201,12 @@ public class ObjectFocalmechanism {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectFocalmechanism strike1(Integer strike1) {
-    
     this.strike1 = strike1;
     return this;
   }
@@ -227,14 +220,12 @@ public class ObjectFocalmechanism {
     return strike1;
   }
 
-
   public void setStrike1(Integer strike1) {
     this.strike1 = strike1;
   }
 
 
   public ObjectFocalmechanism dip1(Integer dip1) {
-    
     this.dip1 = dip1;
     return this;
   }
@@ -248,14 +239,12 @@ public class ObjectFocalmechanism {
     return dip1;
   }
 
-
   public void setDip1(Integer dip1) {
     this.dip1 = dip1;
   }
 
 
   public ObjectFocalmechanism rake1(Integer rake1) {
-    
     this.rake1 = rake1;
     return this;
   }
@@ -269,14 +258,12 @@ public class ObjectFocalmechanism {
     return rake1;
   }
 
-
   public void setRake1(Integer rake1) {
     this.rake1 = rake1;
   }
 
 
   public ObjectFocalmechanism strike2(Integer strike2) {
-    
     this.strike2 = strike2;
     return this;
   }
@@ -290,14 +277,12 @@ public class ObjectFocalmechanism {
     return strike2;
   }
 
-
   public void setStrike2(Integer strike2) {
     this.strike2 = strike2;
   }
 
 
   public ObjectFocalmechanism dip2(Integer dip2) {
-    
     this.dip2 = dip2;
     return this;
   }
@@ -311,14 +296,12 @@ public class ObjectFocalmechanism {
     return dip2;
   }
 
-
   public void setDip2(Integer dip2) {
     this.dip2 = dip2;
   }
 
 
   public ObjectFocalmechanism rake2(Integer rake2) {
-    
     this.rake2 = rake2;
     return this;
   }
@@ -332,14 +315,12 @@ public class ObjectFocalmechanism {
     return rake2;
   }
 
-
   public void setRake2(Integer rake2) {
     this.rake2 = rake2;
   }
 
 
   public ObjectFocalmechanism azimGap(Float azimGap) {
-    
     this.azimGap = azimGap;
     return this;
   }
@@ -353,14 +334,12 @@ public class ObjectFocalmechanism {
     return azimGap;
   }
 
-
   public void setAzimGap(Float azimGap) {
     this.azimGap = azimGap;
   }
 
 
   public ObjectFocalmechanism nstaPolarity(Integer nstaPolarity) {
-    
     this.nstaPolarity = nstaPolarity;
     return this;
   }
@@ -374,14 +353,12 @@ public class ObjectFocalmechanism {
     return nstaPolarity;
   }
 
-
   public void setNstaPolarity(Integer nstaPolarity) {
     this.nstaPolarity = nstaPolarity;
   }
 
 
   public ObjectFocalmechanism misfit(Double misfit) {
-    
     this.misfit = misfit;
     return this;
   }
@@ -395,14 +372,12 @@ public class ObjectFocalmechanism {
     return misfit;
   }
 
-
   public void setMisfit(Double misfit) {
     this.misfit = misfit;
   }
 
 
   public ObjectFocalmechanism stdr(Double stdr) {
-    
     this.stdr = stdr;
     return this;
   }
@@ -416,14 +391,12 @@ public class ObjectFocalmechanism {
     return stdr;
   }
 
-
   public void setStdr(Double stdr) {
     this.stdr = stdr;
   }
 
 
   public ObjectFocalmechanism rmsAngDiffAccPref(Double rmsAngDiffAccPref) {
-    
     this.rmsAngDiffAccPref = rmsAngDiffAccPref;
     return this;
   }
@@ -437,14 +410,12 @@ public class ObjectFocalmechanism {
     return rmsAngDiffAccPref;
   }
 
-
   public void setRmsAngDiffAccPref(Double rmsAngDiffAccPref) {
     this.rmsAngDiffAccPref = rmsAngDiffAccPref;
   }
 
 
   public ObjectFocalmechanism fracAcc30degPref(Double fracAcc30degPref) {
-    
     this.fracAcc30degPref = fracAcc30degPref;
     return this;
   }
@@ -458,14 +429,12 @@ public class ObjectFocalmechanism {
     return fracAcc30degPref;
   }
 
-
   public void setFracAcc30degPref(Double fracAcc30degPref) {
     this.fracAcc30degPref = fracAcc30degPref;
   }
 
 
   public ObjectFocalmechanism quality(String quality) {
-    
     this.quality = quality;
     return this;
   }
@@ -479,14 +448,12 @@ public class ObjectFocalmechanism {
     return quality;
   }
 
-
   public void setQuality(String quality) {
     this.quality = quality;
   }
 
 
   public ObjectFocalmechanism url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -500,14 +467,12 @@ public class ObjectFocalmechanism {
     return url;
   }
 
-
   public void setUrl(String url) {
     this.url = url;
   }
 
 
   public ObjectFocalmechanism momenttensor(ObjectMomenttensor momenttensor) {
-    
     this.momenttensor = momenttensor;
     return this;
   }
@@ -521,14 +486,12 @@ public class ObjectFocalmechanism {
     return momenttensor;
   }
 
-
   public void setMomenttensor(ObjectMomenttensor momenttensor) {
     this.momenttensor = momenttensor;
   }
 
 
   public ObjectFocalmechanism localspace(ObjectLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -542,14 +505,12 @@ public class ObjectFocalmechanism {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectFocalmechanism provenance(ObjectProvenance provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -562,7 +523,6 @@ public class ObjectFocalmechanism {
   public ObjectProvenance getProvenance() {
     return provenance;
   }
-
 
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
@@ -798,7 +758,12 @@ public class ObjectFocalmechanism {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -55,7 +55,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEvent201ResponseDataEventOriginsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class AddEvent201ResponseDataEventOriginsInner {
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
@@ -81,7 +81,6 @@ public class AddEvent201ResponseDataEventOriginsInner {
   }
 
   public AddEvent201ResponseDataEventOriginsInner magnitudes(List<UpdateEvent200ResponseDataEvent> magnitudes) {
-    
     this.magnitudes = magnitudes;
     return this;
   }
@@ -103,14 +102,12 @@ public class AddEvent201ResponseDataEventOriginsInner {
     return magnitudes;
   }
 
-
   public void setMagnitudes(List<UpdateEvent200ResponseDataEvent> magnitudes) {
     this.magnitudes = magnitudes;
   }
 
 
   public AddEvent201ResponseDataEventOriginsInner focalmechanisms(List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
-    
     this.focalmechanisms = focalmechanisms;
     return this;
   }
@@ -132,14 +129,12 @@ public class AddEvent201ResponseDataEventOriginsInner {
     return focalmechanisms;
   }
 
-
   public void setFocalmechanisms(List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
   }
 
 
   public AddEvent201ResponseDataEventOriginsInner id(Long id) {
-    
     this.id = id;
     return this;
   }
@@ -153,14 +148,12 @@ public class AddEvent201ResponseDataEventOriginsInner {
     return id;
   }
 
-
   public void setId(Long id) {
     this.id = id;
   }
 
 
   public AddEvent201ResponseDataEventOriginsInner idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -174,14 +167,12 @@ public class AddEvent201ResponseDataEventOriginsInner {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public AddEvent201ResponseDataEventOriginsInner localspace(AddEvent201ResponseDataEventLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -194,7 +185,6 @@ public class AddEvent201ResponseDataEventOriginsInner {
   public AddEvent201ResponseDataEventLocalspace getLocalspace() {
     return localspace;
   }
-
 
   public void setLocalspace(AddEvent201ResponseDataEventLocalspace localspace) {
     this.localspace = localspace;
@@ -396,7 +386,12 @@ public class AddEvent201ResponseDataEventOriginsInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

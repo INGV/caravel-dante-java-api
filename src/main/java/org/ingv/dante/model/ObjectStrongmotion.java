@@ -57,7 +57,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectStrongmotion {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -150,7 +150,6 @@ public class ObjectStrongmotion {
   public ObjectStrongmotion() {
   }
 
-  
   public ObjectStrongmotion(
      Long id, 
      OffsetDateTime modified, 
@@ -163,7 +162,6 @@ public class ObjectStrongmotion {
   }
 
   public ObjectStrongmotion net(String net) {
-    
     this.net = net;
     return this;
   }
@@ -177,14 +175,12 @@ public class ObjectStrongmotion {
     return net;
   }
 
-
   public void setNet(String net) {
     this.net = net;
   }
 
 
   public ObjectStrongmotion sta(String sta) {
-    
     this.sta = sta;
     return this;
   }
@@ -198,14 +194,12 @@ public class ObjectStrongmotion {
     return sta;
   }
 
-
   public void setSta(String sta) {
     this.sta = sta;
   }
 
 
   public ObjectStrongmotion cha(String cha) {
-    
     this.cha = cha;
     return this;
   }
@@ -219,14 +213,12 @@ public class ObjectStrongmotion {
     return cha;
   }
 
-
   public void setCha(String cha) {
     this.cha = cha;
   }
 
 
   public ObjectStrongmotion loc(String loc) {
-    
     this.loc = loc;
     return this;
   }
@@ -239,7 +231,6 @@ public class ObjectStrongmotion {
   public String getLoc() {
     return loc;
   }
-
 
   public void setLoc(String loc) {
     this.loc = loc;
@@ -257,7 +248,6 @@ public class ObjectStrongmotion {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -266,7 +256,6 @@ public class ObjectStrongmotion {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
 
@@ -281,9 +270,7 @@ public class ObjectStrongmotion {
 
 
 
-
   public ObjectStrongmotion idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -297,14 +284,12 @@ public class ObjectStrongmotion {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectStrongmotion tDt(OffsetDateTime tDt) {
-    
     this.tDt = tDt;
     return this;
   }
@@ -318,14 +303,12 @@ public class ObjectStrongmotion {
     return tDt;
   }
 
-
   public void settDt(OffsetDateTime tDt) {
     this.tDt = tDt;
   }
 
 
   public ObjectStrongmotion pga(Float pga) {
-    
     this.pga = pga;
     return this;
   }
@@ -339,14 +322,12 @@ public class ObjectStrongmotion {
     return pga;
   }
 
-
   public void setPga(Float pga) {
     this.pga = pga;
   }
 
 
   public ObjectStrongmotion tpgaDt(OffsetDateTime tpgaDt) {
-    
     this.tpgaDt = tpgaDt;
     return this;
   }
@@ -360,14 +341,12 @@ public class ObjectStrongmotion {
     return tpgaDt;
   }
 
-
   public void setTpgaDt(OffsetDateTime tpgaDt) {
     this.tpgaDt = tpgaDt;
   }
 
 
   public ObjectStrongmotion pgv(Float pgv) {
-    
     this.pgv = pgv;
     return this;
   }
@@ -381,14 +360,12 @@ public class ObjectStrongmotion {
     return pgv;
   }
 
-
   public void setPgv(Float pgv) {
     this.pgv = pgv;
   }
 
 
   public ObjectStrongmotion tpgvDt(OffsetDateTime tpgvDt) {
-    
     this.tpgvDt = tpgvDt;
     return this;
   }
@@ -402,14 +379,12 @@ public class ObjectStrongmotion {
     return tpgvDt;
   }
 
-
   public void setTpgvDt(OffsetDateTime tpgvDt) {
     this.tpgvDt = tpgvDt;
   }
 
 
   public ObjectStrongmotion pgd(Float pgd) {
-    
     this.pgd = pgd;
     return this;
   }
@@ -423,14 +398,12 @@ public class ObjectStrongmotion {
     return pgd;
   }
 
-
   public void setPgd(Float pgd) {
     this.pgd = pgd;
   }
 
 
   public ObjectStrongmotion tpgdDt(OffsetDateTime tpgdDt) {
-    
     this.tpgdDt = tpgdDt;
     return this;
   }
@@ -444,14 +417,12 @@ public class ObjectStrongmotion {
     return tpgdDt;
   }
 
-
   public void setTpgdDt(OffsetDateTime tpgdDt) {
     this.tpgdDt = tpgdDt;
   }
 
 
   public ObjectStrongmotion rsa030(Float rsa030) {
-    
     this.rsa030 = rsa030;
     return this;
   }
@@ -465,14 +436,12 @@ public class ObjectStrongmotion {
     return rsa030;
   }
 
-
   public void setRsa030(Float rsa030) {
     this.rsa030 = rsa030;
   }
 
 
   public ObjectStrongmotion rsa100(Float rsa100) {
-    
     this.rsa100 = rsa100;
     return this;
   }
@@ -486,14 +455,12 @@ public class ObjectStrongmotion {
     return rsa100;
   }
 
-
   public void setRsa100(Float rsa100) {
     this.rsa100 = rsa100;
   }
 
 
   public ObjectStrongmotion rsa300(Float rsa300) {
-    
     this.rsa300 = rsa300;
     return this;
   }
@@ -507,14 +474,12 @@ public class ObjectStrongmotion {
     return rsa300;
   }
 
-
   public void setRsa300(Float rsa300) {
     this.rsa300 = rsa300;
   }
 
 
   public ObjectStrongmotion localspace(ObjectLocalspace localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -528,14 +493,12 @@ public class ObjectStrongmotion {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectStrongmotion provenance(ObjectProvenance provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -549,14 +512,12 @@ public class ObjectStrongmotion {
     return provenance;
   }
 
-
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
   public ObjectStrongmotion alternative(ObjectStrongmotionAlternative alternative) {
-    
     this.alternative = alternative;
     return this;
   }
@@ -570,14 +531,12 @@ public class ObjectStrongmotion {
     return alternative;
   }
 
-
   public void setAlternative(ObjectStrongmotionAlternative alternative) {
     this.alternative = alternative;
   }
 
 
   public ObjectStrongmotion rsa(List<ObjectStrongmotionRsaInner> rsa) {
-    
     this.rsa = rsa;
     return this;
   }
@@ -598,7 +557,6 @@ public class ObjectStrongmotion {
   public List<ObjectStrongmotionRsaInner> getRsa() {
     return rsa;
   }
-
 
   public void setRsa(List<ObjectStrongmotionRsaInner> rsa) {
     this.rsa = rsa;
@@ -865,7 +823,12 @@ public class ObjectStrongmotion {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

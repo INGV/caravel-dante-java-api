@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * AddOriginRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class AddOriginRequestData {
   public static final String SERIALIZED_NAME_EVENTID = "eventid";
   @SerializedName(SERIALIZED_NAME_EVENTID)
@@ -66,7 +66,6 @@ public class AddOriginRequestData {
   }
 
   public AddOriginRequestData eventid(Long eventid) {
-    
     this.eventid = eventid;
     return this;
   }
@@ -80,14 +79,12 @@ public class AddOriginRequestData {
     return eventid;
   }
 
-
   public void setEventid(Long eventid) {
     this.eventid = eventid;
   }
 
 
   public AddOriginRequestData origins(List<ObjectOrigin> origins) {
-    
     this.origins = origins;
     return this;
   }
@@ -108,7 +105,6 @@ public class AddOriginRequestData {
   public List<ObjectOrigin> getOrigins() {
     return origins;
   }
-
 
   public void setOrigins(List<ObjectOrigin> origins) {
     this.origins = origins;
@@ -272,7 +268,12 @@ public class AddOriginRequestData {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

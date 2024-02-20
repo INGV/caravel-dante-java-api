@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipio200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class GetMunicipio200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -83,7 +83,6 @@ public class GetMunicipio200ResponseDataInner {
   }
 
   public GetMunicipio200ResponseDataInner name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -97,14 +96,12 @@ public class GetMunicipio200ResponseDataInner {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public GetMunicipio200ResponseDataInner provNameAbbr(String provNameAbbr) {
-    
     this.provNameAbbr = provNameAbbr;
     return this;
   }
@@ -118,14 +115,12 @@ public class GetMunicipio200ResponseDataInner {
     return provNameAbbr;
   }
 
-
   public void setProvNameAbbr(String provNameAbbr) {
     this.provNameAbbr = provNameAbbr;
   }
 
 
   public GetMunicipio200ResponseDataInner provName(String provName) {
-    
     this.provName = provName;
     return this;
   }
@@ -139,14 +134,12 @@ public class GetMunicipio200ResponseDataInner {
     return provName;
   }
 
-
   public void setProvName(String provName) {
     this.provName = provName;
   }
 
 
   public GetMunicipio200ResponseDataInner regionName(String regionName) {
-    
     this.regionName = regionName;
     return this;
   }
@@ -160,14 +153,12 @@ public class GetMunicipio200ResponseDataInner {
     return regionName;
   }
 
-
   public void setRegionName(String regionName) {
     this.regionName = regionName;
   }
 
 
   public GetMunicipio200ResponseDataInner population(Long population) {
-    
     this.population = population;
     return this;
   }
@@ -181,14 +172,12 @@ public class GetMunicipio200ResponseDataInner {
     return population;
   }
 
-
   public void setPopulation(Long population) {
     this.population = population;
   }
 
 
   public GetMunicipio200ResponseDataInner lat(Double lat) {
-    
     this.lat = lat;
     return this;
   }
@@ -204,14 +193,12 @@ public class GetMunicipio200ResponseDataInner {
     return lat;
   }
 
-
   public void setLat(Double lat) {
     this.lat = lat;
   }
 
 
   public GetMunicipio200ResponseDataInner lon(Double lon) {
-    
     this.lon = lon;
     return this;
   }
@@ -226,7 +213,6 @@ public class GetMunicipio200ResponseDataInner {
   public Double getLon() {
     return lon;
   }
-
 
   public void setLon(Double lon) {
     this.lon = lon;
@@ -403,7 +389,12 @@ public class GetMunicipio200ResponseDataInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

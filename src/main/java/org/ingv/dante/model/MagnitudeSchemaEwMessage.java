@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class MagnitudeSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -122,7 +122,6 @@ public class MagnitudeSchemaEwMessage {
   }
 
   public MagnitudeSchemaEwMessage quakeId(Long quakeId) {
-    
     this.quakeId = quakeId;
     return this;
   }
@@ -136,14 +135,12 @@ public class MagnitudeSchemaEwMessage {
     return quakeId;
   }
 
-
   public void setQuakeId(Long quakeId) {
     this.quakeId = quakeId;
   }
 
 
   public MagnitudeSchemaEwMessage version(String version) {
-    
     this.version = version;
     return this;
   }
@@ -157,14 +154,12 @@ public class MagnitudeSchemaEwMessage {
     return version;
   }
 
-
   public void setVersion(String version) {
     this.version = version;
   }
 
 
   public MagnitudeSchemaEwMessage mag(Double mag) {
-    
     this.mag = mag;
     return this;
   }
@@ -178,14 +173,12 @@ public class MagnitudeSchemaEwMessage {
     return mag;
   }
 
-
   public void setMag(Double mag) {
     this.mag = mag;
   }
 
 
   public MagnitudeSchemaEwMessage error(Double error) {
-    
     this.error = error;
     return this;
   }
@@ -199,14 +192,12 @@ public class MagnitudeSchemaEwMessage {
     return error;
   }
 
-
   public void setError(Double error) {
     this.error = error;
   }
 
 
   public MagnitudeSchemaEwMessage quality(Double quality) {
-    
     this.quality = quality;
     return this;
   }
@@ -220,14 +211,12 @@ public class MagnitudeSchemaEwMessage {
     return quality;
   }
 
-
   public void setQuality(Double quality) {
     this.quality = quality;
   }
 
 
   public MagnitudeSchemaEwMessage minDist(Double minDist) {
-    
     this.minDist = minDist;
     return this;
   }
@@ -241,14 +230,12 @@ public class MagnitudeSchemaEwMessage {
     return minDist;
   }
 
-
   public void setMinDist(Double minDist) {
     this.minDist = minDist;
   }
 
 
   public MagnitudeSchemaEwMessage azimuth(Float azimuth) {
-    
     this.azimuth = azimuth;
     return this;
   }
@@ -262,14 +249,12 @@ public class MagnitudeSchemaEwMessage {
     return azimuth;
   }
 
-
   public void setAzimuth(Float azimuth) {
     this.azimuth = azimuth;
   }
 
 
   public MagnitudeSchemaEwMessage nStations(Long nStations) {
-    
     this.nStations = nStations;
     return this;
   }
@@ -283,14 +268,12 @@ public class MagnitudeSchemaEwMessage {
     return nStations;
   }
 
-
   public void setnStations(Long nStations) {
     this.nStations = nStations;
   }
 
 
   public MagnitudeSchemaEwMessage nChannels(Long nChannels) {
-    
     this.nChannels = nChannels;
     return this;
   }
@@ -304,14 +287,12 @@ public class MagnitudeSchemaEwMessage {
     return nChannels;
   }
 
-
   public void setnChannels(Long nChannels) {
     this.nChannels = nChannels;
   }
 
 
   public MagnitudeSchemaEwMessage qAuthor(String qAuthor) {
-    
     this.qAuthor = qAuthor;
     return this;
   }
@@ -325,14 +306,12 @@ public class MagnitudeSchemaEwMessage {
     return qAuthor;
   }
 
-
   public void setqAuthor(String qAuthor) {
     this.qAuthor = qAuthor;
   }
 
 
   public MagnitudeSchemaEwMessage qddsVersion(Double qddsVersion) {
-    
     this.qddsVersion = qddsVersion;
     return this;
   }
@@ -346,14 +325,12 @@ public class MagnitudeSchemaEwMessage {
     return qddsVersion;
   }
 
-
   public void setQddsVersion(Double qddsVersion) {
     this.qddsVersion = qddsVersion;
   }
 
 
   public MagnitudeSchemaEwMessage iMagType(Double iMagType) {
-    
     this.iMagType = iMagType;
     return this;
   }
@@ -367,14 +344,12 @@ public class MagnitudeSchemaEwMessage {
     return iMagType;
   }
 
-
   public void setiMagType(Double iMagType) {
     this.iMagType = iMagType;
   }
 
 
   public MagnitudeSchemaEwMessage magType(String magType) {
-    
     this.magType = magType;
     return this;
   }
@@ -388,14 +363,12 @@ public class MagnitudeSchemaEwMessage {
     return magType;
   }
 
-
   public void setMagType(String magType) {
     this.magType = magType;
   }
 
 
   public MagnitudeSchemaEwMessage algorithm(Double algorithm) {
-    
     this.algorithm = algorithm;
     return this;
   }
@@ -409,14 +382,12 @@ public class MagnitudeSchemaEwMessage {
     return algorithm;
   }
 
-
   public void setAlgorithm(Double algorithm) {
     this.algorithm = algorithm;
   }
 
 
   public MagnitudeSchemaEwMessage ingvQuality(String ingvQuality) {
-    
     this.ingvQuality = ingvQuality;
     return this;
   }
@@ -430,14 +401,12 @@ public class MagnitudeSchemaEwMessage {
     return ingvQuality;
   }
 
-
   public void setIngvQuality(String ingvQuality) {
     this.ingvQuality = ingvQuality;
   }
 
 
   public MagnitudeSchemaEwMessage phases(List<MagnitudePhasesInner> phases) {
-    
     this.phases = phases;
     return this;
   }
@@ -458,7 +427,6 @@ public class MagnitudeSchemaEwMessage {
   public List<MagnitudePhasesInner> getPhases() {
     return phases;
   }
-
 
   public void setPhases(List<MagnitudePhasesInner> phases) {
     this.phases = phases;
@@ -689,7 +657,12 @@ public class MagnitudeSchemaEwMessage {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * Quake2kSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class Quake2kSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -96,7 +96,6 @@ public class Quake2kSchemaEwMessage {
   }
 
   public Quake2kSchemaEwMessage quakeId(Long quakeId) {
-    
     this.quakeId = quakeId;
     return this;
   }
@@ -110,14 +109,12 @@ public class Quake2kSchemaEwMessage {
     return quakeId;
   }
 
-
   public void setQuakeId(Long quakeId) {
     this.quakeId = quakeId;
   }
 
 
   public Quake2kSchemaEwMessage originTime(OffsetDateTime originTime) {
-    
     this.originTime = originTime;
     return this;
   }
@@ -131,14 +128,12 @@ public class Quake2kSchemaEwMessage {
     return originTime;
   }
 
-
   public void setOriginTime(OffsetDateTime originTime) {
     this.originTime = originTime;
   }
 
 
   public Quake2kSchemaEwMessage latitude(Double latitude) {
-    
     this.latitude = latitude;
     return this;
   }
@@ -154,14 +149,12 @@ public class Quake2kSchemaEwMessage {
     return latitude;
   }
 
-
   public void setLatitude(Double latitude) {
     this.latitude = latitude;
   }
 
 
   public Quake2kSchemaEwMessage longitude(Double longitude) {
-    
     this.longitude = longitude;
     return this;
   }
@@ -177,14 +170,12 @@ public class Quake2kSchemaEwMessage {
     return longitude;
   }
 
-
   public void setLongitude(Double longitude) {
     this.longitude = longitude;
   }
 
 
   public Quake2kSchemaEwMessage depth(Double depth) {
-    
     this.depth = depth;
     return this;
   }
@@ -198,14 +189,12 @@ public class Quake2kSchemaEwMessage {
     return depth;
   }
 
-
   public void setDepth(Double depth) {
     this.depth = depth;
   }
 
 
   public Quake2kSchemaEwMessage rms(Double rms) {
-    
     this.rms = rms;
     return this;
   }
@@ -219,14 +208,12 @@ public class Quake2kSchemaEwMessage {
     return rms;
   }
 
-
   public void setRms(Double rms) {
     this.rms = rms;
   }
 
 
   public Quake2kSchemaEwMessage dmin(Double dmin) {
-    
     this.dmin = dmin;
     return this;
   }
@@ -240,14 +227,12 @@ public class Quake2kSchemaEwMessage {
     return dmin;
   }
 
-
   public void setDmin(Double dmin) {
     this.dmin = dmin;
   }
 
 
   public Quake2kSchemaEwMessage ravg(Double ravg) {
-    
     this.ravg = ravg;
     return this;
   }
@@ -261,14 +246,12 @@ public class Quake2kSchemaEwMessage {
     return ravg;
   }
 
-
   public void setRavg(Double ravg) {
     this.ravg = ravg;
   }
 
 
   public Quake2kSchemaEwMessage gap(Float gap) {
-    
     this.gap = gap;
     return this;
   }
@@ -282,14 +265,12 @@ public class Quake2kSchemaEwMessage {
     return gap;
   }
 
-
   public void setGap(Float gap) {
     this.gap = gap;
   }
 
 
   public Quake2kSchemaEwMessage nph(Long nph) {
-    
     this.nph = nph;
     return this;
   }
@@ -302,7 +283,6 @@ public class Quake2kSchemaEwMessage {
   public Long getNph() {
     return nph;
   }
-
 
   public void setNph(Long nph) {
     this.nph = nph;
@@ -488,7 +468,12 @@ public class Quake2kSchemaEwMessage {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

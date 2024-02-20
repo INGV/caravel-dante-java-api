@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class PickScnlSchemaEwMessage {
   public static final String SERIALIZED_NAME_PICK_ID = "pickId";
   @SerializedName(SERIALIZED_NAME_PICK_ID)
@@ -96,7 +96,6 @@ public class PickScnlSchemaEwMessage {
   }
 
   public PickScnlSchemaEwMessage pickId(Long pickId) {
-    
     this.pickId = pickId;
     return this;
   }
@@ -110,14 +109,12 @@ public class PickScnlSchemaEwMessage {
     return pickId;
   }
 
-
   public void setPickId(Long pickId) {
     this.pickId = pickId;
   }
 
 
   public PickScnlSchemaEwMessage network(String network) {
-    
     this.network = network;
     return this;
   }
@@ -131,14 +128,12 @@ public class PickScnlSchemaEwMessage {
     return network;
   }
 
-
   public void setNetwork(String network) {
     this.network = network;
   }
 
 
   public PickScnlSchemaEwMessage station(String station) {
-    
     this.station = station;
     return this;
   }
@@ -152,14 +147,12 @@ public class PickScnlSchemaEwMessage {
     return station;
   }
 
-
   public void setStation(String station) {
     this.station = station;
   }
 
 
   public PickScnlSchemaEwMessage component(String component) {
-    
     this.component = component;
     return this;
   }
@@ -173,14 +166,12 @@ public class PickScnlSchemaEwMessage {
     return component;
   }
 
-
   public void setComponent(String component) {
     this.component = component;
   }
 
 
   public PickScnlSchemaEwMessage location(String location) {
-    
     this.location = location;
     return this;
   }
@@ -194,14 +185,12 @@ public class PickScnlSchemaEwMessage {
     return location;
   }
 
-
   public void setLocation(String location) {
     this.location = location;
   }
 
 
   public PickScnlSchemaEwMessage firstMotion(PickFirstmotion firstMotion) {
-    
     this.firstMotion = firstMotion;
     return this;
   }
@@ -215,14 +204,12 @@ public class PickScnlSchemaEwMessage {
     return firstMotion;
   }
 
-
   public void setFirstMotion(PickFirstmotion firstMotion) {
     this.firstMotion = firstMotion;
   }
 
 
   public PickScnlSchemaEwMessage pickWeight(Float pickWeight) {
-    
     this.pickWeight = pickWeight;
     return this;
   }
@@ -236,14 +223,12 @@ public class PickScnlSchemaEwMessage {
     return pickWeight;
   }
 
-
   public void setPickWeight(Float pickWeight) {
     this.pickWeight = pickWeight;
   }
 
 
   public PickScnlSchemaEwMessage timeOfPick(OffsetDateTime timeOfPick) {
-    
     this.timeOfPick = timeOfPick;
     return this;
   }
@@ -257,14 +242,12 @@ public class PickScnlSchemaEwMessage {
     return timeOfPick;
   }
 
-
   public void setTimeOfPick(OffsetDateTime timeOfPick) {
     this.timeOfPick = timeOfPick;
   }
 
 
   public PickScnlSchemaEwMessage pAmplitude(List<Double> pAmplitude) {
-    
     this.pAmplitude = pAmplitude;
     return this;
   }
@@ -285,7 +268,6 @@ public class PickScnlSchemaEwMessage {
   public List<Double> getpAmplitude() {
     return pAmplitude;
   }
-
 
   public void setpAmplitude(List<Double> pAmplitude) {
     this.pAmplitude = pAmplitude;
@@ -495,7 +477,12 @@ public class PickScnlSchemaEwMessage {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

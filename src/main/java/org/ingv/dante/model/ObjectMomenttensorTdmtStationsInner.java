@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorTdmtStationsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectMomenttensorTdmtStationsInner {
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
@@ -87,7 +87,6 @@ public class ObjectMomenttensorTdmtStationsInner {
   public ObjectMomenttensorTdmtStationsInner() {
   }
 
-  
   public ObjectMomenttensorTdmtStationsInner(
      OffsetDateTime modified, 
      OffsetDateTime inserted
@@ -98,7 +97,6 @@ public class ObjectMomenttensorTdmtStationsInner {
   }
 
   public ObjectMomenttensorTdmtStationsInner sta(String sta) {
-    
     this.sta = sta;
     return this;
   }
@@ -112,14 +110,12 @@ public class ObjectMomenttensorTdmtStationsInner {
     return sta;
   }
 
-
   public void setSta(String sta) {
     this.sta = sta;
   }
 
 
   public ObjectMomenttensorTdmtStationsInner r(Float r) {
-    
     this.r = r;
     return this;
   }
@@ -133,14 +129,12 @@ public class ObjectMomenttensorTdmtStationsInner {
     return r;
   }
 
-
   public void setR(Float r) {
     this.r = r;
   }
 
 
   public ObjectMomenttensorTdmtStationsInner azi(Float azi) {
-    
     this.azi = azi;
     return this;
   }
@@ -154,14 +148,12 @@ public class ObjectMomenttensorTdmtStationsInner {
     return azi;
   }
 
-
   public void setAzi(Float azi) {
     this.azi = azi;
   }
 
 
   public ObjectMomenttensorTdmtStationsInner w(Double w) {
-    
     this.w = w;
     return this;
   }
@@ -175,14 +167,12 @@ public class ObjectMomenttensorTdmtStationsInner {
     return w;
   }
 
-
   public void setW(Double w) {
     this.w = w;
   }
 
 
   public ObjectMomenttensorTdmtStationsInner vr(Double vr) {
-    
     this.vr = vr;
     return this;
   }
@@ -196,14 +186,12 @@ public class ObjectMomenttensorTdmtStationsInner {
     return vr;
   }
 
-
   public void setVr(Double vr) {
     this.vr = vr;
   }
 
 
   public ObjectMomenttensorTdmtStationsInner zcor(Double zcor) {
-    
     this.zcor = zcor;
     return this;
   }
@@ -216,7 +204,6 @@ public class ObjectMomenttensorTdmtStationsInner {
   public Double getZcor() {
     return zcor;
   }
-
 
   public void setZcor(Double zcor) {
     this.zcor = zcor;
@@ -234,7 +221,6 @@ public class ObjectMomenttensorTdmtStationsInner {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -243,7 +229,6 @@ public class ObjectMomenttensorTdmtStationsInner {
   public OffsetDateTime getInserted() {
     return inserted;
   }
-
 
 
   /**
@@ -411,7 +396,12 @@ public class ObjectMomenttensorTdmtStationsInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

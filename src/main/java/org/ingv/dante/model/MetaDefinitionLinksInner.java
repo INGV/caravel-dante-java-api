@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * MetaDefinitionLinksInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class MetaDefinitionLinksInner {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
@@ -68,7 +68,6 @@ public class MetaDefinitionLinksInner {
   }
 
   public MetaDefinitionLinksInner url(String url) {
-    
     this.url = url;
     return this;
   }
@@ -82,14 +81,12 @@ public class MetaDefinitionLinksInner {
     return url;
   }
 
-
   public void setUrl(String url) {
     this.url = url;
   }
 
 
   public MetaDefinitionLinksInner label(String label) {
-    
     this.label = label;
     return this;
   }
@@ -103,14 +100,12 @@ public class MetaDefinitionLinksInner {
     return label;
   }
 
-
   public void setLabel(String label) {
     this.label = label;
   }
 
 
   public MetaDefinitionLinksInner active(String active) {
-    
     this.active = active;
     return this;
   }
@@ -123,7 +118,6 @@ public class MetaDefinitionLinksInner {
   public String getActive() {
     return active;
   }
-
 
   public void setActive(String active) {
     this.active = active;
@@ -296,7 +290,12 @@ public class MetaDefinitionLinksInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

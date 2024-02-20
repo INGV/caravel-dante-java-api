@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -110,7 +110,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup() {
   }
 
-  
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup(
      OffsetDateTime modified, 
      OffsetDateTime inserted
@@ -121,7 +120,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   }
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup id(Long id) {
-    
     this.id = id;
     return this;
   }
@@ -135,14 +133,12 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     return id;
   }
 
-
   public void setId(Long id) {
     this.id = id;
   }
 
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup idLocalspace(Long idLocalspace) {
-    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -156,14 +152,12 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     return idLocalspace;
   }
 
-
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup mag(Double mag) {
-    
     this.mag = mag;
     return this;
   }
@@ -177,14 +171,12 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     return mag;
   }
 
-
   public void setMag(Double mag) {
     this.mag = mag;
   }
 
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup typeMagnitude(String typeMagnitude) {
-    
     this.typeMagnitude = typeMagnitude;
     return this;
   }
@@ -198,14 +190,12 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     return typeMagnitude;
   }
 
-
   public void setTypeMagnitude(String typeMagnitude) {
     this.typeMagnitude = typeMagnitude;
   }
 
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup lowerUncertainty(Double lowerUncertainty) {
-    
     this.lowerUncertainty = lowerUncertainty;
     return this;
   }
@@ -219,14 +209,12 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     return lowerUncertainty;
   }
 
-
   public void setLowerUncertainty(Double lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
   }
 
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup upperUncertainty(Double upperUncertainty) {
-    
     this.upperUncertainty = upperUncertainty;
     return this;
   }
@@ -240,14 +228,12 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     return upperUncertainty;
   }
 
-
   public void setUpperUncertainty(Double upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
   }
 
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup quality(Double quality) {
-    
     this.quality = quality;
     return this;
   }
@@ -261,14 +247,12 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     return quality;
   }
 
-
   public void setQuality(Double quality) {
     this.quality = quality;
   }
 
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup magQuality(String magQuality) {
-    
     this.magQuality = magQuality;
     return this;
   }
@@ -282,14 +266,12 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     return magQuality;
   }
 
-
   public void setMagQuality(String magQuality) {
     this.magQuality = magQuality;
   }
 
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup originid(Long originid) {
-    
     this.originid = originid;
     return this;
   }
@@ -302,7 +284,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   public Long getOriginid() {
     return originid;
   }
-
 
   public void setOriginid(Long originid) {
     this.originid = originid;
@@ -320,7 +301,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-
    /**
    * Insert time | timestamp
    * @return inserted
@@ -332,9 +312,7 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup localspace(ObjectLocalspaceForVw localspace) {
-    
     this.localspace = localspace;
     return this;
   }
@@ -348,14 +326,12 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
     return localspace;
   }
 
-
   public void setLocalspace(ObjectLocalspaceForVw localspace) {
     this.localspace = localspace;
   }
 
 
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup provenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
-    
     this.provenance = provenance;
     return this;
   }
@@ -368,7 +344,6 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup getProvenance() {
     return provenance;
   }
-
 
   public void setProvenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     this.provenance = provenance;
@@ -576,7 +551,12 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

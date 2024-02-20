@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginFlag
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class ObjectOriginFlag {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -80,7 +80,6 @@ public class ObjectOriginFlag {
   public ObjectOriginFlag() {
   }
 
-  
   public ObjectOriginFlag(
      Long id, 
      OffsetDateTime modified, 
@@ -103,7 +102,6 @@ public class ObjectOriginFlag {
 
 
 
-
    /**
    * Last Review | timestamp
    * @return modified
@@ -112,7 +110,6 @@ public class ObjectOriginFlag {
   public OffsetDateTime getModified() {
     return modified;
   }
-
 
 
 
@@ -127,9 +124,7 @@ public class ObjectOriginFlag {
 
 
 
-
   public ObjectOriginFlag name(String name) {
-    
     this.name = name;
     return this;
   }
@@ -143,14 +138,12 @@ public class ObjectOriginFlag {
     return name;
   }
 
-
   public void setName(String name) {
     this.name = name;
   }
 
 
   public ObjectOriginFlag note(String note) {
-    
     this.note = note;
     return this;
   }
@@ -164,14 +157,12 @@ public class ObjectOriginFlag {
     return note;
   }
 
-
   public void setNote(String note) {
     this.note = note;
   }
 
 
   public ObjectOriginFlag value(Float value) {
-    
     this.value = value;
     return this;
   }
@@ -184,7 +175,6 @@ public class ObjectOriginFlag {
   public Float getValue() {
     return value;
   }
-
 
   public void setValue(Float value) {
     this.value = value;
@@ -363,7 +353,12 @@ public class ObjectOriginFlag {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }

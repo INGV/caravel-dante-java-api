@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEvent200ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-16T14:12:50.437724Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-20T11:40:04.372601091Z[Etc/UTC]")
 public class UpdateEvent200ResponseData {
   public static final String SERIALIZED_NAME_EVENT = "event";
   @SerializedName(SERIALIZED_NAME_EVENT)
@@ -60,7 +60,6 @@ public class UpdateEvent200ResponseData {
   }
 
   public UpdateEvent200ResponseData event(UpdateEvent200ResponseDataEvent event) {
-    
     this.event = event;
     return this;
   }
@@ -73,7 +72,6 @@ public class UpdateEvent200ResponseData {
   public UpdateEvent200ResponseDataEvent getEvent() {
     return event;
   }
-
 
   public void setEvent(UpdateEvent200ResponseDataEvent event) {
     this.event = event;
@@ -224,7 +222,12 @@ public class UpdateEvent200ResponseData {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
