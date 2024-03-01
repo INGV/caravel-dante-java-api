@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 3.14.0-dev
-  - Build date: 2024-02-27T17:52:11.992965414Z[Etc/UTC]
+  - Build date: 2024-03-01T08:39:18.628554105Z[Etc/UTC]
 
   
 
@@ -355,10 +355,6 @@ Authentication schemes defined for the API:
 ### BearerAuth
 
 - **Type**: HTTP Bearer Token authentication
-
-<a id="OIDC"></a>
-### OIDC
-
 
 
 ## Recommendation

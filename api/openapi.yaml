@@ -6978,8 +6978,6 @@ paths:
       security:
       - BearerAuth:
         - write
-      - OIDC:
-        - write
       summary: Update an existing event
       tags:
       - update
@@ -20984,7 +20982,4 @@ components:
     BearerAuth:
       scheme: bearer
       type: http
-    OIDC:
-      openIdConnectUrl: https://ksso.ingv.it/auth/realms/ingv/.well-known/openid-configuration
-      type: openIdConnect
 
