@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * DB Connection host(s)
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-03T06:38:10.961596563Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-03T07:31:42.491045040Z[Etc/UTC]")
 public class ObjectStatusDbHost {
   public static final String SERIALIZED_NAME_READ = "read";
   @SerializedName(SERIALIZED_NAME_READ)
