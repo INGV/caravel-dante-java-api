@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 3.13.0
-  - Build date: 2024-04-03T08:09:11.603855514Z[Etc/UTC]
+- API version: 3.17.0
+  - Build date: 2024-05-21T10:13:59.410869293Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>3.13.0</version>
+  <version>3.17.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.13.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.17.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-3.13.0.jar`
+* `target/java-openapi-generator-cli-dante-3.17.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -355,10 +355,6 @@ Authentication schemes defined for the API:
 ### BearerAuth
 
 - **Type**: HTTP Bearer Token authentication
-
-<a id="OIDC"></a>
-### OIDC
-
 
 
 ## Recommendation

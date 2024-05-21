@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.13.0
+  version: 3.17.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -4226,6 +4226,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new catalog to the DB
       tags:
       - store
@@ -4473,6 +4476,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new type_event to the DB
       tags:
       - store
@@ -4814,6 +4820,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new type_origin to the DB
       tags:
       - store
@@ -5155,6 +5164,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new type_magnitude to the DB
       tags:
       - store
@@ -5496,6 +5508,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new localspace to the DB
       tags:
       - store
@@ -5837,6 +5852,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new provenance to the DB
       tags:
       - store
@@ -6411,6 +6429,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new event to the DB
       tags:
       - store
@@ -6597,6 +6618,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add one or more flags to origin
       tags:
       - store
@@ -6978,8 +7002,6 @@ paths:
       security:
       - BearerAuth:
         - write
-      - OIDC:
-        - write
       summary: Update an existing event
       tags:
       - update
@@ -7166,6 +7188,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new origin(s) to the DB
       tags:
       - store
@@ -7246,6 +7271,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new magnitude(s) to the DB
       tags:
       - store
@@ -7326,6 +7354,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new strongmotion(s) to the DB
       tags:
       - store
@@ -7406,6 +7437,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new focalmechanism(s) to the DB
       tags:
       - store
@@ -7486,6 +7520,9 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Remaining'
             X-RateLimit-Reset:
               $ref: '#/components/headers/X-RateLimit-Reset'
+      security:
+      - BearerAuth:
+        - write
       summary: Add a new momenttensor(s) to the DB
       tags:
       - store
@@ -20984,7 +21021,4 @@ components:
     BearerAuth:
       scheme: bearer
       type: http
-    OIDC:
-      openIdConnectUrl: https://ksso.ingv.it/auth/realms/ingv/.well-known/openid-configuration
-      type: openIdConnect
 
