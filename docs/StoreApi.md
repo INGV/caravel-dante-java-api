@@ -33,6 +33,7 @@ This API is used to add a catalog object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -40,6 +41,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddCatalogRequest addCatalogRequest = new AddCatalogRequest(); // AddCatalogRequest | JSON to store
@@ -69,7 +74,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -101,6 +106,7 @@ This API is used to add an event object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -108,6 +114,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     GetEvent200Response getEvent200Response = new GetEvent200Response(); // GetEvent200Response | JSON to store
@@ -137,7 +147,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -169,6 +179,7 @@ This API is used to add a focalmechanism object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -176,6 +187,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddFocalmechanismRequest addFocalmechanismRequest = new AddFocalmechanismRequest(); // AddFocalmechanismRequest | JSON to store
@@ -205,7 +220,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -237,6 +252,7 @@ This API is used to add an localspace object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -244,6 +260,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddLocalspaceRequest addLocalspaceRequest = new AddLocalspaceRequest(); // AddLocalspaceRequest | JSON to store
@@ -273,7 +293,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -305,6 +325,7 @@ This API is used to add a magnitude object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -312,6 +333,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddMagnitudeRequest addMagnitudeRequest = new AddMagnitudeRequest(); // AddMagnitudeRequest | JSON to store
@@ -341,7 +366,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -373,6 +398,7 @@ This API is used to add a momenttensor object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -380,6 +406,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddMomenttensorRequest addMomenttensorRequest = new AddMomenttensorRequest(); // AddMomenttensorRequest | JSON to store
@@ -409,7 +439,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -441,6 +471,7 @@ This API is used to add an origin object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -448,6 +479,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddOriginRequest addOriginRequest = new AddOriginRequest(); // AddOriginRequest | JSON to store
@@ -477,7 +512,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -509,6 +544,7 @@ This API is used to add one or more flags to origin.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -516,6 +552,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddOriginFlagRequest addOriginFlagRequest = new AddOriginFlagRequest(); // AddOriginFlagRequest | JSON to store
@@ -545,7 +585,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -577,6 +617,7 @@ This API is used to add an provenance object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -584,6 +625,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddProvenanceRequest addProvenanceRequest = new AddProvenanceRequest(); // AddProvenanceRequest | JSON to store
@@ -613,7 +658,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -645,6 +690,7 @@ This API is used to add a strongmotion object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -652,6 +698,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddStrongmotionRequest addStrongmotionRequest = new AddStrongmotionRequest(); // AddStrongmotionRequest | JSON to store
@@ -681,7 +731,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -713,6 +763,7 @@ This API is used to add an type_event object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -720,6 +771,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddTypeEventRequest addTypeEventRequest = new AddTypeEventRequest(); // AddTypeEventRequest | JSON to store
@@ -749,7 +804,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -781,6 +836,7 @@ This API is used to add an type_magnitude object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -788,6 +844,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddTypeMagnitudeRequest addTypeMagnitudeRequest = new AddTypeMagnitudeRequest(); // AddTypeMagnitudeRequest | JSON to store
@@ -817,7 +877,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -849,6 +909,7 @@ This API is used to add an type_origin object.
 import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
+import org.ingv.dante.auth.*;
 import org.ingv.dante.models.*;
 import org.ingv.dante.api.StoreApi;
 
@@ -856,6 +917,10 @@ public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    
+    // Configure HTTP bearer authorization: BearerAuth
+    HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
+    BearerAuth.setBearerToken("BEARER TOKEN");
 
     StoreApi apiInstance = new StoreApi(defaultClient);
     AddTypeOriginRequest addTypeOriginRequest = new AddTypeOriginRequest(); // AddTypeOriginRequest | JSON to store
@@ -885,7 +950,7 @@ public class Example {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../README.md#BearerAuth)
 
 ### HTTP request headers
 
