@@ -61,10 +61,10 @@ import org.ingv.dante.auth.ApiKeyAuth;
  */
 public class ApiClient {
 
-    private String basePath = "http://caravel.int.ingv.it/api";
+    private String basePath = "https://caravel-dante.int.ingv.it/api";
     protected List<ServerConfiguration> servers = new ArrayList<ServerConfiguration>(Arrays.asList(
     new ServerConfiguration(
-      "http://caravel.int.ingv.it/api",
+      "https://caravel-dante.int.ingv.it/api",
       "production",
       new HashMap<String, ServerVariable>()
     ),
@@ -174,7 +174,7 @@ public class ApiClient {
     /**
      * Set base path
      *
-     * @param basePath Base path of the URL (e.g http://caravel.int.ingv.it/api
+     * @param basePath Base path of the URL (e.g https://caravel-dante.int.ingv.it/api
      * @return An instance of OkHttpClient
      */
     public ApiClient setBasePath(String basePath) {

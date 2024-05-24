@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 3.20.0-dev
-  - Build date: 2024-05-24T14:40:58.044091372Z[Etc/UTC]
+  - Build date: 2024-05-24T14:51:42.450140323Z[Etc/UTC]
 
   
 
@@ -111,7 +111,7 @@ import org.ingv.dante.api.DeleteApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
     
     // Configure HTTP bearer authorization: BearerAuth
     HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
@@ -135,7 +135,7 @@ public class Example {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://caravel.int.ingv.it/api*
+All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

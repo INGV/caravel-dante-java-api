@@ -30,8 +30,7 @@ info:
   x-sandbox: true
 servers:
 - description: production
-  url: http://caravel.int.ingv.it/api
-  x-sandbox: true
+  url: https://caravel-dante.int.ingv.it/api
 - description: development
   url: "http://{hostname}/api"
   variables:
