@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddStrongmotion201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-24T11:40:25.371974082Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-24T11:51:06.657227722Z[Etc/UTC]")
 public class AddStrongmotion201Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
