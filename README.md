@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 3.17.0
-  - Build date: 2024-05-23T13:34:54.847912476Z[Etc/UTC]
+- API version: 3.19.1
+  - Build date: 2024-06-05T15:27:51.942122935Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>3.17.0</version>
+  <version>3.19.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.17.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.19.1"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-3.17.0.jar`
+* `target/java-openapi-generator-cli-dante-3.19.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
