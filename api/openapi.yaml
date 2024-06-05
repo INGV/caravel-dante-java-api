@@ -6274,7 +6274,7 @@ paths:
       - description: Select origins "order by"
         explode: true
         in: query
-        name: orderby
+        name: origin-orderby
         required: false
         schema:
           default: type_origin_priority-asc
@@ -6283,6 +6283,18 @@ paths:
           - type_origin_version_value-desc
           - type_origin_priority-asc
           - type_origin_priority-desc
+          type: string
+        style: form
+      - description: Select magnitudes "order by"
+        explode: true
+        in: query
+        name: magnitude-orderby
+        required: false
+        schema:
+          default: type_magnitude_priority-asc
+          enum:
+          - type_magnitude_priority-asc
+          - type_magnitude_priority-desc
           type: string
         style: form
       responses:
@@ -9082,6 +9094,8 @@ components:
             version_value: 7
             version_name: ew prelim
             name: hypocenter
+            description: Auto added
+            priority: 0
           region: Norcia
           lat: 45.492599
           associatedPhaseCount: 1
@@ -9480,7 +9494,10 @@ components:
           rms: 6.778324963048013
           id: 14932631
           magnitudes:
-          - type_magnitude: ML-VAX
+          - type_magnitude:
+              name: ML-VAX
+              description: Auto added
+              priority: 0
             nsta: 7
             stationmagnitudes:
             - type_magnitude: ML-VAX
@@ -9621,7 +9638,10 @@ components:
             id: 14932631
             ncha: 0
             lower_uncertainty: 0.52
-          - type_magnitude: ML-VAX
+          - type_magnitude:
+              name: ML-VAX
+              description: Auto added
+              priority: 0
             nsta: 7
             stationmagnitudes:
             - type_magnitude: ML-VAX
@@ -9779,6 +9799,8 @@ components:
             version_value: 7
             version_name: ew prelim
             name: hypocenter
+            description: Auto added
+            priority: 0
           region: Norcia
           max_distance: 8.762042012749001
           fix_depth: false
@@ -10141,7 +10163,10 @@ components:
           rms: 6.778324963048013
           id: 14932631
           magnitudes:
-          - type_magnitude: ML-VAX
+          - type_magnitude:
+              name: ML-VAX
+              description: Auto added
+              priority: 0
             nsta: 7
             stationmagnitudes:
             - type_magnitude: ML-VAX
@@ -10282,7 +10307,10 @@ components:
             id: 14932631
             ncha: 0
             lower_uncertainty: 0.52
-          - type_magnitude: ML-VAX
+          - type_magnitude:
+              name: ML-VAX
+              description: Auto added
+              priority: 0
             nsta: 7
             stationmagnitudes:
             - type_magnitude: ML-VAX
@@ -10440,6 +10468,8 @@ components:
             version_value: 7
             version_name: ew prelim
             name: hypocenter
+            description: Auto added
+            priority: 0
           region: Norcia
           max_distance: 8.762042012749001
           fix_depth: false
@@ -10899,7 +10929,10 @@ components:
         rms: 6.778324963048013
         id: 14932631
         magnitudes:
-        - type_magnitude: ML-VAX
+        - type_magnitude:
+            name: ML-VAX
+            description: Auto added
+            priority: 0
           nsta: 7
           stationmagnitudes:
           - type_magnitude: ML-VAX
@@ -11040,7 +11073,10 @@ components:
           id: 14932631
           ncha: 0
           lower_uncertainty: 0.52
-        - type_magnitude: ML-VAX
+        - type_magnitude:
+            name: ML-VAX
+            description: Auto added
+            priority: 0
           nsta: 7
           stationmagnitudes:
           - type_magnitude: ML-VAX
@@ -11198,6 +11234,8 @@ components:
           version_value: 7
           version_name: ew prelim
           name: hypocenter
+          description: Auto added
+          priority: 0
         region: Norcia
         max_distance: 8.762042012749001
         fix_depth: false
@@ -11850,6 +11888,8 @@ components:
         version_value: 7
         version_name: ew prelim
         name: hypocenter
+        description: Auto added
+        priority: 0
       properties:
         name:
           $ref: '#/components/schemas/type_origin__name'
@@ -11863,6 +11903,17 @@ components:
           format: int64
           readOnly: true
           type: integer
+        priority:
+          default: 0
+          description: Priority | int(8)
+          example: 0
+          format: int64
+          type: integer
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          nullable: true
+          type: string
       required:
       - name
       type: object
@@ -11954,6 +12005,30 @@ components:
           readOnly: true
           type: string
       type: object
+    ObjectTypeMagnitude:
+      example:
+        name: ML-VAX
+        description: Auto added
+        priority: 0
+      properties:
+        name:
+          description: Type of the magnitude | varchar(255)
+          example: ML-VAX
+          type: string
+        priority:
+          default: 0
+          description: Priority | int(8)
+          example: 0
+          format: int64
+          type: integer
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          nullable: true
+          type: string
+      required:
+      - name
+      type: object
     ObjectTableTypeMagnitude:
       example:
         maxmag: 2.2
@@ -12016,7 +12091,10 @@ components:
       type: object
     ObjectMagnitude:
       example:
-        type_magnitude: ML-VAX
+        type_magnitude:
+          name: ML-VAX
+          description: Auto added
+          priority: 0
         nsta: 7
         stationmagnitudes:
         - type_magnitude: ML-VAX
@@ -12240,9 +12318,7 @@ components:
           example: BB
           type: string
         type_magnitude:
-          description: Type of the magnitude | varchar(255)
-          example: ML-VAX
-          type: string
+          $ref: '#/components/schemas/ObjectTypeMagnitude'
         localspace:
           $ref: '#/components/schemas/ObjectLocalspace'
         provenance:
@@ -13437,6 +13513,8 @@ components:
           version_value: 7
           version_name: ew prelim
           name: hypocenter
+          description: Auto added
+          priority: 0
         region: Norcia
         lat: 45.492599
         associatedPhaseCount: 1
@@ -14919,6 +14997,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -14992,6 +15072,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15098,6 +15180,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15172,6 +15256,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15338,6 +15424,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15412,6 +15500,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15865,7 +15955,10 @@ components:
             rms: 6.778324963048013
             id: 14932631
             magnitudes:
-            - type_magnitude: ML-VAX
+            - type_magnitude:
+                name: ML-VAX
+                description: Auto added
+                priority: 0
               nsta: 7
               stationmagnitudes:
               - type_magnitude: ML-VAX
@@ -16006,7 +16099,10 @@ components:
               id: 14932631
               ncha: 0
               lower_uncertainty: 0.52
-            - type_magnitude: ML-VAX
+            - type_magnitude:
+                name: ML-VAX
+                description: Auto added
+                priority: 0
               nsta: 7
               stationmagnitudes:
               - type_magnitude: ML-VAX
@@ -16164,6 +16260,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             max_distance: 8.762042012749001
             fix_depth: false
@@ -16526,7 +16624,10 @@ components:
             rms: 6.778324963048013
             id: 14932631
             magnitudes:
-            - type_magnitude: ML-VAX
+            - type_magnitude:
+                name: ML-VAX
+                description: Auto added
+                priority: 0
               nsta: 7
               stationmagnitudes:
               - type_magnitude: ML-VAX
@@ -16667,7 +16768,10 @@ components:
               id: 14932631
               ncha: 0
               lower_uncertainty: 0.52
-            - type_magnitude: ML-VAX
+            - type_magnitude:
+                name: ML-VAX
+                description: Auto added
+                priority: 0
               nsta: 7
               stationmagnitudes:
               - type_magnitude: ML-VAX
@@ -16825,6 +16929,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             max_distance: 8.762042012749001
             fix_depth: false
@@ -17318,7 +17424,10 @@ components:
               rms: 6.778324963048013
               id: 14932631
               magnitudes:
-              - type_magnitude: ML-VAX
+              - type_magnitude:
+                  name: ML-VAX
+                  description: Auto added
+                  priority: 0
                 nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML-VAX
@@ -17459,7 +17568,10 @@ components:
                 id: 14932631
                 ncha: 0
                 lower_uncertainty: 0.52
-              - type_magnitude: ML-VAX
+              - type_magnitude:
+                  name: ML-VAX
+                  description: Auto added
+                  priority: 0
                 nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML-VAX
@@ -17617,6 +17729,8 @@ components:
                 version_value: 7
                 version_name: ew prelim
                 name: hypocenter
+                description: Auto added
+                priority: 0
               region: Norcia
               max_distance: 8.762042012749001
               fix_depth: false
@@ -17979,7 +18093,10 @@ components:
               rms: 6.778324963048013
               id: 14932631
               magnitudes:
-              - type_magnitude: ML-VAX
+              - type_magnitude:
+                  name: ML-VAX
+                  description: Auto added
+                  priority: 0
                 nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML-VAX
@@ -18120,7 +18237,10 @@ components:
                 id: 14932631
                 ncha: 0
                 lower_uncertainty: 0.52
-              - type_magnitude: ML-VAX
+              - type_magnitude:
+                  name: ML-VAX
+                  description: Auto added
+                  priority: 0
                 nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML-VAX
@@ -18278,6 +18398,8 @@ components:
                 version_value: 7
                 version_name: ew prelim
                 name: hypocenter
+                description: Auto added
+                priority: 0
               region: Norcia
               max_distance: 8.762042012749001
               fix_depth: false
@@ -19753,6 +19875,8 @@ components:
             version_value: 7
             version_name: ew prelim
             name: hypocenter
+            description: Auto added
+            priority: 0
           region: Norcia
           lat: 45.492599
           associatedPhaseCount: 1

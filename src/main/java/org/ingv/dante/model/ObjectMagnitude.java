@@ -27,6 +27,7 @@ import java.util.List;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
 import org.ingv.dante.model.ObjectStationmagnitude;
+import org.ingv.dante.model.ObjectTypeMagnitude;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -56,7 +57,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-30T08:48:42.302963334Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-05T15:26:51.449973241Z[Etc/UTC]")
 public class ObjectMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -124,7 +125,7 @@ public class ObjectMagnitude {
 
   public static final String SERIALIZED_NAME_TYPE_MAGNITUDE = "type_magnitude";
   @SerializedName(SERIALIZED_NAME_TYPE_MAGNITUDE)
-  private String typeMagnitude;
+  private ObjectTypeMagnitude typeMagnitude;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
@@ -432,21 +433,21 @@ public class ObjectMagnitude {
   }
 
 
-  public ObjectMagnitude typeMagnitude(String typeMagnitude) {
+  public ObjectMagnitude typeMagnitude(ObjectTypeMagnitude typeMagnitude) {
     this.typeMagnitude = typeMagnitude;
     return this;
   }
 
    /**
-   * Type of the magnitude | varchar(255)
+   * Get typeMagnitude
    * @return typeMagnitude
   **/
   @javax.annotation.Nonnull
-  public String getTypeMagnitude() {
+  public ObjectTypeMagnitude getTypeMagnitude() {
     return typeMagnitude;
   }
 
-  public void setTypeMagnitude(String typeMagnitude) {
+  public void setTypeMagnitude(ObjectTypeMagnitude typeMagnitude) {
     this.typeMagnitude = typeMagnitude;
   }
 
@@ -706,9 +707,8 @@ public class ObjectMagnitude {
       if ((jsonObj.get("mag_quality") != null && !jsonObj.get("mag_quality").isJsonNull()) && !jsonObj.get("mag_quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `mag_quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mag_quality").toString()));
       }
-      if (!jsonObj.get("type_magnitude").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type_magnitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_magnitude").toString()));
-      }
+      // validate the required field `type_magnitude`
+      ObjectTypeMagnitude.validateJsonElement(jsonObj.get("type_magnitude"));
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
         ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));

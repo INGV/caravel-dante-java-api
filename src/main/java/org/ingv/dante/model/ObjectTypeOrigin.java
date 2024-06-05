@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import org.ingv.dante.model.TypeOriginName;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTypeOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-05-30T08:48:42.302963334Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-05T15:26:51.449973241Z[Etc/UTC]")
 public class ObjectTypeOrigin {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -63,6 +64,14 @@ public class ObjectTypeOrigin {
   public static final String SERIALIZED_NAME_VERSION_VALUE = "version_value";
   @SerializedName(SERIALIZED_NAME_VERSION_VALUE)
   private Long versionValue;
+
+  public static final String SERIALIZED_NAME_PRIORITY = "priority";
+  @SerializedName(SERIALIZED_NAME_PRIORITY)
+  private Long priority = 0l;
+
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  private String description;
 
   public ObjectTypeOrigin() {
   }
@@ -122,6 +131,44 @@ public class ObjectTypeOrigin {
   }
 
 
+
+  public ObjectTypeOrigin priority(Long priority) {
+    this.priority = priority;
+    return this;
+  }
+
+   /**
+   * Priority | int(8)
+   * @return priority
+  **/
+  @javax.annotation.Nullable
+  public Long getPriority() {
+    return priority;
+  }
+
+  public void setPriority(Long priority) {
+    this.priority = priority;
+  }
+
+
+  public ObjectTypeOrigin description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Additional information | char(255)
+   * @return description
+  **/
+  @javax.annotation.Nullable
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
   /**
    * A container for additional, undeclared properties.
    * This is a holder for any undeclared properties as specified with
@@ -179,13 +226,26 @@ public class ObjectTypeOrigin {
     ObjectTypeOrigin objectTypeOrigin = (ObjectTypeOrigin) o;
     return Objects.equals(this.name, objectTypeOrigin.name) &&
         Objects.equals(this.versionName, objectTypeOrigin.versionName) &&
-        Objects.equals(this.versionValue, objectTypeOrigin.versionValue)&&
+        Objects.equals(this.versionValue, objectTypeOrigin.versionValue) &&
+        Objects.equals(this.priority, objectTypeOrigin.priority) &&
+        Objects.equals(this.description, objectTypeOrigin.description)&&
         Objects.equals(this.additionalProperties, objectTypeOrigin.additionalProperties);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, versionName, versionValue, additionalProperties);
+    return Objects.hash(name, versionName, versionValue, priority, description, additionalProperties);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
@@ -195,6 +255,8 @@ public class ObjectTypeOrigin {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    versionName: ").append(toIndentedString(versionName)).append("\n");
     sb.append("    versionValue: ").append(toIndentedString(versionValue)).append("\n");
+    sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -221,6 +283,8 @@ public class ObjectTypeOrigin {
     openapiFields.add("name");
     openapiFields.add("version_name");
     openapiFields.add("version_value");
+    openapiFields.add("priority");
+    openapiFields.add("description");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -251,6 +315,9 @@ public class ObjectTypeOrigin {
       TypeOriginName.validateJsonElement(jsonObj.get("name"));
       if ((jsonObj.get("version_name") != null && !jsonObj.get("version_name").isJsonNull()) && !jsonObj.get("version_name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `version_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version_name").toString()));
+      }
+      if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
   }
 

@@ -128,6 +128,7 @@ docs/ObjectTableProvenance.md
 docs/ObjectTableTypeEvent.md
 docs/ObjectTableTypeMagnitude.md
 docs/ObjectTableTypeOrigin.md
+docs/ObjectTypeMagnitude.md
 docs/ObjectTypeOrigin.md
 docs/ObjectVwEventCatalogInner.md
 docs/PickEmersio.md
@@ -314,6 +315,7 @@ src/main/java/org/ingv/dante/model/ObjectTableProvenance.java
 src/main/java/org/ingv/dante/model/ObjectTableTypeEvent.java
 src/main/java/org/ingv/dante/model/ObjectTableTypeMagnitude.java
 src/main/java/org/ingv/dante/model/ObjectTableTypeOrigin.java
+src/main/java/org/ingv/dante/model/ObjectTypeMagnitude.java
 src/main/java/org/ingv/dante/model/ObjectTypeOrigin.java
 src/main/java/org/ingv/dante/model/ObjectVwEventCatalogInner.java
 src/main/java/org/ingv/dante/model/PickEmersio.java
@@ -470,6 +472,7 @@ src/test/java/org/ingv/dante/model/ObjectTableProvenanceTest.java
 src/test/java/org/ingv/dante/model/ObjectTableTypeEventTest.java
 src/test/java/org/ingv/dante/model/ObjectTableTypeMagnitudeTest.java
 src/test/java/org/ingv/dante/model/ObjectTableTypeOriginTest.java
+src/test/java/org/ingv/dante/model/ObjectTypeMagnitudeTest.java
 src/test/java/org/ingv/dante/model/ObjectTypeOriginTest.java
 src/test/java/org/ingv/dante/model/ObjectVwEventCatalogInnerTest.java
 src/test/java/org/ingv/dante/model/PickEmersioTest.java

@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import org.ingv.dante.model.TypeOriginName;
+import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -60,6 +61,22 @@ public class ObjectTypeOriginTest {
     @Test
     public void versionValueTest() {
         // TODO: test versionValue
+    }
+
+    /**
+     * Test the property 'priority'
+     */
+    @Test
+    public void priorityTest() {
+        // TODO: test priority
+    }
+
+    /**
+     * Test the property 'description'
+     */
+    @Test
+    public void descriptionTest() {
+        // TODO: test description
     }
 
 }

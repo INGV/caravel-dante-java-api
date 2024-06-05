@@ -637,7 +637,8 @@ public class GetApi {
      * @param originid Select by origin id. (optional)
      * @param eventid Select by event id. (optional)
      * @param level Select deep level (optional, default to all)
-     * @param orderby Select origins \&quot;order by\&quot; (optional, default to type_origin_priority-asc)
+     * @param originOrderby Select origins \&quot;order by\&quot; (optional, default to type_origin_priority-asc)
+     * @param magnitudeOrderby Select magnitudes \&quot;order by\&quot; (optional, default to type_magnitude_priority-asc)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -653,7 +654,7 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventCall(Long originid, Long eventid, String level, String orderby, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call getEventCall(Long originid, Long eventid, String level, String originOrderby, String magnitudeOrderby, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -690,8 +691,12 @@ public class GetApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("level", level));
         }
 
-        if (orderby != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderby", orderby));
+        if (originOrderby != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("origin-orderby", originOrderby));
+        }
+
+        if (magnitudeOrderby != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("magnitude-orderby", magnitudeOrderby));
         }
 
         final String[] localVarAccepts = {
@@ -715,8 +720,8 @@ public class GetApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call getEventValidateBeforeCall(Long originid, Long eventid, String level, String orderby, final ApiCallback _callback) throws ApiException {
-        return getEventCall(originid, eventid, level, orderby, _callback);
+    private okhttp3.Call getEventValidateBeforeCall(Long originid, Long eventid, String level, String originOrderby, String magnitudeOrderby, final ApiCallback _callback) throws ApiException {
+        return getEventCall(originid, eventid, level, originOrderby, magnitudeOrderby, _callback);
 
     }
 
@@ -726,7 +731,8 @@ public class GetApi {
      * @param originid Select by origin id. (optional)
      * @param eventid Select by event id. (optional)
      * @param level Select deep level (optional, default to all)
-     * @param orderby Select origins \&quot;order by\&quot; (optional, default to type_origin_priority-asc)
+     * @param originOrderby Select origins \&quot;order by\&quot; (optional, default to type_origin_priority-asc)
+     * @param magnitudeOrderby Select magnitudes \&quot;order by\&quot; (optional, default to type_magnitude_priority-asc)
      * @return GetEvent200Response
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -741,8 +747,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public GetEvent200Response getEvent(Long originid, Long eventid, String level, String orderby) throws ApiException {
-        ApiResponse<GetEvent200Response> localVarResp = getEventWithHttpInfo(originid, eventid, level, orderby);
+    public GetEvent200Response getEvent(Long originid, Long eventid, String level, String originOrderby, String magnitudeOrderby) throws ApiException {
+        ApiResponse<GetEvent200Response> localVarResp = getEventWithHttpInfo(originid, eventid, level, originOrderby, magnitudeOrderby);
         return localVarResp.getData();
     }
 
@@ -752,7 +758,8 @@ public class GetApi {
      * @param originid Select by origin id. (optional)
      * @param eventid Select by event id. (optional)
      * @param level Select deep level (optional, default to all)
-     * @param orderby Select origins \&quot;order by\&quot; (optional, default to type_origin_priority-asc)
+     * @param originOrderby Select origins \&quot;order by\&quot; (optional, default to type_origin_priority-asc)
+     * @param magnitudeOrderby Select magnitudes \&quot;order by\&quot; (optional, default to type_magnitude_priority-asc)
      * @return ApiResponse&lt;GetEvent200Response&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -767,8 +774,8 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GetEvent200Response> getEventWithHttpInfo(Long originid, Long eventid, String level, String orderby) throws ApiException {
-        okhttp3.Call localVarCall = getEventValidateBeforeCall(originid, eventid, level, orderby, null);
+    public ApiResponse<GetEvent200Response> getEventWithHttpInfo(Long originid, Long eventid, String level, String originOrderby, String magnitudeOrderby) throws ApiException {
+        okhttp3.Call localVarCall = getEventValidateBeforeCall(originid, eventid, level, originOrderby, magnitudeOrderby, null);
         Type localVarReturnType = new TypeToken<GetEvent200Response>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -779,7 +786,8 @@ public class GetApi {
      * @param originid Select by origin id. (optional)
      * @param eventid Select by event id. (optional)
      * @param level Select deep level (optional, default to all)
-     * @param orderby Select origins \&quot;order by\&quot; (optional, default to type_origin_priority-asc)
+     * @param originOrderby Select origins \&quot;order by\&quot; (optional, default to type_origin_priority-asc)
+     * @param magnitudeOrderby Select magnitudes \&quot;order by\&quot; (optional, default to type_magnitude_priority-asc)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -795,9 +803,9 @@ public class GetApi {
         <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call getEventAsync(Long originid, Long eventid, String level, String orderby, final ApiCallback<GetEvent200Response> _callback) throws ApiException {
+    public okhttp3.Call getEventAsync(Long originid, Long eventid, String level, String originOrderby, String magnitudeOrderby, final ApiCallback<GetEvent200Response> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = getEventValidateBeforeCall(originid, eventid, level, orderby, _callback);
+        okhttp3.Call localVarCall = getEventValidateBeforeCall(originid, eventid, level, originOrderby, magnitudeOrderby, _callback);
         Type localVarReturnType = new TypeToken<GetEvent200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

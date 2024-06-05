@@ -20,9 +20,8 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -49,72 +48,79 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * DB Connection host(s)
+ * ObjectTypeMagnitude
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-05T15:26:51.449973241Z[Etc/UTC]")
-public class ObjectStatusDbHost {
-  public static final String SERIALIZED_NAME_READ = "read";
-  @SerializedName(SERIALIZED_NAME_READ)
-  private List<String> read;
+public class ObjectTypeMagnitude {
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
-  public static final String SERIALIZED_NAME_WRITE = "write";
-  @SerializedName(SERIALIZED_NAME_WRITE)
-  private List<String> write;
+  public static final String SERIALIZED_NAME_PRIORITY = "priority";
+  @SerializedName(SERIALIZED_NAME_PRIORITY)
+  private Long priority = 0l;
 
-  public ObjectStatusDbHost() {
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  private String description;
+
+  public ObjectTypeMagnitude() {
   }
 
-  public ObjectStatusDbHost read(List<String> read) {
-    this.read = read;
-    return this;
-  }
-
-  public ObjectStatusDbHost addReadItem(String readItem) {
-    if (this.read == null) {
-      this.read = new ArrayList<>();
-    }
-    this.read.add(readItem);
+  public ObjectTypeMagnitude name(String name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Get read
-   * @return read
+   * Type of the magnitude | varchar(255)
+   * @return name
   **/
-  @javax.annotation.Nullable
-  public List<String> getRead() {
-    return read;
+  @javax.annotation.Nonnull
+  public String getName() {
+    return name;
   }
 
-  public void setRead(List<String> read) {
-    this.read = read;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
-  public ObjectStatusDbHost write(List<String> write) {
-    this.write = write;
-    return this;
-  }
-
-  public ObjectStatusDbHost addWriteItem(String writeItem) {
-    if (this.write == null) {
-      this.write = new ArrayList<>();
-    }
-    this.write.add(writeItem);
+  public ObjectTypeMagnitude priority(Long priority) {
+    this.priority = priority;
     return this;
   }
 
    /**
-   * Get write
-   * @return write
+   * Priority | int(8)
+   * @return priority
   **/
   @javax.annotation.Nullable
-  public List<String> getWrite() {
-    return write;
+  public Long getPriority() {
+    return priority;
   }
 
-  public void setWrite(List<String> write) {
-    this.write = write;
+  public void setPriority(Long priority) {
+    this.priority = priority;
+  }
+
+
+  public ObjectTypeMagnitude description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * Additional information | char(255)
+   * @return description
+  **/
+  @javax.annotation.Nullable
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   /**
@@ -130,9 +136,9 @@ public class ObjectStatusDbHost {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the ObjectStatusDbHost instance itself
+   * @return the ObjectTypeMagnitude instance itself
    */
-  public ObjectStatusDbHost putAdditionalProperty(String key, Object value) {
+  public ObjectTypeMagnitude putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -171,23 +177,36 @@ public class ObjectStatusDbHost {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ObjectStatusDbHost objectStatusDbHost = (ObjectStatusDbHost) o;
-    return Objects.equals(this.read, objectStatusDbHost.read) &&
-        Objects.equals(this.write, objectStatusDbHost.write)&&
-        Objects.equals(this.additionalProperties, objectStatusDbHost.additionalProperties);
+    ObjectTypeMagnitude objectTypeMagnitude = (ObjectTypeMagnitude) o;
+    return Objects.equals(this.name, objectTypeMagnitude.name) &&
+        Objects.equals(this.priority, objectTypeMagnitude.priority) &&
+        Objects.equals(this.description, objectTypeMagnitude.description)&&
+        Objects.equals(this.additionalProperties, objectTypeMagnitude.additionalProperties);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(read, write, additionalProperties);
+    return Objects.hash(name, priority, description, additionalProperties);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ObjectStatusDbHost {\n");
-    sb.append("    read: ").append(toIndentedString(read)).append("\n");
-    sb.append("    write: ").append(toIndentedString(write)).append("\n");
+    sb.append("class ObjectTypeMagnitude {\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -211,33 +230,40 @@ public class ObjectStatusDbHost {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("read");
-    openapiFields.add("write");
+    openapiFields.add("name");
+    openapiFields.add("priority");
+    openapiFields.add("description");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("name");
   }
 
  /**
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectStatusDbHost
+  * @throws IOException if the JSON Element is invalid with respect to ObjectTypeMagnitude
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ObjectStatusDbHost.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectStatusDbHost is not found in the empty JSON string", ObjectStatusDbHost.openapiRequiredFields.toString()));
+        if (!ObjectTypeMagnitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTypeMagnitude is not found in the empty JSON string", ObjectTypeMagnitude.openapiRequiredFields.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ObjectTypeMagnitude.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("read") != null && !jsonObj.get("read").isJsonNull() && !jsonObj.get("read").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `read` to be an array in the JSON string but got `%s`", jsonObj.get("read").toString()));
+      if (!jsonObj.get("name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
-      // ensure the optional json data is an array if present
-      if (jsonObj.get("write") != null && !jsonObj.get("write").isJsonNull() && !jsonObj.get("write").isJsonArray()) {
-        throw new IllegalArgumentException(String.format("Expected the field `write` to be an array in the JSON string but got `%s`", jsonObj.get("write").toString()));
+      if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
   }
 
@@ -245,16 +271,16 @@ public class ObjectStatusDbHost {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ObjectStatusDbHost.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ObjectStatusDbHost' and its subtypes
+       if (!ObjectTypeMagnitude.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectTypeMagnitude' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ObjectStatusDbHost> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectStatusDbHost.class));
+       final TypeAdapter<ObjectTypeMagnitude> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectTypeMagnitude.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ObjectStatusDbHost>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectTypeMagnitude>() {
            @Override
-           public void write(JsonWriter out, ObjectStatusDbHost value) throws IOException {
+           public void write(JsonWriter out, ObjectTypeMagnitude value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -282,12 +308,12 @@ public class ObjectStatusDbHost {
            }
 
            @Override
-           public ObjectStatusDbHost read(JsonReader in) throws IOException {
+           public ObjectTypeMagnitude read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
-             ObjectStatusDbHost instance = thisAdapter.fromJsonTree(jsonObj);
+             ObjectTypeMagnitude instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -314,18 +340,18 @@ public class ObjectStatusDbHost {
   }
 
  /**
-  * Create an instance of ObjectStatusDbHost given an JSON string
+  * Create an instance of ObjectTypeMagnitude given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ObjectStatusDbHost
-  * @throws IOException if the JSON string is invalid with respect to ObjectStatusDbHost
+  * @return An instance of ObjectTypeMagnitude
+  * @throws IOException if the JSON string is invalid with respect to ObjectTypeMagnitude
   */
-  public static ObjectStatusDbHost fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ObjectStatusDbHost.class);
+  public static ObjectTypeMagnitude fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectTypeMagnitude.class);
   }
 
  /**
-  * Convert an instance of ObjectStatusDbHost to an JSON string
+  * Convert an instance of ObjectTypeMagnitude to an JSON string
   *
   * @return JSON string
   */

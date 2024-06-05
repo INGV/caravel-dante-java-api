@@ -193,7 +193,7 @@ No authorization required
 
 <a id="getEvent"></a>
 # **getEvent**
-> GetEvent200Response getEvent(originid, eventid, level, orderby)
+> GetEvent200Response getEvent(originid, eventid, level, originOrderby, magnitudeOrderby)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -217,9 +217,10 @@ public class Example {
     Long originid = 56L; // Long | Select by origin id.
     Long eventid = 56L; // Long | Select by event id.
     String level = "event"; // String | Select deep level
-    String orderby = "type_origin_version_value-asc"; // String | Select origins \"order by\"
+    String originOrderby = "type_origin_version_value-asc"; // String | Select origins \"order by\"
+    String magnitudeOrderby = "type_magnitude_priority-asc"; // String | Select magnitudes \"order by\"
     try {
-      GetEvent200Response result = apiInstance.getEvent(originid, eventid, level, orderby);
+      GetEvent200Response result = apiInstance.getEvent(originid, eventid, level, originOrderby, magnitudeOrderby);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvent");
@@ -239,7 +240,8 @@ public class Example {
 | **originid** | **Long**| Select by origin id. | [optional] |
 | **eventid** | **Long**| Select by event id. | [optional] |
 | **level** | **String**| Select deep level | [optional] [default to all] [enum: event, origin, magnitude, all] |
-| **orderby** | **String**| Select origins \&quot;order by\&quot; | [optional] [default to type_origin_priority-asc] [enum: type_origin_version_value-asc, type_origin_version_value-desc, type_origin_priority-asc, type_origin_priority-desc] |
+| **originOrderby** | **String**| Select origins \&quot;order by\&quot; | [optional] [default to type_origin_priority-asc] [enum: type_origin_version_value-asc, type_origin_version_value-desc, type_origin_priority-asc, type_origin_priority-desc] |
+| **magnitudeOrderby** | **String**| Select magnitudes \&quot;order by\&quot; | [optional] [default to type_magnitude_priority-asc] [enum: type_magnitude_priority-asc, type_magnitude_priority-desc] |
 
 ### Return type
 
