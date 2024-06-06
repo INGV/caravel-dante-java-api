@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTypeOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-05T15:26:51.449973241Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-06T07:41:41.085288060Z[Etc/UTC]")
 public class ObjectTypeOrigin {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -77,10 +77,14 @@ public class ObjectTypeOrigin {
   }
 
   public ObjectTypeOrigin(
-     Long versionValue
+     Long versionValue, 
+     Long priority, 
+     String description
   ) {
     this();
     this.versionValue = versionValue;
+    this.priority = priority;
+    this.description = description;
   }
 
   public ObjectTypeOrigin name(TypeOriginName name) {
@@ -132,11 +136,6 @@ public class ObjectTypeOrigin {
 
 
 
-  public ObjectTypeOrigin priority(Long priority) {
-    this.priority = priority;
-    return this;
-  }
-
    /**
    * Priority | int(8)
    * @return priority
@@ -146,15 +145,7 @@ public class ObjectTypeOrigin {
     return priority;
   }
 
-  public void setPriority(Long priority) {
-    this.priority = priority;
-  }
 
-
-  public ObjectTypeOrigin description(String description) {
-    this.description = description;
-    return this;
-  }
 
    /**
    * Additional information | char(255)
@@ -165,9 +156,6 @@ public class ObjectTypeOrigin {
     return description;
   }
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
 
   /**
    * A container for additional, undeclared properties.

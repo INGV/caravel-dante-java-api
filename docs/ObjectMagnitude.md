@@ -23,7 +23,8 @@
 |**nstaUsed** | **Long** | Number of the stations used on magnitudo calculation | int(11) |  [optional] |
 |**nchaUsed** | **Long** | Number of the channels used on magnitude calculation | int(11) |  [optional] |
 |**magQuality** | **String** | INGV quality code of the magnitude (computed by ew2moledb) | char(2) |  [optional] |
-|**typeMagnitude** | [**ObjectTypeMagnitude**](ObjectTypeMagnitude.md) |  |  |
+|**typeMagnitude** | **String** | Type of the magnitude | varchar(255) |  |
+|**typeMagnitudePriority** | **Long** | Priority | int(8) |  [optional] [readonly] |
 |**localspace** | [**ObjectLocalspace**](ObjectLocalspace.md) |  |  [optional] |
 |**provenance** | [**ObjectProvenance**](ObjectProvenance.md) |  |  [optional] |
 |**stationmagnitudes** | [**List&lt;ObjectStationmagnitude&gt;**](ObjectStationmagnitude.md) |  |  [optional] |

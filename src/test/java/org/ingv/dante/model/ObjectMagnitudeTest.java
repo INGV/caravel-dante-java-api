@@ -26,7 +26,6 @@ import java.util.List;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
 import org.ingv.dante.model.ObjectStationmagnitude;
-import org.ingv.dante.model.ObjectTypeMagnitude;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -179,6 +178,14 @@ public class ObjectMagnitudeTest {
     @Test
     public void typeMagnitudeTest() {
         // TODO: test typeMagnitude
+    }
+
+    /**
+     * Test the property 'typeMagnitudePriority'
+     */
+    @Test
+    public void typeMagnitudePriorityTest() {
+        // TODO: test typeMagnitudePriority
     }
 
     /**

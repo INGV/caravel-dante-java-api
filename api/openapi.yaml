@@ -9494,10 +9494,7 @@ components:
           rms: 6.778324963048013
           id: 14932631
           magnitudes:
-          - type_magnitude:
-              name: ML-VAX
-              description: Auto added
-              priority: 0
+          - type_magnitude: ML-VAX
             nsta: 7
             stationmagnitudes:
             - type_magnitude: ML-VAX
@@ -9636,12 +9633,10 @@ components:
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_priority: 0
             ncha: 0
             lower_uncertainty: 0.52
-          - type_magnitude:
-              name: ML-VAX
-              description: Auto added
-              priority: 0
+          - type_magnitude: ML-VAX
             nsta: 7
             stationmagnitudes:
             - type_magnitude: ML-VAX
@@ -9780,6 +9775,7 @@ components:
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_priority: 0
             ncha: 0
             lower_uncertainty: 0.52
           e0_dip: 3.616076749251911
@@ -10163,10 +10159,7 @@ components:
           rms: 6.778324963048013
           id: 14932631
           magnitudes:
-          - type_magnitude:
-              name: ML-VAX
-              description: Auto added
-              priority: 0
+          - type_magnitude: ML-VAX
             nsta: 7
             stationmagnitudes:
             - type_magnitude: ML-VAX
@@ -10305,12 +10298,10 @@ components:
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_priority: 0
             ncha: 0
             lower_uncertainty: 0.52
-          - type_magnitude:
-              name: ML-VAX
-              description: Auto added
-              priority: 0
+          - type_magnitude: ML-VAX
             nsta: 7
             stationmagnitudes:
             - type_magnitude: ML-VAX
@@ -10449,6 +10440,7 @@ components:
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_priority: 0
             ncha: 0
             lower_uncertainty: 0.52
           e0_dip: 3.616076749251911
@@ -10929,10 +10921,7 @@ components:
         rms: 6.778324963048013
         id: 14932631
         magnitudes:
-        - type_magnitude:
-            name: ML-VAX
-            description: Auto added
-            priority: 0
+        - type_magnitude: ML-VAX
           nsta: 7
           stationmagnitudes:
           - type_magnitude: ML-VAX
@@ -11071,12 +11060,10 @@ components:
             priority: 0
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
+          type_magnitude_priority: 0
           ncha: 0
           lower_uncertainty: 0.52
-        - type_magnitude:
-            name: ML-VAX
-            description: Auto added
-            priority: 0
+        - type_magnitude: ML-VAX
           nsta: 7
           stationmagnitudes:
           - type_magnitude: ML-VAX
@@ -11215,6 +11202,7 @@ components:
             priority: 0
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
+          type_magnitude_priority: 0
           ncha: 0
           lower_uncertainty: 0.52
         e0_dip: 3.616076749251911
@@ -11908,11 +11896,13 @@ components:
           description: Priority | int(8)
           example: 0
           format: int64
+          readOnly: true
           type: integer
         description:
           description: Additional information | char(255)
           example: Auto added
           nullable: true
+          readOnly: true
           type: string
       required:
       - name
@@ -12005,30 +11995,6 @@ components:
           readOnly: true
           type: string
       type: object
-    ObjectTypeMagnitude:
-      example:
-        name: ML-VAX
-        description: Auto added
-        priority: 0
-      properties:
-        name:
-          description: Type of the magnitude | varchar(255)
-          example: ML-VAX
-          type: string
-        priority:
-          default: 0
-          description: Priority | int(8)
-          example: 0
-          format: int64
-          type: integer
-        description:
-          description: Additional information | char(255)
-          example: Auto added
-          nullable: true
-          type: string
-      required:
-      - name
-      type: object
     ObjectTableTypeMagnitude:
       example:
         maxmag: 2.2
@@ -12091,10 +12057,7 @@ components:
       type: object
     ObjectMagnitude:
       example:
-        type_magnitude:
-          name: ML-VAX
-          description: Auto added
-          priority: 0
+        type_magnitude: ML-VAX
         nsta: 7
         stationmagnitudes:
         - type_magnitude: ML-VAX
@@ -12233,6 +12196,7 @@ components:
           priority: 0
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
+        type_magnitude_priority: 0
         ncha: 0
         lower_uncertainty: 0.52
       properties:
@@ -12318,7 +12282,16 @@ components:
           example: BB
           type: string
         type_magnitude:
-          $ref: '#/components/schemas/ObjectTypeMagnitude'
+          description: Type of the magnitude | varchar(255)
+          example: ML-VAX
+          type: string
+        type_magnitude_priority:
+          default: 0
+          description: Priority | int(8)
+          example: 0
+          format: int64
+          readOnly: true
+          type: integer
         localspace:
           $ref: '#/components/schemas/ObjectLocalspace'
         provenance:
@@ -14577,6 +14550,19 @@ components:
       format: int64
       readOnly: true
       type: integer
+    priority__READONLY:
+      default: 0
+      description: Priority | int(8)
+      example: 0
+      format: int64
+      readOnly: true
+      type: integer
+    description__READONLY:
+      description: Additional information | char(255)
+      example: Auto added
+      nullable: true
+      readOnly: true
+      type: string
     type_magnitude__minmag:
       description: Minimum magnitude value | float(4)
       example: 1.2
@@ -15955,10 +15941,7 @@ components:
             rms: 6.778324963048013
             id: 14932631
             magnitudes:
-            - type_magnitude:
-                name: ML-VAX
-                description: Auto added
-                priority: 0
+            - type_magnitude: ML-VAX
               nsta: 7
               stationmagnitudes:
               - type_magnitude: ML-VAX
@@ -16097,12 +16080,10 @@ components:
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              type_magnitude_priority: 0
               ncha: 0
               lower_uncertainty: 0.52
-            - type_magnitude:
-                name: ML-VAX
-                description: Auto added
-                priority: 0
+            - type_magnitude: ML-VAX
               nsta: 7
               stationmagnitudes:
               - type_magnitude: ML-VAX
@@ -16241,6 +16222,7 @@ components:
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              type_magnitude_priority: 0
               ncha: 0
               lower_uncertainty: 0.52
             e0_dip: 3.616076749251911
@@ -16624,10 +16606,7 @@ components:
             rms: 6.778324963048013
             id: 14932631
             magnitudes:
-            - type_magnitude:
-                name: ML-VAX
-                description: Auto added
-                priority: 0
+            - type_magnitude: ML-VAX
               nsta: 7
               stationmagnitudes:
               - type_magnitude: ML-VAX
@@ -16766,12 +16745,10 @@ components:
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              type_magnitude_priority: 0
               ncha: 0
               lower_uncertainty: 0.52
-            - type_magnitude:
-                name: ML-VAX
-                description: Auto added
-                priority: 0
+            - type_magnitude: ML-VAX
               nsta: 7
               stationmagnitudes:
               - type_magnitude: ML-VAX
@@ -16910,6 +16887,7 @@ components:
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              type_magnitude_priority: 0
               ncha: 0
               lower_uncertainty: 0.52
             e0_dip: 3.616076749251911
@@ -17424,10 +17402,7 @@ components:
               rms: 6.778324963048013
               id: 14932631
               magnitudes:
-              - type_magnitude:
-                  name: ML-VAX
-                  description: Auto added
-                  priority: 0
+              - type_magnitude: ML-VAX
                 nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML-VAX
@@ -17566,12 +17541,10 @@ components:
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                type_magnitude_priority: 0
                 ncha: 0
                 lower_uncertainty: 0.52
-              - type_magnitude:
-                  name: ML-VAX
-                  description: Auto added
-                  priority: 0
+              - type_magnitude: ML-VAX
                 nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML-VAX
@@ -17710,6 +17683,7 @@ components:
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                type_magnitude_priority: 0
                 ncha: 0
                 lower_uncertainty: 0.52
               e0_dip: 3.616076749251911
@@ -18093,10 +18067,7 @@ components:
               rms: 6.778324963048013
               id: 14932631
               magnitudes:
-              - type_magnitude:
-                  name: ML-VAX
-                  description: Auto added
-                  priority: 0
+              - type_magnitude: ML-VAX
                 nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML-VAX
@@ -18235,12 +18206,10 @@ components:
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                type_magnitude_priority: 0
                 ncha: 0
                 lower_uncertainty: 0.52
-              - type_magnitude:
-                  name: ML-VAX
-                  description: Auto added
-                  priority: 0
+              - type_magnitude: ML-VAX
                 nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML-VAX
@@ -18379,6 +18348,7 @@ components:
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                type_magnitude_priority: 0
                 ncha: 0
                 lower_uncertainty: 0.52
               e0_dip: 3.616076749251911
