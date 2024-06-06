@@ -1,6 +1,6 @@
 # EarthwormApiApi
 
-All URIs are relative to *http://caravel.int.ingv.it/api*
+All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -31,7 +31,7 @@ import org.ingv.dante.api.EarthwormApiApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
     AddEwHyp2000arcRequest addEwHyp2000arcRequest = new AddEwHyp2000arcRequest(); // AddEwHyp2000arcRequest | JSON to store
@@ -99,7 +99,7 @@ import org.ingv.dante.api.EarthwormApiApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
     AddEwQuake2kRequest addEwQuake2kRequest = new AddEwQuake2kRequest(); // AddEwQuake2kRequest | JSON to store
@@ -167,7 +167,7 @@ import org.ingv.dante.api.EarthwormApiApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
     AddHEwMagnitudeRequest addHEwMagnitudeRequest = new AddHEwMagnitudeRequest(); // AddHEwMagnitudeRequest | JSON to store
@@ -235,7 +235,7 @@ import org.ingv.dante.api.EarthwormApiApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
     AddHEwPickScnlRequest addHEwPickScnlRequest = new AddHEwPickScnlRequest(); // AddHEwPickScnlRequest | JSON to send
@@ -303,7 +303,7 @@ import org.ingv.dante.api.EarthwormApiApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     EarthwormApiApi apiInstance = new EarthwormApiApi(defaultClient);
     AddHEwStrongmotioniiRequest addHEwStrongmotioniiRequest = new AddHEwStrongmotioniiRequest(); // AddHEwStrongmotioniiRequest | JSON to send

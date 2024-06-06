@@ -1,6 +1,6 @@
 # UserApi
 
-All URIs are relative to *http://caravel.int.ingv.it/api*
+All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -27,7 +27,7 @@ import org.ingv.dante.api.UserApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     UserApi apiInstance = new UserApi(defaultClient);
     GetTokenRequest getTokenRequest = new GetTokenRequest(); // GetTokenRequest | JSON to update

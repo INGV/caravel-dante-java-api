@@ -1,6 +1,6 @@
 # GetApi
 
-All URIs are relative to *http://caravel.int.ingv.it/api*
+All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -43,7 +43,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     OffsetDateTime starttime = OffsetDateTime.now(); // OffsetDateTime | Select date start (i.e. 2016-06-22T16:52:06.260Z).
@@ -193,7 +193,7 @@ No authorization required
 
 <a id="getEvent"></a>
 # **getEvent**
-> GetEvent200Response getEvent(originid, eventid, level, orderby)
+> GetEvent200Response getEvent(originid, eventid, level, originOrderby, magnitudeOrderby)
 
 This API returns the preferred origin and the preferred magnitude from all clusterd events.
 
@@ -211,15 +211,16 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     Long originid = 56L; // Long | Select by origin id.
     Long eventid = 56L; // Long | Select by event id.
     String level = "event"; // String | Select deep level
-    String orderby = "type_origin_version_value-asc"; // String | Select origins \"order by\"
+    String originOrderby = "type_origin_version_value-asc"; // String | Select origins \"order by\"
+    String magnitudeOrderby = "type_magnitude_priority-asc"; // String | Select magnitudes \"order by\"
     try {
-      GetEvent200Response result = apiInstance.getEvent(originid, eventid, level, orderby);
+      GetEvent200Response result = apiInstance.getEvent(originid, eventid, level, originOrderby, magnitudeOrderby);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling GetApi#getEvent");
@@ -239,7 +240,8 @@ public class Example {
 | **originid** | **Long**| Select by origin id. | [optional] |
 | **eventid** | **Long**| Select by event id. | [optional] |
 | **level** | **String**| Select deep level | [optional] [default to all] [enum: event, origin, magnitude, all] |
-| **orderby** | **String**| Select origins \&quot;order by\&quot; | [optional] [default to type_origin_priority-asc] [enum: type_origin_version_value-asc, type_origin_version_value-desc, type_origin_priority-asc, type_origin_priority-desc] |
+| **originOrderby** | **String**| Select origins \&quot;order by\&quot; | [optional] [default to type_origin_priority-asc] [enum: type_origin_version_value-asc, type_origin_version_value-desc, type_origin_priority-asc, type_origin_priority-desc] |
+| **magnitudeOrderby** | **String**| Select magnitudes \&quot;order by\&quot; | [optional] [default to type_magnitude_priority-asc] [enum: type_magnitude_priority-asc, type_magnitude_priority-desc] |
 
 ### Return type
 
@@ -285,7 +287,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     OffsetDateTime starttime = OffsetDateTime.now(); // OffsetDateTime | Select date start (i.e. 2016-06-22T16:52:06.260Z).
@@ -453,7 +455,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     OffsetDateTime starttime = OffsetDateTime.now(); // OffsetDateTime | Select date start (i.e. 2016-06-22T16:52:06.260Z).
@@ -623,7 +625,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     OffsetDateTime starttime = OffsetDateTime.now(); // OffsetDateTime | Select date start (i.e. 2016-06-22T16:52:06.260Z).
@@ -791,7 +793,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {
@@ -855,7 +857,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     OffsetDateTime starttime = OffsetDateTime.now(); // OffsetDateTime | Select date start (i.e. 2016-06-22T16:52:06.260Z).
@@ -1023,7 +1025,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     Double mindistance = 3.4D; // Double | Specify minimum distance (kilometers).
@@ -1099,7 +1101,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     String name = "name_example"; // String | Specify the Italian \"municipio\" name.
@@ -1167,7 +1169,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     Long originid = 56L; // Long | Select by origin id.
@@ -1241,7 +1243,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     OffsetDateTime starttime = OffsetDateTime.now(); // OffsetDateTime | Select date start (i.e. 2016-06-22T16:52:06.260Z).
@@ -1409,7 +1411,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {
@@ -1473,7 +1475,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
@@ -1543,7 +1545,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {
@@ -1607,7 +1609,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {
@@ -1671,7 +1673,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {
@@ -1735,7 +1737,7 @@ import org.ingv.dante.api.GetApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
 
     GetApi apiInstance = new GetApi(defaultClient);
     try {

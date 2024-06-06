@@ -23,15 +23,14 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.19.1
+  version: 3.20.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
   x-sandbox: true
 servers:
 - description: production
-  url: http://caravel.int.ingv.it/api
-  x-sandbox: true
+  url: https://caravel-dante.int.ingv.it/api
 - description: development
   url: "http://{hostname}/api"
   variables:
@@ -6275,7 +6274,7 @@ paths:
       - description: Select origins "order by"
         explode: true
         in: query
-        name: orderby
+        name: origin-orderby
         required: false
         schema:
           default: type_origin_priority-asc
@@ -6284,6 +6283,18 @@ paths:
           - type_origin_version_value-desc
           - type_origin_priority-asc
           - type_origin_priority-desc
+          type: string
+        style: form
+      - description: Select magnitudes "order by"
+        explode: true
+        in: query
+        name: magnitude-orderby
+        required: false
+        schema:
+          default: type_magnitude_priority-asc
+          enum:
+          - type_magnitude_priority-asc
+          - type_magnitude_priority-desc
           type: string
         style: form
       responses:
@@ -9083,6 +9094,8 @@ components:
             version_value: 7
             version_name: ew prelim
             name: hypocenter
+            description: Auto added
+            priority: 0
           region: Norcia
           lat: 45.492599
           associatedPhaseCount: 1
@@ -9620,6 +9633,7 @@ components:
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_priority: 0
             ncha: 0
             lower_uncertainty: 0.52
           - type_magnitude: ML-VAX
@@ -9761,6 +9775,7 @@ components:
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_priority: 0
             ncha: 0
             lower_uncertainty: 0.52
           e0_dip: 3.616076749251911
@@ -9780,6 +9795,8 @@ components:
             version_value: 7
             version_name: ew prelim
             name: hypocenter
+            description: Auto added
+            priority: 0
           region: Norcia
           max_distance: 8.762042012749001
           fix_depth: false
@@ -10281,6 +10298,7 @@ components:
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_priority: 0
             ncha: 0
             lower_uncertainty: 0.52
           - type_magnitude: ML-VAX
@@ -10422,6 +10440,7 @@ components:
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_priority: 0
             ncha: 0
             lower_uncertainty: 0.52
           e0_dip: 3.616076749251911
@@ -10441,6 +10460,8 @@ components:
             version_value: 7
             version_name: ew prelim
             name: hypocenter
+            description: Auto added
+            priority: 0
           region: Norcia
           max_distance: 8.762042012749001
           fix_depth: false
@@ -11039,6 +11060,7 @@ components:
             priority: 0
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
+          type_magnitude_priority: 0
           ncha: 0
           lower_uncertainty: 0.52
         - type_magnitude: ML-VAX
@@ -11180,6 +11202,7 @@ components:
             priority: 0
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
+          type_magnitude_priority: 0
           ncha: 0
           lower_uncertainty: 0.52
         e0_dip: 3.616076749251911
@@ -11199,6 +11222,8 @@ components:
           version_value: 7
           version_name: ew prelim
           name: hypocenter
+          description: Auto added
+          priority: 0
         region: Norcia
         max_distance: 8.762042012749001
         fix_depth: false
@@ -11851,6 +11876,8 @@ components:
         version_value: 7
         version_name: ew prelim
         name: hypocenter
+        description: Auto added
+        priority: 0
       properties:
         name:
           $ref: '#/components/schemas/type_origin__name'
@@ -11864,6 +11891,19 @@ components:
           format: int64
           readOnly: true
           type: integer
+        priority:
+          default: 0
+          description: Priority | int(8)
+          example: 0
+          format: int64
+          readOnly: true
+          type: integer
+        description:
+          description: Additional information | char(255)
+          example: Auto added
+          nullable: true
+          readOnly: true
+          type: string
       required:
       - name
       type: object
@@ -12156,6 +12196,7 @@ components:
           priority: 0
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
+        type_magnitude_priority: 0
         ncha: 0
         lower_uncertainty: 0.52
       properties:
@@ -12244,6 +12285,13 @@ components:
           description: Type of the magnitude | varchar(255)
           example: ML-VAX
           type: string
+        type_magnitude_priority:
+          default: 0
+          description: Priority | int(8)
+          example: 0
+          format: int64
+          readOnly: true
+          type: integer
         localspace:
           $ref: '#/components/schemas/ObjectLocalspace'
         provenance:
@@ -13438,6 +13486,8 @@ components:
           version_value: 7
           version_name: ew prelim
           name: hypocenter
+          description: Auto added
+          priority: 0
         region: Norcia
         lat: 45.492599
         associatedPhaseCount: 1
@@ -14500,6 +14550,19 @@ components:
       format: int64
       readOnly: true
       type: integer
+    priority__READONLY:
+      default: 0
+      description: Priority | int(8)
+      example: 0
+      format: int64
+      readOnly: true
+      type: integer
+    description__READONLY:
+      description: Additional information | char(255)
+      example: Auto added
+      nullable: true
+      readOnly: true
+      type: string
     type_magnitude__minmag:
       description: Minimum magnitude value | float(4)
       example: 1.2
@@ -14920,6 +14983,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -14993,6 +15058,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15099,6 +15166,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15173,6 +15242,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15339,6 +15410,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15413,6 +15486,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -16005,6 +16080,7 @@ components:
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              type_magnitude_priority: 0
               ncha: 0
               lower_uncertainty: 0.52
             - type_magnitude: ML-VAX
@@ -16146,6 +16222,7 @@ components:
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              type_magnitude_priority: 0
               ncha: 0
               lower_uncertainty: 0.52
             e0_dip: 3.616076749251911
@@ -16165,6 +16242,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             max_distance: 8.762042012749001
             fix_depth: false
@@ -16666,6 +16745,7 @@ components:
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              type_magnitude_priority: 0
               ncha: 0
               lower_uncertainty: 0.52
             - type_magnitude: ML-VAX
@@ -16807,6 +16887,7 @@ components:
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
+              type_magnitude_priority: 0
               ncha: 0
               lower_uncertainty: 0.52
             e0_dip: 3.616076749251911
@@ -16826,6 +16907,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             max_distance: 8.762042012749001
             fix_depth: false
@@ -17458,6 +17541,7 @@ components:
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                type_magnitude_priority: 0
                 ncha: 0
                 lower_uncertainty: 0.52
               - type_magnitude: ML-VAX
@@ -17599,6 +17683,7 @@ components:
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                type_magnitude_priority: 0
                 ncha: 0
                 lower_uncertainty: 0.52
               e0_dip: 3.616076749251911
@@ -17618,6 +17703,8 @@ components:
                 version_value: 7
                 version_name: ew prelim
                 name: hypocenter
+                description: Auto added
+                priority: 0
               region: Norcia
               max_distance: 8.762042012749001
               fix_depth: false
@@ -18119,6 +18206,7 @@ components:
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                type_magnitude_priority: 0
                 ncha: 0
                 lower_uncertainty: 0.52
               - type_magnitude: ML-VAX
@@ -18260,6 +18348,7 @@ components:
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
+                type_magnitude_priority: 0
                 ncha: 0
                 lower_uncertainty: 0.52
               e0_dip: 3.616076749251911
@@ -18279,6 +18368,8 @@ components:
                 version_value: 7
                 version_name: ew prelim
                 name: hypocenter
+                description: Auto added
+                priority: 0
               region: Norcia
               max_distance: 8.762042012749001
               fix_depth: false
@@ -19754,6 +19845,8 @@ components:
             version_value: 7
             version_name: ew prelim
             name: hypocenter
+            description: Auto added
+            priority: 0
           region: Norcia
           lat: 45.492599
           associatedPhaseCount: 1

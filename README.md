@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 3.19.1
-  - Build date: 2024-06-05T15:27:51.942122935Z[Etc/UTC]
+- API version: 3.20.0
+  - Build date: 2024-06-06T12:22:33.835491431Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>3.19.1</version>
+  <version>3.20.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.19.1"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.20.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-3.19.1.jar`
+* `target/java-openapi-generator-cli-dante-3.20.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -111,7 +111,7 @@ import org.ingv.dante.api.DeleteApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("http://caravel.int.ingv.it/api");
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
     
     // Configure HTTP bearer authorization: BearerAuth
     HttpBearerAuth BearerAuth = (HttpBearerAuth) defaultClient.getAuthentication("BearerAuth");
@@ -135,7 +135,7 @@ public class Example {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://caravel.int.ingv.it/api*
+All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
