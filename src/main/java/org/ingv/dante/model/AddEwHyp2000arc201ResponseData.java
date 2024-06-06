@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddEwHyp2000arc201ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-06T12:21:28.240698421Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-06-06T12:22:27.472230038Z[Etc/UTC]")
 public class AddEwHyp2000arc201ResponseData {
   public static final String SERIALIZED_NAME_EVENT = "event";
   @SerializedName(SERIALIZED_NAME_EVENT)
