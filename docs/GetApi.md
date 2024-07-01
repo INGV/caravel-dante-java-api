@@ -17,7 +17,6 @@ All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 | [**getOrigins**](GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all the preferred origins. |
 | [**getProvenance**](GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s). |
 | [**getRegionName**](GetApi.md#getRegionName) | **GET** /boundaries/v1/region-name | This API returns the region name used at INGV. |
-| [**getStatus**](GetApi.md#getStatus) | **GET** /status | Return the application status |
 | [**getTypeEvent**](GetApi.md#getTypeEvent) | **GET** /quakedb/table/v1/type-event | This API returns all the type_event(s). |
 | [**getTypeMagnitude**](GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s). |
 | [**getTypeOrigin**](GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s). |
@@ -1513,70 +1512,6 @@ No authorization required
 
  - **Content-Type**: Not defined
  - **Accept**: application/problem+json, application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **400** | Bad Request |  -  |
-| **422** | Unprocessable Entity |  -  |
-| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
-| **503** | Service Unavailable |  * Retry-After -  <br>  |
-| **500** | Internal Server Error |  -  |
-| **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
-| **0** | Unexpected error |  -  |
-
-<a id="getStatus"></a>
-# **getStatus**
-> ObjectStatus getStatus()
-
-Return the application status
-
-Return the application status
-
-### Example
-```java
-// Import classes:
-import org.ingv.dante.ApiClient;
-import org.ingv.dante.ApiException;
-import org.ingv.dante.Configuration;
-import org.ingv.dante.models.*;
-import org.ingv.dante.api.GetApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
-
-    GetApi apiInstance = new GetApi(defaultClient);
-    try {
-      ObjectStatus result = apiInstance.getStatus();
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling GetApi#getStatus");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**ObjectStatus**](ObjectStatus.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/problem+json
 
 ### HTTP response details
 | Status code | Description | Response headers |

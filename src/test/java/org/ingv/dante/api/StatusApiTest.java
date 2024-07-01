@@ -11,47 +11,38 @@
  */
 
 
-package org.ingv.dante;
+package org.ingv.dante.api;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-07-01T09:28:03.787415763Z[Etc/UTC]")
-public class Pair {
-    private String name = "";
-    private String value = "";
+import org.ingv.dante.ApiException;
+import org.ingv.dante.model.ObjectStatus;
+import org.ingv.dante.model.Problem;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-    public Pair (String name, String value) {
-        setName(name);
-        setValue(value);
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * API tests for StatusApi
+ */
+@Disabled
+public class StatusApiTest {
+
+    private final StatusApi api = new StatusApi();
+
+    /**
+     * Return the application status
+     *
+     * Return the application status
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getStatusTest() throws ApiException {
+        ObjectStatus response = api.getStatus();
+        // TODO: test validations
     }
 
-    private void setName(String name) {
-        if (!isValidString(name)) {
-            return;
-        }
-
-        this.name = name;
-    }
-
-    private void setValue(String value) {
-        if (!isValidString(value)) {
-            return;
-        }
-
-        this.value = value;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public String getValue() {
-        return this.value;
-    }
-
-    private boolean isValidString(String arg) {
-        if (arg == null) {
-            return false;
-        }
-
-        return true;
-    }
 }

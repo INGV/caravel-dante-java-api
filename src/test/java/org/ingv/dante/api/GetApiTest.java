@@ -26,7 +26,6 @@ import org.ingv.dante.model.GetRegionName200Response;
 import org.ingv.dante.model.GetTypeEvent200Response;
 import org.ingv.dante.model.GetTypeMagnitude200Response;
 import org.ingv.dante.model.GetTypeOrigin200Response;
-import org.ingv.dante.model.ObjectStatus;
 import java.time.OffsetDateTime;
 import org.ingv.dante.model.Problem;
 import org.junit.jupiter.api.Disabled;
@@ -535,19 +534,6 @@ public class GetApiTest {
         Double lat = null;
         Double lon = null;
         GetRegionName200Response response = api.getRegionName(lat, lon);
-        // TODO: test validations
-    }
-
-    /**
-     * Return the application status
-     *
-     * Return the application status
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void getStatusTest() throws ApiException {
-        ObjectStatus response = api.getStatus();
         // TODO: test validations
     }
 

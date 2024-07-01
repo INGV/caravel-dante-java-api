@@ -38,9 +38,11 @@ servers:
       default: localhost:8585
       enum:
       - localhost:8585
-      - caravel.int.ingv.it:8585
+      - caravel-dante.int.ingv.it:8585
   x-sandbox: true
 tags:
+- description: status api
+  name: status
 - description: Operations about user
   name: user
 - description: Get data
@@ -204,7 +206,7 @@ paths:
               $ref: '#/components/headers/X-RateLimit-Reset'
       summary: Return the application status
       tags:
-      - get
+      - status
       x-accepts: application/problem+json
   /quakedb/v1/events-group:
     get:

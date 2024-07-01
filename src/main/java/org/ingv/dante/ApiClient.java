@@ -78,7 +78,7 @@ public class ApiClient {
           new HashSet<String>(
             Arrays.asList(
               "localhost:8585",
-              "caravel.int.ingv.it:8585"
+              "caravel-dante.int.ingv.it:8585"
             )
           )
         ));
