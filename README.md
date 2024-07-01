@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 3.20.0
-  - Build date: 2024-06-06T13:43:48.171420017Z[Etc/UTC]
+- API version: 3.22.0
+  - Build date: 2024-07-01T12:20:48.758656953Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>3.20.0</version>
+  <version>3.22.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.20.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.22.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-3.20.0.jar`
+* `target/java-openapi-generator-cli-dante-3.22.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -163,10 +163,10 @@ Class | Method | HTTP request | Description
 *GetApi* | [**getOrigins**](docs/GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all the preferred origins.
 *GetApi* | [**getProvenance**](docs/GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s).
 *GetApi* | [**getRegionName**](docs/GetApi.md#getRegionName) | **GET** /boundaries/v1/region-name | This API returns the region name used at INGV.
-*GetApi* | [**getStatus**](docs/GetApi.md#getStatus) | **GET** /status | Return the application status
 *GetApi* | [**getTypeEvent**](docs/GetApi.md#getTypeEvent) | **GET** /quakedb/table/v1/type-event | This API returns all the type_event(s).
 *GetApi* | [**getTypeMagnitude**](docs/GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s).
 *GetApi* | [**getTypeOrigin**](docs/GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s).
+*StatusApi* | [**getStatus**](docs/StatusApi.md#getStatus) | **GET** /status | Return the application status
 *StoreApi* | [**addCatalog**](docs/StoreApi.md#addCatalog) | **POST** /quakedb/v1/events-catalog | Add a new catalog to the DB
 *StoreApi* | [**addEvent**](docs/StoreApi.md#addEvent) | **POST** /quakedb/v1/event | Add a new event to the DB
 *StoreApi* | [**addFocalmechanism**](docs/StoreApi.md#addFocalmechanism) | **POST** /quakedb/v1/focalmechanism | Add a new focalmechanism(s) to the DB

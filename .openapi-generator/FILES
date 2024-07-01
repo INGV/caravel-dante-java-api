@@ -140,6 +140,7 @@ docs/ProvenanceEvaluationmode.md
 docs/Quake2kSchema.md
 docs/Quake2kSchemaEwLogo.md
 docs/Quake2kSchemaEwMessage.md
+docs/StatusApi.md
 docs/StoreApi.md
 docs/StrongmotioniiSchema.md
 docs/StrongmotioniiSchemaEwLogo.md
@@ -187,6 +188,7 @@ src/main/java/org/ingv/dante/StringUtil.java
 src/main/java/org/ingv/dante/api/DeleteApi.java
 src/main/java/org/ingv/dante/api/EarthwormApiApi.java
 src/main/java/org/ingv/dante/api/GetApi.java
+src/main/java/org/ingv/dante/api/StatusApi.java
 src/main/java/org/ingv/dante/api/StoreApi.java
 src/main/java/org/ingv/dante/api/UpdateApi.java
 src/main/java/org/ingv/dante/api/UserApi.java
@@ -348,6 +350,7 @@ src/main/java/org/ingv/dante/model/UpdateMomenttensorRequestDataMomenttensor.jav
 src/test/java/org/ingv/dante/api/DeleteApiTest.java
 src/test/java/org/ingv/dante/api/EarthwormApiApiTest.java
 src/test/java/org/ingv/dante/api/GetApiTest.java
+src/test/java/org/ingv/dante/api/StatusApiTest.java
 src/test/java/org/ingv/dante/api/StoreApiTest.java
 src/test/java/org/ingv/dante/api/UpdateApiTest.java
 src/test/java/org/ingv/dante/api/UserApiTest.java

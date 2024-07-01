@@ -11,67 +11,38 @@
  */
 
 
-package org.ingv.dante.model;
+package org.ingv.dante.api;
 
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
-import org.ingv.dante.model.UpdateEvent200ResponseDataEvent;
-import org.openapitools.jackson.nullable.JsonNullable;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.model.ObjectStatus;
+import org.ingv.dante.model.Problem;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**
- * Model tests for AddEwHyp2000arc201ResponseDataEvent
+ * API tests for StatusApi
  */
-public class AddEwHyp2000arc201ResponseDataEventTest {
-    private final AddEwHyp2000arc201ResponseDataEvent model = new AddEwHyp2000arc201ResponseDataEvent();
+@Disabled
+public class StatusApiTest {
+
+    private final StatusApi api = new StatusApi();
 
     /**
-     * Model tests for AddEwHyp2000arc201ResponseDataEvent
+     * Return the application status
+     *
+     * Return the application status
+     *
+     * @throws ApiException if the Api call fails
      */
     @Test
-    public void testAddEwHyp2000arc201ResponseDataEvent() {
-        // TODO: test AddEwHyp2000arc201ResponseDataEvent
-    }
-
-    /**
-     * Test the property 'id'
-     */
-    @Test
-    public void idTest() {
-        // TODO: test id
-    }
-
-    /**
-     * Test the property 'idLocalspace'
-     */
-    @Test
-    public void idLocalspaceTest() {
-        // TODO: test idLocalspace
-    }
-
-    /**
-     * Test the property 'localspace'
-     */
-    @Test
-    public void localspaceTest() {
-        // TODO: test localspace
-    }
-
-    /**
-     * Test the property 'origins'
-     */
-    @Test
-    public void originsTest() {
-        // TODO: test origins
+    public void getStatusTest() throws ApiException {
+        ObjectStatus response = api.getStatus();
+        // TODO: test validations
     }
 
 }
