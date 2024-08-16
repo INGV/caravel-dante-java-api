@@ -21,8 +21,10 @@ import org.ingv.dante.model.GetLocalspace200Response;
 import org.ingv.dante.model.GetMunicipiDistanceKmPopolazione200Response;
 import org.ingv.dante.model.GetMunicipio200Response;
 import org.ingv.dante.model.GetOriginFlag200Response;
+import org.ingv.dante.model.GetPick200Response;
 import org.ingv.dante.model.GetProvenance200Response;
 import org.ingv.dante.model.GetRegionName200Response;
+import org.ingv.dante.model.GetScnl200Response;
 import org.ingv.dante.model.GetTypeEvent200Response;
 import org.ingv.dante.model.GetTypeMagnitude200Response;
 import org.ingv.dante.model.GetTypeOrigin200Response;
@@ -510,6 +512,39 @@ public class GetApiTest {
     }
 
     /**
+     * This API returns picks from DataBase
+     *
+     * This API returns picks
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getPickTest() throws ApiException {
+        OffsetDateTime starttime = null;
+        OffsetDateTime endtime = null;
+        String wherenetin = null;
+        String wherestain = null;
+        String wherechain = null;
+        String wherelocin = null;
+        Double minlat = null;
+        Double maxlat = null;
+        Double minlon = null;
+        Double maxlon = null;
+        Double lat = null;
+        Double lon = null;
+        Double minradius = null;
+        Double maxradius = null;
+        Double minradiuskm = null;
+        Double maxradiuskm = null;
+        List<String> wherelocalspaceenvironmentin = null;
+        String wherelocalspacenamein = null;
+        Integer limit = null;
+        Integer page = null;
+        GetPick200Response response = api.getPick(starttime, endtime, wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelocalspaceenvironmentin, wherelocalspacenamein, limit, page);
+        // TODO: test validations
+    }
+
+    /**
      * This API returns all the provenance(s).
      *
      * This API returns all the provenance(s).
@@ -534,6 +569,37 @@ public class GetApiTest {
         Double lat = null;
         Double lon = null;
         GetRegionName200Response response = api.getRegionName(lat, lon);
+        // TODO: test validations
+    }
+
+    /**
+     * This API returns scnls from DataBase
+     *
+     * This API returns scnls
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void getScnlTest() throws ApiException {
+        String wherenetin = null;
+        String wherestain = null;
+        String wherechain = null;
+        String wherelocin = null;
+        Double minlat = null;
+        Double maxlat = null;
+        Double minlon = null;
+        Double maxlon = null;
+        Double lat = null;
+        Double lon = null;
+        Double minradius = null;
+        Double maxradius = null;
+        Double minradiuskm = null;
+        Double maxradiuskm = null;
+        Boolean wherelatorlonarenull = null;
+        OffsetDateTime updatedafter = null;
+        Integer limit = null;
+        Integer page = null;
+        GetScnl200Response response = api.getScnl(wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelatorlonarenull, updatedafter, limit, page);
         // TODO: test validations
     }
 

@@ -157,9 +157,12 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetMunicipio200Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetMunicipio200ResponseDataInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetOriginFlag200Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetPick200Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetProvenance200Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetRegionName200Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetRegionName200ResponseData.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetScnl200Response.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetScnl200ResponseDataInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetToken201Response.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetToken201ResponseUser.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.GetTokenRequest.CustomTypeAdapterFactory());

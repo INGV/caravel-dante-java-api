@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 3.23.0-dev
-  - Build date: 2024-08-14T14:38:34.498145087Z[Etc/UTC]
+  - Build date: 2024-08-16T13:36:26.386050942Z[Etc/UTC]
 
   
 
@@ -161,8 +161,10 @@ Class | Method | HTTP request | Description
 *GetApi* | [**getMunicipio**](docs/GetApi.md#getMunicipio) | **GET** /boundaries/v1/municipio | This API returns the Italian \&quot;municipio\&quot; information by name.
 *GetApi* | [**getOriginFlag**](docs/GetApi.md#getOriginFlag) | **GET** /quakedb/v1/origin-flag | This API returns the all the flags assosiated to the originid.
 *GetApi* | [**getOrigins**](docs/GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all the preferred origins.
+*GetApi* | [**getPick**](docs/GetApi.md#getPick) | **GET** /quakedb/v1/pick | This API returns picks from DataBase
 *GetApi* | [**getProvenance**](docs/GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s).
 *GetApi* | [**getRegionName**](docs/GetApi.md#getRegionName) | **GET** /boundaries/v1/region-name | This API returns the region name used at INGV.
+*GetApi* | [**getScnl**](docs/GetApi.md#getScnl) | **GET** /quakedb/v1/scnl | This API returns scnls from DataBase
 *GetApi* | [**getTypeEvent**](docs/GetApi.md#getTypeEvent) | **GET** /quakedb/table/v1/type-event | This API returns all the type_event(s).
 *GetApi* | [**getTypeMagnitude**](docs/GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s).
 *GetApi* | [**getTypeOrigin**](docs/GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s).
@@ -252,9 +254,12 @@ Class | Method | HTTP request | Description
  - [GetMunicipio200Response](docs/GetMunicipio200Response.md)
  - [GetMunicipio200ResponseDataInner](docs/GetMunicipio200ResponseDataInner.md)
  - [GetOriginFlag200Response](docs/GetOriginFlag200Response.md)
+ - [GetPick200Response](docs/GetPick200Response.md)
  - [GetProvenance200Response](docs/GetProvenance200Response.md)
  - [GetRegionName200Response](docs/GetRegionName200Response.md)
  - [GetRegionName200ResponseData](docs/GetRegionName200ResponseData.md)
+ - [GetScnl200Response](docs/GetScnl200Response.md)
+ - [GetScnl200ResponseDataInner](docs/GetScnl200ResponseDataInner.md)
  - [GetToken201Response](docs/GetToken201Response.md)
  - [GetToken201ResponseUser](docs/GetToken201ResponseUser.md)
  - [GetTokenRequest](docs/GetTokenRequest.md)

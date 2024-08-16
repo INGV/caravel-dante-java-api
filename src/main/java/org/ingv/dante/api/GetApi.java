@@ -34,8 +34,10 @@ import org.ingv.dante.model.GetLocalspace200Response;
 import org.ingv.dante.model.GetMunicipiDistanceKmPopolazione200Response;
 import org.ingv.dante.model.GetMunicipio200Response;
 import org.ingv.dante.model.GetOriginFlag200Response;
+import org.ingv.dante.model.GetPick200Response;
 import org.ingv.dante.model.GetProvenance200Response;
 import org.ingv.dante.model.GetRegionName200Response;
+import org.ingv.dante.model.GetScnl200Response;
 import org.ingv.dante.model.GetTypeEvent200Response;
 import org.ingv.dante.model.GetTypeMagnitude200Response;
 import org.ingv.dante.model.GetTypeOrigin200Response;
@@ -4200,6 +4202,304 @@ public class GetApi {
         return localVarCall;
     }
     /**
+     * Build call for getPick
+     * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param wherenetin Filter by multiple \&quot;net\&quot;, comma separated value (i.e. IV,MN). (optional)
+     * @param wherestain Filter by multiple \&quot;sta\&quot;, comma separated value (i.e. ACER,BADI). (optional)
+     * @param wherechain Filter by multiple \&quot;cha\&quot;, comma separated value (i.e. HHZ,HHE). (optional)
+     * @param wherelocin Filter by multiple \&quot;loc\&quot;, comma separated value (i.e. 00,01,--). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param wherelocalspaceenvironmentin Filter by \&quot;localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getPickCall(OffsetDateTime starttime, OffsetDateTime endtime, String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, List<String> wherelocalspaceenvironmentin, String wherelocalspacenamein, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/quakedb/v1/pick";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (starttime != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("starttime", starttime));
+        }
+
+        if (endtime != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("endtime", endtime));
+        }
+
+        if (wherenetin != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherenetin", wherenetin));
+        }
+
+        if (wherestain != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherestain", wherestain));
+        }
+
+        if (wherechain != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherechain", wherechain));
+        }
+
+        if (wherelocin != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocin", wherelocin));
+        }
+
+        if (minlat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minlat", minlat));
+        }
+
+        if (maxlat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxlat", maxlat));
+        }
+
+        if (minlon != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minlon", minlon));
+        }
+
+        if (maxlon != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxlon", maxlon));
+        }
+
+        if (lat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("lat", lat));
+        }
+
+        if (lon != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("lon", lon));
+        }
+
+        if (minradius != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minradius", minradius));
+        }
+
+        if (maxradius != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxradius", maxradius));
+        }
+
+        if (minradiuskm != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minradiuskm", minradiuskm));
+        }
+
+        if (maxradiuskm != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxradiuskm", maxradiuskm));
+        }
+
+        if (wherelocalspaceenvironmentin != null) {
+            localVarCollectionQueryParams.addAll(localVarApiClient.parameterToPairs("csv", "wherelocalspaceenvironmentin", wherelocalspaceenvironmentin));
+        }
+
+        if (wherelocalspacenamein != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocalspacenamein", wherelocalspacenamein));
+        }
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
+        if (page != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page", page));
+        }
+
+        final String[] localVarAccepts = {
+            "application/problem+json",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getPickValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, List<String> wherelocalspaceenvironmentin, String wherelocalspacenamein, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        return getPickCall(starttime, endtime, wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelocalspaceenvironmentin, wherelocalspacenamein, limit, page, _callback);
+
+    }
+
+    /**
+     * This API returns picks from DataBase
+     * This API returns picks
+     * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param wherenetin Filter by multiple \&quot;net\&quot;, comma separated value (i.e. IV,MN). (optional)
+     * @param wherestain Filter by multiple \&quot;sta\&quot;, comma separated value (i.e. ACER,BADI). (optional)
+     * @param wherechain Filter by multiple \&quot;cha\&quot;, comma separated value (i.e. HHZ,HHE). (optional)
+     * @param wherelocin Filter by multiple \&quot;loc\&quot;, comma separated value (i.e. 00,01,--). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param wherelocalspaceenvironmentin Filter by \&quot;localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @return GetPick200Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public GetPick200Response getPick(OffsetDateTime starttime, OffsetDateTime endtime, String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, List<String> wherelocalspaceenvironmentin, String wherelocalspacenamein, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetPick200Response> localVarResp = getPickWithHttpInfo(starttime, endtime, wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelocalspaceenvironmentin, wherelocalspacenamein, limit, page);
+        return localVarResp.getData();
+    }
+
+    /**
+     * This API returns picks from DataBase
+     * This API returns picks
+     * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param wherenetin Filter by multiple \&quot;net\&quot;, comma separated value (i.e. IV,MN). (optional)
+     * @param wherestain Filter by multiple \&quot;sta\&quot;, comma separated value (i.e. ACER,BADI). (optional)
+     * @param wherechain Filter by multiple \&quot;cha\&quot;, comma separated value (i.e. HHZ,HHE). (optional)
+     * @param wherelocin Filter by multiple \&quot;loc\&quot;, comma separated value (i.e. 00,01,--). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param wherelocalspaceenvironmentin Filter by \&quot;localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @return ApiResponse&lt;GetPick200Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<GetPick200Response> getPickWithHttpInfo(OffsetDateTime starttime, OffsetDateTime endtime, String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, List<String> wherelocalspaceenvironmentin, String wherelocalspacenamein, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getPickValidateBeforeCall(starttime, endtime, wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelocalspaceenvironmentin, wherelocalspacenamein, limit, page, null);
+        Type localVarReturnType = new TypeToken<GetPick200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * This API returns picks from DataBase (asynchronously)
+     * This API returns picks
+     * @param starttime Select date start (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param endtime Select date end (i.e. 2016-06-22T16:52:06.260Z). (optional)
+     * @param wherenetin Filter by multiple \&quot;net\&quot;, comma separated value (i.e. IV,MN). (optional)
+     * @param wherestain Filter by multiple \&quot;sta\&quot;, comma separated value (i.e. ACER,BADI). (optional)
+     * @param wherechain Filter by multiple \&quot;cha\&quot;, comma separated value (i.e. HHZ,HHE). (optional)
+     * @param wherelocin Filter by multiple \&quot;loc\&quot;, comma separated value (i.e. 00,01,--). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param wherelocalspaceenvironmentin Filter by \&quot;localspace.environment\&quot; by comma separated value (i.e. development,staging). (optional)
+     * @param wherelocalspacenamein Filter by \&quot;localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getPickAsync(OffsetDateTime starttime, OffsetDateTime endtime, String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, List<String> wherelocalspaceenvironmentin, String wherelocalspacenamein, Integer limit, Integer page, final ApiCallback<GetPick200Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getPickValidateBeforeCall(starttime, endtime, wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelocalspaceenvironmentin, wherelocalspacenamein, limit, page, _callback);
+        Type localVarReturnType = new TypeToken<GetPick200Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
      * Build call for getProvenance
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -4488,6 +4788,288 @@ public class GetApi {
 
         okhttp3.Call localVarCall = getRegionNameValidateBeforeCall(lat, lon, _callback);
         Type localVarReturnType = new TypeToken<GetRegionName200Response>(){}.getType();
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        return localVarCall;
+    }
+    /**
+     * Build call for getScnl
+     * @param wherenetin Filter by multiple \&quot;net\&quot;, comma separated value (i.e. IV,MN). (optional)
+     * @param wherestain Filter by multiple \&quot;sta\&quot;, comma separated value (i.e. ACER,BADI). (optional)
+     * @param wherechain Filter by multiple \&quot;cha\&quot;, comma separated value (i.e. HHZ,HHE). (optional)
+     * @param wherelocin Filter by multiple \&quot;loc\&quot;, comma separated value (i.e. 00,01,--). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param wherelatorlonarenull fileter by &#39;lat&#39; or &#39;lon&#39; set to &#39;null&#39; (optional)
+     * @param updatedafter Limit data to \&quot;updated after\&quot; params. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @param _callback Callback for upload/download progress
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getScnlCall(String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Boolean wherelatorlonarenull, OffsetDateTime updatedafter, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        String basePath = null;
+        // Operation Servers
+        String[] localBasePaths = new String[] {  };
+
+        // Determine Base Path to Use
+        if (localCustomBaseUrl != null){
+            basePath = localCustomBaseUrl;
+        } else if ( localBasePaths.length > 0 ) {
+            basePath = localBasePaths[localHostIndex];
+        } else {
+            basePath = null;
+        }
+
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/quakedb/v1/scnl";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+        Map<String, String> localVarCookieParams = new HashMap<String, String>();
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (wherenetin != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherenetin", wherenetin));
+        }
+
+        if (wherestain != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherestain", wherestain));
+        }
+
+        if (wherechain != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherechain", wherechain));
+        }
+
+        if (wherelocin != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelocin", wherelocin));
+        }
+
+        if (minlat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minlat", minlat));
+        }
+
+        if (maxlat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxlat", maxlat));
+        }
+
+        if (minlon != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minlon", minlon));
+        }
+
+        if (maxlon != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxlon", maxlon));
+        }
+
+        if (lat != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("lat", lat));
+        }
+
+        if (lon != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("lon", lon));
+        }
+
+        if (minradius != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minradius", minradius));
+        }
+
+        if (maxradius != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxradius", maxradius));
+        }
+
+        if (minradiuskm != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("minradiuskm", minradiuskm));
+        }
+
+        if (maxradiuskm != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxradiuskm", maxradiuskm));
+        }
+
+        if (wherelatorlonarenull != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("wherelatorlonarenull", wherelatorlonarenull));
+        }
+
+        if (updatedafter != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("updatedafter", updatedafter));
+        }
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
+        if (page != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("page", page));
+        }
+
+        final String[] localVarAccepts = {
+            "application/problem+json",
+            "application/json"
+        };
+        final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) {
+            localVarHeaderParams.put("Accept", localVarAccept);
+        }
+
+        final String[] localVarContentTypes = {
+        };
+        final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
+        if (localVarContentType != null) {
+            localVarHeaderParams.put("Content-Type", localVarContentType);
+        }
+
+        String[] localVarAuthNames = new String[] {  };
+        return localVarApiClient.buildCall(basePath, localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private okhttp3.Call getScnlValidateBeforeCall(String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Boolean wherelatorlonarenull, OffsetDateTime updatedafter, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
+        return getScnlCall(wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelatorlonarenull, updatedafter, limit, page, _callback);
+
+    }
+
+    /**
+     * This API returns scnls from DataBase
+     * This API returns scnls
+     * @param wherenetin Filter by multiple \&quot;net\&quot;, comma separated value (i.e. IV,MN). (optional)
+     * @param wherestain Filter by multiple \&quot;sta\&quot;, comma separated value (i.e. ACER,BADI). (optional)
+     * @param wherechain Filter by multiple \&quot;cha\&quot;, comma separated value (i.e. HHZ,HHE). (optional)
+     * @param wherelocin Filter by multiple \&quot;loc\&quot;, comma separated value (i.e. 00,01,--). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param wherelatorlonarenull fileter by &#39;lat&#39; or &#39;lon&#39; set to &#39;null&#39; (optional)
+     * @param updatedafter Limit data to \&quot;updated after\&quot; params. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @return GetScnl200Response
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public GetScnl200Response getScnl(String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Boolean wherelatorlonarenull, OffsetDateTime updatedafter, Integer limit, Integer page) throws ApiException {
+        ApiResponse<GetScnl200Response> localVarResp = getScnlWithHttpInfo(wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelatorlonarenull, updatedafter, limit, page);
+        return localVarResp.getData();
+    }
+
+    /**
+     * This API returns scnls from DataBase
+     * This API returns scnls
+     * @param wherenetin Filter by multiple \&quot;net\&quot;, comma separated value (i.e. IV,MN). (optional)
+     * @param wherestain Filter by multiple \&quot;sta\&quot;, comma separated value (i.e. ACER,BADI). (optional)
+     * @param wherechain Filter by multiple \&quot;cha\&quot;, comma separated value (i.e. HHZ,HHE). (optional)
+     * @param wherelocin Filter by multiple \&quot;loc\&quot;, comma separated value (i.e. 00,01,--). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param wherelatorlonarenull fileter by &#39;lat&#39; or &#39;lon&#39; set to &#39;null&#39; (optional)
+     * @param updatedafter Limit data to \&quot;updated after\&quot; params. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @return ApiResponse&lt;GetScnl200Response&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public ApiResponse<GetScnl200Response> getScnlWithHttpInfo(String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Boolean wherelatorlonarenull, OffsetDateTime updatedafter, Integer limit, Integer page) throws ApiException {
+        okhttp3.Call localVarCall = getScnlValidateBeforeCall(wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelatorlonarenull, updatedafter, limit, page, null);
+        Type localVarReturnType = new TypeToken<GetScnl200Response>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    }
+
+    /**
+     * This API returns scnls from DataBase (asynchronously)
+     * This API returns scnls
+     * @param wherenetin Filter by multiple \&quot;net\&quot;, comma separated value (i.e. IV,MN). (optional)
+     * @param wherestain Filter by multiple \&quot;sta\&quot;, comma separated value (i.e. ACER,BADI). (optional)
+     * @param wherechain Filter by multiple \&quot;cha\&quot;, comma separated value (i.e. HHZ,HHE). (optional)
+     * @param wherelocin Filter by multiple \&quot;loc\&quot;, comma separated value (i.e. 00,01,--). (optional)
+     * @param minlat Specify southern boundary for search in WGS84 (i.e. 39.12). (optional)
+     * @param maxlat Specify northern boundary for search in WGS84 (i.e. 46.52). (optional)
+     * @param minlon Specify western boundary for search in WGS84 (i.e. 10.12). (optional)
+     * @param maxlon Specify eastern boundary for search (in WGS84) (i.e. 15.12). (optional)
+     * @param lat Specify the central latitude point for a radial search in WGS84 (i.e. 42). (optional)
+     * @param lon Specify the central longitude point for a radial search in WGS84 (i.e. 12). (optional)
+     * @param minradius Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). (optional)
+     * @param maxradius Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). (optional)
+     * @param minradiuskm Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param maxradiuskm Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. (optional)
+     * @param wherelatorlonarenull fileter by &#39;lat&#39; or &#39;lon&#39; set to &#39;null&#39; (optional)
+     * @param updatedafter Limit data to \&quot;updated after\&quot; params. (optional)
+     * @param limit Limit the results to the specified number of records. (optional)
+     * @param page Pagination. (optional)
+     * @param _callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 400 </td><td> Bad Request </td><td>  -  </td></tr>
+        <tr><td> 422 </td><td> Unprocessable Entity </td><td>  -  </td></tr>
+        <tr><td> 429 </td><td> Too many requests </td><td>  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 503 </td><td> Service Unavailable </td><td>  * Retry-After -  <br>  </td></tr>
+        <tr><td> 500 </td><td> Internal Server Error </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Operation successful </td><td>  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  </td></tr>
+        <tr><td> 0 </td><td> Unexpected error </td><td>  -  </td></tr>
+     </table>
+     */
+    public okhttp3.Call getScnlAsync(String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Boolean wherelatorlonarenull, OffsetDateTime updatedafter, Integer limit, Integer page, final ApiCallback<GetScnl200Response> _callback) throws ApiException {
+
+        okhttp3.Call localVarCall = getScnlValidateBeforeCall(wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelatorlonarenull, updatedafter, limit, page, _callback);
+        Type localVarReturnType = new TypeToken<GetScnl200Response>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
