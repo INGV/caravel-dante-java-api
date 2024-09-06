@@ -184,6 +184,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -260,6 +262,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -428,6 +432,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -598,6 +604,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -766,6 +774,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -830,6 +840,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -998,6 +1010,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1074,6 +1088,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1142,6 +1158,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1216,6 +1234,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1384,6 +1404,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1490,6 +1512,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1554,6 +1578,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1624,6 +1650,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1726,6 +1754,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1790,6 +1819,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1854,6 +1885,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1918,6 +1951,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |

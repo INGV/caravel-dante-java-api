@@ -141,6 +141,15 @@ paths:
       description: Return the application status
       operationId: get_status
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -797,6 +806,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -1454,6 +1472,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -2110,6 +2137,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -2765,6 +2801,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -3420,6 +3465,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -4086,6 +4140,15 @@ paths:
           format: string
           type: string
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -4336,6 +4399,15 @@ paths:
       description: This API returns all the type_event(s).
       operationId: getTypeEvent
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -4680,6 +4752,15 @@ paths:
       description: This API returns all the type_origin(s).
       operationId: getTypeOrigin
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -5024,6 +5105,15 @@ paths:
       description: This API returns all the type_magnitude(s).
       operationId: getTypeMagnitude
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -5368,6 +5458,15 @@ paths:
       description: This API returns all the localspace(s).
       operationId: getLocalspace
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -5712,6 +5811,15 @@ paths:
       description: This API returns all the provenance(s).
       operationId: getProvenance
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -6300,6 +6408,15 @@ paths:
           type: string
         style: form
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -6490,6 +6607,15 @@ paths:
           type: string
         style: form
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -6802,6 +6928,15 @@ paths:
           format: int32
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -7006,6 +7141,9 @@ paths:
           format: int32
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
         "400":
           content:
             application/problem+json:
@@ -7093,6 +7231,15 @@ paths:
         schema:
           $ref: '#/components/schemas/longitude'
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -7201,6 +7348,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -7281,6 +7437,15 @@ paths:
           format: string
           type: string
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
