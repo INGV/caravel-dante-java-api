@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 3.22.2
-  - Build date: 2024-09-06T15:03:13.352544374Z[Etc/UTC]
+- API version: 3.23.1
+  - Build date: 2024-09-10T10:49:11.142611150Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>3.22.2</version>
+  <version>3.23.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.22.2"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.23.1"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-3.22.2.jar`
+* `target/java-openapi-generator-cli-dante-3.23.1.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -161,8 +161,10 @@ Class | Method | HTTP request | Description
 *GetApi* | [**getMunicipio**](docs/GetApi.md#getMunicipio) | **GET** /boundaries/v1/municipio | This API returns the Italian \&quot;municipio\&quot; information by name.
 *GetApi* | [**getOriginFlag**](docs/GetApi.md#getOriginFlag) | **GET** /quakedb/v1/origin-flag | This API returns the all the flags assosiated to the originid.
 *GetApi* | [**getOrigins**](docs/GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all the preferred origins.
+*GetApi* | [**getPick**](docs/GetApi.md#getPick) | **GET** /quakedb/v1/pick | This API returns picks from DataBase
 *GetApi* | [**getProvenance**](docs/GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s).
 *GetApi* | [**getRegionName**](docs/GetApi.md#getRegionName) | **GET** /boundaries/v1/region-name | This API returns the region name used at INGV.
+*GetApi* | [**getScnl**](docs/GetApi.md#getScnl) | **GET** /quakedb/v1/scnl | This API returns scnls from DataBase
 *GetApi* | [**getTypeEvent**](docs/GetApi.md#getTypeEvent) | **GET** /quakedb/table/v1/type-event | This API returns all the type_event(s).
 *GetApi* | [**getTypeMagnitude**](docs/GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s).
 *GetApi* | [**getTypeOrigin**](docs/GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s).
@@ -252,9 +254,12 @@ Class | Method | HTTP request | Description
  - [GetMunicipio200Response](docs/GetMunicipio200Response.md)
  - [GetMunicipio200ResponseDataInner](docs/GetMunicipio200ResponseDataInner.md)
  - [GetOriginFlag200Response](docs/GetOriginFlag200Response.md)
+ - [GetPick200Response](docs/GetPick200Response.md)
  - [GetProvenance200Response](docs/GetProvenance200Response.md)
  - [GetRegionName200Response](docs/GetRegionName200Response.md)
  - [GetRegionName200ResponseData](docs/GetRegionName200ResponseData.md)
+ - [GetScnl200Response](docs/GetScnl200Response.md)
+ - [GetScnl200ResponseDataInner](docs/GetScnl200ResponseDataInner.md)
  - [GetToken201Response](docs/GetToken201Response.md)
  - [GetToken201ResponseUser](docs/GetToken201ResponseUser.md)
  - [GetTokenRequest](docs/GetTokenRequest.md)

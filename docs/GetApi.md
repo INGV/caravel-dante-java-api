@@ -15,8 +15,10 @@ All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 | [**getMunicipio**](GetApi.md#getMunicipio) | **GET** /boundaries/v1/municipio | This API returns the Italian \&quot;municipio\&quot; information by name. |
 | [**getOriginFlag**](GetApi.md#getOriginFlag) | **GET** /quakedb/v1/origin-flag | This API returns the all the flags assosiated to the originid. |
 | [**getOrigins**](GetApi.md#getOrigins) | **GET** /quakedb/v1/origins | This API returns all the preferred origins. |
+| [**getPick**](GetApi.md#getPick) | **GET** /quakedb/v1/pick | This API returns picks from DataBase |
 | [**getProvenance**](GetApi.md#getProvenance) | **GET** /quakedb/table/v1/provenance | This API returns all the provenance(s). |
 | [**getRegionName**](GetApi.md#getRegionName) | **GET** /boundaries/v1/region-name | This API returns the region name used at INGV. |
+| [**getScnl**](GetApi.md#getScnl) | **GET** /quakedb/v1/scnl | This API returns scnls from DataBase |
 | [**getTypeEvent**](GetApi.md#getTypeEvent) | **GET** /quakedb/table/v1/type-event | This API returns all the type_event(s). |
 | [**getTypeMagnitude**](GetApi.md#getTypeMagnitude) | **GET** /quakedb/table/v1/type-magnitude | This API returns all the type_magnitude(s). |
 | [**getTypeOrigin**](GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s). |
@@ -182,6 +184,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -258,6 +262,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -426,6 +432,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -596,6 +604,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -764,6 +774,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -828,6 +840,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -996,6 +1010,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1072,6 +1088,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1140,6 +1158,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1214,6 +1234,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1382,6 +1404,116 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
+<a id="getPick"></a>
+# **getPick**
+> GetPick200Response getPick(starttime, endtime, wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelocalspaceenvironmentin, wherelocalspacenamein, limit, page)
+
+This API returns picks from DataBase
+
+This API returns picks
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.GetApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
+
+    GetApi apiInstance = new GetApi(defaultClient);
+    OffsetDateTime starttime = OffsetDateTime.now(); // OffsetDateTime | Select date start (i.e. 2016-06-22T16:52:06.260Z).
+    OffsetDateTime endtime = OffsetDateTime.now(); // OffsetDateTime | Select date end (i.e. 2016-06-22T16:52:06.260Z).
+    String wherenetin = "wherenetin_example"; // String | Filter by multiple \"net\", comma separated value (i.e. IV,MN).
+    String wherestain = "wherestain_example"; // String | Filter by multiple \"sta\", comma separated value (i.e. ACER,BADI).
+    String wherechain = "wherechain_example"; // String | Filter by multiple \"cha\", comma separated value (i.e. HHZ,HHE).
+    String wherelocin = "wherelocin_example"; // String | Filter by multiple \"loc\", comma separated value (i.e. 00,01,--).
+    Double minlat = 3.4D; // Double | Specify southern boundary for search in WGS84 (i.e. 39.12).
+    Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
+    Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
+    Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+    Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
+    Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
+    Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
+    Double maxradius = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5).
+    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers.
+    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers.
+    List<String> wherelocalspaceenvironmentin = Arrays.asList(); // List<String> | Filter by \"localspace.environment\" by comma separated value (i.e. development,staging).
+    String wherelocalspacenamein = "wherelocalspacenamein_example"; // String | Filter by \"localspace.name\" by comma separated value (i.e. hew10_mole,hew20_mole).
+    Integer limit = 56; // Integer | Limit the results to the specified number of records.
+    Integer page = 56; // Integer | Pagination.
+    try {
+      GetPick200Response result = apiInstance.getPick(starttime, endtime, wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelocalspaceenvironmentin, wherelocalspacenamein, limit, page);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GetApi#getPick");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **starttime** | **OffsetDateTime**| Select date start (i.e. 2016-06-22T16:52:06.260Z). | [optional] |
+| **endtime** | **OffsetDateTime**| Select date end (i.e. 2016-06-22T16:52:06.260Z). | [optional] |
+| **wherenetin** | **String**| Filter by multiple \&quot;net\&quot;, comma separated value (i.e. IV,MN). | [optional] |
+| **wherestain** | **String**| Filter by multiple \&quot;sta\&quot;, comma separated value (i.e. ACER,BADI). | [optional] |
+| **wherechain** | **String**| Filter by multiple \&quot;cha\&quot;, comma separated value (i.e. HHZ,HHE). | [optional] |
+| **wherelocin** | **String**| Filter by multiple \&quot;loc\&quot;, comma separated value (i.e. 00,01,--). | [optional] |
+| **minlat** | **Double**| Specify southern boundary for search in WGS84 (i.e. 39.12). | [optional] |
+| **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
+| **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
+| **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
+| **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
+| **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
+| **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
+| **maxradius** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). | [optional] |
+| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
+| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
+| **wherelocalspaceenvironmentin** | [**List&lt;String&gt;**](String.md)| Filter by \&quot;localspace.environment\&quot; by comma separated value (i.e. development,staging). | [optional] [enum: development, testing, staging, production, external, catalog, generic] |
+| **wherelocalspacenamein** | **String**| Filter by \&quot;localspace.name\&quot; by comma separated value (i.e. hew10_mole,hew20_mole). | [optional] |
+| **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
+| **page** | **Integer**| Pagination. | [optional] |
+
+### Return type
+
+[**GetPick200Response**](GetPick200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1446,6 +1578,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1516,6 +1650,111 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
+| **400** | Bad Request |  -  |
+| **422** | Unprocessable Entity |  -  |
+| **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **503** | Service Unavailable |  * Retry-After -  <br>  |
+| **500** | Internal Server Error |  -  |
+| **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
+| **0** | Unexpected error |  -  |
+
+<a id="getScnl"></a>
+# **getScnl**
+> GetScnl200Response getScnl(wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelatorlonarenull, updatedafter, limit, page)
+
+This API returns scnls from DataBase
+
+This API returns scnls
+
+### Example
+```java
+// Import classes:
+import org.ingv.dante.ApiClient;
+import org.ingv.dante.ApiException;
+import org.ingv.dante.Configuration;
+import org.ingv.dante.models.*;
+import org.ingv.dante.api.GetApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://caravel-dante.int.ingv.it/api");
+
+    GetApi apiInstance = new GetApi(defaultClient);
+    String wherenetin = "wherenetin_example"; // String | Filter by multiple \"net\", comma separated value (i.e. IV,MN).
+    String wherestain = "wherestain_example"; // String | Filter by multiple \"sta\", comma separated value (i.e. ACER,BADI).
+    String wherechain = "wherechain_example"; // String | Filter by multiple \"cha\", comma separated value (i.e. HHZ,HHE).
+    String wherelocin = "wherelocin_example"; // String | Filter by multiple \"loc\", comma separated value (i.e. 00,01,--).
+    Double minlat = 3.4D; // Double | Specify southern boundary for search in WGS84 (i.e. 39.12).
+    Double maxlat = 3.4D; // Double | Specify northern boundary for search in WGS84 (i.e. 46.52).
+    Double minlon = 3.4D; // Double | Specify western boundary for search in WGS84 (i.e. 10.12).
+    Double maxlon = 3.4D; // Double | Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+    Double lat = 3.4D; // Double | Specify the central latitude point for a radial search in WGS84 (i.e. 42).
+    Double lon = 3.4D; // Double | Specify the central longitude point for a radial search in WGS84 (i.e. 12).
+    Double minradius = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5).
+    Double maxradius = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5).
+    Double minradiuskm = 3.4D; // Double | Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers.
+    Double maxradiuskm = 3.4D; // Double | Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers.
+    Boolean wherelatorlonarenull = true; // Boolean | fileter by 'lat' or 'lon' set to 'null'
+    OffsetDateTime updatedafter = OffsetDateTime.now(); // OffsetDateTime | Limit data to \"updated after\" params.
+    Integer limit = 56; // Integer | Limit the results to the specified number of records.
+    Integer page = 56; // Integer | Pagination.
+    try {
+      GetScnl200Response result = apiInstance.getScnl(wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelatorlonarenull, updatedafter, limit, page);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling GetApi#getScnl");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **wherenetin** | **String**| Filter by multiple \&quot;net\&quot;, comma separated value (i.e. IV,MN). | [optional] |
+| **wherestain** | **String**| Filter by multiple \&quot;sta\&quot;, comma separated value (i.e. ACER,BADI). | [optional] |
+| **wherechain** | **String**| Filter by multiple \&quot;cha\&quot;, comma separated value (i.e. HHZ,HHE). | [optional] |
+| **wherelocin** | **String**| Filter by multiple \&quot;loc\&quot;, comma separated value (i.e. 00,01,--). | [optional] |
+| **minlat** | **Double**| Specify southern boundary for search in WGS84 (i.e. 39.12). | [optional] |
+| **maxlat** | **Double**| Specify northern boundary for search in WGS84 (i.e. 46.52). | [optional] |
+| **minlon** | **Double**| Specify western boundary for search in WGS84 (i.e. 10.12). | [optional] |
+| **maxlon** | **Double**| Specify eastern boundary for search (in WGS84) (i.e. 15.12). | [optional] |
+| **lat** | **Double**| Specify the central latitude point for a radial search in WGS84 (i.e. 42). | [optional] |
+| **lon** | **Double**| Specify the central longitude point for a radial search in WGS84 (i.e. 12). | [optional] |
+| **minradius** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 1.5). | [optional] |
+| **maxradius** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude in Degrees (i.e. 5). | [optional] |
+| **minradiuskm** | **Double**| Specify minimum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
+| **maxradiuskm** | **Double**| Specify maximum distance from the geographic point defined by latitude and longitude. Kilometers. | [optional] |
+| **wherelatorlonarenull** | **Boolean**| fileter by &#39;lat&#39; or &#39;lon&#39; set to &#39;null&#39; | [optional] |
+| **updatedafter** | **OffsetDateTime**| Limit data to \&quot;updated after\&quot; params. | [optional] |
+| **limit** | **Integer**| Limit the results to the specified number of records. | [optional] |
+| **page** | **Integer**| Pagination. | [optional] |
+
+### Return type
+
+[**GetScnl200Response**](GetScnl200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/problem+json, application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1580,6 +1819,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1644,6 +1885,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
@@ -1708,6 +1951,8 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+| **204** | Request was properly formatted and submitted but no data matches the selection |  -  |
+| **404** | Not Found |  -  |
 | **400** | Bad Request |  -  |
 | **422** | Unprocessable Entity |  -  |
 | **429** | Too many requests |  * Retry-After -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |

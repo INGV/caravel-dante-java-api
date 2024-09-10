@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.22.2
+  version: 3.23.1
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -141,6 +141,15 @@ paths:
       description: Return the application status
       operationId: get_status
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -797,6 +806,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -1454,6 +1472,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -2110,6 +2137,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -2765,6 +2801,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -3420,6 +3465,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -4086,6 +4140,15 @@ paths:
           format: string
           type: string
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -4336,6 +4399,15 @@ paths:
       description: This API returns all the type_event(s).
       operationId: getTypeEvent
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -4680,6 +4752,15 @@ paths:
       description: This API returns all the type_origin(s).
       operationId: getTypeOrigin
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -5024,6 +5105,15 @@ paths:
       description: This API returns all the type_magnitude(s).
       operationId: getTypeMagnitude
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -5368,6 +5458,15 @@ paths:
       description: This API returns all the localspace(s).
       operationId: getLocalspace
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -5712,6 +5811,15 @@ paths:
       description: This API returns all the provenance(s).
       operationId: getProvenance
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -6300,6 +6408,15 @@ paths:
           type: string
         style: form
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -6490,6 +6607,15 @@ paths:
           type: string
         style: form
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -6639,6 +6765,452 @@ paths:
       - store
       x-content-type: application/json
       x-accepts: "application/json,application/problem+json"
+  /quakedb/v1/pick:
+    get:
+      description: This API returns picks
+      operationId: getPick
+      parameters:
+      - description: Select date start (i.e. 2016-06-22T16:52:06.260Z).
+        in: query
+        name: starttime
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: Select date end (i.e. 2016-06-22T16:52:06.260Z).
+        in: query
+        name: endtime
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: "Filter by multiple \"net\", comma separated value (i.e. IV,MN)."
+        explode: false
+        in: query
+        name: wherenetin
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter by multiple \"sta\", comma separated value (i.e. ACER,BADI)."
+        explode: false
+        in: query
+        name: wherestain
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter by multiple \"cha\", comma separated value (i.e. HHZ,HHE)."
+        explode: false
+        in: query
+        name: wherechain
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter by multiple \"loc\", comma separated value (i.e. 00,01,--)."
+        explode: false
+        in: query
+        name: wherelocin
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: Specify southern boundary for search in WGS84 (i.e. 39.12).
+        in: query
+        name: minlat
+        required: false
+        schema:
+          $ref: '#/components/schemas/latitude'
+      - description: Specify northern boundary for search in WGS84 (i.e. 46.52).
+        in: query
+        name: maxlat
+        required: false
+        schema:
+          $ref: '#/components/schemas/latitude'
+      - description: Specify western boundary for search in WGS84 (i.e. 10.12).
+        in: query
+        name: minlon
+        required: false
+        schema:
+          $ref: '#/components/schemas/longitude'
+      - description: Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+        in: query
+        name: maxlon
+        required: false
+        schema:
+          $ref: '#/components/schemas/longitude'
+      - description: Specify the central latitude point for a radial search in WGS84
+          (i.e. 42).
+        in: query
+        name: lat
+        required: false
+        schema:
+          $ref: '#/components/schemas/latitude'
+      - description: Specify the central longitude point for a radial search in WGS84
+          (i.e. 12).
+        in: query
+        name: lon
+        required: false
+        schema:
+          $ref: '#/components/schemas/longitude'
+      - description: Specify minimum distance from the geographic point defined by
+          latitude and longitude in Degrees (i.e. 1.5).
+        in: query
+        name: minradius
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: Specify maximum distance from the geographic point defined by
+          latitude and longitude in Degrees (i.e. 5).
+        in: query
+        name: maxradius
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: Specify minimum distance from the geographic point defined by
+          latitude and longitude. Kilometers.
+        in: query
+        name: minradiuskm
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: Specify maximum distance from the geographic point defined by
+          latitude and longitude. Kilometers.
+        in: query
+        name: maxradiuskm
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: "Filter by \"localspace.environment\" by comma separated value\
+          \ (i.e. development,staging)."
+        explode: false
+        in: query
+        name: wherelocalspaceenvironmentin
+        required: false
+        schema:
+          items:
+            enum:
+            - development
+            - testing
+            - staging
+            - production
+            - external
+            - catalog
+            - generic
+            type: string
+          type: array
+      - description: "Filter by \"localspace.name\" by comma separated value (i.e.\
+          \ hew10_mole,hew20_mole)."
+        explode: false
+        in: query
+        name: wherelocalspacenamein
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: Limit the results to the specified number of records.
+        in: query
+        name: limit
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Pagination.
+        in: query
+        name: page
+        required: false
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getPick_200_response'
+          description: Operation successful
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: This API returns picks from DataBase
+      tags:
+      - get
+      x-accepts: "application/json,application/problem+json"
+  /quakedb/v1/scnl:
+    get:
+      description: This API returns scnls
+      operationId: getScnl
+      parameters:
+      - description: "Filter by multiple \"net\", comma separated value (i.e. IV,MN)."
+        explode: false
+        in: query
+        name: wherenetin
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter by multiple \"sta\", comma separated value (i.e. ACER,BADI)."
+        explode: false
+        in: query
+        name: wherestain
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter by multiple \"cha\", comma separated value (i.e. HHZ,HHE)."
+        explode: false
+        in: query
+        name: wherechain
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: "Filter by multiple \"loc\", comma separated value (i.e. 00,01,--)."
+        explode: false
+        in: query
+        name: wherelocin
+        required: false
+        schema:
+          format: string
+          type: string
+      - description: Specify southern boundary for search in WGS84 (i.e. 39.12).
+        in: query
+        name: minlat
+        required: false
+        schema:
+          $ref: '#/components/schemas/latitude'
+      - description: Specify northern boundary for search in WGS84 (i.e. 46.52).
+        in: query
+        name: maxlat
+        required: false
+        schema:
+          $ref: '#/components/schemas/latitude'
+      - description: Specify western boundary for search in WGS84 (i.e. 10.12).
+        in: query
+        name: minlon
+        required: false
+        schema:
+          $ref: '#/components/schemas/longitude'
+      - description: Specify eastern boundary for search (in WGS84) (i.e. 15.12).
+        in: query
+        name: maxlon
+        required: false
+        schema:
+          $ref: '#/components/schemas/longitude'
+      - description: Specify the central latitude point for a radial search in WGS84
+          (i.e. 42).
+        in: query
+        name: lat
+        required: false
+        schema:
+          $ref: '#/components/schemas/latitude'
+      - description: Specify the central longitude point for a radial search in WGS84
+          (i.e. 12).
+        in: query
+        name: lon
+        required: false
+        schema:
+          $ref: '#/components/schemas/longitude'
+      - description: Specify minimum distance from the geographic point defined by
+          latitude and longitude in Degrees (i.e. 1.5).
+        in: query
+        name: minradius
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: Specify maximum distance from the geographic point defined by
+          latitude and longitude in Degrees (i.e. 5).
+        in: query
+        name: maxradius
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: Specify minimum distance from the geographic point defined by
+          latitude and longitude. Kilometers.
+        in: query
+        name: minradiuskm
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: Specify maximum distance from the geographic point defined by
+          latitude and longitude. Kilometers.
+        in: query
+        name: maxradiuskm
+        required: false
+        schema:
+          format: double
+          type: number
+      - description: fileter by 'lat' or 'lon' set to 'null'
+        explode: true
+        in: query
+        name: wherelatorlonarenull
+        required: false
+        schema:
+          type: boolean
+        style: form
+      - description: Limit data to "updated after" params.
+        in: query
+        name: updatedafter
+        required: false
+        schema:
+          format: date-time
+          type: string
+      - description: Limit the results to the specified number of records.
+        in: query
+        name: limit
+        required: false
+        schema:
+          format: int32
+          type: integer
+      - description: Pagination.
+        in: query
+        name: page
+        required: false
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "400":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Bad Request
+        "422":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unprocessable Entity
+        "429":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Too many requests
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+        "503":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Service Unavailable
+          headers:
+            Retry-After:
+              $ref: '#/components/headers/Retry-After'
+        "500":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Internal Server Error
+        default:
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Unexpected error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getScnl_200_response'
+          description: Operation successful
+          headers:
+            Cache-Control:
+              $ref: '#/components/headers/Cache-Control'
+            X-RateLimit-Limit:
+              $ref: '#/components/headers/X-RateLimit-Limit'
+            X-RateLimit-Remaining:
+              $ref: '#/components/headers/X-RateLimit-Remaining'
+            X-RateLimit-Reset:
+              $ref: '#/components/headers/X-RateLimit-Reset'
+      summary: This API returns scnls from DataBase
+      tags:
+      - get
+      x-accepts: "application/json,application/problem+json"
   /boundaries/v1/region-name:
     get:
       description: This API returns the region name.
@@ -6659,6 +7231,15 @@ paths:
         schema:
           $ref: '#/components/schemas/longitude'
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -6767,6 +7348,15 @@ paths:
           format: int64
           type: integer
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -6847,6 +7437,15 @@ paths:
           format: string
           type: string
       responses:
+        "204":
+          description: Request was properly formatted and submitted but no data matches
+            the selection
+        "404":
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+          description: Not Found
         "400":
           content:
             application/problem+json:
@@ -8628,6 +9227,78 @@ components:
         - magnitude
         - all
         type: string
+    wherenetin:
+      description: "Filter by multiple \"net\", comma separated value (i.e. IV,MN)."
+      explode: false
+      in: query
+      name: wherenetin
+      required: false
+      schema:
+        format: string
+        type: string
+    wherestain:
+      description: "Filter by multiple \"sta\", comma separated value (i.e. ACER,BADI)."
+      explode: false
+      in: query
+      name: wherestain
+      required: false
+      schema:
+        format: string
+        type: string
+    wherechain:
+      description: "Filter by multiple \"cha\", comma separated value (i.e. HHZ,HHE)."
+      explode: false
+      in: query
+      name: wherechain
+      required: false
+      schema:
+        format: string
+        type: string
+    wherelocin:
+      description: "Filter by multiple \"loc\", comma separated value (i.e. 00,01,--)."
+      explode: false
+      in: query
+      name: wherelocin
+      required: false
+      schema:
+        format: string
+        type: string
+    wherelocalspaceenvironmentin:
+      description: "Filter by \"localspace.environment\" by comma separated value\
+        \ (i.e. development,staging)."
+      explode: false
+      in: query
+      name: wherelocalspaceenvironmentin
+      required: false
+      schema:
+        items:
+          enum:
+          - development
+          - testing
+          - staging
+          - production
+          - external
+          - catalog
+          - generic
+          type: string
+        type: array
+    wherelocalspacenamein:
+      description: "Filter by \"localspace.name\" by comma separated value (i.e. hew10_mole,hew20_mole)."
+      explode: false
+      in: query
+      name: wherelocalspacenamein
+      required: false
+      schema:
+        format: string
+        type: string
+    updatedafter:
+      description: Limit data to "updated after" params.
+      in: query
+      name: updatedafter
+      required: false
+      schema:
+        format: date-time
+        type: string
     mindistance__REQUIRED:
       description: Specify minimum distance (kilometers).
       in: query
@@ -8750,6 +9421,36 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/getOriginFlag_200_response'
+      description: Operation successful
+      headers:
+        Cache-Control:
+          $ref: '#/components/headers/Cache-Control'
+        X-RateLimit-Limit:
+          $ref: '#/components/headers/X-RateLimit-Limit'
+        X-RateLimit-Remaining:
+          $ref: '#/components/headers/X-RateLimit-Remaining'
+        X-RateLimit-Reset:
+          $ref: '#/components/headers/X-RateLimit-Reset'
+    "200Pick":
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/getPick_200_response'
+      description: Operation successful
+      headers:
+        Cache-Control:
+          $ref: '#/components/headers/Cache-Control'
+        X-RateLimit-Limit:
+          $ref: '#/components/headers/X-RateLimit-Limit'
+        X-RateLimit-Remaining:
+          $ref: '#/components/headers/X-RateLimit-Remaining'
+        X-RateLimit-Reset:
+          $ref: '#/components/headers/X-RateLimit-Reset'
+    "200Scnl":
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/getScnl_200_response'
       description: Operation successful
       headers:
         Cache-Control:
@@ -13932,6 +14633,23 @@ components:
       format: int64
       nullable: true
       type: integer
+    scnl__net:
+      description: Channel net code | char(2)
+      example: IV
+      type: string
+    scnl__sta:
+      description: Channel station code | varchar(5)
+      example: ACER
+      type: string
+    scnl__cha:
+      description: Channel code | char(3)
+      example: HHZ
+      type: string
+    scnl__loc:
+      default: --
+      description: Channel location | char(2)
+      example: "00"
+      type: string
     municipio__name:
       description: Italian "municipio" name.
       example: Ladispoli
@@ -14744,28 +15462,11 @@ components:
       description: Type of Moment Tensor | varchar(50)
       example: TDMT
       type: string
-    scnl__sta:
-      description: Channel station code | varchar(5)
-      example: ACER
-      type: string
     weight:
       description: Weight | double
       example: 0.88
       format: double
       type: number
-    scnl__net:
-      description: Channel net code | char(2)
-      example: IV
-      type: string
-    scnl__cha:
-      description: Channel code | char(3)
-      example: HHZ
-      type: string
-    scnl__loc:
-      default: --
-      description: Channel location | char(2)
-      example: "00"
-      type: string
     strongmotion__rsa_030:
       description: RSA(response spectrum accel) value for period 0.30 | double
       example: 0.02604
@@ -19098,6 +19799,248 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/ObjectOriginFlagPostOutput'
+    getPick_200_response:
+      example:
+        data:
+        - sta: ACER
+          loc: "00"
+          firstmotion: D
+          arrival_time: 2017-04-12T08:46:30.93Z
+          confidence_level: 68.3
+          upper_uncertainty: 0.53
+          quality_class: 3
+          id_localspace: 182491
+          inserted: 2016-06-22T16:52:06.26Z
+          provenance:
+            method: ToDo
+            description: Auto added
+            program: IPO-EW__tdmt_invc.c
+            priority: 0
+            version: hew1_mole
+            evaluationmode: automatic
+            url: http://mysite
+            hostname: hew10.ingv.it
+            name: INGV
+            model: prem
+            softwarename: software
+            parameters: ToDo
+            username: ew
+          localspace:
+            environment: development
+            name: hew1_mole
+            description: Auto added
+            priority: 0
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          pick_ew:
+            pamp1: 283
+            pamp2: 283
+            pamp3: 283
+          net: IV
+          cha: HHZ
+          emersio: E
+          lower_uncertainty: 0.52
+        - sta: ACER
+          loc: "00"
+          firstmotion: D
+          arrival_time: 2017-04-12T08:46:30.93Z
+          confidence_level: 68.3
+          upper_uncertainty: 0.53
+          quality_class: 3
+          id_localspace: 182491
+          inserted: 2016-06-22T16:52:06.26Z
+          provenance:
+            method: ToDo
+            description: Auto added
+            program: IPO-EW__tdmt_invc.c
+            priority: 0
+            version: hew1_mole
+            evaluationmode: automatic
+            url: http://mysite
+            hostname: hew10.ingv.it
+            name: INGV
+            model: prem
+            softwarename: software
+            parameters: ToDo
+            username: ew
+          localspace:
+            environment: development
+            name: hew1_mole
+            description: Auto added
+            priority: 0
+          modified: 2016-06-22T16:52:06.26Z
+          id: 14932631
+          pick_ew:
+            pamp1: 283
+            pamp2: 283
+            pamp3: 283
+          net: IV
+          cha: HHZ
+          emersio: E
+          lower_uncertainty: 0.52
+        meta:
+          path: http://localhost:8585
+          per_page: 4000
+          total: 10000
+          last_page: 3
+          from: 1
+          links:
+          - active: "true"
+            label: "2"
+            url: http://localhost:8585
+          - active: "true"
+            label: "2"
+            url: http://localhost:8585
+          to: 4000
+          current_page: 2
+        links:
+          next: http://localhost:8585/api/quakedb/v1/events-group/?page=3
+          last: http://localhost:8585/api/quakedb/v1/events-group/?page=4
+          prev: http://localhost:8585/api/quakedb/v1/events-group/?page=1
+          first: http://localhost:8585/api/quakedb/v1/events-group/?page=2
+      properties:
+        links:
+          $ref: '#/components/schemas/LinksDefinition'
+        meta:
+          $ref: '#/components/schemas/MetaDefinition'
+        data:
+          items:
+            $ref: '#/components/schemas/ObjectPick'
+          type: array
+      type: object
+    getScnl_200_response_data_inner:
+      example:
+        sta: ACER
+        loc: "00"
+        inserted: 2016-06-22T16:52:06.26Z
+        elev: 371
+        modified: 2016-06-22T16:52:06.26Z
+        lon: 9.19289
+        id: 14932631
+        net: IV
+        cha: HHZ
+        lat: 45.492599
+      properties:
+        id:
+          description: Unique incremental id | bigint(20)
+          example: 14932631
+          format: int64
+          readOnly: true
+          type: integer
+        net:
+          description: Channel net code | char(2)
+          example: IV
+          type: string
+        sta:
+          description: Channel station code | varchar(5)
+          example: ACER
+          type: string
+        cha:
+          description: Channel code | char(3)
+          example: HHZ
+          type: string
+        loc:
+          default: --
+          description: Channel location | char(2)
+          example: "00"
+          type: string
+        lat:
+          description: |-
+            Latitude of a point expressed in:
+
+            * the ETRS89 system for Italian and European territories
+            * and in WGS84 for the others.
+          example: 45.492599
+          externalDocs:
+            url: http://dati.gov.it/onto/clvapit#long
+          format: double
+          maximum: 90
+          minimum: -90
+          type: number
+        lon:
+          description: |-
+            Longitude of a point expressed in:
+
+            * the ETRS89 system for Italian and European territories
+            * and in WGS84 for the others.
+          example: 9.19289
+          externalDocs:
+            url: http://dati.gov.it/onto/clvapit#long
+          format: double
+          maximum: 180
+          minimum: -180
+          type: number
+        elev:
+          description: Elevation in meter | double
+          example: 371
+          format: double
+          type: number
+        modified:
+          description: Last Review | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+        inserted:
+          description: Insert time | timestamp
+          example: 2016-06-22T16:52:06.26Z
+          format: date-time
+          readOnly: true
+          type: string
+      type: object
+    getScnl_200_response:
+      example:
+        data:
+        - sta: ACER
+          loc: "00"
+          inserted: 2016-06-22T16:52:06.26Z
+          elev: 371
+          modified: 2016-06-22T16:52:06.26Z
+          lon: 9.19289
+          id: 14932631
+          net: IV
+          cha: HHZ
+          lat: 45.492599
+        - sta: ACER
+          loc: "00"
+          inserted: 2016-06-22T16:52:06.26Z
+          elev: 371
+          modified: 2016-06-22T16:52:06.26Z
+          lon: 9.19289
+          id: 14932631
+          net: IV
+          cha: HHZ
+          lat: 45.492599
+        meta:
+          path: http://localhost:8585
+          per_page: 4000
+          total: 10000
+          last_page: 3
+          from: 1
+          links:
+          - active: "true"
+            label: "2"
+            url: http://localhost:8585
+          - active: "true"
+            label: "2"
+            url: http://localhost:8585
+          to: 4000
+          current_page: 2
+        links:
+          next: http://localhost:8585/api/quakedb/v1/events-group/?page=3
+          last: http://localhost:8585/api/quakedb/v1/events-group/?page=4
+          prev: http://localhost:8585/api/quakedb/v1/events-group/?page=1
+          first: http://localhost:8585/api/quakedb/v1/events-group/?page=2
+      properties:
+        links:
+          $ref: '#/components/schemas/LinksDefinition'
+        meta:
+          $ref: '#/components/schemas/MetaDefinition'
+        data:
+          items:
+            $ref: '#/components/schemas/getScnl_200_response_data_inner'
+          type: array
+      type: object
     getRegionName_200_response_data:
       example:
         region_name: 8 km NW Ladispoli (RM)
