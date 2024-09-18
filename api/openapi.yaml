@@ -14662,6 +14662,10 @@ components:
       description: Italian province name.
       example: Roma
       type: string
+    municipio__region_name:
+      description: Italian region name.
+      example: Lazio
+      type: string
     municipio__population:
       description: Popolazione.
       example: 41078
@@ -14671,10 +14675,6 @@ components:
       description: Azimutal gap | float4
       format: float
       type: number
-    municipio__region_name:
-      description: Italian region name.
-      example: Lazio
-      type: string
     type_event__name:
       description: Name | varchar(255)
       example: earthquake
@@ -20068,6 +20068,7 @@ components:
         dist_km: 7.6
         sigla_pro: RM
         lat: 45.492599
+        nome_reg: Lazio
       properties:
         name:
           description: Italian "municipio" name.
@@ -20080,6 +20081,10 @@ components:
         nome_pro:
           description: Italian province name.
           example: Roma
+          type: string
+        nome_reg:
+          description: Italian region name.
+          example: Lazio
           type: string
         popolazione:
           description: Popolazione.
@@ -20137,6 +20142,7 @@ components:
           dist_km: 7.6
           sigla_pro: RM
           lat: 45.492599
+          nome_reg: Lazio
         - azm: 0.8008282
           nome_pro: Roma
           name: Ladispoli
@@ -20146,6 +20152,7 @@ components:
           dist_km: 7.6
           sigla_pro: RM
           lat: 45.492599
+          nome_reg: Lazio
       properties:
         data:
           items:

@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipiDistanceKmPopolazione200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-09-10T10:48:02.051959206Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-09-18T10:24:25.608477798Z[Etc/UTC]")
 public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -62,6 +62,10 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   public static final String SERIALIZED_NAME_NOME_PRO = "nome_pro";
   @SerializedName(SERIALIZED_NAME_NOME_PRO)
   private String nomePro;
+
+  public static final String SERIALIZED_NAME_NOME_REG = "nome_reg";
+  @SerializedName(SERIALIZED_NAME_NOME_REG)
+  private String nomeReg;
 
   public static final String SERIALIZED_NAME_POPOLAZIONE = "popolazione";
   @SerializedName(SERIALIZED_NAME_POPOLAZIONE)
@@ -144,6 +148,25 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
 
   public void setNomePro(String nomePro) {
     this.nomePro = nomePro;
+  }
+
+
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner nomeReg(String nomeReg) {
+    this.nomeReg = nomeReg;
+    return this;
+  }
+
+   /**
+   * Italian region name.
+   * @return nomeReg
+  **/
+  @javax.annotation.Nullable
+  public String getNomeReg() {
+    return nomeReg;
+  }
+
+  public void setNomeReg(String nomeReg) {
+    this.nomeReg = nomeReg;
   }
 
 
@@ -322,6 +345,7 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     return Objects.equals(this.name, getMunicipiDistanceKmPopolazione200ResponseDataInner.name) &&
         Objects.equals(this.siglaPro, getMunicipiDistanceKmPopolazione200ResponseDataInner.siglaPro) &&
         Objects.equals(this.nomePro, getMunicipiDistanceKmPopolazione200ResponseDataInner.nomePro) &&
+        Objects.equals(this.nomeReg, getMunicipiDistanceKmPopolazione200ResponseDataInner.nomeReg) &&
         Objects.equals(this.popolazione, getMunicipiDistanceKmPopolazione200ResponseDataInner.popolazione) &&
         Objects.equals(this.lat, getMunicipiDistanceKmPopolazione200ResponseDataInner.lat) &&
         Objects.equals(this.lon, getMunicipiDistanceKmPopolazione200ResponseDataInner.lon) &&
@@ -333,7 +357,7 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, siglaPro, nomePro, popolazione, lat, lon, distKm, azm, dir, additionalProperties);
+    return Objects.hash(name, siglaPro, nomePro, nomeReg, popolazione, lat, lon, distKm, azm, dir, additionalProperties);
   }
 
   @Override
@@ -343,6 +367,7 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    siglaPro: ").append(toIndentedString(siglaPro)).append("\n");
     sb.append("    nomePro: ").append(toIndentedString(nomePro)).append("\n");
+    sb.append("    nomeReg: ").append(toIndentedString(nomeReg)).append("\n");
     sb.append("    popolazione: ").append(toIndentedString(popolazione)).append("\n");
     sb.append("    lat: ").append(toIndentedString(lat)).append("\n");
     sb.append("    lon: ").append(toIndentedString(lon)).append("\n");
@@ -375,6 +400,7 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     openapiFields.add("name");
     openapiFields.add("sigla_pro");
     openapiFields.add("nome_pro");
+    openapiFields.add("nome_reg");
     openapiFields.add("popolazione");
     openapiFields.add("lat");
     openapiFields.add("lon");
@@ -407,6 +433,9 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
       }
       if ((jsonObj.get("nome_pro") != null && !jsonObj.get("nome_pro").isJsonNull()) && !jsonObj.get("nome_pro").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `nome_pro` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nome_pro").toString()));
+      }
+      if ((jsonObj.get("nome_reg") != null && !jsonObj.get("nome_reg").isJsonNull()) && !jsonObj.get("nome_reg").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `nome_reg` to be a primitive type in the JSON string but got `%s`", jsonObj.get("nome_reg").toString()));
       }
       if ((jsonObj.get("dir") != null && !jsonObj.get("dir").isJsonNull()) && !jsonObj.get("dir").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `dir` to be a primitive type in the JSON string but got `%s`", jsonObj.get("dir").toString()));

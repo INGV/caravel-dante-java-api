@@ -62,6 +62,14 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInnerTest {
     }
 
     /**
+     * Test the property 'nomeReg'
+     */
+    @Test
+    public void nomeRegTest() {
+        // TODO: test nomeReg
+    }
+
+    /**
      * Test the property 'popolazione'
      */
     @Test
