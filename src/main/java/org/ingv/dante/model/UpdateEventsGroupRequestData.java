@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventsGroupRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-09-19T12:25:34.020147018Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-09-19T14:30:22.033644967Z[Etc/UTC]")
 public class UpdateEventsGroupRequestData {
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
