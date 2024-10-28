@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanism
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-28T16:12:38.390554606Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-28T18:10:54.947238629Z[Etc/UTC]")
 public class ObjectFocalmechanism {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
