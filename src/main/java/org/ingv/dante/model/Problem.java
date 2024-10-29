@@ -50,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * This schema describes RFC7807 Problem Details for HTTP APIs. The specification is intentionally flexible, and allows to adapt the schema adding further properties, or not enforcing any of the properties below.  To make this schema safe by default, additionalProperties are forbidden though. In case you need them, you can either re-define Problem or extend it using &#x60;allOf&#x60;.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T09:29:59.311022746Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T10:01:32.980061627Z[Etc/UTC]")
 public class Problem {
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
