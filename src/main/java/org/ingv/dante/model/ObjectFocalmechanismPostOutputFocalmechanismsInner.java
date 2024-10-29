@@ -52,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanismPostOutputFocalmechanismsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-28T18:21:53.433616896Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-29T07:20:12.760904650Z[Etc/UTC]")
 public class ObjectFocalmechanismPostOutputFocalmechanismsInner {
   public static final String SERIALIZED_NAME_MOMENTTENSOR = "momenttensor";
   @SerializedName(SERIALIZED_NAME_MOMENTTENSOR)
