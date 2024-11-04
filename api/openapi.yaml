@@ -261,7 +261,7 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+      - description: "Specify a list of polygons to select data. \n\nEach polygon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
@@ -272,7 +272,7 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ polygon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
@@ -281,7 +281,7 @@ paths:
           format: string
           type: string
         style: form
-      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+      - description: "Specify a list of pre-set polygons. \n\nEach polygon is `,`\
           \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
         explode: false
         in: query
@@ -927,7 +927,7 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+      - description: "Specify a list of polygons to select data. \n\nEach polygon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
@@ -938,7 +938,7 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ polygon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
@@ -947,7 +947,7 @@ paths:
           format: string
           type: string
         style: form
-      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+      - description: "Specify a list of pre-set polygons. \n\nEach polygon is `,`\
           \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
         explode: false
         in: query
@@ -1592,7 +1592,7 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+      - description: "Specify a list of polygons to select data. \n\nEach polygon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
@@ -1603,7 +1603,7 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ polygon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
@@ -1612,7 +1612,7 @@ paths:
           format: string
           type: string
         style: form
-      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+      - description: "Specify a list of pre-set polygons. \n\nEach polygon is `,`\
           \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
         explode: false
         in: query
@@ -2256,7 +2256,7 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+      - description: "Specify a list of polygons to select data. \n\nEach polygon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
@@ -2267,7 +2267,7 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ polygon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
@@ -2276,7 +2276,7 @@ paths:
           format: string
           type: string
         style: form
-      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+      - description: "Specify a list of pre-set polygons. \n\nEach polygon is `,`\
           \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
         explode: false
         in: query
@@ -2920,7 +2920,7 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+      - description: "Specify a list of polygons to select data. \n\nEach polygon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
@@ -2931,7 +2931,7 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ polygon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
@@ -2940,7 +2940,7 @@ paths:
           format: string
           type: string
         style: form
-      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+      - description: "Specify a list of pre-set polygons. \n\nEach polygon is `,`\
           \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
         explode: false
         in: query
@@ -3587,7 +3587,7 @@ paths:
         required: false
         schema:
           $ref: '#/components/schemas/longitude'
-      - description: "Specify a list of polygons to select data. \n\nEach poligon\
+      - description: "Specify a list of polygons to select data. \n\nEach polygon\
           \ is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
         in: query
@@ -3598,7 +3598,7 @@ paths:
           type: string
         style: form
       - description: "Specify a list of polygons to NOT select data within. \n\nEach\
-          \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+          \ polygon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
           \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
         in: query
         name: notinpolygon
@@ -3607,7 +3607,7 @@ paths:
           format: string
           type: string
         style: form
-      - description: "Specify a list of pre-set polygons. \n\nEach poligon is `,`\
+      - description: "Specify a list of pre-set polygons. \n\nEach polygon is `,`\
           \ separated value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
         explode: false
         in: query
@@ -8622,7 +8622,7 @@ components:
       schema:
         $ref: '#/components/schemas/longitude'
     orpolygon:
-      description: "Specify a list of polygons to select data. \n\nEach poligon is\
+      description: "Specify a list of polygons to select data. \n\nEach polygon is\
         \ `|` separated values, with counterclockwise values like `<lon>,<lat>` and\
         \ last couple must be like the first one.\n\n* Example: `orpolygon=12,42,13,42,13,43,12,43,12,42|12.3,42.3,13.3,42.3,13.3,43.3,12.3,43.3,12.3,42.3`."
       in: query
@@ -8634,7 +8634,7 @@ components:
       style: form
     notinpolygon:
       description: "Specify a list of polygons to NOT select data within. \n\nEach\
-        \ poligon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
+        \ polygon is `|` separated values, with counterclockwise values like `<lon>,<lat>`\
         \ and last couple must be like the first one.\n\n* Example: `notinpolygon=12.5,42,12.5,43,13,48,12.5,42|12.2,41.8,13.2,41.8,13.2,42.8,12.2,42.8,12.2,41.8`"
       in: query
       name: notinpolygon
@@ -8644,7 +8644,7 @@ components:
         type: string
       style: form
     wherepolygonnamein:
-      description: "Specify a list of pre-set polygons. \n\nEach poligon is `,` separated\
+      description: "Specify a list of pre-set polygons. \n\nEach polygon is `,` separated\
         \ value.\n\n* Example: `wherepolygonnamein=area_confine_italia,area_vulcanica_italia`"
       explode: false
       in: query
