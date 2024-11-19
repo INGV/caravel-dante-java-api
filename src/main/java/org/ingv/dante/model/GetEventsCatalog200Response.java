@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * GetEventsCatalog200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-19T15:01:09.778236547Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-19T16:31:30.023183150Z[Etc/UTC]")
 public class GetEventsCatalog200Response {
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
