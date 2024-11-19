@@ -59,7 +59,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-04T16:07:10.703258771Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-19T13:54:12.947033095Z[Etc/UTC]")
 public class ObjectOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -160,10 +160,6 @@ public class ObjectOrigin {
   public static final String SERIALIZED_NAME_FIX_DEPTH = "fix_depth";
   @SerializedName(SERIALIZED_NAME_FIX_DEPTH)
   private Boolean fixDepth = false;
-
-  public static final String SERIALIZED_NAME_IS_CENTROID = "is_centroid";
-  @SerializedName(SERIALIZED_NAME_IS_CENTROID)
-  private Boolean isCentroid = false;
 
   public static final String SERIALIZED_NAME_LAT = "lat";
   @SerializedName(SERIALIZED_NAME_LAT)
@@ -712,25 +708,6 @@ public class ObjectOrigin {
   }
 
 
-  public ObjectOrigin isCentroid(Boolean isCentroid) {
-    this.isCentroid = isCentroid;
-    return this;
-  }
-
-   /**
-   * true if it is a centroi | boolean
-   * @return isCentroid
-  **/
-  @javax.annotation.Nullable
-  public Boolean getIsCentroid() {
-    return isCentroid;
-  }
-
-  public void setIsCentroid(Boolean isCentroid) {
-    this.isCentroid = isCentroid;
-  }
-
-
   public ObjectOrigin lat(Double lat) {
     this.lat = lat;
     return this;
@@ -1267,7 +1244,6 @@ public class ObjectOrigin {
         Objects.equals(this.errOt, objectOrigin.errOt) &&
         Objects.equals(this.errZ, objectOrigin.errZ) &&
         Objects.equals(this.fixDepth, objectOrigin.fixDepth) &&
-        Objects.equals(this.isCentroid, objectOrigin.isCentroid) &&
         Objects.equals(this.lat, objectOrigin.lat) &&
         Objects.equals(this.lon, objectOrigin.lon) &&
         Objects.equals(this.maxDistance, objectOrigin.maxDistance) &&
@@ -1300,7 +1276,7 @@ public class ObjectOrigin {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, modified, inserted, idLocalspace, azimGap, confidenceLevel, depth, e0, e0Az, e0Dip, e1, e1Az, e1Dip, e2, e2Az, e2Dip, errDepth, errH, errLat, errLon, errLatDeg, errLonDeg, errOt, errZ, fixDepth, isCentroid, lat, lon, maxDistance, medDistance, minDistance, nph, nphFm, nphS, nphTot, ot, quality, qualityNumeric, region, rms, secAzimGap, wRms, typeOrigin, localspace, provenance, flags, magnitudes, arrivals, focalmechanisms, additionalProperties);
+    return Objects.hash(id, modified, inserted, idLocalspace, azimGap, confidenceLevel, depth, e0, e0Az, e0Dip, e1, e1Az, e1Dip, e2, e2Az, e2Dip, errDepth, errH, errLat, errLon, errLatDeg, errLonDeg, errOt, errZ, fixDepth, lat, lon, maxDistance, medDistance, minDistance, nph, nphFm, nphS, nphTot, ot, quality, qualityNumeric, region, rms, secAzimGap, wRms, typeOrigin, localspace, provenance, flags, magnitudes, arrivals, focalmechanisms, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -1339,7 +1315,6 @@ public class ObjectOrigin {
     sb.append("    errOt: ").append(toIndentedString(errOt)).append("\n");
     sb.append("    errZ: ").append(toIndentedString(errZ)).append("\n");
     sb.append("    fixDepth: ").append(toIndentedString(fixDepth)).append("\n");
-    sb.append("    isCentroid: ").append(toIndentedString(isCentroid)).append("\n");
     sb.append("    lat: ").append(toIndentedString(lat)).append("\n");
     sb.append("    lon: ").append(toIndentedString(lon)).append("\n");
     sb.append("    maxDistance: ").append(toIndentedString(maxDistance)).append("\n");
@@ -1411,7 +1386,6 @@ public class ObjectOrigin {
     openapiFields.add("err_ot");
     openapiFields.add("err_z");
     openapiFields.add("fix_depth");
-    openapiFields.add("is_centroid");
     openapiFields.add("lat");
     openapiFields.add("lon");
     openapiFields.add("max_distance");

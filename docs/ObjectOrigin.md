@@ -32,7 +32,6 @@
 |**errOt** | **Double** | Origin time error | double |  [optional] |
 |**errZ** | **Double** | Depth error (km) | double |  [optional] |
 |**fixDepth** | **Boolean** | true if depth is fixed | boolean |  [optional] |
-|**isCentroid** | **Boolean** | true if it is a centroi | boolean |  [optional] |
 |**lat** | **Double** | Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  |
 |**lon** | **Double** | Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others. |  |
 |**maxDistance** | **Double** | Distance from the furthest station (km) | double |  [optional] |

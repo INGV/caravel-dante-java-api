@@ -248,14 +248,6 @@ public class ObjectOriginTest {
     }
 
     /**
-     * Test the property 'isCentroid'
-     */
-    @Test
-    public void isCentroidTest() {
-        // TODO: test isCentroid
-    }
-
-    /**
      * Test the property 'lat'
      */
     @Test
