@@ -16,7 +16,7 @@
 |**weight** | **Double** | Weight | double |  [optional] |
 |**magCorrection** | **Double** | magnitude correction | double |  [optional] |
 |**isUsed** | **Boolean** | true if used | boolean |  [optional] |
-|**typeMagnitude** | **String** | Type of the magnitude | varchar(255) |  [optional] |
+|**typeMagnitude** | **String** | Type Scale of the magnitude, international scale label (i.e. ML, Md, Mw, ...) | varchar(50) |  [optional] |
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
 |**amplitude** | [**ObjectAmplitude**](ObjectAmplitude.md) |  |  [optional] |

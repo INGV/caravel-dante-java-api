@@ -23,7 +23,7 @@ import java.time.OffsetDateTime;
 import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspaceForVw;
 import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
-import org.ingv.dante.model.ObjectTypeOrigin;
+import org.ingv.dante.model.ObjectTypeOriginForVw;
 import org.openapitools.jackson.nullable.JsonNullable;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

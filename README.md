@@ -2,7 +2,7 @@
 
 Dante Web Services
 - API version: 3.26.0-dev
-  - Build date: 2024-11-19T13:54:12.947033095Z[Etc/UTC]
+  - Build date: 2024-11-19T14:41:04.223541444Z[Etc/UTC]
 
   
 
@@ -319,6 +319,7 @@ Class | Method | HTTP request | Description
  - [ObjectTableTypeMagnitude](docs/ObjectTableTypeMagnitude.md)
  - [ObjectTableTypeOrigin](docs/ObjectTableTypeOrigin.md)
  - [ObjectTypeOrigin](docs/ObjectTypeOrigin.md)
+ - [ObjectTypeOriginForVw](docs/ObjectTypeOriginForVw.md)
  - [ObjectVwEventCatalogInner](docs/ObjectVwEventCatalogInner.md)
  - [PickEmersio](docs/PickEmersio.md)
  - [PickFirstmotion](docs/PickFirstmotion.md)

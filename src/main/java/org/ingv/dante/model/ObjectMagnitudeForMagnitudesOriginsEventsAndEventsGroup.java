@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-19T13:54:12.947033095Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-19T14:41:04.223541444Z[Etc/UTC]")
 public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -182,7 +182,7 @@ public class ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup {
   }
 
    /**
-   * Type of the magnitude | varchar(255)
+   * Type Scale of the magnitude, international scale label (i.e. ML, Md, Mw, ...) | varchar(50)
    * @return typeMagnitude
   **/
   @javax.annotation.Nullable

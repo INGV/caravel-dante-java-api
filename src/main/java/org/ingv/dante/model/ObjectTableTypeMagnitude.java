@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableTypeMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-19T13:54:12.947033095Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-19T14:41:04.223541444Z[Etc/UTC]")
 public class ObjectTableTypeMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -60,6 +60,10 @@ public class ObjectTableTypeMagnitude {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
+  public static final String SERIALIZED_NAME_SCALE = "scale";
+  @SerializedName(SERIALIZED_NAME_SCALE)
+  private String scale;
 
   public static final String SERIALIZED_NAME_PRIORITY = "priority";
   @SerializedName(SERIALIZED_NAME_PRIORITY)
@@ -130,6 +134,25 @@ public class ObjectTableTypeMagnitude {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+
+  public ObjectTableTypeMagnitude scale(String scale) {
+    this.scale = scale;
+    return this;
+  }
+
+   /**
+   * Type Scale of the magnitude, international scale label (i.e. ML, Md, Mw, ...) | varchar(50)
+   * @return scale
+  **/
+  @javax.annotation.Nullable
+  public String getScale() {
+    return scale;
+  }
+
+  public void setScale(String scale) {
+    this.scale = scale;
   }
 
 
@@ -306,6 +329,7 @@ public class ObjectTableTypeMagnitude {
     ObjectTableTypeMagnitude objectTableTypeMagnitude = (ObjectTableTypeMagnitude) o;
     return Objects.equals(this.id, objectTableTypeMagnitude.id) &&
         Objects.equals(this.name, objectTableTypeMagnitude.name) &&
+        Objects.equals(this.scale, objectTableTypeMagnitude.scale) &&
         Objects.equals(this.priority, objectTableTypeMagnitude.priority) &&
         Objects.equals(this.minmag, objectTableTypeMagnitude.minmag) &&
         Objects.equals(this.maxmag, objectTableTypeMagnitude.maxmag) &&
@@ -322,7 +346,7 @@ public class ObjectTableTypeMagnitude {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, priority, minmag, maxmag, minreadings, description, modified, inserted, additionalProperties);
+    return Objects.hash(id, name, scale, priority, minmag, maxmag, minreadings, description, modified, inserted, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -338,6 +362,7 @@ public class ObjectTableTypeMagnitude {
     sb.append("class ObjectTableTypeMagnitude {\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    scale: ").append(toIndentedString(scale)).append("\n");
     sb.append("    priority: ").append(toIndentedString(priority)).append("\n");
     sb.append("    minmag: ").append(toIndentedString(minmag)).append("\n");
     sb.append("    maxmag: ").append(toIndentedString(maxmag)).append("\n");
@@ -370,6 +395,7 @@ public class ObjectTableTypeMagnitude {
     openapiFields = new HashSet<String>();
     openapiFields.add("id");
     openapiFields.add("name");
+    openapiFields.add("scale");
     openapiFields.add("priority");
     openapiFields.add("minmag");
     openapiFields.add("maxmag");
@@ -397,6 +423,9 @@ public class ObjectTableTypeMagnitude {
         JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
+      }
+      if ((jsonObj.get("scale") != null && !jsonObj.get("scale").isJsonNull()) && !jsonObj.get("scale").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `scale` to be a primitive type in the JSON string but got `%s`", jsonObj.get("scale").toString()));
       }
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));

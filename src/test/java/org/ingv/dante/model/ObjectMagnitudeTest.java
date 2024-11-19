@@ -181,6 +181,14 @@ public class ObjectMagnitudeTest {
     }
 
     /**
+     * Test the property 'typeMagnitudeExtended'
+     */
+    @Test
+    public void typeMagnitudeExtendedTest() {
+        // TODO: test typeMagnitudeExtended
+    }
+
+    /**
      * Test the property 'typeMagnitudePriority'
      */
     @Test

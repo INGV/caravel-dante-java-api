@@ -222,6 +222,7 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectTableTypeMagnitude.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectTableTypeOrigin.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectTypeOrigin.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectTypeOriginForVw.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.ObjectVwEventCatalogInner.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.PickScnlSchema.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new org.ingv.dante.model.PickScnlSchemaEwLogo.CustomTypeAdapterFactory());

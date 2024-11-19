@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import org.ingv.dante.model.TypeOriginName;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -47,149 +48,79 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * PickScnlSchemaEwLogo
+ * ObjectTypeOriginForVw
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-19T14:41:04.223541444Z[Etc/UTC]")
-public class PickScnlSchemaEwLogo {
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private String type;
+public class ObjectTypeOriginForVw {
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private TypeOriginName name = TypeOriginName.HYPOCENTER;
 
-  public static final String SERIALIZED_NAME_MODULE = "module";
-  @SerializedName(SERIALIZED_NAME_MODULE)
-  private String module;
+  public static final String SERIALIZED_NAME_VERSION_NAME = "version_name";
+  @SerializedName(SERIALIZED_NAME_VERSION_NAME)
+  private String versionName;
 
-  public static final String SERIALIZED_NAME_INSTALLATION = "installation";
-  @SerializedName(SERIALIZED_NAME_INSTALLATION)
-  private String installation;
+  public static final String SERIALIZED_NAME_VERSION_VALUE = "version_value";
+  @SerializedName(SERIALIZED_NAME_VERSION_VALUE)
+  private Long versionValue;
 
-  public static final String SERIALIZED_NAME_USER = "user";
-  @SerializedName(SERIALIZED_NAME_USER)
-  private String user;
-
-  public static final String SERIALIZED_NAME_HOSTNAME = "hostname";
-  @SerializedName(SERIALIZED_NAME_HOSTNAME)
-  private String hostname;
-
-  public static final String SERIALIZED_NAME_INSTANCE = "instance";
-  @SerializedName(SERIALIZED_NAME_INSTANCE)
-  private String instance;
-
-  public PickScnlSchemaEwLogo() {
+  public ObjectTypeOriginForVw() {
   }
 
-  public PickScnlSchemaEwLogo type(String type) {
-    this.type = type;
+  public ObjectTypeOriginForVw(
+     Long versionValue
+  ) {
+    this();
+    this.versionValue = versionValue;
+  }
+
+  public ObjectTypeOriginForVw name(TypeOriginName name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Type description | ???
-   * @return type
-  **/
-  @javax.annotation.Nonnull
-  public String getType() {
-    return type;
-  }
-
-  public void setType(String type) {
-    this.type = type;
-  }
-
-
-  public PickScnlSchemaEwLogo module(String module) {
-    this.module = module;
-    return this;
-  }
-
-   /**
-   * Module description | ???
-   * @return module
-  **/
-  @javax.annotation.Nonnull
-  public String getModule() {
-    return module;
-  }
-
-  public void setModule(String module) {
-    this.module = module;
-  }
-
-
-  public PickScnlSchemaEwLogo installation(String installation) {
-    this.installation = installation;
-    return this;
-  }
-
-   /**
-   * Installation description | ???
-   * @return installation
-  **/
-  @javax.annotation.Nonnull
-  public String getInstallation() {
-    return installation;
-  }
-
-  public void setInstallation(String installation) {
-    this.installation = installation;
-  }
-
-
-  public PickScnlSchemaEwLogo user(String user) {
-    this.user = user;
-    return this;
-  }
-
-   /**
-   * User | ???
-   * @return user
+   * Get name
+   * @return name
   **/
   @javax.annotation.Nullable
-  public String getUser() {
-    return user;
+  public TypeOriginName getName() {
+    return name;
   }
 
-  public void setUser(String user) {
-    this.user = user;
+  public void setName(TypeOriginName name) {
+    this.name = name;
   }
 
 
-  public PickScnlSchemaEwLogo hostname(String hostname) {
-    this.hostname = hostname;
+  public ObjectTypeOriginForVw versionName(String versionName) {
+    this.versionName = versionName;
     return this;
   }
 
    /**
-   * Hostname | ???
-   * @return hostname
+   * Localization name (es:ew prelim,XX,WW,..) | varchar(255)
+   * @return versionName
   **/
   @javax.annotation.Nullable
-  public String getHostname() {
-    return hostname;
+  public String getVersionName() {
+    return versionName;
   }
 
-  public void setHostname(String hostname) {
-    this.hostname = hostname;
+  public void setVersionName(String versionName) {
+    this.versionName = versionName;
   }
 
-
-  public PickScnlSchemaEwLogo instance(String instance) {
-    this.instance = instance;
-    return this;
-  }
 
    /**
-   * Instance description | ???
-   * @return instance
+   * Define a numeric value for type origin. &lt; 100 is automatic location | bigint(20)
+   * @return versionValue
   **/
-  @javax.annotation.Nonnull
-  public String getInstance() {
-    return instance;
+  @javax.annotation.Nullable
+  public Long getVersionValue() {
+    return versionValue;
   }
 
-  public void setInstance(String instance) {
-    this.instance = instance;
-  }
 
   /**
    * A container for additional, undeclared properties.
@@ -204,9 +135,9 @@ public class PickScnlSchemaEwLogo {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the PickScnlSchemaEwLogo instance itself
+   * @return the ObjectTypeOriginForVw instance itself
    */
-  public PickScnlSchemaEwLogo putAdditionalProperty(String key, Object value) {
+  public ObjectTypeOriginForVw putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -245,31 +176,25 @@ public class PickScnlSchemaEwLogo {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PickScnlSchemaEwLogo pickScnlSchemaEwLogo = (PickScnlSchemaEwLogo) o;
-    return Objects.equals(this.type, pickScnlSchemaEwLogo.type) &&
-        Objects.equals(this.module, pickScnlSchemaEwLogo.module) &&
-        Objects.equals(this.installation, pickScnlSchemaEwLogo.installation) &&
-        Objects.equals(this.user, pickScnlSchemaEwLogo.user) &&
-        Objects.equals(this.hostname, pickScnlSchemaEwLogo.hostname) &&
-        Objects.equals(this.instance, pickScnlSchemaEwLogo.instance)&&
-        Objects.equals(this.additionalProperties, pickScnlSchemaEwLogo.additionalProperties);
+    ObjectTypeOriginForVw objectTypeOriginForVw = (ObjectTypeOriginForVw) o;
+    return Objects.equals(this.name, objectTypeOriginForVw.name) &&
+        Objects.equals(this.versionName, objectTypeOriginForVw.versionName) &&
+        Objects.equals(this.versionValue, objectTypeOriginForVw.versionValue)&&
+        Objects.equals(this.additionalProperties, objectTypeOriginForVw.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, module, installation, user, hostname, instance, additionalProperties);
+    return Objects.hash(name, versionName, versionValue, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class PickScnlSchemaEwLogo {\n");
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    module: ").append(toIndentedString(module)).append("\n");
-    sb.append("    installation: ").append(toIndentedString(installation)).append("\n");
-    sb.append("    user: ").append(toIndentedString(user)).append("\n");
-    sb.append("    hostname: ").append(toIndentedString(hostname)).append("\n");
-    sb.append("    instance: ").append(toIndentedString(instance)).append("\n");
+    sb.append("class ObjectTypeOriginForVw {\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    versionName: ").append(toIndentedString(versionName)).append("\n");
+    sb.append("    versionValue: ").append(toIndentedString(versionValue)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -293,58 +218,33 @@ public class PickScnlSchemaEwLogo {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("type");
-    openapiFields.add("module");
-    openapiFields.add("installation");
-    openapiFields.add("user");
-    openapiFields.add("hostname");
-    openapiFields.add("instance");
+    openapiFields.add("name");
+    openapiFields.add("version_name");
+    openapiFields.add("version_value");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("type");
-    openapiRequiredFields.add("module");
-    openapiRequiredFields.add("installation");
-    openapiRequiredFields.add("instance");
   }
 
  /**
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PickScnlSchemaEwLogo
+  * @throws IOException if the JSON Element is invalid with respect to ObjectTypeOriginForVw
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!PickScnlSchemaEwLogo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in PickScnlSchemaEwLogo is not found in the empty JSON string", PickScnlSchemaEwLogo.openapiRequiredFields.toString()));
-        }
-      }
-
-      // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : PickScnlSchemaEwLogo.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        if (!ObjectTypeOriginForVw.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTypeOriginForVw is not found in the empty JSON string", ObjectTypeOriginForVw.openapiRequiredFields.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("type").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
+      // validate the optional field `name`
+      if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) {
+        TypeOriginName.validateJsonElement(jsonObj.get("name"));
       }
-      if (!jsonObj.get("module").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `module` to be a primitive type in the JSON string but got `%s`", jsonObj.get("module").toString()));
-      }
-      if (!jsonObj.get("installation").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `installation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installation").toString()));
-      }
-      if ((jsonObj.get("user") != null && !jsonObj.get("user").isJsonNull()) && !jsonObj.get("user").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `user` to be a primitive type in the JSON string but got `%s`", jsonObj.get("user").toString()));
-      }
-      if ((jsonObj.get("hostname") != null && !jsonObj.get("hostname").isJsonNull()) && !jsonObj.get("hostname").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `hostname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hostname").toString()));
-      }
-      if (!jsonObj.get("instance").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `instance` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instance").toString()));
+      if ((jsonObj.get("version_name") != null && !jsonObj.get("version_name").isJsonNull()) && !jsonObj.get("version_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `version_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version_name").toString()));
       }
   }
 
@@ -352,16 +252,16 @@ public class PickScnlSchemaEwLogo {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!PickScnlSchemaEwLogo.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'PickScnlSchemaEwLogo' and its subtypes
+       if (!ObjectTypeOriginForVw.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectTypeOriginForVw' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<PickScnlSchemaEwLogo> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(PickScnlSchemaEwLogo.class));
+       final TypeAdapter<ObjectTypeOriginForVw> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectTypeOriginForVw.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<PickScnlSchemaEwLogo>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectTypeOriginForVw>() {
            @Override
-           public void write(JsonWriter out, PickScnlSchemaEwLogo value) throws IOException {
+           public void write(JsonWriter out, ObjectTypeOriginForVw value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -389,12 +289,12 @@ public class PickScnlSchemaEwLogo {
            }
 
            @Override
-           public PickScnlSchemaEwLogo read(JsonReader in) throws IOException {
+           public ObjectTypeOriginForVw read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
-             PickScnlSchemaEwLogo instance = thisAdapter.fromJsonTree(jsonObj);
+             ObjectTypeOriginForVw instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -421,18 +321,18 @@ public class PickScnlSchemaEwLogo {
   }
 
  /**
-  * Create an instance of PickScnlSchemaEwLogo given an JSON string
+  * Create an instance of ObjectTypeOriginForVw given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of PickScnlSchemaEwLogo
-  * @throws IOException if the JSON string is invalid with respect to PickScnlSchemaEwLogo
+  * @return An instance of ObjectTypeOriginForVw
+  * @throws IOException if the JSON string is invalid with respect to ObjectTypeOriginForVw
   */
-  public static PickScnlSchemaEwLogo fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, PickScnlSchemaEwLogo.class);
+  public static ObjectTypeOriginForVw fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectTypeOriginForVw.class);
   }
 
  /**
-  * Convert an instance of PickScnlSchemaEwLogo to an JSON string
+  * Convert an instance of ObjectTypeOriginForVw to an JSON string
   *
   * @return JSON string
   */

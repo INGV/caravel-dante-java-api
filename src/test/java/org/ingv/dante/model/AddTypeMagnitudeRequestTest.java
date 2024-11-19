@@ -56,6 +56,14 @@ public class AddTypeMagnitudeRequestTest {
     }
 
     /**
+     * Test the property 'scale'
+     */
+    @Test
+    public void scaleTest() {
+        // TODO: test scale
+    }
+
+    /**
      * Test the property 'priority'
      */
     @Test
