@@ -10,7 +10,7 @@
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] |
 |**idLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
 |**mag** | **Double** | Magnitude value | double |  [optional] |
-|**typeMagnitude** | **String** | Type of the magnitude | varchar(255) |  [optional] |
+|**typeMagnitude** | **String** | Type Scale of the magnitude, international scale label (i.e. ML, Md, Mw, ...) | varchar(50) |  [optional] |
 |**lowerUncertainty** | **Double** | Magnitude lower_uncertainty | double |  [optional] |
 |**upperUncertainty** | **Double** | Magnitude upper_uncertainty | double |  [optional] |
 |**quality** | **Double** | quality | double |  [optional] |

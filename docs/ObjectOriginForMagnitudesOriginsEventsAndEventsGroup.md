@@ -28,7 +28,7 @@
 |**region** | **String** | Event location remark region | varchar(255) |  [optional] |
 |**modified** | **OffsetDateTime** | Last Review | timestamp |  [optional] [readonly] |
 |**inserted** | **OffsetDateTime** | Insert time | timestamp |  [optional] [readonly] |
-|**typeOrigin** | [**ObjectTypeOrigin**](ObjectTypeOrigin.md) |  |  [optional] |
+|**typeOrigin** | [**ObjectTypeOriginForVw**](ObjectTypeOriginForVw.md) |  |  [optional] |
 |**localspace** | [**ObjectLocalspaceForVw**](ObjectLocalspaceForVw.md) |  |  [optional] |
 |**provenance** | [**ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup**](ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.md) |  |  [optional] |
 

@@ -20,30 +20,46 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import org.ingv.dante.model.GetEvent200ResponseData;
+import org.ingv.dante.model.TypeOriginName;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for GetEvent200Response
+ * Model tests for ObjectTypeOriginForVw
  */
-public class GetEvent200ResponseTest {
-    private final GetEvent200Response model = new GetEvent200Response();
+public class ObjectTypeOriginForVwTest {
+    private final ObjectTypeOriginForVw model = new ObjectTypeOriginForVw();
 
     /**
-     * Model tests for GetEvent200Response
+     * Model tests for ObjectTypeOriginForVw
      */
     @Test
-    public void testGetEvent200Response() {
-        // TODO: test GetEvent200Response
+    public void testObjectTypeOriginForVw() {
+        // TODO: test ObjectTypeOriginForVw
     }
 
     /**
-     * Test the property 'data'
+     * Test the property 'name'
      */
     @Test
-    public void dataTest() {
-        // TODO: test data
+    public void nameTest() {
+        // TODO: test name
+    }
+
+    /**
+     * Test the property 'versionName'
+     */
+    @Test
+    public void versionNameTest() {
+        // TODO: test versionName
+    }
+
+    /**
+     * Test the property 'versionValue'
+     */
+    @Test
+    public void versionValueTest() {
+        // TODO: test versionValue
     }
 
 }

@@ -1,8 +1,8 @@
 # java-openapi-generator-cli-dante
 
 Dante Web Services
-- API version: 3.25.0
-  - Build date: 2024-11-04T16:08:56.576599368Z[Etc/UTC]
+- API version: 3.26.0
+  - Build date: 2024-11-19T15:01:09.778236547Z[Etc/UTC]
 
   
 
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv.dante</groupId>
   <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>3.25.0</version>
+  <version>3.26.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.25.0"
+     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.26.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-3.25.0.jar`
+* `target/java-openapi-generator-cli-dante-3.26.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -319,6 +319,7 @@ Class | Method | HTTP request | Description
  - [ObjectTableTypeMagnitude](docs/ObjectTableTypeMagnitude.md)
  - [ObjectTableTypeOrigin](docs/ObjectTableTypeOrigin.md)
  - [ObjectTypeOrigin](docs/ObjectTypeOrigin.md)
+ - [ObjectTypeOriginForVw](docs/ObjectTypeOriginForVw.md)
  - [ObjectVwEventCatalogInner](docs/ObjectVwEventCatalogInner.md)
  - [PickEmersio](docs/PickEmersio.md)
  - [PickFirstmotion](docs/PickFirstmotion.md)

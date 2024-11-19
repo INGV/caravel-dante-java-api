@@ -9,6 +9,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] [readonly] |
 |**name** | **String** | Type of the magnitude | varchar(255) |  [optional] |
+|**scale** | **String** | Type Scale of the magnitude, international scale label (i.e. ML, Md, Mw, ...) | varchar(50) |  [optional] |
 |**priority** | **Long** | Priority | int(8) |  [optional] |
 |**minmag** | **Float** | Minimum magnitude value | float(4) |  [optional] |
 |**maxmag** | **Float** | Maximum magnitude value | float(4) |  [optional] |

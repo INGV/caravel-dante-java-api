@@ -21,7 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import org.ingv.dante.model.ObjectMagnitudePostOutput;
+import org.ingv.dante.model.TypeOriginName;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -48,34 +48,79 @@ import java.util.Set;
 import org.ingv.dante.JSON;
 
 /**
- * AddMagnitude201Response
+ * ObjectTypeOriginForVw
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-19T15:01:09.778236547Z[Etc/UTC]")
-public class AddMagnitude201Response {
-  public static final String SERIALIZED_NAME_DATA = "data";
-  @SerializedName(SERIALIZED_NAME_DATA)
-  private ObjectMagnitudePostOutput data;
+public class ObjectTypeOriginForVw {
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private TypeOriginName name = TypeOriginName.HYPOCENTER;
 
-  public AddMagnitude201Response() {
+  public static final String SERIALIZED_NAME_VERSION_NAME = "version_name";
+  @SerializedName(SERIALIZED_NAME_VERSION_NAME)
+  private String versionName;
+
+  public static final String SERIALIZED_NAME_VERSION_VALUE = "version_value";
+  @SerializedName(SERIALIZED_NAME_VERSION_VALUE)
+  private Long versionValue;
+
+  public ObjectTypeOriginForVw() {
   }
 
-  public AddMagnitude201Response data(ObjectMagnitudePostOutput data) {
-    this.data = data;
+  public ObjectTypeOriginForVw(
+     Long versionValue
+  ) {
+    this();
+    this.versionValue = versionValue;
+  }
+
+  public ObjectTypeOriginForVw name(TypeOriginName name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Get data
-   * @return data
+   * Get name
+   * @return name
   **/
   @javax.annotation.Nullable
-  public ObjectMagnitudePostOutput getData() {
-    return data;
+  public TypeOriginName getName() {
+    return name;
   }
 
-  public void setData(ObjectMagnitudePostOutput data) {
-    this.data = data;
+  public void setName(TypeOriginName name) {
+    this.name = name;
   }
+
+
+  public ObjectTypeOriginForVw versionName(String versionName) {
+    this.versionName = versionName;
+    return this;
+  }
+
+   /**
+   * Localization name (es:ew prelim,XX,WW,..) | varchar(255)
+   * @return versionName
+  **/
+  @javax.annotation.Nullable
+  public String getVersionName() {
+    return versionName;
+  }
+
+  public void setVersionName(String versionName) {
+    this.versionName = versionName;
+  }
+
+
+   /**
+   * Define a numeric value for type origin. &lt; 100 is automatic location | bigint(20)
+   * @return versionValue
+  **/
+  @javax.annotation.Nullable
+  public Long getVersionValue() {
+    return versionValue;
+  }
+
 
   /**
    * A container for additional, undeclared properties.
@@ -90,9 +135,9 @@ public class AddMagnitude201Response {
    *
    * @param key name of the property
    * @param value value of the property
-   * @return the AddMagnitude201Response instance itself
+   * @return the ObjectTypeOriginForVw instance itself
    */
-  public AddMagnitude201Response putAdditionalProperty(String key, Object value) {
+  public ObjectTypeOriginForVw putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -131,21 +176,25 @@ public class AddMagnitude201Response {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AddMagnitude201Response addMagnitude201Response = (AddMagnitude201Response) o;
-    return Objects.equals(this.data, addMagnitude201Response.data)&&
-        Objects.equals(this.additionalProperties, addMagnitude201Response.additionalProperties);
+    ObjectTypeOriginForVw objectTypeOriginForVw = (ObjectTypeOriginForVw) o;
+    return Objects.equals(this.name, objectTypeOriginForVw.name) &&
+        Objects.equals(this.versionName, objectTypeOriginForVw.versionName) &&
+        Objects.equals(this.versionValue, objectTypeOriginForVw.versionValue)&&
+        Objects.equals(this.additionalProperties, objectTypeOriginForVw.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, additionalProperties);
+    return Objects.hash(name, versionName, versionValue, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AddMagnitude201Response {\n");
-    sb.append("    data: ").append(toIndentedString(data)).append("\n");
+    sb.append("class ObjectTypeOriginForVw {\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    versionName: ").append(toIndentedString(versionName)).append("\n");
+    sb.append("    versionValue: ").append(toIndentedString(versionValue)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -169,7 +218,9 @@ public class AddMagnitude201Response {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("data");
+    openapiFields.add("name");
+    openapiFields.add("version_name");
+    openapiFields.add("version_value");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -179,18 +230,21 @@ public class AddMagnitude201Response {
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddMagnitude201Response
+  * @throws IOException if the JSON Element is invalid with respect to ObjectTypeOriginForVw
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!AddMagnitude201Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AddMagnitude201Response is not found in the empty JSON string", AddMagnitude201Response.openapiRequiredFields.toString()));
+        if (!ObjectTypeOriginForVw.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTypeOriginForVw is not found in the empty JSON string", ObjectTypeOriginForVw.openapiRequiredFields.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the optional field `data`
-      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        ObjectMagnitudePostOutput.validateJsonElement(jsonObj.get("data"));
+      // validate the optional field `name`
+      if (jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) {
+        TypeOriginName.validateJsonElement(jsonObj.get("name"));
+      }
+      if ((jsonObj.get("version_name") != null && !jsonObj.get("version_name").isJsonNull()) && !jsonObj.get("version_name").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `version_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version_name").toString()));
       }
   }
 
@@ -198,16 +252,16 @@ public class AddMagnitude201Response {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!AddMagnitude201Response.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'AddMagnitude201Response' and its subtypes
+       if (!ObjectTypeOriginForVw.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ObjectTypeOriginForVw' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<AddMagnitude201Response> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(AddMagnitude201Response.class));
+       final TypeAdapter<ObjectTypeOriginForVw> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ObjectTypeOriginForVw.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<AddMagnitude201Response>() {
+       return (TypeAdapter<T>) new TypeAdapter<ObjectTypeOriginForVw>() {
            @Override
-           public void write(JsonWriter out, AddMagnitude201Response value) throws IOException {
+           public void write(JsonWriter out, ObjectTypeOriginForVw value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
              // serialize additional properties
@@ -235,12 +289,12 @@ public class AddMagnitude201Response {
            }
 
            @Override
-           public AddMagnitude201Response read(JsonReader in) throws IOException {
+           public ObjectTypeOriginForVw read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
-             AddMagnitude201Response instance = thisAdapter.fromJsonTree(jsonObj);
+             ObjectTypeOriginForVw instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -267,18 +321,18 @@ public class AddMagnitude201Response {
   }
 
  /**
-  * Create an instance of AddMagnitude201Response given an JSON string
+  * Create an instance of ObjectTypeOriginForVw given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of AddMagnitude201Response
-  * @throws IOException if the JSON string is invalid with respect to AddMagnitude201Response
+  * @return An instance of ObjectTypeOriginForVw
+  * @throws IOException if the JSON string is invalid with respect to ObjectTypeOriginForVw
   */
-  public static AddMagnitude201Response fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, AddMagnitude201Response.class);
+  public static ObjectTypeOriginForVw fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ObjectTypeOriginForVw.class);
   }
 
  /**
-  * Convert an instance of AddMagnitude201Response to an JSON string
+  * Convert an instance of ObjectTypeOriginForVw to an JSON string
   *
   * @return JSON string
   */
