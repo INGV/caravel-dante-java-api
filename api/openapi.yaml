@@ -32,13 +32,13 @@ servers:
 - description: production
   url: https://caravel-dante.int.ingv.it/api
 - description: development
-  url: "http://{hostname}/api"
+  url: "{hostname}/api"
   variables:
     hostname:
-      default: localhost:8585
+      default: https://dev-caravel-dante.int.ingv.it
       enum:
-      - localhost:8585
-      - caravel-dante.int.ingv.it:8585
+      - http://localhost:8585
+      - https://dev-caravel-dante.int.ingv.it
   x-sandbox: true
 tags:
 - description: status api
@@ -12751,15 +12751,18 @@ components:
           description: Minimum magnitude value | float(4)
           example: 1.2
           format: float
+          nullable: true
           type: number
         maxmag:
           description: Maximum magnitude value | float(4)
           example: 2.2
           format: float
+          nullable: true
           type: number
         minreadings:
           description: Minimum number of readings | int(8)
           format: int32
+          nullable: true
           type: integer
         description:
           description: Additional information | char(255)
@@ -15314,15 +15317,18 @@ components:
       description: Minimum magnitude value | float(4)
       example: 1.2
       format: float
+      nullable: true
       type: number
     type_magnitude__maxmag:
       description: Maximum magnitude value | float(4)
       example: 2.2
       format: float
+      nullable: true
       type: number
     type_magnitude__minreadings:
       description: Minimum number of readings | int(8)
       format: int32
+      nullable: true
       type: integer
     magnitude__lower_uncertainty:
       description: Magnitude lower_uncertainty | double

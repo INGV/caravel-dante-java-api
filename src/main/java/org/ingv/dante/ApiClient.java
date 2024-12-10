@@ -69,16 +69,16 @@ public class ApiClient {
       new HashMap<String, ServerVariable>()
     ),
     new ServerConfiguration(
-      "http://{hostname}/api",
+      "{hostname}/api",
       "development",
       new HashMap<String, ServerVariable>() {{
         put("hostname", new ServerVariable(
           "No description provided",
-          "localhost:8585",
+          "https://dev-caravel-dante.int.ingv.it",
           new HashSet<String>(
             Arrays.asList(
-              "localhost:8585",
-              "caravel-dante.int.ingv.it:8585"
+              "http://localhost:8585",
+              "https://dev-caravel-dante.int.ingv.it"
             )
           )
         ));
