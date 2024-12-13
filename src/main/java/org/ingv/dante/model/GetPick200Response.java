@@ -54,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * GetPick200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:55:44.681934789Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:06:05.806241680Z[Etc/UTC]")
 public class GetPick200Response {
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
