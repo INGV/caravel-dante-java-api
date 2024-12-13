@@ -49,6 +49,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class GetApi {
     private ApiClient localVarApiClient;
@@ -387,8 +388,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -396,6 +396,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -408,7 +409,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getAllValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Integer minnphtot, Double mindistance, List<String> wheretypeeventnamein, List<String> wheretypeeventnamenotin, List<String> whereoriginqualityin, List<String> wheremagnitudemagqualityin, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, final ApiCallback _callback) throws ApiException {
-        return getAllCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, _callback);
+        
+
+        okhttp3.Call localVarCall = getAllCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, _callback);
+        return localVarCall;
 
     }
 
@@ -711,8 +715,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -720,6 +723,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -732,7 +736,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getEventValidateBeforeCall(Long originid, Long eventid, String level, String originOrderby, String magnitudeOrderby, final ApiCallback _callback) throws ApiException {
-        return getEventCall(originid, eventid, level, originOrderby, magnitudeOrderby, _callback);
+        
+
+        okhttp3.Call localVarCall = getEventCall(originid, eventid, level, originOrderby, magnitudeOrderby, _callback);
+        return localVarCall;
 
     }
 
@@ -1127,8 +1134,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1136,6 +1142,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1148,7 +1155,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getEventsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Integer minnphtot, Double mindistance, List<String> wheretypeeventnamein, List<String> wheretypeeventnamenotin, List<String> whereoriginqualityin, List<String> wheremagnitudemagqualityin, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, final ApiCallback _callback) throws ApiException {
-        return getEventsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, _callback);
+        
+
+        okhttp3.Call localVarCall = getEventsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, _callback);
+        return localVarCall;
 
     }
 
@@ -1686,8 +1696,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -1695,6 +1704,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -1707,7 +1717,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getEventsCatalogValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Integer minnphtot, Double mindistance, List<String> wheretypeeventnamein, List<String> wheretypeeventnamenotin, List<String> whereoriginqualityin, List<String> wheremagnitudemagqualityin, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, String doi, final ApiCallback _callback) throws ApiException {
-        return getEventsCatalogCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, _callback);
+        
+
+        okhttp3.Call localVarCall = getEventsCatalogCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi, _callback);
+        return localVarCall;
 
     }
 
@@ -2243,8 +2256,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2252,6 +2264,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2264,7 +2277,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getEventsGroupValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Integer minnphtot, Double mindistance, List<String> wheretypeeventnamein, List<String> wheretypeeventnamenotin, List<String> whereoriginqualityin, List<String> wheremagnitudemagqualityin, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, final ApiCallback _callback) throws ApiException {
-        return getEventsGroupCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, _callback);
+        
+
+        okhttp3.Call localVarCall = getEventsGroupCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, _callback);
+        return localVarCall;
 
     }
 
@@ -2542,8 +2558,7 @@ public class GetApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2551,6 +2566,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2563,7 +2579,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getLocalspaceValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return getLocalspaceCall(_callback);
+        
+
+        okhttp3.Call localVarCall = getLocalspaceCall(_callback);
+        return localVarCall;
 
     }
 
@@ -2943,8 +2962,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -2952,6 +2970,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -2964,7 +2983,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getMagnitudesValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Integer minnphtot, Double mindistance, List<String> wheretypeeventnamein, List<String> wheretypeeventnamenotin, List<String> whereoriginqualityin, List<String> wheremagnitudemagqualityin, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, final ApiCallback _callback) throws ApiException {
-        return getMagnitudesCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, _callback);
+        
+
+        okhttp3.Call localVarCall = getMagnitudesCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, _callback);
+        return localVarCall;
 
     }
 
@@ -3267,8 +3289,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3276,6 +3297,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -3288,22 +3310,25 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getMunicipiDistanceKmPopolazioneValidateBeforeCall(Double mindistance, Double maxdistance, Long minpopolazione, Double lat, Double lon, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'mindistance' is set
         if (mindistance == null) {
             throw new ApiException("Missing the required parameter 'mindistance' when calling getMunicipiDistanceKmPopolazione(Async)");
         }
-
+        
         // verify the required parameter 'maxdistance' is set
         if (maxdistance == null) {
             throw new ApiException("Missing the required parameter 'maxdistance' when calling getMunicipiDistanceKmPopolazione(Async)");
         }
-
+        
         // verify the required parameter 'minpopolazione' is set
         if (minpopolazione == null) {
             throw new ApiException("Missing the required parameter 'minpopolazione' when calling getMunicipiDistanceKmPopolazione(Async)");
         }
+        
 
-        return getMunicipiDistanceKmPopolazioneCall(mindistance, maxdistance, minpopolazione, lat, lon, _callback);
+        okhttp3.Call localVarCall = getMunicipiDistanceKmPopolazioneCall(mindistance, maxdistance, minpopolazione, lat, lon, _callback);
+        return localVarCall;
 
     }
 
@@ -3448,8 +3473,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3457,6 +3481,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -3469,12 +3494,15 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getMunicipioValidateBeforeCall(String name, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'name' is set
         if (name == null) {
             throw new ApiException("Missing the required parameter 'name' when calling getMunicipio(Async)");
         }
+        
 
-        return getMunicipioCall(name, _callback);
+        okhttp3.Call localVarCall = getMunicipioCall(name, _callback);
+        return localVarCall;
 
     }
 
@@ -3622,8 +3650,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -3631,6 +3658,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -3643,7 +3671,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getOriginFlagValidateBeforeCall(Long originid, String name, Long value, String note, final ApiCallback _callback) throws ApiException {
-        return getOriginFlagCall(originid, name, value, note, _callback);
+        
+
+        okhttp3.Call localVarCall = getOriginFlagCall(originid, name, value, note, _callback);
+        return localVarCall;
 
     }
 
@@ -4035,8 +4066,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4044,6 +4074,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4056,7 +4087,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getOriginsValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, Double minlat, Double maxlat, Double minlon, Double maxlon, String orpolygon, String notinpolygon, List<String> wherepolygonnamein, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Double minmag, Double maxmag, Double mindepth, Double maxdepth, Integer minnphtot, Double mindistance, List<String> wheretypeeventnamein, List<String> wheretypeeventnamenotin, List<String> whereoriginqualityin, List<String> wheremagnitudemagqualityin, Long mintypeoriginvalue, Long maxtypeoriginvalue, Boolean origindirectlinktoevent, Boolean magnitudedirectlinktoorigin, Boolean magnitudedirectlinktoevent, String wheretypeoriginvaluein, String wheretypemagnitudenameregexp, List<String> whereeventlocalspaceenvironmentin, List<String> whereoriginlocalspaceenvironmentin, List<String> wheremagnitudelocalspaceenvironmentin, String whereeventlocalspacenamein, String whereoriginlocalspacenamein, String wheremagnitudelocalspacenamein, OffsetDateTime eventupdatedafter, OffsetDateTime originupdatedafter, OffsetDateTime magnitudeupdatedafter, String updatedafteroperator, String whereflagsin, String orderby, Long eventGroupId, Long idLocalspace, Integer limit, Integer page, Long eventid, Long originid, Long magnitudeid, final ApiCallback _callback) throws ApiException {
-        return getOriginsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, _callback);
+        
+
+        okhttp3.Call localVarCall = getOriginsCall(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, _callback);
+        return localVarCall;
 
     }
 
@@ -4434,8 +4468,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4443,6 +4476,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4455,7 +4489,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getPickValidateBeforeCall(OffsetDateTime starttime, OffsetDateTime endtime, String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, List<String> wherelocalspaceenvironmentin, String wherelocalspacenamein, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
-        return getPickCall(starttime, endtime, wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelocalspaceenvironmentin, wherelocalspacenamein, limit, page, _callback);
+        
+
+        okhttp3.Call localVarCall = getPickCall(starttime, endtime, wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelocalspaceenvironmentin, wherelocalspacenamein, limit, page, _callback);
+        return localVarCall;
 
     }
 
@@ -4640,8 +4677,7 @@ public class GetApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4649,6 +4685,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4661,7 +4698,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getProvenanceValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return getProvenanceCall(_callback);
+        
+
+        okhttp3.Call localVarCall = getProvenanceCall(_callback);
+        return localVarCall;
 
     }
 
@@ -4796,8 +4836,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -4805,6 +4844,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -4817,7 +4857,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getRegionNameValidateBeforeCall(Double lat, Double lon, final ApiCallback _callback) throws ApiException {
-        return getRegionNameCall(lat, lon, _callback);
+        
+
+        okhttp3.Call localVarCall = getRegionNameCall(lat, lon, _callback);
+        return localVarCall;
 
     }
 
@@ -5037,8 +5080,7 @@ public class GetApi {
         }
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -5046,6 +5088,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -5058,7 +5101,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getScnlValidateBeforeCall(String wherenetin, String wherestain, String wherechain, String wherelocin, Double minlat, Double maxlat, Double minlon, Double maxlon, Double lat, Double lon, Double minradius, Double maxradius, Double minradiuskm, Double maxradiuskm, Boolean wherelatorlonarenull, OffsetDateTime updatedafter, Integer limit, Integer page, final ApiCallback _callback) throws ApiException {
-        return getScnlCall(wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelatorlonarenull, updatedafter, limit, page, _callback);
+        
+
+        okhttp3.Call localVarCall = getScnlCall(wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelatorlonarenull, updatedafter, limit, page, _callback);
+        return localVarCall;
 
     }
 
@@ -5234,8 +5280,7 @@ public class GetApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -5243,6 +5288,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -5255,7 +5301,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getTypeEventValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return getTypeEventCall(_callback);
+        
+
+        okhttp3.Call localVarCall = getTypeEventCall(_callback);
+        return localVarCall;
 
     }
 
@@ -5380,8 +5429,7 @@ public class GetApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -5389,6 +5437,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -5401,7 +5450,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getTypeMagnitudeValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return getTypeMagnitudeCall(_callback);
+        
+
+        okhttp3.Call localVarCall = getTypeMagnitudeCall(_callback);
+        return localVarCall;
 
     }
 
@@ -5526,8 +5578,7 @@ public class GetApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -5535,6 +5586,7 @@ public class GetApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -5547,7 +5599,10 @@ public class GetApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getTypeOriginValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return getTypeOriginCall(_callback);
+        
+
+        okhttp3.Call localVarCall = getTypeOriginCall(_callback);
+        return localVarCall;
 
     }
 

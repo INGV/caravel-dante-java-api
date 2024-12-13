@@ -1,6 +1,6 @@
 
 
-# AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
+# AddOrigin201ResponseDataOriginsInnerAllOf
 
 
 ## Properties

@@ -14,14 +14,16 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.ObjectMagnitude;
 
@@ -35,16 +37,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -52,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddMagnitudeRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class AddMagnitudeRequestData {
   public static final String SERIALIZED_NAME_ORIGINID = "originid";
   @SerializedName(SERIALIZED_NAME_ORIGINID)
@@ -60,12 +58,13 @@ public class AddMagnitudeRequestData {
 
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
-  private List<ObjectMagnitude> magnitudes;
+  private List<ObjectMagnitude> magnitudes = null;
 
   public AddMagnitudeRequestData() {
   }
 
   public AddMagnitudeRequestData originid(Long originid) {
+    
     this.originid = originid;
     return this;
   }
@@ -75,9 +74,12 @@ public class AddMagnitudeRequestData {
    * @return originid
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
   public Long getOriginid() {
     return originid;
   }
+
 
   public void setOriginid(Long originid) {
     this.originid = originid;
@@ -85,6 +87,7 @@ public class AddMagnitudeRequestData {
 
 
   public AddMagnitudeRequestData magnitudes(List<ObjectMagnitude> magnitudes) {
+    
     this.magnitudes = magnitudes;
     return this;
   }
@@ -102,9 +105,12 @@ public class AddMagnitudeRequestData {
    * @return magnitudes
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public List<ObjectMagnitude> getMagnitudes() {
     return magnitudes;
   }
+
 
   public void setMagnitudes(List<ObjectMagnitude> magnitudes) {
     this.magnitudes = magnitudes;
@@ -120,10 +126,6 @@ public class AddMagnitudeRequestData {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the AddMagnitudeRequestData instance itself
    */
   public AddMagnitudeRequestData putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -135,8 +137,6 @@ public class AddMagnitudeRequestData {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -144,9 +144,6 @@ public class AddMagnitudeRequestData {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -212,31 +209,30 @@ public class AddMagnitudeRequestData {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddMagnitudeRequestData
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to AddMagnitudeRequestData
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!AddMagnitudeRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (AddMagnitudeRequestData.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddMagnitudeRequestData is not found in the empty JSON string", AddMagnitudeRequestData.openapiRequiredFields.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (jsonObj.get("magnitudes") != null && !jsonObj.get("magnitudes").isJsonNull()) {
-        JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
-        if (jsonArraymagnitudes != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("magnitudes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `magnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("magnitudes").toString()));
-          }
-
-          // validate the optional field `magnitudes` (array)
-          for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
-            ObjectMagnitude.validateJsonElement(jsonArraymagnitudes.get(i));
-          };
+      JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
+      if (jsonArraymagnitudes != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("magnitudes").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `magnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("magnitudes").toString()));
         }
+
+        // validate the optional field `magnitudes` (array)
+        for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
+          ObjectMagnitude.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
+        };
       }
   }
 
@@ -256,7 +252,7 @@ public class AddMagnitudeRequestData {
            public void write(JsonWriter out, AddMagnitudeRequestData value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -268,12 +264,7 @@ public class AddMagnitudeRequestData {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -282,9 +273,8 @@ public class AddMagnitudeRequestData {
 
            @Override
            public AddMagnitudeRequestData read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              AddMagnitudeRequestData instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -298,10 +288,8 @@ public class AddMagnitudeRequestData {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

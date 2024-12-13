@@ -18,13 +18,15 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import org.ingv.dante.model.UpdateEvent200ResponseDataEvent;
+import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
 
 /**
  * Model tests for AddOrigin201ResponseDataOriginsInner
@@ -41,19 +43,19 @@ public class AddOrigin201ResponseDataOriginsInnerTest {
     }
 
     /**
-     * Test the property 'magnitudes'
-     */
-    @Test
-    public void magnitudesTest() {
-        // TODO: test magnitudes
-    }
-
-    /**
      * Test the property 'id'
      */
     @Test
     public void idTest() {
         // TODO: test id
+    }
+
+    /**
+     * Test the property 'magnitudes'
+     */
+    @Test
+    public void magnitudesTest() {
+        // TODO: test magnitudes
     }
 
 }

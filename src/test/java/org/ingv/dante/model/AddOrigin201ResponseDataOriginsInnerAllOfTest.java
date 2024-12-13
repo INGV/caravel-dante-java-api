@@ -18,23 +18,25 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.Arrays;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+
 /**
- * Model tests for AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
+ * Model tests for AddOrigin201ResponseDataOriginsInnerAllOf
  */
-public class AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEwTest {
-    private final AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw model = new AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw();
+public class AddOrigin201ResponseDataOriginsInnerAllOfTest {
+    private final AddOrigin201ResponseDataOriginsInnerAllOf model = new AddOrigin201ResponseDataOriginsInnerAllOf();
 
     /**
-     * Model tests for AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
+     * Model tests for AddOrigin201ResponseDataOriginsInnerAllOf
      */
     @Test
-    public void testAddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw() {
-        // TODO: test AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
+    public void testAddOrigin201ResponseDataOriginsInnerAllOf() {
+        // TODO: test AddOrigin201ResponseDataOriginsInnerAllOf
     }
 
     /**

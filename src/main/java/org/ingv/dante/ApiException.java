@@ -16,19 +16,18 @@ package org.ingv.dante;
 import java.util.Map;
 import java.util.List;
 
+import javax.ws.rs.core.GenericType;
 
 /**
  * <p>ApiException class.</p>
  */
 @SuppressWarnings("serial")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class ApiException extends Exception {
-    private static final long serialVersionUID = 1L;
-
     private int code = 0;
     private Map<String, List<String>> responseHeaders = null;
     private String responseBody = null;
-
+ 
     /**
      * <p>Constructor for ApiException.</p>
      */
@@ -100,7 +99,7 @@ public class ApiException extends Exception {
      * @param responseBody the response body
      */
     public ApiException(int code, Map<String, List<String>> responseHeaders, String responseBody) {
-        this("Response Code: " + code + " Response Body: " + responseBody, (Throwable) null, code, responseHeaders, responseBody);
+        this((String) null, (Throwable) null, code, responseHeaders, responseBody);
     }
 
     /**

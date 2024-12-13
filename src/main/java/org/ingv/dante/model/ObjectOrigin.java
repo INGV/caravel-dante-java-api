@@ -14,15 +14,17 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.ObjectArrival;
 import org.ingv.dante.model.ObjectFocalmechanism;
@@ -42,16 +44,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -59,7 +57,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class ObjectOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -243,19 +241,20 @@ public class ObjectOrigin {
 
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
-  private List<ObjectMagnitude> magnitudes;
+  private List<ObjectMagnitude> magnitudes = null;
 
   public static final String SERIALIZED_NAME_ARRIVALS = "arrivals";
   @SerializedName(SERIALIZED_NAME_ARRIVALS)
-  private List<ObjectArrival> arrivals;
+  private List<ObjectArrival> arrivals = null;
 
   public static final String SERIALIZED_NAME_FOCALMECHANISMS = "focalmechanisms";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)
-  private List<ObjectFocalmechanism> focalmechanisms;
+  private List<ObjectFocalmechanism> focalmechanisms = null;
 
   public ObjectOrigin() {
   }
 
+  
   public ObjectOrigin(
      Long id, 
      OffsetDateTime modified, 
@@ -278,9 +277,12 @@ public class ObjectOrigin {
    * @return id
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
   public Long getId() {
     return id;
   }
+
 
 
 
@@ -289,9 +291,12 @@ public class ObjectOrigin {
    * @return modified
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
+
   public OffsetDateTime getModified() {
     return modified;
   }
+
 
 
 
@@ -300,13 +305,17 @@ public class ObjectOrigin {
    * @return inserted
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
   public OffsetDateTime getInserted() {
     return inserted;
   }
 
 
 
+
   public ObjectOrigin idLocalspace(Long idLocalspace) {
+    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -316,9 +325,12 @@ public class ObjectOrigin {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
+
   public Long getIdLocalspace() {
     return idLocalspace;
   }
+
 
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
@@ -326,6 +338,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin azimGap(Float azimGap) {
+    
     this.azimGap = azimGap;
     return this;
   }
@@ -335,9 +348,12 @@ public class ObjectOrigin {
    * @return azimGap
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Azimutal gap | float4")
+
   public Float getAzimGap() {
     return azimGap;
   }
+
 
   public void setAzimGap(Float azimGap) {
     this.azimGap = azimGap;
@@ -345,6 +361,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin confidenceLevel(Float confidenceLevel) {
+    
     this.confidenceLevel = confidenceLevel;
     return this;
   }
@@ -354,9 +371,12 @@ public class ObjectOrigin {
    * @return confidenceLevel
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "68.3", value = "Integer numer for confidence level type (68.3 1 sigma, xx =2 sigma, 99% 3 sigma) | decimal(5.2)")
+
   public Float getConfidenceLevel() {
     return confidenceLevel;
   }
+
 
   public void setConfidenceLevel(Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
@@ -364,6 +384,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin depth(Double depth) {
+    
     this.depth = depth;
     return this;
   }
@@ -373,9 +394,12 @@ public class ObjectOrigin {
    * @return depth
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "0.02", required = true, value = "Depth in Km | double")
+
   public Double getDepth() {
     return depth;
   }
+
 
   public void setDepth(Double depth) {
     this.depth = depth;
@@ -383,6 +407,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin e0(Double e0) {
+    
     this.e0 = e0;
     return this;
   }
@@ -392,9 +417,12 @@ public class ObjectOrigin {
    * @return e0
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "largest principal error | double")
+
   public Double getE0() {
     return e0;
   }
+
 
   public void setE0(Double e0) {
     this.e0 = e0;
@@ -402,6 +430,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin e0Az(Float e0Az) {
+    
     this.e0Az = e0Az;
     return this;
   }
@@ -411,9 +440,12 @@ public class ObjectOrigin {
    * @return e0Az
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "azimuth of largest principal error | double")
+
   public Float getE0Az() {
     return e0Az;
   }
+
 
   public void setE0Az(Float e0Az) {
     this.e0Az = e0Az;
@@ -421,6 +453,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin e0Dip(Double e0Dip) {
+    
     this.e0Dip = e0Dip;
     return this;
   }
@@ -430,9 +463,12 @@ public class ObjectOrigin {
    * @return e0Dip
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "dip of largest principal error | double")
+
   public Double getE0Dip() {
     return e0Dip;
   }
+
 
   public void setE0Dip(Double e0Dip) {
     this.e0Dip = e0Dip;
@@ -440,6 +476,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin e1(Double e1) {
+    
     this.e1 = e1;
     return this;
   }
@@ -449,9 +486,12 @@ public class ObjectOrigin {
    * @return e1
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "intermed principal error | double")
+
   public Double getE1() {
     return e1;
   }
+
 
   public void setE1(Double e1) {
     this.e1 = e1;
@@ -459,6 +499,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin e1Az(Float e1Az) {
+    
     this.e1Az = e1Az;
     return this;
   }
@@ -468,9 +509,12 @@ public class ObjectOrigin {
    * @return e1Az
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "azimuth of intermediate principal error | double")
+
   public Float getE1Az() {
     return e1Az;
   }
+
 
   public void setE1Az(Float e1Az) {
     this.e1Az = e1Az;
@@ -478,6 +522,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin e1Dip(Double e1Dip) {
+    
     this.e1Dip = e1Dip;
     return this;
   }
@@ -487,9 +532,12 @@ public class ObjectOrigin {
    * @return e1Dip
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "dip of intermediate principal error | double")
+
   public Double getE1Dip() {
     return e1Dip;
   }
+
 
   public void setE1Dip(Double e1Dip) {
     this.e1Dip = e1Dip;
@@ -497,6 +545,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin e2(Double e2) {
+    
     this.e2 = e2;
     return this;
   }
@@ -506,9 +555,12 @@ public class ObjectOrigin {
    * @return e2
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "smallest principal error | double")
+
   public Double getE2() {
     return e2;
   }
+
 
   public void setE2(Double e2) {
     this.e2 = e2;
@@ -516,6 +568,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin e2Az(Float e2Az) {
+    
     this.e2Az = e2Az;
     return this;
   }
@@ -525,9 +578,12 @@ public class ObjectOrigin {
    * @return e2Az
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "azimuth of smallest principal error | double")
+
   public Float getE2Az() {
     return e2Az;
   }
+
 
   public void setE2Az(Float e2Az) {
     this.e2Az = e2Az;
@@ -535,6 +591,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin e2Dip(Long e2Dip) {
+    
     this.e2Dip = e2Dip;
     return this;
   }
@@ -544,9 +601,12 @@ public class ObjectOrigin {
    * @return e2Dip
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "dip of smallest principal error | double")
+
   public Long getE2Dip() {
     return e2Dip;
   }
+
 
   public void setE2Dip(Long e2Dip) {
     this.e2Dip = e2Dip;
@@ -554,6 +614,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin errDepth(Double errDepth) {
+    
     this.errDepth = errDepth;
     return this;
   }
@@ -563,9 +624,12 @@ public class ObjectOrigin {
    * @return errDepth
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Depth error | double")
+
   public Double getErrDepth() {
     return errDepth;
   }
+
 
   public void setErrDepth(Double errDepth) {
     this.errDepth = errDepth;
@@ -573,6 +637,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin errH(Double errH) {
+    
     this.errH = errH;
     return this;
   }
@@ -582,9 +647,12 @@ public class ObjectOrigin {
    * @return errH
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Horizontal error (km) | double")
+
   public Double getErrH() {
     return errH;
   }
+
 
   public void setErrH(Double errH) {
     this.errH = errH;
@@ -592,6 +660,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin errLat(Double errLat) {
+    
     this.errLat = errLat;
     return this;
   }
@@ -601,9 +670,12 @@ public class ObjectOrigin {
    * @return errLat
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Latitude error (km) | double")
+
   public Double getErrLat() {
     return errLat;
   }
+
 
   public void setErrLat(Double errLat) {
     this.errLat = errLat;
@@ -611,6 +683,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin errLon(Double errLon) {
+    
     this.errLon = errLon;
     return this;
   }
@@ -620,9 +693,12 @@ public class ObjectOrigin {
    * @return errLon
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Longitude error (km) | double")
+
   public Double getErrLon() {
     return errLon;
   }
+
 
   public void setErrLon(Double errLon) {
     this.errLon = errLon;
@@ -634,9 +710,12 @@ public class ObjectOrigin {
    * @return errLatDeg
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Latitude error (deg) | double")
+
   public Double getErrLatDeg() {
     return errLatDeg;
   }
+
 
 
 
@@ -645,13 +724,17 @@ public class ObjectOrigin {
    * @return errLonDeg
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Longitude error (deg) | double")
+
   public Double getErrLonDeg() {
     return errLonDeg;
   }
 
 
 
+
   public ObjectOrigin errOt(Double errOt) {
+    
     this.errOt = errOt;
     return this;
   }
@@ -661,9 +744,12 @@ public class ObjectOrigin {
    * @return errOt
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Origin time error | double")
+
   public Double getErrOt() {
     return errOt;
   }
+
 
   public void setErrOt(Double errOt) {
     this.errOt = errOt;
@@ -671,6 +757,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin errZ(Double errZ) {
+    
     this.errZ = errZ;
     return this;
   }
@@ -680,9 +767,12 @@ public class ObjectOrigin {
    * @return errZ
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Depth error (km) | double")
+
   public Double getErrZ() {
     return errZ;
   }
+
 
   public void setErrZ(Double errZ) {
     this.errZ = errZ;
@@ -690,6 +780,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin fixDepth(Boolean fixDepth) {
+    
     this.fixDepth = fixDepth;
     return this;
   }
@@ -699,9 +790,12 @@ public class ObjectOrigin {
    * @return fixDepth
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "false", value = "true if depth is fixed | boolean")
+
   public Boolean getFixDepth() {
     return fixDepth;
   }
+
 
   public void setFixDepth(Boolean fixDepth) {
     this.fixDepth = fixDepth;
@@ -709,6 +803,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin lat(Double lat) {
+    
     this.lat = lat;
     return this;
   }
@@ -720,9 +815,12 @@ public class ObjectOrigin {
    * @return lat
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "45.492599", required = true, value = "Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
+
   public Double getLat() {
     return lat;
   }
+
 
   public void setLat(Double lat) {
     this.lat = lat;
@@ -730,6 +828,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin lon(Double lon) {
+    
     this.lon = lon;
     return this;
   }
@@ -741,9 +840,12 @@ public class ObjectOrigin {
    * @return lon
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "9.19289", required = true, value = "Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
+
   public Double getLon() {
     return lon;
   }
+
 
   public void setLon(Double lon) {
     this.lon = lon;
@@ -751,6 +853,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin maxDistance(Double maxDistance) {
+    
     this.maxDistance = maxDistance;
     return this;
   }
@@ -760,9 +863,12 @@ public class ObjectOrigin {
    * @return maxDistance
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Distance from the furthest station (km) | double")
+
   public Double getMaxDistance() {
     return maxDistance;
   }
+
 
   public void setMaxDistance(Double maxDistance) {
     this.maxDistance = maxDistance;
@@ -770,6 +876,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin medDistance(Double medDistance) {
+    
     this.medDistance = medDistance;
     return this;
   }
@@ -779,9 +886,12 @@ public class ObjectOrigin {
    * @return medDistance
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Median distance from the epicenter to the used stations (km) | double")
+
   public Double getMedDistance() {
     return medDistance;
   }
+
 
   public void setMedDistance(Double medDistance) {
     this.medDistance = medDistance;
@@ -789,6 +899,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin minDistance(Double minDistance) {
+    
     this.minDistance = minDistance;
     return this;
   }
@@ -798,9 +909,12 @@ public class ObjectOrigin {
    * @return minDistance
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Distance from the closest station (km) | double")
+
   public Double getMinDistance() {
     return minDistance;
   }
+
 
   public void setMinDistance(Double minDistance) {
     this.minDistance = minDistance;
@@ -808,6 +922,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin nph(Long nph) {
+    
     this.nph = nph;
     return this;
   }
@@ -817,9 +932,12 @@ public class ObjectOrigin {
    * @return nph
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "# arrivals (P&S) weight >0.1 | int(11)")
+
   public Long getNph() {
     return nph;
   }
+
 
   public void setNph(Long nph) {
     this.nph = nph;
@@ -827,6 +945,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin nphFm(Long nphFm) {
+    
     this.nphFm = nphFm;
     return this;
   }
@@ -836,9 +955,12 @@ public class ObjectOrigin {
    * @return nphFm
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "# P first motions | int(11)")
+
   public Long getNphFm() {
     return nphFm;
   }
+
 
   public void setNphFm(Long nphFm) {
     this.nphFm = nphFm;
@@ -846,6 +968,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin nphS(Long nphS) {
+    
     this.nphS = nphS;
     return this;
   }
@@ -855,9 +978,12 @@ public class ObjectOrigin {
    * @return nphS
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "# S arrivals weight >0.1 | int(11)")
+
   public Long getNphS() {
     return nphS;
   }
+
 
   public void setNphS(Long nphS) {
     this.nphS = nphS;
@@ -865,6 +991,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin nphTot(Long nphTot) {
+    
     this.nphTot = nphTot;
     return this;
   }
@@ -874,9 +1001,12 @@ public class ObjectOrigin {
    * @return nphTot
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "# arrivals (P&S) weight >0.0 | int(11)")
+
   public Long getNphTot() {
     return nphTot;
   }
+
 
   public void setNphTot(Long nphTot) {
     this.nphTot = nphTot;
@@ -884,6 +1014,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin ot(OffsetDateTime ot) {
+    
     this.ot = ot;
     return this;
   }
@@ -893,9 +1024,12 @@ public class ObjectOrigin {
    * @return ot
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", required = true, value = "Origin time | datetime(3)")
+
   public OffsetDateTime getOt() {
     return ot;
   }
+
 
   public void setOt(OffsetDateTime ot) {
     this.ot = ot;
@@ -903,6 +1037,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin quality(String quality) {
+    
     this.quality = quality;
     return this;
   }
@@ -912,9 +1047,12 @@ public class ObjectOrigin {
    * @return quality
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "AB", value = "Quality of the localization | char(2)")
+
   public String getQuality() {
     return quality;
   }
+
 
   public void setQuality(String quality) {
     this.quality = quality;
@@ -922,6 +1060,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin qualityNumeric(Long qualityNumeric) {
+    
     this.qualityNumeric = qualityNumeric;
     return this;
   }
@@ -931,9 +1070,12 @@ public class ObjectOrigin {
    * @return qualityNumeric
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "12", value = "Quality as numeric value | int(10)")
+
   public Long getQualityNumeric() {
     return qualityNumeric;
   }
+
 
   public void setQualityNumeric(Long qualityNumeric) {
     this.qualityNumeric = qualityNumeric;
@@ -941,6 +1083,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin region(String region) {
+    
     this.region = region;
     return this;
   }
@@ -950,9 +1093,12 @@ public class ObjectOrigin {
    * @return region
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "Norcia", value = "Event location remark region | varchar(255)")
+
   public String getRegion() {
     return region;
   }
+
 
   public void setRegion(String region) {
     this.region = region;
@@ -960,6 +1106,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin rms(Double rms) {
+    
     this.rms = rms;
     return this;
   }
@@ -969,9 +1116,12 @@ public class ObjectOrigin {
    * @return rms
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Root mean square | double")
+
   public Double getRms() {
     return rms;
   }
+
 
   public void setRms(Double rms) {
     this.rms = rms;
@@ -979,6 +1129,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin secAzimGap(Float secAzimGap) {
+    
     this.secAzimGap = secAzimGap;
     return this;
   }
@@ -988,9 +1139,12 @@ public class ObjectOrigin {
    * @return secAzimGap
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Secondary Azimutal gap | double")
+
   public Float getSecAzimGap() {
     return secAzimGap;
   }
+
 
   public void setSecAzimGap(Float secAzimGap) {
     this.secAzimGap = secAzimGap;
@@ -998,6 +1152,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin wRms(Double wRms) {
+    
     this.wRms = wRms;
     return this;
   }
@@ -1007,9 +1162,12 @@ public class ObjectOrigin {
    * @return wRms
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Root mean square Weighted | double")
+
   public Double getwRms() {
     return wRms;
   }
+
 
   public void setwRms(Double wRms) {
     this.wRms = wRms;
@@ -1017,6 +1175,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin typeOrigin(ObjectTypeOrigin typeOrigin) {
+    
     this.typeOrigin = typeOrigin;
     return this;
   }
@@ -1026,9 +1185,12 @@ public class ObjectOrigin {
    * @return typeOrigin
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectTypeOrigin getTypeOrigin() {
     return typeOrigin;
   }
+
 
   public void setTypeOrigin(ObjectTypeOrigin typeOrigin) {
     this.typeOrigin = typeOrigin;
@@ -1036,6 +1198,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin localspace(ObjectLocalspace localspace) {
+    
     this.localspace = localspace;
     return this;
   }
@@ -1045,9 +1208,12 @@ public class ObjectOrigin {
    * @return localspace
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
+
 
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
@@ -1055,6 +1221,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin provenance(ObjectProvenance provenance) {
+    
     this.provenance = provenance;
     return this;
   }
@@ -1064,9 +1231,12 @@ public class ObjectOrigin {
    * @return provenance
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectProvenance getProvenance() {
     return provenance;
   }
+
 
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
@@ -1078,13 +1248,17 @@ public class ObjectOrigin {
    * @return flags
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "DPC,twitter,shakemap4,FM", value = "Flags for origin | varchar(255)")
+
   public String getFlags() {
     return flags;
   }
 
 
 
+
   public ObjectOrigin magnitudes(List<ObjectMagnitude> magnitudes) {
+    
     this.magnitudes = magnitudes;
     return this;
   }
@@ -1102,9 +1276,12 @@ public class ObjectOrigin {
    * @return magnitudes
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public List<ObjectMagnitude> getMagnitudes() {
     return magnitudes;
   }
+
 
   public void setMagnitudes(List<ObjectMagnitude> magnitudes) {
     this.magnitudes = magnitudes;
@@ -1112,6 +1289,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin arrivals(List<ObjectArrival> arrivals) {
+    
     this.arrivals = arrivals;
     return this;
   }
@@ -1129,9 +1307,12 @@ public class ObjectOrigin {
    * @return arrivals
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public List<ObjectArrival> getArrivals() {
     return arrivals;
   }
+
 
   public void setArrivals(List<ObjectArrival> arrivals) {
     this.arrivals = arrivals;
@@ -1139,6 +1320,7 @@ public class ObjectOrigin {
 
 
   public ObjectOrigin focalmechanisms(List<ObjectFocalmechanism> focalmechanisms) {
+    
     this.focalmechanisms = focalmechanisms;
     return this;
   }
@@ -1156,9 +1338,12 @@ public class ObjectOrigin {
    * @return focalmechanisms
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public List<ObjectFocalmechanism> getFocalmechanisms() {
     return focalmechanisms;
   }
+
 
   public void setFocalmechanisms(List<ObjectFocalmechanism> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
@@ -1174,10 +1359,6 @@ public class ObjectOrigin {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the ObjectOrigin instance itself
    */
   public ObjectOrigin putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -1189,8 +1370,6 @@ public class ObjectOrigin {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -1198,9 +1377,6 @@ public class ObjectOrigin {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -1419,25 +1595,26 @@ public class ObjectOrigin {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectOrigin
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ObjectOrigin
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!ObjectOrigin.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ObjectOrigin.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectOrigin is not found in the empty JSON string", ObjectOrigin.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectOrigin.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonNull()) && !jsonObj.get("quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));
       }
@@ -1446,60 +1623,54 @@ public class ObjectOrigin {
       }
       // validate the optional field `type_origin`
       if (jsonObj.get("type_origin") != null && !jsonObj.get("type_origin").isJsonNull()) {
-        ObjectTypeOrigin.validateJsonElement(jsonObj.get("type_origin"));
+        ObjectTypeOrigin.validateJsonObject(jsonObj.getAsJsonObject("type_origin"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
+        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
+        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
       if ((jsonObj.get("flags") != null && !jsonObj.get("flags").isJsonNull()) && !jsonObj.get("flags").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `flags` to be a primitive type in the JSON string but got `%s`", jsonObj.get("flags").toString()));
       }
-      if (jsonObj.get("magnitudes") != null && !jsonObj.get("magnitudes").isJsonNull()) {
-        JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
-        if (jsonArraymagnitudes != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("magnitudes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `magnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("magnitudes").toString()));
-          }
-
-          // validate the optional field `magnitudes` (array)
-          for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
-            ObjectMagnitude.validateJsonElement(jsonArraymagnitudes.get(i));
-          };
+      JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
+      if (jsonArraymagnitudes != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("magnitudes").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `magnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("magnitudes").toString()));
         }
+
+        // validate the optional field `magnitudes` (array)
+        for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
+          ObjectMagnitude.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
+        };
       }
-      if (jsonObj.get("arrivals") != null && !jsonObj.get("arrivals").isJsonNull()) {
-        JsonArray jsonArrayarrivals = jsonObj.getAsJsonArray("arrivals");
-        if (jsonArrayarrivals != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("arrivals").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `arrivals` to be an array in the JSON string but got `%s`", jsonObj.get("arrivals").toString()));
-          }
-
-          // validate the optional field `arrivals` (array)
-          for (int i = 0; i < jsonArrayarrivals.size(); i++) {
-            ObjectArrival.validateJsonElement(jsonArrayarrivals.get(i));
-          };
+      JsonArray jsonArrayarrivals = jsonObj.getAsJsonArray("arrivals");
+      if (jsonArrayarrivals != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("arrivals").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `arrivals` to be an array in the JSON string but got `%s`", jsonObj.get("arrivals").toString()));
         }
+
+        // validate the optional field `arrivals` (array)
+        for (int i = 0; i < jsonArrayarrivals.size(); i++) {
+          ObjectArrival.validateJsonObject(jsonArrayarrivals.get(i).getAsJsonObject());
+        };
       }
-      if (jsonObj.get("focalmechanisms") != null && !jsonObj.get("focalmechanisms").isJsonNull()) {
-        JsonArray jsonArrayfocalmechanisms = jsonObj.getAsJsonArray("focalmechanisms");
-        if (jsonArrayfocalmechanisms != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("focalmechanisms").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `focalmechanisms` to be an array in the JSON string but got `%s`", jsonObj.get("focalmechanisms").toString()));
-          }
-
-          // validate the optional field `focalmechanisms` (array)
-          for (int i = 0; i < jsonArrayfocalmechanisms.size(); i++) {
-            ObjectFocalmechanism.validateJsonElement(jsonArrayfocalmechanisms.get(i));
-          };
+      JsonArray jsonArrayfocalmechanisms = jsonObj.getAsJsonArray("focalmechanisms");
+      if (jsonArrayfocalmechanisms != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("focalmechanisms").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `focalmechanisms` to be an array in the JSON string but got `%s`", jsonObj.get("focalmechanisms").toString()));
         }
+
+        // validate the optional field `focalmechanisms` (array)
+        for (int i = 0; i < jsonArrayfocalmechanisms.size(); i++) {
+          ObjectFocalmechanism.validateJsonObject(jsonArrayfocalmechanisms.get(i).getAsJsonObject());
+        };
       }
   }
 
@@ -1519,7 +1690,7 @@ public class ObjectOrigin {
            public void write(JsonWriter out, ObjectOrigin value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -1531,12 +1702,7 @@ public class ObjectOrigin {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -1545,9 +1711,8 @@ public class ObjectOrigin {
 
            @Override
            public ObjectOrigin read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              ObjectOrigin instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -1561,10 +1726,8 @@ public class ObjectOrigin {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

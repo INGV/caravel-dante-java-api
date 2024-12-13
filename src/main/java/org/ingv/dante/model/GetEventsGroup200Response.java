@@ -14,14 +14,16 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.LinksDefinition;
 import org.ingv.dante.model.MetaDefinition;
@@ -37,16 +39,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -54,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * GetEventsGroup200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class GetEventsGroup200Response {
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
@@ -66,12 +64,13 @@ public class GetEventsGroup200Response {
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<ObjectMagnitudesOriginsEventsAndEventsGroup> data;
+  private List<ObjectMagnitudesOriginsEventsAndEventsGroup> data = null;
 
   public GetEventsGroup200Response() {
   }
 
   public GetEventsGroup200Response links(LinksDefinition links) {
+    
     this.links = links;
     return this;
   }
@@ -81,9 +80,12 @@ public class GetEventsGroup200Response {
    * @return links
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public LinksDefinition getLinks() {
     return links;
   }
+
 
   public void setLinks(LinksDefinition links) {
     this.links = links;
@@ -91,6 +93,7 @@ public class GetEventsGroup200Response {
 
 
   public GetEventsGroup200Response meta(MetaDefinition meta) {
+    
     this.meta = meta;
     return this;
   }
@@ -100,9 +103,12 @@ public class GetEventsGroup200Response {
    * @return meta
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public MetaDefinition getMeta() {
     return meta;
   }
+
 
   public void setMeta(MetaDefinition meta) {
     this.meta = meta;
@@ -110,6 +116,7 @@ public class GetEventsGroup200Response {
 
 
   public GetEventsGroup200Response data(List<ObjectMagnitudesOriginsEventsAndEventsGroup> data) {
+    
     this.data = data;
     return this;
   }
@@ -127,9 +134,12 @@ public class GetEventsGroup200Response {
    * @return data
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public List<ObjectMagnitudesOriginsEventsAndEventsGroup> getData() {
     return data;
   }
+
 
   public void setData(List<ObjectMagnitudesOriginsEventsAndEventsGroup> data) {
     this.data = data;
@@ -145,10 +155,6 @@ public class GetEventsGroup200Response {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the GetEventsGroup200Response instance itself
    */
   public GetEventsGroup200Response putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -160,8 +166,6 @@ public class GetEventsGroup200Response {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -169,9 +173,6 @@ public class GetEventsGroup200Response {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -240,39 +241,38 @@ public class GetEventsGroup200Response {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GetEventsGroup200Response
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to GetEventsGroup200Response
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!GetEventsGroup200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (GetEventsGroup200Response.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in GetEventsGroup200Response is not found in the empty JSON string", GetEventsGroup200Response.openapiRequiredFields.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `links`
       if (jsonObj.get("links") != null && !jsonObj.get("links").isJsonNull()) {
-        LinksDefinition.validateJsonElement(jsonObj.get("links"));
+        LinksDefinition.validateJsonObject(jsonObj.getAsJsonObject("links"));
       }
       // validate the optional field `meta`
       if (jsonObj.get("meta") != null && !jsonObj.get("meta").isJsonNull()) {
-        MetaDefinition.validateJsonElement(jsonObj.get("meta"));
+        MetaDefinition.validateJsonObject(jsonObj.getAsJsonObject("meta"));
       }
-      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
-        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
-        if (jsonArraydata != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("data").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
-          }
-
-          // validate the optional field `data` (array)
-          for (int i = 0; i < jsonArraydata.size(); i++) {
-            ObjectMagnitudesOriginsEventsAndEventsGroup.validateJsonElement(jsonArraydata.get(i));
-          };
+      JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+      if (jsonArraydata != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("data").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
         }
+
+        // validate the optional field `data` (array)
+        for (int i = 0; i < jsonArraydata.size(); i++) {
+          ObjectMagnitudesOriginsEventsAndEventsGroup.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+        };
       }
   }
 
@@ -292,7 +292,7 @@ public class GetEventsGroup200Response {
            public void write(JsonWriter out, GetEventsGroup200Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -304,12 +304,7 @@ public class GetEventsGroup200Response {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -318,9 +313,8 @@ public class GetEventsGroup200Response {
 
            @Override
            public GetEventsGroup200Response read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              GetEventsGroup200Response instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -334,10 +328,8 @@ public class GetEventsGroup200Response {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

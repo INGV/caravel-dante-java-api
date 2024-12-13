@@ -14,14 +14,16 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspaceForVw;
 import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
 import org.ingv.dante.model.ObjectTypeOriginForVw;
@@ -37,16 +39,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -54,7 +52,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -155,6 +153,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup() {
   }
 
+  
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup(
      OffsetDateTime modified, 
      OffsetDateTime inserted
@@ -165,6 +164,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   }
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup id(Long id) {
+    
     this.id = id;
     return this;
   }
@@ -174,9 +174,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return id
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
   public Long getId() {
     return id;
   }
+
 
   public void setId(Long id) {
     this.id = id;
@@ -184,6 +187,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup idLocalspace(Long idLocalspace) {
+    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -193,9 +197,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
+
   public Long getIdLocalspace() {
     return idLocalspace;
   }
+
 
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
@@ -203,6 +210,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup ot(OffsetDateTime ot) {
+    
     this.ot = ot;
     return this;
   }
@@ -212,9 +220,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return ot
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Origin time | datetime(3)")
+
   public OffsetDateTime getOt() {
     return ot;
   }
+
 
   public void setOt(OffsetDateTime ot) {
     this.ot = ot;
@@ -222,6 +233,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup lat(Double lat) {
+    
     this.lat = lat;
     return this;
   }
@@ -233,9 +245,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return lat
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "45.492599", value = "Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
+
   public Double getLat() {
     return lat;
   }
+
 
   public void setLat(Double lat) {
     this.lat = lat;
@@ -243,6 +258,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup lon(Double lon) {
+    
     this.lon = lon;
     return this;
   }
@@ -254,9 +270,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return lon
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "9.19289", value = "Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
+
   public Double getLon() {
     return lon;
   }
+
 
   public void setLon(Double lon) {
     this.lon = lon;
@@ -264,6 +283,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup depth(Double depth) {
+    
     this.depth = depth;
     return this;
   }
@@ -273,9 +293,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return depth
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0.02", value = "Depth in Km | double")
+
   public Double getDepth() {
     return depth;
   }
+
 
   public void setDepth(Double depth) {
     this.depth = depth;
@@ -283,6 +306,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errOt(Double errOt) {
+    
     this.errOt = errOt;
     return this;
   }
@@ -292,9 +316,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return errOt
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Origin time error | double")
+
   public Double getErrOt() {
     return errOt;
   }
+
 
   public void setErrOt(Double errOt) {
     this.errOt = errOt;
@@ -302,6 +329,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errH(Double errH) {
+    
     this.errH = errH;
     return this;
   }
@@ -311,9 +339,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return errH
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Horizontal error (km) | double")
+
   public Double getErrH() {
     return errH;
   }
+
 
   public void setErrH(Double errH) {
     this.errH = errH;
@@ -321,6 +352,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errZ(Double errZ) {
+    
     this.errZ = errZ;
     return this;
   }
@@ -330,9 +362,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return errZ
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Depth error (km) | double")
+
   public Double getErrZ() {
     return errZ;
   }
+
 
   public void setErrZ(Double errZ) {
     this.errZ = errZ;
@@ -340,6 +375,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errLat(Double errLat) {
+    
     this.errLat = errLat;
     return this;
   }
@@ -349,9 +385,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return errLat
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Latitude error (km) | double")
+
   public Double getErrLat() {
     return errLat;
   }
+
 
   public void setErrLat(Double errLat) {
     this.errLat = errLat;
@@ -359,6 +398,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errLon(Double errLon) {
+    
     this.errLon = errLon;
     return this;
   }
@@ -368,9 +408,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return errLon
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Longitude error (km) | double")
+
   public Double getErrLon() {
     return errLon;
   }
+
 
   public void setErrLon(Double errLon) {
     this.errLon = errLon;
@@ -378,6 +421,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup minDistance(Double minDistance) {
+    
     this.minDistance = minDistance;
     return this;
   }
@@ -387,9 +431,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return minDistance
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Distance from the closest station (km) | double")
+
   public Double getMinDistance() {
     return minDistance;
   }
+
 
   public void setMinDistance(Double minDistance) {
     this.minDistance = minDistance;
@@ -397,6 +444,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup nphTot(Long nphTot) {
+    
     this.nphTot = nphTot;
     return this;
   }
@@ -406,9 +454,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return nphTot
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "# arrivals (P&S) weight >0.0 | int(11)")
+
   public Long getNphTot() {
     return nphTot;
   }
+
 
   public void setNphTot(Long nphTot) {
     this.nphTot = nphTot;
@@ -416,6 +467,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup quality(String quality) {
+    
     this.quality = quality;
     return this;
   }
@@ -425,9 +477,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return quality
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "AB", value = "Quality of the localization | char(2)")
+
   public String getQuality() {
     return quality;
   }
+
 
   public void setQuality(String quality) {
     this.quality = quality;
@@ -435,6 +490,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup associatedPhaseCount(Long associatedPhaseCount) {
+    
     this.associatedPhaseCount = associatedPhaseCount;
     return this;
   }
@@ -444,9 +500,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return associatedPhaseCount
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of associated phases, regardless of their use for origin computation | int(8)'")
+
   public Long getAssociatedPhaseCount() {
     return associatedPhaseCount;
   }
+
 
   public void setAssociatedPhaseCount(Long associatedPhaseCount) {
     this.associatedPhaseCount = associatedPhaseCount;
@@ -454,6 +513,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup associatedStationCount(Long associatedStationCount) {
+    
     this.associatedStationCount = associatedStationCount;
     return this;
   }
@@ -463,9 +523,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return associatedStationCount
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of stations at which the event was observed | int(8)'")
+
   public Long getAssociatedStationCount() {
     return associatedStationCount;
   }
+
 
   public void setAssociatedStationCount(Long associatedStationCount) {
     this.associatedStationCount = associatedStationCount;
@@ -473,6 +536,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup usedPhaseCount(Long usedPhaseCount) {
+    
     this.usedPhaseCount = usedPhaseCount;
     return this;
   }
@@ -482,9 +546,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return usedPhaseCount
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of defining phases, i.e., phase observations that were actually used for computing the origin | int(8)'")
+
   public Long getUsedPhaseCount() {
     return usedPhaseCount;
   }
+
 
   public void setUsedPhaseCount(Long usedPhaseCount) {
     this.usedPhaseCount = usedPhaseCount;
@@ -492,6 +559,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup usedStationCount(Long usedStationCount) {
+    
     this.usedStationCount = usedStationCount;
     return this;
   }
@@ -501,9 +569,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return usedStationCount
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of stations from which data was used for origin computation | int(8)'")
+
   public Long getUsedStationCount() {
     return usedStationCount;
   }
+
 
   public void setUsedStationCount(Long usedStationCount) {
     this.usedStationCount = usedStationCount;
@@ -511,6 +582,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup region(String region) {
+    
     this.region = region;
     return this;
   }
@@ -520,9 +592,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return region
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "Norcia", value = "Event location remark region | varchar(255)")
+
   public String getRegion() {
     return region;
   }
+
 
   public void setRegion(String region) {
     this.region = region;
@@ -534,9 +609,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return modified
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
+
   public OffsetDateTime getModified() {
     return modified;
   }
+
 
 
 
@@ -545,13 +623,17 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return inserted
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
   public OffsetDateTime getInserted() {
     return inserted;
   }
 
 
 
+
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup typeOrigin(ObjectTypeOriginForVw typeOrigin) {
+    
     this.typeOrigin = typeOrigin;
     return this;
   }
@@ -561,9 +643,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return typeOrigin
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectTypeOriginForVw getTypeOrigin() {
     return typeOrigin;
   }
+
 
   public void setTypeOrigin(ObjectTypeOriginForVw typeOrigin) {
     this.typeOrigin = typeOrigin;
@@ -571,6 +656,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup localspace(ObjectLocalspaceForVw localspace) {
+    
     this.localspace = localspace;
     return this;
   }
@@ -580,9 +666,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return localspace
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectLocalspaceForVw getLocalspace() {
     return localspace;
   }
+
 
   public void setLocalspace(ObjectLocalspaceForVw localspace) {
     this.localspace = localspace;
@@ -590,6 +679,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup provenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
+    
     this.provenance = provenance;
     return this;
   }
@@ -599,9 +689,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return provenance
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup getProvenance() {
     return provenance;
   }
+
 
   public void setProvenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     this.provenance = provenance;
@@ -617,10 +710,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the ObjectOriginForMagnitudesOriginsEventsAndEventsGroup instance itself
    */
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -632,8 +721,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -641,9 +728,6 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -786,18 +870,19 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectOriginForMagnitudesOriginsEventsAndEventsGroup is not found in the empty JSON string", ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonNull()) && !jsonObj.get("quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));
       }
@@ -806,15 +891,15 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
       }
       // validate the optional field `type_origin`
       if (jsonObj.get("type_origin") != null && !jsonObj.get("type_origin").isJsonNull()) {
-        ObjectTypeOriginForVw.validateJsonElement(jsonObj.get("type_origin"));
+        ObjectTypeOriginForVw.validateJsonObject(jsonObj.getAsJsonObject("type_origin"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspaceForVw.validateJsonElement(jsonObj.get("localspace"));
+        ObjectLocalspaceForVw.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.validateJsonElement(jsonObj.get("provenance"));
+        ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
   }
 
@@ -834,7 +919,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
            public void write(JsonWriter out, ObjectOriginForMagnitudesOriginsEventsAndEventsGroup value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -846,12 +931,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -860,9 +940,8 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
            @Override
            public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              ObjectOriginForMagnitudesOriginsEventsAndEventsGroup instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -876,10 +955,8 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

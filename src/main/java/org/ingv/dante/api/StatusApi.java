@@ -35,6 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class StatusApi {
     private ApiClient localVarApiClient;
@@ -126,6 +127,7 @@ public class StatusApi {
         }
 
         final String[] localVarContentTypes = {
+            
         };
         final String localVarContentType = localVarApiClient.selectHeaderContentType(localVarContentTypes);
         if (localVarContentType != null) {
@@ -138,7 +140,10 @@ public class StatusApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getStatusValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return getStatusCall(_callback);
+        
+
+        okhttp3.Call localVarCall = getStatusCall(_callback);
+        return localVarCall;
 
     }
 

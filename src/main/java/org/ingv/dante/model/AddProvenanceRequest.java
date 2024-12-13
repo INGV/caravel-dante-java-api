@@ -14,14 +14,16 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.util.Arrays;
 import org.ingv.dante.model.ProvenanceEvaluationmode;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -35,16 +37,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -52,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddProvenanceRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class AddProvenanceRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -121,6 +119,7 @@ public class AddProvenanceRequest {
   public AddProvenanceRequest() {
   }
 
+  
   public AddProvenanceRequest(
      Long id, 
      OffsetDateTime modified, 
@@ -137,13 +136,17 @@ public class AddProvenanceRequest {
    * @return id
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
   public Long getId() {
     return id;
   }
 
 
 
+
   public AddProvenanceRequest name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -153,9 +156,12 @@ public class AddProvenanceRequest {
    * @return name
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "INGV", required = true, value = "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)")
+
   public String getName() {
     return name;
   }
+
 
   public void setName(String name) {
     this.name = name;
@@ -163,6 +169,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest softwarename(String softwarename) {
+    
     this.softwarename = softwarename;
     return this;
   }
@@ -172,9 +179,12 @@ public class AddProvenanceRequest {
    * @return softwarename
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "software", required = true, value = "Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)")
+
   public String getSoftwarename() {
     return softwarename;
   }
+
 
   public void setSoftwarename(String softwarename) {
     this.softwarename = softwarename;
@@ -182,6 +192,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest version(String version) {
+    
     this.version = version;
     return this;
   }
@@ -191,9 +202,12 @@ public class AddProvenanceRequest {
    * @return version
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "hew1_mole", value = "Version name | varchar(255)")
+
   public String getVersion() {
     return version;
   }
+
 
   public void setVersion(String version) {
     this.version = version;
@@ -201,6 +215,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest model(String model) {
+    
     this.model = model;
     return this;
   }
@@ -210,9 +225,12 @@ public class AddProvenanceRequest {
    * @return model
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "prem", value = "Name/URI/DOI of the model | varchar(255)")
+
   public String getModel() {
     return model;
   }
+
 
   public void setModel(String model) {
     this.model = model;
@@ -220,6 +238,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest method(String method) {
+    
     this.method = method;
     return this;
   }
@@ -229,9 +248,12 @@ public class AddProvenanceRequest {
    * @return method
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "ToDo", value = "Name/URI/DOI of the method | varchar(255)")
+
   public String getMethod() {
     return method;
   }
+
 
   public void setMethod(String method) {
     this.method = method;
@@ -239,6 +261,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest parameters(String parameters) {
+    
     this.parameters = parameters;
     return this;
   }
@@ -248,9 +271,12 @@ public class AddProvenanceRequest {
    * @return parameters
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "ToDo", value = "Name/URI/DOI of the parameters | varchar(255)")
+
   public String getParameters() {
     return parameters;
   }
+
 
   public void setParameters(String parameters) {
     this.parameters = parameters;
@@ -258,6 +284,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest program(String program) {
+    
     this.program = program;
     return this;
   }
@@ -267,9 +294,12 @@ public class AddProvenanceRequest {
    * @return program
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "IPO-EW__tdmt_invc.c", value = "Name/URI/DOI of the program | varchar(255)")
+
   public String getProgram() {
     return program;
   }
+
 
   public void setProgram(String program) {
     this.program = program;
@@ -277,6 +307,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest username(String username) {
+    
     this.username = username;
     return this;
   }
@@ -286,9 +317,12 @@ public class AddProvenanceRequest {
    * @return username
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "ew", value = "User name | char(255)")
+
   public String getUsername() {
     return username;
   }
+
 
   public void setUsername(String username) {
     this.username = username;
@@ -296,6 +330,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest hostname(String hostname) {
+    
     this.hostname = hostname;
     return this;
   }
@@ -305,9 +340,12 @@ public class AddProvenanceRequest {
    * @return hostname
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "hew10.ingv.it", value = "Hostname | char(255)")
+
   public String getHostname() {
     return hostname;
   }
+
 
   public void setHostname(String hostname) {
     this.hostname = hostname;
@@ -315,6 +353,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest description(String description) {
+    
     this.description = description;
     return this;
   }
@@ -324,9 +363,12 @@ public class AddProvenanceRequest {
    * @return description
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "Auto added", value = "Additional information | char(255)")
+
   public String getDescription() {
     return description;
   }
+
 
   public void setDescription(String description) {
     this.description = description;
@@ -334,6 +376,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest priority(Long priority) {
+    
     this.priority = priority;
     return this;
   }
@@ -343,9 +386,12 @@ public class AddProvenanceRequest {
    * @return priority
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0", value = "Priority | int(8)")
+
   public Long getPriority() {
     return priority;
   }
+
 
   public void setPriority(Long priority) {
     this.priority = priority;
@@ -353,6 +399,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest evaluationmode(ProvenanceEvaluationmode evaluationmode) {
+    
     this.evaluationmode = evaluationmode;
     return this;
   }
@@ -362,9 +409,12 @@ public class AddProvenanceRequest {
    * @return evaluationmode
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ProvenanceEvaluationmode getEvaluationmode() {
     return evaluationmode;
   }
+
 
   public void setEvaluationmode(ProvenanceEvaluationmode evaluationmode) {
     this.evaluationmode = evaluationmode;
@@ -372,6 +422,7 @@ public class AddProvenanceRequest {
 
 
   public AddProvenanceRequest url(String url) {
+    
     this.url = url;
     return this;
   }
@@ -381,9 +432,12 @@ public class AddProvenanceRequest {
    * @return url
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "http://mysite", value = "External URL Reference | varchar(512)")
+
   public String getUrl() {
     return url;
   }
+
 
   public void setUrl(String url) {
     this.url = url;
@@ -395,9 +449,12 @@ public class AddProvenanceRequest {
    * @return modified
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
+
   public OffsetDateTime getModified() {
     return modified;
   }
+
 
 
 
@@ -406,9 +463,12 @@ public class AddProvenanceRequest {
    * @return inserted
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
   public OffsetDateTime getInserted() {
     return inserted;
   }
+
 
 
   /**
@@ -421,10 +481,6 @@ public class AddProvenanceRequest {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the AddProvenanceRequest instance itself
    */
   public AddProvenanceRequest putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -436,8 +492,6 @@ public class AddProvenanceRequest {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -445,9 +499,6 @@ public class AddProvenanceRequest {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -568,29 +619,30 @@ public class AddProvenanceRequest {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddProvenanceRequest
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to AddProvenanceRequest
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!AddProvenanceRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (AddProvenanceRequest.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddProvenanceRequest is not found in the empty JSON string", AddProvenanceRequest.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : AddProvenanceRequest.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("name").isJsonPrimitive()) {
+      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
-      if (!jsonObj.get("softwarename").isJsonPrimitive()) {
+      if ((jsonObj.get("softwarename") != null && !jsonObj.get("softwarename").isJsonNull()) && !jsonObj.get("softwarename").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `softwarename` to be a primitive type in the JSON string but got `%s`", jsonObj.get("softwarename").toString()));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
@@ -617,10 +669,6 @@ public class AddProvenanceRequest {
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
-      // validate the optional field `evaluationmode`
-      if (jsonObj.get("evaluationmode") != null && !jsonObj.get("evaluationmode").isJsonNull()) {
-        ProvenanceEvaluationmode.validateJsonElement(jsonObj.get("evaluationmode"));
-      }
       if ((jsonObj.get("url") != null && !jsonObj.get("url").isJsonNull()) && !jsonObj.get("url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
       }
@@ -642,7 +690,7 @@ public class AddProvenanceRequest {
            public void write(JsonWriter out, AddProvenanceRequest value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -654,12 +702,7 @@ public class AddProvenanceRequest {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -668,9 +711,8 @@ public class AddProvenanceRequest {
 
            @Override
            public AddProvenanceRequest read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              AddProvenanceRequest instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -684,10 +726,8 @@ public class AddProvenanceRequest {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

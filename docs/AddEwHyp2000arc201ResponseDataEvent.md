@@ -10,7 +10,7 @@
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] |
 |**idLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
 |**localspace** | [**AddEvent201ResponseDataEventLocalspace**](AddEvent201ResponseDataEventLocalspace.md) |  |  [optional] |
-|**origins** | [**List&lt;UpdateEvent200ResponseDataEvent&gt;**](UpdateEvent200ResponseDataEvent.md) |  |  [optional] |
+|**origins** | [**List&lt;AddEvent201ResponseDataEventOriginsInnerAllOf&gt;**](AddEvent201ResponseDataEventOriginsInnerAllOf.md) |  |  [optional] |
 
 
 

@@ -14,14 +14,16 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.MagnitudePhasesInner;
 
@@ -35,16 +37,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -52,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class MagnitudeSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
@@ -116,12 +114,13 @@ public class MagnitudeSchemaEwMessage {
 
   public static final String SERIALIZED_NAME_PHASES = "phases";
   @SerializedName(SERIALIZED_NAME_PHASES)
-  private List<MagnitudePhasesInner> phases;
+  private List<MagnitudePhasesInner> phases = null;
 
   public MagnitudeSchemaEwMessage() {
   }
 
   public MagnitudeSchemaEwMessage quakeId(Long quakeId) {
+    
     this.quakeId = quakeId;
     return this;
   }
@@ -131,9 +130,12 @@ public class MagnitudeSchemaEwMessage {
    * @return quakeId
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "182491", required = true, value = "Localspace Id | bigint(19)")
+
   public Long getQuakeId() {
     return quakeId;
   }
+
 
   public void setQuakeId(Long quakeId) {
     this.quakeId = quakeId;
@@ -141,6 +143,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage version(String version) {
+    
     this.version = version;
     return this;
   }
@@ -150,9 +153,12 @@ public class MagnitudeSchemaEwMessage {
    * @return version
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "ew prelim", required = true, value = "Localization name (es:ew prelim,XX,WW,..) | varchar(255)")
+
   public String getVersion() {
     return version;
   }
+
 
   public void setVersion(String version) {
     this.version = version;
@@ -160,6 +166,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage mag(Double mag) {
+    
     this.mag = mag;
     return this;
   }
@@ -169,9 +176,12 @@ public class MagnitudeSchemaEwMessage {
    * @return mag
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "3.01", required = true, value = "Magnitude value | double")
+
   public Double getMag() {
     return mag;
   }
+
 
   public void setMag(Double mag) {
     this.mag = mag;
@@ -179,6 +189,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage error(Double error) {
+    
     this.error = error;
     return this;
   }
@@ -188,9 +199,12 @@ public class MagnitudeSchemaEwMessage {
    * @return error
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0.52", value = "Magnitude error | double")
+
   public Double getError() {
     return error;
   }
+
 
   public void setError(Double error) {
     this.error = error;
@@ -198,6 +212,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage quality(Double quality) {
+    
     this.quality = quality;
     return this;
   }
@@ -207,9 +222,12 @@ public class MagnitudeSchemaEwMessage {
    * @return quality
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "quality | double")
+
   public Double getQuality() {
     return quality;
   }
+
 
   public void setQuality(Double quality) {
     this.quality = quality;
@@ -217,6 +235,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage minDist(Double minDist) {
+    
     this.minDist = minDist;
     return this;
   }
@@ -226,9 +245,12 @@ public class MagnitudeSchemaEwMessage {
    * @return minDist
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Minimal distance from station to origin | double")
+
   public Double getMinDist() {
     return minDist;
   }
+
 
   public void setMinDist(Double minDist) {
     this.minDist = minDist;
@@ -236,6 +258,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage azimuth(Float azimuth) {
+    
     this.azimuth = azimuth;
     return this;
   }
@@ -245,9 +268,12 @@ public class MagnitudeSchemaEwMessage {
    * @return azimuth
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Azimutal gap | float4")
+
   public Float getAzimuth() {
     return azimuth;
   }
+
 
   public void setAzimuth(Float azimuth) {
     this.azimuth = azimuth;
@@ -255,6 +281,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage nStations(Long nStations) {
+    
     this.nStations = nStations;
     return this;
   }
@@ -264,9 +291,12 @@ public class MagnitudeSchemaEwMessage {
    * @return nStations
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of the stations on magnitudo calculation | int(11)")
+
   public Long getnStations() {
     return nStations;
   }
+
 
   public void setnStations(Long nStations) {
     this.nStations = nStations;
@@ -274,6 +304,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage nChannels(Long nChannels) {
+    
     this.nChannels = nChannels;
     return this;
   }
@@ -283,9 +314,12 @@ public class MagnitudeSchemaEwMessage {
    * @return nChannels
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of the channel on magnitudo calculation | int(11)")
+
   public Long getnChannels() {
     return nChannels;
   }
+
 
   public void setnChannels(Long nChannels) {
     this.nChannels = nChannels;
@@ -293,6 +327,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage qAuthor(String qAuthor) {
+    
     this.qAuthor = qAuthor;
     return this;
   }
@@ -302,9 +337,12 @@ public class MagnitudeSchemaEwMessage {
    * @return qAuthor
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "014101073:028130073", value = "qAuthor description")
+
   public String getqAuthor() {
     return qAuthor;
   }
+
 
   public void setqAuthor(String qAuthor) {
     this.qAuthor = qAuthor;
@@ -312,6 +350,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage qddsVersion(Double qddsVersion) {
+    
     this.qddsVersion = qddsVersion;
     return this;
   }
@@ -321,9 +360,12 @@ public class MagnitudeSchemaEwMessage {
    * @return qddsVersion
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0", value = "qddsVersion description")
+
   public Double getQddsVersion() {
     return qddsVersion;
   }
+
 
   public void setQddsVersion(Double qddsVersion) {
     this.qddsVersion = qddsVersion;
@@ -331,6 +373,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage iMagType(Double iMagType) {
+    
     this.iMagType = iMagType;
     return this;
   }
@@ -340,9 +383,12 @@ public class MagnitudeSchemaEwMessage {
    * @return iMagType
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "1", value = "iMagType description")
+
   public Double getiMagType() {
     return iMagType;
   }
+
 
   public void setiMagType(Double iMagType) {
     this.iMagType = iMagType;
@@ -350,6 +396,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage magType(String magType) {
+    
     this.magType = magType;
     return this;
   }
@@ -359,9 +406,12 @@ public class MagnitudeSchemaEwMessage {
    * @return magType
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "ML-VAX", value = "Type of the magnitude | varchar(255)")
+
   public String getMagType() {
     return magType;
   }
+
 
   public void setMagType(String magType) {
     this.magType = magType;
@@ -369,6 +419,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage algorithm(Double algorithm) {
+    
     this.algorithm = algorithm;
     return this;
   }
@@ -378,9 +429,12 @@ public class MagnitudeSchemaEwMessage {
    * @return algorithm
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "MED", value = "algorithm description")
+
   public Double getAlgorithm() {
     return algorithm;
   }
+
 
   public void setAlgorithm(Double algorithm) {
     this.algorithm = algorithm;
@@ -388,6 +442,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage ingvQuality(String ingvQuality) {
+    
     this.ingvQuality = ingvQuality;
     return this;
   }
@@ -397,9 +452,12 @@ public class MagnitudeSchemaEwMessage {
    * @return ingvQuality
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "BB", value = "INGV quality code of the magnitude (computed by ew2moledb) | char(2)")
+
   public String getIngvQuality() {
     return ingvQuality;
   }
+
 
   public void setIngvQuality(String ingvQuality) {
     this.ingvQuality = ingvQuality;
@@ -407,6 +465,7 @@ public class MagnitudeSchemaEwMessage {
 
 
   public MagnitudeSchemaEwMessage phases(List<MagnitudePhasesInner> phases) {
+    
     this.phases = phases;
     return this;
   }
@@ -424,9 +483,12 @@ public class MagnitudeSchemaEwMessage {
    * @return phases
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public List<MagnitudePhasesInner> getPhases() {
     return phases;
   }
+
 
   public void setPhases(List<MagnitudePhasesInner> phases) {
     this.phases = phases;
@@ -442,10 +504,6 @@ public class MagnitudeSchemaEwMessage {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the MagnitudeSchemaEwMessage instance itself
    */
   public MagnitudeSchemaEwMessage putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -457,8 +515,6 @@ public class MagnitudeSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -466,9 +522,6 @@ public class MagnitudeSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -579,26 +632,27 @@ public class MagnitudeSchemaEwMessage {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to MagnitudeSchemaEwMessage
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to MagnitudeSchemaEwMessage
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!MagnitudeSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (MagnitudeSchemaEwMessage.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in MagnitudeSchemaEwMessage is not found in the empty JSON string", MagnitudeSchemaEwMessage.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : MagnitudeSchemaEwMessage.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("version").isJsonPrimitive()) {
+      if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
       if ((jsonObj.get("qAuthor") != null && !jsonObj.get("qAuthor").isJsonNull()) && !jsonObj.get("qAuthor").isJsonPrimitive()) {
@@ -613,19 +667,17 @@ public class MagnitudeSchemaEwMessage {
       if ((jsonObj.get("ingvQuality") != null && !jsonObj.get("ingvQuality").isJsonNull()) && !jsonObj.get("ingvQuality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `ingvQuality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("ingvQuality").toString()));
       }
-      if (jsonObj.get("phases") != null && !jsonObj.get("phases").isJsonNull()) {
-        JsonArray jsonArrayphases = jsonObj.getAsJsonArray("phases");
-        if (jsonArrayphases != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("phases").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `phases` to be an array in the JSON string but got `%s`", jsonObj.get("phases").toString()));
-          }
-
-          // validate the optional field `phases` (array)
-          for (int i = 0; i < jsonArrayphases.size(); i++) {
-            MagnitudePhasesInner.validateJsonElement(jsonArrayphases.get(i));
-          };
+      JsonArray jsonArrayphases = jsonObj.getAsJsonArray("phases");
+      if (jsonArrayphases != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("phases").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `phases` to be an array in the JSON string but got `%s`", jsonObj.get("phases").toString()));
         }
+
+        // validate the optional field `phases` (array)
+        for (int i = 0; i < jsonArrayphases.size(); i++) {
+          MagnitudePhasesInner.validateJsonObject(jsonArrayphases.get(i).getAsJsonObject());
+        };
       }
   }
 
@@ -645,7 +697,7 @@ public class MagnitudeSchemaEwMessage {
            public void write(JsonWriter out, MagnitudeSchemaEwMessage value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -657,12 +709,7 @@ public class MagnitudeSchemaEwMessage {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -671,9 +718,8 @@ public class MagnitudeSchemaEwMessage {
 
            @Override
            public MagnitudeSchemaEwMessage read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              MagnitudeSchemaEwMessage instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -687,10 +733,8 @@ public class MagnitudeSchemaEwMessage {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

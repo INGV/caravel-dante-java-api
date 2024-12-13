@@ -14,14 +14,16 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.util.Arrays;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -34,16 +36,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -51,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableTypeMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class ObjectTableTypeMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -96,6 +94,7 @@ public class ObjectTableTypeMagnitude {
   public ObjectTableTypeMagnitude() {
   }
 
+  
   public ObjectTableTypeMagnitude(
      Long id, 
      OffsetDateTime modified, 
@@ -112,13 +111,17 @@ public class ObjectTableTypeMagnitude {
    * @return id
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
   public Long getId() {
     return id;
   }
 
 
 
+
   public ObjectTableTypeMagnitude name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -128,9 +131,12 @@ public class ObjectTableTypeMagnitude {
    * @return name
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "ML-VAX", value = "Type of the magnitude | varchar(255)")
+
   public String getName() {
     return name;
   }
+
 
   public void setName(String name) {
     this.name = name;
@@ -138,6 +144,7 @@ public class ObjectTableTypeMagnitude {
 
 
   public ObjectTableTypeMagnitude scale(String scale) {
+    
     this.scale = scale;
     return this;
   }
@@ -147,9 +154,12 @@ public class ObjectTableTypeMagnitude {
    * @return scale
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "ML", value = "Type Scale of the magnitude, international scale label (i.e. ML, Md, Mw, ...) | varchar(50)")
+
   public String getScale() {
     return scale;
   }
+
 
   public void setScale(String scale) {
     this.scale = scale;
@@ -157,6 +167,7 @@ public class ObjectTableTypeMagnitude {
 
 
   public ObjectTableTypeMagnitude priority(Long priority) {
+    
     this.priority = priority;
     return this;
   }
@@ -166,9 +177,12 @@ public class ObjectTableTypeMagnitude {
    * @return priority
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0", value = "Priority | int(8)")
+
   public Long getPriority() {
     return priority;
   }
+
 
   public void setPriority(Long priority) {
     this.priority = priority;
@@ -176,6 +190,7 @@ public class ObjectTableTypeMagnitude {
 
 
   public ObjectTableTypeMagnitude minmag(Float minmag) {
+    
     this.minmag = minmag;
     return this;
   }
@@ -185,9 +200,12 @@ public class ObjectTableTypeMagnitude {
    * @return minmag
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "1.2", value = "Minimum magnitude value | float(4)")
+
   public Float getMinmag() {
     return minmag;
   }
+
 
   public void setMinmag(Float minmag) {
     this.minmag = minmag;
@@ -195,6 +213,7 @@ public class ObjectTableTypeMagnitude {
 
 
   public ObjectTableTypeMagnitude maxmag(Float maxmag) {
+    
     this.maxmag = maxmag;
     return this;
   }
@@ -204,9 +223,12 @@ public class ObjectTableTypeMagnitude {
    * @return maxmag
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2.2", value = "Maximum magnitude value | float(4)")
+
   public Float getMaxmag() {
     return maxmag;
   }
+
 
   public void setMaxmag(Float maxmag) {
     this.maxmag = maxmag;
@@ -214,6 +236,7 @@ public class ObjectTableTypeMagnitude {
 
 
   public ObjectTableTypeMagnitude minreadings(Integer minreadings) {
+    
     this.minreadings = minreadings;
     return this;
   }
@@ -223,9 +246,12 @@ public class ObjectTableTypeMagnitude {
    * @return minreadings
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Minimum number of readings | int(8)")
+
   public Integer getMinreadings() {
     return minreadings;
   }
+
 
   public void setMinreadings(Integer minreadings) {
     this.minreadings = minreadings;
@@ -233,6 +259,7 @@ public class ObjectTableTypeMagnitude {
 
 
   public ObjectTableTypeMagnitude description(String description) {
+    
     this.description = description;
     return this;
   }
@@ -242,9 +269,12 @@ public class ObjectTableTypeMagnitude {
    * @return description
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "Auto added", value = "Additional information | char(255)")
+
   public String getDescription() {
     return description;
   }
+
 
   public void setDescription(String description) {
     this.description = description;
@@ -256,9 +286,12 @@ public class ObjectTableTypeMagnitude {
    * @return modified
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
+
   public OffsetDateTime getModified() {
     return modified;
   }
+
 
 
 
@@ -267,9 +300,12 @@ public class ObjectTableTypeMagnitude {
    * @return inserted
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
   public OffsetDateTime getInserted() {
     return inserted;
   }
+
 
 
   /**
@@ -282,10 +318,6 @@ public class ObjectTableTypeMagnitude {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the ObjectTableTypeMagnitude instance itself
    */
   public ObjectTableTypeMagnitude putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -297,8 +329,6 @@ public class ObjectTableTypeMagnitude {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -306,9 +336,6 @@ public class ObjectTableTypeMagnitude {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -409,18 +436,19 @@ public class ObjectTableTypeMagnitude {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectTableTypeMagnitude
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ObjectTableTypeMagnitude
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!ObjectTableTypeMagnitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ObjectTableTypeMagnitude.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectTableTypeMagnitude is not found in the empty JSON string", ObjectTableTypeMagnitude.openapiRequiredFields.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
@@ -448,7 +476,7 @@ public class ObjectTableTypeMagnitude {
            public void write(JsonWriter out, ObjectTableTypeMagnitude value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -460,12 +488,7 @@ public class ObjectTableTypeMagnitude {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -474,9 +497,8 @@ public class ObjectTableTypeMagnitude {
 
            @Override
            public ObjectTableTypeMagnitude read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              ObjectTableTypeMagnitude instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -490,10 +512,8 @@ public class ObjectTableTypeMagnitude {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

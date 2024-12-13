@@ -14,15 +14,18 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.Arrays;
-import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
-import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.ArrayList;
+import java.util.List;
+import org.ingv.dante.model.ObjectTableTypeOrigin;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -34,94 +37,56 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
 
 /**
- * UpdateEvent200ResponseDataEvent
+ * GetTypeOrigin200ResponseAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
-public class UpdateEvent200ResponseDataEvent {
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private Long id;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
+public class GetTypeOrigin200ResponseAllOf {
+  public static final String SERIALIZED_NAME_DATA = "data";
+  @SerializedName(SERIALIZED_NAME_DATA)
+  private List<ObjectTableTypeOrigin> data = null;
 
-  public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
-  @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
-  private Long idLocalspace;
-
-  public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
-  @SerializedName(SERIALIZED_NAME_LOCALSPACE)
-  private AddEvent201ResponseDataEventLocalspace localspace;
-
-  public UpdateEvent200ResponseDataEvent() {
+  public GetTypeOrigin200ResponseAllOf() {
   }
 
-  public UpdateEvent200ResponseDataEvent id(Long id) {
-    this.id = id;
+  public GetTypeOrigin200ResponseAllOf data(List<ObjectTableTypeOrigin> data) {
+    
+    this.data = data;
+    return this;
+  }
+
+  public GetTypeOrigin200ResponseAllOf addDataItem(ObjectTableTypeOrigin dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<>();
+    }
+    this.data.add(dataItem);
     return this;
   }
 
    /**
-   * Unique incremental id | bigint(20)
-   * @return id
+   * Get data
+   * @return data
   **/
   @javax.annotation.Nullable
-  public Long getId() {
-    return id;
-  }
+  @ApiModelProperty(value = "")
 
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-
-  public UpdateEvent200ResponseDataEvent idLocalspace(Long idLocalspace) {
-    this.idLocalspace = idLocalspace;
-    return this;
-  }
-
-   /**
-   * Localspace Id | bigint(19)
-   * @return idLocalspace
-  **/
-  @javax.annotation.Nullable
-  public Long getIdLocalspace() {
-    return idLocalspace;
-  }
-
-  public void setIdLocalspace(Long idLocalspace) {
-    this.idLocalspace = idLocalspace;
+  public List<ObjectTableTypeOrigin> getData() {
+    return data;
   }
 
 
-  public UpdateEvent200ResponseDataEvent localspace(AddEvent201ResponseDataEventLocalspace localspace) {
-    this.localspace = localspace;
-    return this;
-  }
-
-   /**
-   * Get localspace
-   * @return localspace
-  **/
-  @javax.annotation.Nullable
-  public AddEvent201ResponseDataEventLocalspace getLocalspace() {
-    return localspace;
-  }
-
-  public void setLocalspace(AddEvent201ResponseDataEventLocalspace localspace) {
-    this.localspace = localspace;
+  public void setData(List<ObjectTableTypeOrigin> data) {
+    this.data = data;
   }
 
   /**
@@ -134,12 +99,8 @@ public class UpdateEvent200ResponseDataEvent {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the UpdateEvent200ResponseDataEvent instance itself
    */
-  public UpdateEvent200ResponseDataEvent putAdditionalProperty(String key, Object value) {
+  public GetTypeOrigin200ResponseAllOf putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -149,8 +110,6 @@ public class UpdateEvent200ResponseDataEvent {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -158,9 +117,6 @@ public class UpdateEvent200ResponseDataEvent {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -178,36 +134,21 @@ public class UpdateEvent200ResponseDataEvent {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UpdateEvent200ResponseDataEvent updateEvent200ResponseDataEvent = (UpdateEvent200ResponseDataEvent) o;
-    return Objects.equals(this.id, updateEvent200ResponseDataEvent.id) &&
-        Objects.equals(this.idLocalspace, updateEvent200ResponseDataEvent.idLocalspace) &&
-        Objects.equals(this.localspace, updateEvent200ResponseDataEvent.localspace)&&
-        Objects.equals(this.additionalProperties, updateEvent200ResponseDataEvent.additionalProperties);
-  }
-
-  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
-    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
+    GetTypeOrigin200ResponseAllOf getTypeOrigin200ResponseAllOf = (GetTypeOrigin200ResponseAllOf) o;
+    return Objects.equals(this.data, getTypeOrigin200ResponseAllOf.data)&&
+        Objects.equals(this.additionalProperties, getTypeOrigin200ResponseAllOf.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idLocalspace, localspace, additionalProperties);
-  }
-
-  private static <T> int hashCodeNullable(JsonNullable<T> a) {
-    if (a == null) {
-      return 1;
-    }
-    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
+    return Objects.hash(data, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class UpdateEvent200ResponseDataEvent {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    idLocalspace: ").append(toIndentedString(idLocalspace)).append("\n");
-    sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
+    sb.append("class GetTypeOrigin200ResponseAllOf {\n");
+    sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -231,30 +172,37 @@ public class UpdateEvent200ResponseDataEvent {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("id");
-    openapiFields.add("id_localspace");
-    openapiFields.add("localspace");
+    openapiFields.add("data");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UpdateEvent200ResponseDataEvent
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to GetTypeOrigin200ResponseAllOf
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!UpdateEvent200ResponseDataEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateEvent200ResponseDataEvent is not found in the empty JSON string", UpdateEvent200ResponseDataEvent.openapiRequiredFields.toString()));
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (GetTypeOrigin200ResponseAllOf.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
+          throw new IllegalArgumentException(String.format("The required field(s) %s in GetTypeOrigin200ResponseAllOf is not found in the empty JSON string", GetTypeOrigin200ResponseAllOf.openapiRequiredFields.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the optional field `localspace`
-      if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        AddEvent201ResponseDataEventLocalspace.validateJsonElement(jsonObj.get("localspace"));
+      JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+      if (jsonArraydata != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("data").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
+        }
+
+        // validate the optional field `data` (array)
+        for (int i = 0; i < jsonArraydata.size(); i++) {
+          ObjectTableTypeOrigin.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+        };
       }
   }
 
@@ -262,19 +210,19 @@ public class UpdateEvent200ResponseDataEvent {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!UpdateEvent200ResponseDataEvent.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'UpdateEvent200ResponseDataEvent' and its subtypes
+       if (!GetTypeOrigin200ResponseAllOf.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'GetTypeOrigin200ResponseAllOf' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<UpdateEvent200ResponseDataEvent> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(UpdateEvent200ResponseDataEvent.class));
+       final TypeAdapter<GetTypeOrigin200ResponseAllOf> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(GetTypeOrigin200ResponseAllOf.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<UpdateEvent200ResponseDataEvent>() {
+       return (TypeAdapter<T>) new TypeAdapter<GetTypeOrigin200ResponseAllOf>() {
            @Override
-           public void write(JsonWriter out, UpdateEvent200ResponseDataEvent value) throws IOException {
+           public void write(JsonWriter out, GetTypeOrigin200ResponseAllOf value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -286,12 +234,7 @@ public class UpdateEvent200ResponseDataEvent {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -299,12 +242,11 @@ public class UpdateEvent200ResponseDataEvent {
            }
 
            @Override
-           public UpdateEvent200ResponseDataEvent read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+           public GetTypeOrigin200ResponseAllOf read(JsonReader in) throws IOException {
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
-             UpdateEvent200ResponseDataEvent instance = thisAdapter.fromJsonTree(jsonObj);
+             GetTypeOrigin200ResponseAllOf instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -316,10 +258,8 @@ public class UpdateEvent200ResponseDataEvent {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -331,18 +271,18 @@ public class UpdateEvent200ResponseDataEvent {
   }
 
  /**
-  * Create an instance of UpdateEvent200ResponseDataEvent given an JSON string
+  * Create an instance of GetTypeOrigin200ResponseAllOf given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of UpdateEvent200ResponseDataEvent
-  * @throws IOException if the JSON string is invalid with respect to UpdateEvent200ResponseDataEvent
+  * @return An instance of GetTypeOrigin200ResponseAllOf
+  * @throws IOException if the JSON string is invalid with respect to GetTypeOrigin200ResponseAllOf
   */
-  public static UpdateEvent200ResponseDataEvent fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, UpdateEvent200ResponseDataEvent.class);
+  public static GetTypeOrigin200ResponseAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, GetTypeOrigin200ResponseAllOf.class);
   }
 
  /**
-  * Convert an instance of UpdateEvent200ResponseDataEvent to an JSON string
+  * Convert an instance of GetTypeOrigin200ResponseAllOf to an JSON string
   *
   * @return JSON string
   */

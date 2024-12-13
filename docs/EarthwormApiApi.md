@@ -11,7 +11,7 @@ All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 | [**addHEwStrongmotionii**](EarthwormApiApi.md#addHEwStrongmotionii) | **POST** /quakedb/ew/v1/strongmotionii | Insert a new strongmotionii message to the DB using ew2openapi module |
 
 
-<a id="addEwHyp2000arc"></a>
+<a name="addEwHyp2000arc"></a>
 # **addEwHyp2000arc**
 > AddEwHyp2000arc201Response addEwHyp2000arc(addEwHyp2000arcRequest)
 
@@ -79,7 +79,7 @@ No authorization required
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a id="addEwQuake2k"></a>
+<a name="addEwQuake2k"></a>
 # **addEwQuake2k**
 > UpdateEvent200Response addEwQuake2k(addEwQuake2kRequest)
 
@@ -147,7 +147,7 @@ No authorization required
 | **201** | record insertedd |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a id="addHEwMagnitude"></a>
+<a name="addHEwMagnitude"></a>
 # **addHEwMagnitude**
 > AddMagnitude201Response addHEwMagnitude(addHEwMagnitudeRequest)
 
@@ -215,7 +215,7 @@ No authorization required
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a id="addHEwPickScnl"></a>
+<a name="addHEwPickScnl"></a>
 # **addHEwPickScnl**
 > AddHEwPickScnl201Response addHEwPickScnl(addHEwPickScnlRequest)
 
@@ -283,7 +283,7 @@ No authorization required
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a id="addHEwStrongmotionii"></a>
+<a name="addHEwStrongmotionii"></a>
 # **addHEwStrongmotionii**
 > AddHEwStrongmotionii201Response addHEwStrongmotionii(addHEwStrongmotioniiRequest)
 

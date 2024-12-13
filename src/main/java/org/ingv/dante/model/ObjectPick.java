@@ -14,14 +14,16 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectPickEw;
 import org.ingv.dante.model.ObjectProvenance;
@@ -39,16 +41,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -56,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectPick
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class ObjectPick {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
@@ -133,6 +131,7 @@ public class ObjectPick {
   public ObjectPick() {
   }
 
+  
   public ObjectPick(
      Long id, 
      OffsetDateTime modified, 
@@ -145,6 +144,7 @@ public class ObjectPick {
   }
 
   public ObjectPick net(String net) {
+    
     this.net = net;
     return this;
   }
@@ -154,9 +154,12 @@ public class ObjectPick {
    * @return net
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "IV", required = true, value = "Channel net code | char(2)")
+
   public String getNet() {
     return net;
   }
+
 
   public void setNet(String net) {
     this.net = net;
@@ -164,6 +167,7 @@ public class ObjectPick {
 
 
   public ObjectPick sta(String sta) {
+    
     this.sta = sta;
     return this;
   }
@@ -173,9 +177,12 @@ public class ObjectPick {
    * @return sta
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "ACER", required = true, value = "Channel station code | varchar(5)")
+
   public String getSta() {
     return sta;
   }
+
 
   public void setSta(String sta) {
     this.sta = sta;
@@ -183,6 +190,7 @@ public class ObjectPick {
 
 
   public ObjectPick cha(String cha) {
+    
     this.cha = cha;
     return this;
   }
@@ -192,9 +200,12 @@ public class ObjectPick {
    * @return cha
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "HHZ", required = true, value = "Channel code | char(3)")
+
   public String getCha() {
     return cha;
   }
+
 
   public void setCha(String cha) {
     this.cha = cha;
@@ -202,6 +213,7 @@ public class ObjectPick {
 
 
   public ObjectPick loc(String loc) {
+    
     this.loc = loc;
     return this;
   }
@@ -211,9 +223,12 @@ public class ObjectPick {
    * @return loc
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "00", value = "Channel location | char(2)")
+
   public String getLoc() {
     return loc;
   }
+
 
   public void setLoc(String loc) {
     this.loc = loc;
@@ -225,9 +240,12 @@ public class ObjectPick {
    * @return id
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
   public Long getId() {
     return id;
   }
+
 
 
 
@@ -236,9 +254,12 @@ public class ObjectPick {
    * @return modified
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
+
   public OffsetDateTime getModified() {
     return modified;
   }
+
 
 
 
@@ -247,13 +268,17 @@ public class ObjectPick {
    * @return inserted
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
   public OffsetDateTime getInserted() {
     return inserted;
   }
 
 
 
+
   public ObjectPick idLocalspace(Long idLocalspace) {
+    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -263,9 +288,12 @@ public class ObjectPick {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
+
   public Long getIdLocalspace() {
     return idLocalspace;
   }
+
 
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
@@ -273,6 +301,7 @@ public class ObjectPick {
 
 
   public ObjectPick qualityClass(Integer qualityClass) {
+    
     this.qualityClass = qualityClass;
     return this;
   }
@@ -282,9 +311,12 @@ public class ObjectPick {
    * @return qualityClass
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "3", value = "Pick quality class | bigint")
+
   public Integer getQualityClass() {
     return qualityClass;
   }
+
 
   public void setQualityClass(Integer qualityClass) {
     this.qualityClass = qualityClass;
@@ -292,6 +324,7 @@ public class ObjectPick {
 
 
   public ObjectPick lowerUncertainty(Float lowerUncertainty) {
+    
     this.lowerUncertainty = lowerUncertainty;
     return this;
   }
@@ -301,9 +334,12 @@ public class ObjectPick {
    * @return lowerUncertainty
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0.52", value = "Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)")
+
   public Float getLowerUncertainty() {
     return lowerUncertainty;
   }
+
 
   public void setLowerUncertainty(Float lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
@@ -311,6 +347,7 @@ public class ObjectPick {
 
 
   public ObjectPick upperUncertainty(Float upperUncertainty) {
+    
     this.upperUncertainty = upperUncertainty;
     return this;
   }
@@ -320,9 +357,12 @@ public class ObjectPick {
    * @return upperUncertainty
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0.53", value = "Uncertainty as the absolute value of deviation from the mainvalue towards larger values. | decimal(8,3)")
+
   public Float getUpperUncertainty() {
     return upperUncertainty;
   }
+
 
   public void setUpperUncertainty(Float upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
@@ -330,6 +370,7 @@ public class ObjectPick {
 
 
   public ObjectPick confidenceLevel(Float confidenceLevel) {
+    
     this.confidenceLevel = confidenceLevel;
     return this;
   }
@@ -339,9 +380,12 @@ public class ObjectPick {
    * @return confidenceLevel
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "68.3", value = "Integer numer for confidence level type (68.3 1 sigma, xx =2 sigma, 99% 3 sigma) | decimal(5.2)")
+
   public Float getConfidenceLevel() {
     return confidenceLevel;
   }
+
 
   public void setConfidenceLevel(Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
@@ -349,6 +393,7 @@ public class ObjectPick {
 
 
   public ObjectPick arrivalTime(OffsetDateTime arrivalTime) {
+    
     this.arrivalTime = arrivalTime;
     return this;
   }
@@ -358,9 +403,12 @@ public class ObjectPick {
    * @return arrivalTime
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "2017-04-12T08:46:30.930Z", required = true, value = "Arrival time with microseconds | datetime(3)")
+
   public OffsetDateTime getArrivalTime() {
     return arrivalTime;
   }
+
 
   public void setArrivalTime(OffsetDateTime arrivalTime) {
     this.arrivalTime = arrivalTime;
@@ -368,6 +416,7 @@ public class ObjectPick {
 
 
   public ObjectPick firstmotion(PickFirstmotion firstmotion) {
+    
     this.firstmotion = firstmotion;
     return this;
   }
@@ -377,9 +426,12 @@ public class ObjectPick {
    * @return firstmotion
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public PickFirstmotion getFirstmotion() {
     return firstmotion;
   }
+
 
   public void setFirstmotion(PickFirstmotion firstmotion) {
     this.firstmotion = firstmotion;
@@ -387,6 +439,7 @@ public class ObjectPick {
 
 
   public ObjectPick emersio(PickEmersio emersio) {
+    
     this.emersio = emersio;
     return this;
   }
@@ -396,9 +449,12 @@ public class ObjectPick {
    * @return emersio
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public PickEmersio getEmersio() {
     return emersio;
   }
+
 
   public void setEmersio(PickEmersio emersio) {
     this.emersio = emersio;
@@ -406,6 +462,7 @@ public class ObjectPick {
 
 
   public ObjectPick pickEw(ObjectPickEw pickEw) {
+    
     this.pickEw = pickEw;
     return this;
   }
@@ -415,9 +472,12 @@ public class ObjectPick {
    * @return pickEw
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectPickEw getPickEw() {
     return pickEw;
   }
+
 
   public void setPickEw(ObjectPickEw pickEw) {
     this.pickEw = pickEw;
@@ -425,6 +485,7 @@ public class ObjectPick {
 
 
   public ObjectPick localspace(ObjectLocalspace localspace) {
+    
     this.localspace = localspace;
     return this;
   }
@@ -434,9 +495,12 @@ public class ObjectPick {
    * @return localspace
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
+
 
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
@@ -444,6 +508,7 @@ public class ObjectPick {
 
 
   public ObjectPick provenance(ObjectProvenance provenance) {
+    
     this.provenance = provenance;
     return this;
   }
@@ -453,9 +518,12 @@ public class ObjectPick {
    * @return provenance
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectProvenance getProvenance() {
     return provenance;
   }
+
 
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
@@ -471,10 +539,6 @@ public class ObjectPick {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the ObjectPick instance itself
    */
   public ObjectPick putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -486,8 +550,6 @@ public class ObjectPick {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -495,9 +557,6 @@ public class ObjectPick {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -626,56 +685,49 @@ public class ObjectPick {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectPick
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ObjectPick
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!ObjectPick.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ObjectPick.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectPick is not found in the empty JSON string", ObjectPick.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectPick.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("net").isJsonPrimitive()) {
+      if ((jsonObj.get("net") != null && !jsonObj.get("net").isJsonNull()) && !jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
-      if (!jsonObj.get("sta").isJsonPrimitive()) {
+      if ((jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonNull()) && !jsonObj.get("sta").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
       }
-      if (!jsonObj.get("cha").isJsonPrimitive()) {
+      if ((jsonObj.get("cha") != null && !jsonObj.get("cha").isJsonNull()) && !jsonObj.get("cha").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `cha` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cha").toString()));
       }
       if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
       }
-      // validate the optional field `firstmotion`
-      if (jsonObj.get("firstmotion") != null && !jsonObj.get("firstmotion").isJsonNull()) {
-        PickFirstmotion.validateJsonElement(jsonObj.get("firstmotion"));
-      }
-      // validate the optional field `emersio`
-      if (jsonObj.get("emersio") != null && !jsonObj.get("emersio").isJsonNull()) {
-        PickEmersio.validateJsonElement(jsonObj.get("emersio"));
-      }
       // validate the optional field `pick_ew`
       if (jsonObj.get("pick_ew") != null && !jsonObj.get("pick_ew").isJsonNull()) {
-        ObjectPickEw.validateJsonElement(jsonObj.get("pick_ew"));
+        ObjectPickEw.validateJsonObject(jsonObj.getAsJsonObject("pick_ew"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
+        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
+        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
   }
 
@@ -695,7 +747,7 @@ public class ObjectPick {
            public void write(JsonWriter out, ObjectPick value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -707,12 +759,7 @@ public class ObjectPick {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -721,9 +768,8 @@ public class ObjectPick {
 
            @Override
            public ObjectPick read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              ObjectPick instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -737,10 +783,8 @@ public class ObjectPick {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

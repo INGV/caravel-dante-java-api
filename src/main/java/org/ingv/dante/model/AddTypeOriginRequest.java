@@ -14,14 +14,16 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
-import java.util.Arrays;
 import org.ingv.dante.model.TypeOriginName;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -35,16 +37,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -52,7 +50,7 @@ import org.ingv.dante.JSON;
 /**
  * AddTypeOriginRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class AddTypeOriginRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -89,6 +87,7 @@ public class AddTypeOriginRequest {
   public AddTypeOriginRequest() {
   }
 
+  
   public AddTypeOriginRequest(
      Long id, 
      OffsetDateTime modified, 
@@ -105,13 +104,17 @@ public class AddTypeOriginRequest {
    * @return id
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
   public Long getId() {
     return id;
   }
 
 
 
+
   public AddTypeOriginRequest name(TypeOriginName name) {
+    
     this.name = name;
     return this;
   }
@@ -121,9 +124,12 @@ public class AddTypeOriginRequest {
    * @return name
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(required = true, value = "")
+
   public TypeOriginName getName() {
     return name;
   }
+
 
   public void setName(TypeOriginName name) {
     this.name = name;
@@ -131,6 +137,7 @@ public class AddTypeOriginRequest {
 
 
   public AddTypeOriginRequest versionName(String versionName) {
+    
     this.versionName = versionName;
     return this;
   }
@@ -140,9 +147,12 @@ public class AddTypeOriginRequest {
    * @return versionName
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "ew prelim", value = "Localization name (es:ew prelim,XX,WW,..) | varchar(255)")
+
   public String getVersionName() {
     return versionName;
   }
+
 
   public void setVersionName(String versionName) {
     this.versionName = versionName;
@@ -150,6 +160,7 @@ public class AddTypeOriginRequest {
 
 
   public AddTypeOriginRequest versionValue(Long versionValue) {
+    
     this.versionValue = versionValue;
     return this;
   }
@@ -159,9 +170,12 @@ public class AddTypeOriginRequest {
    * @return versionValue
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Define a numeric value for type origin. < 100 is automatic location | bigint(20)")
+
   public Long getVersionValue() {
     return versionValue;
   }
+
 
   public void setVersionValue(Long versionValue) {
     this.versionValue = versionValue;
@@ -169,6 +183,7 @@ public class AddTypeOriginRequest {
 
 
   public AddTypeOriginRequest description(String description) {
+    
     this.description = description;
     return this;
   }
@@ -178,9 +193,12 @@ public class AddTypeOriginRequest {
    * @return description
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "Auto added", value = "Additional information | char(255)")
+
   public String getDescription() {
     return description;
   }
+
 
   public void setDescription(String description) {
     this.description = description;
@@ -188,6 +206,7 @@ public class AddTypeOriginRequest {
 
 
   public AddTypeOriginRequest priority(Long priority) {
+    
     this.priority = priority;
     return this;
   }
@@ -197,9 +216,12 @@ public class AddTypeOriginRequest {
    * @return priority
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0", value = "Priority | int(8)")
+
   public Long getPriority() {
     return priority;
   }
+
 
   public void setPriority(Long priority) {
     this.priority = priority;
@@ -211,9 +233,12 @@ public class AddTypeOriginRequest {
    * @return modified
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
+
   public OffsetDateTime getModified() {
     return modified;
   }
+
 
 
 
@@ -222,9 +247,12 @@ public class AddTypeOriginRequest {
    * @return inserted
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
   public OffsetDateTime getInserted() {
     return inserted;
   }
+
 
 
   /**
@@ -237,10 +265,6 @@ public class AddTypeOriginRequest {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the AddTypeOriginRequest instance itself
    */
   public AddTypeOriginRequest putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -252,8 +276,6 @@ public class AddTypeOriginRequest {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -261,9 +283,6 @@ public class AddTypeOriginRequest {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -359,27 +378,26 @@ public class AddTypeOriginRequest {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddTypeOriginRequest
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to AddTypeOriginRequest
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!AddTypeOriginRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (AddTypeOriginRequest.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddTypeOriginRequest is not found in the empty JSON string", AddTypeOriginRequest.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : AddTypeOriginRequest.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the required field `name`
-      TypeOriginName.validateJsonElement(jsonObj.get("name"));
       if ((jsonObj.get("version_name") != null && !jsonObj.get("version_name").isJsonNull()) && !jsonObj.get("version_name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `version_name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version_name").toString()));
       }
@@ -404,7 +422,7 @@ public class AddTypeOriginRequest {
            public void write(JsonWriter out, AddTypeOriginRequest value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -416,12 +434,7 @@ public class AddTypeOriginRequest {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -430,9 +443,8 @@ public class AddTypeOriginRequest {
 
            @Override
            public AddTypeOriginRequest read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              AddTypeOriginRequest instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -446,10 +458,8 @@ public class AddTypeOriginRequest {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

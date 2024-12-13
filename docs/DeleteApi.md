@@ -12,7 +12,7 @@ All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 | [**deleteTypeOrigin**](DeleteApi.md#deleteTypeOrigin) | **DELETE** /quakedb/table/v1/type-origin/{id} | Delete an existing type_origin |
 
 
-<a id="deleteLocalspace"></a>
+<a name="deleteLocalspace"></a>
 # **deleteLocalspace**
 > deleteLocalspace(id)
 
@@ -86,7 +86,7 @@ null (empty response body)
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a id="deleteOriginFlag"></a>
+<a name="deleteOriginFlag"></a>
 # **deleteOriginFlag**
 > deleteOriginFlag(id)
 
@@ -160,7 +160,7 @@ null (empty response body)
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a id="deleteProvenance"></a>
+<a name="deleteProvenance"></a>
 # **deleteProvenance**
 > deleteProvenance(id)
 
@@ -234,7 +234,7 @@ null (empty response body)
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a id="deleteTypeEvent"></a>
+<a name="deleteTypeEvent"></a>
 # **deleteTypeEvent**
 > deleteTypeEvent(id)
 
@@ -308,7 +308,7 @@ null (empty response body)
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a id="deleteTypeMagnitude"></a>
+<a name="deleteTypeMagnitude"></a>
 # **deleteTypeMagnitude**
 > deleteTypeMagnitude(id)
 
@@ -382,7 +382,7 @@ null (empty response body)
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a id="deleteTypeOrigin"></a>
+<a name="deleteTypeOrigin"></a>
 # **deleteTypeOrigin**
 > deleteTypeOrigin(id)
 

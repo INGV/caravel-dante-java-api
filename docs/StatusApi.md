@@ -7,7 +7,7 @@ All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 | [**getStatus**](StatusApi.md#getStatus) | **GET** /status | Return the application status |
 
 
-<a id="getStatus"></a>
+<a name="getStatus"></a>
 # **getStatus**
 > ObjectStatus getStatus()
 

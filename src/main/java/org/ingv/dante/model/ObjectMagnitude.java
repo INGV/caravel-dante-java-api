@@ -14,15 +14,17 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
@@ -39,16 +41,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -56,7 +54,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class ObjectMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -144,11 +142,12 @@ public class ObjectMagnitude {
 
   public static final String SERIALIZED_NAME_STATIONMAGNITUDES = "stationmagnitudes";
   @SerializedName(SERIALIZED_NAME_STATIONMAGNITUDES)
-  private List<ObjectStationmagnitude> stationmagnitudes;
+  private List<ObjectStationmagnitude> stationmagnitudes = null;
 
   public ObjectMagnitude() {
   }
 
+  
   public ObjectMagnitude(
      Long id, 
      OffsetDateTime modified, 
@@ -167,9 +166,12 @@ public class ObjectMagnitude {
    * @return id
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
   public Long getId() {
     return id;
   }
+
 
 
 
@@ -178,9 +180,12 @@ public class ObjectMagnitude {
    * @return modified
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
+
   public OffsetDateTime getModified() {
     return modified;
   }
+
 
 
 
@@ -189,13 +194,17 @@ public class ObjectMagnitude {
    * @return inserted
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
+
   public OffsetDateTime getInserted() {
     return inserted;
   }
 
 
 
+
   public ObjectMagnitude idLocalspace(Long idLocalspace) {
+    
     this.idLocalspace = idLocalspace;
     return this;
   }
@@ -205,9 +214,12 @@ public class ObjectMagnitude {
    * @return idLocalspace
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
+
   public Long getIdLocalspace() {
     return idLocalspace;
   }
+
 
   public void setIdLocalspace(Long idLocalspace) {
     this.idLocalspace = idLocalspace;
@@ -215,6 +227,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude mag(Double mag) {
+    
     this.mag = mag;
     return this;
   }
@@ -224,9 +237,12 @@ public class ObjectMagnitude {
    * @return mag
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "3.01", required = true, value = "Magnitude value | double")
+
   public Double getMag() {
     return mag;
   }
+
 
   public void setMag(Double mag) {
     this.mag = mag;
@@ -234,6 +250,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude lowerUncertainty(Double lowerUncertainty) {
+    
     this.lowerUncertainty = lowerUncertainty;
     return this;
   }
@@ -243,9 +260,12 @@ public class ObjectMagnitude {
    * @return lowerUncertainty
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0.52", value = "Magnitude lower_uncertainty | double")
+
   public Double getLowerUncertainty() {
     return lowerUncertainty;
   }
+
 
   public void setLowerUncertainty(Double lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
@@ -253,6 +273,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude upperUncertainty(Double upperUncertainty) {
+    
     this.upperUncertainty = upperUncertainty;
     return this;
   }
@@ -262,9 +283,12 @@ public class ObjectMagnitude {
    * @return upperUncertainty
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0.53", value = "Magnitude upper_uncertainty | double")
+
   public Double getUpperUncertainty() {
     return upperUncertainty;
   }
+
 
   public void setUpperUncertainty(Double upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
@@ -272,6 +296,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude confidenceLevel(Float confidenceLevel) {
+    
     this.confidenceLevel = confidenceLevel;
     return this;
   }
@@ -281,9 +306,12 @@ public class ObjectMagnitude {
    * @return confidenceLevel
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "68.3", value = "Integer numer for confidence level type (68.3 1 sigma, xx =2 sigma, 99% 3 sigma) | decimal(5.2)")
+
   public Float getConfidenceLevel() {
     return confidenceLevel;
   }
+
 
   public void setConfidenceLevel(Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
@@ -291,6 +319,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude quality(Double quality) {
+    
     this.quality = quality;
     return this;
   }
@@ -300,9 +329,12 @@ public class ObjectMagnitude {
    * @return quality
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "quality | double")
+
   public Double getQuality() {
     return quality;
   }
+
 
   public void setQuality(Double quality) {
     this.quality = quality;
@@ -310,6 +342,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude minDistance(Double minDistance) {
+    
     this.minDistance = minDistance;
     return this;
   }
@@ -319,9 +352,12 @@ public class ObjectMagnitude {
    * @return minDistance
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Minimal distance from station to origin | double")
+
   public Double getMinDistance() {
     return minDistance;
   }
+
 
   public void setMinDistance(Double minDistance) {
     this.minDistance = minDistance;
@@ -329,6 +365,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude azimut(Float azimut) {
+    
     this.azimut = azimut;
     return this;
   }
@@ -338,9 +375,12 @@ public class ObjectMagnitude {
    * @return azimut
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Azimutal gap | float4")
+
   public Float getAzimut() {
     return azimut;
   }
+
 
   public void setAzimut(Float azimut) {
     this.azimut = azimut;
@@ -348,6 +388,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude nsta(Long nsta) {
+    
     this.nsta = nsta;
     return this;
   }
@@ -357,9 +398,12 @@ public class ObjectMagnitude {
    * @return nsta
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of the stations on magnitudo calculation | int(11)")
+
   public Long getNsta() {
     return nsta;
   }
+
 
   public void setNsta(Long nsta) {
     this.nsta = nsta;
@@ -367,6 +411,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude ncha(Long ncha) {
+    
     this.ncha = ncha;
     return this;
   }
@@ -376,9 +421,12 @@ public class ObjectMagnitude {
    * @return ncha
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "Number of the channel on magnitudo calculation | int(11)")
+
   public Long getNcha() {
     return ncha;
   }
+
 
   public void setNcha(Long ncha) {
     this.ncha = ncha;
@@ -386,6 +434,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude nstaUsed(Long nstaUsed) {
+    
     this.nstaUsed = nstaUsed;
     return this;
   }
@@ -395,9 +444,12 @@ public class ObjectMagnitude {
    * @return nstaUsed
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "9", value = "Number of the stations used on magnitudo calculation | int(11)")
+
   public Long getNstaUsed() {
     return nstaUsed;
   }
+
 
   public void setNstaUsed(Long nstaUsed) {
     this.nstaUsed = nstaUsed;
@@ -405,6 +457,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude nchaUsed(Long nchaUsed) {
+    
     this.nchaUsed = nchaUsed;
     return this;
   }
@@ -414,9 +467,12 @@ public class ObjectMagnitude {
    * @return nchaUsed
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "27", value = "Number of the channels used on magnitude calculation | int(11)")
+
   public Long getNchaUsed() {
     return nchaUsed;
   }
+
 
   public void setNchaUsed(Long nchaUsed) {
     this.nchaUsed = nchaUsed;
@@ -424,6 +480,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude magQuality(String magQuality) {
+    
     this.magQuality = magQuality;
     return this;
   }
@@ -433,9 +490,12 @@ public class ObjectMagnitude {
    * @return magQuality
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "BB", value = "INGV quality code of the magnitude (computed by ew2moledb) | char(2)")
+
   public String getMagQuality() {
     return magQuality;
   }
+
 
   public void setMagQuality(String magQuality) {
     this.magQuality = magQuality;
@@ -443,6 +503,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude typeMagnitude(String typeMagnitude) {
+    
     this.typeMagnitude = typeMagnitude;
     return this;
   }
@@ -452,9 +513,12 @@ public class ObjectMagnitude {
    * @return typeMagnitude
   **/
   @javax.annotation.Nonnull
+  @ApiModelProperty(example = "ML", required = true, value = "Type Scale of the magnitude, international scale label (i.e. ML, Md, Mw, ...) | varchar(50)")
+
   public String getTypeMagnitude() {
     return typeMagnitude;
   }
+
 
   public void setTypeMagnitude(String typeMagnitude) {
     this.typeMagnitude = typeMagnitude;
@@ -462,6 +526,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude typeMagnitudeExtended(String typeMagnitudeExtended) {
+    
     this.typeMagnitudeExtended = typeMagnitudeExtended;
     return this;
   }
@@ -471,9 +536,12 @@ public class ObjectMagnitude {
    * @return typeMagnitudeExtended
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "ML-VAX", value = "Type of the magnitude | varchar(255)")
+
   public String getTypeMagnitudeExtended() {
     return typeMagnitudeExtended;
   }
+
 
   public void setTypeMagnitudeExtended(String typeMagnitudeExtended) {
     this.typeMagnitudeExtended = typeMagnitudeExtended;
@@ -485,13 +553,17 @@ public class ObjectMagnitude {
    * @return typeMagnitudePriority
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "0", value = "Priority | int(8)")
+
   public Long getTypeMagnitudePriority() {
     return typeMagnitudePriority;
   }
 
 
 
+
   public ObjectMagnitude localspace(ObjectLocalspace localspace) {
+    
     this.localspace = localspace;
     return this;
   }
@@ -501,9 +573,12 @@ public class ObjectMagnitude {
    * @return localspace
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
+
 
   public void setLocalspace(ObjectLocalspace localspace) {
     this.localspace = localspace;
@@ -511,6 +586,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude provenance(ObjectProvenance provenance) {
+    
     this.provenance = provenance;
     return this;
   }
@@ -520,9 +596,12 @@ public class ObjectMagnitude {
    * @return provenance
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public ObjectProvenance getProvenance() {
     return provenance;
   }
+
 
   public void setProvenance(ObjectProvenance provenance) {
     this.provenance = provenance;
@@ -530,6 +609,7 @@ public class ObjectMagnitude {
 
 
   public ObjectMagnitude stationmagnitudes(List<ObjectStationmagnitude> stationmagnitudes) {
+    
     this.stationmagnitudes = stationmagnitudes;
     return this;
   }
@@ -547,9 +627,12 @@ public class ObjectMagnitude {
    * @return stationmagnitudes
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
   public List<ObjectStationmagnitude> getStationmagnitudes() {
     return stationmagnitudes;
   }
+
 
   public void setStationmagnitudes(List<ObjectStationmagnitude> stationmagnitudes) {
     this.stationmagnitudes = stationmagnitudes;
@@ -565,10 +648,6 @@ public class ObjectMagnitude {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the ObjectMagnitude instance itself
    */
   public ObjectMagnitude putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -580,8 +659,6 @@ public class ObjectMagnitude {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -589,9 +666,6 @@ public class ObjectMagnitude {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -730,29 +804,30 @@ public class ObjectMagnitude {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectMagnitude
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ObjectMagnitude
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!ObjectMagnitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ObjectMagnitude.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectMagnitude is not found in the empty JSON string", ObjectMagnitude.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectMagnitude.openapiRequiredFields) {
-        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("mag_quality") != null && !jsonObj.get("mag_quality").isJsonNull()) && !jsonObj.get("mag_quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `mag_quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("mag_quality").toString()));
       }
-      if (!jsonObj.get("type_magnitude").isJsonPrimitive()) {
+      if ((jsonObj.get("type_magnitude") != null && !jsonObj.get("type_magnitude").isJsonNull()) && !jsonObj.get("type_magnitude").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_magnitude` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_magnitude").toString()));
       }
       if ((jsonObj.get("type_magnitude_extended") != null && !jsonObj.get("type_magnitude_extended").isJsonNull()) && !jsonObj.get("type_magnitude_extended").isJsonPrimitive()) {
@@ -760,25 +835,23 @@ public class ObjectMagnitude {
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
+        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
+        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
       }
-      if (jsonObj.get("stationmagnitudes") != null && !jsonObj.get("stationmagnitudes").isJsonNull()) {
-        JsonArray jsonArraystationmagnitudes = jsonObj.getAsJsonArray("stationmagnitudes");
-        if (jsonArraystationmagnitudes != null) {
-          // ensure the json data is an array
-          if (!jsonObj.get("stationmagnitudes").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `stationmagnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("stationmagnitudes").toString()));
-          }
-
-          // validate the optional field `stationmagnitudes` (array)
-          for (int i = 0; i < jsonArraystationmagnitudes.size(); i++) {
-            ObjectStationmagnitude.validateJsonElement(jsonArraystationmagnitudes.get(i));
-          };
+      JsonArray jsonArraystationmagnitudes = jsonObj.getAsJsonArray("stationmagnitudes");
+      if (jsonArraystationmagnitudes != null) {
+        // ensure the json data is an array
+        if (!jsonObj.get("stationmagnitudes").isJsonArray()) {
+          throw new IllegalArgumentException(String.format("Expected the field `stationmagnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("stationmagnitudes").toString()));
         }
+
+        // validate the optional field `stationmagnitudes` (array)
+        for (int i = 0; i < jsonArraystationmagnitudes.size(); i++) {
+          ObjectStationmagnitude.validateJsonObject(jsonArraystationmagnitudes.get(i).getAsJsonObject());
+        };
       }
   }
 
@@ -798,7 +871,7 @@ public class ObjectMagnitude {
            public void write(JsonWriter out, ObjectMagnitude value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -810,12 +883,7 @@ public class ObjectMagnitude {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -824,9 +892,8 @@ public class ObjectMagnitude {
 
            @Override
            public ObjectMagnitude read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              ObjectMagnitude instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -840,10 +907,8 @@ public class ObjectMagnitude {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

@@ -14,13 +14,15 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
+import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.Arrays;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -33,16 +35,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
-import com.google.gson.TypeAdapter;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import java.io.IOException;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -50,7 +48,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginFlagPostOutputOriginFlagInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T16:33:55.514348913Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-13T17:18:43.949042Z[Etc/UTC]")
 public class ObjectOriginFlagPostOutputOriginFlagInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -72,6 +70,7 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
   }
 
   public ObjectOriginFlagPostOutputOriginFlagInner id(Long id) {
+    
     this.id = id;
     return this;
   }
@@ -81,9 +80,12 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
    * @return id
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
+
   public Long getId() {
     return id;
   }
+
 
   public void setId(Long id) {
     this.id = id;
@@ -91,6 +93,7 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
 
 
   public ObjectOriginFlagPostOutputOriginFlagInner name(String name) {
+    
     this.name = name;
     return this;
   }
@@ -100,9 +103,12 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
    * @return name
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "DPC", value = "Flag name | varchar(255)")
+
   public String getName() {
     return name;
   }
+
 
   public void setName(String name) {
     this.name = name;
@@ -110,6 +116,7 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
 
 
   public ObjectOriginFlagPostOutputOriginFlagInner note(String note) {
+    
     this.note = note;
     return this;
   }
@@ -119,9 +126,12 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
    * @return note
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "my note", value = "Additional information | char(255)")
+
   public String getNote() {
     return note;
   }
+
 
   public void setNote(String note) {
     this.note = note;
@@ -129,6 +139,7 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
 
 
   public ObjectOriginFlagPostOutputOriginFlagInner value(Float value) {
+    
     this.value = value;
     return this;
   }
@@ -138,9 +149,12 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
    * @return value
   **/
   @javax.annotation.Nullable
+  @ApiModelProperty(example = "1", value = "Value associated to the flag | int")
+
   public Float getValue() {
     return value;
   }
+
 
   public void setValue(Float value) {
     this.value = value;
@@ -156,10 +170,6 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
-   *
-   * @param key name of the property
-   * @param value value of the property
-   * @return the ObjectOriginFlagPostOutputOriginFlagInner instance itself
    */
   public ObjectOriginFlagPostOutputOriginFlagInner putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -171,8 +181,6 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
 
   /**
    * Return the additional (undeclared) property.
-   *
-   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -180,9 +188,6 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
 
   /**
    * Return the additional (undeclared) property with the specified name.
-   *
-   * @param key name of the property
-   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -265,18 +270,19 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
   }
 
  /**
-  * Validates the JSON Element and throws an exception if issues found
+  * Validates the JSON Object and throws an exception if issues found
   *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectOriginFlagPostOutputOriginFlagInner
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ObjectOriginFlagPostOutputOriginFlagInner
   */
-  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
-      if (jsonElement == null) {
-        if (!ObjectOriginFlagPostOutputOriginFlagInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ObjectOriginFlagPostOutputOriginFlagInner.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has required fields
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectOriginFlagPostOutputOriginFlagInner is not found in the empty JSON string", ObjectOriginFlagPostOutputOriginFlagInner.openapiRequiredFields.toString()));
         }
       }
-        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
@@ -301,7 +307,7 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
            public void write(JsonWriter out, ObjectOriginFlagPostOutputOriginFlagInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additional properties
+             // serialize additonal properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -313,12 +319,7 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
-                   if (jsonElement.isJsonArray()) {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
-                   } else {
-                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
-                   }
+                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
                  }
                }
              }
@@ -327,9 +328,8 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
 
            @Override
            public ObjectOriginFlagPostOutputOriginFlagInner read(JsonReader in) throws IOException {
-             JsonElement jsonElement = elementAdapter.read(in);
-             validateJsonElement(jsonElement);
-             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
+             validateJsonObject(jsonObj);
              // store additional fields in the deserialized instance
              ObjectOriginFlagPostOutputOriginFlagInner instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -343,10 +343,8 @@ public class ObjectOriginFlagPostOutputOriginFlagInner {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else if (entry.getValue().isJsonArray()) {
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
-                 } else { // JSON object
-                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else { // non-primitive type
+                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }

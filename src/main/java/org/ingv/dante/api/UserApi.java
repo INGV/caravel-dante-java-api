@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.ws.rs.core.GenericType;
 
 public class UserApi {
     private ApiClient localVarApiClient;
@@ -118,8 +119,7 @@ public class UserApi {
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
         final String[] localVarAccepts = {
-            "application/problem+json",
-            "application/json"
+            "application/problem+json", "application/json"
         };
         final String localVarAccept = localVarApiClient.selectHeaderAccept(localVarAccepts);
         if (localVarAccept != null) {
@@ -140,12 +140,15 @@ public class UserApi {
 
     @SuppressWarnings("rawtypes")
     private okhttp3.Call getTokenValidateBeforeCall(GetTokenRequest getTokenRequest, final ApiCallback _callback) throws ApiException {
+        
         // verify the required parameter 'getTokenRequest' is set
         if (getTokenRequest == null) {
             throw new ApiException("Missing the required parameter 'getTokenRequest' when calling getToken(Async)");
         }
+        
 
-        return getTokenCall(getTokenRequest, _callback);
+        okhttp3.Call localVarCall = getTokenCall(getTokenRequest, _callback);
+        return localVarCall;
 
     }
 
