@@ -51,7 +51,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableLocalspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T17:01:25.369217499Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T17:14:57.242181401Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectTableLocalspace {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
