@@ -49,7 +49,7 @@ import org.ingv.dante.JSON;
 /**
  * GetScnl200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:06.707585810Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T21:18:36.646078951Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GetScnl200ResponseDataInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
