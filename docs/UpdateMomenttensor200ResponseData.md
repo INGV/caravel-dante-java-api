@@ -7,7 +7,7 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**momenttensor** | [**AddEvent201ResponseDataEventOriginsInnerAllOf**](AddEvent201ResponseDataEventOriginsInnerAllOf.md) |  |  [optional] |
+|**momenttensor** | [**UpdateEvent200ResponseDataEvent**](UpdateEvent200ResponseDataEvent.md) |  |  [optional] |
 
 
 

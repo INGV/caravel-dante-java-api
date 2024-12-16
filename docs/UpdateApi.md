@@ -15,7 +15,7 @@ All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 | [**updateTypeOrigin**](UpdateApi.md#updateTypeOrigin) | **PATCH** /quakedb/table/v1/type-origin/{id} | Update an existing type_origin |
 
 
-<a name="updateEvent"></a>
+<a id="updateEvent"></a>
 # **updateEvent**
 > UpdateEvent200Response updateEvent(id, updateEventRequest)
 
@@ -92,7 +92,7 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a name="updateEventsGroup"></a>
+<a id="updateEventsGroup"></a>
 # **updateEventsGroup**
 > ObjectTableTypeEvent updateEventsGroup(updateEventsGroupRequest)
 
@@ -167,7 +167,7 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a name="updateLocalspace"></a>
+<a id="updateLocalspace"></a>
 # **updateLocalspace**
 > ObjectTableLocalspace updateLocalspace(id, objectTableLocalspace)
 
@@ -244,7 +244,7 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a name="updateMomenttensor"></a>
+<a id="updateMomenttensor"></a>
 # **updateMomenttensor**
 > UpdateMomenttensor200Response updateMomenttensor(id, updateMomenttensorRequest)
 
@@ -321,7 +321,7 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a name="updateOriginFlag"></a>
+<a id="updateOriginFlag"></a>
 # **updateOriginFlag**
 > ObjectOriginFlag updateOriginFlag(id, objectOriginFlag)
 
@@ -398,7 +398,7 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a name="updateProvenance"></a>
+<a id="updateProvenance"></a>
 # **updateProvenance**
 > ObjectTableProvenance updateProvenance(id, objectTableProvenance)
 
@@ -475,7 +475,7 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a name="updateTypeEvent"></a>
+<a id="updateTypeEvent"></a>
 # **updateTypeEvent**
 > ObjectTableTypeEvent updateTypeEvent(id, objectTableTypeEvent)
 
@@ -552,7 +552,7 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a name="updateTypeMagnitude"></a>
+<a id="updateTypeMagnitude"></a>
 # **updateTypeMagnitude**
 > ObjectTableTypeMagnitude updateTypeMagnitude(id, objectTableTypeMagnitude)
 
@@ -629,7 +629,7 @@ public class Example {
 | **403** | Forbidden |  -  |
 | **0** | Unexpected error |  -  |
 
-<a name="updateTypeOrigin"></a>
+<a id="updateTypeOrigin"></a>
 # **updateTypeOrigin**
 > ObjectTableTypeOrigin updateTypeOrigin(id, objectTableTypeOrigin)
 

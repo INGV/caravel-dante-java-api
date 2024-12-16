@@ -14,17 +14,15 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectOrigin;
@@ -42,12 +40,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -55,80 +56,96 @@ import org.ingv.dante.JSON;
 /**
  * ObjectEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
+  @javax.annotation.Nonnull
   private String typeEvent;
 
   public static final String SERIALIZED_NAME_FLAGS = "flags";
   @SerializedName(SERIALIZED_NAME_FLAGS)
+  @javax.annotation.Nullable
   private String flags;
 
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  @javax.annotation.Nullable
   private Long eventGroupId = 0l;
 
   public static final String SERIALIZED_NAME_PREFERRED_ORIGIN_ID = "preferred_origin_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_ORIGIN_ID)
+  @javax.annotation.Nullable
   private Long preferredOriginId;
 
   public static final String SERIALIZED_NAME_PREFERRED_MAGNITUDE_ID = "preferred_magnitude_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_MAGNITUDE_ID)
+  @javax.annotation.Nullable
   private Long preferredMagnitudeId;
 
   public static final String SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID = "preferred_focalmechanism_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID)
+  @javax.annotation.Nullable
   private Long preferredFocalmechanismId;
 
   public static final String SERIALIZED_NAME_SET_PREFERRED_ORIGIN_ID_LOCALSPACE = "set_preferred_origin_id_localspace";
   @SerializedName(SERIALIZED_NAME_SET_PREFERRED_ORIGIN_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long setPreferredOriginIdLocalspace;
 
   public static final String SERIALIZED_NAME_SET_PREFERRED_MAGNITUDE_ID_LOCALSPACE = "set_preferred_magnitude_id_localspace";
   @SerializedName(SERIALIZED_NAME_SET_PREFERRED_MAGNITUDE_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long setPreferredMagnitudeIdLocalspace;
 
   public static final String SERIALIZED_NAME_TYPE_GROUP = "type_group";
   @SerializedName(SERIALIZED_NAME_TYPE_GROUP)
+  @javax.annotation.Nullable
   private Long typeGroup = 0l;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenance provenance;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspace localspace;
 
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<ObjectOrigin> origins = null;
+  @javax.annotation.Nullable
+  private List<ObjectOrigin> origins = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STRONGMOTIONS = "strongmotions";
   @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
-  private List<ObjectStrongmotion> strongmotions = null;
+  @javax.annotation.Nullable
+  private List<ObjectStrongmotion> strongmotions = new ArrayList<>();
 
   public ObjectEvent() {
   }
 
-  
   public ObjectEvent(
      Long id, 
      OffsetDateTime modified, 
@@ -152,272 +169,220 @@ public class ObjectEvent {
     this.typeGroup = typeGroup;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
   public Long getId() {
     return id;
   }
 
 
 
-
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
-
   public OffsetDateTime getModified() {
     return modified;
   }
 
 
 
-
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
 
 
 
-
-  public ObjectEvent idLocalspace(Long idLocalspace) {
-    
+  public ObjectEvent idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectEvent typeEvent(String typeEvent) {
-    
+  public ObjectEvent typeEvent(@javax.annotation.Nonnull String typeEvent) {
     this.typeEvent = typeEvent;
     return this;
   }
 
-   /**
+  /**
    * Name | varchar(255)
    * @return typeEvent
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "earthquake", required = true, value = "Name | varchar(255)")
-
   public String getTypeEvent() {
     return typeEvent;
   }
 
-
-  public void setTypeEvent(String typeEvent) {
+  public void setTypeEvent(@javax.annotation.Nonnull String typeEvent) {
     this.typeEvent = typeEvent;
   }
 
 
-   /**
+  /**
    * Flags for origin | varchar(255)
    * @return flags
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "DPC,twitter,shakemap4,FM", value = "Flags for origin | varchar(255)")
-
   public String getFlags() {
     return flags;
   }
 
 
 
-
-   /**
+  /**
    * Link event group | bigint(20)
    * @return eventGroupId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link event group | bigint(20)")
-
   public Long getEventGroupId() {
     return eventGroupId;
   }
 
 
 
-
-   /**
+  /**
    * Link: preferred origin. It can be NULL. | bigint(20)
    * @return preferredOriginId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link: preferred origin. It can be NULL. | bigint(20)")
-
   public Long getPreferredOriginId() {
     return preferredOriginId;
   }
 
 
 
-
-   /**
+  /**
    * Link: preferred magnitude. It can be NULL. | bigint(20)
    * @return preferredMagnitudeId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link: preferred magnitude. It can be NULL. | bigint(20)")
-
   public Long getPreferredMagnitudeId() {
     return preferredMagnitudeId;
   }
 
 
 
-
-   /**
+  /**
    * Link: preferred focalmechanism. It can be NULL. | bigint(20)
    * @return preferredFocalmechanismId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link: preferred focalmechanism. It can be NULL. | bigint(20)")
-
   public Long getPreferredFocalmechanismId() {
     return preferredFocalmechanismId;
   }
 
 
 
-
-  public ObjectEvent setPreferredOriginIdLocalspace(Long setPreferredOriginIdLocalspace) {
-    
+  public ObjectEvent setPreferredOriginIdLocalspace(@javax.annotation.Nullable Long setPreferredOriginIdLocalspace) {
     this.setPreferredOriginIdLocalspace = setPreferredOriginIdLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return setPreferredOriginIdLocalspace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
-
   public Long getSetPreferredOriginIdLocalspace() {
     return setPreferredOriginIdLocalspace;
   }
 
-
-  public void setSetPreferredOriginIdLocalspace(Long setPreferredOriginIdLocalspace) {
+  public void setSetPreferredOriginIdLocalspace(@javax.annotation.Nullable Long setPreferredOriginIdLocalspace) {
     this.setPreferredOriginIdLocalspace = setPreferredOriginIdLocalspace;
   }
 
 
-  public ObjectEvent setPreferredMagnitudeIdLocalspace(Long setPreferredMagnitudeIdLocalspace) {
-    
+  public ObjectEvent setPreferredMagnitudeIdLocalspace(@javax.annotation.Nullable Long setPreferredMagnitudeIdLocalspace) {
     this.setPreferredMagnitudeIdLocalspace = setPreferredMagnitudeIdLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return setPreferredMagnitudeIdLocalspace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
-
   public Long getSetPreferredMagnitudeIdLocalspace() {
     return setPreferredMagnitudeIdLocalspace;
   }
 
-
-  public void setSetPreferredMagnitudeIdLocalspace(Long setPreferredMagnitudeIdLocalspace) {
+  public void setSetPreferredMagnitudeIdLocalspace(@javax.annotation.Nullable Long setPreferredMagnitudeIdLocalspace) {
     this.setPreferredMagnitudeIdLocalspace = setPreferredMagnitudeIdLocalspace;
   }
 
 
-   /**
+  /**
    * Group type. Used by clustering algorithm | tinyint(4)
    * @return typeGroup
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Group type. Used by clustering algorithm | tinyint(4)")
-
   public Long getTypeGroup() {
     return typeGroup;
   }
 
 
 
-
-  public ObjectEvent provenance(ObjectProvenance provenance) {
-    
+  public ObjectEvent provenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectProvenance getProvenance() {
     return provenance;
   }
 
-
-  public void setProvenance(ObjectProvenance provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
-  public ObjectEvent localspace(ObjectLocalspace localspace) {
-    
+  public ObjectEvent localspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
 
-
-  public void setLocalspace(ObjectLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectEvent origins(List<ObjectOrigin> origins) {
-    
+  public ObjectEvent origins(@javax.annotation.Nullable List<ObjectOrigin> origins) {
     this.origins = origins;
     return this;
   }
@@ -430,25 +395,21 @@ public class ObjectEvent {
     return this;
   }
 
-   /**
+  /**
    * Get origins
    * @return origins
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public List<ObjectOrigin> getOrigins() {
     return origins;
   }
 
-
-  public void setOrigins(List<ObjectOrigin> origins) {
+  public void setOrigins(@javax.annotation.Nullable List<ObjectOrigin> origins) {
     this.origins = origins;
   }
 
 
-  public ObjectEvent strongmotions(List<ObjectStrongmotion> strongmotions) {
-    
+  public ObjectEvent strongmotions(@javax.annotation.Nullable List<ObjectStrongmotion> strongmotions) {
     this.strongmotions = strongmotions;
     return this;
   }
@@ -461,19 +422,16 @@ public class ObjectEvent {
     return this;
   }
 
-   /**
+  /**
    * Get strongmotions
    * @return strongmotions
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public List<ObjectStrongmotion> getStrongmotions() {
     return strongmotions;
   }
 
-
-  public void setStrongmotions(List<ObjectStrongmotion> strongmotions) {
+  public void setStrongmotions(@javax.annotation.Nullable List<ObjectStrongmotion> strongmotions) {
     this.strongmotions = strongmotions;
   }
 
@@ -487,6 +445,10 @@ public class ObjectEvent {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectEvent instance itself
    */
   public ObjectEvent putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -498,6 +460,8 @@ public class ObjectEvent {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -505,6 +469,9 @@ public class ObjectEvent {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -626,28 +593,27 @@ public class ObjectEvent {
     openapiRequiredFields.add("type_event");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectEvent
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (ObjectEvent.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectEvent
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectEvent is not found in the empty JSON string", ObjectEvent.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectEvent.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      if ((jsonObj.get("type_event") != null && !jsonObj.get("type_event").isJsonNull()) && !jsonObj.get("type_event").isJsonPrimitive()) {
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("type_event").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_event` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_event").toString()));
       }
       if ((jsonObj.get("flags") != null && !jsonObj.get("flags").isJsonNull()) && !jsonObj.get("flags").isJsonPrimitive()) {
@@ -655,35 +621,39 @@ public class ObjectEvent {
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
-      JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
-      if (jsonArrayorigins != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("origins").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
-        }
+      if (jsonObj.get("origins") != null && !jsonObj.get("origins").isJsonNull()) {
+        JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
+        if (jsonArrayorigins != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("origins").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
+          }
 
-        // validate the optional field `origins` (array)
-        for (int i = 0; i < jsonArrayorigins.size(); i++) {
-          ObjectOrigin.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
-        };
+          // validate the optional field `origins` (array)
+          for (int i = 0; i < jsonArrayorigins.size(); i++) {
+            ObjectOrigin.validateJsonElement(jsonArrayorigins.get(i));
+          };
+        }
       }
-      JsonArray jsonArraystrongmotions = jsonObj.getAsJsonArray("strongmotions");
-      if (jsonArraystrongmotions != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("strongmotions").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `strongmotions` to be an array in the JSON string but got `%s`", jsonObj.get("strongmotions").toString()));
-        }
+      if (jsonObj.get("strongmotions") != null && !jsonObj.get("strongmotions").isJsonNull()) {
+        JsonArray jsonArraystrongmotions = jsonObj.getAsJsonArray("strongmotions");
+        if (jsonArraystrongmotions != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("strongmotions").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `strongmotions` to be an array in the JSON string but got `%s`", jsonObj.get("strongmotions").toString()));
+          }
 
-        // validate the optional field `strongmotions` (array)
-        for (int i = 0; i < jsonArraystrongmotions.size(); i++) {
-          ObjectStrongmotion.validateJsonObject(jsonArraystrongmotions.get(i).getAsJsonObject());
-        };
+          // validate the optional field `strongmotions` (array)
+          for (int i = 0; i < jsonArraystrongmotions.size(); i++) {
+            ObjectStrongmotion.validateJsonElement(jsonArraystrongmotions.get(i));
+          };
+        }
       }
   }
 
@@ -703,7 +673,7 @@ public class ObjectEvent {
            public void write(JsonWriter out, ObjectEvent value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -715,7 +685,12 @@ public class ObjectEvent {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -724,8 +699,9 @@ public class ObjectEvent {
 
            @Override
            public ObjectEvent read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectEvent instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -739,8 +715,10 @@ public class ObjectEvent {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -751,22 +729,22 @@ public class ObjectEvent {
     }
   }
 
- /**
-  * Create an instance of ObjectEvent given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectEvent
-  * @throws IOException if the JSON string is invalid with respect to ObjectEvent
-  */
+  /**
+   * Create an instance of ObjectEvent given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectEvent
+   * @throws IOException if the JSON string is invalid with respect to ObjectEvent
+   */
   public static ObjectEvent fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectEvent.class);
   }
 
- /**
-  * Convert an instance of ObjectEvent to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectEvent to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

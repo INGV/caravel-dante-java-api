@@ -7,10 +7,10 @@
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
+|**momenttensor** | [**ObjectMomenttensorPostOutputMomenttensor**](ObjectMomenttensorPostOutputMomenttensor.md) |  |  [optional] |
 |**id** | **Long** | Unique incremental id | bigint(20) |  [optional] |
 |**idLocalspace** | **Long** | Localspace Id | bigint(19) |  [optional] |
 |**localspace** | [**AddEvent201ResponseDataEventLocalspace**](AddEvent201ResponseDataEventLocalspace.md) |  |  [optional] |
-|**momenttensor** | [**ObjectMomenttensorPostOutputMomenttensor**](ObjectMomenttensorPostOutputMomenttensor.md) |  |  [optional] |
 
 
 

@@ -14,15 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.Arrays;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -35,12 +33,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,142 +49,127 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventRequestDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UpdateEventRequestDataEvent {
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
+  @javax.annotation.Nullable
   private String typeEvent;
 
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  @javax.annotation.Nullable
   private Long eventGroupId;
 
   public static final String SERIALIZED_NAME_PREFERRED_ORIGIN_ID = "preferred_origin_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_ORIGIN_ID)
+  @javax.annotation.Nullable
   private Long preferredOriginId;
 
   public static final String SERIALIZED_NAME_PREFERRED_MAGNITUDE_ID = "preferred_magnitude_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_MAGNITUDE_ID)
+  @javax.annotation.Nullable
   private Long preferredMagnitudeId;
 
   public static final String SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID = "preferred_focalmechanism_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID)
+  @javax.annotation.Nullable
   private Long preferredFocalmechanismId;
 
   public UpdateEventRequestDataEvent() {
   }
 
-  public UpdateEventRequestDataEvent typeEvent(String typeEvent) {
-    
+  public UpdateEventRequestDataEvent typeEvent(@javax.annotation.Nullable String typeEvent) {
     this.typeEvent = typeEvent;
     return this;
   }
 
-   /**
+  /**
    * Name | varchar(255)
    * @return typeEvent
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "earthquake", value = "Name | varchar(255)")
-
   public String getTypeEvent() {
     return typeEvent;
   }
 
-
-  public void setTypeEvent(String typeEvent) {
+  public void setTypeEvent(@javax.annotation.Nullable String typeEvent) {
     this.typeEvent = typeEvent;
   }
 
 
-  public UpdateEventRequestDataEvent eventGroupId(Long eventGroupId) {
-    
+  public UpdateEventRequestDataEvent eventGroupId(@javax.annotation.Nullable Long eventGroupId) {
     this.eventGroupId = eventGroupId;
     return this;
   }
 
-   /**
+  /**
    * Link event group | bigint(20)
    * @return eventGroupId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link event group | bigint(20)")
-
   public Long getEventGroupId() {
     return eventGroupId;
   }
 
-
-  public void setEventGroupId(Long eventGroupId) {
+  public void setEventGroupId(@javax.annotation.Nullable Long eventGroupId) {
     this.eventGroupId = eventGroupId;
   }
 
 
-  public UpdateEventRequestDataEvent preferredOriginId(Long preferredOriginId) {
-    
+  public UpdateEventRequestDataEvent preferredOriginId(@javax.annotation.Nullable Long preferredOriginId) {
     this.preferredOriginId = preferredOriginId;
     return this;
   }
 
-   /**
+  /**
    * Link: preferred origin. It can be NULL. | bigint(20)
    * @return preferredOriginId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link: preferred origin. It can be NULL. | bigint(20)")
-
   public Long getPreferredOriginId() {
     return preferredOriginId;
   }
 
-
-  public void setPreferredOriginId(Long preferredOriginId) {
+  public void setPreferredOriginId(@javax.annotation.Nullable Long preferredOriginId) {
     this.preferredOriginId = preferredOriginId;
   }
 
 
-  public UpdateEventRequestDataEvent preferredMagnitudeId(Long preferredMagnitudeId) {
-    
+  public UpdateEventRequestDataEvent preferredMagnitudeId(@javax.annotation.Nullable Long preferredMagnitudeId) {
     this.preferredMagnitudeId = preferredMagnitudeId;
     return this;
   }
 
-   /**
+  /**
    * Link: preferred magnitude. It can be NULL. | bigint(20)
    * @return preferredMagnitudeId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link: preferred magnitude. It can be NULL. | bigint(20)")
-
   public Long getPreferredMagnitudeId() {
     return preferredMagnitudeId;
   }
 
-
-  public void setPreferredMagnitudeId(Long preferredMagnitudeId) {
+  public void setPreferredMagnitudeId(@javax.annotation.Nullable Long preferredMagnitudeId) {
     this.preferredMagnitudeId = preferredMagnitudeId;
   }
 
 
-  public UpdateEventRequestDataEvent preferredFocalmechanismId(Long preferredFocalmechanismId) {
-    
+  public UpdateEventRequestDataEvent preferredFocalmechanismId(@javax.annotation.Nullable Long preferredFocalmechanismId) {
     this.preferredFocalmechanismId = preferredFocalmechanismId;
     return this;
   }
 
-   /**
+  /**
    * Link: preferred focalmechanism. It can be NULL. | bigint(20)
    * @return preferredFocalmechanismId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Link: preferred focalmechanism. It can be NULL. | bigint(20)")
-
   public Long getPreferredFocalmechanismId() {
     return preferredFocalmechanismId;
   }
 
-
-  public void setPreferredFocalmechanismId(Long preferredFocalmechanismId) {
+  public void setPreferredFocalmechanismId(@javax.annotation.Nullable Long preferredFocalmechanismId) {
     this.preferredFocalmechanismId = preferredFocalmechanismId;
   }
 
@@ -197,6 +183,10 @@ public class UpdateEventRequestDataEvent {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the UpdateEventRequestDataEvent instance itself
    */
   public UpdateEventRequestDataEvent putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -208,6 +198,8 @@ public class UpdateEventRequestDataEvent {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -215,6 +207,9 @@ public class UpdateEventRequestDataEvent {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -299,20 +294,19 @@ public class UpdateEventRequestDataEvent {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to UpdateEventRequestDataEvent
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (UpdateEventRequestDataEvent.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UpdateEventRequestDataEvent
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!UpdateEventRequestDataEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateEventRequestDataEvent is not found in the empty JSON string", UpdateEventRequestDataEvent.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("type_event") != null && !jsonObj.get("type_event").isJsonNull()) && !jsonObj.get("type_event").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type_event` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type_event").toString()));
       }
@@ -334,7 +328,7 @@ public class UpdateEventRequestDataEvent {
            public void write(JsonWriter out, UpdateEventRequestDataEvent value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -346,7 +340,12 @@ public class UpdateEventRequestDataEvent {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -355,8 +354,9 @@ public class UpdateEventRequestDataEvent {
 
            @Override
            public UpdateEventRequestDataEvent read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              UpdateEventRequestDataEvent instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -370,8 +370,10 @@ public class UpdateEventRequestDataEvent {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -382,22 +384,22 @@ public class UpdateEventRequestDataEvent {
     }
   }
 
- /**
-  * Create an instance of UpdateEventRequestDataEvent given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateEventRequestDataEvent
-  * @throws IOException if the JSON string is invalid with respect to UpdateEventRequestDataEvent
-  */
+  /**
+   * Create an instance of UpdateEventRequestDataEvent given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UpdateEventRequestDataEvent
+   * @throws IOException if the JSON string is invalid with respect to UpdateEventRequestDataEvent
+   */
   public static UpdateEventRequestDataEvent fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UpdateEventRequestDataEvent.class);
   }
 
- /**
-  * Convert an instance of UpdateEventRequestDataEvent to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UpdateEventRequestDataEvent to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

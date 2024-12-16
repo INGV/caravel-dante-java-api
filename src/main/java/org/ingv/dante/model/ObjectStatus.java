@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectStatusDbHost;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -37,12 +35,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -50,306 +51,273 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectStatus {
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
+  @javax.annotation.Nullable
   private String detail;
 
   public static final String SERIALIZED_NAME_INSTANCE = "instance";
   @SerializedName(SERIALIZED_NAME_INSTANCE)
+  @javax.annotation.Nullable
   private URI instance;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Integer status;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private URI type = URI.create("about:blank");
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public static final String SERIALIZED_NAME_DB_CONNECTION = "db-connection";
   @SerializedName(SERIALIZED_NAME_DB_CONNECTION)
+  @javax.annotation.Nullable
   private String dbConnection;
 
   public static final String SERIALIZED_NAME_DB_HOST = "db-host";
   @SerializedName(SERIALIZED_NAME_DB_HOST)
+  @javax.annotation.Nullable
   private ObjectStatusDbHost dbHost;
 
   public static final String SERIALIZED_NAME_DB_PORT = "db-port";
   @SerializedName(SERIALIZED_NAME_DB_PORT)
+  @javax.annotation.Nullable
   private Long dbPort;
 
   public static final String SERIALIZED_NAME_DB_NAME = "db-name";
   @SerializedName(SERIALIZED_NAME_DB_NAME)
+  @javax.annotation.Nullable
   private String dbName;
 
   public static final String SERIALIZED_NAME_DB_SCHEMA = "db-schema";
   @SerializedName(SERIALIZED_NAME_DB_SCHEMA)
+  @javax.annotation.Nullable
   private String dbSchema;
 
   public ObjectStatus() {
   }
 
-  public ObjectStatus detail(String detail) {
-    
+  public ObjectStatus detail(@javax.annotation.Nullable String detail) {
     this.detail = detail;
     return this;
   }
 
-   /**
+  /**
    * A human readable explanation specific to this occurrence of the problem. You MUST NOT expose internal informations, personal data or implementation details through this field.  &#x60;detail&#x60; supports localized patterns whereas &#x60;title&#x60; pattern is only in ascii. 
    * @return detail
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Request took too long to complete.", value = "A human readable explanation specific to this occurrence of the problem. You MUST NOT expose internal informations, personal data or implementation details through this field.  `detail` supports localized patterns whereas `title` pattern is only in ascii. ")
-
   public String getDetail() {
     return detail;
   }
 
-
-  public void setDetail(String detail) {
+  public void setDetail(@javax.annotation.Nullable String detail) {
     this.detail = detail;
   }
 
 
-  public ObjectStatus instance(URI instance) {
-    
+  public ObjectStatus instance(@javax.annotation.Nullable URI instance) {
     this.instance = instance;
     return this;
   }
 
-   /**
+  /**
    * An absolute URI that identifies the specific occurrence of the problem. It may or may not yield further information if dereferenced. 
    * @return instance
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "An absolute URI that identifies the specific occurrence of the problem. It may or may not yield further information if dereferenced. ")
-
   public URI getInstance() {
     return instance;
   }
 
-
-  public void setInstance(URI instance) {
+  public void setInstance(@javax.annotation.Nullable URI instance) {
     this.instance = instance;
   }
 
 
-  public ObjectStatus status(Integer status) {
-    
+  public ObjectStatus status(@javax.annotation.Nullable Integer status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * The HTTP status code generated by the origin server for this occurrence of the problem. 
    * minimum: 100
    * maximum: 600
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "503", value = "The HTTP status code generated by the origin server for this occurrence of the problem. ")
-
   public Integer getStatus() {
     return status;
   }
 
-
-  public void setStatus(Integer status) {
+  public void setStatus(@javax.annotation.Nullable Integer status) {
     this.status = status;
   }
 
 
-  public ObjectStatus title(String title) {
-    
+  public ObjectStatus title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * A short, summary of the problem type. Written in english and readable for engineers (usually not suited for non technical stakeholders and not localized): the expressed pattern does not support unicode characters. 
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Service Unavailable", value = "A short, summary of the problem type. Written in english and readable for engineers (usually not suited for non technical stakeholders and not localized): the expressed pattern does not support unicode characters. ")
-
   public String getTitle() {
     return title;
   }
 
-
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
 
-  public ObjectStatus type(URI type) {
-    
+  public ObjectStatus type(@javax.annotation.Nullable URI type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * An absolute URI that identifies the problem type.  When dereferenced, it SHOULD provide human-readable documentation for the problem type (e.g., using HTML). 
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "https://tools.ietf.org/html/rfc7231#section-6.6.4", value = "An absolute URI that identifies the problem type.  When dereferenced, it SHOULD provide human-readable documentation for the problem type (e.g., using HTML). ")
-
   public URI getType() {
     return type;
   }
 
-
-  public void setType(URI type) {
+  public void setType(@javax.annotation.Nullable URI type) {
     this.type = type;
   }
 
 
-  public ObjectStatus version(String version) {
-    
+  public ObjectStatus version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Webservice version
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2.63.4", value = "Webservice version")
-
   public String getVersion() {
     return version;
   }
 
-
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
 
-  public ObjectStatus dbConnection(String dbConnection) {
-    
+  public ObjectStatus dbConnection(@javax.annotation.Nullable String dbConnection) {
     this.dbConnection = dbConnection;
     return this;
   }
 
-   /**
+  /**
    * DB Connection type
    * @return dbConnection
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "pgsql", value = "DB Connection type")
-
   public String getDbConnection() {
     return dbConnection;
   }
 
-
-  public void setDbConnection(String dbConnection) {
+  public void setDbConnection(@javax.annotation.Nullable String dbConnection) {
     this.dbConnection = dbConnection;
   }
 
 
-  public ObjectStatus dbHost(ObjectStatusDbHost dbHost) {
-    
+  public ObjectStatus dbHost(@javax.annotation.Nullable ObjectStatusDbHost dbHost) {
     this.dbHost = dbHost;
     return this;
   }
 
-   /**
+  /**
    * Get dbHost
    * @return dbHost
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectStatusDbHost getDbHost() {
     return dbHost;
   }
 
-
-  public void setDbHost(ObjectStatusDbHost dbHost) {
+  public void setDbHost(@javax.annotation.Nullable ObjectStatusDbHost dbHost) {
     this.dbHost = dbHost;
   }
 
 
-  public ObjectStatus dbPort(Long dbPort) {
-    
+  public ObjectStatus dbPort(@javax.annotation.Nullable Long dbPort) {
     this.dbPort = dbPort;
     return this;
   }
 
-   /**
+  /**
    * DB Connection port
    * @return dbPort
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "25432", value = "DB Connection port")
-
   public Long getDbPort() {
     return dbPort;
   }
 
-
-  public void setDbPort(Long dbPort) {
+  public void setDbPort(@javax.annotation.Nullable Long dbPort) {
     this.dbPort = dbPort;
   }
 
 
-  public ObjectStatus dbName(String dbName) {
-    
+  public ObjectStatus dbName(@javax.annotation.Nullable String dbName) {
     this.dbName = dbName;
     return this;
   }
 
-   /**
+  /**
    * DB Connection name
    * @return dbName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "caravel_20211008_hist", value = "DB Connection name")
-
   public String getDbName() {
     return dbName;
   }
 
-
-  public void setDbName(String dbName) {
+  public void setDbName(@javax.annotation.Nullable String dbName) {
     this.dbName = dbName;
   }
 
 
-  public ObjectStatus dbSchema(String dbSchema) {
-    
+  public ObjectStatus dbSchema(@javax.annotation.Nullable String dbSchema) {
     this.dbSchema = dbSchema;
     return this;
   }
 
-   /**
+  /**
    * DB Schema
    * @return dbSchema
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "DB Schema")
-
   public String getDbSchema() {
     return dbSchema;
   }
 
-
-  public void setDbSchema(String dbSchema) {
+  public void setDbSchema(@javax.annotation.Nullable String dbSchema) {
     this.dbSchema = dbSchema;
   }
 
@@ -363,6 +331,10 @@ public class ObjectStatus {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectStatus instance itself
    */
   public ObjectStatus putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -374,6 +346,8 @@ public class ObjectStatus {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -381,6 +355,9 @@ public class ObjectStatus {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -483,20 +460,19 @@ public class ObjectStatus {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectStatus
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (ObjectStatus.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectStatus
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectStatus.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectStatus is not found in the empty JSON string", ObjectStatus.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("detail") != null && !jsonObj.get("detail").isJsonNull()) && !jsonObj.get("detail").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detail").toString()));
       }
@@ -517,7 +493,7 @@ public class ObjectStatus {
       }
       // validate the optional field `db-host`
       if (jsonObj.get("db-host") != null && !jsonObj.get("db-host").isJsonNull()) {
-        ObjectStatusDbHost.validateJsonObject(jsonObj.getAsJsonObject("db-host"));
+        ObjectStatusDbHost.validateJsonElement(jsonObj.get("db-host"));
       }
       if ((jsonObj.get("db-name") != null && !jsonObj.get("db-name").isJsonNull()) && !jsonObj.get("db-name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `db-name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("db-name").toString()));
@@ -543,7 +519,7 @@ public class ObjectStatus {
            public void write(JsonWriter out, ObjectStatus value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -555,7 +531,12 @@ public class ObjectStatus {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -564,8 +545,9 @@ public class ObjectStatus {
 
            @Override
            public ObjectStatus read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectStatus instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -579,8 +561,10 @@ public class ObjectStatus {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -591,22 +575,22 @@ public class ObjectStatus {
     }
   }
 
- /**
-  * Create an instance of ObjectStatus given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectStatus
-  * @throws IOException if the JSON string is invalid with respect to ObjectStatus
-  */
+  /**
+   * Create an instance of ObjectStatus given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectStatus
+   * @throws IOException if the JSON string is invalid with respect to ObjectStatus
+   */
   public static ObjectStatus fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectStatus.class);
   }
 
- /**
-  * Convert an instance of ObjectStatus to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectStatus to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

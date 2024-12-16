@@ -14,15 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectMomenttensor;
 
 import com.google.gson.Gson;
@@ -35,12 +33,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,61 +49,55 @@ import org.ingv.dante.JSON;
 /**
  * AddMomenttensorRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddMomenttensorRequestData {
   public static final String SERIALIZED_NAME_FOCALMECHANISMID = "focalmechanismid";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMID)
+  @javax.annotation.Nullable
   private Long focalmechanismid;
 
   public static final String SERIALIZED_NAME_MOMENTTENSOR = "momenttensor";
   @SerializedName(SERIALIZED_NAME_MOMENTTENSOR)
+  @javax.annotation.Nullable
   private ObjectMomenttensor momenttensor;
 
   public AddMomenttensorRequestData() {
   }
 
-  public AddMomenttensorRequestData focalmechanismid(Long focalmechanismid) {
-    
+  public AddMomenttensorRequestData focalmechanismid(@javax.annotation.Nullable Long focalmechanismid) {
     this.focalmechanismid = focalmechanismid;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return focalmechanismid
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
   public Long getFocalmechanismid() {
     return focalmechanismid;
   }
 
-
-  public void setFocalmechanismid(Long focalmechanismid) {
+  public void setFocalmechanismid(@javax.annotation.Nullable Long focalmechanismid) {
     this.focalmechanismid = focalmechanismid;
   }
 
 
-  public AddMomenttensorRequestData momenttensor(ObjectMomenttensor momenttensor) {
-    
+  public AddMomenttensorRequestData momenttensor(@javax.annotation.Nullable ObjectMomenttensor momenttensor) {
     this.momenttensor = momenttensor;
     return this;
   }
 
-   /**
+  /**
    * Get momenttensor
    * @return momenttensor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectMomenttensor getMomenttensor() {
     return momenttensor;
   }
 
-
-  public void setMomenttensor(ObjectMomenttensor momenttensor) {
+  public void setMomenttensor(@javax.annotation.Nullable ObjectMomenttensor momenttensor) {
     this.momenttensor = momenttensor;
   }
 
@@ -116,6 +111,10 @@ public class AddMomenttensorRequestData {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the AddMomenttensorRequestData instance itself
    */
   public AddMomenttensorRequestData putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -127,6 +126,8 @@ public class AddMomenttensorRequestData {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -134,6 +135,9 @@ public class AddMomenttensorRequestData {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -198,23 +202,22 @@ public class AddMomenttensorRequestData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddMomenttensorRequestData
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (AddMomenttensorRequestData.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddMomenttensorRequestData
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AddMomenttensorRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddMomenttensorRequestData is not found in the empty JSON string", AddMomenttensorRequestData.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `momenttensor`
       if (jsonObj.get("momenttensor") != null && !jsonObj.get("momenttensor").isJsonNull()) {
-        ObjectMomenttensor.validateJsonObject(jsonObj.getAsJsonObject("momenttensor"));
+        ObjectMomenttensor.validateJsonElement(jsonObj.get("momenttensor"));
       }
   }
 
@@ -234,7 +237,7 @@ public class AddMomenttensorRequestData {
            public void write(JsonWriter out, AddMomenttensorRequestData value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -246,7 +249,12 @@ public class AddMomenttensorRequestData {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -255,8 +263,9 @@ public class AddMomenttensorRequestData {
 
            @Override
            public AddMomenttensorRequestData read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              AddMomenttensorRequestData instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -270,8 +279,10 @@ public class AddMomenttensorRequestData {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -282,22 +293,22 @@ public class AddMomenttensorRequestData {
     }
   }
 
- /**
-  * Create an instance of AddMomenttensorRequestData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddMomenttensorRequestData
-  * @throws IOException if the JSON string is invalid with respect to AddMomenttensorRequestData
-  */
+  /**
+   * Create an instance of AddMomenttensorRequestData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddMomenttensorRequestData
+   * @throws IOException if the JSON string is invalid with respect to AddMomenttensorRequestData
+   */
   public static AddMomenttensorRequestData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddMomenttensorRequestData.class);
   }
 
- /**
-  * Convert an instance of AddMomenttensorRequestData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddMomenttensorRequestData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,12 +33,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,281 +49,251 @@ import org.ingv.dante.JSON;
 /**
  * Quake2kSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class Quake2kSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
+  @javax.annotation.Nullable
   private Long quakeId;
 
   public static final String SERIALIZED_NAME_ORIGIN_TIME = "originTime";
   @SerializedName(SERIALIZED_NAME_ORIGIN_TIME)
+  @javax.annotation.Nonnull
   private OffsetDateTime originTime;
 
   public static final String SERIALIZED_NAME_LATITUDE = "latitude";
   @SerializedName(SERIALIZED_NAME_LATITUDE)
+  @javax.annotation.Nonnull
   private Double latitude;
 
   public static final String SERIALIZED_NAME_LONGITUDE = "longitude";
   @SerializedName(SERIALIZED_NAME_LONGITUDE)
+  @javax.annotation.Nonnull
   private Double longitude;
 
   public static final String SERIALIZED_NAME_DEPTH = "depth";
   @SerializedName(SERIALIZED_NAME_DEPTH)
+  @javax.annotation.Nonnull
   private Double depth;
 
   public static final String SERIALIZED_NAME_RMS = "rms";
   @SerializedName(SERIALIZED_NAME_RMS)
+  @javax.annotation.Nullable
   private Double rms;
 
   public static final String SERIALIZED_NAME_DMIN = "dmin";
   @SerializedName(SERIALIZED_NAME_DMIN)
+  @javax.annotation.Nullable
   private Double dmin;
 
   public static final String SERIALIZED_NAME_RAVG = "ravg";
   @SerializedName(SERIALIZED_NAME_RAVG)
+  @javax.annotation.Nullable
   private Double ravg;
 
   public static final String SERIALIZED_NAME_GAP = "gap";
   @SerializedName(SERIALIZED_NAME_GAP)
+  @javax.annotation.Nullable
   private Float gap;
 
   public static final String SERIALIZED_NAME_NPH = "nph";
   @SerializedName(SERIALIZED_NAME_NPH)
+  @javax.annotation.Nullable
   private Long nph;
 
   public Quake2kSchemaEwMessage() {
   }
 
-  public Quake2kSchemaEwMessage quakeId(Long quakeId) {
-    
+  public Quake2kSchemaEwMessage quakeId(@javax.annotation.Nullable Long quakeId) {
     this.quakeId = quakeId;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return quakeId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", required = true, value = "Localspace Id | bigint(19)")
-
   public Long getQuakeId() {
     return quakeId;
   }
 
-
-  public void setQuakeId(Long quakeId) {
+  public void setQuakeId(@javax.annotation.Nullable Long quakeId) {
     this.quakeId = quakeId;
   }
 
 
-  public Quake2kSchemaEwMessage originTime(OffsetDateTime originTime) {
-    
+  public Quake2kSchemaEwMessage originTime(@javax.annotation.Nonnull OffsetDateTime originTime) {
     this.originTime = originTime;
     return this;
   }
 
-   /**
+  /**
    * Origin time | datetime(3)
    * @return originTime
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", required = true, value = "Origin time | datetime(3)")
-
   public OffsetDateTime getOriginTime() {
     return originTime;
   }
 
-
-  public void setOriginTime(OffsetDateTime originTime) {
+  public void setOriginTime(@javax.annotation.Nonnull OffsetDateTime originTime) {
     this.originTime = originTime;
   }
 
 
-  public Quake2kSchemaEwMessage latitude(Double latitude) {
-    
+  public Quake2kSchemaEwMessage latitude(@javax.annotation.Nonnull Double latitude) {
     this.latitude = latitude;
     return this;
   }
 
-   /**
+  /**
    * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -90
    * maximum: 90
    * @return latitude
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "45.492599", required = true, value = "Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
-
   public Double getLatitude() {
     return latitude;
   }
 
-
-  public void setLatitude(Double latitude) {
+  public void setLatitude(@javax.annotation.Nonnull Double latitude) {
     this.latitude = latitude;
   }
 
 
-  public Quake2kSchemaEwMessage longitude(Double longitude) {
-    
+  public Quake2kSchemaEwMessage longitude(@javax.annotation.Nonnull Double longitude) {
     this.longitude = longitude;
     return this;
   }
 
-   /**
+  /**
    * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -180
    * maximum: 180
    * @return longitude
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "9.19289", required = true, value = "Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
-
   public Double getLongitude() {
     return longitude;
   }
 
-
-  public void setLongitude(Double longitude) {
+  public void setLongitude(@javax.annotation.Nonnull Double longitude) {
     this.longitude = longitude;
   }
 
 
-  public Quake2kSchemaEwMessage depth(Double depth) {
-    
+  public Quake2kSchemaEwMessage depth(@javax.annotation.Nonnull Double depth) {
     this.depth = depth;
     return this;
   }
 
-   /**
+  /**
    * Depth in Km | double
    * @return depth
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.02", required = true, value = "Depth in Km | double")
-
   public Double getDepth() {
     return depth;
   }
 
-
-  public void setDepth(Double depth) {
+  public void setDepth(@javax.annotation.Nonnull Double depth) {
     this.depth = depth;
   }
 
 
-  public Quake2kSchemaEwMessage rms(Double rms) {
-    
+  public Quake2kSchemaEwMessage rms(@javax.annotation.Nullable Double rms) {
     this.rms = rms;
     return this;
   }
 
-   /**
+  /**
    * Root mean square | double
    * @return rms
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Root mean square | double")
-
   public Double getRms() {
     return rms;
   }
 
-
-  public void setRms(Double rms) {
+  public void setRms(@javax.annotation.Nullable Double rms) {
     this.rms = rms;
   }
 
 
-  public Quake2kSchemaEwMessage dmin(Double dmin) {
-    
+  public Quake2kSchemaEwMessage dmin(@javax.annotation.Nullable Double dmin) {
     this.dmin = dmin;
     return this;
   }
 
-   /**
+  /**
    * dmin description | ???
    * @return dmin
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "dmin description | ???")
-
   public Double getDmin() {
     return dmin;
   }
 
-
-  public void setDmin(Double dmin) {
+  public void setDmin(@javax.annotation.Nullable Double dmin) {
     this.dmin = dmin;
   }
 
 
-  public Quake2kSchemaEwMessage ravg(Double ravg) {
-    
+  public Quake2kSchemaEwMessage ravg(@javax.annotation.Nullable Double ravg) {
     this.ravg = ravg;
     return this;
   }
 
-   /**
+  /**
    * ravg description | ???
    * @return ravg
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "ravg description | ???")
-
   public Double getRavg() {
     return ravg;
   }
 
-
-  public void setRavg(Double ravg) {
+  public void setRavg(@javax.annotation.Nullable Double ravg) {
     this.ravg = ravg;
   }
 
 
-  public Quake2kSchemaEwMessage gap(Float gap) {
-    
+  public Quake2kSchemaEwMessage gap(@javax.annotation.Nullable Float gap) {
     this.gap = gap;
     return this;
   }
 
-   /**
+  /**
    * Azimutal gap | float4
    * @return gap
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Azimutal gap | float4")
-
   public Float getGap() {
     return gap;
   }
 
-
-  public void setGap(Float gap) {
+  public void setGap(@javax.annotation.Nullable Float gap) {
     this.gap = gap;
   }
 
 
-  public Quake2kSchemaEwMessage nph(Long nph) {
-    
+  public Quake2kSchemaEwMessage nph(@javax.annotation.Nullable Long nph) {
     this.nph = nph;
     return this;
   }
 
-   /**
+  /**
    * # arrivals (P&amp;S) weight &gt;0.1 | int(11)
    * @return nph
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "# arrivals (P&S) weight >0.1 | int(11)")
-
   public Long getNph() {
     return nph;
   }
 
-
-  public void setNph(Long nph) {
+  public void setNph(@javax.annotation.Nullable Long nph) {
     this.nph = nph;
   }
 
@@ -336,6 +307,10 @@ public class Quake2kSchemaEwMessage {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the Quake2kSchemaEwMessage instance itself
    */
   public Quake2kSchemaEwMessage putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -347,6 +322,8 @@ public class Quake2kSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -354,6 +331,9 @@ public class Quake2kSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -447,27 +427,26 @@ public class Quake2kSchemaEwMessage {
     openapiRequiredFields.add("depth");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to Quake2kSchemaEwMessage
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (Quake2kSchemaEwMessage.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Quake2kSchemaEwMessage
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!Quake2kSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in Quake2kSchemaEwMessage is not found in the empty JSON string", Quake2kSchemaEwMessage.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : Quake2kSchemaEwMessage.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -486,7 +465,7 @@ public class Quake2kSchemaEwMessage {
            public void write(JsonWriter out, Quake2kSchemaEwMessage value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -498,7 +477,12 @@ public class Quake2kSchemaEwMessage {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -507,8 +491,9 @@ public class Quake2kSchemaEwMessage {
 
            @Override
            public Quake2kSchemaEwMessage read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              Quake2kSchemaEwMessage instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -522,8 +507,10 @@ public class Quake2kSchemaEwMessage {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -534,22 +521,22 @@ public class Quake2kSchemaEwMessage {
     }
   }
 
- /**
-  * Create an instance of Quake2kSchemaEwMessage given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Quake2kSchemaEwMessage
-  * @throws IOException if the JSON string is invalid with respect to Quake2kSchemaEwMessage
-  */
+  /**
+   * Create an instance of Quake2kSchemaEwMessage given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Quake2kSchemaEwMessage
+   * @throws IOException if the JSON string is invalid with respect to Quake2kSchemaEwMessage
+   */
   public static Quake2kSchemaEwMessage fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Quake2kSchemaEwMessage.class);
   }
 
- /**
-  * Convert an instance of Quake2kSchemaEwMessage to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Quake2kSchemaEwMessage to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

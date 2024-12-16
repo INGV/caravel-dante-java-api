@@ -9,7 +9,5 @@
 
 * `MANUAL` (value: `"manual"`)
 
-* `NULL` (value: `"null"`)
-
 
 

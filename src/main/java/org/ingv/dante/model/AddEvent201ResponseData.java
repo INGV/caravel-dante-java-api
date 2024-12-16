@@ -14,15 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.Arrays;
 import org.ingv.dante.model.AddEvent201ResponseDataEvent;
 
 import com.google.gson.Gson;
@@ -35,12 +33,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,34 +49,31 @@ import org.ingv.dante.JSON;
 /**
  * AddEvent201ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddEvent201ResponseData {
   public static final String SERIALIZED_NAME_EVENT = "event";
   @SerializedName(SERIALIZED_NAME_EVENT)
+  @javax.annotation.Nullable
   private AddEvent201ResponseDataEvent event;
 
   public AddEvent201ResponseData() {
   }
 
-  public AddEvent201ResponseData event(AddEvent201ResponseDataEvent event) {
-    
+  public AddEvent201ResponseData event(@javax.annotation.Nullable AddEvent201ResponseDataEvent event) {
     this.event = event;
     return this;
   }
 
-   /**
+  /**
    * Get event
    * @return event
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public AddEvent201ResponseDataEvent getEvent() {
     return event;
   }
 
-
-  public void setEvent(AddEvent201ResponseDataEvent event) {
+  public void setEvent(@javax.annotation.Nullable AddEvent201ResponseDataEvent event) {
     this.event = event;
   }
 
@@ -89,6 +87,10 @@ public class AddEvent201ResponseData {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the AddEvent201ResponseData instance itself
    */
   public AddEvent201ResponseData putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -100,6 +102,8 @@ public class AddEvent201ResponseData {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -107,6 +111,9 @@ public class AddEvent201ResponseData {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -168,23 +175,22 @@ public class AddEvent201ResponseData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddEvent201ResponseData
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (AddEvent201ResponseData.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddEvent201ResponseData
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AddEvent201ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddEvent201ResponseData is not found in the empty JSON string", AddEvent201ResponseData.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       // validate the optional field `event`
       if (jsonObj.get("event") != null && !jsonObj.get("event").isJsonNull()) {
-        AddEvent201ResponseDataEvent.validateJsonObject(jsonObj.getAsJsonObject("event"));
+        AddEvent201ResponseDataEvent.validateJsonElement(jsonObj.get("event"));
       }
   }
 
@@ -204,7 +210,7 @@ public class AddEvent201ResponseData {
            public void write(JsonWriter out, AddEvent201ResponseData value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -216,7 +222,12 @@ public class AddEvent201ResponseData {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -225,8 +236,9 @@ public class AddEvent201ResponseData {
 
            @Override
            public AddEvent201ResponseData read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              AddEvent201ResponseData instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -240,8 +252,10 @@ public class AddEvent201ResponseData {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -252,22 +266,22 @@ public class AddEvent201ResponseData {
     }
   }
 
- /**
-  * Create an instance of AddEvent201ResponseData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddEvent201ResponseData
-  * @throws IOException if the JSON string is invalid with respect to AddEvent201ResponseData
-  */
+  /**
+   * Create an instance of AddEvent201ResponseData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddEvent201ResponseData
+   * @throws IOException if the JSON string is invalid with respect to AddEvent201ResponseData
+   */
   public static AddEvent201ResponseData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddEvent201ResponseData.class);
   }
 
- /**
-  * Convert an instance of AddEvent201ResponseData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddEvent201ResponseData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

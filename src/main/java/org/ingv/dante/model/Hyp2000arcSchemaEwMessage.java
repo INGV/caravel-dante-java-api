@@ -14,17 +14,15 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.Hyp2000arcPhasesInner;
 
@@ -38,12 +36,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -51,1047 +52,933 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class Hyp2000arcSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
+  @javax.annotation.Nullable
   private Long quakeId;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nonnull
   private String version;
 
   public static final String SERIALIZED_NAME_ORIGIN_ID = "originId";
   @SerializedName(SERIALIZED_NAME_ORIGIN_ID)
+  @javax.annotation.Nullable
   private Long originId;
 
   public static final String SERIALIZED_NAME_ORIGIN_TIME = "originTime";
   @SerializedName(SERIALIZED_NAME_ORIGIN_TIME)
+  @javax.annotation.Nonnull
   private OffsetDateTime originTime;
 
   public static final String SERIALIZED_NAME_LATITUDE = "latitude";
   @SerializedName(SERIALIZED_NAME_LATITUDE)
+  @javax.annotation.Nonnull
   private Double latitude;
 
   public static final String SERIALIZED_NAME_LONGITUDE = "longitude";
   @SerializedName(SERIALIZED_NAME_LONGITUDE)
+  @javax.annotation.Nonnull
   private Double longitude;
 
   public static final String SERIALIZED_NAME_DEPTH = "depth";
   @SerializedName(SERIALIZED_NAME_DEPTH)
+  @javax.annotation.Nonnull
   private Double depth;
 
   public static final String SERIALIZED_NAME_NPH = "nph";
   @SerializedName(SERIALIZED_NAME_NPH)
+  @javax.annotation.Nullable
   private Long nph;
 
   public static final String SERIALIZED_NAME_NPH_S = "nphS";
   @SerializedName(SERIALIZED_NAME_NPH_S)
+  @javax.annotation.Nullable
   private Long nphS;
 
   public static final String SERIALIZED_NAME_NPHTOT = "nphtot";
   @SerializedName(SERIALIZED_NAME_NPHTOT)
+  @javax.annotation.Nullable
   private Long nphtot;
 
   public static final String SERIALIZED_NAME_N_PFM = "nPfm";
   @SerializedName(SERIALIZED_NAME_N_PFM)
+  @javax.annotation.Nullable
   private Long nPfm;
 
   public static final String SERIALIZED_NAME_GAP = "gap";
   @SerializedName(SERIALIZED_NAME_GAP)
+  @javax.annotation.Nullable
   private Float gap;
 
   public static final String SERIALIZED_NAME_DMIN = "dmin";
   @SerializedName(SERIALIZED_NAME_DMIN)
+  @javax.annotation.Nullable
   private Double dmin;
 
   public static final String SERIALIZED_NAME_RMS = "rms";
   @SerializedName(SERIALIZED_NAME_RMS)
+  @javax.annotation.Nullable
   private Double rms;
 
   public static final String SERIALIZED_NAME_E0AZ = "e0az";
   @SerializedName(SERIALIZED_NAME_E0AZ)
+  @javax.annotation.Nullable
   private Float e0az;
 
   public static final String SERIALIZED_NAME_E0DP = "e0dp";
   @SerializedName(SERIALIZED_NAME_E0DP)
+  @javax.annotation.Nullable
   private Double e0dp;
 
   public static final String SERIALIZED_NAME_E0 = "e0";
   @SerializedName(SERIALIZED_NAME_E0)
+  @javax.annotation.Nullable
   private Double e0;
 
   public static final String SERIALIZED_NAME_E1AZ = "e1az";
   @SerializedName(SERIALIZED_NAME_E1AZ)
+  @javax.annotation.Nullable
   private Float e1az;
 
   public static final String SERIALIZED_NAME_E1DP = "e1dp";
   @SerializedName(SERIALIZED_NAME_E1DP)
+  @javax.annotation.Nullable
   private Double e1dp;
 
   public static final String SERIALIZED_NAME_E1 = "e1";
   @SerializedName(SERIALIZED_NAME_E1)
+  @javax.annotation.Nullable
   private Double e1;
 
   public static final String SERIALIZED_NAME_E2 = "e2";
   @SerializedName(SERIALIZED_NAME_E2)
+  @javax.annotation.Nullable
   private Double e2;
 
   public static final String SERIALIZED_NAME_ERH = "erh";
   @SerializedName(SERIALIZED_NAME_ERH)
+  @javax.annotation.Nullable
   private Double erh;
 
   public static final String SERIALIZED_NAME_ERZ = "erz";
   @SerializedName(SERIALIZED_NAME_ERZ)
+  @javax.annotation.Nullable
   private Double erz;
 
   public static final String SERIALIZED_NAME_MD = "Md";
   @SerializedName(SERIALIZED_NAME_MD)
+  @javax.annotation.Nullable
   private Double md;
 
   public static final String SERIALIZED_NAME_REG = "reg";
   @SerializedName(SERIALIZED_NAME_REG)
+  @javax.annotation.Nullable
   private String reg;
 
   public static final String SERIALIZED_NAME_LABELPREF = "labelpref";
   @SerializedName(SERIALIZED_NAME_LABELPREF)
+  @javax.annotation.Nullable
   private String labelpref;
 
   public static final String SERIALIZED_NAME_MPREF = "Mpref";
   @SerializedName(SERIALIZED_NAME_MPREF)
+  @javax.annotation.Nullable
   private Double mpref;
 
   public static final String SERIALIZED_NAME_WTPREF = "wtpref";
   @SerializedName(SERIALIZED_NAME_WTPREF)
+  @javax.annotation.Nullable
   private Double wtpref;
 
   public static final String SERIALIZED_NAME_MDTYPE = "mdtype";
   @SerializedName(SERIALIZED_NAME_MDTYPE)
+  @javax.annotation.Nullable
   private String mdtype;
 
   public static final String SERIALIZED_NAME_MDMAD = "mdmad";
   @SerializedName(SERIALIZED_NAME_MDMAD)
+  @javax.annotation.Nullable
   private Double mdmad;
 
   public static final String SERIALIZED_NAME_MDWT = "mdwt";
   @SerializedName(SERIALIZED_NAME_MDWT)
+  @javax.annotation.Nullable
   private Double mdwt;
 
   public static final String SERIALIZED_NAME_INGV_QUALITY = "ingvQuality";
   @SerializedName(SERIALIZED_NAME_INGV_QUALITY)
+  @javax.annotation.Nullable
   private String ingvQuality;
 
   public static final String SERIALIZED_NAME_AMPLITUDE_MAGNITUDE = "amplitudeMagnitude";
   @SerializedName(SERIALIZED_NAME_AMPLITUDE_MAGNITUDE)
+  @javax.annotation.Nullable
   private Double amplitudeMagnitude;
 
   public static final String SERIALIZED_NAME_NUMBER_OF_AMP_MAG_WEIGHT_CODE = "numberOfAmpMagWeightCode";
   @SerializedName(SERIALIZED_NAME_NUMBER_OF_AMP_MAG_WEIGHT_CODE)
+  @javax.annotation.Nullable
   private Double numberOfAmpMagWeightCode;
 
   public static final String SERIALIZED_NAME_MEDIAN_ABS_DIFF_AMP_MAG = "medianAbsDiffAmpMag";
   @SerializedName(SERIALIZED_NAME_MEDIAN_ABS_DIFF_AMP_MAG)
+  @javax.annotation.Nullable
   private Double medianAbsDiffAmpMag;
 
   public static final String SERIALIZED_NAME_PREFERRED_MAG_LABEL = "preferredMagLabel";
   @SerializedName(SERIALIZED_NAME_PREFERRED_MAG_LABEL)
+  @javax.annotation.Nullable
   private String preferredMagLabel;
 
   public static final String SERIALIZED_NAME_PREFERRED_MAG = "preferredMag";
   @SerializedName(SERIALIZED_NAME_PREFERRED_MAG)
+  @javax.annotation.Nullable
   private Double preferredMag;
 
   public static final String SERIALIZED_NAME_NUMBER_OF_PREFERRED_MAGS = "numberOfPreferredMags";
   @SerializedName(SERIALIZED_NAME_NUMBER_OF_PREFERRED_MAGS)
+  @javax.annotation.Nullable
   private Double numberOfPreferredMags;
 
   public static final String SERIALIZED_NAME_PHASES = "phases";
   @SerializedName(SERIALIZED_NAME_PHASES)
-  private List<Hyp2000arcPhasesInner> phases = null;
+  @javax.annotation.Nullable
+  private List<Hyp2000arcPhasesInner> phases = new ArrayList<>();
 
   public Hyp2000arcSchemaEwMessage() {
   }
 
-  public Hyp2000arcSchemaEwMessage quakeId(Long quakeId) {
-    
+  public Hyp2000arcSchemaEwMessage quakeId(@javax.annotation.Nullable Long quakeId) {
     this.quakeId = quakeId;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return quakeId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", required = true, value = "Localspace Id | bigint(19)")
-
   public Long getQuakeId() {
     return quakeId;
   }
 
-
-  public void setQuakeId(Long quakeId) {
+  public void setQuakeId(@javax.annotation.Nullable Long quakeId) {
     this.quakeId = quakeId;
   }
 
 
-  public Hyp2000arcSchemaEwMessage version(String version) {
-    
+  public Hyp2000arcSchemaEwMessage version(@javax.annotation.Nonnull String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Localization name (es:ew prelim,XX,WW,..) | varchar(255)
    * @return version
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "ew prelim", required = true, value = "Localization name (es:ew prelim,XX,WW,..) | varchar(255)")
-
   public String getVersion() {
     return version;
   }
 
-
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nonnull String version) {
     this.version = version;
   }
 
 
-  public Hyp2000arcSchemaEwMessage originId(Long originId) {
-    
+  public Hyp2000arcSchemaEwMessage originId(@javax.annotation.Nullable Long originId) {
     this.originId = originId;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return originId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
   public Long getOriginId() {
     return originId;
   }
 
-
-  public void setOriginId(Long originId) {
+  public void setOriginId(@javax.annotation.Nullable Long originId) {
     this.originId = originId;
   }
 
 
-  public Hyp2000arcSchemaEwMessage originTime(OffsetDateTime originTime) {
-    
+  public Hyp2000arcSchemaEwMessage originTime(@javax.annotation.Nonnull OffsetDateTime originTime) {
     this.originTime = originTime;
     return this;
   }
 
-   /**
+  /**
    * Origin time | datetime(3)
    * @return originTime
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", required = true, value = "Origin time | datetime(3)")
-
   public OffsetDateTime getOriginTime() {
     return originTime;
   }
 
-
-  public void setOriginTime(OffsetDateTime originTime) {
+  public void setOriginTime(@javax.annotation.Nonnull OffsetDateTime originTime) {
     this.originTime = originTime;
   }
 
 
-  public Hyp2000arcSchemaEwMessage latitude(Double latitude) {
-    
+  public Hyp2000arcSchemaEwMessage latitude(@javax.annotation.Nonnull Double latitude) {
     this.latitude = latitude;
     return this;
   }
 
-   /**
+  /**
    * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -90
    * maximum: 90
    * @return latitude
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "45.492599", required = true, value = "Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
-
   public Double getLatitude() {
     return latitude;
   }
 
-
-  public void setLatitude(Double latitude) {
+  public void setLatitude(@javax.annotation.Nonnull Double latitude) {
     this.latitude = latitude;
   }
 
 
-  public Hyp2000arcSchemaEwMessage longitude(Double longitude) {
-    
+  public Hyp2000arcSchemaEwMessage longitude(@javax.annotation.Nonnull Double longitude) {
     this.longitude = longitude;
     return this;
   }
 
-   /**
+  /**
    * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -180
    * maximum: 180
    * @return longitude
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "9.19289", required = true, value = "Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
-
   public Double getLongitude() {
     return longitude;
   }
 
-
-  public void setLongitude(Double longitude) {
+  public void setLongitude(@javax.annotation.Nonnull Double longitude) {
     this.longitude = longitude;
   }
 
 
-  public Hyp2000arcSchemaEwMessage depth(Double depth) {
-    
+  public Hyp2000arcSchemaEwMessage depth(@javax.annotation.Nonnull Double depth) {
     this.depth = depth;
     return this;
   }
 
-   /**
+  /**
    * Depth in Km | double
    * @return depth
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "0.02", required = true, value = "Depth in Km | double")
-
   public Double getDepth() {
     return depth;
   }
 
-
-  public void setDepth(Double depth) {
+  public void setDepth(@javax.annotation.Nonnull Double depth) {
     this.depth = depth;
   }
 
 
-  public Hyp2000arcSchemaEwMessage nph(Long nph) {
-    
+  public Hyp2000arcSchemaEwMessage nph(@javax.annotation.Nullable Long nph) {
     this.nph = nph;
     return this;
   }
 
-   /**
+  /**
    * # arrivals (P&amp;S) weight &gt;0.1 | int(11)
    * @return nph
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "# arrivals (P&S) weight >0.1 | int(11)")
-
   public Long getNph() {
     return nph;
   }
 
-
-  public void setNph(Long nph) {
+  public void setNph(@javax.annotation.Nullable Long nph) {
     this.nph = nph;
   }
 
 
-  public Hyp2000arcSchemaEwMessage nphS(Long nphS) {
-    
+  public Hyp2000arcSchemaEwMessage nphS(@javax.annotation.Nullable Long nphS) {
     this.nphS = nphS;
     return this;
   }
 
-   /**
+  /**
    * # S arrivals weight &gt;0.1 | int(11)
    * @return nphS
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "# S arrivals weight >0.1 | int(11)")
-
   public Long getNphS() {
     return nphS;
   }
 
-
-  public void setNphS(Long nphS) {
+  public void setNphS(@javax.annotation.Nullable Long nphS) {
     this.nphS = nphS;
   }
 
 
-  public Hyp2000arcSchemaEwMessage nphtot(Long nphtot) {
-    
+  public Hyp2000arcSchemaEwMessage nphtot(@javax.annotation.Nullable Long nphtot) {
     this.nphtot = nphtot;
     return this;
   }
 
-   /**
+  /**
    * # arrivals (P&amp;S) weight &gt;0.0 | int(11)
    * @return nphtot
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "# arrivals (P&S) weight >0.0 | int(11)")
-
   public Long getNphtot() {
     return nphtot;
   }
 
-
-  public void setNphtot(Long nphtot) {
+  public void setNphtot(@javax.annotation.Nullable Long nphtot) {
     this.nphtot = nphtot;
   }
 
 
-  public Hyp2000arcSchemaEwMessage nPfm(Long nPfm) {
-    
+  public Hyp2000arcSchemaEwMessage nPfm(@javax.annotation.Nullable Long nPfm) {
     this.nPfm = nPfm;
     return this;
   }
 
-   /**
+  /**
    * # P first motions | int(11)
    * @return nPfm
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "# P first motions | int(11)")
-
   public Long getnPfm() {
     return nPfm;
   }
 
-
-  public void setnPfm(Long nPfm) {
+  public void setnPfm(@javax.annotation.Nullable Long nPfm) {
     this.nPfm = nPfm;
   }
 
 
-  public Hyp2000arcSchemaEwMessage gap(Float gap) {
-    
+  public Hyp2000arcSchemaEwMessage gap(@javax.annotation.Nullable Float gap) {
     this.gap = gap;
     return this;
   }
 
-   /**
+  /**
    * Azimutal gap | float4
    * @return gap
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Azimutal gap | float4")
-
   public Float getGap() {
     return gap;
   }
 
-
-  public void setGap(Float gap) {
+  public void setGap(@javax.annotation.Nullable Float gap) {
     this.gap = gap;
   }
 
 
-  public Hyp2000arcSchemaEwMessage dmin(Double dmin) {
-    
+  public Hyp2000arcSchemaEwMessage dmin(@javax.annotation.Nullable Double dmin) {
     this.dmin = dmin;
     return this;
   }
 
-   /**
+  /**
    * dmin description | ???
    * @return dmin
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "dmin description | ???")
-
   public Double getDmin() {
     return dmin;
   }
 
-
-  public void setDmin(Double dmin) {
+  public void setDmin(@javax.annotation.Nullable Double dmin) {
     this.dmin = dmin;
   }
 
 
-  public Hyp2000arcSchemaEwMessage rms(Double rms) {
-    
+  public Hyp2000arcSchemaEwMessage rms(@javax.annotation.Nullable Double rms) {
     this.rms = rms;
     return this;
   }
 
-   /**
+  /**
    * Root mean square | double
    * @return rms
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Root mean square | double")
-
   public Double getRms() {
     return rms;
   }
 
-
-  public void setRms(Double rms) {
+  public void setRms(@javax.annotation.Nullable Double rms) {
     this.rms = rms;
   }
 
 
-  public Hyp2000arcSchemaEwMessage e0az(Float e0az) {
-    
+  public Hyp2000arcSchemaEwMessage e0az(@javax.annotation.Nullable Float e0az) {
     this.e0az = e0az;
     return this;
   }
 
-   /**
+  /**
    * azimuth of largest principal error | double
    * @return e0az
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "azimuth of largest principal error | double")
-
   public Float getE0az() {
     return e0az;
   }
 
-
-  public void setE0az(Float e0az) {
+  public void setE0az(@javax.annotation.Nullable Float e0az) {
     this.e0az = e0az;
   }
 
 
-  public Hyp2000arcSchemaEwMessage e0dp(Double e0dp) {
-    
+  public Hyp2000arcSchemaEwMessage e0dp(@javax.annotation.Nullable Double e0dp) {
     this.e0dp = e0dp;
     return this;
   }
 
-   /**
+  /**
    * dip of largest principal error | double
    * @return e0dp
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "dip of largest principal error | double")
-
   public Double getE0dp() {
     return e0dp;
   }
 
-
-  public void setE0dp(Double e0dp) {
+  public void setE0dp(@javax.annotation.Nullable Double e0dp) {
     this.e0dp = e0dp;
   }
 
 
-  public Hyp2000arcSchemaEwMessage e0(Double e0) {
-    
+  public Hyp2000arcSchemaEwMessage e0(@javax.annotation.Nullable Double e0) {
     this.e0 = e0;
     return this;
   }
 
-   /**
+  /**
    * largest principal error | double
    * @return e0
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "largest principal error | double")
-
   public Double getE0() {
     return e0;
   }
 
-
-  public void setE0(Double e0) {
+  public void setE0(@javax.annotation.Nullable Double e0) {
     this.e0 = e0;
   }
 
 
-  public Hyp2000arcSchemaEwMessage e1az(Float e1az) {
-    
+  public Hyp2000arcSchemaEwMessage e1az(@javax.annotation.Nullable Float e1az) {
     this.e1az = e1az;
     return this;
   }
 
-   /**
+  /**
    * azimuth of intermediate principal error | double
    * @return e1az
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "azimuth of intermediate principal error | double")
-
   public Float getE1az() {
     return e1az;
   }
 
-
-  public void setE1az(Float e1az) {
+  public void setE1az(@javax.annotation.Nullable Float e1az) {
     this.e1az = e1az;
   }
 
 
-  public Hyp2000arcSchemaEwMessage e1dp(Double e1dp) {
-    
+  public Hyp2000arcSchemaEwMessage e1dp(@javax.annotation.Nullable Double e1dp) {
     this.e1dp = e1dp;
     return this;
   }
 
-   /**
+  /**
    * dip of intermediate principal error | double
    * @return e1dp
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "dip of intermediate principal error | double")
-
   public Double getE1dp() {
     return e1dp;
   }
 
-
-  public void setE1dp(Double e1dp) {
+  public void setE1dp(@javax.annotation.Nullable Double e1dp) {
     this.e1dp = e1dp;
   }
 
 
-  public Hyp2000arcSchemaEwMessage e1(Double e1) {
-    
+  public Hyp2000arcSchemaEwMessage e1(@javax.annotation.Nullable Double e1) {
     this.e1 = e1;
     return this;
   }
 
-   /**
+  /**
    * intermed principal error | double
    * @return e1
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "intermed principal error | double")
-
   public Double getE1() {
     return e1;
   }
 
-
-  public void setE1(Double e1) {
+  public void setE1(@javax.annotation.Nullable Double e1) {
     this.e1 = e1;
   }
 
 
-  public Hyp2000arcSchemaEwMessage e2(Double e2) {
-    
+  public Hyp2000arcSchemaEwMessage e2(@javax.annotation.Nullable Double e2) {
     this.e2 = e2;
     return this;
   }
 
-   /**
+  /**
    * smallest principal error | double
    * @return e2
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "smallest principal error | double")
-
   public Double getE2() {
     return e2;
   }
 
-
-  public void setE2(Double e2) {
+  public void setE2(@javax.annotation.Nullable Double e2) {
     this.e2 = e2;
   }
 
 
-  public Hyp2000arcSchemaEwMessage erh(Double erh) {
-    
+  public Hyp2000arcSchemaEwMessage erh(@javax.annotation.Nullable Double erh) {
     this.erh = erh;
     return this;
   }
 
-   /**
+  /**
    * Horizontal error (km) | double
    * @return erh
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Horizontal error (km) | double")
-
   public Double getErh() {
     return erh;
   }
 
-
-  public void setErh(Double erh) {
+  public void setErh(@javax.annotation.Nullable Double erh) {
     this.erh = erh;
   }
 
 
-  public Hyp2000arcSchemaEwMessage erz(Double erz) {
-    
+  public Hyp2000arcSchemaEwMessage erz(@javax.annotation.Nullable Double erz) {
     this.erz = erz;
     return this;
   }
 
-   /**
+  /**
    * Depth error (km) | double
    * @return erz
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Depth error (km) | double")
-
   public Double getErz() {
     return erz;
   }
 
-
-  public void setErz(Double erz) {
+  public void setErz(@javax.annotation.Nullable Double erz) {
     this.erz = erz;
   }
 
 
-  public Hyp2000arcSchemaEwMessage md(Double md) {
-    
+  public Hyp2000arcSchemaEwMessage md(@javax.annotation.Nullable Double md) {
     this.md = md;
     return this;
   }
 
-   /**
+  /**
    * Md description | ???
    * @return md
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Md description | ???")
-
   public Double getMd() {
     return md;
   }
 
-
-  public void setMd(Double md) {
+  public void setMd(@javax.annotation.Nullable Double md) {
     this.md = md;
   }
 
 
-  public Hyp2000arcSchemaEwMessage reg(String reg) {
-    
+  public Hyp2000arcSchemaEwMessage reg(@javax.annotation.Nullable String reg) {
     this.reg = reg;
     return this;
   }
 
-   /**
+  /**
    * ingvQuality description | ???
    * @return reg
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = " ", value = "ingvQuality description | ???")
-
   public String getReg() {
     return reg;
   }
 
-
-  public void setReg(String reg) {
+  public void setReg(@javax.annotation.Nullable String reg) {
     this.reg = reg;
   }
 
 
-  public Hyp2000arcSchemaEwMessage labelpref(String labelpref) {
-    
+  public Hyp2000arcSchemaEwMessage labelpref(@javax.annotation.Nullable String labelpref) {
     this.labelpref = labelpref;
     return this;
   }
 
-   /**
+  /**
    * ingvQuality description | ???
    * @return labelpref
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = " ", value = "ingvQuality description | ???")
-
   public String getLabelpref() {
     return labelpref;
   }
 
-
-  public void setLabelpref(String labelpref) {
+  public void setLabelpref(@javax.annotation.Nullable String labelpref) {
     this.labelpref = labelpref;
   }
 
 
-  public Hyp2000arcSchemaEwMessage mpref(Double mpref) {
-    
+  public Hyp2000arcSchemaEwMessage mpref(@javax.annotation.Nullable Double mpref) {
     this.mpref = mpref;
     return this;
   }
 
-   /**
+  /**
    * Mpref description | ???
    * @return mpref
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Mpref description | ???")
-
   public Double getMpref() {
     return mpref;
   }
 
-
-  public void setMpref(Double mpref) {
+  public void setMpref(@javax.annotation.Nullable Double mpref) {
     this.mpref = mpref;
   }
 
 
-  public Hyp2000arcSchemaEwMessage wtpref(Double wtpref) {
-    
+  public Hyp2000arcSchemaEwMessage wtpref(@javax.annotation.Nullable Double wtpref) {
     this.wtpref = wtpref;
     return this;
   }
 
-   /**
+  /**
    * wtpref description | ???
    * @return wtpref
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "wtpref description | ???")
-
   public Double getWtpref() {
     return wtpref;
   }
 
-
-  public void setWtpref(Double wtpref) {
+  public void setWtpref(@javax.annotation.Nullable Double wtpref) {
     this.wtpref = wtpref;
   }
 
 
-  public Hyp2000arcSchemaEwMessage mdtype(String mdtype) {
-    
+  public Hyp2000arcSchemaEwMessage mdtype(@javax.annotation.Nullable String mdtype) {
     this.mdtype = mdtype;
     return this;
   }
 
-   /**
+  /**
    * ingvQuality description | ???
    * @return mdtype
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "D", value = "ingvQuality description | ???")
-
   public String getMdtype() {
     return mdtype;
   }
 
-
-  public void setMdtype(String mdtype) {
+  public void setMdtype(@javax.annotation.Nullable String mdtype) {
     this.mdtype = mdtype;
   }
 
 
-  public Hyp2000arcSchemaEwMessage mdmad(Double mdmad) {
-    
+  public Hyp2000arcSchemaEwMessage mdmad(@javax.annotation.Nullable Double mdmad) {
     this.mdmad = mdmad;
     return this;
   }
 
-   /**
+  /**
    * mdmad description | ???
    * @return mdmad
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "mdmad description | ???")
-
   public Double getMdmad() {
     return mdmad;
   }
 
-
-  public void setMdmad(Double mdmad) {
+  public void setMdmad(@javax.annotation.Nullable Double mdmad) {
     this.mdmad = mdmad;
   }
 
 
-  public Hyp2000arcSchemaEwMessage mdwt(Double mdwt) {
-    
+  public Hyp2000arcSchemaEwMessage mdwt(@javax.annotation.Nullable Double mdwt) {
     this.mdwt = mdwt;
     return this;
   }
 
-   /**
+  /**
    * mdwt description | ???
    * @return mdwt
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "mdwt description | ???")
-
   public Double getMdwt() {
     return mdwt;
   }
 
-
-  public void setMdwt(Double mdwt) {
+  public void setMdwt(@javax.annotation.Nullable Double mdwt) {
     this.mdwt = mdwt;
   }
 
 
-  public Hyp2000arcSchemaEwMessage ingvQuality(String ingvQuality) {
-    
+  public Hyp2000arcSchemaEwMessage ingvQuality(@javax.annotation.Nullable String ingvQuality) {
     this.ingvQuality = ingvQuality;
     return this;
   }
 
-   /**
+  /**
    * ingvQuality description | ???
    * @return ingvQuality
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "DD", value = "ingvQuality description | ???")
-
   public String getIngvQuality() {
     return ingvQuality;
   }
 
-
-  public void setIngvQuality(String ingvQuality) {
+  public void setIngvQuality(@javax.annotation.Nullable String ingvQuality) {
     this.ingvQuality = ingvQuality;
   }
 
 
-  public Hyp2000arcSchemaEwMessage amplitudeMagnitude(Double amplitudeMagnitude) {
-    
+  public Hyp2000arcSchemaEwMessage amplitudeMagnitude(@javax.annotation.Nullable Double amplitudeMagnitude) {
     this.amplitudeMagnitude = amplitudeMagnitude;
     return this;
   }
 
-   /**
+  /**
    * amplitudeMagnitude description | col37 F3.2
    * @return amplitudeMagnitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "amplitudeMagnitude description | col37 F3.2")
-
   public Double getAmplitudeMagnitude() {
     return amplitudeMagnitude;
   }
 
-
-  public void setAmplitudeMagnitude(Double amplitudeMagnitude) {
+  public void setAmplitudeMagnitude(@javax.annotation.Nullable Double amplitudeMagnitude) {
     this.amplitudeMagnitude = amplitudeMagnitude;
   }
 
 
-  public Hyp2000arcSchemaEwMessage numberOfAmpMagWeightCode(Double numberOfAmpMagWeightCode) {
-    
+  public Hyp2000arcSchemaEwMessage numberOfAmpMagWeightCode(@javax.annotation.Nullable Double numberOfAmpMagWeightCode) {
     this.numberOfAmpMagWeightCode = numberOfAmpMagWeightCode;
     return this;
   }
 
-   /**
+  /**
    * numberOfAmpMagWeightCode description | col97 F4.1
    * @return numberOfAmpMagWeightCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "numberOfAmpMagWeightCode description | col97 F4.1")
-
   public Double getNumberOfAmpMagWeightCode() {
     return numberOfAmpMagWeightCode;
   }
 
-
-  public void setNumberOfAmpMagWeightCode(Double numberOfAmpMagWeightCode) {
+  public void setNumberOfAmpMagWeightCode(@javax.annotation.Nullable Double numberOfAmpMagWeightCode) {
     this.numberOfAmpMagWeightCode = numberOfAmpMagWeightCode;
   }
 
 
-  public Hyp2000arcSchemaEwMessage medianAbsDiffAmpMag(Double medianAbsDiffAmpMag) {
-    
+  public Hyp2000arcSchemaEwMessage medianAbsDiffAmpMag(@javax.annotation.Nullable Double medianAbsDiffAmpMag) {
     this.medianAbsDiffAmpMag = medianAbsDiffAmpMag;
     return this;
   }
 
-   /**
+  /**
    * medianAbsDiffAmpMag description | col105 F3.2
    * @return medianAbsDiffAmpMag
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "medianAbsDiffAmpMag description | col105 F3.2")
-
   public Double getMedianAbsDiffAmpMag() {
     return medianAbsDiffAmpMag;
   }
 
-
-  public void setMedianAbsDiffAmpMag(Double medianAbsDiffAmpMag) {
+  public void setMedianAbsDiffAmpMag(@javax.annotation.Nullable Double medianAbsDiffAmpMag) {
     this.medianAbsDiffAmpMag = medianAbsDiffAmpMag;
   }
 
 
-  public Hyp2000arcSchemaEwMessage preferredMagLabel(String preferredMagLabel) {
-    
+  public Hyp2000arcSchemaEwMessage preferredMagLabel(@javax.annotation.Nullable String preferredMagLabel) {
     this.preferredMagLabel = preferredMagLabel;
     return this;
   }
 
-   /**
+  /**
    * preferredMagLabel description | ???
    * @return preferredMagLabel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "preferredMagLabel description | ???")
-
   public String getPreferredMagLabel() {
     return preferredMagLabel;
   }
 
-
-  public void setPreferredMagLabel(String preferredMagLabel) {
+  public void setPreferredMagLabel(@javax.annotation.Nullable String preferredMagLabel) {
     this.preferredMagLabel = preferredMagLabel;
   }
 
 
-  public Hyp2000arcSchemaEwMessage preferredMag(Double preferredMag) {
-    
+  public Hyp2000arcSchemaEwMessage preferredMag(@javax.annotation.Nullable Double preferredMag) {
     this.preferredMag = preferredMag;
     return this;
   }
 
-   /**
+  /**
    * preferredMag description | ???
    * @return preferredMag
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "preferredMag description | ???")
-
   public Double getPreferredMag() {
     return preferredMag;
   }
 
-
-  public void setPreferredMag(Double preferredMag) {
+  public void setPreferredMag(@javax.annotation.Nullable Double preferredMag) {
     this.preferredMag = preferredMag;
   }
 
 
-  public Hyp2000arcSchemaEwMessage numberOfPreferredMags(Double numberOfPreferredMags) {
-    
+  public Hyp2000arcSchemaEwMessage numberOfPreferredMags(@javax.annotation.Nullable Double numberOfPreferredMags) {
     this.numberOfPreferredMags = numberOfPreferredMags;
     return this;
   }
 
-   /**
+  /**
    * numberOfPreferredMags description | ???
    * @return numberOfPreferredMags
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "numberOfPreferredMags description | ???")
-
   public Double getNumberOfPreferredMags() {
     return numberOfPreferredMags;
   }
 
-
-  public void setNumberOfPreferredMags(Double numberOfPreferredMags) {
+  public void setNumberOfPreferredMags(@javax.annotation.Nullable Double numberOfPreferredMags) {
     this.numberOfPreferredMags = numberOfPreferredMags;
   }
 
 
-  public Hyp2000arcSchemaEwMessage phases(List<Hyp2000arcPhasesInner> phases) {
-    
+  public Hyp2000arcSchemaEwMessage phases(@javax.annotation.Nullable List<Hyp2000arcPhasesInner> phases) {
     this.phases = phases;
     return this;
   }
@@ -1104,19 +991,16 @@ public class Hyp2000arcSchemaEwMessage {
     return this;
   }
 
-   /**
+  /**
    * Get phases
    * @return phases
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public List<Hyp2000arcPhasesInner> getPhases() {
     return phases;
   }
 
-
-  public void setPhases(List<Hyp2000arcPhasesInner> phases) {
+  public void setPhases(@javax.annotation.Nullable List<Hyp2000arcPhasesInner> phases) {
     this.phases = phases;
   }
 
@@ -1130,6 +1014,10 @@ public class Hyp2000arcSchemaEwMessage {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the Hyp2000arcSchemaEwMessage instance itself
    */
   public Hyp2000arcSchemaEwMessage putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -1141,6 +1029,8 @@ public class Hyp2000arcSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -1148,6 +1038,9 @@ public class Hyp2000arcSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -1329,28 +1222,27 @@ public class Hyp2000arcSchemaEwMessage {
     openapiRequiredFields.add("depth");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to Hyp2000arcSchemaEwMessage
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (Hyp2000arcSchemaEwMessage.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Hyp2000arcSchemaEwMessage
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!Hyp2000arcSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in Hyp2000arcSchemaEwMessage is not found in the empty JSON string", Hyp2000arcSchemaEwMessage.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : Hyp2000arcSchemaEwMessage.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("version").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `version` to be a primitive type in the JSON string but got `%s`", jsonObj.get("version").toString()));
       }
       if ((jsonObj.get("reg") != null && !jsonObj.get("reg").isJsonNull()) && !jsonObj.get("reg").isJsonPrimitive()) {
@@ -1368,17 +1260,19 @@ public class Hyp2000arcSchemaEwMessage {
       if ((jsonObj.get("preferredMagLabel") != null && !jsonObj.get("preferredMagLabel").isJsonNull()) && !jsonObj.get("preferredMagLabel").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `preferredMagLabel` to be a primitive type in the JSON string but got `%s`", jsonObj.get("preferredMagLabel").toString()));
       }
-      JsonArray jsonArrayphases = jsonObj.getAsJsonArray("phases");
-      if (jsonArrayphases != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("phases").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `phases` to be an array in the JSON string but got `%s`", jsonObj.get("phases").toString()));
-        }
+      if (jsonObj.get("phases") != null && !jsonObj.get("phases").isJsonNull()) {
+        JsonArray jsonArrayphases = jsonObj.getAsJsonArray("phases");
+        if (jsonArrayphases != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("phases").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `phases` to be an array in the JSON string but got `%s`", jsonObj.get("phases").toString()));
+          }
 
-        // validate the optional field `phases` (array)
-        for (int i = 0; i < jsonArrayphases.size(); i++) {
-          Hyp2000arcPhasesInner.validateJsonObject(jsonArrayphases.get(i).getAsJsonObject());
-        };
+          // validate the optional field `phases` (array)
+          for (int i = 0; i < jsonArrayphases.size(); i++) {
+            Hyp2000arcPhasesInner.validateJsonElement(jsonArrayphases.get(i));
+          };
+        }
       }
   }
 
@@ -1398,7 +1292,7 @@ public class Hyp2000arcSchemaEwMessage {
            public void write(JsonWriter out, Hyp2000arcSchemaEwMessage value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -1410,7 +1304,12 @@ public class Hyp2000arcSchemaEwMessage {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -1419,8 +1318,9 @@ public class Hyp2000arcSchemaEwMessage {
 
            @Override
            public Hyp2000arcSchemaEwMessage read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              Hyp2000arcSchemaEwMessage instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -1434,8 +1334,10 @@ public class Hyp2000arcSchemaEwMessage {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -1446,22 +1348,22 @@ public class Hyp2000arcSchemaEwMessage {
     }
   }
 
- /**
-  * Create an instance of Hyp2000arcSchemaEwMessage given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Hyp2000arcSchemaEwMessage
-  * @throws IOException if the JSON string is invalid with respect to Hyp2000arcSchemaEwMessage
-  */
+  /**
+   * Create an instance of Hyp2000arcSchemaEwMessage given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Hyp2000arcSchemaEwMessage
+   * @throws IOException if the JSON string is invalid with respect to Hyp2000arcSchemaEwMessage
+   */
   public static Hyp2000arcSchemaEwMessage fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Hyp2000arcSchemaEwMessage.class);
   }
 
- /**
-  * Convert an instance of Hyp2000arcSchemaEwMessage to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Hyp2000arcSchemaEwMessage to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

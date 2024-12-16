@@ -19,7 +19,7 @@ All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 | [**addTypeOrigin**](StoreApi.md#addTypeOrigin) | **POST** /quakedb/table/v1/type-origin | Add a new type_origin to the DB |
 
 
-<a name="addCatalog"></a>
+<a id="addCatalog"></a>
 # **addCatalog**
 > AddCatalog201Response addCatalog(addCatalogRequest)
 
@@ -92,7 +92,7 @@ public class Example {
 | **201** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addEvent"></a>
+<a id="addEvent"></a>
 # **addEvent**
 > AddEvent201Response addEvent(getEvent200Response)
 
@@ -165,7 +165,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addFocalmechanism"></a>
+<a id="addFocalmechanism"></a>
 # **addFocalmechanism**
 > AddFocalmechanism201Response addFocalmechanism(addFocalmechanismRequest)
 
@@ -238,7 +238,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addLocalspace"></a>
+<a id="addLocalspace"></a>
 # **addLocalspace**
 > ObjectTableLocalspace addLocalspace(addLocalspaceRequest)
 
@@ -311,7 +311,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addMagnitude"></a>
+<a id="addMagnitude"></a>
 # **addMagnitude**
 > AddMagnitude201Response addMagnitude(addMagnitudeRequest)
 
@@ -384,7 +384,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addMomenttensor"></a>
+<a id="addMomenttensor"></a>
 # **addMomenttensor**
 > AddMomenttensor201Response addMomenttensor(addMomenttensorRequest)
 
@@ -457,7 +457,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addOrigin"></a>
+<a id="addOrigin"></a>
 # **addOrigin**
 > AddOrigin201Response addOrigin(addOriginRequest)
 
@@ -530,7 +530,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addOriginFlag"></a>
+<a id="addOriginFlag"></a>
 # **addOriginFlag**
 > AddOriginFlag201Response addOriginFlag(addOriginFlagRequest)
 
@@ -603,7 +603,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addProvenance"></a>
+<a id="addProvenance"></a>
 # **addProvenance**
 > ObjectTableProvenance addProvenance(addProvenanceRequest)
 
@@ -676,7 +676,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addStrongmotion"></a>
+<a id="addStrongmotion"></a>
 # **addStrongmotion**
 > AddStrongmotion201Response addStrongmotion(addStrongmotionRequest)
 
@@ -749,7 +749,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addTypeEvent"></a>
+<a id="addTypeEvent"></a>
 # **addTypeEvent**
 > ObjectTableTypeEvent addTypeEvent(addTypeEventRequest)
 
@@ -822,7 +822,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addTypeMagnitude"></a>
+<a id="addTypeMagnitude"></a>
 # **addTypeMagnitude**
 > ObjectTableTypeMagnitude addTypeMagnitude(addTypeMagnitudeRequest)
 
@@ -895,7 +895,7 @@ public class Example {
 | **201** | record inserted |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="addTypeOrigin"></a>
+<a id="addTypeOrigin"></a>
 # **addTypeOrigin**
 > ObjectTableTypeOrigin addTypeOrigin(addTypeOriginRequest)
 

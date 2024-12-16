@@ -14,17 +14,15 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.StrongmotioniiSchemaEwMessageRSAInner;
 import org.ingv.dante.model.TypeOriginName;
@@ -39,12 +37,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -52,449 +53,401 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class StrongmotioniiSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
+  @javax.annotation.Nullable
   private Long quakeId;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nonnull
   private TypeOriginName version = TypeOriginName.HYPOCENTER;
 
   public static final String SERIALIZED_NAME_NETWORK = "network";
   @SerializedName(SERIALIZED_NAME_NETWORK)
+  @javax.annotation.Nullable
   private String network;
 
   public static final String SERIALIZED_NAME_STATION = "station";
   @SerializedName(SERIALIZED_NAME_STATION)
+  @javax.annotation.Nullable
   private String station;
 
   public static final String SERIALIZED_NAME_COMPONENT = "component";
   @SerializedName(SERIALIZED_NAME_COMPONENT)
+  @javax.annotation.Nullable
   private String component;
 
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
+  @javax.annotation.Nullable
   private String location = "--";
 
   public static final String SERIALIZED_NAME_Q_AUTHOR = "qAuthor";
   @SerializedName(SERIALIZED_NAME_Q_AUTHOR)
+  @javax.annotation.Nullable
   private String qAuthor;
 
   public static final String SERIALIZED_NAME_TIME = "time";
   @SerializedName(SERIALIZED_NAME_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime time;
 
   public static final String SERIALIZED_NAME_ALTERNATE_TIME = "alternateTime";
   @SerializedName(SERIALIZED_NAME_ALTERNATE_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime alternateTime;
 
   public static final String SERIALIZED_NAME_ALTERNATE_CODE = "alternateCode";
   @SerializedName(SERIALIZED_NAME_ALTERNATE_CODE)
+  @javax.annotation.Nullable
   private Long alternateCode;
 
   public static final String SERIALIZED_NAME_PGA = "pga";
   @SerializedName(SERIALIZED_NAME_PGA)
+  @javax.annotation.Nullable
   private Float pga;
 
   public static final String SERIALIZED_NAME_PGA_TIME = "pgaTime";
   @SerializedName(SERIALIZED_NAME_PGA_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime pgaTime;
 
   public static final String SERIALIZED_NAME_PGV = "pgv";
   @SerializedName(SERIALIZED_NAME_PGV)
+  @javax.annotation.Nullable
   private Float pgv;
 
   public static final String SERIALIZED_NAME_PGV_TIME = "pgvTime";
   @SerializedName(SERIALIZED_NAME_PGV_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime pgvTime;
 
   public static final String SERIALIZED_NAME_PGD = "pgd";
   @SerializedName(SERIALIZED_NAME_PGD)
+  @javax.annotation.Nullable
   private Float pgd;
 
   public static final String SERIALIZED_NAME_PGD_TIME = "pgdTime";
   @SerializedName(SERIALIZED_NAME_PGD_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime pgdTime;
 
   public static final String SERIALIZED_NAME_R_S_A = "RSA";
   @SerializedName(SERIALIZED_NAME_R_S_A)
-  private List<StrongmotioniiSchemaEwMessageRSAInner> RSA = null;
+  @javax.annotation.Nullable
+  private List<StrongmotioniiSchemaEwMessageRSAInner> RSA = new ArrayList<>();
 
   public StrongmotioniiSchemaEwMessage() {
   }
 
-  public StrongmotioniiSchemaEwMessage quakeId(Long quakeId) {
-    
+  public StrongmotioniiSchemaEwMessage quakeId(@javax.annotation.Nullable Long quakeId) {
     this.quakeId = quakeId;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return quakeId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", required = true, value = "Localspace Id | bigint(19)")
-
   public Long getQuakeId() {
     return quakeId;
   }
 
-
-  public void setQuakeId(Long quakeId) {
+  public void setQuakeId(@javax.annotation.Nullable Long quakeId) {
     this.quakeId = quakeId;
   }
 
 
-  public StrongmotioniiSchemaEwMessage version(TypeOriginName version) {
-    
+  public StrongmotioniiSchemaEwMessage version(@javax.annotation.Nonnull TypeOriginName version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Get version
    * @return version
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
-
   public TypeOriginName getVersion() {
     return version;
   }
 
-
-  public void setVersion(TypeOriginName version) {
+  public void setVersion(@javax.annotation.Nonnull TypeOriginName version) {
     this.version = version;
   }
 
 
-  public StrongmotioniiSchemaEwMessage network(String network) {
-    
+  public StrongmotioniiSchemaEwMessage network(@javax.annotation.Nullable String network) {
     this.network = network;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return network
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "IV", value = "Channel net code | char(2)")
-
   public String getNetwork() {
     return network;
   }
 
-
-  public void setNetwork(String network) {
+  public void setNetwork(@javax.annotation.Nullable String network) {
     this.network = network;
   }
 
 
-  public StrongmotioniiSchemaEwMessage station(String station) {
-    
+  public StrongmotioniiSchemaEwMessage station(@javax.annotation.Nullable String station) {
     this.station = station;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return station
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ACER", value = "Channel station code | varchar(5)")
-
   public String getStation() {
     return station;
   }
 
-
-  public void setStation(String station) {
+  public void setStation(@javax.annotation.Nullable String station) {
     this.station = station;
   }
 
 
-  public StrongmotioniiSchemaEwMessage component(String component) {
-    
+  public StrongmotioniiSchemaEwMessage component(@javax.annotation.Nullable String component) {
     this.component = component;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return component
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "HHZ", value = "Channel code | char(3)")
-
   public String getComponent() {
     return component;
   }
 
-
-  public void setComponent(String component) {
+  public void setComponent(@javax.annotation.Nullable String component) {
     this.component = component;
   }
 
 
-  public StrongmotioniiSchemaEwMessage location(String location) {
-    
+  public StrongmotioniiSchemaEwMessage location(@javax.annotation.Nullable String location) {
     this.location = location;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return location
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "00", value = "Channel location | char(2)")
-
   public String getLocation() {
     return location;
   }
 
-
-  public void setLocation(String location) {
+  public void setLocation(@javax.annotation.Nullable String location) {
     this.location = location;
   }
 
 
-  public StrongmotioniiSchemaEwMessage qAuthor(String qAuthor) {
-    
+  public StrongmotioniiSchemaEwMessage qAuthor(@javax.annotation.Nullable String qAuthor) {
     this.qAuthor = qAuthor;
     return this;
   }
 
-   /**
+  /**
    * qAuthor description
    * @return qAuthor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "014101073:028130073", value = "qAuthor description")
-
   public String getqAuthor() {
     return qAuthor;
   }
 
-
-  public void setqAuthor(String qAuthor) {
+  public void setqAuthor(@javax.annotation.Nullable String qAuthor) {
     this.qAuthor = qAuthor;
   }
 
 
-  public StrongmotioniiSchemaEwMessage time(OffsetDateTime time) {
-    
+  public StrongmotioniiSchemaEwMessage time(@javax.annotation.Nullable OffsetDateTime time) {
     this.time = time;
     return this;
   }
 
-   /**
+  /**
    * time: trigger reported by SM box - datetime part | datetime(6)
    * @return time
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:46:56.190Z", value = "time: trigger reported by SM box - datetime part | datetime(6)")
-
   public OffsetDateTime getTime() {
     return time;
   }
 
-
-  public void setTime(OffsetDateTime time) {
+  public void setTime(@javax.annotation.Nullable OffsetDateTime time) {
     this.time = time;
   }
 
 
-  public StrongmotioniiSchemaEwMessage alternateTime(OffsetDateTime alternateTime) {
-    
+  public StrongmotioniiSchemaEwMessage alternateTime(@javax.annotation.Nullable OffsetDateTime alternateTime) {
     this.alternateTime = alternateTime;
     return this;
   }
 
-   /**
+  /**
    * alternate time: trigger reported by SM box - time with microseconds | datetime(3)
    * @return alternateTime
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "alternate time: trigger reported by SM box - time with microseconds | datetime(3)")
-
   public OffsetDateTime getAlternateTime() {
     return alternateTime;
   }
 
-
-  public void setAlternateTime(OffsetDateTime alternateTime) {
+  public void setAlternateTime(@javax.annotation.Nullable OffsetDateTime alternateTime) {
     this.alternateTime = alternateTime;
   }
 
 
-  public StrongmotioniiSchemaEwMessage alternateCode(Long alternateCode) {
-    
+  public StrongmotioniiSchemaEwMessage alternateCode(@javax.annotation.Nullable Long alternateCode) {
     this.alternateCode = alternateCode;
     return this;
   }
 
-   /**
+  /**
    * code specifying the source of the alternate time field | int(11)
    * @return alternateCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "code specifying the source of the alternate time field | int(11)")
-
   public Long getAlternateCode() {
     return alternateCode;
   }
 
-
-  public void setAlternateCode(Long alternateCode) {
+  public void setAlternateCode(@javax.annotation.Nullable Long alternateCode) {
     this.alternateCode = alternateCode;
   }
 
 
-  public StrongmotioniiSchemaEwMessage pga(Float pga) {
-    
+  public StrongmotioniiSchemaEwMessage pga(@javax.annotation.Nullable Float pga) {
     this.pga = pga;
     return this;
   }
 
-   /**
+  /**
    * REQUIRED: peak ground acceleration (cm/s/s) | double
    * @return pga
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000162", value = "REQUIRED: peak ground acceleration (cm/s/s) | double")
-
   public Float getPga() {
     return pga;
   }
 
-
-  public void setPga(Float pga) {
+  public void setPga(@javax.annotation.Nullable Float pga) {
     this.pga = pga;
   }
 
 
-  public StrongmotioniiSchemaEwMessage pgaTime(OffsetDateTime pgaTime) {
-    
+  public StrongmotioniiSchemaEwMessage pgaTime(@javax.annotation.Nullable OffsetDateTime pgaTime) {
     this.pgaTime = pgaTime;
     return this;
   }
 
-   /**
+  /**
    * OPTIONAL: time of pga - datetime part | datetime(3)
    * @return pgaTime
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:47:06.990Z", value = "OPTIONAL: time of pga - datetime part | datetime(3)")
-
   public OffsetDateTime getPgaTime() {
     return pgaTime;
   }
 
-
-  public void setPgaTime(OffsetDateTime pgaTime) {
+  public void setPgaTime(@javax.annotation.Nullable OffsetDateTime pgaTime) {
     this.pgaTime = pgaTime;
   }
 
 
-  public StrongmotioniiSchemaEwMessage pgv(Float pgv) {
-    
+  public StrongmotioniiSchemaEwMessage pgv(@javax.annotation.Nullable Float pgv) {
     this.pgv = pgv;
     return this;
   }
 
-   /**
+  /**
    * REQUIRED: peak ground velocity (cm/s) | double
    * @return pgv
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000034", value = "REQUIRED: peak ground velocity (cm/s) | double")
-
   public Float getPgv() {
     return pgv;
   }
 
-
-  public void setPgv(Float pgv) {
+  public void setPgv(@javax.annotation.Nullable Float pgv) {
     this.pgv = pgv;
   }
 
 
-  public StrongmotioniiSchemaEwMessage pgvTime(OffsetDateTime pgvTime) {
-    
+  public StrongmotioniiSchemaEwMessage pgvTime(@javax.annotation.Nullable OffsetDateTime pgvTime) {
     this.pgvTime = pgvTime;
     return this;
   }
 
-   /**
+  /**
    * OPTIONAL: time of pgv - datetime part | datetime(3)
    * @return pgvTime
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:46:56.190Z", value = "OPTIONAL: time of pgv - datetime part | datetime(3)")
-
   public OffsetDateTime getPgvTime() {
     return pgvTime;
   }
 
-
-  public void setPgvTime(OffsetDateTime pgvTime) {
+  public void setPgvTime(@javax.annotation.Nullable OffsetDateTime pgvTime) {
     this.pgvTime = pgvTime;
   }
 
 
-  public StrongmotioniiSchemaEwMessage pgd(Float pgd) {
-    
+  public StrongmotioniiSchemaEwMessage pgd(@javax.annotation.Nullable Float pgd) {
     this.pgd = pgd;
     return this;
   }
 
-   /**
+  /**
    * REQUIRED: peak ground displacement (cm) | double
    * @return pgd
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000025", value = "REQUIRED: peak ground displacement (cm) | double")
-
   public Float getPgd() {
     return pgd;
   }
 
-
-  public void setPgd(Float pgd) {
+  public void setPgd(@javax.annotation.Nullable Float pgd) {
     this.pgd = pgd;
   }
 
 
-  public StrongmotioniiSchemaEwMessage pgdTime(OffsetDateTime pgdTime) {
-    
+  public StrongmotioniiSchemaEwMessage pgdTime(@javax.annotation.Nullable OffsetDateTime pgdTime) {
     this.pgdTime = pgdTime;
     return this;
   }
 
-   /**
+  /**
    * OPTIONAL: time of pgd - datetime part | datetime(3)
    * @return pgdTime
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:46:59.989Z", value = "OPTIONAL: time of pgd - datetime part | datetime(3)")
-
   public OffsetDateTime getPgdTime() {
     return pgdTime;
   }
 
-
-  public void setPgdTime(OffsetDateTime pgdTime) {
+  public void setPgdTime(@javax.annotation.Nullable OffsetDateTime pgdTime) {
     this.pgdTime = pgdTime;
   }
 
 
-  public StrongmotioniiSchemaEwMessage RSA(List<StrongmotioniiSchemaEwMessageRSAInner> RSA) {
-    
+  public StrongmotioniiSchemaEwMessage RSA(@javax.annotation.Nullable List<StrongmotioniiSchemaEwMessageRSAInner> RSA) {
     this.RSA = RSA;
     return this;
   }
@@ -507,19 +460,16 @@ public class StrongmotioniiSchemaEwMessage {
     return this;
   }
 
-   /**
+  /**
    * Get RSA
    * @return RSA
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public List<StrongmotioniiSchemaEwMessageRSAInner> getRSA() {
     return RSA;
   }
 
-
-  public void setRSA(List<StrongmotioniiSchemaEwMessageRSAInner> RSA) {
+  public void setRSA(@javax.annotation.Nullable List<StrongmotioniiSchemaEwMessageRSAInner> RSA) {
     this.RSA = RSA;
   }
 
@@ -533,6 +483,10 @@ public class StrongmotioniiSchemaEwMessage {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the StrongmotioniiSchemaEwMessage instance itself
    */
   public StrongmotioniiSchemaEwMessage putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -544,6 +498,8 @@ public class StrongmotioniiSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -551,6 +507,9 @@ public class StrongmotioniiSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -662,27 +621,28 @@ public class StrongmotioniiSchemaEwMessage {
     openapiRequiredFields.add("version");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to StrongmotioniiSchemaEwMessage
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (StrongmotioniiSchemaEwMessage.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to StrongmotioniiSchemaEwMessage
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!StrongmotioniiSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in StrongmotioniiSchemaEwMessage is not found in the empty JSON string", StrongmotioniiSchemaEwMessage.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : StrongmotioniiSchemaEwMessage.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // validate the required field `version`
+      TypeOriginName.validateJsonElement(jsonObj.get("version"));
       if ((jsonObj.get("network") != null && !jsonObj.get("network").isJsonNull()) && !jsonObj.get("network").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `network` to be a primitive type in the JSON string but got `%s`", jsonObj.get("network").toString()));
       }
@@ -698,17 +658,19 @@ public class StrongmotioniiSchemaEwMessage {
       if ((jsonObj.get("qAuthor") != null && !jsonObj.get("qAuthor").isJsonNull()) && !jsonObj.get("qAuthor").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `qAuthor` to be a primitive type in the JSON string but got `%s`", jsonObj.get("qAuthor").toString()));
       }
-      JsonArray jsonArrayRSA = jsonObj.getAsJsonArray("RSA");
-      if (jsonArrayRSA != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("RSA").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `RSA` to be an array in the JSON string but got `%s`", jsonObj.get("RSA").toString()));
-        }
+      if (jsonObj.get("RSA") != null && !jsonObj.get("RSA").isJsonNull()) {
+        JsonArray jsonArrayRSA = jsonObj.getAsJsonArray("RSA");
+        if (jsonArrayRSA != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("RSA").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `RSA` to be an array in the JSON string but got `%s`", jsonObj.get("RSA").toString()));
+          }
 
-        // validate the optional field `RSA` (array)
-        for (int i = 0; i < jsonArrayRSA.size(); i++) {
-          StrongmotioniiSchemaEwMessageRSAInner.validateJsonObject(jsonArrayRSA.get(i).getAsJsonObject());
-        };
+          // validate the optional field `RSA` (array)
+          for (int i = 0; i < jsonArrayRSA.size(); i++) {
+            StrongmotioniiSchemaEwMessageRSAInner.validateJsonElement(jsonArrayRSA.get(i));
+          };
+        }
       }
   }
 
@@ -728,7 +690,7 @@ public class StrongmotioniiSchemaEwMessage {
            public void write(JsonWriter out, StrongmotioniiSchemaEwMessage value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -740,7 +702,12 @@ public class StrongmotioniiSchemaEwMessage {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -749,8 +716,9 @@ public class StrongmotioniiSchemaEwMessage {
 
            @Override
            public StrongmotioniiSchemaEwMessage read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              StrongmotioniiSchemaEwMessage instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -764,8 +732,10 @@ public class StrongmotioniiSchemaEwMessage {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -776,22 +746,22 @@ public class StrongmotioniiSchemaEwMessage {
     }
   }
 
- /**
-  * Create an instance of StrongmotioniiSchemaEwMessage given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of StrongmotioniiSchemaEwMessage
-  * @throws IOException if the JSON string is invalid with respect to StrongmotioniiSchemaEwMessage
-  */
+  /**
+   * Create an instance of StrongmotioniiSchemaEwMessage given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of StrongmotioniiSchemaEwMessage
+   * @throws IOException if the JSON string is invalid with respect to StrongmotioniiSchemaEwMessage
+   */
   public static StrongmotioniiSchemaEwMessage fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, StrongmotioniiSchemaEwMessage.class);
   }
 
- /**
-  * Convert an instance of StrongmotioniiSchemaEwMessage to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of StrongmotioniiSchemaEwMessage to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

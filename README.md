@@ -2,7 +2,8 @@
 
 Dante Web Services
 - API version: 3.27.1
-  - Build date: 2024-12-13T17:18:43.949042Z[Etc/UTC]
+  - Build date: 2024-12-16T18:10:58.828625237Z[Etc/UTC]
+  - Generator version: 7.10.0
 
   
 
@@ -105,7 +106,7 @@ import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
 import org.ingv.dante.auth.*;
-import org.ingv.dante.models.*;
+import org.ingv.dante.model.*;
 import org.ingv.dante.api.DeleteApi;
 
 public class Example {
@@ -204,11 +205,9 @@ Class | Method | HTTP request | Description
  - [AddEvent201ResponseDataEvent](docs/AddEvent201ResponseDataEvent.md)
  - [AddEvent201ResponseDataEventLocalspace](docs/AddEvent201ResponseDataEventLocalspace.md)
  - [AddEvent201ResponseDataEventOriginsInner](docs/AddEvent201ResponseDataEventOriginsInner.md)
- - [AddEvent201ResponseDataEventOriginsInnerAllOf](docs/AddEvent201ResponseDataEventOriginsInnerAllOf.md)
  - [AddEwHyp2000arc201Response](docs/AddEwHyp2000arc201Response.md)
  - [AddEwHyp2000arc201ResponseData](docs/AddEwHyp2000arc201ResponseData.md)
  - [AddEwHyp2000arc201ResponseDataEvent](docs/AddEwHyp2000arc201ResponseDataEvent.md)
- - [AddEwHyp2000arc201ResponseDataEventAllOf](docs/AddEwHyp2000arc201ResponseDataEventAllOf.md)
  - [AddEwHyp2000arcRequest](docs/AddEwHyp2000arcRequest.md)
  - [AddEwQuake2kRequest](docs/AddEwQuake2kRequest.md)
  - [AddFocalmechanism201Response](docs/AddFocalmechanism201Response.md)
@@ -218,7 +217,7 @@ Class | Method | HTTP request | Description
  - [AddHEwPickScnl201Response](docs/AddHEwPickScnl201Response.md)
  - [AddHEwPickScnl201ResponseData](docs/AddHEwPickScnl201ResponseData.md)
  - [AddHEwPickScnl201ResponseDataPicksInner](docs/AddHEwPickScnl201ResponseDataPicksInner.md)
- - [AddHEwPickScnl201ResponseDataPicksInnerAllOf](docs/AddHEwPickScnl201ResponseDataPicksInnerAllOf.md)
+ - [AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw](docs/AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.md)
  - [AddHEwPickScnlRequest](docs/AddHEwPickScnlRequest.md)
  - [AddHEwStrongmotionii201Response](docs/AddHEwStrongmotionii201Response.md)
  - [AddHEwStrongmotionii201ResponseData](docs/AddHEwStrongmotionii201ResponseData.md)
@@ -233,7 +232,6 @@ Class | Method | HTTP request | Description
  - [AddOrigin201Response](docs/AddOrigin201Response.md)
  - [AddOrigin201ResponseData](docs/AddOrigin201ResponseData.md)
  - [AddOrigin201ResponseDataOriginsInner](docs/AddOrigin201ResponseDataOriginsInner.md)
- - [AddOrigin201ResponseDataOriginsInnerAllOf](docs/AddOrigin201ResponseDataOriginsInnerAllOf.md)
  - [AddOriginFlag201Response](docs/AddOriginFlag201Response.md)
  - [AddOriginFlagRequest](docs/AddOriginFlagRequest.md)
  - [AddOriginFlagRequestData](docs/AddOriginFlagRequestData.md)
@@ -252,7 +250,6 @@ Class | Method | HTTP request | Description
  - [GetEventsCatalog200Response](docs/GetEventsCatalog200Response.md)
  - [GetEventsGroup200Response](docs/GetEventsGroup200Response.md)
  - [GetLocalspace200Response](docs/GetLocalspace200Response.md)
- - [GetLocalspace200ResponseAllOf](docs/GetLocalspace200ResponseAllOf.md)
  - [GetMunicipiDistanceKmPopolazione200Response](docs/GetMunicipiDistanceKmPopolazione200Response.md)
  - [GetMunicipiDistanceKmPopolazione200ResponseDataInner](docs/GetMunicipiDistanceKmPopolazione200ResponseDataInner.md)
  - [GetMunicipio200Response](docs/GetMunicipio200Response.md)
@@ -260,7 +257,6 @@ Class | Method | HTTP request | Description
  - [GetOriginFlag200Response](docs/GetOriginFlag200Response.md)
  - [GetPick200Response](docs/GetPick200Response.md)
  - [GetProvenance200Response](docs/GetProvenance200Response.md)
- - [GetProvenance200ResponseAllOf](docs/GetProvenance200ResponseAllOf.md)
  - [GetRegionName200Response](docs/GetRegionName200Response.md)
  - [GetRegionName200ResponseData](docs/GetRegionName200ResponseData.md)
  - [GetScnl200Response](docs/GetScnl200Response.md)
@@ -269,11 +265,8 @@ Class | Method | HTTP request | Description
  - [GetToken201ResponseUser](docs/GetToken201ResponseUser.md)
  - [GetTokenRequest](docs/GetTokenRequest.md)
  - [GetTypeEvent200Response](docs/GetTypeEvent200Response.md)
- - [GetTypeEvent200ResponseAllOf](docs/GetTypeEvent200ResponseAllOf.md)
  - [GetTypeMagnitude200Response](docs/GetTypeMagnitude200Response.md)
- - [GetTypeMagnitude200ResponseAllOf](docs/GetTypeMagnitude200ResponseAllOf.md)
  - [GetTypeOrigin200Response](docs/GetTypeOrigin200Response.md)
- - [GetTypeOrigin200ResponseAllOf](docs/GetTypeOrigin200ResponseAllOf.md)
  - [Hyp2000arcPhasesInner](docs/Hyp2000arcPhasesInner.md)
  - [Hyp2000arcSchema](docs/Hyp2000arcSchema.md)
  - [Hyp2000arcSchemaEwLogo](docs/Hyp2000arcSchemaEwLogo.md)
@@ -347,6 +340,7 @@ Class | Method | HTTP request | Description
  - [TypeOriginName](docs/TypeOriginName.md)
  - [UpdateEvent200Response](docs/UpdateEvent200Response.md)
  - [UpdateEvent200ResponseData](docs/UpdateEvent200ResponseData.md)
+ - [UpdateEvent200ResponseDataEvent](docs/UpdateEvent200ResponseDataEvent.md)
  - [UpdateEventRequest](docs/UpdateEventRequest.md)
  - [UpdateEventRequestData](docs/UpdateEventRequestData.md)
  - [UpdateEventRequestDataEvent](docs/UpdateEventRequestDataEvent.md)
@@ -359,12 +353,15 @@ Class | Method | HTTP request | Description
  - [UpdateMomenttensorRequestDataMomenttensor](docs/UpdateMomenttensorRequestDataMomenttensor.md)
 
 
+<a id="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
+
 Authentication schemes defined for the API:
+<a id="BearerAuth"></a>
 ### BearerAuth
 
-- **Type**: HTTP basic authentication
+- **Type**: HTTP Bearer Token authentication
 
 
 ## Recommendation

@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectPickEw;
 import org.ingv.dante.model.ObjectProvenance;
@@ -41,12 +39,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -54,84 +55,101 @@ import org.ingv.dante.JSON;
 /**
  * ObjectPick
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectPick {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
+  @javax.annotation.Nonnull
   private String net;
 
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
+  @javax.annotation.Nonnull
   private String sta;
 
   public static final String SERIALIZED_NAME_CHA = "cha";
   @SerializedName(SERIALIZED_NAME_CHA)
+  @javax.annotation.Nonnull
   private String cha;
 
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
+  @javax.annotation.Nullable
   private String loc = "--";
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_QUALITY_CLASS = "quality_class";
   @SerializedName(SERIALIZED_NAME_QUALITY_CLASS)
+  @javax.annotation.Nullable
   private Integer qualityClass;
 
   public static final String SERIALIZED_NAME_LOWER_UNCERTAINTY = "lower_uncertainty";
   @SerializedName(SERIALIZED_NAME_LOWER_UNCERTAINTY)
+  @javax.annotation.Nullable
   private Float lowerUncertainty;
 
   public static final String SERIALIZED_NAME_UPPER_UNCERTAINTY = "upper_uncertainty";
   @SerializedName(SERIALIZED_NAME_UPPER_UNCERTAINTY)
+  @javax.annotation.Nullable
   private Float upperUncertainty;
 
   public static final String SERIALIZED_NAME_CONFIDENCE_LEVEL = "confidence_level";
   @SerializedName(SERIALIZED_NAME_CONFIDENCE_LEVEL)
+  @javax.annotation.Nullable
   private Float confidenceLevel = 68.3f;
 
   public static final String SERIALIZED_NAME_ARRIVAL_TIME = "arrival_time";
   @SerializedName(SERIALIZED_NAME_ARRIVAL_TIME)
+  @javax.annotation.Nonnull
   private OffsetDateTime arrivalTime;
 
   public static final String SERIALIZED_NAME_FIRSTMOTION = "firstmotion";
   @SerializedName(SERIALIZED_NAME_FIRSTMOTION)
+  @javax.annotation.Nullable
   private PickFirstmotion firstmotion;
 
   public static final String SERIALIZED_NAME_EMERSIO = "emersio";
   @SerializedName(SERIALIZED_NAME_EMERSIO)
+  @javax.annotation.Nullable
   private PickEmersio emersio;
 
   public static final String SERIALIZED_NAME_PICK_EW = "pick_ew";
   @SerializedName(SERIALIZED_NAME_PICK_EW)
+  @javax.annotation.Nullable
   private ObjectPickEw pickEw;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspace localspace;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenance provenance;
 
   public ObjectPick() {
   }
 
-  
   public ObjectPick(
      Long id, 
      OffsetDateTime modified, 
@@ -143,389 +161,320 @@ public class ObjectPick {
     this.inserted = inserted;
   }
 
-  public ObjectPick net(String net) {
-    
+  public ObjectPick net(@javax.annotation.Nonnull String net) {
     this.net = net;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return net
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "IV", required = true, value = "Channel net code | char(2)")
-
   public String getNet() {
     return net;
   }
 
-
-  public void setNet(String net) {
+  public void setNet(@javax.annotation.Nonnull String net) {
     this.net = net;
   }
 
 
-  public ObjectPick sta(String sta) {
-    
+  public ObjectPick sta(@javax.annotation.Nonnull String sta) {
     this.sta = sta;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return sta
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "ACER", required = true, value = "Channel station code | varchar(5)")
-
   public String getSta() {
     return sta;
   }
 
-
-  public void setSta(String sta) {
+  public void setSta(@javax.annotation.Nonnull String sta) {
     this.sta = sta;
   }
 
 
-  public ObjectPick cha(String cha) {
-    
+  public ObjectPick cha(@javax.annotation.Nonnull String cha) {
     this.cha = cha;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return cha
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "HHZ", required = true, value = "Channel code | char(3)")
-
   public String getCha() {
     return cha;
   }
 
-
-  public void setCha(String cha) {
+  public void setCha(@javax.annotation.Nonnull String cha) {
     this.cha = cha;
   }
 
 
-  public ObjectPick loc(String loc) {
-    
+  public ObjectPick loc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return loc
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "00", value = "Channel location | char(2)")
-
   public String getLoc() {
     return loc;
   }
 
-
-  public void setLoc(String loc) {
+  public void setLoc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
   }
 
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
   public Long getId() {
     return id;
   }
 
 
 
-
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
-
   public OffsetDateTime getModified() {
     return modified;
   }
 
 
 
-
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
 
 
 
-
-  public ObjectPick idLocalspace(Long idLocalspace) {
-    
+  public ObjectPick idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectPick qualityClass(Integer qualityClass) {
-    
+  public ObjectPick qualityClass(@javax.annotation.Nullable Integer qualityClass) {
     this.qualityClass = qualityClass;
     return this;
   }
 
-   /**
+  /**
    * Pick quality class | bigint
    * @return qualityClass
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3", value = "Pick quality class | bigint")
-
   public Integer getQualityClass() {
     return qualityClass;
   }
 
-
-  public void setQualityClass(Integer qualityClass) {
+  public void setQualityClass(@javax.annotation.Nullable Integer qualityClass) {
     this.qualityClass = qualityClass;
   }
 
 
-  public ObjectPick lowerUncertainty(Float lowerUncertainty) {
-    
+  public ObjectPick lowerUncertainty(@javax.annotation.Nullable Float lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
     return this;
   }
 
-   /**
+  /**
    * Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)
    * @return lowerUncertainty
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.52", value = "Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)")
-
   public Float getLowerUncertainty() {
     return lowerUncertainty;
   }
 
-
-  public void setLowerUncertainty(Float lowerUncertainty) {
+  public void setLowerUncertainty(@javax.annotation.Nullable Float lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
   }
 
 
-  public ObjectPick upperUncertainty(Float upperUncertainty) {
-    
+  public ObjectPick upperUncertainty(@javax.annotation.Nullable Float upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
     return this;
   }
 
-   /**
+  /**
    * Uncertainty as the absolute value of deviation from the mainvalue towards larger values. | decimal(8,3)
    * @return upperUncertainty
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.53", value = "Uncertainty as the absolute value of deviation from the mainvalue towards larger values. | decimal(8,3)")
-
   public Float getUpperUncertainty() {
     return upperUncertainty;
   }
 
-
-  public void setUpperUncertainty(Float upperUncertainty) {
+  public void setUpperUncertainty(@javax.annotation.Nullable Float upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
   }
 
 
-  public ObjectPick confidenceLevel(Float confidenceLevel) {
-    
+  public ObjectPick confidenceLevel(@javax.annotation.Nullable Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
     return this;
   }
 
-   /**
+  /**
    * Integer numer for confidence level type (68.3 1 sigma, xx &#x3D;2 sigma, 99% 3 sigma) | decimal(5.2)
    * @return confidenceLevel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "68.3", value = "Integer numer for confidence level type (68.3 1 sigma, xx =2 sigma, 99% 3 sigma) | decimal(5.2)")
-
   public Float getConfidenceLevel() {
     return confidenceLevel;
   }
 
-
-  public void setConfidenceLevel(Float confidenceLevel) {
+  public void setConfidenceLevel(@javax.annotation.Nullable Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
   }
 
 
-  public ObjectPick arrivalTime(OffsetDateTime arrivalTime) {
-    
+  public ObjectPick arrivalTime(@javax.annotation.Nonnull OffsetDateTime arrivalTime) {
     this.arrivalTime = arrivalTime;
     return this;
   }
 
-   /**
+  /**
    * Arrival time with microseconds | datetime(3)
    * @return arrivalTime
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2017-04-12T08:46:30.930Z", required = true, value = "Arrival time with microseconds | datetime(3)")
-
   public OffsetDateTime getArrivalTime() {
     return arrivalTime;
   }
 
-
-  public void setArrivalTime(OffsetDateTime arrivalTime) {
+  public void setArrivalTime(@javax.annotation.Nonnull OffsetDateTime arrivalTime) {
     this.arrivalTime = arrivalTime;
   }
 
 
-  public ObjectPick firstmotion(PickFirstmotion firstmotion) {
-    
+  public ObjectPick firstmotion(@javax.annotation.Nullable PickFirstmotion firstmotion) {
     this.firstmotion = firstmotion;
     return this;
   }
 
-   /**
+  /**
    * Get firstmotion
    * @return firstmotion
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public PickFirstmotion getFirstmotion() {
     return firstmotion;
   }
 
-
-  public void setFirstmotion(PickFirstmotion firstmotion) {
+  public void setFirstmotion(@javax.annotation.Nullable PickFirstmotion firstmotion) {
     this.firstmotion = firstmotion;
   }
 
 
-  public ObjectPick emersio(PickEmersio emersio) {
-    
+  public ObjectPick emersio(@javax.annotation.Nullable PickEmersio emersio) {
     this.emersio = emersio;
     return this;
   }
 
-   /**
+  /**
    * Get emersio
    * @return emersio
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public PickEmersio getEmersio() {
     return emersio;
   }
 
-
-  public void setEmersio(PickEmersio emersio) {
+  public void setEmersio(@javax.annotation.Nullable PickEmersio emersio) {
     this.emersio = emersio;
   }
 
 
-  public ObjectPick pickEw(ObjectPickEw pickEw) {
-    
+  public ObjectPick pickEw(@javax.annotation.Nullable ObjectPickEw pickEw) {
     this.pickEw = pickEw;
     return this;
   }
 
-   /**
+  /**
    * Get pickEw
    * @return pickEw
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectPickEw getPickEw() {
     return pickEw;
   }
 
-
-  public void setPickEw(ObjectPickEw pickEw) {
+  public void setPickEw(@javax.annotation.Nullable ObjectPickEw pickEw) {
     this.pickEw = pickEw;
   }
 
 
-  public ObjectPick localspace(ObjectLocalspace localspace) {
-    
+  public ObjectPick localspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
 
-
-  public void setLocalspace(ObjectLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectPick provenance(ObjectProvenance provenance) {
-    
+  public ObjectPick provenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectProvenance getProvenance() {
     return provenance;
   }
 
-
-  public void setProvenance(ObjectProvenance provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
@@ -539,6 +488,10 @@ public class ObjectPick {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectPick instance itself
    */
   public ObjectPick putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -550,6 +503,8 @@ public class ObjectPick {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -557,6 +512,9 @@ public class ObjectPick {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -684,50 +642,57 @@ public class ObjectPick {
     openapiRequiredFields.add("arrival_time");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectPick
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (ObjectPick.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectPick
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectPick.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectPick is not found in the empty JSON string", ObjectPick.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectPick.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      if ((jsonObj.get("net") != null && !jsonObj.get("net").isJsonNull()) && !jsonObj.get("net").isJsonPrimitive()) {
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
-      if ((jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonNull()) && !jsonObj.get("sta").isJsonPrimitive()) {
+      if (!jsonObj.get("sta").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
       }
-      if ((jsonObj.get("cha") != null && !jsonObj.get("cha").isJsonNull()) && !jsonObj.get("cha").isJsonPrimitive()) {
+      if (!jsonObj.get("cha").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `cha` to be a primitive type in the JSON string but got `%s`", jsonObj.get("cha").toString()));
       }
       if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
       }
+      // validate the optional field `firstmotion`
+      if (jsonObj.get("firstmotion") != null && !jsonObj.get("firstmotion").isJsonNull()) {
+        PickFirstmotion.validateJsonElement(jsonObj.get("firstmotion"));
+      }
+      // validate the optional field `emersio`
+      if (jsonObj.get("emersio") != null && !jsonObj.get("emersio").isJsonNull()) {
+        PickEmersio.validateJsonElement(jsonObj.get("emersio"));
+      }
       // validate the optional field `pick_ew`
       if (jsonObj.get("pick_ew") != null && !jsonObj.get("pick_ew").isJsonNull()) {
-        ObjectPickEw.validateJsonObject(jsonObj.getAsJsonObject("pick_ew"));
+        ObjectPickEw.validateJsonElement(jsonObj.get("pick_ew"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
       }
   }
 
@@ -747,7 +712,7 @@ public class ObjectPick {
            public void write(JsonWriter out, ObjectPick value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -759,7 +724,12 @@ public class ObjectPick {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -768,8 +738,9 @@ public class ObjectPick {
 
            @Override
            public ObjectPick read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectPick instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -783,8 +754,10 @@ public class ObjectPick {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -795,22 +768,22 @@ public class ObjectPick {
     }
   }
 
- /**
-  * Create an instance of ObjectPick given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectPick
-  * @throws IOException if the JSON string is invalid with respect to ObjectPick
-  */
+  /**
+   * Create an instance of ObjectPick given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectPick
+   * @throws IOException if the JSON string is invalid with respect to ObjectPick
+   */
   public static ObjectPick fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectPick.class);
   }
 
- /**
-  * Convert an instance of ObjectPick to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectPick to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

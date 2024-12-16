@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -36,12 +34,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -49,48 +50,46 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventsGroupRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UpdateEventsGroupRequestData {
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  @javax.annotation.Nullable
   private Long eventGroupId;
 
   public static final String SERIALIZED_NAME_EVENTIDS = "eventids";
   @SerializedName(SERIALIZED_NAME_EVENTIDS)
-  private List<Long> eventids = null;
+  @javax.annotation.Nullable
+  private List<Long> eventids = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_EVENT_GROUP_IDS = "event_group_ids";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_IDS)
-  private List<Long> eventGroupIds = null;
+  @javax.annotation.Nullable
+  private List<Long> eventGroupIds = new ArrayList<>();
 
   public UpdateEventsGroupRequestData() {
   }
 
-  public UpdateEventsGroupRequestData eventGroupId(Long eventGroupId) {
-    
+  public UpdateEventsGroupRequestData eventGroupId(@javax.annotation.Nullable Long eventGroupId) {
     this.eventGroupId = eventGroupId;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return eventGroupId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
   public Long getEventGroupId() {
     return eventGroupId;
   }
 
-
-  public void setEventGroupId(Long eventGroupId) {
+  public void setEventGroupId(@javax.annotation.Nullable Long eventGroupId) {
     this.eventGroupId = eventGroupId;
   }
 
 
-  public UpdateEventsGroupRequestData eventids(List<Long> eventids) {
-    
+  public UpdateEventsGroupRequestData eventids(@javax.annotation.Nullable List<Long> eventids) {
     this.eventids = eventids;
     return this;
   }
@@ -103,25 +102,21 @@ public class UpdateEventsGroupRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get eventids
    * @return eventids
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[11111,11121,11131]", value = "")
-
   public List<Long> getEventids() {
     return eventids;
   }
 
-
-  public void setEventids(List<Long> eventids) {
+  public void setEventids(@javax.annotation.Nullable List<Long> eventids) {
     this.eventids = eventids;
   }
 
 
-  public UpdateEventsGroupRequestData eventGroupIds(List<Long> eventGroupIds) {
-    
+  public UpdateEventsGroupRequestData eventGroupIds(@javax.annotation.Nullable List<Long> eventGroupIds) {
     this.eventGroupIds = eventGroupIds;
     return this;
   }
@@ -134,19 +129,16 @@ public class UpdateEventsGroupRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get eventGroupIds
    * @return eventGroupIds
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[22222,33333,44444]", value = "")
-
   public List<Long> getEventGroupIds() {
     return eventGroupIds;
   }
 
-
-  public void setEventGroupIds(List<Long> eventGroupIds) {
+  public void setEventGroupIds(@javax.annotation.Nullable List<Long> eventGroupIds) {
     this.eventGroupIds = eventGroupIds;
   }
 
@@ -160,6 +152,10 @@ public class UpdateEventsGroupRequestData {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the UpdateEventsGroupRequestData instance itself
    */
   public UpdateEventsGroupRequestData putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -171,6 +167,8 @@ public class UpdateEventsGroupRequestData {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -178,6 +176,9 @@ public class UpdateEventsGroupRequestData {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -245,26 +246,25 @@ public class UpdateEventsGroupRequestData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to UpdateEventsGroupRequestData
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (UpdateEventsGroupRequestData.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UpdateEventsGroupRequestData
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!UpdateEventsGroupRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in UpdateEventsGroupRequestData is not found in the empty JSON string", UpdateEventsGroupRequestData.openapiRequiredFields.toString()));
         }
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("eventids") != null && !jsonObj.get("eventids").isJsonNull()) && !jsonObj.get("eventids").isJsonArray()) {
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("eventids") != null && !jsonObj.get("eventids").isJsonNull() && !jsonObj.get("eventids").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `eventids` to be an array in the JSON string but got `%s`", jsonObj.get("eventids").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("event_group_ids") != null && !jsonObj.get("event_group_ids").isJsonNull()) && !jsonObj.get("event_group_ids").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("event_group_ids") != null && !jsonObj.get("event_group_ids").isJsonNull() && !jsonObj.get("event_group_ids").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `event_group_ids` to be an array in the JSON string but got `%s`", jsonObj.get("event_group_ids").toString()));
       }
   }
@@ -285,7 +285,7 @@ public class UpdateEventsGroupRequestData {
            public void write(JsonWriter out, UpdateEventsGroupRequestData value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -297,7 +297,12 @@ public class UpdateEventsGroupRequestData {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -306,8 +311,9 @@ public class UpdateEventsGroupRequestData {
 
            @Override
            public UpdateEventsGroupRequestData read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              UpdateEventsGroupRequestData instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -321,8 +327,10 @@ public class UpdateEventsGroupRequestData {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -333,22 +341,22 @@ public class UpdateEventsGroupRequestData {
     }
   }
 
- /**
-  * Create an instance of UpdateEventsGroupRequestData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateEventsGroupRequestData
-  * @throws IOException if the JSON string is invalid with respect to UpdateEventsGroupRequestData
-  */
+  /**
+   * Create an instance of UpdateEventsGroupRequestData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UpdateEventsGroupRequestData
+   * @throws IOException if the JSON string is invalid with respect to UpdateEventsGroupRequestData
+   */
   public static UpdateEventsGroupRequestData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UpdateEventsGroupRequestData.class);
   }
 
- /**
-  * Convert an instance of UpdateEventsGroupRequestData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UpdateEventsGroupRequestData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

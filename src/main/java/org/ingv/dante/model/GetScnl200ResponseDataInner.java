@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,12 +33,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,52 +49,61 @@ import org.ingv.dante.JSON;
 /**
  * GetScnl200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GetScnl200ResponseDataInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
+  @javax.annotation.Nullable
   private String net;
 
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
+  @javax.annotation.Nullable
   private String sta;
 
   public static final String SERIALIZED_NAME_CHA = "cha";
   @SerializedName(SERIALIZED_NAME_CHA)
+  @javax.annotation.Nullable
   private String cha;
 
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
+  @javax.annotation.Nullable
   private String loc = "--";
 
   public static final String SERIALIZED_NAME_LAT = "lat";
   @SerializedName(SERIALIZED_NAME_LAT)
+  @javax.annotation.Nullable
   private Double lat;
 
   public static final String SERIALIZED_NAME_LON = "lon";
   @SerializedName(SERIALIZED_NAME_LON)
+  @javax.annotation.Nullable
   private Double lon;
 
   public static final String SERIALIZED_NAME_ELEV = "elev";
   @SerializedName(SERIALIZED_NAME_ELEV)
+  @javax.annotation.Nullable
   private Double elev;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public GetScnl200ResponseDataInner() {
   }
 
-  
   public GetScnl200ResponseDataInner(
      Long id, 
      OffsetDateTime modified, 
@@ -105,210 +115,173 @@ public class GetScnl200ResponseDataInner {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
   public Long getId() {
     return id;
   }
 
 
 
-
-  public GetScnl200ResponseDataInner net(String net) {
-    
+  public GetScnl200ResponseDataInner net(@javax.annotation.Nullable String net) {
     this.net = net;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return net
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "IV", value = "Channel net code | char(2)")
-
   public String getNet() {
     return net;
   }
 
-
-  public void setNet(String net) {
+  public void setNet(@javax.annotation.Nullable String net) {
     this.net = net;
   }
 
 
-  public GetScnl200ResponseDataInner sta(String sta) {
-    
+  public GetScnl200ResponseDataInner sta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return sta
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ACER", value = "Channel station code | varchar(5)")
-
   public String getSta() {
     return sta;
   }
 
-
-  public void setSta(String sta) {
+  public void setSta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
   }
 
 
-  public GetScnl200ResponseDataInner cha(String cha) {
-    
+  public GetScnl200ResponseDataInner cha(@javax.annotation.Nullable String cha) {
     this.cha = cha;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return cha
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "HHZ", value = "Channel code | char(3)")
-
   public String getCha() {
     return cha;
   }
 
-
-  public void setCha(String cha) {
+  public void setCha(@javax.annotation.Nullable String cha) {
     this.cha = cha;
   }
 
 
-  public GetScnl200ResponseDataInner loc(String loc) {
-    
+  public GetScnl200ResponseDataInner loc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return loc
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "00", value = "Channel location | char(2)")
-
   public String getLoc() {
     return loc;
   }
 
-
-  public void setLoc(String loc) {
+  public void setLoc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
   }
 
 
-  public GetScnl200ResponseDataInner lat(Double lat) {
-    
+  public GetScnl200ResponseDataInner lat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
     return this;
   }
 
-   /**
+  /**
    * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -90
    * maximum: 90
    * @return lat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "45.492599", value = "Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
-
   public Double getLat() {
     return lat;
   }
 
-
-  public void setLat(Double lat) {
+  public void setLat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
   }
 
 
-  public GetScnl200ResponseDataInner lon(Double lon) {
-    
+  public GetScnl200ResponseDataInner lon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
     return this;
   }
 
-   /**
+  /**
    * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -180
    * maximum: 180
    * @return lon
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "9.19289", value = "Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
-
   public Double getLon() {
     return lon;
   }
 
-
-  public void setLon(Double lon) {
+  public void setLon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
   }
 
 
-  public GetScnl200ResponseDataInner elev(Double elev) {
-    
+  public GetScnl200ResponseDataInner elev(@javax.annotation.Nullable Double elev) {
     this.elev = elev;
     return this;
   }
 
-   /**
+  /**
    * Elevation in meter | double
    * @return elev
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "371", value = "Elevation in meter | double")
-
   public Double getElev() {
     return elev;
   }
 
-
-  public void setElev(Double elev) {
+  public void setElev(@javax.annotation.Nullable Double elev) {
     this.elev = elev;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
-
   public OffsetDateTime getModified() {
     return modified;
   }
 
 
 
-
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
-
 
 
   /**
@@ -321,6 +294,10 @@ public class GetScnl200ResponseDataInner {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the GetScnl200ResponseDataInner instance itself
    */
   public GetScnl200ResponseDataInner putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -332,6 +309,8 @@ public class GetScnl200ResponseDataInner {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -339,6 +318,9 @@ public class GetScnl200ResponseDataInner {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -427,20 +409,19 @@ public class GetScnl200ResponseDataInner {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to GetScnl200ResponseDataInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (GetScnl200ResponseDataInner.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetScnl200ResponseDataInner
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!GetScnl200ResponseDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in GetScnl200ResponseDataInner is not found in the empty JSON string", GetScnl200ResponseDataInner.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("net") != null && !jsonObj.get("net").isJsonNull()) && !jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
@@ -471,7 +452,7 @@ public class GetScnl200ResponseDataInner {
            public void write(JsonWriter out, GetScnl200ResponseDataInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -483,7 +464,12 @@ public class GetScnl200ResponseDataInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -492,8 +478,9 @@ public class GetScnl200ResponseDataInner {
 
            @Override
            public GetScnl200ResponseDataInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              GetScnl200ResponseDataInner instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -507,8 +494,10 @@ public class GetScnl200ResponseDataInner {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -519,22 +508,22 @@ public class GetScnl200ResponseDataInner {
     }
   }
 
- /**
-  * Create an instance of GetScnl200ResponseDataInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetScnl200ResponseDataInner
-  * @throws IOException if the JSON string is invalid with respect to GetScnl200ResponseDataInner
-  */
+  /**
+   * Create an instance of GetScnl200ResponseDataInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetScnl200ResponseDataInner
+   * @throws IOException if the JSON string is invalid with respect to GetScnl200ResponseDataInner
+   */
   public static GetScnl200ResponseDataInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetScnl200ResponseDataInner.class);
   }
 
- /**
-  * Convert an instance of GetScnl200ResponseDataInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetScnl200ResponseDataInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

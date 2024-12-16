@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.net.URI;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,12 +33,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,145 +49,129 @@ import org.ingv.dante.JSON;
 /**
  * This schema describes RFC7807 Problem Details for HTTP APIs. The specification is intentionally flexible, and allows to adapt the schema adding further properties, or not enforcing any of the properties below.  To make this schema safe by default, additionalProperties are forbidden though. In case you need them, you can either re-define Problem or extend it using &#x60;allOf&#x60;.
  */
-@ApiModel(description = "This schema describes RFC7807 Problem Details for HTTP APIs. The specification is intentionally flexible, and allows to adapt the schema adding further properties, or not enforcing any of the properties below.  To make this schema safe by default, additionalProperties are forbidden though. In case you need them, you can either re-define Problem or extend it using `allOf`.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class Problem {
   public static final String SERIALIZED_NAME_DETAIL = "detail";
   @SerializedName(SERIALIZED_NAME_DETAIL)
+  @javax.annotation.Nullable
   private String detail;
 
   public static final String SERIALIZED_NAME_INSTANCE = "instance";
   @SerializedName(SERIALIZED_NAME_INSTANCE)
+  @javax.annotation.Nullable
   private URI instance;
 
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nullable
   private Integer status;
 
   public static final String SERIALIZED_NAME_TITLE = "title";
   @SerializedName(SERIALIZED_NAME_TITLE)
+  @javax.annotation.Nullable
   private String title;
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nullable
   private URI type = URI.create("about:blank");
 
   public Problem() {
   }
 
-  public Problem detail(String detail) {
-    
+  public Problem detail(@javax.annotation.Nullable String detail) {
     this.detail = detail;
     return this;
   }
 
-   /**
+  /**
    * A human readable explanation specific to this occurrence of the problem. You MUST NOT expose internal informations, personal data or implementation details through this field.  &#x60;detail&#x60; supports localized patterns whereas &#x60;title&#x60; pattern is only in ascii. 
    * @return detail
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Request took too long to complete.", value = "A human readable explanation specific to this occurrence of the problem. You MUST NOT expose internal informations, personal data or implementation details through this field.  `detail` supports localized patterns whereas `title` pattern is only in ascii. ")
-
   public String getDetail() {
     return detail;
   }
 
-
-  public void setDetail(String detail) {
+  public void setDetail(@javax.annotation.Nullable String detail) {
     this.detail = detail;
   }
 
 
-  public Problem instance(URI instance) {
-    
+  public Problem instance(@javax.annotation.Nullable URI instance) {
     this.instance = instance;
     return this;
   }
 
-   /**
+  /**
    * An absolute URI that identifies the specific occurrence of the problem. It may or may not yield further information if dereferenced. 
    * @return instance
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "An absolute URI that identifies the specific occurrence of the problem. It may or may not yield further information if dereferenced. ")
-
   public URI getInstance() {
     return instance;
   }
 
-
-  public void setInstance(URI instance) {
+  public void setInstance(@javax.annotation.Nullable URI instance) {
     this.instance = instance;
   }
 
 
-  public Problem status(Integer status) {
-    
+  public Problem status(@javax.annotation.Nullable Integer status) {
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * The HTTP status code generated by the origin server for this occurrence of the problem. 
    * minimum: 100
    * maximum: 600
    * @return status
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "503", value = "The HTTP status code generated by the origin server for this occurrence of the problem. ")
-
   public Integer getStatus() {
     return status;
   }
 
-
-  public void setStatus(Integer status) {
+  public void setStatus(@javax.annotation.Nullable Integer status) {
     this.status = status;
   }
 
 
-  public Problem title(String title) {
-    
+  public Problem title(@javax.annotation.Nullable String title) {
     this.title = title;
     return this;
   }
 
-   /**
+  /**
    * A short, summary of the problem type. Written in english and readable for engineers (usually not suited for non technical stakeholders and not localized): the expressed pattern does not support unicode characters. 
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Service Unavailable", value = "A short, summary of the problem type. Written in english and readable for engineers (usually not suited for non technical stakeholders and not localized): the expressed pattern does not support unicode characters. ")
-
   public String getTitle() {
     return title;
   }
 
-
-  public void setTitle(String title) {
+  public void setTitle(@javax.annotation.Nullable String title) {
     this.title = title;
   }
 
 
-  public Problem type(URI type) {
-    
+  public Problem type(@javax.annotation.Nullable URI type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * An absolute URI that identifies the problem type.  When dereferenced, it SHOULD provide human-readable documentation for the problem type (e.g., using HTML). 
    * @return type
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "https://tools.ietf.org/html/rfc7231#section-6.6.4", value = "An absolute URI that identifies the problem type.  When dereferenced, it SHOULD provide human-readable documentation for the problem type (e.g., using HTML). ")
-
   public URI getType() {
     return type;
   }
 
-
-  public void setType(URI type) {
+  public void setType(@javax.annotation.Nullable URI type) {
     this.type = type;
   }
 
@@ -254,28 +239,27 @@ public class Problem {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to Problem
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (Problem.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Problem
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!Problem.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in Problem is not found in the empty JSON string", Problem.openapiRequiredFields.toString()));
         }
       }
 
-      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
-      for (Entry<String, JsonElement> entry : entries) {
+      for (Map.Entry<String, JsonElement> entry : entries) {
         if (!Problem.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Problem` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Problem` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("detail") != null && !jsonObj.get("detail").isJsonNull()) && !jsonObj.get("detail").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detail").toString()));
       }
@@ -310,31 +294,31 @@ public class Problem {
 
            @Override
            public Problem read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
-             return thisAdapter.fromJsonTree(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
            }
 
        }.nullSafe();
     }
   }
 
- /**
-  * Create an instance of Problem given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Problem
-  * @throws IOException if the JSON string is invalid with respect to Problem
-  */
+  /**
+   * Create an instance of Problem given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Problem
+   * @throws IOException if the JSON string is invalid with respect to Problem
+   */
   public static Problem fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Problem.class);
   }
 
- /**
-  * Convert an instance of Problem to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Problem to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

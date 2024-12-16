@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,12 +33,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -48,61 +49,55 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotionAlternative
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectStrongmotionAlternative {
   public static final String SERIALIZED_NAME_TIME = "time";
   @SerializedName(SERIALIZED_NAME_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime time;
 
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
+  @javax.annotation.Nullable
   private Long code;
 
   public ObjectStrongmotionAlternative() {
   }
 
-  public ObjectStrongmotionAlternative time(OffsetDateTime time) {
-    
+  public ObjectStrongmotionAlternative time(@javax.annotation.Nullable OffsetDateTime time) {
     this.time = time;
     return this;
   }
 
-   /**
+  /**
    * alternate time: trigger reported by SM box - time with microseconds | datetime(3)
    * @return time
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "alternate time: trigger reported by SM box - time with microseconds | datetime(3)")
-
   public OffsetDateTime getTime() {
     return time;
   }
 
-
-  public void setTime(OffsetDateTime time) {
+  public void setTime(@javax.annotation.Nullable OffsetDateTime time) {
     this.time = time;
   }
 
 
-  public ObjectStrongmotionAlternative code(Long code) {
-    
+  public ObjectStrongmotionAlternative code(@javax.annotation.Nullable Long code) {
     this.code = code;
     return this;
   }
 
-   /**
+  /**
    * code specifying the source of the alternate time field | int(11)
    * @return code
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "code specifying the source of the alternate time field | int(11)")
-
   public Long getCode() {
     return code;
   }
 
-
-  public void setCode(Long code) {
+  public void setCode(@javax.annotation.Nullable Long code) {
     this.code = code;
   }
 
@@ -116,6 +111,10 @@ public class ObjectStrongmotionAlternative {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectStrongmotionAlternative instance itself
    */
   public ObjectStrongmotionAlternative putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -127,6 +126,8 @@ public class ObjectStrongmotionAlternative {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -134,6 +135,9 @@ public class ObjectStrongmotionAlternative {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -198,20 +202,19 @@ public class ObjectStrongmotionAlternative {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectStrongmotionAlternative
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (ObjectStrongmotionAlternative.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectStrongmotionAlternative
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectStrongmotionAlternative.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectStrongmotionAlternative is not found in the empty JSON string", ObjectStrongmotionAlternative.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -230,7 +233,7 @@ public class ObjectStrongmotionAlternative {
            public void write(JsonWriter out, ObjectStrongmotionAlternative value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -242,7 +245,12 @@ public class ObjectStrongmotionAlternative {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -251,8 +259,9 @@ public class ObjectStrongmotionAlternative {
 
            @Override
            public ObjectStrongmotionAlternative read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectStrongmotionAlternative instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -266,8 +275,10 @@ public class ObjectStrongmotionAlternative {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -278,22 +289,22 @@ public class ObjectStrongmotionAlternative {
     }
   }
 
- /**
-  * Create an instance of ObjectStrongmotionAlternative given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectStrongmotionAlternative
-  * @throws IOException if the JSON string is invalid with respect to ObjectStrongmotionAlternative
-  */
+  /**
+   * Create an instance of ObjectStrongmotionAlternative given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectStrongmotionAlternative
+   * @throws IOException if the JSON string is invalid with respect to ObjectStrongmotionAlternative
+   */
   public static ObjectStrongmotionAlternative fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectStrongmotionAlternative.class);
   }
 
- /**
-  * Convert an instance of ObjectStrongmotionAlternative to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectStrongmotionAlternative to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

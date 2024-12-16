@@ -14,17 +14,15 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectProvenance;
@@ -42,12 +40,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -55,100 +56,121 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectStrongmotion {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
+  @javax.annotation.Nullable
   private String net;
 
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
+  @javax.annotation.Nullable
   private String sta;
 
   public static final String SERIALIZED_NAME_CHA = "cha";
   @SerializedName(SERIALIZED_NAME_CHA)
+  @javax.annotation.Nullable
   private String cha;
 
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
+  @javax.annotation.Nullable
   private String loc = "--";
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_T_DT = "t_dt";
   @SerializedName(SERIALIZED_NAME_T_DT)
+  @javax.annotation.Nonnull
   private OffsetDateTime tDt;
 
   public static final String SERIALIZED_NAME_PGA = "pga";
   @SerializedName(SERIALIZED_NAME_PGA)
+  @javax.annotation.Nullable
   private Float pga;
 
   public static final String SERIALIZED_NAME_TPGA_DT = "tpga_dt";
   @SerializedName(SERIALIZED_NAME_TPGA_DT)
+  @javax.annotation.Nullable
   private OffsetDateTime tpgaDt;
 
   public static final String SERIALIZED_NAME_PGV = "pgv";
   @SerializedName(SERIALIZED_NAME_PGV)
+  @javax.annotation.Nullable
   private Float pgv;
 
   public static final String SERIALIZED_NAME_TPGV_DT = "tpgv_dt";
   @SerializedName(SERIALIZED_NAME_TPGV_DT)
+  @javax.annotation.Nullable
   private OffsetDateTime tpgvDt;
 
   public static final String SERIALIZED_NAME_PGD = "pgd";
   @SerializedName(SERIALIZED_NAME_PGD)
+  @javax.annotation.Nullable
   private Float pgd;
 
   public static final String SERIALIZED_NAME_TPGD_DT = "tpgd_dt";
   @SerializedName(SERIALIZED_NAME_TPGD_DT)
+  @javax.annotation.Nullable
   private OffsetDateTime tpgdDt;
 
   public static final String SERIALIZED_NAME_RSA030 = "rsa_030";
   @SerializedName(SERIALIZED_NAME_RSA030)
+  @javax.annotation.Nullable
   private Float rsa030;
 
   public static final String SERIALIZED_NAME_RSA100 = "rsa_100";
   @SerializedName(SERIALIZED_NAME_RSA100)
+  @javax.annotation.Nullable
   private Float rsa100;
 
   public static final String SERIALIZED_NAME_RSA300 = "rsa_300";
   @SerializedName(SERIALIZED_NAME_RSA300)
+  @javax.annotation.Nullable
   private Float rsa300;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspace localspace;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenance provenance;
 
   public static final String SERIALIZED_NAME_ALTERNATIVE = "alternative";
   @SerializedName(SERIALIZED_NAME_ALTERNATIVE)
+  @javax.annotation.Nullable
   private ObjectStrongmotionAlternative alternative;
 
   public static final String SERIALIZED_NAME_RSA = "rsa";
   @SerializedName(SERIALIZED_NAME_RSA)
-  private List<ObjectStrongmotionRsaInner> rsa = null;
+  @javax.annotation.Nullable
+  private List<ObjectStrongmotionRsaInner> rsa = new ArrayList<>();
 
   public ObjectStrongmotion() {
   }
 
-  
   public ObjectStrongmotion(
      Long id, 
      OffsetDateTime modified, 
@@ -160,464 +182,382 @@ public class ObjectStrongmotion {
     this.inserted = inserted;
   }
 
-  public ObjectStrongmotion net(String net) {
-    
+  public ObjectStrongmotion net(@javax.annotation.Nullable String net) {
     this.net = net;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return net
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "IV", value = "Channel net code | char(2)")
-
   public String getNet() {
     return net;
   }
 
-
-  public void setNet(String net) {
+  public void setNet(@javax.annotation.Nullable String net) {
     this.net = net;
   }
 
 
-  public ObjectStrongmotion sta(String sta) {
-    
+  public ObjectStrongmotion sta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return sta
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ACER", value = "Channel station code | varchar(5)")
-
   public String getSta() {
     return sta;
   }
 
-
-  public void setSta(String sta) {
+  public void setSta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
   }
 
 
-  public ObjectStrongmotion cha(String cha) {
-    
+  public ObjectStrongmotion cha(@javax.annotation.Nullable String cha) {
     this.cha = cha;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return cha
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "HHZ", value = "Channel code | char(3)")
-
   public String getCha() {
     return cha;
   }
 
-
-  public void setCha(String cha) {
+  public void setCha(@javax.annotation.Nullable String cha) {
     this.cha = cha;
   }
 
 
-  public ObjectStrongmotion loc(String loc) {
-    
+  public ObjectStrongmotion loc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return loc
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "00", value = "Channel location | char(2)")
-
   public String getLoc() {
     return loc;
   }
 
-
-  public void setLoc(String loc) {
+  public void setLoc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
   }
 
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
   public Long getId() {
     return id;
   }
 
 
 
-
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
-
   public OffsetDateTime getModified() {
     return modified;
   }
 
 
 
-
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
 
 
 
-
-  public ObjectStrongmotion idLocalspace(Long idLocalspace) {
-    
+  public ObjectStrongmotion idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectStrongmotion tDt(OffsetDateTime tDt) {
-    
+  public ObjectStrongmotion tDt(@javax.annotation.Nonnull OffsetDateTime tDt) {
     this.tDt = tDt;
     return this;
   }
 
-   /**
+  /**
    * time: trigger reported by SM box - datetime part | datetime(6)
    * @return tDt
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "2017-04-12T08:46:56.190Z", required = true, value = "time: trigger reported by SM box - datetime part | datetime(6)")
-
   public OffsetDateTime gettDt() {
     return tDt;
   }
 
-
-  public void settDt(OffsetDateTime tDt) {
+  public void settDt(@javax.annotation.Nonnull OffsetDateTime tDt) {
     this.tDt = tDt;
   }
 
 
-  public ObjectStrongmotion pga(Float pga) {
-    
+  public ObjectStrongmotion pga(@javax.annotation.Nullable Float pga) {
     this.pga = pga;
     return this;
   }
 
-   /**
+  /**
    * REQUIRED: peak ground acceleration (cm/s/s) | double
    * @return pga
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000162", value = "REQUIRED: peak ground acceleration (cm/s/s) | double")
-
   public Float getPga() {
     return pga;
   }
 
-
-  public void setPga(Float pga) {
+  public void setPga(@javax.annotation.Nullable Float pga) {
     this.pga = pga;
   }
 
 
-  public ObjectStrongmotion tpgaDt(OffsetDateTime tpgaDt) {
-    
+  public ObjectStrongmotion tpgaDt(@javax.annotation.Nullable OffsetDateTime tpgaDt) {
     this.tpgaDt = tpgaDt;
     return this;
   }
 
-   /**
+  /**
    * OPTIONAL: time of pga - datetime part | datetime(3)
    * @return tpgaDt
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:47:06.990Z", value = "OPTIONAL: time of pga - datetime part | datetime(3)")
-
   public OffsetDateTime getTpgaDt() {
     return tpgaDt;
   }
 
-
-  public void setTpgaDt(OffsetDateTime tpgaDt) {
+  public void setTpgaDt(@javax.annotation.Nullable OffsetDateTime tpgaDt) {
     this.tpgaDt = tpgaDt;
   }
 
 
-  public ObjectStrongmotion pgv(Float pgv) {
-    
+  public ObjectStrongmotion pgv(@javax.annotation.Nullable Float pgv) {
     this.pgv = pgv;
     return this;
   }
 
-   /**
+  /**
    * REQUIRED: peak ground velocity (cm/s) | double
    * @return pgv
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000034", value = "REQUIRED: peak ground velocity (cm/s) | double")
-
   public Float getPgv() {
     return pgv;
   }
 
-
-  public void setPgv(Float pgv) {
+  public void setPgv(@javax.annotation.Nullable Float pgv) {
     this.pgv = pgv;
   }
 
 
-  public ObjectStrongmotion tpgvDt(OffsetDateTime tpgvDt) {
-    
+  public ObjectStrongmotion tpgvDt(@javax.annotation.Nullable OffsetDateTime tpgvDt) {
     this.tpgvDt = tpgvDt;
     return this;
   }
 
-   /**
+  /**
    * OPTIONAL: time of pgv - datetime part | datetime(3)
    * @return tpgvDt
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:46:56.190Z", value = "OPTIONAL: time of pgv - datetime part | datetime(3)")
-
   public OffsetDateTime getTpgvDt() {
     return tpgvDt;
   }
 
-
-  public void setTpgvDt(OffsetDateTime tpgvDt) {
+  public void setTpgvDt(@javax.annotation.Nullable OffsetDateTime tpgvDt) {
     this.tpgvDt = tpgvDt;
   }
 
 
-  public ObjectStrongmotion pgd(Float pgd) {
-    
+  public ObjectStrongmotion pgd(@javax.annotation.Nullable Float pgd) {
     this.pgd = pgd;
     return this;
   }
 
-   /**
+  /**
    * REQUIRED: peak ground displacement (cm) | double
    * @return pgd
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000025", value = "REQUIRED: peak ground displacement (cm) | double")
-
   public Float getPgd() {
     return pgd;
   }
 
-
-  public void setPgd(Float pgd) {
+  public void setPgd(@javax.annotation.Nullable Float pgd) {
     this.pgd = pgd;
   }
 
 
-  public ObjectStrongmotion tpgdDt(OffsetDateTime tpgdDt) {
-    
+  public ObjectStrongmotion tpgdDt(@javax.annotation.Nullable OffsetDateTime tpgdDt) {
     this.tpgdDt = tpgdDt;
     return this;
   }
 
-   /**
+  /**
    * OPTIONAL: time of pgd - datetime part | datetime(3)
    * @return tpgdDt
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:46:59.989Z", value = "OPTIONAL: time of pgd - datetime part | datetime(3)")
-
   public OffsetDateTime getTpgdDt() {
     return tpgdDt;
   }
 
-
-  public void setTpgdDt(OffsetDateTime tpgdDt) {
+  public void setTpgdDt(@javax.annotation.Nullable OffsetDateTime tpgdDt) {
     this.tpgdDt = tpgdDt;
   }
 
 
-  public ObjectStrongmotion rsa030(Float rsa030) {
-    
+  public ObjectStrongmotion rsa030(@javax.annotation.Nullable Float rsa030) {
     this.rsa030 = rsa030;
     return this;
   }
 
-   /**
+  /**
    * RSA(response spectrum accel) value for period 0.30 | double
    * @return rsa030
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.02604", value = "RSA(response spectrum accel) value for period 0.30 | double")
-
   public Float getRsa030() {
     return rsa030;
   }
 
-
-  public void setRsa030(Float rsa030) {
+  public void setRsa030(@javax.annotation.Nullable Float rsa030) {
     this.rsa030 = rsa030;
   }
 
 
-  public ObjectStrongmotion rsa100(Float rsa100) {
-    
+  public ObjectStrongmotion rsa100(@javax.annotation.Nullable Float rsa100) {
     this.rsa100 = rsa100;
     return this;
   }
 
-   /**
+  /**
    * RSA(response spectrum accel) value for period 1.00 | double
    * @return rsa100
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.003673", value = "RSA(response spectrum accel) value for period 1.00 | double")
-
   public Float getRsa100() {
     return rsa100;
   }
 
-
-  public void setRsa100(Float rsa100) {
+  public void setRsa100(@javax.annotation.Nullable Float rsa100) {
     this.rsa100 = rsa100;
   }
 
 
-  public ObjectStrongmotion rsa300(Float rsa300) {
-    
+  public ObjectStrongmotion rsa300(@javax.annotation.Nullable Float rsa300) {
     this.rsa300 = rsa300;
     return this;
   }
 
-   /**
+  /**
    * RSA(response spectrum accel) value for period 3.00 | double
    * @return rsa300
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.000339", value = "RSA(response spectrum accel) value for period 3.00 | double")
-
   public Float getRsa300() {
     return rsa300;
   }
 
-
-  public void setRsa300(Float rsa300) {
+  public void setRsa300(@javax.annotation.Nullable Float rsa300) {
     this.rsa300 = rsa300;
   }
 
 
-  public ObjectStrongmotion localspace(ObjectLocalspace localspace) {
-    
+  public ObjectStrongmotion localspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
 
-
-  public void setLocalspace(ObjectLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectStrongmotion provenance(ObjectProvenance provenance) {
-    
+  public ObjectStrongmotion provenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectProvenance getProvenance() {
     return provenance;
   }
 
-
-  public void setProvenance(ObjectProvenance provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
-  public ObjectStrongmotion alternative(ObjectStrongmotionAlternative alternative) {
-    
+  public ObjectStrongmotion alternative(@javax.annotation.Nullable ObjectStrongmotionAlternative alternative) {
     this.alternative = alternative;
     return this;
   }
 
-   /**
+  /**
    * Get alternative
    * @return alternative
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectStrongmotionAlternative getAlternative() {
     return alternative;
   }
 
-
-  public void setAlternative(ObjectStrongmotionAlternative alternative) {
+  public void setAlternative(@javax.annotation.Nullable ObjectStrongmotionAlternative alternative) {
     this.alternative = alternative;
   }
 
 
-  public ObjectStrongmotion rsa(List<ObjectStrongmotionRsaInner> rsa) {
-    
+  public ObjectStrongmotion rsa(@javax.annotation.Nullable List<ObjectStrongmotionRsaInner> rsa) {
     this.rsa = rsa;
     return this;
   }
@@ -630,19 +570,16 @@ public class ObjectStrongmotion {
     return this;
   }
 
-   /**
+  /**
    * Get rsa
    * @return rsa
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public List<ObjectStrongmotionRsaInner> getRsa() {
     return rsa;
   }
 
-
-  public void setRsa(List<ObjectStrongmotionRsaInner> rsa) {
+  public void setRsa(@javax.annotation.Nullable List<ObjectStrongmotionRsaInner> rsa) {
     this.rsa = rsa;
   }
 
@@ -656,6 +593,10 @@ public class ObjectStrongmotion {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectStrongmotion instance itself
    */
   public ObjectStrongmotion putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -667,6 +608,8 @@ public class ObjectStrongmotion {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -674,6 +617,9 @@ public class ObjectStrongmotion {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -810,27 +756,26 @@ public class ObjectStrongmotion {
     openapiRequiredFields.add("t_dt");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectStrongmotion
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (ObjectStrongmotion.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectStrongmotion
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectStrongmotion.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectStrongmotion is not found in the empty JSON string", ObjectStrongmotion.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectStrongmotion.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("net") != null && !jsonObj.get("net").isJsonNull()) && !jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
@@ -845,27 +790,29 @@ public class ObjectStrongmotion {
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
       }
       // validate the optional field `alternative`
       if (jsonObj.get("alternative") != null && !jsonObj.get("alternative").isJsonNull()) {
-        ObjectStrongmotionAlternative.validateJsonObject(jsonObj.getAsJsonObject("alternative"));
+        ObjectStrongmotionAlternative.validateJsonElement(jsonObj.get("alternative"));
       }
-      JsonArray jsonArrayrsa = jsonObj.getAsJsonArray("rsa");
-      if (jsonArrayrsa != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("rsa").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `rsa` to be an array in the JSON string but got `%s`", jsonObj.get("rsa").toString()));
-        }
+      if (jsonObj.get("rsa") != null && !jsonObj.get("rsa").isJsonNull()) {
+        JsonArray jsonArrayrsa = jsonObj.getAsJsonArray("rsa");
+        if (jsonArrayrsa != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("rsa").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `rsa` to be an array in the JSON string but got `%s`", jsonObj.get("rsa").toString()));
+          }
 
-        // validate the optional field `rsa` (array)
-        for (int i = 0; i < jsonArrayrsa.size(); i++) {
-          ObjectStrongmotionRsaInner.validateJsonObject(jsonArrayrsa.get(i).getAsJsonObject());
-        };
+          // validate the optional field `rsa` (array)
+          for (int i = 0; i < jsonArrayrsa.size(); i++) {
+            ObjectStrongmotionRsaInner.validateJsonElement(jsonArrayrsa.get(i));
+          };
+        }
       }
   }
 
@@ -885,7 +832,7 @@ public class ObjectStrongmotion {
            public void write(JsonWriter out, ObjectStrongmotion value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -897,7 +844,12 @@ public class ObjectStrongmotion {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -906,8 +858,9 @@ public class ObjectStrongmotion {
 
            @Override
            public ObjectStrongmotion read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectStrongmotion instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -921,8 +874,10 @@ public class ObjectStrongmotion {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -933,22 +888,22 @@ public class ObjectStrongmotion {
     }
   }
 
- /**
-  * Create an instance of ObjectStrongmotion given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectStrongmotion
-  * @throws IOException if the JSON string is invalid with respect to ObjectStrongmotion
-  */
+  /**
+   * Create an instance of ObjectStrongmotion given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectStrongmotion
+   * @throws IOException if the JSON string is invalid with respect to ObjectStrongmotion
+   */
   public static ObjectStrongmotion fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectStrongmotion.class);
   }
 
- /**
-  * Convert an instance of ObjectStrongmotion to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectStrongmotion to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

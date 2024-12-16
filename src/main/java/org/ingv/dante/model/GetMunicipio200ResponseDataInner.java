@@ -14,15 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -34,12 +32,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -47,200 +48,179 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipio200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GetMunicipio200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PROV_NAME_ABBR = "prov_name_abbr";
   @SerializedName(SERIALIZED_NAME_PROV_NAME_ABBR)
+  @javax.annotation.Nullable
   private String provNameAbbr;
 
   public static final String SERIALIZED_NAME_PROV_NAME = "prov_name";
   @SerializedName(SERIALIZED_NAME_PROV_NAME)
+  @javax.annotation.Nullable
   private String provName;
 
   public static final String SERIALIZED_NAME_REGION_NAME = "region_name";
   @SerializedName(SERIALIZED_NAME_REGION_NAME)
+  @javax.annotation.Nullable
   private String regionName;
 
   public static final String SERIALIZED_NAME_POPULATION = "population";
   @SerializedName(SERIALIZED_NAME_POPULATION)
+  @javax.annotation.Nullable
   private Long population;
 
   public static final String SERIALIZED_NAME_LAT = "lat";
   @SerializedName(SERIALIZED_NAME_LAT)
+  @javax.annotation.Nullable
   private Double lat;
 
   public static final String SERIALIZED_NAME_LON = "lon";
   @SerializedName(SERIALIZED_NAME_LON)
+  @javax.annotation.Nullable
   private Double lon;
 
   public GetMunicipio200ResponseDataInner() {
   }
 
-  public GetMunicipio200ResponseDataInner name(String name) {
-    
+  public GetMunicipio200ResponseDataInner name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Italian \&quot;municipio\&quot; name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Ladispoli", value = "Italian \"municipio\" name.")
-
   public String getName() {
     return name;
   }
 
-
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public GetMunicipio200ResponseDataInner provNameAbbr(String provNameAbbr) {
-    
+  public GetMunicipio200ResponseDataInner provNameAbbr(@javax.annotation.Nullable String provNameAbbr) {
     this.provNameAbbr = provNameAbbr;
     return this;
   }
 
-   /**
+  /**
    * Italian province abbreviation.
    * @return provNameAbbr
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "RM", value = "Italian province abbreviation.")
-
   public String getProvNameAbbr() {
     return provNameAbbr;
   }
 
-
-  public void setProvNameAbbr(String provNameAbbr) {
+  public void setProvNameAbbr(@javax.annotation.Nullable String provNameAbbr) {
     this.provNameAbbr = provNameAbbr;
   }
 
 
-  public GetMunicipio200ResponseDataInner provName(String provName) {
-    
+  public GetMunicipio200ResponseDataInner provName(@javax.annotation.Nullable String provName) {
     this.provName = provName;
     return this;
   }
 
-   /**
+  /**
    * Italian province name.
    * @return provName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Roma", value = "Italian province name.")
-
   public String getProvName() {
     return provName;
   }
 
-
-  public void setProvName(String provName) {
+  public void setProvName(@javax.annotation.Nullable String provName) {
     this.provName = provName;
   }
 
 
-  public GetMunicipio200ResponseDataInner regionName(String regionName) {
-    
+  public GetMunicipio200ResponseDataInner regionName(@javax.annotation.Nullable String regionName) {
     this.regionName = regionName;
     return this;
   }
 
-   /**
+  /**
    * Italian region name.
    * @return regionName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Lazio", value = "Italian region name.")
-
   public String getRegionName() {
     return regionName;
   }
 
-
-  public void setRegionName(String regionName) {
+  public void setRegionName(@javax.annotation.Nullable String regionName) {
     this.regionName = regionName;
   }
 
 
-  public GetMunicipio200ResponseDataInner population(Long population) {
-    
+  public GetMunicipio200ResponseDataInner population(@javax.annotation.Nullable Long population) {
     this.population = population;
     return this;
   }
 
-   /**
+  /**
    * Popolazione.
    * @return population
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "41078", value = "Popolazione.")
-
   public Long getPopulation() {
     return population;
   }
 
-
-  public void setPopulation(Long population) {
+  public void setPopulation(@javax.annotation.Nullable Long population) {
     this.population = population;
   }
 
 
-  public GetMunicipio200ResponseDataInner lat(Double lat) {
-    
+  public GetMunicipio200ResponseDataInner lat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
     return this;
   }
 
-   /**
+  /**
    * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -90
    * maximum: 90
    * @return lat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "45.492599", value = "Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
-
   public Double getLat() {
     return lat;
   }
 
-
-  public void setLat(Double lat) {
+  public void setLat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
   }
 
 
-  public GetMunicipio200ResponseDataInner lon(Double lon) {
-    
+  public GetMunicipio200ResponseDataInner lon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
     return this;
   }
 
-   /**
+  /**
    * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -180
    * maximum: 180
    * @return lon
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "9.19289", value = "Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.")
-
   public Double getLon() {
     return lon;
   }
 
-
-  public void setLon(Double lon) {
+  public void setLon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
   }
 
@@ -254,6 +234,10 @@ public class GetMunicipio200ResponseDataInner {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the GetMunicipio200ResponseDataInner instance itself
    */
   public GetMunicipio200ResponseDataInner putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -265,6 +249,8 @@ public class GetMunicipio200ResponseDataInner {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -272,6 +258,9 @@ public class GetMunicipio200ResponseDataInner {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -351,20 +340,19 @@ public class GetMunicipio200ResponseDataInner {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to GetMunicipio200ResponseDataInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (GetMunicipio200ResponseDataInner.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetMunicipio200ResponseDataInner
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!GetMunicipio200ResponseDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in GetMunicipio200ResponseDataInner is not found in the empty JSON string", GetMunicipio200ResponseDataInner.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
@@ -395,7 +383,7 @@ public class GetMunicipio200ResponseDataInner {
            public void write(JsonWriter out, GetMunicipio200ResponseDataInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -407,7 +395,12 @@ public class GetMunicipio200ResponseDataInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -416,8 +409,9 @@ public class GetMunicipio200ResponseDataInner {
 
            @Override
            public GetMunicipio200ResponseDataInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              GetMunicipio200ResponseDataInner instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -431,8 +425,10 @@ public class GetMunicipio200ResponseDataInner {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -443,22 +439,22 @@ public class GetMunicipio200ResponseDataInner {
     }
   }
 
- /**
-  * Create an instance of GetMunicipio200ResponseDataInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetMunicipio200ResponseDataInner
-  * @throws IOException if the JSON string is invalid with respect to GetMunicipio200ResponseDataInner
-  */
+  /**
+   * Create an instance of GetMunicipio200ResponseDataInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetMunicipio200ResponseDataInner
+   * @throws IOException if the JSON string is invalid with respect to GetMunicipio200ResponseDataInner
+   */
   public static GetMunicipio200ResponseDataInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetMunicipio200ResponseDataInner.class);
   }
 
- /**
-  * Convert an instance of GetMunicipio200ResponseDataInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetMunicipio200ResponseDataInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

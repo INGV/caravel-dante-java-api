@@ -14,11 +14,9 @@ docs/AddEvent201ResponseData.md
 docs/AddEvent201ResponseDataEvent.md
 docs/AddEvent201ResponseDataEventLocalspace.md
 docs/AddEvent201ResponseDataEventOriginsInner.md
-docs/AddEvent201ResponseDataEventOriginsInnerAllOf.md
 docs/AddEwHyp2000arc201Response.md
 docs/AddEwHyp2000arc201ResponseData.md
 docs/AddEwHyp2000arc201ResponseDataEvent.md
-docs/AddEwHyp2000arc201ResponseDataEventAllOf.md
 docs/AddEwHyp2000arcRequest.md
 docs/AddEwQuake2kRequest.md
 docs/AddFocalmechanism201Response.md
@@ -28,7 +26,7 @@ docs/AddHEwMagnitudeRequest.md
 docs/AddHEwPickScnl201Response.md
 docs/AddHEwPickScnl201ResponseData.md
 docs/AddHEwPickScnl201ResponseDataPicksInner.md
-docs/AddHEwPickScnl201ResponseDataPicksInnerAllOf.md
+docs/AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.md
 docs/AddHEwPickScnlRequest.md
 docs/AddHEwStrongmotionii201Response.md
 docs/AddHEwStrongmotionii201ResponseData.md
@@ -43,7 +41,6 @@ docs/AddMomenttensorRequestData.md
 docs/AddOrigin201Response.md
 docs/AddOrigin201ResponseData.md
 docs/AddOrigin201ResponseDataOriginsInner.md
-docs/AddOrigin201ResponseDataOriginsInnerAllOf.md
 docs/AddOriginFlag201Response.md
 docs/AddOriginFlagRequest.md
 docs/AddOriginFlagRequestData.md
@@ -65,7 +62,6 @@ docs/GetEvent200ResponseData.md
 docs/GetEventsCatalog200Response.md
 docs/GetEventsGroup200Response.md
 docs/GetLocalspace200Response.md
-docs/GetLocalspace200ResponseAllOf.md
 docs/GetMunicipiDistanceKmPopolazione200Response.md
 docs/GetMunicipiDistanceKmPopolazione200ResponseDataInner.md
 docs/GetMunicipio200Response.md
@@ -73,7 +69,6 @@ docs/GetMunicipio200ResponseDataInner.md
 docs/GetOriginFlag200Response.md
 docs/GetPick200Response.md
 docs/GetProvenance200Response.md
-docs/GetProvenance200ResponseAllOf.md
 docs/GetRegionName200Response.md
 docs/GetRegionName200ResponseData.md
 docs/GetScnl200Response.md
@@ -82,11 +77,8 @@ docs/GetToken201Response.md
 docs/GetToken201ResponseUser.md
 docs/GetTokenRequest.md
 docs/GetTypeEvent200Response.md
-docs/GetTypeEvent200ResponseAllOf.md
 docs/GetTypeMagnitude200Response.md
-docs/GetTypeMagnitude200ResponseAllOf.md
 docs/GetTypeOrigin200Response.md
-docs/GetTypeOrigin200ResponseAllOf.md
 docs/Hyp2000arcPhasesInner.md
 docs/Hyp2000arcSchema.md
 docs/Hyp2000arcSchemaEwLogo.md
@@ -163,6 +155,7 @@ docs/TypeOriginName.md
 docs/UpdateApi.md
 docs/UpdateEvent200Response.md
 docs/UpdateEvent200ResponseData.md
+docs/UpdateEvent200ResponseDataEvent.md
 docs/UpdateEventRequest.md
 docs/UpdateEventRequestData.md
 docs/UpdateEventRequestDataEvent.md
@@ -216,11 +209,9 @@ src/main/java/org/ingv/dante/model/AddEvent201ResponseData.java
 src/main/java/org/ingv/dante/model/AddEvent201ResponseDataEvent.java
 src/main/java/org/ingv/dante/model/AddEvent201ResponseDataEventLocalspace.java
 src/main/java/org/ingv/dante/model/AddEvent201ResponseDataEventOriginsInner.java
-src/main/java/org/ingv/dante/model/AddEvent201ResponseDataEventOriginsInnerAllOf.java
 src/main/java/org/ingv/dante/model/AddEwHyp2000arc201Response.java
 src/main/java/org/ingv/dante/model/AddEwHyp2000arc201ResponseData.java
 src/main/java/org/ingv/dante/model/AddEwHyp2000arc201ResponseDataEvent.java
-src/main/java/org/ingv/dante/model/AddEwHyp2000arc201ResponseDataEventAllOf.java
 src/main/java/org/ingv/dante/model/AddEwHyp2000arcRequest.java
 src/main/java/org/ingv/dante/model/AddEwQuake2kRequest.java
 src/main/java/org/ingv/dante/model/AddFocalmechanism201Response.java
@@ -230,7 +221,7 @@ src/main/java/org/ingv/dante/model/AddHEwMagnitudeRequest.java
 src/main/java/org/ingv/dante/model/AddHEwPickScnl201Response.java
 src/main/java/org/ingv/dante/model/AddHEwPickScnl201ResponseData.java
 src/main/java/org/ingv/dante/model/AddHEwPickScnl201ResponseDataPicksInner.java
-src/main/java/org/ingv/dante/model/AddHEwPickScnl201ResponseDataPicksInnerAllOf.java
+src/main/java/org/ingv/dante/model/AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.java
 src/main/java/org/ingv/dante/model/AddHEwPickScnlRequest.java
 src/main/java/org/ingv/dante/model/AddHEwStrongmotionii201Response.java
 src/main/java/org/ingv/dante/model/AddHEwStrongmotionii201ResponseData.java
@@ -245,7 +236,6 @@ src/main/java/org/ingv/dante/model/AddMomenttensorRequestData.java
 src/main/java/org/ingv/dante/model/AddOrigin201Response.java
 src/main/java/org/ingv/dante/model/AddOrigin201ResponseData.java
 src/main/java/org/ingv/dante/model/AddOrigin201ResponseDataOriginsInner.java
-src/main/java/org/ingv/dante/model/AddOrigin201ResponseDataOriginsInnerAllOf.java
 src/main/java/org/ingv/dante/model/AddOriginFlag201Response.java
 src/main/java/org/ingv/dante/model/AddOriginFlagRequest.java
 src/main/java/org/ingv/dante/model/AddOriginFlagRequestData.java
@@ -264,7 +254,6 @@ src/main/java/org/ingv/dante/model/GetEvent200ResponseData.java
 src/main/java/org/ingv/dante/model/GetEventsCatalog200Response.java
 src/main/java/org/ingv/dante/model/GetEventsGroup200Response.java
 src/main/java/org/ingv/dante/model/GetLocalspace200Response.java
-src/main/java/org/ingv/dante/model/GetLocalspace200ResponseAllOf.java
 src/main/java/org/ingv/dante/model/GetMunicipiDistanceKmPopolazione200Response.java
 src/main/java/org/ingv/dante/model/GetMunicipiDistanceKmPopolazione200ResponseDataInner.java
 src/main/java/org/ingv/dante/model/GetMunicipio200Response.java
@@ -272,7 +261,6 @@ src/main/java/org/ingv/dante/model/GetMunicipio200ResponseDataInner.java
 src/main/java/org/ingv/dante/model/GetOriginFlag200Response.java
 src/main/java/org/ingv/dante/model/GetPick200Response.java
 src/main/java/org/ingv/dante/model/GetProvenance200Response.java
-src/main/java/org/ingv/dante/model/GetProvenance200ResponseAllOf.java
 src/main/java/org/ingv/dante/model/GetRegionName200Response.java
 src/main/java/org/ingv/dante/model/GetRegionName200ResponseData.java
 src/main/java/org/ingv/dante/model/GetScnl200Response.java
@@ -281,11 +269,8 @@ src/main/java/org/ingv/dante/model/GetToken201Response.java
 src/main/java/org/ingv/dante/model/GetToken201ResponseUser.java
 src/main/java/org/ingv/dante/model/GetTokenRequest.java
 src/main/java/org/ingv/dante/model/GetTypeEvent200Response.java
-src/main/java/org/ingv/dante/model/GetTypeEvent200ResponseAllOf.java
 src/main/java/org/ingv/dante/model/GetTypeMagnitude200Response.java
-src/main/java/org/ingv/dante/model/GetTypeMagnitude200ResponseAllOf.java
 src/main/java/org/ingv/dante/model/GetTypeOrigin200Response.java
-src/main/java/org/ingv/dante/model/GetTypeOrigin200ResponseAllOf.java
 src/main/java/org/ingv/dante/model/Hyp2000arcPhasesInner.java
 src/main/java/org/ingv/dante/model/Hyp2000arcSchema.java
 src/main/java/org/ingv/dante/model/Hyp2000arcSchemaEwLogo.java
@@ -359,6 +344,7 @@ src/main/java/org/ingv/dante/model/TypeAmplitudeCategory.java
 src/main/java/org/ingv/dante/model/TypeOriginName.java
 src/main/java/org/ingv/dante/model/UpdateEvent200Response.java
 src/main/java/org/ingv/dante/model/UpdateEvent200ResponseData.java
+src/main/java/org/ingv/dante/model/UpdateEvent200ResponseDataEvent.java
 src/main/java/org/ingv/dante/model/UpdateEventRequest.java
 src/main/java/org/ingv/dante/model/UpdateEventRequestData.java
 src/main/java/org/ingv/dante/model/UpdateEventRequestDataEvent.java
@@ -380,12 +366,10 @@ src/test/java/org/ingv/dante/model/AddCatalog201ResponseTest.java
 src/test/java/org/ingv/dante/model/AddCatalogRequestDataInnerTest.java
 src/test/java/org/ingv/dante/model/AddCatalogRequestTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventLocalspaceTest.java
-src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventOriginsInnerAllOfTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventOriginsInnerTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataEventTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseDataTest.java
 src/test/java/org/ingv/dante/model/AddEvent201ResponseTest.java
-src/test/java/org/ingv/dante/model/AddEwHyp2000arc201ResponseDataEventAllOfTest.java
 src/test/java/org/ingv/dante/model/AddEwHyp2000arc201ResponseDataEventTest.java
 src/test/java/org/ingv/dante/model/AddEwHyp2000arc201ResponseDataTest.java
 src/test/java/org/ingv/dante/model/AddEwHyp2000arc201ResponseTest.java
@@ -395,7 +379,7 @@ src/test/java/org/ingv/dante/model/AddFocalmechanism201ResponseTest.java
 src/test/java/org/ingv/dante/model/AddFocalmechanismRequestDataTest.java
 src/test/java/org/ingv/dante/model/AddFocalmechanismRequestTest.java
 src/test/java/org/ingv/dante/model/AddHEwMagnitudeRequestTest.java
-src/test/java/org/ingv/dante/model/AddHEwPickScnl201ResponseDataPicksInnerAllOfTest.java
+src/test/java/org/ingv/dante/model/AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEwTest.java
 src/test/java/org/ingv/dante/model/AddHEwPickScnl201ResponseDataPicksInnerTest.java
 src/test/java/org/ingv/dante/model/AddHEwPickScnl201ResponseDataTest.java
 src/test/java/org/ingv/dante/model/AddHEwPickScnl201ResponseTest.java
@@ -410,7 +394,6 @@ src/test/java/org/ingv/dante/model/AddMagnitudeRequestTest.java
 src/test/java/org/ingv/dante/model/AddMomenttensor201ResponseTest.java
 src/test/java/org/ingv/dante/model/AddMomenttensorRequestDataTest.java
 src/test/java/org/ingv/dante/model/AddMomenttensorRequestTest.java
-src/test/java/org/ingv/dante/model/AddOrigin201ResponseDataOriginsInnerAllOfTest.java
 src/test/java/org/ingv/dante/model/AddOrigin201ResponseDataOriginsInnerTest.java
 src/test/java/org/ingv/dante/model/AddOrigin201ResponseDataTest.java
 src/test/java/org/ingv/dante/model/AddOrigin201ResponseTest.java
@@ -431,7 +414,6 @@ src/test/java/org/ingv/dante/model/GetEvent200ResponseDataTest.java
 src/test/java/org/ingv/dante/model/GetEvent200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEventsCatalog200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetEventsGroup200ResponseTest.java
-src/test/java/org/ingv/dante/model/GetLocalspace200ResponseAllOfTest.java
 src/test/java/org/ingv/dante/model/GetLocalspace200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetMunicipiDistanceKmPopolazione200ResponseDataInnerTest.java
 src/test/java/org/ingv/dante/model/GetMunicipiDistanceKmPopolazione200ResponseTest.java
@@ -439,7 +421,6 @@ src/test/java/org/ingv/dante/model/GetMunicipio200ResponseDataInnerTest.java
 src/test/java/org/ingv/dante/model/GetMunicipio200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetOriginFlag200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetPick200ResponseTest.java
-src/test/java/org/ingv/dante/model/GetProvenance200ResponseAllOfTest.java
 src/test/java/org/ingv/dante/model/GetProvenance200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetRegionName200ResponseDataTest.java
 src/test/java/org/ingv/dante/model/GetRegionName200ResponseTest.java
@@ -448,11 +429,8 @@ src/test/java/org/ingv/dante/model/GetScnl200ResponseTest.java
 src/test/java/org/ingv/dante/model/GetToken201ResponseTest.java
 src/test/java/org/ingv/dante/model/GetToken201ResponseUserTest.java
 src/test/java/org/ingv/dante/model/GetTokenRequestTest.java
-src/test/java/org/ingv/dante/model/GetTypeEvent200ResponseAllOfTest.java
 src/test/java/org/ingv/dante/model/GetTypeEvent200ResponseTest.java
-src/test/java/org/ingv/dante/model/GetTypeMagnitude200ResponseAllOfTest.java
 src/test/java/org/ingv/dante/model/GetTypeMagnitude200ResponseTest.java
-src/test/java/org/ingv/dante/model/GetTypeOrigin200ResponseAllOfTest.java
 src/test/java/org/ingv/dante/model/GetTypeOrigin200ResponseTest.java
 src/test/java/org/ingv/dante/model/Hyp2000arcPhasesInnerTest.java
 src/test/java/org/ingv/dante/model/Hyp2000arcSchemaEwLogoTest.java
@@ -525,6 +503,7 @@ src/test/java/org/ingv/dante/model/StrongmotioniiSchemaEwMessageTest.java
 src/test/java/org/ingv/dante/model/StrongmotioniiSchemaTest.java
 src/test/java/org/ingv/dante/model/TypeAmplitudeCategoryTest.java
 src/test/java/org/ingv/dante/model/TypeOriginNameTest.java
+src/test/java/org/ingv/dante/model/UpdateEvent200ResponseDataEventTest.java
 src/test/java/org/ingv/dante/model/UpdateEvent200ResponseDataTest.java
 src/test/java/org/ingv/dante/model/UpdateEvent200ResponseTest.java
 src/test/java/org/ingv/dante/model/UpdateEventRequestDataEventTest.java

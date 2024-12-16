@@ -14,20 +14,18 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.AddEvent201ResponseDataEventLocalspace;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
 import org.ingv.dante.model.ObjectFocalmechanismPostOutputFocalmechanismsInner;
+import org.ingv.dante.model.UpdateEvent200ResponseDataEvent;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -40,12 +38,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -53,107 +54,42 @@ import org.ingv.dante.JSON;
 /**
  * AddEvent201ResponseDataEventOriginsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddEvent201ResponseDataEventOriginsInner {
+  public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
+  @SerializedName(SERIALIZED_NAME_MAGNITUDES)
+  @javax.annotation.Nullable
+  private List<UpdateEvent200ResponseDataEvent> magnitudes = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_FOCALMECHANISMS = "focalmechanisms";
+  @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)
+  @javax.annotation.Nullable
+  private List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms = new ArrayList<>();
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private AddEvent201ResponseDataEventLocalspace localspace;
-
-  public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
-  @SerializedName(SERIALIZED_NAME_MAGNITUDES)
-  private List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes = null;
-
-  public static final String SERIALIZED_NAME_FOCALMECHANISMS = "focalmechanisms";
-  @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)
-  private List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms = null;
 
   public AddEvent201ResponseDataEventOriginsInner() {
   }
 
-  public AddEvent201ResponseDataEventOriginsInner id(Long id) {
-    
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Unique incremental id | bigint(20)
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
-  public Long getId() {
-    return id;
-  }
-
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-
-  public AddEvent201ResponseDataEventOriginsInner idLocalspace(Long idLocalspace) {
-    
-    this.idLocalspace = idLocalspace;
-    return this;
-  }
-
-   /**
-   * Localspace Id | bigint(19)
-   * @return idLocalspace
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
-
-  public Long getIdLocalspace() {
-    return idLocalspace;
-  }
-
-
-  public void setIdLocalspace(Long idLocalspace) {
-    this.idLocalspace = idLocalspace;
-  }
-
-
-  public AddEvent201ResponseDataEventOriginsInner localspace(AddEvent201ResponseDataEventLocalspace localspace) {
-    
-    this.localspace = localspace;
-    return this;
-  }
-
-   /**
-   * Get localspace
-   * @return localspace
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public AddEvent201ResponseDataEventLocalspace getLocalspace() {
-    return localspace;
-  }
-
-
-  public void setLocalspace(AddEvent201ResponseDataEventLocalspace localspace) {
-    this.localspace = localspace;
-  }
-
-
-  public AddEvent201ResponseDataEventOriginsInner magnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {
-    
+  public AddEvent201ResponseDataEventOriginsInner magnitudes(@javax.annotation.Nullable List<UpdateEvent200ResponseDataEvent> magnitudes) {
     this.magnitudes = magnitudes;
     return this;
   }
 
-  public AddEvent201ResponseDataEventOriginsInner addMagnitudesItem(AddEvent201ResponseDataEventOriginsInnerAllOf magnitudesItem) {
+  public AddEvent201ResponseDataEventOriginsInner addMagnitudesItem(UpdateEvent200ResponseDataEvent magnitudesItem) {
     if (this.magnitudes == null) {
       this.magnitudes = new ArrayList<>();
     }
@@ -161,25 +97,21 @@ public class AddEvent201ResponseDataEventOriginsInner {
     return this;
   }
 
-   /**
+  /**
    * Get magnitudes
    * @return magnitudes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public List<AddEvent201ResponseDataEventOriginsInnerAllOf> getMagnitudes() {
+  public List<UpdateEvent200ResponseDataEvent> getMagnitudes() {
     return magnitudes;
   }
 
-
-  public void setMagnitudes(List<AddEvent201ResponseDataEventOriginsInnerAllOf> magnitudes) {
+  public void setMagnitudes(@javax.annotation.Nullable List<UpdateEvent200ResponseDataEvent> magnitudes) {
     this.magnitudes = magnitudes;
   }
 
 
-  public AddEvent201ResponseDataEventOriginsInner focalmechanisms(List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
-    
+  public AddEvent201ResponseDataEventOriginsInner focalmechanisms(@javax.annotation.Nullable List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
     return this;
   }
@@ -192,20 +124,74 @@ public class AddEvent201ResponseDataEventOriginsInner {
     return this;
   }
 
-   /**
+  /**
    * Get focalmechanisms
    * @return focalmechanisms
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public List<ObjectFocalmechanismPostOutputFocalmechanismsInner> getFocalmechanisms() {
     return focalmechanisms;
   }
 
-
-  public void setFocalmechanisms(List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
+  public void setFocalmechanisms(@javax.annotation.Nullable List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
+  }
+
+
+  public AddEvent201ResponseDataEventOriginsInner id(@javax.annotation.Nullable Long id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * Unique incremental id | bigint(20)
+   * @return id
+   */
+  @javax.annotation.Nullable
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(@javax.annotation.Nullable Long id) {
+    this.id = id;
+  }
+
+
+  public AddEvent201ResponseDataEventOriginsInner idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
+    this.idLocalspace = idLocalspace;
+    return this;
+  }
+
+  /**
+   * Localspace Id | bigint(19)
+   * @return idLocalspace
+   */
+  @javax.annotation.Nullable
+  public Long getIdLocalspace() {
+    return idLocalspace;
+  }
+
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
+    this.idLocalspace = idLocalspace;
+  }
+
+
+  public AddEvent201ResponseDataEventOriginsInner localspace(@javax.annotation.Nullable AddEvent201ResponseDataEventLocalspace localspace) {
+    this.localspace = localspace;
+    return this;
+  }
+
+  /**
+   * Get localspace
+   * @return localspace
+   */
+  @javax.annotation.Nullable
+  public AddEvent201ResponseDataEventLocalspace getLocalspace() {
+    return localspace;
+  }
+
+  public void setLocalspace(@javax.annotation.Nullable AddEvent201ResponseDataEventLocalspace localspace) {
+    this.localspace = localspace;
   }
 
   /**
@@ -218,6 +204,10 @@ public class AddEvent201ResponseDataEventOriginsInner {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the AddEvent201ResponseDataEventOriginsInner instance itself
    */
   public AddEvent201ResponseDataEventOriginsInner putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -229,6 +219,8 @@ public class AddEvent201ResponseDataEventOriginsInner {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -236,6 +228,9 @@ public class AddEvent201ResponseDataEventOriginsInner {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -254,11 +249,11 @@ public class AddEvent201ResponseDataEventOriginsInner {
       return false;
     }
     AddEvent201ResponseDataEventOriginsInner addEvent201ResponseDataEventOriginsInner = (AddEvent201ResponseDataEventOriginsInner) o;
-    return Objects.equals(this.id, addEvent201ResponseDataEventOriginsInner.id) &&
+    return Objects.equals(this.magnitudes, addEvent201ResponseDataEventOriginsInner.magnitudes) &&
+        Objects.equals(this.focalmechanisms, addEvent201ResponseDataEventOriginsInner.focalmechanisms) &&
+        Objects.equals(this.id, addEvent201ResponseDataEventOriginsInner.id) &&
         Objects.equals(this.idLocalspace, addEvent201ResponseDataEventOriginsInner.idLocalspace) &&
-        Objects.equals(this.localspace, addEvent201ResponseDataEventOriginsInner.localspace) &&
-        Objects.equals(this.magnitudes, addEvent201ResponseDataEventOriginsInner.magnitudes) &&
-        Objects.equals(this.focalmechanisms, addEvent201ResponseDataEventOriginsInner.focalmechanisms)&&
+        Objects.equals(this.localspace, addEvent201ResponseDataEventOriginsInner.localspace)&&
         Objects.equals(this.additionalProperties, addEvent201ResponseDataEventOriginsInner.additionalProperties);
   }
 
@@ -268,7 +263,7 @@ public class AddEvent201ResponseDataEventOriginsInner {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, idLocalspace, localspace, magnitudes, focalmechanisms, additionalProperties);
+    return Objects.hash(magnitudes, focalmechanisms, id, idLocalspace, localspace, additionalProperties);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -282,11 +277,11 @@ public class AddEvent201ResponseDataEventOriginsInner {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddEvent201ResponseDataEventOriginsInner {\n");
+    sb.append("    magnitudes: ").append(toIndentedString(magnitudes)).append("\n");
+    sb.append("    focalmechanisms: ").append(toIndentedString(focalmechanisms)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    idLocalspace: ").append(toIndentedString(idLocalspace)).append("\n");
     sb.append("    localspace: ").append(toIndentedString(localspace)).append("\n");
-    sb.append("    magnitudes: ").append(toIndentedString(magnitudes)).append("\n");
-    sb.append("    focalmechanisms: ").append(toIndentedString(focalmechanisms)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -310,57 +305,60 @@ public class AddEvent201ResponseDataEventOriginsInner {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
+    openapiFields.add("magnitudes");
+    openapiFields.add("focalmechanisms");
     openapiFields.add("id");
     openapiFields.add("id_localspace");
     openapiFields.add("localspace");
-    openapiFields.add("magnitudes");
-    openapiFields.add("focalmechanisms");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddEvent201ResponseDataEventOriginsInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (AddEvent201ResponseDataEventOriginsInner.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddEvent201ResponseDataEventOriginsInner
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AddEvent201ResponseDataEventOriginsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddEvent201ResponseDataEventOriginsInner is not found in the empty JSON string", AddEvent201ResponseDataEventOriginsInner.openapiRequiredFields.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (jsonObj.get("magnitudes") != null && !jsonObj.get("magnitudes").isJsonNull()) {
+        JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
+        if (jsonArraymagnitudes != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("magnitudes").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `magnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("magnitudes").toString()));
+          }
+
+          // validate the optional field `magnitudes` (array)
+          for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
+            UpdateEvent200ResponseDataEvent.validateJsonElement(jsonArraymagnitudes.get(i));
+          };
+        }
+      }
+      if (jsonObj.get("focalmechanisms") != null && !jsonObj.get("focalmechanisms").isJsonNull()) {
+        JsonArray jsonArrayfocalmechanisms = jsonObj.getAsJsonArray("focalmechanisms");
+        if (jsonArrayfocalmechanisms != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("focalmechanisms").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `focalmechanisms` to be an array in the JSON string but got `%s`", jsonObj.get("focalmechanisms").toString()));
+          }
+
+          // validate the optional field `focalmechanisms` (array)
+          for (int i = 0; i < jsonArrayfocalmechanisms.size(); i++) {
+            ObjectFocalmechanismPostOutputFocalmechanismsInner.validateJsonElement(jsonArrayfocalmechanisms.get(i));
+          };
         }
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        AddEvent201ResponseDataEventLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
-      }
-      JsonArray jsonArraymagnitudes = jsonObj.getAsJsonArray("magnitudes");
-      if (jsonArraymagnitudes != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("magnitudes").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `magnitudes` to be an array in the JSON string but got `%s`", jsonObj.get("magnitudes").toString()));
-        }
-
-        // validate the optional field `magnitudes` (array)
-        for (int i = 0; i < jsonArraymagnitudes.size(); i++) {
-          AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonArraymagnitudes.get(i).getAsJsonObject());
-        };
-      }
-      JsonArray jsonArrayfocalmechanisms = jsonObj.getAsJsonArray("focalmechanisms");
-      if (jsonArrayfocalmechanisms != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("focalmechanisms").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `focalmechanisms` to be an array in the JSON string but got `%s`", jsonObj.get("focalmechanisms").toString()));
-        }
-
-        // validate the optional field `focalmechanisms` (array)
-        for (int i = 0; i < jsonArrayfocalmechanisms.size(); i++) {
-          ObjectFocalmechanismPostOutputFocalmechanismsInner.validateJsonObject(jsonArrayfocalmechanisms.get(i).getAsJsonObject());
-        };
+        AddEvent201ResponseDataEventLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
   }
 
@@ -380,7 +378,7 @@ public class AddEvent201ResponseDataEventOriginsInner {
            public void write(JsonWriter out, AddEvent201ResponseDataEventOriginsInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -392,7 +390,12 @@ public class AddEvent201ResponseDataEventOriginsInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -401,8 +404,9 @@ public class AddEvent201ResponseDataEventOriginsInner {
 
            @Override
            public AddEvent201ResponseDataEventOriginsInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              AddEvent201ResponseDataEventOriginsInner instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -416,8 +420,10 @@ public class AddEvent201ResponseDataEventOriginsInner {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -428,22 +434,22 @@ public class AddEvent201ResponseDataEventOriginsInner {
     }
   }
 
- /**
-  * Create an instance of AddEvent201ResponseDataEventOriginsInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddEvent201ResponseDataEventOriginsInner
-  * @throws IOException if the JSON string is invalid with respect to AddEvent201ResponseDataEventOriginsInner
-  */
+  /**
+   * Create an instance of AddEvent201ResponseDataEventOriginsInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddEvent201ResponseDataEventOriginsInner
+   * @throws IOException if the JSON string is invalid with respect to AddEvent201ResponseDataEventOriginsInner
+   */
   public static AddEvent201ResponseDataEventOriginsInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddEvent201ResponseDataEventOriginsInner.class);
   }
 
- /**
-  * Convert an instance of AddEvent201ResponseDataEventOriginsInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddEvent201ResponseDataEventOriginsInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

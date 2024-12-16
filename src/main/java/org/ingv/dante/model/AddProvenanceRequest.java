@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ProvenanceEvaluationmode;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -37,12 +35,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -50,76 +51,91 @@ import org.ingv.dante.JSON;
 /**
  * AddProvenanceRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddProvenanceRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private String name = "INGV";
 
   public static final String SERIALIZED_NAME_SOFTWARENAME = "softwarename";
   @SerializedName(SERIALIZED_NAME_SOFTWARENAME)
+  @javax.annotation.Nonnull
   private String softwarename;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
+  @javax.annotation.Nullable
   private String model;
 
   public static final String SERIALIZED_NAME_METHOD = "method";
   @SerializedName(SERIALIZED_NAME_METHOD)
+  @javax.annotation.Nullable
   private String method;
 
   public static final String SERIALIZED_NAME_PARAMETERS = "parameters";
   @SerializedName(SERIALIZED_NAME_PARAMETERS)
+  @javax.annotation.Nullable
   private String parameters;
 
   public static final String SERIALIZED_NAME_PROGRAM = "program";
   @SerializedName(SERIALIZED_NAME_PROGRAM)
+  @javax.annotation.Nullable
   private String program;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
+  @javax.annotation.Nullable
   private String username;
 
   public static final String SERIALIZED_NAME_HOSTNAME = "hostname";
   @SerializedName(SERIALIZED_NAME_HOSTNAME)
+  @javax.annotation.Nullable
   private String hostname;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_PRIORITY = "priority";
   @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @javax.annotation.Nullable
   private Long priority = 0l;
 
   public static final String SERIALIZED_NAME_EVALUATIONMODE = "evaluationmode";
   @SerializedName(SERIALIZED_NAME_EVALUATIONMODE)
+  @javax.annotation.Nullable
   private ProvenanceEvaluationmode evaluationmode;
 
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
+  @javax.annotation.Nullable
   private String url;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public AddProvenanceRequest() {
   }
 
-  
   public AddProvenanceRequest(
      Long id, 
      OffsetDateTime modified, 
@@ -131,344 +147,283 @@ public class AddProvenanceRequest {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
   public Long getId() {
     return id;
   }
 
 
 
-
-  public AddProvenanceRequest name(String name) {
-    
+  public AddProvenanceRequest name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "INGV", required = true, value = "Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)")
-
   public String getName() {
     return name;
   }
 
-
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
 
-  public AddProvenanceRequest softwarename(String softwarename) {
-    
+  public AddProvenanceRequest softwarename(@javax.annotation.Nonnull String softwarename) {
     this.softwarename = softwarename;
     return this;
   }
 
-   /**
+  /**
    * Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)
    * @return softwarename
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "software", required = true, value = "Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)")
-
   public String getSoftwarename() {
     return softwarename;
   }
 
-
-  public void setSoftwarename(String softwarename) {
+  public void setSoftwarename(@javax.annotation.Nonnull String softwarename) {
     this.softwarename = softwarename;
   }
 
 
-  public AddProvenanceRequest version(String version) {
-    
+  public AddProvenanceRequest version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Version name | varchar(255)
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "hew1_mole", value = "Version name | varchar(255)")
-
   public String getVersion() {
     return version;
   }
 
-
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
 
-  public AddProvenanceRequest model(String model) {
-    
+  public AddProvenanceRequest model(@javax.annotation.Nullable String model) {
     this.model = model;
     return this;
   }
 
-   /**
+  /**
    * Name/URI/DOI of the model | varchar(255)
    * @return model
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "prem", value = "Name/URI/DOI of the model | varchar(255)")
-
   public String getModel() {
     return model;
   }
 
-
-  public void setModel(String model) {
+  public void setModel(@javax.annotation.Nullable String model) {
     this.model = model;
   }
 
 
-  public AddProvenanceRequest method(String method) {
-    
+  public AddProvenanceRequest method(@javax.annotation.Nullable String method) {
     this.method = method;
     return this;
   }
 
-   /**
+  /**
    * Name/URI/DOI of the method | varchar(255)
    * @return method
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ToDo", value = "Name/URI/DOI of the method | varchar(255)")
-
   public String getMethod() {
     return method;
   }
 
-
-  public void setMethod(String method) {
+  public void setMethod(@javax.annotation.Nullable String method) {
     this.method = method;
   }
 
 
-  public AddProvenanceRequest parameters(String parameters) {
-    
+  public AddProvenanceRequest parameters(@javax.annotation.Nullable String parameters) {
     this.parameters = parameters;
     return this;
   }
 
-   /**
+  /**
    * Name/URI/DOI of the parameters | varchar(255)
    * @return parameters
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ToDo", value = "Name/URI/DOI of the parameters | varchar(255)")
-
   public String getParameters() {
     return parameters;
   }
 
-
-  public void setParameters(String parameters) {
+  public void setParameters(@javax.annotation.Nullable String parameters) {
     this.parameters = parameters;
   }
 
 
-  public AddProvenanceRequest program(String program) {
-    
+  public AddProvenanceRequest program(@javax.annotation.Nullable String program) {
     this.program = program;
     return this;
   }
 
-   /**
+  /**
    * Name/URI/DOI of the program | varchar(255)
    * @return program
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "IPO-EW__tdmt_invc.c", value = "Name/URI/DOI of the program | varchar(255)")
-
   public String getProgram() {
     return program;
   }
 
-
-  public void setProgram(String program) {
+  public void setProgram(@javax.annotation.Nullable String program) {
     this.program = program;
   }
 
 
-  public AddProvenanceRequest username(String username) {
-    
+  public AddProvenanceRequest username(@javax.annotation.Nullable String username) {
     this.username = username;
     return this;
   }
 
-   /**
+  /**
    * User name | char(255)
    * @return username
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ew", value = "User name | char(255)")
-
   public String getUsername() {
     return username;
   }
 
-
-  public void setUsername(String username) {
+  public void setUsername(@javax.annotation.Nullable String username) {
     this.username = username;
   }
 
 
-  public AddProvenanceRequest hostname(String hostname) {
-    
+  public AddProvenanceRequest hostname(@javax.annotation.Nullable String hostname) {
     this.hostname = hostname;
     return this;
   }
 
-   /**
+  /**
    * Hostname | char(255)
    * @return hostname
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "hew10.ingv.it", value = "Hostname | char(255)")
-
   public String getHostname() {
     return hostname;
   }
 
-
-  public void setHostname(String hostname) {
+  public void setHostname(@javax.annotation.Nullable String hostname) {
     this.hostname = hostname;
   }
 
 
-  public AddProvenanceRequest description(String description) {
-    
+  public AddProvenanceRequest description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Additional information | char(255)
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Auto added", value = "Additional information | char(255)")
-
   public String getDescription() {
     return description;
   }
 
-
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public AddProvenanceRequest priority(Long priority) {
-    
+  public AddProvenanceRequest priority(@javax.annotation.Nullable Long priority) {
     this.priority = priority;
     return this;
   }
 
-   /**
+  /**
    * Priority | int(8)
    * @return priority
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "Priority | int(8)")
-
   public Long getPriority() {
     return priority;
   }
 
-
-  public void setPriority(Long priority) {
+  public void setPriority(@javax.annotation.Nullable Long priority) {
     this.priority = priority;
   }
 
 
-  public AddProvenanceRequest evaluationmode(ProvenanceEvaluationmode evaluationmode) {
-    
+  public AddProvenanceRequest evaluationmode(@javax.annotation.Nullable ProvenanceEvaluationmode evaluationmode) {
     this.evaluationmode = evaluationmode;
     return this;
   }
 
-   /**
+  /**
    * Get evaluationmode
    * @return evaluationmode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ProvenanceEvaluationmode getEvaluationmode() {
     return evaluationmode;
   }
 
-
-  public void setEvaluationmode(ProvenanceEvaluationmode evaluationmode) {
+  public void setEvaluationmode(@javax.annotation.Nullable ProvenanceEvaluationmode evaluationmode) {
     this.evaluationmode = evaluationmode;
   }
 
 
-  public AddProvenanceRequest url(String url) {
-    
+  public AddProvenanceRequest url(@javax.annotation.Nullable String url) {
     this.url = url;
     return this;
   }
 
-   /**
+  /**
    * External URL Reference | varchar(512)
    * @return url
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://mysite", value = "External URL Reference | varchar(512)")
-
   public String getUrl() {
     return url;
   }
 
-
-  public void setUrl(String url) {
+  public void setUrl(@javax.annotation.Nullable String url) {
     this.url = url;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
-
   public OffsetDateTime getModified() {
     return modified;
   }
 
 
 
-
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
-
 
 
   /**
@@ -481,6 +436,10 @@ public class AddProvenanceRequest {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the AddProvenanceRequest instance itself
    */
   public AddProvenanceRequest putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -492,6 +451,8 @@ public class AddProvenanceRequest {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -499,6 +460,9 @@ public class AddProvenanceRequest {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -618,31 +582,30 @@ public class AddProvenanceRequest {
     openapiRequiredFields.add("softwarename");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddProvenanceRequest
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (AddProvenanceRequest.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddProvenanceRequest
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AddProvenanceRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in AddProvenanceRequest is not found in the empty JSON string", AddProvenanceRequest.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : AddProvenanceRequest.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      if ((jsonObj.get("name") != null && !jsonObj.get("name").isJsonNull()) && !jsonObj.get("name").isJsonPrimitive()) {
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("name").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `name` to be a primitive type in the JSON string but got `%s`", jsonObj.get("name").toString()));
       }
-      if ((jsonObj.get("softwarename") != null && !jsonObj.get("softwarename").isJsonNull()) && !jsonObj.get("softwarename").isJsonPrimitive()) {
+      if (!jsonObj.get("softwarename").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `softwarename` to be a primitive type in the JSON string but got `%s`", jsonObj.get("softwarename").toString()));
       }
       if ((jsonObj.get("version") != null && !jsonObj.get("version").isJsonNull()) && !jsonObj.get("version").isJsonPrimitive()) {
@@ -669,6 +632,10 @@ public class AddProvenanceRequest {
       if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
       }
+      // validate the optional field `evaluationmode`
+      if (jsonObj.get("evaluationmode") != null && !jsonObj.get("evaluationmode").isJsonNull()) {
+        ProvenanceEvaluationmode.validateJsonElement(jsonObj.get("evaluationmode"));
+      }
       if ((jsonObj.get("url") != null && !jsonObj.get("url").isJsonNull()) && !jsonObj.get("url").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
       }
@@ -690,7 +657,7 @@ public class AddProvenanceRequest {
            public void write(JsonWriter out, AddProvenanceRequest value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -702,7 +669,12 @@ public class AddProvenanceRequest {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -711,8 +683,9 @@ public class AddProvenanceRequest {
 
            @Override
            public AddProvenanceRequest read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              AddProvenanceRequest instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -726,8 +699,10 @@ public class AddProvenanceRequest {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -738,22 +713,22 @@ public class AddProvenanceRequest {
     }
   }
 
- /**
-  * Create an instance of AddProvenanceRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddProvenanceRequest
-  * @throws IOException if the JSON string is invalid with respect to AddProvenanceRequest
-  */
+  /**
+   * Create an instance of AddProvenanceRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddProvenanceRequest
+   * @throws IOException if the JSON string is invalid with respect to AddProvenanceRequest
+   */
   public static AddProvenanceRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddProvenanceRequest.class);
   }
 
- /**
-  * Convert an instance of AddProvenanceRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddProvenanceRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

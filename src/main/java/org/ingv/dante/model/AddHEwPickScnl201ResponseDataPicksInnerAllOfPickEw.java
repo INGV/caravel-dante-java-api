@@ -14,18 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import org.ingv.dante.model.AddEvent201ResponseDataEventOriginsInnerAllOf;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -37,56 +32,48 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
 
 /**
- * AddEwHyp2000arc201ResponseDataEventAllOf
+ * AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
-public class AddEwHyp2000arc201ResponseDataEventAllOf {
-  public static final String SERIALIZED_NAME_ORIGINS = "origins";
-  @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<AddEvent201ResponseDataEventOriginsInnerAllOf> origins = null;
-
-  public AddEwHyp2000arc201ResponseDataEventAllOf() {
-  }
-
-  public AddEwHyp2000arc201ResponseDataEventAllOf origins(List<AddEvent201ResponseDataEventOriginsInnerAllOf> origins) {
-    
-    this.origins = origins;
-    return this;
-  }
-
-  public AddEwHyp2000arc201ResponseDataEventAllOf addOriginsItem(AddEvent201ResponseDataEventOriginsInnerAllOf originsItem) {
-    if (this.origins == null) {
-      this.origins = new ArrayList<>();
-    }
-    this.origins.add(originsItem);
-    return this;
-  }
-
-   /**
-   * Get origins
-   * @return origins
-  **/
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+public class AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  private Long id;
 
-  public List<AddEvent201ResponseDataEventOriginsInnerAllOf> getOrigins() {
-    return origins;
+  public AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw() {
   }
 
+  public AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw id(@javax.annotation.Nullable Long id) {
+    this.id = id;
+    return this;
+  }
 
-  public void setOrigins(List<AddEvent201ResponseDataEventOriginsInnerAllOf> origins) {
-    this.origins = origins;
+  /**
+   * Unique incremental id | bigint(20)
+   * @return id
+   */
+  @javax.annotation.Nullable
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(@javax.annotation.Nullable Long id) {
+    this.id = id;
   }
 
   /**
@@ -99,8 +86,12 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw instance itself
    */
-  public AddEwHyp2000arc201ResponseDataEventAllOf putAdditionalProperty(String key, Object value) {
+  public AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
         this.additionalProperties = new HashMap<String, Object>();
     }
@@ -110,6 +101,8 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -117,6 +110,9 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -134,21 +130,21 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AddEwHyp2000arc201ResponseDataEventAllOf addEwHyp2000arc201ResponseDataEventAllOf = (AddEwHyp2000arc201ResponseDataEventAllOf) o;
-    return Objects.equals(this.origins, addEwHyp2000arc201ResponseDataEventAllOf.origins)&&
-        Objects.equals(this.additionalProperties, addEwHyp2000arc201ResponseDataEventAllOf.additionalProperties);
+    AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw addHEwPickScnl201ResponseDataPicksInnerAllOfPickEw = (AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw) o;
+    return Objects.equals(this.id, addHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.id)&&
+        Objects.equals(this.additionalProperties, addHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(origins, additionalProperties);
+    return Objects.hash(id, additionalProperties);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AddEwHyp2000arc201ResponseDataEventAllOf {\n");
-    sb.append("    origins: ").append(toIndentedString(origins)).append("\n");
+    sb.append("class AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -172,57 +168,44 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("origins");
+    openapiFields.add("id");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to AddEwHyp2000arc201ResponseDataEventAllOf
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (AddEwHyp2000arc201ResponseDataEventAllOf.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
-          throw new IllegalArgumentException(String.format("The required field(s) %s in AddEwHyp2000arc201ResponseDataEventAllOf is not found in the empty JSON string", AddEwHyp2000arc201ResponseDataEventAllOf.openapiRequiredFields.toString()));
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw is not found in the empty JSON string", AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.openapiRequiredFields.toString()));
         }
       }
-      JsonArray jsonArrayorigins = jsonObj.getAsJsonArray("origins");
-      if (jsonArrayorigins != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("origins").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `origins` to be an array in the JSON string but got `%s`", jsonObj.get("origins").toString()));
-        }
-
-        // validate the optional field `origins` (array)
-        for (int i = 0; i < jsonArrayorigins.size(); i++) {
-          AddEvent201ResponseDataEventOriginsInnerAllOf.validateJsonObject(jsonArrayorigins.get(i).getAsJsonObject());
-        };
-      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!AddEwHyp2000arc201ResponseDataEventAllOf.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'AddEwHyp2000arc201ResponseDataEventAllOf' and its subtypes
+       if (!AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<AddEwHyp2000arc201ResponseDataEventAllOf> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(AddEwHyp2000arc201ResponseDataEventAllOf.class));
+       final TypeAdapter<AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<AddEwHyp2000arc201ResponseDataEventAllOf>() {
+       return (TypeAdapter<T>) new TypeAdapter<AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw>() {
            @Override
-           public void write(JsonWriter out, AddEwHyp2000arc201ResponseDataEventAllOf value) throws IOException {
+           public void write(JsonWriter out, AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -234,7 +217,12 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -242,11 +230,12 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
            }
 
            @Override
-           public AddEwHyp2000arc201ResponseDataEventAllOf read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+           public AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
-             AddEwHyp2000arc201ResponseDataEventAllOf instance = thisAdapter.fromJsonTree(jsonObj);
+             AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
                if (!openapiFields.contains(entry.getKey())) {
                  if (entry.getValue().isJsonPrimitive()) { // primitive type
@@ -258,8 +247,10 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -270,22 +261,22 @@ public class AddEwHyp2000arc201ResponseDataEventAllOf {
     }
   }
 
- /**
-  * Create an instance of AddEwHyp2000arc201ResponseDataEventAllOf given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddEwHyp2000arc201ResponseDataEventAllOf
-  * @throws IOException if the JSON string is invalid with respect to AddEwHyp2000arc201ResponseDataEventAllOf
-  */
-  public static AddEwHyp2000arc201ResponseDataEventAllOf fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, AddEwHyp2000arc201ResponseDataEventAllOf.class);
+  /**
+   * Create an instance of AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
+   * @throws IOException if the JSON string is invalid with respect to AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw
+   */
+  public static AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw.class);
   }
 
- /**
-  * Convert an instance of AddEwHyp2000arc201ResponseDataEventAllOf to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddHEwPickScnl201ResponseDataPicksInnerAllOfPickEw to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

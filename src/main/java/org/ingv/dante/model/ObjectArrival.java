@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectPick;
 import org.openapitools.jackson.nullable.JsonNullable;
 
@@ -37,12 +35,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -50,68 +51,81 @@ import org.ingv.dante.JSON;
 /**
  * ObjectArrival
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectArrival {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ISC_CODE = "isc_code";
   @SerializedName(SERIALIZED_NAME_ISC_CODE)
+  @javax.annotation.Nonnull
   private String iscCode;
 
   public static final String SERIALIZED_NAME_EP_DISTANCE_KM = "ep_distance_km";
   @SerializedName(SERIALIZED_NAME_EP_DISTANCE_KM)
+  @javax.annotation.Nullable
   private Float epDistanceKm;
 
   public static final String SERIALIZED_NAME_EP_DISTANCE_DELTA = "ep_distance_delta";
   @SerializedName(SERIALIZED_NAME_EP_DISTANCE_DELTA)
+  @javax.annotation.Nullable
   private Float epDistanceDelta;
 
   public static final String SERIALIZED_NAME_ORIG_DISTANCE_KM = "orig_distance_km";
   @SerializedName(SERIALIZED_NAME_ORIG_DISTANCE_KM)
+  @javax.annotation.Nullable
   private Double origDistanceKm;
 
   public static final String SERIALIZED_NAME_AZIMUT = "azimut";
   @SerializedName(SERIALIZED_NAME_AZIMUT)
+  @javax.annotation.Nullable
   private Float azimut;
 
   public static final String SERIALIZED_NAME_TAKE_OFF = "take_off";
   @SerializedName(SERIALIZED_NAME_TAKE_OFF)
+  @javax.annotation.Nullable
   private Float takeOff;
 
   public static final String SERIALIZED_NAME_POLARITY_IS_USED = "polarity_is_used";
   @SerializedName(SERIALIZED_NAME_POLARITY_IS_USED)
+  @javax.annotation.Nullable
   private Boolean polarityIsUsed;
 
   public static final String SERIALIZED_NAME_ARR_TIME_IS_USED = "arr_time_is_used";
   @SerializedName(SERIALIZED_NAME_ARR_TIME_IS_USED)
+  @javax.annotation.Nullable
   private Boolean arrTimeIsUsed;
 
   public static final String SERIALIZED_NAME_RESIDUAL = "residual";
   @SerializedName(SERIALIZED_NAME_RESIDUAL)
+  @javax.annotation.Nullable
   private Double residual;
 
   public static final String SERIALIZED_NAME_WEIGHT = "weight";
   @SerializedName(SERIALIZED_NAME_WEIGHT)
+  @javax.annotation.Nullable
   private Double weight;
 
   public static final String SERIALIZED_NAME_PICK = "pick";
   @SerializedName(SERIALIZED_NAME_PICK)
+  @javax.annotation.Nullable
   private ObjectPick pick;
 
   public ObjectArrival() {
   }
 
-  
   public ObjectArrival(
      Long id, 
      OffsetDateTime modified, 
@@ -123,297 +137,244 @@ public class ObjectArrival {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
   public Long getId() {
     return id;
   }
 
 
 
-
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
-
   public OffsetDateTime getModified() {
     return modified;
   }
 
 
 
-
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
 
 
 
-
-  public ObjectArrival iscCode(String iscCode) {
-    
+  public ObjectArrival iscCode(@javax.annotation.Nonnull String iscCode) {
     this.iscCode = iscCode;
     return this;
   }
 
-   /**
+  /**
    * ISC arrival code | varchar(8)
    * @return iscCode
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "S", required = true, value = "ISC arrival code | varchar(8)")
-
   public String getIscCode() {
     return iscCode;
   }
 
-
-  public void setIscCode(String iscCode) {
+  public void setIscCode(@javax.annotation.Nonnull String iscCode) {
     this.iscCode = iscCode;
   }
 
 
-  public ObjectArrival epDistanceKm(Float epDistanceKm) {
-    
+  public ObjectArrival epDistanceKm(@javax.annotation.Nullable Float epDistanceKm) {
     this.epDistanceKm = epDistanceKm;
     return this;
   }
 
-   /**
+  /**
    * Distance from epicenter of the station expressed in Km | double
    * @return epDistanceKm
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "223.3", value = "Distance from epicenter of the station expressed in Km | double")
-
   public Float getEpDistanceKm() {
     return epDistanceKm;
   }
 
-
-  public void setEpDistanceKm(Float epDistanceKm) {
+  public void setEpDistanceKm(@javax.annotation.Nullable Float epDistanceKm) {
     this.epDistanceKm = epDistanceKm;
   }
 
 
-  public ObjectArrival epDistanceDelta(Float epDistanceDelta) {
-    
+  public ObjectArrival epDistanceDelta(@javax.annotation.Nullable Float epDistanceDelta) {
     this.epDistanceDelta = epDistanceDelta;
     return this;
   }
 
-   /**
+  /**
    * Distance from epicenter of the station expressed in Degrees | double
    * @return epDistanceDelta
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2", value = "Distance from epicenter of the station expressed in Degrees | double")
-
   public Float getEpDistanceDelta() {
     return epDistanceDelta;
   }
 
-
-  public void setEpDistanceDelta(Float epDistanceDelta) {
+  public void setEpDistanceDelta(@javax.annotation.Nullable Float epDistanceDelta) {
     this.epDistanceDelta = epDistanceDelta;
   }
 
 
-  public ObjectArrival origDistanceKm(Double origDistanceKm) {
-    
+  public ObjectArrival origDistanceKm(@javax.annotation.Nullable Double origDistanceKm) {
     this.origDistanceKm = origDistanceKm;
     return this;
   }
 
-   /**
+  /**
    * Distance from origin of the station (km) | double
    * @return origDistanceKm
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "161", value = "Distance from origin of the station (km) | double")
-
   public Double getOrigDistanceKm() {
     return origDistanceKm;
   }
 
-
-  public void setOrigDistanceKm(Double origDistanceKm) {
+  public void setOrigDistanceKm(@javax.annotation.Nullable Double origDistanceKm) {
     this.origDistanceKm = origDistanceKm;
   }
 
 
-  public ObjectArrival azimut(Float azimut) {
-    
+  public ObjectArrival azimut(@javax.annotation.Nullable Float azimut) {
     this.azimut = azimut;
     return this;
   }
 
-   /**
+  /**
    * Station origin azimut | double
    * @return azimut
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "161", value = "Station origin azimut | double")
-
   public Float getAzimut() {
     return azimut;
   }
 
-
-  public void setAzimut(Float azimut) {
+  public void setAzimut(@javax.annotation.Nullable Float azimut) {
     this.azimut = azimut;
   }
 
 
-  public ObjectArrival takeOff(Float takeOff) {
-    
+  public ObjectArrival takeOff(@javax.annotation.Nullable Float takeOff) {
     this.takeOff = takeOff;
     return this;
   }
 
-   /**
+  /**
    * Take off angle | double
    * @return takeOff
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "94", value = "Take off angle | double")
-
   public Float getTakeOff() {
     return takeOff;
   }
 
-
-  public void setTakeOff(Float takeOff) {
+  public void setTakeOff(@javax.annotation.Nullable Float takeOff) {
     this.takeOff = takeOff;
   }
 
 
-  public ObjectArrival polarityIsUsed(Boolean polarityIsUsed) {
-    
+  public ObjectArrival polarityIsUsed(@javax.annotation.Nullable Boolean polarityIsUsed) {
     this.polarityIsUsed = polarityIsUsed;
     return this;
   }
 
-   /**
+  /**
    * 1 if it is used for polarity calculation | boolean
    * @return polarityIsUsed
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "1 if it is used for polarity calculation | boolean")
-
   public Boolean getPolarityIsUsed() {
     return polarityIsUsed;
   }
 
-
-  public void setPolarityIsUsed(Boolean polarityIsUsed) {
+  public void setPolarityIsUsed(@javax.annotation.Nullable Boolean polarityIsUsed) {
     this.polarityIsUsed = polarityIsUsed;
   }
 
 
-  public ObjectArrival arrTimeIsUsed(Boolean arrTimeIsUsed) {
-    
+  public ObjectArrival arrTimeIsUsed(@javax.annotation.Nullable Boolean arrTimeIsUsed) {
     this.arrTimeIsUsed = arrTimeIsUsed;
     return this;
   }
 
-   /**
+  /**
    * 1 if it is used for origin calculation | boolean
    * @return arrTimeIsUsed
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "1 if it is used for origin calculation | boolean")
-
   public Boolean getArrTimeIsUsed() {
     return arrTimeIsUsed;
   }
 
-
-  public void setArrTimeIsUsed(Boolean arrTimeIsUsed) {
+  public void setArrTimeIsUsed(@javax.annotation.Nullable Boolean arrTimeIsUsed) {
     this.arrTimeIsUsed = arrTimeIsUsed;
   }
 
 
-  public ObjectArrival residual(Double residual) {
-    
+  public ObjectArrival residual(@javax.annotation.Nullable Double residual) {
     this.residual = residual;
     return this;
   }
 
-   /**
+  /**
    * Residual | double
    * @return residual
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "6.19", value = "Residual | double")
-
   public Double getResidual() {
     return residual;
   }
 
-
-  public void setResidual(Double residual) {
+  public void setResidual(@javax.annotation.Nullable Double residual) {
     this.residual = residual;
   }
 
 
-  public ObjectArrival weight(Double weight) {
-    
+  public ObjectArrival weight(@javax.annotation.Nullable Double weight) {
     this.weight = weight;
     return this;
   }
 
-   /**
+  /**
    * Weight | double
    * @return weight
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.88", value = "Weight | double")
-
   public Double getWeight() {
     return weight;
   }
 
-
-  public void setWeight(Double weight) {
+  public void setWeight(@javax.annotation.Nullable Double weight) {
     this.weight = weight;
   }
 
 
-  public ObjectArrival pick(ObjectPick pick) {
-    
+  public ObjectArrival pick(@javax.annotation.Nullable ObjectPick pick) {
     this.pick = pick;
     return this;
   }
 
-   /**
+  /**
    * Get pick
    * @return pick
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectPick getPick() {
     return pick;
   }
 
-
-  public void setPick(ObjectPick pick) {
+  public void setPick(@javax.annotation.Nullable ObjectPick pick) {
     this.pick = pick;
   }
 
@@ -427,6 +388,10 @@ public class ObjectArrival {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectArrival instance itself
    */
   public ObjectArrival putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -438,6 +403,8 @@ public class ObjectArrival {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -445,6 +412,9 @@ public class ObjectArrival {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -557,33 +527,32 @@ public class ObjectArrival {
     openapiRequiredFields.add("isc_code");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectArrival
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (ObjectArrival.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectArrival
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectArrival.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectArrival is not found in the empty JSON string", ObjectArrival.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : ObjectArrival.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      if ((jsonObj.get("isc_code") != null && !jsonObj.get("isc_code").isJsonNull()) && !jsonObj.get("isc_code").isJsonPrimitive()) {
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("isc_code").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `isc_code` to be a primitive type in the JSON string but got `%s`", jsonObj.get("isc_code").toString()));
       }
       // validate the optional field `pick`
       if (jsonObj.get("pick") != null && !jsonObj.get("pick").isJsonNull()) {
-        ObjectPick.validateJsonObject(jsonObj.getAsJsonObject("pick"));
+        ObjectPick.validateJsonElement(jsonObj.get("pick"));
       }
   }
 
@@ -603,7 +572,7 @@ public class ObjectArrival {
            public void write(JsonWriter out, ObjectArrival value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -615,7 +584,12 @@ public class ObjectArrival {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -624,8 +598,9 @@ public class ObjectArrival {
 
            @Override
            public ObjectArrival read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectArrival instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -639,8 +614,10 @@ public class ObjectArrival {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -651,22 +628,22 @@ public class ObjectArrival {
     }
   }
 
- /**
-  * Create an instance of ObjectArrival given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectArrival
-  * @throws IOException if the JSON string is invalid with respect to ObjectArrival
-  */
+  /**
+   * Create an instance of ObjectArrival given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectArrival
+   * @throws IOException if the JSON string is invalid with respect to ObjectArrival
+   */
   public static ObjectArrival fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectArrival.class);
   }
 
- /**
-  * Convert an instance of ObjectArrival to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectArrival to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

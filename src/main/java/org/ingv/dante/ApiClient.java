@@ -47,6 +47,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Supplier;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -61,6 +62,31 @@ import org.ingv.dante.auth.ApiKeyAuth;
 public class ApiClient {
 
     private String basePath = "https://caravel-dante.int.ingv.it/api";
+    protected List<ServerConfiguration> servers = new ArrayList<ServerConfiguration>(Arrays.asList(
+    new ServerConfiguration(
+      "https://caravel-dante.int.ingv.it/api",
+      "production",
+      new HashMap<String, ServerVariable>()
+    ),
+    new ServerConfiguration(
+      "http://{hostname}/api",
+      "development",
+      new HashMap<String, ServerVariable>() {{
+        put("hostname", new ServerVariable(
+          "No description provided",
+          "localhost:8585",
+          new HashSet<String>(
+            Arrays.asList(
+              "localhost:8585",
+              "caravel-dante.int.ingv.it:8585"
+            )
+          )
+        ));
+      }}
+    )
+  ));
+    protected Integer serverIndex = 0;
+    protected Map<String, String> serverVariables = null;
     private boolean debugging = false;
     private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
     private Map<String, String> defaultCookieMap = new HashMap<String, String>();
@@ -153,6 +179,34 @@ public class ApiClient {
      */
     public ApiClient setBasePath(String basePath) {
         this.basePath = basePath;
+        this.serverIndex = null;
+        return this;
+    }
+
+    public List<ServerConfiguration> getServers() {
+        return servers;
+    }
+
+    public ApiClient setServers(List<ServerConfiguration> servers) {
+        this.servers = servers;
+        return this;
+    }
+
+    public Integer getServerIndex() {
+        return serverIndex;
+    }
+
+    public ApiClient setServerIndex(Integer serverIndex) {
+        this.serverIndex = serverIndex;
+        return this;
+    }
+
+    public Map<String, String> getServerVariables() {
+        return serverVariables;
+    }
+
+    public ApiClient setServerVariables(Map<String, String> serverVariables) {
+        this.serverVariables = serverVariables;
         return this;
     }
 
@@ -280,7 +334,7 @@ public class ApiClient {
      * @return a {@link org.ingv.dante.ApiClient} object
      */
     public ApiClient setDateFormat(DateFormat dateFormat) {
-        this.json.setDateFormat(dateFormat);
+        JSON.setDateFormat(dateFormat);
         return this;
     }
 
@@ -291,7 +345,7 @@ public class ApiClient {
      * @return a {@link org.ingv.dante.ApiClient} object
      */
     public ApiClient setSqlDateFormat(DateFormat dateFormat) {
-        this.json.setSqlDateFormat(dateFormat);
+        JSON.setSqlDateFormat(dateFormat);
         return this;
     }
 
@@ -302,7 +356,7 @@ public class ApiClient {
      * @return a {@link org.ingv.dante.ApiClient} object
      */
     public ApiClient setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
-        this.json.setOffsetDateTimeFormat(dateFormat);
+        JSON.setOffsetDateTimeFormat(dateFormat);
         return this;
     }
 
@@ -313,7 +367,7 @@ public class ApiClient {
      * @return a {@link org.ingv.dante.ApiClient} object
      */
     public ApiClient setLocalDateFormat(DateTimeFormatter dateFormat) {
-        this.json.setLocalDateFormat(dateFormat);
+        JSON.setLocalDateFormat(dateFormat);
         return this;
     }
 
@@ -324,7 +378,7 @@ public class ApiClient {
      * @return a {@link org.ingv.dante.ApiClient} object
      */
     public ApiClient setLenientOnJson(boolean lenientOnJson) {
-        this.json.setLenientOnJson(lenientOnJson);
+        JSON.setLenientOnJson(lenientOnJson);
         return this;
     }
 
@@ -347,14 +401,23 @@ public class ApiClient {
         return authentications.get(authName);
     }
 
-        /**
-        * Helper method to set access token for the first Bearer authentication.
-        * @param bearerToken Bearer token
-        */
+    /**
+     * Helper method to set access token for the first Bearer authentication.
+     * @param bearerToken Bearer token
+     */
     public void setBearerToken(String bearerToken) {
+        setBearerToken(() -> bearerToken);
+    }
+
+    /**
+     * Helper method to set the supplier of access tokens for Bearer authentication.
+     *
+     * @param tokenSupplier The supplier of bearer tokens
+     */
+    public void setBearerToken(Supplier<String> tokenSupplier) {
         for (Authentication auth : authentications.values()) {
             if (auth instanceof HttpBearerAuth) {
-                ((HttpBearerAuth) auth).setBearerToken(bearerToken);
+                ((HttpBearerAuth) auth).setBearerToken(tokenSupplier);
                 return;
             }
         }
@@ -428,6 +491,31 @@ public class ApiClient {
      */
     public void setAccessToken(String accessToken) {
         throw new RuntimeException("No OAuth2 authentication configured!");
+    }
+
+    /**
+     * Helper method to set credentials for AWSV4 Signature
+     *
+     * @param accessKey Access Key
+     * @param secretKey Secret Key
+     * @param region Region
+     * @param service Service to access to
+     */
+    public void setAWS4Configuration(String accessKey, String secretKey, String region, String service) {
+        throw new RuntimeException("No AWS4 authentication configured!");
+    }
+
+    /**
+     * Helper method to set credentials for AWSV4 Signature
+     *
+     * @param accessKey Access Key
+     * @param secretKey Secret Key
+     * @param sessionToken Session Token
+     * @param region Region
+     * @param service Service to access to
+     */
+    public void setAWS4Configuration(String accessKey, String secretKey, String sessionToken, String region, String service) {
+        throw new RuntimeException("No AWS4 authentication configured!");
     }
 
     /**
@@ -598,7 +686,7 @@ public class ApiClient {
             return "";
         } else if (param instanceof Date || param instanceof OffsetDateTime || param instanceof LocalDate) {
             //Serialize to json string and remove the " enclosing characters
-            String jsonStr = json.serialize(param);
+            String jsonStr = JSON.serialize(param);
             return jsonStr.substring(1, jsonStr.length() - 1);
         } else if (param instanceof Collection) {
             StringBuilder b = new StringBuilder();
@@ -606,7 +694,7 @@ public class ApiClient {
                 if (b.length() > 0) {
                     b.append(",");
                 }
-                b.append(String.valueOf(o));
+                b.append(o);
             }
             return b.toString();
         } else {
@@ -684,6 +772,31 @@ public class ApiClient {
 
         return params;
     }
+
+   /**
+    * Formats the specified free-form query parameters to a list of {@code Pair} objects.
+    *
+    * @param value The free-form query parameters.
+    * @return A list of {@code Pair} objects.
+    */
+    public List<Pair> freeFormParameterToPairs(Object value) {
+        List<Pair> params = new ArrayList<>();
+
+        // preconditions
+        if (value == null || !(value instanceof Map )) {
+            return params;
+        }
+
+        @SuppressWarnings("unchecked")
+        final Map<String, Object> valuesMap = (Map<String, Object>) value;
+
+        for (Map.Entry<String, Object> entry : valuesMap.entrySet()) {
+            params.add(new Pair(entry.getKey(), parameterToString(entry.getValue())));
+        }
+
+        return params;
+    }
+
 
     /**
      * Formats the specified collection path parameter to a string value.
@@ -857,7 +970,7 @@ public class ApiClient {
             contentType = "application/json";
         }
         if (isJsonMime(contentType)) {
-            return json.deserialize(respBody, returnType);
+            return JSON.deserialize(respBody, returnType);
         } else if (returnType.equals(String.class)) {
             // Expecting string, return the raw response body.
             return (T) respBody;
@@ -891,13 +1004,13 @@ public class ApiClient {
         } else if (isJsonMime(contentType)) {
             String content;
             if (obj != null) {
-                content = json.serialize(obj);
+                content = JSON.serialize(obj);
             } else {
                 content = null;
             }
             return RequestBody.create(content, MediaType.parse(contentType));
         } else if (obj instanceof String) {
-            return RequestBody.create(MediaType.parse(contentType), (String) obj);
+            return RequestBody.create((String) obj, MediaType.parse(contentType));
         } else {
             throw new ApiException("Content type \"" + contentType + "\" is not supported");
         }
@@ -1123,21 +1236,20 @@ public class ApiClient {
      * @throws org.ingv.dante.ApiException If fail to serialize the request body object
      */
     public Request buildRequest(String baseUrl, String path, String method, List<Pair> queryParams, List<Pair> collectionQueryParams, Object body, Map<String, String> headerParams, Map<String, String> cookieParams, Map<String, Object> formParams, String[] authNames, ApiCallback callback) throws ApiException {
-        // aggregate queryParams (non-collection) and collectionQueryParams into allQueryParams
-        List<Pair> allQueryParams = new ArrayList<Pair>(queryParams);
-        allQueryParams.addAll(collectionQueryParams);
-
         final String url = buildUrl(baseUrl, path, queryParams, collectionQueryParams);
 
         // prepare HTTP request body
         RequestBody reqBody;
         String contentType = headerParams.get("Content-Type");
-
+        String contentTypePure = contentType;
+        if (contentTypePure != null && contentTypePure.contains(";")) {
+            contentTypePure = contentType.substring(0, contentType.indexOf(";"));
+        }
         if (!HttpMethod.permitsRequestBody(method)) {
             reqBody = null;
-        } else if ("application/x-www-form-urlencoded".equals(contentType)) {
+        } else if ("application/x-www-form-urlencoded".equals(contentTypePure)) {
             reqBody = buildRequestBodyFormEncoding(formParams);
-        } else if ("multipart/form-data".equals(contentType)) {
+        } else if ("multipart/form-data".equals(contentTypePure)) {
             reqBody = buildRequestBodyMultipart(formParams);
         } else if (body == null) {
             if ("DELETE".equals(method)) {
@@ -1151,10 +1263,12 @@ public class ApiClient {
             reqBody = serialize(body, contentType);
         }
 
-        // update parameters with authentication settings
-        updateParamsForAuth(authNames, allQueryParams, headerParams, cookieParams, requestBodyToString(reqBody), method, URI.create(url));
+        List<Pair> updatedQueryParams = new ArrayList<>(queryParams);
 
-        final Request.Builder reqBuilder = new Request.Builder().url(url);
+        // update parameters with authentication settings
+        updateParamsForAuth(authNames, updatedQueryParams, headerParams, cookieParams, requestBodyToString(reqBody), method, URI.create(url));
+
+        final Request.Builder reqBuilder = new Request.Builder().url(buildUrl(baseUrl, path, updatedQueryParams, collectionQueryParams));
         processHeaderParams(headerParams, reqBuilder);
         processCookieParams(cookieParams, reqBuilder);
 
@@ -1188,7 +1302,18 @@ public class ApiClient {
         if (baseUrl != null) {
             url.append(baseUrl).append(path);
         } else {
-            url.append(basePath).append(path);
+            String baseURL;
+            if (serverIndex != null) {
+                if (serverIndex < 0 || serverIndex >= servers.size()) {
+                    throw new ArrayIndexOutOfBoundsException(String.format(
+                    "Invalid index %d when selecting the host settings. Must be less than %d", serverIndex, servers.size()
+                    ));
+                }
+                baseURL = servers.get(serverIndex).URL(serverVariables);
+            } else {
+                baseURL = basePath;
+            }
+            url.append(baseURL).append(path);
         }
 
         if (queryParams != null && !queryParams.isEmpty()) {
@@ -1370,7 +1495,7 @@ public class ApiClient {
         } else {
             String content;
             if (obj != null) {
-                content = json.serialize(obj);
+                content = JSON.serialize(obj);
             } else {
                 content = null;
             }
@@ -1448,7 +1573,7 @@ public class ApiClient {
                     KeyStore caKeyStore = newEmptyKeyStore(password);
                     int index = 0;
                     for (Certificate certificate : certificates) {
-                        String certificateAlias = "ca" + Integer.toString(index++);
+                        String certificateAlias = "ca" + (index++);
                         caKeyStore.setCertificateEntry(certificateAlias, certificate);
                     }
                     trustManagerFactory.init(caKeyStore);

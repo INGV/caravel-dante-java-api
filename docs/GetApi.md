@@ -24,7 +24,7 @@ All URIs are relative to *https://caravel-dante.int.ingv.it/api*
 | [**getTypeOrigin**](GetApi.md#getTypeOrigin) | **GET** /quakedb/table/v1/type-origin | This API returns all the type_origin(s). |
 
 
-<a name="getAll"></a>
+<a id="getAll"></a>
 # **getAll**
 > GetEventsGroup200Response getAll(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
@@ -194,7 +194,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getEvent"></a>
+<a id="getEvent"></a>
 # **getEvent**
 > GetEvent200Response getEvent(originid, eventid, level, originOrderby, magnitudeOrderby)
 
@@ -272,7 +272,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getEvents"></a>
+<a id="getEvents"></a>
 # **getEvents**
 > GetEventsGroup200Response getEvents(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
@@ -442,7 +442,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getEventsCatalog"></a>
+<a id="getEventsCatalog"></a>
 # **getEventsCatalog**
 > GetEventsCatalog200Response getEventsCatalog(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid, doi)
 
@@ -614,7 +614,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getEventsGroup"></a>
+<a id="getEventsGroup"></a>
 # **getEventsGroup**
 > GetEventsGroup200Response getEventsGroup(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
@@ -784,7 +784,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getLocalspace"></a>
+<a id="getLocalspace"></a>
 # **getLocalspace**
 > GetLocalspace200Response getLocalspace()
 
@@ -850,7 +850,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getMagnitudes"></a>
+<a id="getMagnitudes"></a>
 # **getMagnitudes**
 > GetEventsGroup200Response getMagnitudes(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
@@ -1020,7 +1020,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getMunicipiDistanceKmPopolazione"></a>
+<a id="getMunicipiDistanceKmPopolazione"></a>
 # **getMunicipiDistanceKmPopolazione**
 > GetMunicipiDistanceKmPopolazione200Response getMunicipiDistanceKmPopolazione(mindistance, maxdistance, minpopolazione, lat, lon)
 
@@ -1098,7 +1098,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getMunicipio"></a>
+<a id="getMunicipio"></a>
 # **getMunicipio**
 > GetMunicipio200Response getMunicipio(name)
 
@@ -1168,7 +1168,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getOriginFlag"></a>
+<a id="getOriginFlag"></a>
 # **getOriginFlag**
 > GetOriginFlag200Response getOriginFlag(originid, name, value, note)
 
@@ -1244,7 +1244,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getOrigins"></a>
+<a id="getOrigins"></a>
 # **getOrigins**
 > GetEventsGroup200Response getOrigins(starttime, endtime, minlat, maxlat, minlon, maxlon, orpolygon, notinpolygon, wherepolygonnamein, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, minmag, maxmag, mindepth, maxdepth, minnphtot, mindistance, wheretypeeventnamein, wheretypeeventnamenotin, whereoriginqualityin, wheremagnitudemagqualityin, mintypeoriginvalue, maxtypeoriginvalue, origindirectlinktoevent, magnitudedirectlinktoorigin, magnitudedirectlinktoevent, wheretypeoriginvaluein, wheretypemagnitudenameregexp, whereeventlocalspaceenvironmentin, whereoriginlocalspaceenvironmentin, wheremagnitudelocalspaceenvironmentin, whereeventlocalspacenamein, whereoriginlocalspacenamein, wheremagnitudelocalspacenamein, eventupdatedafter, originupdatedafter, magnitudeupdatedafter, updatedafteroperator, whereflagsin, orderby, eventGroupId, idLocalspace, limit, page, eventid, originid, magnitudeid)
 
@@ -1414,7 +1414,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getPick"></a>
+<a id="getPick"></a>
 # **getPick**
 > GetPick200Response getPick(starttime, endtime, wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelocalspaceenvironmentin, wherelocalspacenamein, limit, page)
 
@@ -1522,7 +1522,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getProvenance"></a>
+<a id="getProvenance"></a>
 # **getProvenance**
 > GetProvenance200Response getProvenance()
 
@@ -1588,7 +1588,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getRegionName"></a>
+<a id="getRegionName"></a>
 # **getRegionName**
 > GetRegionName200Response getRegionName(lat, lon)
 
@@ -1660,7 +1660,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getScnl"></a>
+<a id="getScnl"></a>
 # **getScnl**
 > GetScnl200Response getScnl(wherenetin, wherestain, wherechain, wherelocin, minlat, maxlat, minlon, maxlon, lat, lon, minradius, maxradius, minradiuskm, maxradiuskm, wherelatorlonarenull, updatedafter, limit, page)
 
@@ -1763,7 +1763,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getTypeEvent"></a>
+<a id="getTypeEvent"></a>
 # **getTypeEvent**
 > GetTypeEvent200Response getTypeEvent()
 
@@ -1829,7 +1829,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getTypeMagnitude"></a>
+<a id="getTypeMagnitude"></a>
 # **getTypeMagnitude**
 > GetTypeMagnitude200Response getTypeMagnitude()
 
@@ -1895,7 +1895,7 @@ No authorization required
 | **200** | Operation successful |  * Cache-Control -  <br>  * X-RateLimit-Limit -  <br>  * X-RateLimit-Remaining -  <br>  * X-RateLimit-Reset -  <br>  |
 | **0** | Unexpected error |  -  |
 
-<a name="getTypeOrigin"></a>
+<a id="getTypeOrigin"></a>
 # **getTypeOrigin**
 > GetTypeOrigin200Response getTypeOrigin()
 

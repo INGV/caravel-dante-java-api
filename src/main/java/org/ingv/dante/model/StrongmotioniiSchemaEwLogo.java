@@ -14,15 +14,13 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -34,12 +32,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -47,169 +48,151 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaEwLogo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class StrongmotioniiSchemaEwLogo {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nonnull
   private String type;
 
   public static final String SERIALIZED_NAME_MODULE = "module";
   @SerializedName(SERIALIZED_NAME_MODULE)
+  @javax.annotation.Nonnull
   private String module;
 
   public static final String SERIALIZED_NAME_INSTALLATION = "installation";
   @SerializedName(SERIALIZED_NAME_INSTALLATION)
+  @javax.annotation.Nonnull
   private String installation;
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
+  @javax.annotation.Nullable
   private String user;
 
   public static final String SERIALIZED_NAME_HOSTNAME = "hostname";
   @SerializedName(SERIALIZED_NAME_HOSTNAME)
+  @javax.annotation.Nullable
   private String hostname;
 
   public static final String SERIALIZED_NAME_INSTANCE = "instance";
   @SerializedName(SERIALIZED_NAME_INSTANCE)
+  @javax.annotation.Nonnull
   private String instance;
 
   public StrongmotioniiSchemaEwLogo() {
   }
 
-  public StrongmotioniiSchemaEwLogo type(String type) {
-    
+  public StrongmotioniiSchemaEwLogo type(@javax.annotation.Nonnull String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Type description | ???
    * @return type
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "TYPE_STRONGMOTIONII", required = true, value = "Type description | ???")
-
   public String getType() {
     return type;
   }
 
-
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nonnull String type) {
     this.type = type;
   }
 
 
-  public StrongmotioniiSchemaEwLogo module(String module) {
-    
+  public StrongmotioniiSchemaEwLogo module(@javax.annotation.Nonnull String module) {
     this.module = module;
     return this;
   }
 
-   /**
+  /**
    * Module description | ???
    * @return module
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "MOD_GMEW", required = true, value = "Module description | ???")
-
   public String getModule() {
     return module;
   }
 
-
-  public void setModule(String module) {
+  public void setModule(@javax.annotation.Nonnull String module) {
     this.module = module;
   }
 
 
-  public StrongmotioniiSchemaEwLogo installation(String installation) {
-    
+  public StrongmotioniiSchemaEwLogo installation(@javax.annotation.Nonnull String installation) {
     this.installation = installation;
     return this;
   }
 
-   /**
+  /**
    * Installation description | ???
    * @return installation
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "INST_INGV", required = true, value = "Installation description | ???")
-
   public String getInstallation() {
     return installation;
   }
 
-
-  public void setInstallation(String installation) {
+  public void setInstallation(@javax.annotation.Nonnull String installation) {
     this.installation = installation;
   }
 
 
-  public StrongmotioniiSchemaEwLogo user(String user) {
-    
+  public StrongmotioniiSchemaEwLogo user(@javax.annotation.Nullable String user) {
     this.user = user;
     return this;
   }
 
-   /**
+  /**
    * User | ???
    * @return user
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ew", value = "User | ???")
-
   public String getUser() {
     return user;
   }
 
-
-  public void setUser(String user) {
+  public void setUser(@javax.annotation.Nullable String user) {
     this.user = user;
   }
 
 
-  public StrongmotioniiSchemaEwLogo hostname(String hostname) {
-    
+  public StrongmotioniiSchemaEwLogo hostname(@javax.annotation.Nullable String hostname) {
     this.hostname = hostname;
     return this;
   }
 
-   /**
+  /**
    * Hostname | ???
    * @return hostname
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "hew3.int.ingv.it", value = "Hostname | ???")
-
   public String getHostname() {
     return hostname;
   }
 
-
-  public void setHostname(String hostname) {
+  public void setHostname(@javax.annotation.Nullable String hostname) {
     this.hostname = hostname;
   }
 
 
-  public StrongmotioniiSchemaEwLogo instance(String instance) {
-    
+  public StrongmotioniiSchemaEwLogo instance(@javax.annotation.Nonnull String instance) {
     this.instance = instance;
     return this;
   }
 
-   /**
+  /**
    * Instance description | ???
    * @return instance
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "hew3_mole", required = true, value = "Instance description | ???")
-
   public String getInstance() {
     return instance;
   }
 
-
-  public void setInstance(String instance) {
+  public void setInstance(@javax.annotation.Nonnull String instance) {
     this.instance = instance;
   }
 
@@ -223,6 +206,10 @@ public class StrongmotioniiSchemaEwLogo {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the StrongmotioniiSchemaEwLogo instance itself
    */
   public StrongmotioniiSchemaEwLogo putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -234,6 +221,8 @@ public class StrongmotioniiSchemaEwLogo {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -241,6 +230,9 @@ public class StrongmotioniiSchemaEwLogo {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -321,34 +313,33 @@ public class StrongmotioniiSchemaEwLogo {
     openapiRequiredFields.add("instance");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to StrongmotioniiSchemaEwLogo
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (StrongmotioniiSchemaEwLogo.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to StrongmotioniiSchemaEwLogo
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!StrongmotioniiSchemaEwLogo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in StrongmotioniiSchemaEwLogo is not found in the empty JSON string", StrongmotioniiSchemaEwLogo.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : StrongmotioniiSchemaEwLogo.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      if ((jsonObj.get("type") != null && !jsonObj.get("type").isJsonNull()) && !jsonObj.get("type").isJsonPrimitive()) {
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("type").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
-      if ((jsonObj.get("module") != null && !jsonObj.get("module").isJsonNull()) && !jsonObj.get("module").isJsonPrimitive()) {
+      if (!jsonObj.get("module").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `module` to be a primitive type in the JSON string but got `%s`", jsonObj.get("module").toString()));
       }
-      if ((jsonObj.get("installation") != null && !jsonObj.get("installation").isJsonNull()) && !jsonObj.get("installation").isJsonPrimitive()) {
+      if (!jsonObj.get("installation").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `installation` to be a primitive type in the JSON string but got `%s`", jsonObj.get("installation").toString()));
       }
       if ((jsonObj.get("user") != null && !jsonObj.get("user").isJsonNull()) && !jsonObj.get("user").isJsonPrimitive()) {
@@ -357,7 +348,7 @@ public class StrongmotioniiSchemaEwLogo {
       if ((jsonObj.get("hostname") != null && !jsonObj.get("hostname").isJsonNull()) && !jsonObj.get("hostname").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `hostname` to be a primitive type in the JSON string but got `%s`", jsonObj.get("hostname").toString()));
       }
-      if ((jsonObj.get("instance") != null && !jsonObj.get("instance").isJsonNull()) && !jsonObj.get("instance").isJsonPrimitive()) {
+      if (!jsonObj.get("instance").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `instance` to be a primitive type in the JSON string but got `%s`", jsonObj.get("instance").toString()));
       }
   }
@@ -378,7 +369,7 @@ public class StrongmotioniiSchemaEwLogo {
            public void write(JsonWriter out, StrongmotioniiSchemaEwLogo value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -390,7 +381,12 @@ public class StrongmotioniiSchemaEwLogo {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -399,8 +395,9 @@ public class StrongmotioniiSchemaEwLogo {
 
            @Override
            public StrongmotioniiSchemaEwLogo read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              StrongmotioniiSchemaEwLogo instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -414,8 +411,10 @@ public class StrongmotioniiSchemaEwLogo {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -426,22 +425,22 @@ public class StrongmotioniiSchemaEwLogo {
     }
   }
 
- /**
-  * Create an instance of StrongmotioniiSchemaEwLogo given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of StrongmotioniiSchemaEwLogo
-  * @throws IOException if the JSON string is invalid with respect to StrongmotioniiSchemaEwLogo
-  */
+  /**
+   * Create an instance of StrongmotioniiSchemaEwLogo given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of StrongmotioniiSchemaEwLogo
+   * @throws IOException if the JSON string is invalid with respect to StrongmotioniiSchemaEwLogo
+   */
   public static StrongmotioniiSchemaEwLogo fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, StrongmotioniiSchemaEwLogo.class);
   }
 
- /**
-  * Convert an instance of StrongmotioniiSchemaEwLogo to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of StrongmotioniiSchemaEwLogo to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

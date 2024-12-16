@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.GetMunicipio200ResponseDataInner;
 
@@ -37,12 +35,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -50,17 +51,17 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipio200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GetMunicipio200Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<GetMunicipio200ResponseDataInner> data = null;
+  @javax.annotation.Nullable
+  private List<GetMunicipio200ResponseDataInner> data = new ArrayList<>();
 
   public GetMunicipio200Response() {
   }
 
-  public GetMunicipio200Response data(List<GetMunicipio200ResponseDataInner> data) {
-    
+  public GetMunicipio200Response data(@javax.annotation.Nullable List<GetMunicipio200ResponseDataInner> data) {
     this.data = data;
     return this;
   }
@@ -73,19 +74,16 @@ public class GetMunicipio200Response {
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public List<GetMunicipio200ResponseDataInner> getData() {
     return data;
   }
 
-
-  public void setData(List<GetMunicipio200ResponseDataInner> data) {
+  public void setData(@javax.annotation.Nullable List<GetMunicipio200ResponseDataInner> data) {
     this.data = data;
   }
 
@@ -99,6 +97,10 @@ public class GetMunicipio200Response {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the GetMunicipio200Response instance itself
    */
   public GetMunicipio200Response putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -110,6 +112,8 @@ public class GetMunicipio200Response {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -117,6 +121,9 @@ public class GetMunicipio200Response {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -178,31 +185,32 @@ public class GetMunicipio200Response {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to GetMunicipio200Response
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (GetMunicipio200Response.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetMunicipio200Response
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!GetMunicipio200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in GetMunicipio200Response is not found in the empty JSON string", GetMunicipio200Response.openapiRequiredFields.toString()));
         }
       }
-      JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
-      if (jsonArraydata != null) {
-        // ensure the json data is an array
-        if (!jsonObj.get("data").isJsonArray()) {
-          throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
-        }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (jsonObj.get("data") != null && !jsonObj.get("data").isJsonNull()) {
+        JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+        if (jsonArraydata != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("data").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `data` to be an array in the JSON string but got `%s`", jsonObj.get("data").toString()));
+          }
 
-        // validate the optional field `data` (array)
-        for (int i = 0; i < jsonArraydata.size(); i++) {
-          GetMunicipio200ResponseDataInner.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
-        };
+          // validate the optional field `data` (array)
+          for (int i = 0; i < jsonArraydata.size(); i++) {
+            GetMunicipio200ResponseDataInner.validateJsonElement(jsonArraydata.get(i));
+          };
+        }
       }
   }
 
@@ -222,7 +230,7 @@ public class GetMunicipio200Response {
            public void write(JsonWriter out, GetMunicipio200Response value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -234,7 +242,12 @@ public class GetMunicipio200Response {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -243,8 +256,9 @@ public class GetMunicipio200Response {
 
            @Override
            public GetMunicipio200Response read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              GetMunicipio200Response instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -258,8 +272,10 @@ public class GetMunicipio200Response {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -270,22 +286,22 @@ public class GetMunicipio200Response {
     }
   }
 
- /**
-  * Create an instance of GetMunicipio200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetMunicipio200Response
-  * @throws IOException if the JSON string is invalid with respect to GetMunicipio200Response
-  */
+  /**
+   * Create an instance of GetMunicipio200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetMunicipio200Response
+   * @throws IOException if the JSON string is invalid with respect to GetMunicipio200Response
+   */
   public static GetMunicipio200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetMunicipio200Response.class);
   }
 
- /**
-  * Convert an instance of GetMunicipio200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetMunicipio200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

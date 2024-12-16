@@ -14,17 +14,15 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.ingv.dante.model.PickFirstmotion;
 import org.openapitools.jackson.nullable.JsonNullable;
@@ -39,12 +37,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -52,233 +53,209 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class PickScnlSchemaEwMessage {
   public static final String SERIALIZED_NAME_PICK_ID = "pickId";
   @SerializedName(SERIALIZED_NAME_PICK_ID)
+  @javax.annotation.Nullable
   private Long pickId;
 
   public static final String SERIALIZED_NAME_NETWORK = "network";
   @SerializedName(SERIALIZED_NAME_NETWORK)
+  @javax.annotation.Nullable
   private String network;
 
   public static final String SERIALIZED_NAME_STATION = "station";
   @SerializedName(SERIALIZED_NAME_STATION)
+  @javax.annotation.Nullable
   private String station;
 
   public static final String SERIALIZED_NAME_COMPONENT = "component";
   @SerializedName(SERIALIZED_NAME_COMPONENT)
+  @javax.annotation.Nullable
   private String component;
 
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
+  @javax.annotation.Nullable
   private String location = "--";
 
   public static final String SERIALIZED_NAME_FIRST_MOTION = "firstMotion";
   @SerializedName(SERIALIZED_NAME_FIRST_MOTION)
+  @javax.annotation.Nullable
   private PickFirstmotion firstMotion;
 
   public static final String SERIALIZED_NAME_PICK_WEIGHT = "pickWeight";
   @SerializedName(SERIALIZED_NAME_PICK_WEIGHT)
+  @javax.annotation.Nullable
   private Float pickWeight;
 
   public static final String SERIALIZED_NAME_TIME_OF_PICK = "timeOfPick";
   @SerializedName(SERIALIZED_NAME_TIME_OF_PICK)
+  @javax.annotation.Nullable
   private OffsetDateTime timeOfPick;
 
   public static final String SERIALIZED_NAME_P_AMPLITUDE = "pAmplitude";
   @SerializedName(SERIALIZED_NAME_P_AMPLITUDE)
-  private List<Double> pAmplitude = null;
+  @javax.annotation.Nullable
+  private List<Double> pAmplitude = new ArrayList<>();
 
   public PickScnlSchemaEwMessage() {
   }
 
-  public PickScnlSchemaEwMessage pickId(Long pickId) {
-    
+  public PickScnlSchemaEwMessage pickId(@javax.annotation.Nullable Long pickId) {
     this.pickId = pickId;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return pickId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", required = true, value = "Localspace Id | bigint(19)")
-
   public Long getPickId() {
     return pickId;
   }
 
-
-  public void setPickId(Long pickId) {
+  public void setPickId(@javax.annotation.Nullable Long pickId) {
     this.pickId = pickId;
   }
 
 
-  public PickScnlSchemaEwMessage network(String network) {
-    
+  public PickScnlSchemaEwMessage network(@javax.annotation.Nullable String network) {
     this.network = network;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return network
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "IV", value = "Channel net code | char(2)")
-
   public String getNetwork() {
     return network;
   }
 
-
-  public void setNetwork(String network) {
+  public void setNetwork(@javax.annotation.Nullable String network) {
     this.network = network;
   }
 
 
-  public PickScnlSchemaEwMessage station(String station) {
-    
+  public PickScnlSchemaEwMessage station(@javax.annotation.Nullable String station) {
     this.station = station;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return station
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "ACER", value = "Channel station code | varchar(5)")
-
   public String getStation() {
     return station;
   }
 
-
-  public void setStation(String station) {
+  public void setStation(@javax.annotation.Nullable String station) {
     this.station = station;
   }
 
 
-  public PickScnlSchemaEwMessage component(String component) {
-    
+  public PickScnlSchemaEwMessage component(@javax.annotation.Nullable String component) {
     this.component = component;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return component
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "HHZ", value = "Channel code | char(3)")
-
   public String getComponent() {
     return component;
   }
 
-
-  public void setComponent(String component) {
+  public void setComponent(@javax.annotation.Nullable String component) {
     this.component = component;
   }
 
 
-  public PickScnlSchemaEwMessage location(String location) {
-    
+  public PickScnlSchemaEwMessage location(@javax.annotation.Nullable String location) {
     this.location = location;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return location
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "00", value = "Channel location | char(2)")
-
   public String getLocation() {
     return location;
   }
 
-
-  public void setLocation(String location) {
+  public void setLocation(@javax.annotation.Nullable String location) {
     this.location = location;
   }
 
 
-  public PickScnlSchemaEwMessage firstMotion(PickFirstmotion firstMotion) {
-    
+  public PickScnlSchemaEwMessage firstMotion(@javax.annotation.Nullable PickFirstmotion firstMotion) {
     this.firstMotion = firstMotion;
     return this;
   }
 
-   /**
+  /**
    * Get firstMotion
    * @return firstMotion
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public PickFirstmotion getFirstMotion() {
     return firstMotion;
   }
 
-
-  public void setFirstMotion(PickFirstmotion firstMotion) {
+  public void setFirstMotion(@javax.annotation.Nullable PickFirstmotion firstMotion) {
     this.firstMotion = firstMotion;
   }
 
 
-  public PickScnlSchemaEwMessage pickWeight(Float pickWeight) {
-    
+  public PickScnlSchemaEwMessage pickWeight(@javax.annotation.Nullable Float pickWeight) {
     this.pickWeight = pickWeight;
     return this;
   }
 
-   /**
+  /**
    * Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)
    * @return pickWeight
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0.52", value = "Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)")
-
   public Float getPickWeight() {
     return pickWeight;
   }
 
-
-  public void setPickWeight(Float pickWeight) {
+  public void setPickWeight(@javax.annotation.Nullable Float pickWeight) {
     this.pickWeight = pickWeight;
   }
 
 
-  public PickScnlSchemaEwMessage timeOfPick(OffsetDateTime timeOfPick) {
-    
+  public PickScnlSchemaEwMessage timeOfPick(@javax.annotation.Nullable OffsetDateTime timeOfPick) {
     this.timeOfPick = timeOfPick;
     return this;
   }
 
-   /**
+  /**
    * Arrival time with microseconds | datetime(3)
    * @return timeOfPick
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2017-04-12T08:46:30.930Z", value = "Arrival time with microseconds | datetime(3)")
-
   public OffsetDateTime getTimeOfPick() {
     return timeOfPick;
   }
 
-
-  public void setTimeOfPick(OffsetDateTime timeOfPick) {
+  public void setTimeOfPick(@javax.annotation.Nullable OffsetDateTime timeOfPick) {
     this.timeOfPick = timeOfPick;
   }
 
 
-  public PickScnlSchemaEwMessage pAmplitude(List<Double> pAmplitude) {
-    
+  public PickScnlSchemaEwMessage pAmplitude(@javax.annotation.Nullable List<Double> pAmplitude) {
     this.pAmplitude = pAmplitude;
     return this;
   }
@@ -291,19 +268,16 @@ public class PickScnlSchemaEwMessage {
     return this;
   }
 
-   /**
+  /**
    * Get pAmplitude
    * @return pAmplitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[109,101,122]", value = "")
-
   public List<Double> getpAmplitude() {
     return pAmplitude;
   }
 
-
-  public void setpAmplitude(List<Double> pAmplitude) {
+  public void setpAmplitude(@javax.annotation.Nullable List<Double> pAmplitude) {
     this.pAmplitude = pAmplitude;
   }
 
@@ -317,6 +291,10 @@ public class PickScnlSchemaEwMessage {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the PickScnlSchemaEwMessage instance itself
    */
   public PickScnlSchemaEwMessage putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -328,6 +306,8 @@ public class PickScnlSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -335,6 +315,9 @@ public class PickScnlSchemaEwMessage {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -432,27 +415,26 @@ public class PickScnlSchemaEwMessage {
     openapiRequiredFields.add("pickId");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to PickScnlSchemaEwMessage
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (PickScnlSchemaEwMessage.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PickScnlSchemaEwMessage
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!PickScnlSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in PickScnlSchemaEwMessage is not found in the empty JSON string", PickScnlSchemaEwMessage.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : PickScnlSchemaEwMessage.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("network") != null && !jsonObj.get("network").isJsonNull()) && !jsonObj.get("network").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `network` to be a primitive type in the JSON string but got `%s`", jsonObj.get("network").toString()));
       }
@@ -465,8 +447,12 @@ public class PickScnlSchemaEwMessage {
       if ((jsonObj.get("location") != null && !jsonObj.get("location").isJsonNull()) && !jsonObj.get("location").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `location` to be a primitive type in the JSON string but got `%s`", jsonObj.get("location").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("pAmplitude") != null && !jsonObj.get("pAmplitude").isJsonNull()) && !jsonObj.get("pAmplitude").isJsonArray()) {
+      // validate the optional field `firstMotion`
+      if (jsonObj.get("firstMotion") != null && !jsonObj.get("firstMotion").isJsonNull()) {
+        PickFirstmotion.validateJsonElement(jsonObj.get("firstMotion"));
+      }
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("pAmplitude") != null && !jsonObj.get("pAmplitude").isJsonNull() && !jsonObj.get("pAmplitude").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `pAmplitude` to be an array in the JSON string but got `%s`", jsonObj.get("pAmplitude").toString()));
       }
   }
@@ -487,7 +473,7 @@ public class PickScnlSchemaEwMessage {
            public void write(JsonWriter out, PickScnlSchemaEwMessage value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -499,7 +485,12 @@ public class PickScnlSchemaEwMessage {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -508,8 +499,9 @@ public class PickScnlSchemaEwMessage {
 
            @Override
            public PickScnlSchemaEwMessage read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              PickScnlSchemaEwMessage instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -523,8 +515,10 @@ public class PickScnlSchemaEwMessage {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -535,22 +529,22 @@ public class PickScnlSchemaEwMessage {
     }
   }
 
- /**
-  * Create an instance of PickScnlSchemaEwMessage given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PickScnlSchemaEwMessage
-  * @throws IOException if the JSON string is invalid with respect to PickScnlSchemaEwMessage
-  */
+  /**
+   * Create an instance of PickScnlSchemaEwMessage given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PickScnlSchemaEwMessage
+   * @throws IOException if the JSON string is invalid with respect to PickScnlSchemaEwMessage
+   */
   public static PickScnlSchemaEwMessage fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PickScnlSchemaEwMessage.class);
   }
 
- /**
-  * Convert an instance of PickScnlSchemaEwMessage to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PickScnlSchemaEwMessage to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

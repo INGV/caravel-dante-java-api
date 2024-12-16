@@ -14,17 +14,15 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -37,12 +35,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -50,778 +51,705 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcPhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class Hyp2000arcPhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
+  @javax.annotation.Nonnull
   private String net;
 
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
+  @javax.annotation.Nonnull
   private String sta;
 
   public static final String SERIALIZED_NAME_COMP = "comp";
   @SerializedName(SERIALIZED_NAME_COMP)
+  @javax.annotation.Nonnull
   private String comp;
 
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
+  @javax.annotation.Nonnull
   private String loc = "--";
 
   public static final String SERIALIZED_NAME_PLABEL = "Plabel";
   @SerializedName(SERIALIZED_NAME_PLABEL)
+  @javax.annotation.Nullable
   private String plabel;
 
   public static final String SERIALIZED_NAME_SLABEL = "Slabel";
   @SerializedName(SERIALIZED_NAME_SLABEL)
+  @javax.annotation.Nullable
   private String slabel;
 
   public static final String SERIALIZED_NAME_PONSET = "Ponset";
   @SerializedName(SERIALIZED_NAME_PONSET)
+  @javax.annotation.Nullable
   private String ponset;
 
   public static final String SERIALIZED_NAME_SONSET = "Sonset";
   @SerializedName(SERIALIZED_NAME_SONSET)
+  @javax.annotation.Nullable
   private String sonset;
 
   public static final String SERIALIZED_NAME_PAT = "Pat";
   @SerializedName(SERIALIZED_NAME_PAT)
+  @javax.annotation.Nullable
   private OffsetDateTime pat;
 
   public static final String SERIALIZED_NAME_SAT = "Sat";
   @SerializedName(SERIALIZED_NAME_SAT)
+  @javax.annotation.Nullable
   private OffsetDateTime sat;
 
   public static final String SERIALIZED_NAME_PRES = "Pres";
   @SerializedName(SERIALIZED_NAME_PRES)
+  @javax.annotation.Nullable
   private Double pres;
 
   public static final String SERIALIZED_NAME_SRES = "Sres";
   @SerializedName(SERIALIZED_NAME_SRES)
+  @javax.annotation.Nullable
   private Double sres;
 
   public static final String SERIALIZED_NAME_PQUAL = "Pqual";
   @SerializedName(SERIALIZED_NAME_PQUAL)
+  @javax.annotation.Nullable
   private Double pqual;
 
   public static final String SERIALIZED_NAME_SQUAL = "Squal";
   @SerializedName(SERIALIZED_NAME_SQUAL)
+  @javax.annotation.Nullable
   private Double squal;
 
   public static final String SERIALIZED_NAME_CODALEN = "codalen";
   @SerializedName(SERIALIZED_NAME_CODALEN)
+  @javax.annotation.Nullable
   private Double codalen;
 
   public static final String SERIALIZED_NAME_CODAWT = "codawt";
   @SerializedName(SERIALIZED_NAME_CODAWT)
+  @javax.annotation.Nullable
   private Double codawt;
 
   public static final String SERIALIZED_NAME_PFM = "Pfm";
   @SerializedName(SERIALIZED_NAME_PFM)
+  @javax.annotation.Nullable
   private String pfm;
 
   public static final String SERIALIZED_NAME_SFM = "Sfm";
   @SerializedName(SERIALIZED_NAME_SFM)
+  @javax.annotation.Nullable
   private String sfm;
 
   public static final String SERIALIZED_NAME_DATASRC = "datasrc";
   @SerializedName(SERIALIZED_NAME_DATASRC)
+  @javax.annotation.Nullable
   private String datasrc;
 
   public static final String SERIALIZED_NAME_MD = "Md";
   @SerializedName(SERIALIZED_NAME_MD)
+  @javax.annotation.Nullable
   private Double md;
 
   public static final String SERIALIZED_NAME_AZM = "azm";
   @SerializedName(SERIALIZED_NAME_AZM)
+  @javax.annotation.Nullable
   private Double azm;
 
   public static final String SERIALIZED_NAME_TAKEOFF = "takeoff";
   @SerializedName(SERIALIZED_NAME_TAKEOFF)
+  @javax.annotation.Nullable
   private Double takeoff;
 
   public static final String SERIALIZED_NAME_DIST = "dist";
   @SerializedName(SERIALIZED_NAME_DIST)
+  @javax.annotation.Nullable
   private Double dist;
 
   public static final String SERIALIZED_NAME_PWT = "Pwt";
   @SerializedName(SERIALIZED_NAME_PWT)
+  @javax.annotation.Nullable
   private Double pwt;
 
   public static final String SERIALIZED_NAME_SWT = "Swt";
   @SerializedName(SERIALIZED_NAME_SWT)
+  @javax.annotation.Nullable
   private Double swt;
 
   public static final String SERIALIZED_NAME_PAMP = "pamp";
   @SerializedName(SERIALIZED_NAME_PAMP)
+  @javax.annotation.Nullable
   private Double pamp;
 
   public static final String SERIALIZED_NAME_CODALEN_OBS = "codalenObs";
   @SerializedName(SERIALIZED_NAME_CODALEN_OBS)
+  @javax.annotation.Nullable
   private Double codalenObs;
 
   public static final String SERIALIZED_NAME_CCNTR = "ccntr";
   @SerializedName(SERIALIZED_NAME_CCNTR)
-  private List<Long> ccntr = null;
+  @javax.annotation.Nullable
+  private List<Long> ccntr = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_CAAV = "caav";
   @SerializedName(SERIALIZED_NAME_CAAV)
-  private List<Long> caav = null;
+  @javax.annotation.Nullable
+  private List<Long> caav = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_AMPLITUDE = "amplitude";
   @SerializedName(SERIALIZED_NAME_AMPLITUDE)
+  @javax.annotation.Nullable
   private Float amplitude;
 
   public static final String SERIALIZED_NAME_AMP_UNITS_CODE = "ampUnitsCode";
   @SerializedName(SERIALIZED_NAME_AMP_UNITS_CODE)
+  @javax.annotation.Nullable
   private Long ampUnitsCode;
 
   public static final String SERIALIZED_NAME_AMP_TYPE = "ampType";
   @SerializedName(SERIALIZED_NAME_AMP_TYPE)
+  @javax.annotation.Nullable
   private Long ampType;
 
   public static final String SERIALIZED_NAME_AMP_MAG = "ampMag";
   @SerializedName(SERIALIZED_NAME_AMP_MAG)
+  @javax.annotation.Nullable
   private Float ampMag;
 
   public static final String SERIALIZED_NAME_AMP_MAG_WEIGHT_CODE = "ampMagWeightCode";
   @SerializedName(SERIALIZED_NAME_AMP_MAG_WEIGHT_CODE)
+  @javax.annotation.Nullable
   private Long ampMagWeightCode;
 
   public static final String SERIALIZED_NAME_IMPORTANCE_P = "importanceP";
   @SerializedName(SERIALIZED_NAME_IMPORTANCE_P)
+  @javax.annotation.Nullable
   private Float importanceP;
 
   public static final String SERIALIZED_NAME_IMPORTANCE_S = "importanceS";
   @SerializedName(SERIALIZED_NAME_IMPORTANCE_S)
+  @javax.annotation.Nullable
   private Float importanceS;
 
   public Hyp2000arcPhasesInner() {
   }
 
-  public Hyp2000arcPhasesInner net(String net) {
-    
+  public Hyp2000arcPhasesInner net(@javax.annotation.Nonnull String net) {
     this.net = net;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return net
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "IV", required = true, value = "Channel net code | char(2)")
-
   public String getNet() {
     return net;
   }
 
-
-  public void setNet(String net) {
+  public void setNet(@javax.annotation.Nonnull String net) {
     this.net = net;
   }
 
 
-  public Hyp2000arcPhasesInner sta(String sta) {
-    
+  public Hyp2000arcPhasesInner sta(@javax.annotation.Nonnull String sta) {
     this.sta = sta;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return sta
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "ACER", required = true, value = "Channel station code | varchar(5)")
-
   public String getSta() {
     return sta;
   }
 
-
-  public void setSta(String sta) {
+  public void setSta(@javax.annotation.Nonnull String sta) {
     this.sta = sta;
   }
 
 
-  public Hyp2000arcPhasesInner comp(String comp) {
-    
+  public Hyp2000arcPhasesInner comp(@javax.annotation.Nonnull String comp) {
     this.comp = comp;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return comp
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "HHZ", required = true, value = "Channel code | char(3)")
-
   public String getComp() {
     return comp;
   }
 
-
-  public void setComp(String comp) {
+  public void setComp(@javax.annotation.Nonnull String comp) {
     this.comp = comp;
   }
 
 
-  public Hyp2000arcPhasesInner loc(String loc) {
-    
+  public Hyp2000arcPhasesInner loc(@javax.annotation.Nonnull String loc) {
     this.loc = loc;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return loc
-  **/
+   */
   @javax.annotation.Nonnull
-  @ApiModelProperty(example = "00", required = true, value = "Channel location | char(2)")
-
   public String getLoc() {
     return loc;
   }
 
-
-  public void setLoc(String loc) {
+  public void setLoc(@javax.annotation.Nonnull String loc) {
     this.loc = loc;
   }
 
 
-  public Hyp2000arcPhasesInner plabel(String plabel) {
-    
+  public Hyp2000arcPhasesInner plabel(@javax.annotation.Nullable String plabel) {
     this.plabel = plabel;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return plabel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = " ", value = "Todo description | ???")
-
   public String getPlabel() {
     return plabel;
   }
 
-
-  public void setPlabel(String plabel) {
+  public void setPlabel(@javax.annotation.Nullable String plabel) {
     this.plabel = plabel;
   }
 
 
-  public Hyp2000arcPhasesInner slabel(String slabel) {
-    
+  public Hyp2000arcPhasesInner slabel(@javax.annotation.Nullable String slabel) {
     this.slabel = slabel;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return slabel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = " ", value = "Todo description | ???")
-
   public String getSlabel() {
     return slabel;
   }
 
-
-  public void setSlabel(String slabel) {
+  public void setSlabel(@javax.annotation.Nullable String slabel) {
     this.slabel = slabel;
   }
 
 
-  public Hyp2000arcPhasesInner ponset(String ponset) {
-    
+  public Hyp2000arcPhasesInner ponset(@javax.annotation.Nullable String ponset) {
     this.ponset = ponset;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return ponset
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "P", value = "Todo description | ???")
-
   public String getPonset() {
     return ponset;
   }
 
-
-  public void setPonset(String ponset) {
+  public void setPonset(@javax.annotation.Nullable String ponset) {
     this.ponset = ponset;
   }
 
 
-  public Hyp2000arcPhasesInner sonset(String sonset) {
-    
+  public Hyp2000arcPhasesInner sonset(@javax.annotation.Nullable String sonset) {
     this.sonset = sonset;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return sonset
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = " ", value = "Todo description | ???")
-
   public String getSonset() {
     return sonset;
   }
 
-
-  public void setSonset(String sonset) {
+  public void setSonset(@javax.annotation.Nullable String sonset) {
     this.sonset = sonset;
   }
 
 
-  public Hyp2000arcPhasesInner pat(OffsetDateTime pat) {
-    
+  public Hyp2000arcPhasesInner pat(@javax.annotation.Nullable OffsetDateTime pat) {
     this.pat = pat;
     return this;
   }
 
-   /**
+  /**
    * Origin time | datetime(3)
    * @return pat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Origin time | datetime(3)")
-
   public OffsetDateTime getPat() {
     return pat;
   }
 
-
-  public void setPat(OffsetDateTime pat) {
+  public void setPat(@javax.annotation.Nullable OffsetDateTime pat) {
     this.pat = pat;
   }
 
 
-  public Hyp2000arcPhasesInner sat(OffsetDateTime sat) {
-    
+  public Hyp2000arcPhasesInner sat(@javax.annotation.Nullable OffsetDateTime sat) {
     this.sat = sat;
     return this;
   }
 
-   /**
+  /**
    * Origin time | datetime(3)
    * @return sat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Origin time | datetime(3)")
-
   public OffsetDateTime getSat() {
     return sat;
   }
 
-
-  public void setSat(OffsetDateTime sat) {
+  public void setSat(@javax.annotation.Nullable OffsetDateTime sat) {
     this.sat = sat;
   }
 
 
-  public Hyp2000arcPhasesInner pres(Double pres) {
-    
+  public Hyp2000arcPhasesInner pres(@javax.annotation.Nullable Double pres) {
     this.pres = pres;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return pres
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getPres() {
     return pres;
   }
 
-
-  public void setPres(Double pres) {
+  public void setPres(@javax.annotation.Nullable Double pres) {
     this.pres = pres;
   }
 
 
-  public Hyp2000arcPhasesInner sres(Double sres) {
-    
+  public Hyp2000arcPhasesInner sres(@javax.annotation.Nullable Double sres) {
     this.sres = sres;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return sres
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getSres() {
     return sres;
   }
 
-
-  public void setSres(Double sres) {
+  public void setSres(@javax.annotation.Nullable Double sres) {
     this.sres = sres;
   }
 
 
-  public Hyp2000arcPhasesInner pqual(Double pqual) {
-    
+  public Hyp2000arcPhasesInner pqual(@javax.annotation.Nullable Double pqual) {
     this.pqual = pqual;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return pqual
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getPqual() {
     return pqual;
   }
 
-
-  public void setPqual(Double pqual) {
+  public void setPqual(@javax.annotation.Nullable Double pqual) {
     this.pqual = pqual;
   }
 
 
-  public Hyp2000arcPhasesInner squal(Double squal) {
-    
+  public Hyp2000arcPhasesInner squal(@javax.annotation.Nullable Double squal) {
     this.squal = squal;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return squal
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getSqual() {
     return squal;
   }
 
-
-  public void setSqual(Double squal) {
+  public void setSqual(@javax.annotation.Nullable Double squal) {
     this.squal = squal;
   }
 
 
-  public Hyp2000arcPhasesInner codalen(Double codalen) {
-    
+  public Hyp2000arcPhasesInner codalen(@javax.annotation.Nullable Double codalen) {
     this.codalen = codalen;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return codalen
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getCodalen() {
     return codalen;
   }
 
-
-  public void setCodalen(Double codalen) {
+  public void setCodalen(@javax.annotation.Nullable Double codalen) {
     this.codalen = codalen;
   }
 
 
-  public Hyp2000arcPhasesInner codawt(Double codawt) {
-    
+  public Hyp2000arcPhasesInner codawt(@javax.annotation.Nullable Double codawt) {
     this.codawt = codawt;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return codawt
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getCodawt() {
     return codawt;
   }
 
-
-  public void setCodawt(Double codawt) {
+  public void setCodawt(@javax.annotation.Nullable Double codawt) {
     this.codawt = codawt;
   }
 
 
-  public Hyp2000arcPhasesInner pfm(String pfm) {
-    
+  public Hyp2000arcPhasesInner pfm(@javax.annotation.Nullable String pfm) {
     this.pfm = pfm;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return pfm
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = " ", value = "Todo description | ???")
-
   public String getPfm() {
     return pfm;
   }
 
-
-  public void setPfm(String pfm) {
+  public void setPfm(@javax.annotation.Nullable String pfm) {
     this.pfm = pfm;
   }
 
 
-  public Hyp2000arcPhasesInner sfm(String sfm) {
-    
+  public Hyp2000arcPhasesInner sfm(@javax.annotation.Nullable String sfm) {
     this.sfm = sfm;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return sfm
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = " ", value = "Todo description | ???")
-
   public String getSfm() {
     return sfm;
   }
 
-
-  public void setSfm(String sfm) {
+  public void setSfm(@javax.annotation.Nullable String sfm) {
     this.sfm = sfm;
   }
 
 
-  public Hyp2000arcPhasesInner datasrc(String datasrc) {
-    
+  public Hyp2000arcPhasesInner datasrc(@javax.annotation.Nullable String datasrc) {
     this.datasrc = datasrc;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return datasrc
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "W", value = "Todo description | ???")
-
   public String getDatasrc() {
     return datasrc;
   }
 
-
-  public void setDatasrc(String datasrc) {
+  public void setDatasrc(@javax.annotation.Nullable String datasrc) {
     this.datasrc = datasrc;
   }
 
 
-  public Hyp2000arcPhasesInner md(Double md) {
-    
+  public Hyp2000arcPhasesInner md(@javax.annotation.Nullable Double md) {
     this.md = md;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return md
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getMd() {
     return md;
   }
 
-
-  public void setMd(Double md) {
+  public void setMd(@javax.annotation.Nullable Double md) {
     this.md = md;
   }
 
 
-  public Hyp2000arcPhasesInner azm(Double azm) {
-    
+  public Hyp2000arcPhasesInner azm(@javax.annotation.Nullable Double azm) {
     this.azm = azm;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return azm
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getAzm() {
     return azm;
   }
 
-
-  public void setAzm(Double azm) {
+  public void setAzm(@javax.annotation.Nullable Double azm) {
     this.azm = azm;
   }
 
 
-  public Hyp2000arcPhasesInner takeoff(Double takeoff) {
-    
+  public Hyp2000arcPhasesInner takeoff(@javax.annotation.Nullable Double takeoff) {
     this.takeoff = takeoff;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return takeoff
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getTakeoff() {
     return takeoff;
   }
 
-
-  public void setTakeoff(Double takeoff) {
+  public void setTakeoff(@javax.annotation.Nullable Double takeoff) {
     this.takeoff = takeoff;
   }
 
 
-  public Hyp2000arcPhasesInner dist(Double dist) {
-    
+  public Hyp2000arcPhasesInner dist(@javax.annotation.Nullable Double dist) {
     this.dist = dist;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return dist
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getDist() {
     return dist;
   }
 
-
-  public void setDist(Double dist) {
+  public void setDist(@javax.annotation.Nullable Double dist) {
     this.dist = dist;
   }
 
 
-  public Hyp2000arcPhasesInner pwt(Double pwt) {
-    
+  public Hyp2000arcPhasesInner pwt(@javax.annotation.Nullable Double pwt) {
     this.pwt = pwt;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return pwt
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getPwt() {
     return pwt;
   }
 
-
-  public void setPwt(Double pwt) {
+  public void setPwt(@javax.annotation.Nullable Double pwt) {
     this.pwt = pwt;
   }
 
 
-  public Hyp2000arcPhasesInner swt(Double swt) {
-    
+  public Hyp2000arcPhasesInner swt(@javax.annotation.Nullable Double swt) {
     this.swt = swt;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return swt
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getSwt() {
     return swt;
   }
 
-
-  public void setSwt(Double swt) {
+  public void setSwt(@javax.annotation.Nullable Double swt) {
     this.swt = swt;
   }
 
 
-  public Hyp2000arcPhasesInner pamp(Double pamp) {
-    
+  public Hyp2000arcPhasesInner pamp(@javax.annotation.Nullable Double pamp) {
     this.pamp = pamp;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return pamp
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getPamp() {
     return pamp;
   }
 
-
-  public void setPamp(Double pamp) {
+  public void setPamp(@javax.annotation.Nullable Double pamp) {
     this.pamp = pamp;
   }
 
 
-  public Hyp2000arcPhasesInner codalenObs(Double codalenObs) {
-    
+  public Hyp2000arcPhasesInner codalenObs(@javax.annotation.Nullable Double codalenObs) {
     this.codalenObs = codalenObs;
     return this;
   }
 
-   /**
+  /**
    * Todo description | ???
    * @return codalenObs
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Todo description | ???")
-
   public Double getCodalenObs() {
     return codalenObs;
   }
 
-
-  public void setCodalenObs(Double codalenObs) {
+  public void setCodalenObs(@javax.annotation.Nullable Double codalenObs) {
     this.codalenObs = codalenObs;
   }
 
 
-  public Hyp2000arcPhasesInner ccntr(List<Long> ccntr) {
-    
+  public Hyp2000arcPhasesInner ccntr(@javax.annotation.Nullable List<Long> ccntr) {
     this.ccntr = ccntr;
     return this;
   }
@@ -834,25 +762,21 @@ public class Hyp2000arcPhasesInner {
     return this;
   }
 
-   /**
+  /**
    * Get ccntr
    * @return ccntr
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[0,0,0,0,0,0]", value = "")
-
   public List<Long> getCcntr() {
     return ccntr;
   }
 
-
-  public void setCcntr(List<Long> ccntr) {
+  public void setCcntr(@javax.annotation.Nullable List<Long> ccntr) {
     this.ccntr = ccntr;
   }
 
 
-  public Hyp2000arcPhasesInner caav(List<Long> caav) {
-    
+  public Hyp2000arcPhasesInner caav(@javax.annotation.Nullable List<Long> caav) {
     this.caav = caav;
     return this;
   }
@@ -865,180 +789,149 @@ public class Hyp2000arcPhasesInner {
     return this;
   }
 
-   /**
+  /**
    * Get caav
    * @return caav
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[0,0,0,0,0,0]", value = "")
-
   public List<Long> getCaav() {
     return caav;
   }
 
-
-  public void setCaav(List<Long> caav) {
+  public void setCaav(@javax.annotation.Nullable List<Long> caav) {
     this.caav = caav;
   }
 
 
-  public Hyp2000arcPhasesInner amplitude(Float amplitude) {
-    
+  public Hyp2000arcPhasesInner amplitude(@javax.annotation.Nullable Float amplitude) {
     this.amplitude = amplitude;
     return this;
   }
 
-   /**
+  /**
    * Amplitude (Normally peak-to-peak) | col55 F7.2
    * @return amplitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amplitude (Normally peak-to-peak) | col55 F7.2")
-
   public Float getAmplitude() {
     return amplitude;
   }
 
-
-  public void setAmplitude(Float amplitude) {
+  public void setAmplitude(@javax.annotation.Nullable Float amplitude) {
     this.amplitude = amplitude;
   }
 
 
-  public Hyp2000arcPhasesInner ampUnitsCode(Long ampUnitsCode) {
-    
+  public Hyp2000arcPhasesInner ampUnitsCode(@javax.annotation.Nullable Long ampUnitsCode) {
     this.ampUnitsCode = ampUnitsCode;
     return this;
   }
 
-   /**
+  /**
    * Amp units code. 0&#x3D;PP mm, 1&#x3D;0 to peak mm (UCB), 2&#x3D;digital counts | col62 I2
    * @return ampUnitsCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amp units code. 0=PP mm, 1=0 to peak mm (UCB), 2=digital counts | col62 I2")
-
   public Long getAmpUnitsCode() {
     return ampUnitsCode;
   }
 
-
-  public void setAmpUnitsCode(Long ampUnitsCode) {
+  public void setAmpUnitsCode(@javax.annotation.Nullable Long ampUnitsCode) {
     this.ampUnitsCode = ampUnitsCode;
   }
 
 
-  public Hyp2000arcPhasesInner ampType(Long ampType) {
-    
+  public Hyp2000arcPhasesInner ampType(@javax.annotation.Nullable Long ampType) {
     this.ampType = ampType;
     return this;
   }
 
-   /**
+  /**
    * Amplitude type 0&#x3D;unspecified 1&#x3D;Wood-Anderson 2&#x3D;velocity 3&#x3D;acceleration 4&#x3D;no magnitude | col114 I2
    * @return ampType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amplitude type 0=unspecified 1=Wood-Anderson 2=velocity 3=acceleration 4=no magnitude | col114 I2")
-
   public Long getAmpType() {
     return ampType;
   }
 
-
-  public void setAmpType(Long ampType) {
+  public void setAmpType(@javax.annotation.Nullable Long ampType) {
     this.ampType = ampType;
   }
 
 
-  public Hyp2000arcPhasesInner ampMag(Float ampMag) {
-    
+  public Hyp2000arcPhasesInner ampMag(@javax.annotation.Nullable Float ampMag) {
     this.ampMag = ampMag;
     return this;
   }
 
-   /**
+  /**
    * Amplitude magnitude for this station | col98 F3.2
    * @return ampMag
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amplitude magnitude for this station | col98 F3.2")
-
   public Float getAmpMag() {
     return ampMag;
   }
 
-
-  public void setAmpMag(Float ampMag) {
+  public void setAmpMag(@javax.annotation.Nullable Float ampMag) {
     this.ampMag = ampMag;
   }
 
 
-  public Hyp2000arcPhasesInner ampMagWeightCode(Long ampMagWeightCode) {
-    
+  public Hyp2000arcPhasesInner ampMagWeightCode(@javax.annotation.Nullable Long ampMagWeightCode) {
     this.ampMagWeightCode = ampMagWeightCode;
     return this;
   }
 
-   /**
+  /**
    * Amplitude magnitude weight code | col82 I1
    * @return ampMagWeightCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Amplitude magnitude weight code | col82 I1")
-
   public Long getAmpMagWeightCode() {
     return ampMagWeightCode;
   }
 
-
-  public void setAmpMagWeightCode(Long ampMagWeightCode) {
+  public void setAmpMagWeightCode(@javax.annotation.Nullable Long ampMagWeightCode) {
     this.ampMagWeightCode = ampMagWeightCode;
   }
 
 
-  public Hyp2000arcPhasesInner importanceP(Float importanceP) {
-    
+  public Hyp2000arcPhasesInner importanceP(@javax.annotation.Nullable Float importanceP) {
     this.importanceP = importanceP;
     return this;
   }
 
-   /**
+  /**
    * Importance of P arrival | col101 F4.3
    * @return importanceP
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Importance of P arrival | col101 F4.3")
-
   public Float getImportanceP() {
     return importanceP;
   }
 
-
-  public void setImportanceP(Float importanceP) {
+  public void setImportanceP(@javax.annotation.Nullable Float importanceP) {
     this.importanceP = importanceP;
   }
 
 
-  public Hyp2000arcPhasesInner importanceS(Float importanceS) {
-    
+  public Hyp2000arcPhasesInner importanceS(@javax.annotation.Nullable Float importanceS) {
     this.importanceS = importanceS;
     return this;
   }
 
-   /**
+  /**
    * Importance of S arrival | col105 F4.3
    * @return importanceS
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Importance of S arrival | col105 F4.3")
-
   public Float getImportanceS() {
     return importanceS;
   }
 
-
-  public void setImportanceS(Float importanceS) {
+  public void setImportanceS(@javax.annotation.Nullable Float importanceS) {
     this.importanceS = importanceS;
   }
 
@@ -1052,6 +945,10 @@ public class Hyp2000arcPhasesInner {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the Hyp2000arcPhasesInner instance itself
    */
   public Hyp2000arcPhasesInner putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -1063,6 +960,8 @@ public class Hyp2000arcPhasesInner {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -1070,6 +969,9 @@ public class Hyp2000arcPhasesInner {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -1240,37 +1142,36 @@ public class Hyp2000arcPhasesInner {
     openapiRequiredFields.add("loc");
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to Hyp2000arcPhasesInner
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (Hyp2000arcPhasesInner.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Hyp2000arcPhasesInner
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!Hyp2000arcPhasesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in Hyp2000arcPhasesInner is not found in the empty JSON string", Hyp2000arcPhasesInner.openapiRequiredFields.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
       for (String requiredField : Hyp2000arcPhasesInner.openapiRequiredFields) {
-        if (jsonObj.get(requiredField) == null) {
-          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
-      if ((jsonObj.get("net") != null && !jsonObj.get("net").isJsonNull()) && !jsonObj.get("net").isJsonPrimitive()) {
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("net").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `net` to be a primitive type in the JSON string but got `%s`", jsonObj.get("net").toString()));
       }
-      if ((jsonObj.get("sta") != null && !jsonObj.get("sta").isJsonNull()) && !jsonObj.get("sta").isJsonPrimitive()) {
+      if (!jsonObj.get("sta").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `sta` to be a primitive type in the JSON string but got `%s`", jsonObj.get("sta").toString()));
       }
-      if ((jsonObj.get("comp") != null && !jsonObj.get("comp").isJsonNull()) && !jsonObj.get("comp").isJsonPrimitive()) {
+      if (!jsonObj.get("comp").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `comp` to be a primitive type in the JSON string but got `%s`", jsonObj.get("comp").toString()));
       }
-      if ((jsonObj.get("loc") != null && !jsonObj.get("loc").isJsonNull()) && !jsonObj.get("loc").isJsonPrimitive()) {
+      if (!jsonObj.get("loc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `loc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("loc").toString()));
       }
       if ((jsonObj.get("Plabel") != null && !jsonObj.get("Plabel").isJsonNull()) && !jsonObj.get("Plabel").isJsonPrimitive()) {
@@ -1294,12 +1195,12 @@ public class Hyp2000arcPhasesInner {
       if ((jsonObj.get("datasrc") != null && !jsonObj.get("datasrc").isJsonNull()) && !jsonObj.get("datasrc").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `datasrc` to be a primitive type in the JSON string but got `%s`", jsonObj.get("datasrc").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("ccntr") != null && !jsonObj.get("ccntr").isJsonNull()) && !jsonObj.get("ccntr").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("ccntr") != null && !jsonObj.get("ccntr").isJsonNull() && !jsonObj.get("ccntr").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `ccntr` to be an array in the JSON string but got `%s`", jsonObj.get("ccntr").toString()));
       }
-      // ensure the json data is an array
-      if ((jsonObj.get("caav") != null && !jsonObj.get("caav").isJsonNull()) && !jsonObj.get("caav").isJsonArray()) {
+      // ensure the optional json data is an array if present
+      if (jsonObj.get("caav") != null && !jsonObj.get("caav").isJsonNull() && !jsonObj.get("caav").isJsonArray()) {
         throw new IllegalArgumentException(String.format("Expected the field `caav` to be an array in the JSON string but got `%s`", jsonObj.get("caav").toString()));
       }
   }
@@ -1320,7 +1221,7 @@ public class Hyp2000arcPhasesInner {
            public void write(JsonWriter out, Hyp2000arcPhasesInner value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -1332,7 +1233,12 @@ public class Hyp2000arcPhasesInner {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -1341,8 +1247,9 @@ public class Hyp2000arcPhasesInner {
 
            @Override
            public Hyp2000arcPhasesInner read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              Hyp2000arcPhasesInner instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -1356,8 +1263,10 @@ public class Hyp2000arcPhasesInner {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -1368,22 +1277,22 @@ public class Hyp2000arcPhasesInner {
     }
   }
 
- /**
-  * Create an instance of Hyp2000arcPhasesInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Hyp2000arcPhasesInner
-  * @throws IOException if the JSON string is invalid with respect to Hyp2000arcPhasesInner
-  */
+  /**
+   * Create an instance of Hyp2000arcPhasesInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Hyp2000arcPhasesInner
+   * @throws IOException if the JSON string is invalid with respect to Hyp2000arcPhasesInner
+   */
   public static Hyp2000arcPhasesInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Hyp2000arcPhasesInner.class);
   }
 
- /**
-  * Convert an instance of Hyp2000arcPhasesInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Hyp2000arcPhasesInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

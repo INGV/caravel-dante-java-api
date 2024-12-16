@@ -14,16 +14,14 @@
 package org.ingv.dante.model;
 
 import java.util.Objects;
-import java.util.Arrays;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.time.OffsetDateTime;
+import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspace;
 import org.ingv.dante.model.ObjectMomenttensor;
 import org.ingv.dante.model.ObjectProvenance;
@@ -39,12 +37,15 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.TypeAdapterFactory;
 import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.ingv.dante.JSON;
@@ -52,96 +53,116 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanism
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:53:40.837577Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T18:10:58.828625237Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectFocalmechanism {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_STRIKE1 = "strike1";
   @SerializedName(SERIALIZED_NAME_STRIKE1)
+  @javax.annotation.Nullable
   private Integer strike1;
 
   public static final String SERIALIZED_NAME_DIP1 = "dip1";
   @SerializedName(SERIALIZED_NAME_DIP1)
+  @javax.annotation.Nullable
   private Integer dip1;
 
   public static final String SERIALIZED_NAME_RAKE1 = "rake1";
   @SerializedName(SERIALIZED_NAME_RAKE1)
+  @javax.annotation.Nullable
   private Integer rake1;
 
   public static final String SERIALIZED_NAME_STRIKE2 = "strike2";
   @SerializedName(SERIALIZED_NAME_STRIKE2)
+  @javax.annotation.Nullable
   private Integer strike2;
 
   public static final String SERIALIZED_NAME_DIP2 = "dip2";
   @SerializedName(SERIALIZED_NAME_DIP2)
+  @javax.annotation.Nullable
   private Integer dip2;
 
   public static final String SERIALIZED_NAME_RAKE2 = "rake2";
   @SerializedName(SERIALIZED_NAME_RAKE2)
+  @javax.annotation.Nullable
   private Integer rake2;
 
   public static final String SERIALIZED_NAME_AZIM_GAP = "azim_gap";
   @SerializedName(SERIALIZED_NAME_AZIM_GAP)
+  @javax.annotation.Nullable
   private Float azimGap;
 
   public static final String SERIALIZED_NAME_NSTA_POLARITY = "nsta_polarity";
   @SerializedName(SERIALIZED_NAME_NSTA_POLARITY)
+  @javax.annotation.Nullable
   private Integer nstaPolarity;
 
   public static final String SERIALIZED_NAME_MISFIT = "misfit";
   @SerializedName(SERIALIZED_NAME_MISFIT)
+  @javax.annotation.Nullable
   private Double misfit;
 
   public static final String SERIALIZED_NAME_STDR = "stdr";
   @SerializedName(SERIALIZED_NAME_STDR)
+  @javax.annotation.Nullable
   private Double stdr;
 
   public static final String SERIALIZED_NAME_RMS_ANG_DIFF_ACC_PREF = "rms_ang_diff_acc_pref";
   @SerializedName(SERIALIZED_NAME_RMS_ANG_DIFF_ACC_PREF)
+  @javax.annotation.Nullable
   private Double rmsAngDiffAccPref;
 
   public static final String SERIALIZED_NAME_FRAC_ACC30DEG_PREF = "frac_acc_30deg_pref";
   @SerializedName(SERIALIZED_NAME_FRAC_ACC30DEG_PREF)
+  @javax.annotation.Nullable
   private Double fracAcc30degPref;
 
   public static final String SERIALIZED_NAME_QUALITY = "quality";
   @SerializedName(SERIALIZED_NAME_QUALITY)
+  @javax.annotation.Nullable
   private String quality;
 
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
+  @javax.annotation.Nullable
   private String url;
 
   public static final String SERIALIZED_NAME_MOMENTTENSOR = "momenttensor";
   @SerializedName(SERIALIZED_NAME_MOMENTTENSOR)
+  @javax.annotation.Nullable
   private ObjectMomenttensor momenttensor;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspace localspace;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenance provenance;
 
   public ObjectFocalmechanism() {
   }
 
-  
   public ObjectFocalmechanism(
      Long id, 
      OffsetDateTime modified, 
@@ -153,458 +174,377 @@ public class ObjectFocalmechanism {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "14932631", value = "Unique incremental id | bigint(20)")
-
   public Long getId() {
     return id;
   }
 
 
 
-
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Last Review | timestamp")
-
   public OffsetDateTime getModified() {
     return modified;
   }
 
 
 
-
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2016-06-22T16:52:06.260Z", value = "Insert time | timestamp")
-
   public OffsetDateTime getInserted() {
     return inserted;
   }
 
 
 
-
-  public ObjectFocalmechanism idLocalspace(Long idLocalspace) {
-    
+  public ObjectFocalmechanism idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "182491", value = "Localspace Id | bigint(19)")
-
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectFocalmechanism strike1(Integer strike1) {
-    
+  public ObjectFocalmechanism strike1(@javax.annotation.Nullable Integer strike1) {
     this.strike1 = strike1;
     return this;
   }
 
-   /**
+  /**
    * strike focal plane n.1 | int(10)
    * @return strike1
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "34", value = "strike focal plane n.1 | int(10)")
-
   public Integer getStrike1() {
     return strike1;
   }
 
-
-  public void setStrike1(Integer strike1) {
+  public void setStrike1(@javax.annotation.Nullable Integer strike1) {
     this.strike1 = strike1;
   }
 
 
-  public ObjectFocalmechanism dip1(Integer dip1) {
-    
+  public ObjectFocalmechanism dip1(@javax.annotation.Nullable Integer dip1) {
     this.dip1 = dip1;
     return this;
   }
 
-   /**
+  /**
    * dip focal plane n.1 | int(10)
    * @return dip1
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "50", value = "dip focal plane n.1 | int(10)")
-
   public Integer getDip1() {
     return dip1;
   }
 
-
-  public void setDip1(Integer dip1) {
+  public void setDip1(@javax.annotation.Nullable Integer dip1) {
     this.dip1 = dip1;
   }
 
 
-  public ObjectFocalmechanism rake1(Integer rake1) {
-    
+  public ObjectFocalmechanism rake1(@javax.annotation.Nullable Integer rake1) {
     this.rake1 = rake1;
     return this;
   }
 
-   /**
+  /**
    * rake focal plane n.1 | int(10)
    * @return rake1
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "88", value = "rake focal plane n.1 | int(10)")
-
   public Integer getRake1() {
     return rake1;
   }
 
-
-  public void setRake1(Integer rake1) {
+  public void setRake1(@javax.annotation.Nullable Integer rake1) {
     this.rake1 = rake1;
   }
 
 
-  public ObjectFocalmechanism strike2(Integer strike2) {
-    
+  public ObjectFocalmechanism strike2(@javax.annotation.Nullable Integer strike2) {
     this.strike2 = strike2;
     return this;
   }
 
-   /**
+  /**
    * strike focal plane n.2 | int(10)
    * @return strike2
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "218", value = "strike focal plane n.2 | int(10)")
-
   public Integer getStrike2() {
     return strike2;
   }
 
-
-  public void setStrike2(Integer strike2) {
+  public void setStrike2(@javax.annotation.Nullable Integer strike2) {
     this.strike2 = strike2;
   }
 
 
-  public ObjectFocalmechanism dip2(Integer dip2) {
-    
+  public ObjectFocalmechanism dip2(@javax.annotation.Nullable Integer dip2) {
     this.dip2 = dip2;
     return this;
   }
 
-   /**
+  /**
    * dip focal plane n.2 | int(10)
    * @return dip2
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "40", value = "dip focal plane n.2 | int(10)")
-
   public Integer getDip2() {
     return dip2;
   }
 
-
-  public void setDip2(Integer dip2) {
+  public void setDip2(@javax.annotation.Nullable Integer dip2) {
     this.dip2 = dip2;
   }
 
 
-  public ObjectFocalmechanism rake2(Integer rake2) {
-    
+  public ObjectFocalmechanism rake2(@javax.annotation.Nullable Integer rake2) {
     this.rake2 = rake2;
     return this;
   }
 
-   /**
+  /**
    * rake focal plane n.2 | int(10)
    * @return rake2
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "93", value = "rake focal plane n.2 | int(10)")
-
   public Integer getRake2() {
     return rake2;
   }
 
-
-  public void setRake2(Integer rake2) {
+  public void setRake2(@javax.annotation.Nullable Integer rake2) {
     this.rake2 = rake2;
   }
 
 
-  public ObjectFocalmechanism azimGap(Float azimGap) {
-    
+  public ObjectFocalmechanism azimGap(@javax.annotation.Nullable Float azimGap) {
     this.azimGap = azimGap;
     return this;
   }
 
-   /**
+  /**
    * Largest azim gap as seen from epicenter | double(22)
    * @return azimGap
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Largest azim gap as seen from epicenter | double(22)")
-
   public Float getAzimGap() {
     return azimGap;
   }
 
-
-  public void setAzimGap(Float azimGap) {
+  public void setAzimGap(@javax.annotation.Nullable Float azimGap) {
     this.azimGap = azimGap;
   }
 
 
-  public ObjectFocalmechanism nstaPolarity(Integer nstaPolarity) {
-    
+  public ObjectFocalmechanism nstaPolarity(@javax.annotation.Nullable Integer nstaPolarity) {
     this.nstaPolarity = nstaPolarity;
     return this;
   }
 
-   /**
+  /**
    * Number of station polarities used for determination | int(10)
    * @return nstaPolarity
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of station polarities used for determination | int(10)")
-
   public Integer getNstaPolarity() {
     return nstaPolarity;
   }
 
-
-  public void setNstaPolarity(Integer nstaPolarity) {
+  public void setNstaPolarity(@javax.annotation.Nullable Integer nstaPolarity) {
     this.nstaPolarity = nstaPolarity;
   }
 
 
-  public ObjectFocalmechanism misfit(Double misfit) {
-    
+  public ObjectFocalmechanism misfit(@javax.annotation.Nullable Double misfit) {
     this.misfit = misfit;
     return this;
   }
 
-   /**
+  /**
    * Fraction of misfit polarities [0,1] | double(22)
    * @return misfit
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fraction of misfit polarities [0,1] | double(22)")
-
   public Double getMisfit() {
     return misfit;
   }
 
-
-  public void setMisfit(Double misfit) {
+  public void setMisfit(@javax.annotation.Nullable Double misfit) {
     this.misfit = misfit;
   }
 
 
-  public ObjectFocalmechanism stdr(Double stdr) {
-    
+  public ObjectFocalmechanism stdr(@javax.annotation.Nullable Double stdr) {
     this.stdr = stdr;
     return this;
   }
 
-   /**
+  /**
    * Station distribution ratio parameter [0,1] | double(22)
    * @return stdr
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Station distribution ratio parameter [0,1] | double(22)")
-
   public Double getStdr() {
     return stdr;
   }
 
-
-  public void setStdr(Double stdr) {
+  public void setStdr(@javax.annotation.Nullable Double stdr) {
     this.stdr = stdr;
   }
 
 
-  public ObjectFocalmechanism rmsAngDiffAccPref(Double rmsAngDiffAccPref) {
-    
+  public ObjectFocalmechanism rmsAngDiffAccPref(@javax.annotation.Nullable Double rmsAngDiffAccPref) {
     this.rmsAngDiffAccPref = rmsAngDiffAccPref;
     return this;
   }
 
-   /**
+  /**
    * rms_ang_diff_acc_pref | double(22)
    * @return rmsAngDiffAccPref
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "rms_ang_diff_acc_pref | double(22)")
-
   public Double getRmsAngDiffAccPref() {
     return rmsAngDiffAccPref;
   }
 
-
-  public void setRmsAngDiffAccPref(Double rmsAngDiffAccPref) {
+  public void setRmsAngDiffAccPref(@javax.annotation.Nullable Double rmsAngDiffAccPref) {
     this.rmsAngDiffAccPref = rmsAngDiffAccPref;
   }
 
 
-  public ObjectFocalmechanism fracAcc30degPref(Double fracAcc30degPref) {
-    
+  public ObjectFocalmechanism fracAcc30degPref(@javax.annotation.Nullable Double fracAcc30degPref) {
     this.fracAcc30degPref = fracAcc30degPref;
     return this;
   }
 
-   /**
+  /**
    * frac_acc_30deg_pref | double(22)
    * @return fracAcc30degPref
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "frac_acc_30deg_pref | double(22)")
-
   public Double getFracAcc30degPref() {
     return fracAcc30degPref;
   }
 
-
-  public void setFracAcc30degPref(Double fracAcc30degPref) {
+  public void setFracAcc30degPref(@javax.annotation.Nullable Double fracAcc30degPref) {
     this.fracAcc30degPref = fracAcc30degPref;
   }
 
 
-  public ObjectFocalmechanism quality(String quality) {
-    
+  public ObjectFocalmechanism quality(@javax.annotation.Nullable String quality) {
     this.quality = quality;
     return this;
   }
 
-   /**
+  /**
    * quality | char(2)
    * @return quality
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Ba", value = "quality | char(2)")
-
   public String getQuality() {
     return quality;
   }
 
-
-  public void setQuality(String quality) {
+  public void setQuality(@javax.annotation.Nullable String quality) {
     this.quality = quality;
   }
 
 
-  public ObjectFocalmechanism url(String url) {
-    
+  public ObjectFocalmechanism url(@javax.annotation.Nullable String url) {
     this.url = url;
     return this;
   }
 
-   /**
+  /**
    * External URL Reference | varchar(512)
    * @return url
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "http://mysite", value = "External URL Reference | varchar(512)")
-
   public String getUrl() {
     return url;
   }
 
-
-  public void setUrl(String url) {
+  public void setUrl(@javax.annotation.Nullable String url) {
     this.url = url;
   }
 
 
-  public ObjectFocalmechanism momenttensor(ObjectMomenttensor momenttensor) {
-    
+  public ObjectFocalmechanism momenttensor(@javax.annotation.Nullable ObjectMomenttensor momenttensor) {
     this.momenttensor = momenttensor;
     return this;
   }
 
-   /**
+  /**
    * Get momenttensor
    * @return momenttensor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectMomenttensor getMomenttensor() {
     return momenttensor;
   }
 
-
-  public void setMomenttensor(ObjectMomenttensor momenttensor) {
+  public void setMomenttensor(@javax.annotation.Nullable ObjectMomenttensor momenttensor) {
     this.momenttensor = momenttensor;
   }
 
 
-  public ObjectFocalmechanism localspace(ObjectLocalspace localspace) {
-    
+  public ObjectFocalmechanism localspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
 
-
-  public void setLocalspace(ObjectLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectFocalmechanism provenance(ObjectProvenance provenance) {
-    
+  public ObjectFocalmechanism provenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
   public ObjectProvenance getProvenance() {
     return provenance;
   }
 
-
-  public void setProvenance(ObjectProvenance provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
@@ -618,6 +558,10 @@ public class ObjectFocalmechanism {
   /**
    * Set the additional (undeclared) property with the specified name and value.
    * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ObjectFocalmechanism instance itself
    */
   public ObjectFocalmechanism putAdditionalProperty(String key, Object value) {
     if (this.additionalProperties == null) {
@@ -629,6 +573,8 @@ public class ObjectFocalmechanism {
 
   /**
    * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
    */
   public Map<String, Object> getAdditionalProperties() {
     return additionalProperties;
@@ -636,6 +582,9 @@ public class ObjectFocalmechanism {
 
   /**
    * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
    */
   public Object getAdditionalProperty(String key) {
     if (this.additionalProperties == null) {
@@ -768,20 +717,19 @@ public class ObjectFocalmechanism {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Object and throws an exception if issues found
-  *
-  * @param jsonObj JSON Object
-  * @throws IOException if the JSON Object is invalid with respect to ObjectFocalmechanism
-  */
-  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
-      if (jsonObj == null) {
-        if (ObjectFocalmechanism.openapiRequiredFields.isEmpty()) {
-          return;
-        } else { // has required fields
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectFocalmechanism
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ObjectFocalmechanism.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ObjectFocalmechanism is not found in the empty JSON string", ObjectFocalmechanism.openapiRequiredFields.toString()));
         }
       }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
       if ((jsonObj.get("quality") != null && !jsonObj.get("quality").isJsonNull()) && !jsonObj.get("quality").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `quality` to be a primitive type in the JSON string but got `%s`", jsonObj.get("quality").toString()));
       }
@@ -790,15 +738,15 @@ public class ObjectFocalmechanism {
       }
       // validate the optional field `momenttensor`
       if (jsonObj.get("momenttensor") != null && !jsonObj.get("momenttensor").isJsonNull()) {
-        ObjectMomenttensor.validateJsonObject(jsonObj.getAsJsonObject("momenttensor"));
+        ObjectMomenttensor.validateJsonElement(jsonObj.get("momenttensor"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
-        ObjectLocalspace.validateJsonObject(jsonObj.getAsJsonObject("localspace"));
+        ObjectLocalspace.validateJsonElement(jsonObj.get("localspace"));
       }
       // validate the optional field `provenance`
       if (jsonObj.get("provenance") != null && !jsonObj.get("provenance").isJsonNull()) {
-        ObjectProvenance.validateJsonObject(jsonObj.getAsJsonObject("provenance"));
+        ObjectProvenance.validateJsonElement(jsonObj.get("provenance"));
       }
   }
 
@@ -818,7 +766,7 @@ public class ObjectFocalmechanism {
            public void write(JsonWriter out, ObjectFocalmechanism value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              obj.remove("additionalProperties");
-             // serialize additonal properties
+             // serialize additional properties
              if (value.getAdditionalProperties() != null) {
                for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
                  if (entry.getValue() instanceof String)
@@ -830,7 +778,12 @@ public class ObjectFocalmechanism {
                  else if (entry.getValue() instanceof Character)
                    obj.addProperty(entry.getKey(), (Character) entry.getValue());
                  else {
-                   obj.add(entry.getKey(), gson.toJsonTree(entry.getValue()).getAsJsonObject());
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
                  }
                }
              }
@@ -839,8 +792,9 @@ public class ObjectFocalmechanism {
 
            @Override
            public ObjectFocalmechanism read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
-             validateJsonObject(jsonObj);
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
              // store additional fields in the deserialized instance
              ObjectFocalmechanism instance = thisAdapter.fromJsonTree(jsonObj);
              for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
@@ -854,8 +808,10 @@ public class ObjectFocalmechanism {
                      instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
                    else
                      throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
-                 } else { // non-primitive type
-                   instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
                  }
                }
              }
@@ -866,22 +822,22 @@ public class ObjectFocalmechanism {
     }
   }
 
- /**
-  * Create an instance of ObjectFocalmechanism given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectFocalmechanism
-  * @throws IOException if the JSON string is invalid with respect to ObjectFocalmechanism
-  */
+  /**
+   * Create an instance of ObjectFocalmechanism given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectFocalmechanism
+   * @throws IOException if the JSON string is invalid with respect to ObjectFocalmechanism
+   */
   public static ObjectFocalmechanism fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectFocalmechanism.class);
   }
 
- /**
-  * Convert an instance of ObjectFocalmechanism to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectFocalmechanism to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }
