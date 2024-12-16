@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,99 +49,103 @@ import org.ingv.dante.JSON;
 /**
  * LinksDefinition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class LinksDefinition {
   public static final String SERIALIZED_NAME_FIRST = "first";
   @SerializedName(SERIALIZED_NAME_FIRST)
+  @javax.annotation.Nullable
   private String first;
 
   public static final String SERIALIZED_NAME_LAST = "last";
   @SerializedName(SERIALIZED_NAME_LAST)
+  @javax.annotation.Nullable
   private String last;
 
   public static final String SERIALIZED_NAME_PREV = "prev";
   @SerializedName(SERIALIZED_NAME_PREV)
+  @javax.annotation.Nullable
   private String prev;
 
   public static final String SERIALIZED_NAME_NEXT = "next";
   @SerializedName(SERIALIZED_NAME_NEXT)
+  @javax.annotation.Nullable
   private String next;
 
   public LinksDefinition() {
   }
 
-  public LinksDefinition first(String first) {
+  public LinksDefinition first(@javax.annotation.Nullable String first) {
     this.first = first;
     return this;
   }
 
-   /**
+  /**
    * URL first page.
    * @return first
-  **/
+   */
   @javax.annotation.Nullable
   public String getFirst() {
     return first;
   }
 
-  public void setFirst(String first) {
+  public void setFirst(@javax.annotation.Nullable String first) {
     this.first = first;
   }
 
 
-  public LinksDefinition last(String last) {
+  public LinksDefinition last(@javax.annotation.Nullable String last) {
     this.last = last;
     return this;
   }
 
-   /**
+  /**
    * URL last page.
    * @return last
-  **/
+   */
   @javax.annotation.Nullable
   public String getLast() {
     return last;
   }
 
-  public void setLast(String last) {
+  public void setLast(@javax.annotation.Nullable String last) {
     this.last = last;
   }
 
 
-  public LinksDefinition prev(String prev) {
+  public LinksDefinition prev(@javax.annotation.Nullable String prev) {
     this.prev = prev;
     return this;
   }
 
-   /**
+  /**
    * URL previous page.
    * @return prev
-  **/
+   */
   @javax.annotation.Nullable
   public String getPrev() {
     return prev;
   }
 
-  public void setPrev(String prev) {
+  public void setPrev(@javax.annotation.Nullable String prev) {
     this.prev = prev;
   }
 
 
-  public LinksDefinition next(String next) {
+  public LinksDefinition next(@javax.annotation.Nullable String next) {
     this.next = next;
     return this;
   }
 
-   /**
+  /**
    * URL next page.
    * @return next
-  **/
+   */
   @javax.annotation.Nullable
   public String getNext() {
     return next;
   }
 
-  public void setNext(String next) {
+  public void setNext(@javax.annotation.Nullable String next) {
     this.next = next;
   }
 
@@ -264,12 +267,12 @@ public class LinksDefinition {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to LinksDefinition
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to LinksDefinition
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!LinksDefinition.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -363,22 +366,22 @@ public class LinksDefinition {
     }
   }
 
- /**
-  * Create an instance of LinksDefinition given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of LinksDefinition
-  * @throws IOException if the JSON string is invalid with respect to LinksDefinition
-  */
+  /**
+   * Create an instance of LinksDefinition given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of LinksDefinition
+   * @throws IOException if the JSON string is invalid with respect to LinksDefinition
+   */
   public static LinksDefinition fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, LinksDefinition.class);
   }
 
- /**
-  * Convert an instance of LinksDefinition to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of LinksDefinition to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

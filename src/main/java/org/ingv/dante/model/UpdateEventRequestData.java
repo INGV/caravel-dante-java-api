@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,30 +49,31 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UpdateEventRequestData {
   public static final String SERIALIZED_NAME_EVENT = "event";
   @SerializedName(SERIALIZED_NAME_EVENT)
+  @javax.annotation.Nullable
   private UpdateEventRequestDataEvent event;
 
   public UpdateEventRequestData() {
   }
 
-  public UpdateEventRequestData event(UpdateEventRequestDataEvent event) {
+  public UpdateEventRequestData event(@javax.annotation.Nullable UpdateEventRequestDataEvent event) {
     this.event = event;
     return this;
   }
 
-   /**
+  /**
    * Get event
    * @return event
-  **/
+   */
   @javax.annotation.Nullable
   public UpdateEventRequestDataEvent getEvent() {
     return event;
   }
 
-  public void setEvent(UpdateEventRequestDataEvent event) {
+  public void setEvent(@javax.annotation.Nullable UpdateEventRequestDataEvent event) {
     this.event = event;
   }
 
@@ -175,12 +175,12 @@ public class UpdateEventRequestData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UpdateEventRequestData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UpdateEventRequestData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UpdateEventRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -266,22 +266,22 @@ public class UpdateEventRequestData {
     }
   }
 
- /**
-  * Create an instance of UpdateEventRequestData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateEventRequestData
-  * @throws IOException if the JSON string is invalid with respect to UpdateEventRequestData
-  */
+  /**
+   * Create an instance of UpdateEventRequestData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UpdateEventRequestData
+   * @throws IOException if the JSON string is invalid with respect to UpdateEventRequestData
+   */
   public static UpdateEventRequestData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UpdateEventRequestData.class);
   }
 
- /**
-  * Convert an instance of UpdateEventRequestData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UpdateEventRequestData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

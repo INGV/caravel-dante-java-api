@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,241 +49,251 @@ import org.ingv.dante.JSON;
 /**
  * Quake2kSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class Quake2kSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
+  @javax.annotation.Nullable
   private Long quakeId;
 
   public static final String SERIALIZED_NAME_ORIGIN_TIME = "originTime";
   @SerializedName(SERIALIZED_NAME_ORIGIN_TIME)
+  @javax.annotation.Nonnull
   private OffsetDateTime originTime;
 
   public static final String SERIALIZED_NAME_LATITUDE = "latitude";
   @SerializedName(SERIALIZED_NAME_LATITUDE)
+  @javax.annotation.Nonnull
   private Double latitude;
 
   public static final String SERIALIZED_NAME_LONGITUDE = "longitude";
   @SerializedName(SERIALIZED_NAME_LONGITUDE)
+  @javax.annotation.Nonnull
   private Double longitude;
 
   public static final String SERIALIZED_NAME_DEPTH = "depth";
   @SerializedName(SERIALIZED_NAME_DEPTH)
+  @javax.annotation.Nonnull
   private Double depth;
 
   public static final String SERIALIZED_NAME_RMS = "rms";
   @SerializedName(SERIALIZED_NAME_RMS)
+  @javax.annotation.Nullable
   private Double rms;
 
   public static final String SERIALIZED_NAME_DMIN = "dmin";
   @SerializedName(SERIALIZED_NAME_DMIN)
+  @javax.annotation.Nullable
   private Double dmin;
 
   public static final String SERIALIZED_NAME_RAVG = "ravg";
   @SerializedName(SERIALIZED_NAME_RAVG)
+  @javax.annotation.Nullable
   private Double ravg;
 
   public static final String SERIALIZED_NAME_GAP = "gap";
   @SerializedName(SERIALIZED_NAME_GAP)
+  @javax.annotation.Nullable
   private Float gap;
 
   public static final String SERIALIZED_NAME_NPH = "nph";
   @SerializedName(SERIALIZED_NAME_NPH)
+  @javax.annotation.Nullable
   private Long nph;
 
   public Quake2kSchemaEwMessage() {
   }
 
-  public Quake2kSchemaEwMessage quakeId(Long quakeId) {
+  public Quake2kSchemaEwMessage quakeId(@javax.annotation.Nullable Long quakeId) {
     this.quakeId = quakeId;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return quakeId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getQuakeId() {
     return quakeId;
   }
 
-  public void setQuakeId(Long quakeId) {
+  public void setQuakeId(@javax.annotation.Nullable Long quakeId) {
     this.quakeId = quakeId;
   }
 
 
-  public Quake2kSchemaEwMessage originTime(OffsetDateTime originTime) {
+  public Quake2kSchemaEwMessage originTime(@javax.annotation.Nonnull OffsetDateTime originTime) {
     this.originTime = originTime;
     return this;
   }
 
-   /**
+  /**
    * Origin time | datetime(3)
    * @return originTime
-  **/
+   */
   @javax.annotation.Nonnull
   public OffsetDateTime getOriginTime() {
     return originTime;
   }
 
-  public void setOriginTime(OffsetDateTime originTime) {
+  public void setOriginTime(@javax.annotation.Nonnull OffsetDateTime originTime) {
     this.originTime = originTime;
   }
 
 
-  public Quake2kSchemaEwMessage latitude(Double latitude) {
+  public Quake2kSchemaEwMessage latitude(@javax.annotation.Nonnull Double latitude) {
     this.latitude = latitude;
     return this;
   }
 
-   /**
+  /**
    * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -90
    * maximum: 90
    * @return latitude
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getLatitude() {
     return latitude;
   }
 
-  public void setLatitude(Double latitude) {
+  public void setLatitude(@javax.annotation.Nonnull Double latitude) {
     this.latitude = latitude;
   }
 
 
-  public Quake2kSchemaEwMessage longitude(Double longitude) {
+  public Quake2kSchemaEwMessage longitude(@javax.annotation.Nonnull Double longitude) {
     this.longitude = longitude;
     return this;
   }
 
-   /**
+  /**
    * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -180
    * maximum: 180
    * @return longitude
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getLongitude() {
     return longitude;
   }
 
-  public void setLongitude(Double longitude) {
+  public void setLongitude(@javax.annotation.Nonnull Double longitude) {
     this.longitude = longitude;
   }
 
 
-  public Quake2kSchemaEwMessage depth(Double depth) {
+  public Quake2kSchemaEwMessage depth(@javax.annotation.Nonnull Double depth) {
     this.depth = depth;
     return this;
   }
 
-   /**
+  /**
    * Depth in Km | double
    * @return depth
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getDepth() {
     return depth;
   }
 
-  public void setDepth(Double depth) {
+  public void setDepth(@javax.annotation.Nonnull Double depth) {
     this.depth = depth;
   }
 
 
-  public Quake2kSchemaEwMessage rms(Double rms) {
+  public Quake2kSchemaEwMessage rms(@javax.annotation.Nullable Double rms) {
     this.rms = rms;
     return this;
   }
 
-   /**
+  /**
    * Root mean square | double
    * @return rms
-  **/
+   */
   @javax.annotation.Nullable
   public Double getRms() {
     return rms;
   }
 
-  public void setRms(Double rms) {
+  public void setRms(@javax.annotation.Nullable Double rms) {
     this.rms = rms;
   }
 
 
-  public Quake2kSchemaEwMessage dmin(Double dmin) {
+  public Quake2kSchemaEwMessage dmin(@javax.annotation.Nullable Double dmin) {
     this.dmin = dmin;
     return this;
   }
 
-   /**
+  /**
    * dmin description | ???
    * @return dmin
-  **/
+   */
   @javax.annotation.Nullable
   public Double getDmin() {
     return dmin;
   }
 
-  public void setDmin(Double dmin) {
+  public void setDmin(@javax.annotation.Nullable Double dmin) {
     this.dmin = dmin;
   }
 
 
-  public Quake2kSchemaEwMessage ravg(Double ravg) {
+  public Quake2kSchemaEwMessage ravg(@javax.annotation.Nullable Double ravg) {
     this.ravg = ravg;
     return this;
   }
 
-   /**
+  /**
    * ravg description | ???
    * @return ravg
-  **/
+   */
   @javax.annotation.Nullable
   public Double getRavg() {
     return ravg;
   }
 
-  public void setRavg(Double ravg) {
+  public void setRavg(@javax.annotation.Nullable Double ravg) {
     this.ravg = ravg;
   }
 
 
-  public Quake2kSchemaEwMessage gap(Float gap) {
+  public Quake2kSchemaEwMessage gap(@javax.annotation.Nullable Float gap) {
     this.gap = gap;
     return this;
   }
 
-   /**
+  /**
    * Azimutal gap | float4
    * @return gap
-  **/
+   */
   @javax.annotation.Nullable
   public Float getGap() {
     return gap;
   }
 
-  public void setGap(Float gap) {
+  public void setGap(@javax.annotation.Nullable Float gap) {
     this.gap = gap;
   }
 
 
-  public Quake2kSchemaEwMessage nph(Long nph) {
+  public Quake2kSchemaEwMessage nph(@javax.annotation.Nullable Long nph) {
     this.nph = nph;
     return this;
   }
 
-   /**
+  /**
    * # arrivals (P&amp;S) weight &gt;0.1 | int(11)
    * @return nph
-  **/
+   */
   @javax.annotation.Nullable
   public Long getNph() {
     return nph;
   }
 
-  public void setNph(Long nph) {
+  public void setNph(@javax.annotation.Nullable Long nph) {
     this.nph = nph;
   }
 
@@ -418,12 +427,12 @@ public class Quake2kSchemaEwMessage {
     openapiRequiredFields.add("depth");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Quake2kSchemaEwMessage
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Quake2kSchemaEwMessage
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Quake2kSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -512,22 +521,22 @@ public class Quake2kSchemaEwMessage {
     }
   }
 
- /**
-  * Create an instance of Quake2kSchemaEwMessage given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Quake2kSchemaEwMessage
-  * @throws IOException if the JSON string is invalid with respect to Quake2kSchemaEwMessage
-  */
+  /**
+   * Create an instance of Quake2kSchemaEwMessage given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Quake2kSchemaEwMessage
+   * @throws IOException if the JSON string is invalid with respect to Quake2kSchemaEwMessage
+   */
   public static Quake2kSchemaEwMessage fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Quake2kSchemaEwMessage.class);
   }
 
- /**
-  * Convert an instance of Quake2kSchemaEwMessage to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Quake2kSchemaEwMessage to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

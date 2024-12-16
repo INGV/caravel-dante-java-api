@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,16 +51,17 @@ import org.ingv.dante.JSON;
 /**
  * AddHEwStrongmotionii201ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddHEwStrongmotionii201ResponseData {
   public static final String SERIALIZED_NAME_STRONGMOTIONS = "strongmotions";
   @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
-  private List<UpdateEvent200ResponseDataEvent> strongmotions;
+  @javax.annotation.Nullable
+  private List<UpdateEvent200ResponseDataEvent> strongmotions = new ArrayList<>();
 
   public AddHEwStrongmotionii201ResponseData() {
   }
 
-  public AddHEwStrongmotionii201ResponseData strongmotions(List<UpdateEvent200ResponseDataEvent> strongmotions) {
+  public AddHEwStrongmotionii201ResponseData strongmotions(@javax.annotation.Nullable List<UpdateEvent200ResponseDataEvent> strongmotions) {
     this.strongmotions = strongmotions;
     return this;
   }
@@ -74,16 +74,16 @@ public class AddHEwStrongmotionii201ResponseData {
     return this;
   }
 
-   /**
+  /**
    * Get strongmotions
    * @return strongmotions
-  **/
+   */
   @javax.annotation.Nullable
   public List<UpdateEvent200ResponseDataEvent> getStrongmotions() {
     return strongmotions;
   }
 
-  public void setStrongmotions(List<UpdateEvent200ResponseDataEvent> strongmotions) {
+  public void setStrongmotions(@javax.annotation.Nullable List<UpdateEvent200ResponseDataEvent> strongmotions) {
     this.strongmotions = strongmotions;
   }
 
@@ -185,12 +185,12 @@ public class AddHEwStrongmotionii201ResponseData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddHEwStrongmotionii201ResponseData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddHEwStrongmotionii201ResponseData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddHEwStrongmotionii201ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -286,22 +286,22 @@ public class AddHEwStrongmotionii201ResponseData {
     }
   }
 
- /**
-  * Create an instance of AddHEwStrongmotionii201ResponseData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddHEwStrongmotionii201ResponseData
-  * @throws IOException if the JSON string is invalid with respect to AddHEwStrongmotionii201ResponseData
-  */
+  /**
+   * Create an instance of AddHEwStrongmotionii201ResponseData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddHEwStrongmotionii201ResponseData
+   * @throws IOException if the JSON string is invalid with respect to AddHEwStrongmotionii201ResponseData
+   */
   public static AddHEwStrongmotionii201ResponseData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddHEwStrongmotionii201ResponseData.class);
   }
 
- /**
-  * Convert an instance of AddHEwStrongmotionii201ResponseData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddHEwStrongmotionii201ResponseData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

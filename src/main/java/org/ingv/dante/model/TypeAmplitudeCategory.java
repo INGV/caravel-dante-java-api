@@ -39,9 +39,7 @@ public enum TypeAmplitudeCategory {
   
   INTEGRAL("integral"),
   
-  OTHER("other"),
-  
-  NULL("null");
+  OTHER("other");
 
   private String value;
 

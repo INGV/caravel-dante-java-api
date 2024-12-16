@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,30 +49,31 @@ import org.ingv.dante.JSON;
 /**
  * AddEwQuake2kRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddEwQuake2kRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
+  @javax.annotation.Nullable
   private Quake2kSchema data;
 
   public AddEwQuake2kRequest() {
   }
 
-  public AddEwQuake2kRequest data(Quake2kSchema data) {
+  public AddEwQuake2kRequest data(@javax.annotation.Nullable Quake2kSchema data) {
     this.data = data;
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public Quake2kSchema getData() {
     return data;
   }
 
-  public void setData(Quake2kSchema data) {
+  public void setData(@javax.annotation.Nullable Quake2kSchema data) {
     this.data = data;
   }
 
@@ -175,12 +175,12 @@ public class AddEwQuake2kRequest {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddEwQuake2kRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddEwQuake2kRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddEwQuake2kRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -266,22 +266,22 @@ public class AddEwQuake2kRequest {
     }
   }
 
- /**
-  * Create an instance of AddEwQuake2kRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddEwQuake2kRequest
-  * @throws IOException if the JSON string is invalid with respect to AddEwQuake2kRequest
-  */
+  /**
+   * Create an instance of AddEwQuake2kRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddEwQuake2kRequest
+   * @throws IOException if the JSON string is invalid with respect to AddEwQuake2kRequest
+   */
   public static AddEwQuake2kRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddEwQuake2kRequest.class);
   }
 
- /**
-  * Convert an instance of AddEwQuake2kRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddEwQuake2kRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

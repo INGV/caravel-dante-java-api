@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,39 +51,41 @@ import org.ingv.dante.JSON;
 /**
  * AddStrongmotionRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddStrongmotionRequestData {
   public static final String SERIALIZED_NAME_EVENTID = "eventid";
   @SerializedName(SERIALIZED_NAME_EVENTID)
+  @javax.annotation.Nullable
   private Long eventid;
 
   public static final String SERIALIZED_NAME_STRONGMOTIONS = "strongmotions";
   @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
-  private List<ObjectStrongmotion> strongmotions;
+  @javax.annotation.Nullable
+  private List<ObjectStrongmotion> strongmotions = new ArrayList<>();
 
   public AddStrongmotionRequestData() {
   }
 
-  public AddStrongmotionRequestData eventid(Long eventid) {
+  public AddStrongmotionRequestData eventid(@javax.annotation.Nullable Long eventid) {
     this.eventid = eventid;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return eventid
-  **/
+   */
   @javax.annotation.Nullable
   public Long getEventid() {
     return eventid;
   }
 
-  public void setEventid(Long eventid) {
+  public void setEventid(@javax.annotation.Nullable Long eventid) {
     this.eventid = eventid;
   }
 
 
-  public AddStrongmotionRequestData strongmotions(List<ObjectStrongmotion> strongmotions) {
+  public AddStrongmotionRequestData strongmotions(@javax.annotation.Nullable List<ObjectStrongmotion> strongmotions) {
     this.strongmotions = strongmotions;
     return this;
   }
@@ -97,16 +98,16 @@ public class AddStrongmotionRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get strongmotions
    * @return strongmotions
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectStrongmotion> getStrongmotions() {
     return strongmotions;
   }
 
-  public void setStrongmotions(List<ObjectStrongmotion> strongmotions) {
+  public void setStrongmotions(@javax.annotation.Nullable List<ObjectStrongmotion> strongmotions) {
     this.strongmotions = strongmotions;
   }
 
@@ -211,12 +212,12 @@ public class AddStrongmotionRequestData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddStrongmotionRequestData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddStrongmotionRequestData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddStrongmotionRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -312,22 +313,22 @@ public class AddStrongmotionRequestData {
     }
   }
 
- /**
-  * Create an instance of AddStrongmotionRequestData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddStrongmotionRequestData
-  * @throws IOException if the JSON string is invalid with respect to AddStrongmotionRequestData
-  */
+  /**
+   * Create an instance of AddStrongmotionRequestData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddStrongmotionRequestData
+   * @throws IOException if the JSON string is invalid with respect to AddStrongmotionRequestData
+   */
   public static AddStrongmotionRequestData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddStrongmotionRequestData.class);
   }
 
- /**
-  * Convert an instance of AddStrongmotionRequestData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddStrongmotionRequestData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

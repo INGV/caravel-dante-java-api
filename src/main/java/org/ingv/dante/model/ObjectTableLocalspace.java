@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,38 +51,46 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableLocalspace
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectTableLocalspace {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private String name;
 
   public static final String SERIALIZED_NAME_DOI = "doi";
   @SerializedName(SERIALIZED_NAME_DOI)
+  @javax.annotation.Nullable
   private String doi;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_PRIORITY = "priority";
   @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @javax.annotation.Nullable
   private Long priority = 0l;
 
   public static final String SERIALIZED_NAME_ENVIRONMENT = "environment";
   @SerializedName(SERIALIZED_NAME_ENVIRONMENT)
+  @javax.annotation.Nullable
   private Environment environment = Environment.DEVELOPMENT;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public ObjectTableLocalspace() {
@@ -100,10 +107,10 @@ public class ObjectTableLocalspace {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -111,105 +118,105 @@ public class ObjectTableLocalspace {
 
 
 
-  public ObjectTableLocalspace name(String name) {
+  public ObjectTableLocalspace name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Localspace name. i.e. hew1_mole, endeavour_mole | char(255)
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
 
-  public ObjectTableLocalspace doi(String doi) {
+  public ObjectTableLocalspace doi(@javax.annotation.Nullable String doi) {
     this.doi = doi;
     return this;
   }
 
-   /**
+  /**
    * DOI Resource. i.e. 10.13127/TDMT | varchar(255)
    * @return doi
-  **/
+   */
   @javax.annotation.Nullable
   public String getDoi() {
     return doi;
   }
 
-  public void setDoi(String doi) {
+  public void setDoi(@javax.annotation.Nullable String doi) {
     this.doi = doi;
   }
 
 
-  public ObjectTableLocalspace description(String description) {
+  public ObjectTableLocalspace description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Additional information | char(255)
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public ObjectTableLocalspace priority(Long priority) {
+  public ObjectTableLocalspace priority(@javax.annotation.Nullable Long priority) {
     this.priority = priority;
     return this;
   }
 
-   /**
+  /**
    * Priority | int(8)
    * @return priority
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPriority() {
     return priority;
   }
 
-  public void setPriority(Long priority) {
+  public void setPriority(@javax.annotation.Nullable Long priority) {
     this.priority = priority;
   }
 
 
-  public ObjectTableLocalspace environment(Environment environment) {
+  public ObjectTableLocalspace environment(@javax.annotation.Nullable Environment environment) {
     this.environment = environment;
     return this;
   }
 
-   /**
+  /**
    * Get environment
    * @return environment
-  **/
+   */
   @javax.annotation.Nullable
   public Environment getEnvironment() {
     return environment;
   }
 
-  public void setEnvironment(Environment environment) {
+  public void setEnvironment(@javax.annotation.Nullable Environment environment) {
     this.environment = environment;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -217,10 +224,10 @@ public class ObjectTableLocalspace {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -358,12 +365,12 @@ public class ObjectTableLocalspace {
     openapiRequiredFields.add("name");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectTableLocalspace
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectTableLocalspace
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectTableLocalspace.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -465,22 +472,22 @@ public class ObjectTableLocalspace {
     }
   }
 
- /**
-  * Create an instance of ObjectTableLocalspace given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectTableLocalspace
-  * @throws IOException if the JSON string is invalid with respect to ObjectTableLocalspace
-  */
+  /**
+   * Create an instance of ObjectTableLocalspace given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectTableLocalspace
+   * @throws IOException if the JSON string is invalid with respect to ObjectTableLocalspace
+   */
   public static ObjectTableLocalspace fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectTableLocalspace.class);
   }
 
- /**
-  * Convert an instance of ObjectTableLocalspace to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectTableLocalspace to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

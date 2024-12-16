@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,46 +50,56 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTableTypeMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectTableTypeMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_SCALE = "scale";
   @SerializedName(SERIALIZED_NAME_SCALE)
+  @javax.annotation.Nullable
   private String scale;
 
   public static final String SERIALIZED_NAME_PRIORITY = "priority";
   @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @javax.annotation.Nullable
   private Long priority = 0l;
 
   public static final String SERIALIZED_NAME_MINMAG = "minmag";
   @SerializedName(SERIALIZED_NAME_MINMAG)
+  @javax.annotation.Nullable
   private Float minmag;
 
   public static final String SERIALIZED_NAME_MAXMAG = "maxmag";
   @SerializedName(SERIALIZED_NAME_MAXMAG)
+  @javax.annotation.Nullable
   private Float maxmag;
 
   public static final String SERIALIZED_NAME_MINREADINGS = "minreadings";
   @SerializedName(SERIALIZED_NAME_MINREADINGS)
+  @javax.annotation.Nullable
   private Integer minreadings;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public ObjectTableTypeMagnitude() {
@@ -107,10 +116,10 @@ public class ObjectTableTypeMagnitude {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -118,143 +127,143 @@ public class ObjectTableTypeMagnitude {
 
 
 
-  public ObjectTableTypeMagnitude name(String name) {
+  public ObjectTableTypeMagnitude name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Type of the magnitude | varchar(255)
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public ObjectTableTypeMagnitude scale(String scale) {
+  public ObjectTableTypeMagnitude scale(@javax.annotation.Nullable String scale) {
     this.scale = scale;
     return this;
   }
 
-   /**
+  /**
    * Type Scale of the magnitude, international scale label (i.e. ML, Md, Mw, ...) | varchar(50)
    * @return scale
-  **/
+   */
   @javax.annotation.Nullable
   public String getScale() {
     return scale;
   }
 
-  public void setScale(String scale) {
+  public void setScale(@javax.annotation.Nullable String scale) {
     this.scale = scale;
   }
 
 
-  public ObjectTableTypeMagnitude priority(Long priority) {
+  public ObjectTableTypeMagnitude priority(@javax.annotation.Nullable Long priority) {
     this.priority = priority;
     return this;
   }
 
-   /**
+  /**
    * Priority | int(8)
    * @return priority
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPriority() {
     return priority;
   }
 
-  public void setPriority(Long priority) {
+  public void setPriority(@javax.annotation.Nullable Long priority) {
     this.priority = priority;
   }
 
 
-  public ObjectTableTypeMagnitude minmag(Float minmag) {
+  public ObjectTableTypeMagnitude minmag(@javax.annotation.Nullable Float minmag) {
     this.minmag = minmag;
     return this;
   }
 
-   /**
+  /**
    * Minimum magnitude value | float(4)
    * @return minmag
-  **/
+   */
   @javax.annotation.Nullable
   public Float getMinmag() {
     return minmag;
   }
 
-  public void setMinmag(Float minmag) {
+  public void setMinmag(@javax.annotation.Nullable Float minmag) {
     this.minmag = minmag;
   }
 
 
-  public ObjectTableTypeMagnitude maxmag(Float maxmag) {
+  public ObjectTableTypeMagnitude maxmag(@javax.annotation.Nullable Float maxmag) {
     this.maxmag = maxmag;
     return this;
   }
 
-   /**
+  /**
    * Maximum magnitude value | float(4)
    * @return maxmag
-  **/
+   */
   @javax.annotation.Nullable
   public Float getMaxmag() {
     return maxmag;
   }
 
-  public void setMaxmag(Float maxmag) {
+  public void setMaxmag(@javax.annotation.Nullable Float maxmag) {
     this.maxmag = maxmag;
   }
 
 
-  public ObjectTableTypeMagnitude minreadings(Integer minreadings) {
+  public ObjectTableTypeMagnitude minreadings(@javax.annotation.Nullable Integer minreadings) {
     this.minreadings = minreadings;
     return this;
   }
 
-   /**
+  /**
    * Minimum number of readings | int(8)
    * @return minreadings
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getMinreadings() {
     return minreadings;
   }
 
-  public void setMinreadings(Integer minreadings) {
+  public void setMinreadings(@javax.annotation.Nullable Integer minreadings) {
     this.minreadings = minreadings;
   }
 
 
-  public ObjectTableTypeMagnitude description(String description) {
+  public ObjectTableTypeMagnitude description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Additional information | char(255)
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -262,10 +271,10 @@ public class ObjectTableTypeMagnitude {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -408,12 +417,12 @@ public class ObjectTableTypeMagnitude {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectTableTypeMagnitude
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectTableTypeMagnitude
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectTableTypeMagnitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -504,22 +513,22 @@ public class ObjectTableTypeMagnitude {
     }
   }
 
- /**
-  * Create an instance of ObjectTableTypeMagnitude given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectTableTypeMagnitude
-  * @throws IOException if the JSON string is invalid with respect to ObjectTableTypeMagnitude
-  */
+  /**
+   * Create an instance of ObjectTableTypeMagnitude given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectTableTypeMagnitude
+   * @throws IOException if the JSON string is invalid with respect to ObjectTableTypeMagnitude
+   */
   public static ObjectTableTypeMagnitude fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectTableTypeMagnitude.class);
   }
 
- /**
-  * Convert an instance of ObjectTableTypeMagnitude to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectTableTypeMagnitude to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

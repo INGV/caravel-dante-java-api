@@ -44,7 +44,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -56,95 +55,117 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectMagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_MAG = "mag";
   @SerializedName(SERIALIZED_NAME_MAG)
+  @javax.annotation.Nonnull
   private Double mag;
 
   public static final String SERIALIZED_NAME_LOWER_UNCERTAINTY = "lower_uncertainty";
   @SerializedName(SERIALIZED_NAME_LOWER_UNCERTAINTY)
+  @javax.annotation.Nullable
   private Double lowerUncertainty;
 
   public static final String SERIALIZED_NAME_UPPER_UNCERTAINTY = "upper_uncertainty";
   @SerializedName(SERIALIZED_NAME_UPPER_UNCERTAINTY)
+  @javax.annotation.Nullable
   private Double upperUncertainty;
 
   public static final String SERIALIZED_NAME_CONFIDENCE_LEVEL = "confidence_level";
   @SerializedName(SERIALIZED_NAME_CONFIDENCE_LEVEL)
+  @javax.annotation.Nullable
   private Float confidenceLevel = 68.3f;
 
   public static final String SERIALIZED_NAME_QUALITY = "quality";
   @SerializedName(SERIALIZED_NAME_QUALITY)
+  @javax.annotation.Nullable
   private Double quality;
 
   public static final String SERIALIZED_NAME_MIN_DISTANCE = "min_distance";
   @SerializedName(SERIALIZED_NAME_MIN_DISTANCE)
+  @javax.annotation.Nullable
   private Double minDistance;
 
   public static final String SERIALIZED_NAME_AZIMUT = "azimut";
   @SerializedName(SERIALIZED_NAME_AZIMUT)
+  @javax.annotation.Nullable
   private Float azimut;
 
   public static final String SERIALIZED_NAME_NSTA = "nsta";
   @SerializedName(SERIALIZED_NAME_NSTA)
+  @javax.annotation.Nullable
   private Long nsta;
 
   public static final String SERIALIZED_NAME_NCHA = "ncha";
   @SerializedName(SERIALIZED_NAME_NCHA)
+  @javax.annotation.Nullable
   private Long ncha;
 
   public static final String SERIALIZED_NAME_NSTA_USED = "nsta_used";
   @SerializedName(SERIALIZED_NAME_NSTA_USED)
+  @javax.annotation.Nullable
   private Long nstaUsed;
 
   public static final String SERIALIZED_NAME_NCHA_USED = "ncha_used";
   @SerializedName(SERIALIZED_NAME_NCHA_USED)
+  @javax.annotation.Nullable
   private Long nchaUsed;
 
   public static final String SERIALIZED_NAME_MAG_QUALITY = "mag_quality";
   @SerializedName(SERIALIZED_NAME_MAG_QUALITY)
+  @javax.annotation.Nullable
   private String magQuality;
 
   public static final String SERIALIZED_NAME_TYPE_MAGNITUDE = "type_magnitude";
   @SerializedName(SERIALIZED_NAME_TYPE_MAGNITUDE)
+  @javax.annotation.Nonnull
   private String typeMagnitude;
 
   public static final String SERIALIZED_NAME_TYPE_MAGNITUDE_EXTENDED = "type_magnitude_extended";
   @SerializedName(SERIALIZED_NAME_TYPE_MAGNITUDE_EXTENDED)
+  @javax.annotation.Nullable
   private String typeMagnitudeExtended;
 
   public static final String SERIALIZED_NAME_TYPE_MAGNITUDE_PRIORITY = "type_magnitude_priority";
   @SerializedName(SERIALIZED_NAME_TYPE_MAGNITUDE_PRIORITY)
+  @javax.annotation.Nullable
   private Long typeMagnitudePriority = 0l;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspace localspace;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenance provenance;
 
   public static final String SERIALIZED_NAME_STATIONMAGNITUDES = "stationmagnitudes";
   @SerializedName(SERIALIZED_NAME_STATIONMAGNITUDES)
-  private List<ObjectStationmagnitude> stationmagnitudes;
+  @javax.annotation.Nullable
+  private List<ObjectStationmagnitude> stationmagnitudes = new ArrayList<>();
 
   public ObjectMagnitude() {
   }
@@ -162,10 +183,10 @@ public class ObjectMagnitude {
     this.typeMagnitudePriority = typeMagnitudePriority;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -173,10 +194,10 @@ public class ObjectMagnitude {
 
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -184,10 +205,10 @@ public class ObjectMagnitude {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -195,295 +216,295 @@ public class ObjectMagnitude {
 
 
 
-  public ObjectMagnitude idLocalspace(Long idLocalspace) {
+  public ObjectMagnitude idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectMagnitude mag(Double mag) {
+  public ObjectMagnitude mag(@javax.annotation.Nonnull Double mag) {
     this.mag = mag;
     return this;
   }
 
-   /**
+  /**
    * Magnitude value | double
    * @return mag
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getMag() {
     return mag;
   }
 
-  public void setMag(Double mag) {
+  public void setMag(@javax.annotation.Nonnull Double mag) {
     this.mag = mag;
   }
 
 
-  public ObjectMagnitude lowerUncertainty(Double lowerUncertainty) {
+  public ObjectMagnitude lowerUncertainty(@javax.annotation.Nullable Double lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
     return this;
   }
 
-   /**
+  /**
    * Magnitude lower_uncertainty | double
    * @return lowerUncertainty
-  **/
+   */
   @javax.annotation.Nullable
   public Double getLowerUncertainty() {
     return lowerUncertainty;
   }
 
-  public void setLowerUncertainty(Double lowerUncertainty) {
+  public void setLowerUncertainty(@javax.annotation.Nullable Double lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
   }
 
 
-  public ObjectMagnitude upperUncertainty(Double upperUncertainty) {
+  public ObjectMagnitude upperUncertainty(@javax.annotation.Nullable Double upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
     return this;
   }
 
-   /**
+  /**
    * Magnitude upper_uncertainty | double
    * @return upperUncertainty
-  **/
+   */
   @javax.annotation.Nullable
   public Double getUpperUncertainty() {
     return upperUncertainty;
   }
 
-  public void setUpperUncertainty(Double upperUncertainty) {
+  public void setUpperUncertainty(@javax.annotation.Nullable Double upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
   }
 
 
-  public ObjectMagnitude confidenceLevel(Float confidenceLevel) {
+  public ObjectMagnitude confidenceLevel(@javax.annotation.Nullable Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
     return this;
   }
 
-   /**
+  /**
    * Integer numer for confidence level type (68.3 1 sigma, xx &#x3D;2 sigma, 99% 3 sigma) | decimal(5.2)
    * @return confidenceLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Float getConfidenceLevel() {
     return confidenceLevel;
   }
 
-  public void setConfidenceLevel(Float confidenceLevel) {
+  public void setConfidenceLevel(@javax.annotation.Nullable Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
   }
 
 
-  public ObjectMagnitude quality(Double quality) {
+  public ObjectMagnitude quality(@javax.annotation.Nullable Double quality) {
     this.quality = quality;
     return this;
   }
 
-   /**
+  /**
    * quality | double
    * @return quality
-  **/
+   */
   @javax.annotation.Nullable
   public Double getQuality() {
     return quality;
   }
 
-  public void setQuality(Double quality) {
+  public void setQuality(@javax.annotation.Nullable Double quality) {
     this.quality = quality;
   }
 
 
-  public ObjectMagnitude minDistance(Double minDistance) {
+  public ObjectMagnitude minDistance(@javax.annotation.Nullable Double minDistance) {
     this.minDistance = minDistance;
     return this;
   }
 
-   /**
+  /**
    * Minimal distance from station to origin | double
    * @return minDistance
-  **/
+   */
   @javax.annotation.Nullable
   public Double getMinDistance() {
     return minDistance;
   }
 
-  public void setMinDistance(Double minDistance) {
+  public void setMinDistance(@javax.annotation.Nullable Double minDistance) {
     this.minDistance = minDistance;
   }
 
 
-  public ObjectMagnitude azimut(Float azimut) {
+  public ObjectMagnitude azimut(@javax.annotation.Nullable Float azimut) {
     this.azimut = azimut;
     return this;
   }
 
-   /**
+  /**
    * Azimutal gap | float4
    * @return azimut
-  **/
+   */
   @javax.annotation.Nullable
   public Float getAzimut() {
     return azimut;
   }
 
-  public void setAzimut(Float azimut) {
+  public void setAzimut(@javax.annotation.Nullable Float azimut) {
     this.azimut = azimut;
   }
 
 
-  public ObjectMagnitude nsta(Long nsta) {
+  public ObjectMagnitude nsta(@javax.annotation.Nullable Long nsta) {
     this.nsta = nsta;
     return this;
   }
 
-   /**
+  /**
    * Number of the stations on magnitudo calculation | int(11)
    * @return nsta
-  **/
+   */
   @javax.annotation.Nullable
   public Long getNsta() {
     return nsta;
   }
 
-  public void setNsta(Long nsta) {
+  public void setNsta(@javax.annotation.Nullable Long nsta) {
     this.nsta = nsta;
   }
 
 
-  public ObjectMagnitude ncha(Long ncha) {
+  public ObjectMagnitude ncha(@javax.annotation.Nullable Long ncha) {
     this.ncha = ncha;
     return this;
   }
 
-   /**
+  /**
    * Number of the channel on magnitudo calculation | int(11)
    * @return ncha
-  **/
+   */
   @javax.annotation.Nullable
   public Long getNcha() {
     return ncha;
   }
 
-  public void setNcha(Long ncha) {
+  public void setNcha(@javax.annotation.Nullable Long ncha) {
     this.ncha = ncha;
   }
 
 
-  public ObjectMagnitude nstaUsed(Long nstaUsed) {
+  public ObjectMagnitude nstaUsed(@javax.annotation.Nullable Long nstaUsed) {
     this.nstaUsed = nstaUsed;
     return this;
   }
 
-   /**
+  /**
    * Number of the stations used on magnitudo calculation | int(11)
    * @return nstaUsed
-  **/
+   */
   @javax.annotation.Nullable
   public Long getNstaUsed() {
     return nstaUsed;
   }
 
-  public void setNstaUsed(Long nstaUsed) {
+  public void setNstaUsed(@javax.annotation.Nullable Long nstaUsed) {
     this.nstaUsed = nstaUsed;
   }
 
 
-  public ObjectMagnitude nchaUsed(Long nchaUsed) {
+  public ObjectMagnitude nchaUsed(@javax.annotation.Nullable Long nchaUsed) {
     this.nchaUsed = nchaUsed;
     return this;
   }
 
-   /**
+  /**
    * Number of the channels used on magnitude calculation | int(11)
    * @return nchaUsed
-  **/
+   */
   @javax.annotation.Nullable
   public Long getNchaUsed() {
     return nchaUsed;
   }
 
-  public void setNchaUsed(Long nchaUsed) {
+  public void setNchaUsed(@javax.annotation.Nullable Long nchaUsed) {
     this.nchaUsed = nchaUsed;
   }
 
 
-  public ObjectMagnitude magQuality(String magQuality) {
+  public ObjectMagnitude magQuality(@javax.annotation.Nullable String magQuality) {
     this.magQuality = magQuality;
     return this;
   }
 
-   /**
+  /**
    * INGV quality code of the magnitude (computed by ew2moledb) | char(2)
    * @return magQuality
-  **/
+   */
   @javax.annotation.Nullable
   public String getMagQuality() {
     return magQuality;
   }
 
-  public void setMagQuality(String magQuality) {
+  public void setMagQuality(@javax.annotation.Nullable String magQuality) {
     this.magQuality = magQuality;
   }
 
 
-  public ObjectMagnitude typeMagnitude(String typeMagnitude) {
+  public ObjectMagnitude typeMagnitude(@javax.annotation.Nonnull String typeMagnitude) {
     this.typeMagnitude = typeMagnitude;
     return this;
   }
 
-   /**
+  /**
    * Type Scale of the magnitude, international scale label (i.e. ML, Md, Mw, ...) | varchar(50)
    * @return typeMagnitude
-  **/
+   */
   @javax.annotation.Nonnull
   public String getTypeMagnitude() {
     return typeMagnitude;
   }
 
-  public void setTypeMagnitude(String typeMagnitude) {
+  public void setTypeMagnitude(@javax.annotation.Nonnull String typeMagnitude) {
     this.typeMagnitude = typeMagnitude;
   }
 
 
-  public ObjectMagnitude typeMagnitudeExtended(String typeMagnitudeExtended) {
+  public ObjectMagnitude typeMagnitudeExtended(@javax.annotation.Nullable String typeMagnitudeExtended) {
     this.typeMagnitudeExtended = typeMagnitudeExtended;
     return this;
   }
 
-   /**
+  /**
    * Type of the magnitude | varchar(255)
    * @return typeMagnitudeExtended
-  **/
+   */
   @javax.annotation.Nullable
   public String getTypeMagnitudeExtended() {
     return typeMagnitudeExtended;
   }
 
-  public void setTypeMagnitudeExtended(String typeMagnitudeExtended) {
+  public void setTypeMagnitudeExtended(@javax.annotation.Nullable String typeMagnitudeExtended) {
     this.typeMagnitudeExtended = typeMagnitudeExtended;
   }
 
 
-   /**
+  /**
    * Priority | int(8)
    * @return typeMagnitudePriority
-  **/
+   */
   @javax.annotation.Nullable
   public Long getTypeMagnitudePriority() {
     return typeMagnitudePriority;
@@ -491,45 +512,45 @@ public class ObjectMagnitude {
 
 
 
-  public ObjectMagnitude localspace(ObjectLocalspace localspace) {
+  public ObjectMagnitude localspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
 
-  public void setLocalspace(ObjectLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectMagnitude provenance(ObjectProvenance provenance) {
+  public ObjectMagnitude provenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectProvenance getProvenance() {
     return provenance;
   }
 
-  public void setProvenance(ObjectProvenance provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
-  public ObjectMagnitude stationmagnitudes(List<ObjectStationmagnitude> stationmagnitudes) {
+  public ObjectMagnitude stationmagnitudes(@javax.annotation.Nullable List<ObjectStationmagnitude> stationmagnitudes) {
     this.stationmagnitudes = stationmagnitudes;
     return this;
   }
@@ -542,16 +563,16 @@ public class ObjectMagnitude {
     return this;
   }
 
-   /**
+  /**
    * Get stationmagnitudes
    * @return stationmagnitudes
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectStationmagnitude> getStationmagnitudes() {
     return stationmagnitudes;
   }
 
-  public void setStationmagnitudes(List<ObjectStationmagnitude> stationmagnitudes) {
+  public void setStationmagnitudes(@javax.annotation.Nullable List<ObjectStationmagnitude> stationmagnitudes) {
     this.stationmagnitudes = stationmagnitudes;
   }
 
@@ -729,12 +750,12 @@ public class ObjectMagnitude {
     openapiRequiredFields.add("type_magnitude");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectMagnitude
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectMagnitude
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectMagnitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -854,22 +875,22 @@ public class ObjectMagnitude {
     }
   }
 
- /**
-  * Create an instance of ObjectMagnitude given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectMagnitude
-  * @throws IOException if the JSON string is invalid with respect to ObjectMagnitude
-  */
+  /**
+   * Create an instance of ObjectMagnitude given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectMagnitude
+   * @throws IOException if the JSON string is invalid with respect to ObjectMagnitude
+   */
   public static ObjectMagnitude fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectMagnitude.class);
   }
 
- /**
-  * Convert an instance of ObjectMagnitude to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectMagnitude to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

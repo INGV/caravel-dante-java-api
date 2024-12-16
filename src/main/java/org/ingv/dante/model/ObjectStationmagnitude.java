@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,58 +51,71 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStationmagnitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectStationmagnitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_EP_DISTANCE_KM = "ep_distance_km";
   @SerializedName(SERIALIZED_NAME_EP_DISTANCE_KM)
+  @javax.annotation.Nullable
   private Float epDistanceKm;
 
   public static final String SERIALIZED_NAME_ORIG_DISTANCE_KM = "orig_distance_km";
   @SerializedName(SERIALIZED_NAME_ORIG_DISTANCE_KM)
+  @javax.annotation.Nullable
   private Double origDistanceKm;
 
   public static final String SERIALIZED_NAME_AZIMUT = "azimut";
   @SerializedName(SERIALIZED_NAME_AZIMUT)
+  @javax.annotation.Nullable
   private Float azimut;
 
   public static final String SERIALIZED_NAME_MAG = "mag";
   @SerializedName(SERIALIZED_NAME_MAG)
+  @javax.annotation.Nonnull
   private Double mag;
 
   public static final String SERIALIZED_NAME_ERR_MAG = "err_mag";
   @SerializedName(SERIALIZED_NAME_ERR_MAG)
+  @javax.annotation.Nullable
   private Double errMag;
 
   public static final String SERIALIZED_NAME_WEIGHT = "weight";
   @SerializedName(SERIALIZED_NAME_WEIGHT)
+  @javax.annotation.Nullable
   private Double weight;
 
   public static final String SERIALIZED_NAME_MAG_CORRECTION = "mag_correction";
   @SerializedName(SERIALIZED_NAME_MAG_CORRECTION)
+  @javax.annotation.Nullable
   private Double magCorrection;
 
   public static final String SERIALIZED_NAME_IS_USED = "is_used";
   @SerializedName(SERIALIZED_NAME_IS_USED)
+  @javax.annotation.Nullable
   private Boolean isUsed = false;
 
   public static final String SERIALIZED_NAME_TYPE_MAGNITUDE = "type_magnitude";
   @SerializedName(SERIALIZED_NAME_TYPE_MAGNITUDE)
+  @javax.annotation.Nullable
   private String typeMagnitude;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_AMPLITUDE = "amplitude";
   @SerializedName(SERIALIZED_NAME_AMPLITUDE)
+  @javax.annotation.Nullable
   private ObjectAmplitude amplitude;
 
   public ObjectStationmagnitude() {
@@ -120,10 +132,10 @@ public class ObjectStationmagnitude {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -131,181 +143,181 @@ public class ObjectStationmagnitude {
 
 
 
-  public ObjectStationmagnitude epDistanceKm(Float epDistanceKm) {
+  public ObjectStationmagnitude epDistanceKm(@javax.annotation.Nullable Float epDistanceKm) {
     this.epDistanceKm = epDistanceKm;
     return this;
   }
 
-   /**
+  /**
    * Distance from epicenter of the station expressed in Km | double
    * @return epDistanceKm
-  **/
+   */
   @javax.annotation.Nullable
   public Float getEpDistanceKm() {
     return epDistanceKm;
   }
 
-  public void setEpDistanceKm(Float epDistanceKm) {
+  public void setEpDistanceKm(@javax.annotation.Nullable Float epDistanceKm) {
     this.epDistanceKm = epDistanceKm;
   }
 
 
-  public ObjectStationmagnitude origDistanceKm(Double origDistanceKm) {
+  public ObjectStationmagnitude origDistanceKm(@javax.annotation.Nullable Double origDistanceKm) {
     this.origDistanceKm = origDistanceKm;
     return this;
   }
 
-   /**
+  /**
    * Distance from origin of the station (km) | double
    * @return origDistanceKm
-  **/
+   */
   @javax.annotation.Nullable
   public Double getOrigDistanceKm() {
     return origDistanceKm;
   }
 
-  public void setOrigDistanceKm(Double origDistanceKm) {
+  public void setOrigDistanceKm(@javax.annotation.Nullable Double origDistanceKm) {
     this.origDistanceKm = origDistanceKm;
   }
 
 
-  public ObjectStationmagnitude azimut(Float azimut) {
+  public ObjectStationmagnitude azimut(@javax.annotation.Nullable Float azimut) {
     this.azimut = azimut;
     return this;
   }
 
-   /**
+  /**
    * Station origin azimut | double
    * @return azimut
-  **/
+   */
   @javax.annotation.Nullable
   public Float getAzimut() {
     return azimut;
   }
 
-  public void setAzimut(Float azimut) {
+  public void setAzimut(@javax.annotation.Nullable Float azimut) {
     this.azimut = azimut;
   }
 
 
-  public ObjectStationmagnitude mag(Double mag) {
+  public ObjectStationmagnitude mag(@javax.annotation.Nonnull Double mag) {
     this.mag = mag;
     return this;
   }
 
-   /**
+  /**
    * Amplitude magnitude value | double
    * @return mag
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getMag() {
     return mag;
   }
 
-  public void setMag(Double mag) {
+  public void setMag(@javax.annotation.Nonnull Double mag) {
     this.mag = mag;
   }
 
 
-  public ObjectStationmagnitude errMag(Double errMag) {
+  public ObjectStationmagnitude errMag(@javax.annotation.Nullable Double errMag) {
     this.errMag = errMag;
     return this;
   }
 
-   /**
+  /**
    * magnitude error | double
    * @return errMag
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrMag() {
     return errMag;
   }
 
-  public void setErrMag(Double errMag) {
+  public void setErrMag(@javax.annotation.Nullable Double errMag) {
     this.errMag = errMag;
   }
 
 
-  public ObjectStationmagnitude weight(Double weight) {
+  public ObjectStationmagnitude weight(@javax.annotation.Nullable Double weight) {
     this.weight = weight;
     return this;
   }
 
-   /**
+  /**
    * Weight | double
    * @return weight
-  **/
+   */
   @javax.annotation.Nullable
   public Double getWeight() {
     return weight;
   }
 
-  public void setWeight(Double weight) {
+  public void setWeight(@javax.annotation.Nullable Double weight) {
     this.weight = weight;
   }
 
 
-  public ObjectStationmagnitude magCorrection(Double magCorrection) {
+  public ObjectStationmagnitude magCorrection(@javax.annotation.Nullable Double magCorrection) {
     this.magCorrection = magCorrection;
     return this;
   }
 
-   /**
+  /**
    * magnitude correction | double
    * @return magCorrection
-  **/
+   */
   @javax.annotation.Nullable
   public Double getMagCorrection() {
     return magCorrection;
   }
 
-  public void setMagCorrection(Double magCorrection) {
+  public void setMagCorrection(@javax.annotation.Nullable Double magCorrection) {
     this.magCorrection = magCorrection;
   }
 
 
-  public ObjectStationmagnitude isUsed(Boolean isUsed) {
+  public ObjectStationmagnitude isUsed(@javax.annotation.Nullable Boolean isUsed) {
     this.isUsed = isUsed;
     return this;
   }
 
-   /**
+  /**
    * true if used | boolean
    * @return isUsed
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getIsUsed() {
     return isUsed;
   }
 
-  public void setIsUsed(Boolean isUsed) {
+  public void setIsUsed(@javax.annotation.Nullable Boolean isUsed) {
     this.isUsed = isUsed;
   }
 
 
-  public ObjectStationmagnitude typeMagnitude(String typeMagnitude) {
+  public ObjectStationmagnitude typeMagnitude(@javax.annotation.Nullable String typeMagnitude) {
     this.typeMagnitude = typeMagnitude;
     return this;
   }
 
-   /**
+  /**
    * Type Scale of the magnitude, international scale label (i.e. ML, Md, Mw, ...) | varchar(50)
    * @return typeMagnitude
-  **/
+   */
   @javax.annotation.Nullable
   public String getTypeMagnitude() {
     return typeMagnitude;
   }
 
-  public void setTypeMagnitude(String typeMagnitude) {
+  public void setTypeMagnitude(@javax.annotation.Nullable String typeMagnitude) {
     this.typeMagnitude = typeMagnitude;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -313,10 +325,10 @@ public class ObjectStationmagnitude {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -324,21 +336,21 @@ public class ObjectStationmagnitude {
 
 
 
-  public ObjectStationmagnitude amplitude(ObjectAmplitude amplitude) {
+  public ObjectStationmagnitude amplitude(@javax.annotation.Nullable ObjectAmplitude amplitude) {
     this.amplitude = amplitude;
     return this;
   }
 
-   /**
+  /**
    * Get amplitude
    * @return amplitude
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectAmplitude getAmplitude() {
     return amplitude;
   }
 
-  public void setAmplitude(ObjectAmplitude amplitude) {
+  public void setAmplitude(@javax.annotation.Nullable ObjectAmplitude amplitude) {
     this.amplitude = amplitude;
   }
 
@@ -488,12 +500,12 @@ public class ObjectStationmagnitude {
     openapiRequiredFields.add("mag");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectStationmagnitude
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectStationmagnitude
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectStationmagnitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -589,22 +601,22 @@ public class ObjectStationmagnitude {
     }
   }
 
- /**
-  * Create an instance of ObjectStationmagnitude given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectStationmagnitude
-  * @throws IOException if the JSON string is invalid with respect to ObjectStationmagnitude
-  */
+  /**
+   * Create an instance of ObjectStationmagnitude given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectStationmagnitude
+   * @throws IOException if the JSON string is invalid with respect to ObjectStationmagnitude
+   */
   public static ObjectStationmagnitude fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectStationmagnitude.class);
   }
 
- /**
-  * Convert an instance of ObjectStationmagnitude to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectStationmagnitude to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

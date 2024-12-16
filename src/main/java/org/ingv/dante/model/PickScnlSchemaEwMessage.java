@@ -42,7 +42,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -54,200 +53,209 @@ import org.ingv.dante.JSON;
 /**
  * PickScnlSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class PickScnlSchemaEwMessage {
   public static final String SERIALIZED_NAME_PICK_ID = "pickId";
   @SerializedName(SERIALIZED_NAME_PICK_ID)
+  @javax.annotation.Nullable
   private Long pickId;
 
   public static final String SERIALIZED_NAME_NETWORK = "network";
   @SerializedName(SERIALIZED_NAME_NETWORK)
+  @javax.annotation.Nullable
   private String network;
 
   public static final String SERIALIZED_NAME_STATION = "station";
   @SerializedName(SERIALIZED_NAME_STATION)
+  @javax.annotation.Nullable
   private String station;
 
   public static final String SERIALIZED_NAME_COMPONENT = "component";
   @SerializedName(SERIALIZED_NAME_COMPONENT)
+  @javax.annotation.Nullable
   private String component;
 
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
+  @javax.annotation.Nullable
   private String location = "--";
 
   public static final String SERIALIZED_NAME_FIRST_MOTION = "firstMotion";
   @SerializedName(SERIALIZED_NAME_FIRST_MOTION)
+  @javax.annotation.Nullable
   private PickFirstmotion firstMotion;
 
   public static final String SERIALIZED_NAME_PICK_WEIGHT = "pickWeight";
   @SerializedName(SERIALIZED_NAME_PICK_WEIGHT)
+  @javax.annotation.Nullable
   private Float pickWeight;
 
   public static final String SERIALIZED_NAME_TIME_OF_PICK = "timeOfPick";
   @SerializedName(SERIALIZED_NAME_TIME_OF_PICK)
+  @javax.annotation.Nullable
   private OffsetDateTime timeOfPick;
 
   public static final String SERIALIZED_NAME_P_AMPLITUDE = "pAmplitude";
   @SerializedName(SERIALIZED_NAME_P_AMPLITUDE)
-  private List<Double> pAmplitude;
+  @javax.annotation.Nullable
+  private List<Double> pAmplitude = new ArrayList<>();
 
   public PickScnlSchemaEwMessage() {
   }
 
-  public PickScnlSchemaEwMessage pickId(Long pickId) {
+  public PickScnlSchemaEwMessage pickId(@javax.annotation.Nullable Long pickId) {
     this.pickId = pickId;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return pickId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPickId() {
     return pickId;
   }
 
-  public void setPickId(Long pickId) {
+  public void setPickId(@javax.annotation.Nullable Long pickId) {
     this.pickId = pickId;
   }
 
 
-  public PickScnlSchemaEwMessage network(String network) {
+  public PickScnlSchemaEwMessage network(@javax.annotation.Nullable String network) {
     this.network = network;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return network
-  **/
+   */
   @javax.annotation.Nullable
   public String getNetwork() {
     return network;
   }
 
-  public void setNetwork(String network) {
+  public void setNetwork(@javax.annotation.Nullable String network) {
     this.network = network;
   }
 
 
-  public PickScnlSchemaEwMessage station(String station) {
+  public PickScnlSchemaEwMessage station(@javax.annotation.Nullable String station) {
     this.station = station;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return station
-  **/
+   */
   @javax.annotation.Nullable
   public String getStation() {
     return station;
   }
 
-  public void setStation(String station) {
+  public void setStation(@javax.annotation.Nullable String station) {
     this.station = station;
   }
 
 
-  public PickScnlSchemaEwMessage component(String component) {
+  public PickScnlSchemaEwMessage component(@javax.annotation.Nullable String component) {
     this.component = component;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return component
-  **/
+   */
   @javax.annotation.Nullable
   public String getComponent() {
     return component;
   }
 
-  public void setComponent(String component) {
+  public void setComponent(@javax.annotation.Nullable String component) {
     this.component = component;
   }
 
 
-  public PickScnlSchemaEwMessage location(String location) {
+  public PickScnlSchemaEwMessage location(@javax.annotation.Nullable String location) {
     this.location = location;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return location
-  **/
+   */
   @javax.annotation.Nullable
   public String getLocation() {
     return location;
   }
 
-  public void setLocation(String location) {
+  public void setLocation(@javax.annotation.Nullable String location) {
     this.location = location;
   }
 
 
-  public PickScnlSchemaEwMessage firstMotion(PickFirstmotion firstMotion) {
+  public PickScnlSchemaEwMessage firstMotion(@javax.annotation.Nullable PickFirstmotion firstMotion) {
     this.firstMotion = firstMotion;
     return this;
   }
 
-   /**
+  /**
    * Get firstMotion
    * @return firstMotion
-  **/
+   */
   @javax.annotation.Nullable
   public PickFirstmotion getFirstMotion() {
     return firstMotion;
   }
 
-  public void setFirstMotion(PickFirstmotion firstMotion) {
+  public void setFirstMotion(@javax.annotation.Nullable PickFirstmotion firstMotion) {
     this.firstMotion = firstMotion;
   }
 
 
-  public PickScnlSchemaEwMessage pickWeight(Float pickWeight) {
+  public PickScnlSchemaEwMessage pickWeight(@javax.annotation.Nullable Float pickWeight) {
     this.pickWeight = pickWeight;
     return this;
   }
 
-   /**
+  /**
    * Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)
    * @return pickWeight
-  **/
+   */
   @javax.annotation.Nullable
   public Float getPickWeight() {
     return pickWeight;
   }
 
-  public void setPickWeight(Float pickWeight) {
+  public void setPickWeight(@javax.annotation.Nullable Float pickWeight) {
     this.pickWeight = pickWeight;
   }
 
 
-  public PickScnlSchemaEwMessage timeOfPick(OffsetDateTime timeOfPick) {
+  public PickScnlSchemaEwMessage timeOfPick(@javax.annotation.Nullable OffsetDateTime timeOfPick) {
     this.timeOfPick = timeOfPick;
     return this;
   }
 
-   /**
+  /**
    * Arrival time with microseconds | datetime(3)
    * @return timeOfPick
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTimeOfPick() {
     return timeOfPick;
   }
 
-  public void setTimeOfPick(OffsetDateTime timeOfPick) {
+  public void setTimeOfPick(@javax.annotation.Nullable OffsetDateTime timeOfPick) {
     this.timeOfPick = timeOfPick;
   }
 
 
-  public PickScnlSchemaEwMessage pAmplitude(List<Double> pAmplitude) {
+  public PickScnlSchemaEwMessage pAmplitude(@javax.annotation.Nullable List<Double> pAmplitude) {
     this.pAmplitude = pAmplitude;
     return this;
   }
@@ -260,16 +268,16 @@ public class PickScnlSchemaEwMessage {
     return this;
   }
 
-   /**
+  /**
    * Get pAmplitude
    * @return pAmplitude
-  **/
+   */
   @javax.annotation.Nullable
   public List<Double> getpAmplitude() {
     return pAmplitude;
   }
 
-  public void setpAmplitude(List<Double> pAmplitude) {
+  public void setpAmplitude(@javax.annotation.Nullable List<Double> pAmplitude) {
     this.pAmplitude = pAmplitude;
   }
 
@@ -407,12 +415,12 @@ public class PickScnlSchemaEwMessage {
     openapiRequiredFields.add("pickId");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to PickScnlSchemaEwMessage
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to PickScnlSchemaEwMessage
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!PickScnlSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -521,22 +529,22 @@ public class PickScnlSchemaEwMessage {
     }
   }
 
- /**
-  * Create an instance of PickScnlSchemaEwMessage given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of PickScnlSchemaEwMessage
-  * @throws IOException if the JSON string is invalid with respect to PickScnlSchemaEwMessage
-  */
+  /**
+   * Create an instance of PickScnlSchemaEwMessage given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of PickScnlSchemaEwMessage
+   * @throws IOException if the JSON string is invalid with respect to PickScnlSchemaEwMessage
+   */
   public static PickScnlSchemaEwMessage fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, PickScnlSchemaEwMessage.class);
   }
 
- /**
-  * Convert an instance of PickScnlSchemaEwMessage to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of PickScnlSchemaEwMessage to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -31,9 +31,7 @@ public enum ProvenanceEvaluationmode {
   
   AUTOMATIC("automatic"),
   
-  MANUAL("manual"),
-  
-  NULL("null");
+  MANUAL("manual");
 
   private String value;
 

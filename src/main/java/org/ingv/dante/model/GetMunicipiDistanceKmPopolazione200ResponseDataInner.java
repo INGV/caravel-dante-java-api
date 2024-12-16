@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,241 +48,251 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipiDistanceKmPopolazione200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_SIGLA_PRO = "sigla_pro";
   @SerializedName(SERIALIZED_NAME_SIGLA_PRO)
+  @javax.annotation.Nullable
   private String siglaPro;
 
   public static final String SERIALIZED_NAME_NOME_PRO = "nome_pro";
   @SerializedName(SERIALIZED_NAME_NOME_PRO)
+  @javax.annotation.Nullable
   private String nomePro;
 
   public static final String SERIALIZED_NAME_NOME_REG = "nome_reg";
   @SerializedName(SERIALIZED_NAME_NOME_REG)
+  @javax.annotation.Nullable
   private String nomeReg;
 
   public static final String SERIALIZED_NAME_POPOLAZIONE = "popolazione";
   @SerializedName(SERIALIZED_NAME_POPOLAZIONE)
+  @javax.annotation.Nullable
   private Long popolazione;
 
   public static final String SERIALIZED_NAME_LAT = "lat";
   @SerializedName(SERIALIZED_NAME_LAT)
+  @javax.annotation.Nullable
   private Double lat;
 
   public static final String SERIALIZED_NAME_LON = "lon";
   @SerializedName(SERIALIZED_NAME_LON)
+  @javax.annotation.Nullable
   private Double lon;
 
   public static final String SERIALIZED_NAME_DIST_KM = "dist_km";
   @SerializedName(SERIALIZED_NAME_DIST_KM)
+  @javax.annotation.Nullable
   private Float distKm;
 
   public static final String SERIALIZED_NAME_AZM = "azm";
   @SerializedName(SERIALIZED_NAME_AZM)
+  @javax.annotation.Nullable
   private Float azm;
 
   public static final String SERIALIZED_NAME_DIR = "dir";
   @SerializedName(SERIALIZED_NAME_DIR)
+  @javax.annotation.Nullable
   private String dir;
 
   public GetMunicipiDistanceKmPopolazione200ResponseDataInner() {
   }
 
-  public GetMunicipiDistanceKmPopolazione200ResponseDataInner name(String name) {
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Italian \&quot;municipio\&quot; name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public GetMunicipiDistanceKmPopolazione200ResponseDataInner siglaPro(String siglaPro) {
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner siglaPro(@javax.annotation.Nullable String siglaPro) {
     this.siglaPro = siglaPro;
     return this;
   }
 
-   /**
+  /**
    * Italian province abbreviation.
    * @return siglaPro
-  **/
+   */
   @javax.annotation.Nullable
   public String getSiglaPro() {
     return siglaPro;
   }
 
-  public void setSiglaPro(String siglaPro) {
+  public void setSiglaPro(@javax.annotation.Nullable String siglaPro) {
     this.siglaPro = siglaPro;
   }
 
 
-  public GetMunicipiDistanceKmPopolazione200ResponseDataInner nomePro(String nomePro) {
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner nomePro(@javax.annotation.Nullable String nomePro) {
     this.nomePro = nomePro;
     return this;
   }
 
-   /**
+  /**
    * Italian province name.
    * @return nomePro
-  **/
+   */
   @javax.annotation.Nullable
   public String getNomePro() {
     return nomePro;
   }
 
-  public void setNomePro(String nomePro) {
+  public void setNomePro(@javax.annotation.Nullable String nomePro) {
     this.nomePro = nomePro;
   }
 
 
-  public GetMunicipiDistanceKmPopolazione200ResponseDataInner nomeReg(String nomeReg) {
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner nomeReg(@javax.annotation.Nullable String nomeReg) {
     this.nomeReg = nomeReg;
     return this;
   }
 
-   /**
+  /**
    * Italian region name.
    * @return nomeReg
-  **/
+   */
   @javax.annotation.Nullable
   public String getNomeReg() {
     return nomeReg;
   }
 
-  public void setNomeReg(String nomeReg) {
+  public void setNomeReg(@javax.annotation.Nullable String nomeReg) {
     this.nomeReg = nomeReg;
   }
 
 
-  public GetMunicipiDistanceKmPopolazione200ResponseDataInner popolazione(Long popolazione) {
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner popolazione(@javax.annotation.Nullable Long popolazione) {
     this.popolazione = popolazione;
     return this;
   }
 
-   /**
+  /**
    * Popolazione.
    * @return popolazione
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPopolazione() {
     return popolazione;
   }
 
-  public void setPopolazione(Long popolazione) {
+  public void setPopolazione(@javax.annotation.Nullable Long popolazione) {
     this.popolazione = popolazione;
   }
 
 
-  public GetMunicipiDistanceKmPopolazione200ResponseDataInner lat(Double lat) {
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner lat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
     return this;
   }
 
-   /**
+  /**
    * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -90
    * maximum: 90
    * @return lat
-  **/
+   */
   @javax.annotation.Nullable
   public Double getLat() {
     return lat;
   }
 
-  public void setLat(Double lat) {
+  public void setLat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
   }
 
 
-  public GetMunicipiDistanceKmPopolazione200ResponseDataInner lon(Double lon) {
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner lon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
     return this;
   }
 
-   /**
+  /**
    * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -180
    * maximum: 180
    * @return lon
-  **/
+   */
   @javax.annotation.Nullable
   public Double getLon() {
     return lon;
   }
 
-  public void setLon(Double lon) {
+  public void setLon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
   }
 
 
-  public GetMunicipiDistanceKmPopolazione200ResponseDataInner distKm(Float distKm) {
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner distKm(@javax.annotation.Nullable Float distKm) {
     this.distKm = distKm;
     return this;
   }
 
-   /**
+  /**
    * Distance in km.
    * @return distKm
-  **/
+   */
   @javax.annotation.Nullable
   public Float getDistKm() {
     return distKm;
   }
 
-  public void setDistKm(Float distKm) {
+  public void setDistKm(@javax.annotation.Nullable Float distKm) {
     this.distKm = distKm;
   }
 
 
-  public GetMunicipiDistanceKmPopolazione200ResponseDataInner azm(Float azm) {
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner azm(@javax.annotation.Nullable Float azm) {
     this.azm = azm;
     return this;
   }
 
-   /**
+  /**
    * Azimutal gap | float4
    * @return azm
-  **/
+   */
   @javax.annotation.Nullable
   public Float getAzm() {
     return azm;
   }
 
-  public void setAzm(Float azm) {
+  public void setAzm(@javax.annotation.Nullable Float azm) {
     this.azm = azm;
   }
 
 
-  public GetMunicipiDistanceKmPopolazione200ResponseDataInner dir(String dir) {
+  public GetMunicipiDistanceKmPopolazione200ResponseDataInner dir(@javax.annotation.Nullable String dir) {
     this.dir = dir;
     return this;
   }
 
-   /**
+  /**
    * Direction.
    * @return dir
-  **/
+   */
   @javax.annotation.Nullable
   public String getDir() {
     return dir;
   }
 
-  public void setDir(String dir) {
+  public void setDir(@javax.annotation.Nullable String dir) {
     this.dir = dir;
   }
 
@@ -412,12 +421,12 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GetMunicipiDistanceKmPopolazione200ResponseDataInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetMunicipiDistanceKmPopolazione200ResponseDataInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GetMunicipiDistanceKmPopolazione200ResponseDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -514,22 +523,22 @@ public class GetMunicipiDistanceKmPopolazione200ResponseDataInner {
     }
   }
 
- /**
-  * Create an instance of GetMunicipiDistanceKmPopolazione200ResponseDataInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetMunicipiDistanceKmPopolazione200ResponseDataInner
-  * @throws IOException if the JSON string is invalid with respect to GetMunicipiDistanceKmPopolazione200ResponseDataInner
-  */
+  /**
+   * Create an instance of GetMunicipiDistanceKmPopolazione200ResponseDataInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetMunicipiDistanceKmPopolazione200ResponseDataInner
+   * @throws IOException if the JSON string is invalid with respect to GetMunicipiDistanceKmPopolazione200ResponseDataInner
+   */
   public static GetMunicipiDistanceKmPopolazione200ResponseDataInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetMunicipiDistanceKmPopolazione200ResponseDataInner.class);
   }
 
- /**
-  * Convert an instance of GetMunicipiDistanceKmPopolazione200ResponseDataInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetMunicipiDistanceKmPopolazione200ResponseDataInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

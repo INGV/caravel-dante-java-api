@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,30 +49,31 @@ import org.ingv.dante.JSON;
 /**
  * UpdateMomenttensor200ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UpdateMomenttensor200ResponseData {
   public static final String SERIALIZED_NAME_MOMENTTENSOR = "momenttensor";
   @SerializedName(SERIALIZED_NAME_MOMENTTENSOR)
+  @javax.annotation.Nullable
   private UpdateEvent200ResponseDataEvent momenttensor;
 
   public UpdateMomenttensor200ResponseData() {
   }
 
-  public UpdateMomenttensor200ResponseData momenttensor(UpdateEvent200ResponseDataEvent momenttensor) {
+  public UpdateMomenttensor200ResponseData momenttensor(@javax.annotation.Nullable UpdateEvent200ResponseDataEvent momenttensor) {
     this.momenttensor = momenttensor;
     return this;
   }
 
-   /**
+  /**
    * Get momenttensor
    * @return momenttensor
-  **/
+   */
   @javax.annotation.Nullable
   public UpdateEvent200ResponseDataEvent getMomenttensor() {
     return momenttensor;
   }
 
-  public void setMomenttensor(UpdateEvent200ResponseDataEvent momenttensor) {
+  public void setMomenttensor(@javax.annotation.Nullable UpdateEvent200ResponseDataEvent momenttensor) {
     this.momenttensor = momenttensor;
   }
 
@@ -175,12 +175,12 @@ public class UpdateMomenttensor200ResponseData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UpdateMomenttensor200ResponseData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UpdateMomenttensor200ResponseData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UpdateMomenttensor200ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -266,22 +266,22 @@ public class UpdateMomenttensor200ResponseData {
     }
   }
 
- /**
-  * Create an instance of UpdateMomenttensor200ResponseData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateMomenttensor200ResponseData
-  * @throws IOException if the JSON string is invalid with respect to UpdateMomenttensor200ResponseData
-  */
+  /**
+   * Create an instance of UpdateMomenttensor200ResponseData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UpdateMomenttensor200ResponseData
+   * @throws IOException if the JSON string is invalid with respect to UpdateMomenttensor200ResponseData
+   */
   public static UpdateMomenttensor200ResponseData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UpdateMomenttensor200ResponseData.class);
   }
 
- /**
-  * Convert an instance of UpdateMomenttensor200ResponseData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UpdateMomenttensor200ResponseData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

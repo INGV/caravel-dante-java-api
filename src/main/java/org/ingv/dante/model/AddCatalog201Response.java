@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,16 +51,17 @@ import org.ingv.dante.JSON;
 /**
  * AddCatalog201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddCatalog201Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<ObjectVwEventCatalogInner> data;
+  @javax.annotation.Nullable
+  private List<ObjectVwEventCatalogInner> data = new ArrayList<>();
 
   public AddCatalog201Response() {
   }
 
-  public AddCatalog201Response data(List<ObjectVwEventCatalogInner> data) {
+  public AddCatalog201Response data(@javax.annotation.Nullable List<ObjectVwEventCatalogInner> data) {
     this.data = data;
     return this;
   }
@@ -74,16 +74,16 @@ public class AddCatalog201Response {
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectVwEventCatalogInner> getData() {
     return data;
   }
 
-  public void setData(List<ObjectVwEventCatalogInner> data) {
+  public void setData(@javax.annotation.Nullable List<ObjectVwEventCatalogInner> data) {
     this.data = data;
   }
 
@@ -185,12 +185,12 @@ public class AddCatalog201Response {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddCatalog201Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddCatalog201Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddCatalog201Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -286,22 +286,22 @@ public class AddCatalog201Response {
     }
   }
 
- /**
-  * Create an instance of AddCatalog201Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddCatalog201Response
-  * @throws IOException if the JSON string is invalid with respect to AddCatalog201Response
-  */
+  /**
+   * Create an instance of AddCatalog201Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddCatalog201Response
+   * @throws IOException if the JSON string is invalid with respect to AddCatalog201Response
+   */
   public static AddCatalog201Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddCatalog201Response.class);
   }
 
- /**
-  * Convert an instance of AddCatalog201Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddCatalog201Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

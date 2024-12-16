@@ -45,7 +45,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -57,95 +56,117 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotion
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectStrongmotion {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
+  @javax.annotation.Nullable
   private String net;
 
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
+  @javax.annotation.Nullable
   private String sta;
 
   public static final String SERIALIZED_NAME_CHA = "cha";
   @SerializedName(SERIALIZED_NAME_CHA)
+  @javax.annotation.Nullable
   private String cha;
 
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
+  @javax.annotation.Nullable
   private String loc = "--";
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_T_DT = "t_dt";
   @SerializedName(SERIALIZED_NAME_T_DT)
+  @javax.annotation.Nonnull
   private OffsetDateTime tDt;
 
   public static final String SERIALIZED_NAME_PGA = "pga";
   @SerializedName(SERIALIZED_NAME_PGA)
+  @javax.annotation.Nullable
   private Float pga;
 
   public static final String SERIALIZED_NAME_TPGA_DT = "tpga_dt";
   @SerializedName(SERIALIZED_NAME_TPGA_DT)
+  @javax.annotation.Nullable
   private OffsetDateTime tpgaDt;
 
   public static final String SERIALIZED_NAME_PGV = "pgv";
   @SerializedName(SERIALIZED_NAME_PGV)
+  @javax.annotation.Nullable
   private Float pgv;
 
   public static final String SERIALIZED_NAME_TPGV_DT = "tpgv_dt";
   @SerializedName(SERIALIZED_NAME_TPGV_DT)
+  @javax.annotation.Nullable
   private OffsetDateTime tpgvDt;
 
   public static final String SERIALIZED_NAME_PGD = "pgd";
   @SerializedName(SERIALIZED_NAME_PGD)
+  @javax.annotation.Nullable
   private Float pgd;
 
   public static final String SERIALIZED_NAME_TPGD_DT = "tpgd_dt";
   @SerializedName(SERIALIZED_NAME_TPGD_DT)
+  @javax.annotation.Nullable
   private OffsetDateTime tpgdDt;
 
   public static final String SERIALIZED_NAME_RSA030 = "rsa_030";
   @SerializedName(SERIALIZED_NAME_RSA030)
+  @javax.annotation.Nullable
   private Float rsa030;
 
   public static final String SERIALIZED_NAME_RSA100 = "rsa_100";
   @SerializedName(SERIALIZED_NAME_RSA100)
+  @javax.annotation.Nullable
   private Float rsa100;
 
   public static final String SERIALIZED_NAME_RSA300 = "rsa_300";
   @SerializedName(SERIALIZED_NAME_RSA300)
+  @javax.annotation.Nullable
   private Float rsa300;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspace localspace;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenance provenance;
 
   public static final String SERIALIZED_NAME_ALTERNATIVE = "alternative";
   @SerializedName(SERIALIZED_NAME_ALTERNATIVE)
+  @javax.annotation.Nullable
   private ObjectStrongmotionAlternative alternative;
 
   public static final String SERIALIZED_NAME_RSA = "rsa";
   @SerializedName(SERIALIZED_NAME_RSA)
-  private List<ObjectStrongmotionRsaInner> rsa;
+  @javax.annotation.Nullable
+  private List<ObjectStrongmotionRsaInner> rsa = new ArrayList<>();
 
   public ObjectStrongmotion() {
   }
@@ -161,86 +182,86 @@ public class ObjectStrongmotion {
     this.inserted = inserted;
   }
 
-  public ObjectStrongmotion net(String net) {
+  public ObjectStrongmotion net(@javax.annotation.Nullable String net) {
     this.net = net;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return net
-  **/
+   */
   @javax.annotation.Nullable
   public String getNet() {
     return net;
   }
 
-  public void setNet(String net) {
+  public void setNet(@javax.annotation.Nullable String net) {
     this.net = net;
   }
 
 
-  public ObjectStrongmotion sta(String sta) {
+  public ObjectStrongmotion sta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return sta
-  **/
+   */
   @javax.annotation.Nullable
   public String getSta() {
     return sta;
   }
 
-  public void setSta(String sta) {
+  public void setSta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
   }
 
 
-  public ObjectStrongmotion cha(String cha) {
+  public ObjectStrongmotion cha(@javax.annotation.Nullable String cha) {
     this.cha = cha;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return cha
-  **/
+   */
   @javax.annotation.Nullable
   public String getCha() {
     return cha;
   }
 
-  public void setCha(String cha) {
+  public void setCha(@javax.annotation.Nullable String cha) {
     this.cha = cha;
   }
 
 
-  public ObjectStrongmotion loc(String loc) {
+  public ObjectStrongmotion loc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return loc
-  **/
+   */
   @javax.annotation.Nullable
   public String getLoc() {
     return loc;
   }
 
-  public void setLoc(String loc) {
+  public void setLoc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
   }
 
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -248,10 +269,10 @@ public class ObjectStrongmotion {
 
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -259,10 +280,10 @@ public class ObjectStrongmotion {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -270,273 +291,273 @@ public class ObjectStrongmotion {
 
 
 
-  public ObjectStrongmotion idLocalspace(Long idLocalspace) {
+  public ObjectStrongmotion idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectStrongmotion tDt(OffsetDateTime tDt) {
+  public ObjectStrongmotion tDt(@javax.annotation.Nonnull OffsetDateTime tDt) {
     this.tDt = tDt;
     return this;
   }
 
-   /**
+  /**
    * time: trigger reported by SM box - datetime part | datetime(6)
    * @return tDt
-  **/
+   */
   @javax.annotation.Nonnull
   public OffsetDateTime gettDt() {
     return tDt;
   }
 
-  public void settDt(OffsetDateTime tDt) {
+  public void settDt(@javax.annotation.Nonnull OffsetDateTime tDt) {
     this.tDt = tDt;
   }
 
 
-  public ObjectStrongmotion pga(Float pga) {
+  public ObjectStrongmotion pga(@javax.annotation.Nullable Float pga) {
     this.pga = pga;
     return this;
   }
 
-   /**
+  /**
    * REQUIRED: peak ground acceleration (cm/s/s) | double
    * @return pga
-  **/
+   */
   @javax.annotation.Nullable
   public Float getPga() {
     return pga;
   }
 
-  public void setPga(Float pga) {
+  public void setPga(@javax.annotation.Nullable Float pga) {
     this.pga = pga;
   }
 
 
-  public ObjectStrongmotion tpgaDt(OffsetDateTime tpgaDt) {
+  public ObjectStrongmotion tpgaDt(@javax.annotation.Nullable OffsetDateTime tpgaDt) {
     this.tpgaDt = tpgaDt;
     return this;
   }
 
-   /**
+  /**
    * OPTIONAL: time of pga - datetime part | datetime(3)
    * @return tpgaDt
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTpgaDt() {
     return tpgaDt;
   }
 
-  public void setTpgaDt(OffsetDateTime tpgaDt) {
+  public void setTpgaDt(@javax.annotation.Nullable OffsetDateTime tpgaDt) {
     this.tpgaDt = tpgaDt;
   }
 
 
-  public ObjectStrongmotion pgv(Float pgv) {
+  public ObjectStrongmotion pgv(@javax.annotation.Nullable Float pgv) {
     this.pgv = pgv;
     return this;
   }
 
-   /**
+  /**
    * REQUIRED: peak ground velocity (cm/s) | double
    * @return pgv
-  **/
+   */
   @javax.annotation.Nullable
   public Float getPgv() {
     return pgv;
   }
 
-  public void setPgv(Float pgv) {
+  public void setPgv(@javax.annotation.Nullable Float pgv) {
     this.pgv = pgv;
   }
 
 
-  public ObjectStrongmotion tpgvDt(OffsetDateTime tpgvDt) {
+  public ObjectStrongmotion tpgvDt(@javax.annotation.Nullable OffsetDateTime tpgvDt) {
     this.tpgvDt = tpgvDt;
     return this;
   }
 
-   /**
+  /**
    * OPTIONAL: time of pgv - datetime part | datetime(3)
    * @return tpgvDt
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTpgvDt() {
     return tpgvDt;
   }
 
-  public void setTpgvDt(OffsetDateTime tpgvDt) {
+  public void setTpgvDt(@javax.annotation.Nullable OffsetDateTime tpgvDt) {
     this.tpgvDt = tpgvDt;
   }
 
 
-  public ObjectStrongmotion pgd(Float pgd) {
+  public ObjectStrongmotion pgd(@javax.annotation.Nullable Float pgd) {
     this.pgd = pgd;
     return this;
   }
 
-   /**
+  /**
    * REQUIRED: peak ground displacement (cm) | double
    * @return pgd
-  **/
+   */
   @javax.annotation.Nullable
   public Float getPgd() {
     return pgd;
   }
 
-  public void setPgd(Float pgd) {
+  public void setPgd(@javax.annotation.Nullable Float pgd) {
     this.pgd = pgd;
   }
 
 
-  public ObjectStrongmotion tpgdDt(OffsetDateTime tpgdDt) {
+  public ObjectStrongmotion tpgdDt(@javax.annotation.Nullable OffsetDateTime tpgdDt) {
     this.tpgdDt = tpgdDt;
     return this;
   }
 
-   /**
+  /**
    * OPTIONAL: time of pgd - datetime part | datetime(3)
    * @return tpgdDt
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTpgdDt() {
     return tpgdDt;
   }
 
-  public void setTpgdDt(OffsetDateTime tpgdDt) {
+  public void setTpgdDt(@javax.annotation.Nullable OffsetDateTime tpgdDt) {
     this.tpgdDt = tpgdDt;
   }
 
 
-  public ObjectStrongmotion rsa030(Float rsa030) {
+  public ObjectStrongmotion rsa030(@javax.annotation.Nullable Float rsa030) {
     this.rsa030 = rsa030;
     return this;
   }
 
-   /**
+  /**
    * RSA(response spectrum accel) value for period 0.30 | double
    * @return rsa030
-  **/
+   */
   @javax.annotation.Nullable
   public Float getRsa030() {
     return rsa030;
   }
 
-  public void setRsa030(Float rsa030) {
+  public void setRsa030(@javax.annotation.Nullable Float rsa030) {
     this.rsa030 = rsa030;
   }
 
 
-  public ObjectStrongmotion rsa100(Float rsa100) {
+  public ObjectStrongmotion rsa100(@javax.annotation.Nullable Float rsa100) {
     this.rsa100 = rsa100;
     return this;
   }
 
-   /**
+  /**
    * RSA(response spectrum accel) value for period 1.00 | double
    * @return rsa100
-  **/
+   */
   @javax.annotation.Nullable
   public Float getRsa100() {
     return rsa100;
   }
 
-  public void setRsa100(Float rsa100) {
+  public void setRsa100(@javax.annotation.Nullable Float rsa100) {
     this.rsa100 = rsa100;
   }
 
 
-  public ObjectStrongmotion rsa300(Float rsa300) {
+  public ObjectStrongmotion rsa300(@javax.annotation.Nullable Float rsa300) {
     this.rsa300 = rsa300;
     return this;
   }
 
-   /**
+  /**
    * RSA(response spectrum accel) value for period 3.00 | double
    * @return rsa300
-  **/
+   */
   @javax.annotation.Nullable
   public Float getRsa300() {
     return rsa300;
   }
 
-  public void setRsa300(Float rsa300) {
+  public void setRsa300(@javax.annotation.Nullable Float rsa300) {
     this.rsa300 = rsa300;
   }
 
 
-  public ObjectStrongmotion localspace(ObjectLocalspace localspace) {
+  public ObjectStrongmotion localspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
 
-  public void setLocalspace(ObjectLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectStrongmotion provenance(ObjectProvenance provenance) {
+  public ObjectStrongmotion provenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectProvenance getProvenance() {
     return provenance;
   }
 
-  public void setProvenance(ObjectProvenance provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
-  public ObjectStrongmotion alternative(ObjectStrongmotionAlternative alternative) {
+  public ObjectStrongmotion alternative(@javax.annotation.Nullable ObjectStrongmotionAlternative alternative) {
     this.alternative = alternative;
     return this;
   }
 
-   /**
+  /**
    * Get alternative
    * @return alternative
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectStrongmotionAlternative getAlternative() {
     return alternative;
   }
 
-  public void setAlternative(ObjectStrongmotionAlternative alternative) {
+  public void setAlternative(@javax.annotation.Nullable ObjectStrongmotionAlternative alternative) {
     this.alternative = alternative;
   }
 
 
-  public ObjectStrongmotion rsa(List<ObjectStrongmotionRsaInner> rsa) {
+  public ObjectStrongmotion rsa(@javax.annotation.Nullable List<ObjectStrongmotionRsaInner> rsa) {
     this.rsa = rsa;
     return this;
   }
@@ -549,16 +570,16 @@ public class ObjectStrongmotion {
     return this;
   }
 
-   /**
+  /**
    * Get rsa
    * @return rsa
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectStrongmotionRsaInner> getRsa() {
     return rsa;
   }
 
-  public void setRsa(List<ObjectStrongmotionRsaInner> rsa) {
+  public void setRsa(@javax.annotation.Nullable List<ObjectStrongmotionRsaInner> rsa) {
     this.rsa = rsa;
   }
 
@@ -735,12 +756,12 @@ public class ObjectStrongmotion {
     openapiRequiredFields.add("t_dt");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectStrongmotion
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectStrongmotion
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectStrongmotion.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -867,22 +888,22 @@ public class ObjectStrongmotion {
     }
   }
 
- /**
-  * Create an instance of ObjectStrongmotion given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectStrongmotion
-  * @throws IOException if the JSON string is invalid with respect to ObjectStrongmotion
-  */
+  /**
+   * Create an instance of ObjectStrongmotion given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectStrongmotion
+   * @throws IOException if the JSON string is invalid with respect to ObjectStrongmotion
+   */
   public static ObjectStrongmotion fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectStrongmotion.class);
   }
 
- /**
-  * Convert an instance of ObjectStrongmotion to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectStrongmotion to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

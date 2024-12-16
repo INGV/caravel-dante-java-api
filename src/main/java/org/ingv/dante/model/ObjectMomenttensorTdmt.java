@@ -41,7 +41,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -53,23 +52,27 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorTdmt
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectMomenttensorTdmt {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_STATIONS = "stations";
   @SerializedName(SERIALIZED_NAME_STATIONS)
-  private List<ObjectMomenttensorTdmtStationsInner> stations;
+  @javax.annotation.Nullable
+  private List<ObjectMomenttensorTdmtStationsInner> stations = new ArrayList<>();
 
   public ObjectMomenttensorTdmt() {
   }
@@ -85,10 +88,10 @@ public class ObjectMomenttensorTdmt {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -96,10 +99,10 @@ public class ObjectMomenttensorTdmt {
 
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -107,10 +110,10 @@ public class ObjectMomenttensorTdmt {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -118,7 +121,7 @@ public class ObjectMomenttensorTdmt {
 
 
 
-  public ObjectMomenttensorTdmt stations(List<ObjectMomenttensorTdmtStationsInner> stations) {
+  public ObjectMomenttensorTdmt stations(@javax.annotation.Nullable List<ObjectMomenttensorTdmtStationsInner> stations) {
     this.stations = stations;
     return this;
   }
@@ -131,16 +134,16 @@ public class ObjectMomenttensorTdmt {
     return this;
   }
 
-   /**
+  /**
    * Get stations
    * @return stations
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectMomenttensorTdmtStationsInner> getStations() {
     return stations;
   }
 
-  public void setStations(List<ObjectMomenttensorTdmtStationsInner> stations) {
+  public void setStations(@javax.annotation.Nullable List<ObjectMomenttensorTdmtStationsInner> stations) {
     this.stations = stations;
   }
 
@@ -251,12 +254,12 @@ public class ObjectMomenttensorTdmt {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectMomenttensorTdmt
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectMomenttensorTdmt
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectMomenttensorTdmt.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -352,22 +355,22 @@ public class ObjectMomenttensorTdmt {
     }
   }
 
- /**
-  * Create an instance of ObjectMomenttensorTdmt given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectMomenttensorTdmt
-  * @throws IOException if the JSON string is invalid with respect to ObjectMomenttensorTdmt
-  */
+  /**
+   * Create an instance of ObjectMomenttensorTdmt given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectMomenttensorTdmt
+   * @throws IOException if the JSON string is invalid with respect to ObjectMomenttensorTdmt
+   */
   public static ObjectMomenttensorTdmt fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectMomenttensorTdmt.class);
   }
 
- /**
-  * Convert an instance of ObjectMomenttensorTdmt to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectMomenttensorTdmt to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

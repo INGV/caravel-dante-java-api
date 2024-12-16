@@ -9,7 +9,5 @@
 
 * `I` (value: `"I"`)
 
-* `NULL` (value: `"null"`)
-
 
 

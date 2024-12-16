@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,53 +50,55 @@ import org.ingv.dante.JSON;
 /**
  * Hyp2000arcSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class Hyp2000arcSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
+  @javax.annotation.Nullable
   private Hyp2000arcSchemaEwMessage ewMessage;
 
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
+  @javax.annotation.Nullable
   private Hyp2000arcSchemaEwLogo ewLogo;
 
   public Hyp2000arcSchema() {
   }
 
-  public Hyp2000arcSchema ewMessage(Hyp2000arcSchemaEwMessage ewMessage) {
+  public Hyp2000arcSchema ewMessage(@javax.annotation.Nullable Hyp2000arcSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
     return this;
   }
 
-   /**
+  /**
    * Get ewMessage
    * @return ewMessage
-  **/
+   */
   @javax.annotation.Nullable
   public Hyp2000arcSchemaEwMessage getEwMessage() {
     return ewMessage;
   }
 
-  public void setEwMessage(Hyp2000arcSchemaEwMessage ewMessage) {
+  public void setEwMessage(@javax.annotation.Nullable Hyp2000arcSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
   }
 
 
-  public Hyp2000arcSchema ewLogo(Hyp2000arcSchemaEwLogo ewLogo) {
+  public Hyp2000arcSchema ewLogo(@javax.annotation.Nullable Hyp2000arcSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
     return this;
   }
 
-   /**
+  /**
    * Get ewLogo
    * @return ewLogo
-  **/
+   */
   @javax.annotation.Nullable
   public Hyp2000arcSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
 
-  public void setEwLogo(Hyp2000arcSchemaEwLogo ewLogo) {
+  public void setEwLogo(@javax.annotation.Nullable Hyp2000arcSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
   }
 
@@ -202,12 +203,12 @@ public class Hyp2000arcSchema {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Hyp2000arcSchema
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Hyp2000arcSchema
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Hyp2000arcSchema.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -297,22 +298,22 @@ public class Hyp2000arcSchema {
     }
   }
 
- /**
-  * Create an instance of Hyp2000arcSchema given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Hyp2000arcSchema
-  * @throws IOException if the JSON string is invalid with respect to Hyp2000arcSchema
-  */
+  /**
+   * Create an instance of Hyp2000arcSchema given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Hyp2000arcSchema
+   * @throws IOException if the JSON string is invalid with respect to Hyp2000arcSchema
+   */
   public static Hyp2000arcSchema fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Hyp2000arcSchema.class);
   }
 
- /**
-  * Convert an instance of Hyp2000arcSchema to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Hyp2000arcSchema to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

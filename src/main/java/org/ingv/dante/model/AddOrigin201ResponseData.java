@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,16 +51,17 @@ import org.ingv.dante.JSON;
 /**
  * AddOrigin201ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddOrigin201ResponseData {
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<AddOrigin201ResponseDataOriginsInner> origins;
+  @javax.annotation.Nullable
+  private List<AddOrigin201ResponseDataOriginsInner> origins = new ArrayList<>();
 
   public AddOrigin201ResponseData() {
   }
 
-  public AddOrigin201ResponseData origins(List<AddOrigin201ResponseDataOriginsInner> origins) {
+  public AddOrigin201ResponseData origins(@javax.annotation.Nullable List<AddOrigin201ResponseDataOriginsInner> origins) {
     this.origins = origins;
     return this;
   }
@@ -74,16 +74,16 @@ public class AddOrigin201ResponseData {
     return this;
   }
 
-   /**
+  /**
    * Get origins
    * @return origins
-  **/
+   */
   @javax.annotation.Nullable
   public List<AddOrigin201ResponseDataOriginsInner> getOrigins() {
     return origins;
   }
 
-  public void setOrigins(List<AddOrigin201ResponseDataOriginsInner> origins) {
+  public void setOrigins(@javax.annotation.Nullable List<AddOrigin201ResponseDataOriginsInner> origins) {
     this.origins = origins;
   }
 
@@ -185,12 +185,12 @@ public class AddOrigin201ResponseData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddOrigin201ResponseData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddOrigin201ResponseData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddOrigin201ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -286,22 +286,22 @@ public class AddOrigin201ResponseData {
     }
   }
 
- /**
-  * Create an instance of AddOrigin201ResponseData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddOrigin201ResponseData
-  * @throws IOException if the JSON string is invalid with respect to AddOrigin201ResponseData
-  */
+  /**
+   * Create an instance of AddOrigin201ResponseData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddOrigin201ResponseData
+   * @throws IOException if the JSON string is invalid with respect to AddOrigin201ResponseData
+   */
   public static AddOrigin201ResponseData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddOrigin201ResponseData.class);
   }
 
- /**
-  * Convert an instance of AddOrigin201ResponseData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddOrigin201ResponseData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

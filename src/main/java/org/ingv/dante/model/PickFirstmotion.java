@@ -31,9 +31,7 @@ public enum PickFirstmotion {
   
   U("U"),
   
-  D("D"),
-  
-  NULL("null");
+  D("D");
 
   private String value;
 

@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,38 +49,46 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorTdmtStationsInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectMomenttensorTdmtStationsInner {
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
+  @javax.annotation.Nullable
   private String sta;
 
   public static final String SERIALIZED_NAME_R = "r";
   @SerializedName(SERIALIZED_NAME_R)
+  @javax.annotation.Nullable
   private Float r;
 
   public static final String SERIALIZED_NAME_AZI = "azi";
   @SerializedName(SERIALIZED_NAME_AZI)
+  @javax.annotation.Nullable
   private Float azi;
 
   public static final String SERIALIZED_NAME_W = "w";
   @SerializedName(SERIALIZED_NAME_W)
+  @javax.annotation.Nullable
   private Double w;
 
   public static final String SERIALIZED_NAME_VR = "vr";
   @SerializedName(SERIALIZED_NAME_VR)
+  @javax.annotation.Nullable
   private Double vr;
 
   public static final String SERIALIZED_NAME_ZCOR = "zcor";
   @SerializedName(SERIALIZED_NAME_ZCOR)
+  @javax.annotation.Nullable
   private Double zcor;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public ObjectMomenttensorTdmtStationsInner() {
@@ -96,124 +103,124 @@ public class ObjectMomenttensorTdmtStationsInner {
     this.inserted = inserted;
   }
 
-  public ObjectMomenttensorTdmtStationsInner sta(String sta) {
+  public ObjectMomenttensorTdmtStationsInner sta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return sta
-  **/
+   */
   @javax.annotation.Nullable
   public String getSta() {
     return sta;
   }
 
-  public void setSta(String sta) {
+  public void setSta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
   }
 
 
-  public ObjectMomenttensorTdmtStationsInner r(Float r) {
+  public ObjectMomenttensorTdmtStationsInner r(@javax.annotation.Nullable Float r) {
     this.r = r;
     return this;
   }
 
-   /**
+  /**
    * epicenter distance
    * @return r
-  **/
+   */
   @javax.annotation.Nullable
   public Float getR() {
     return r;
   }
 
-  public void setR(Float r) {
+  public void setR(@javax.annotation.Nullable Float r) {
     this.r = r;
   }
 
 
-  public ObjectMomenttensorTdmtStationsInner azi(Float azi) {
+  public ObjectMomenttensorTdmtStationsInner azi(@javax.annotation.Nullable Float azi) {
     this.azi = azi;
     return this;
   }
 
-   /**
+  /**
    * Azimutal gap | float4
    * @return azi
-  **/
+   */
   @javax.annotation.Nullable
   public Float getAzi() {
     return azi;
   }
 
-  public void setAzi(Float azi) {
+  public void setAzi(@javax.annotation.Nullable Float azi) {
     this.azi = azi;
   }
 
 
-  public ObjectMomenttensorTdmtStationsInner w(Double w) {
+  public ObjectMomenttensorTdmtStationsInner w(@javax.annotation.Nullable Double w) {
     this.w = w;
     return this;
   }
 
-   /**
+  /**
    * Weight | double
    * @return w
-  **/
+   */
   @javax.annotation.Nullable
   public Double getW() {
     return w;
   }
 
-  public void setW(Double w) {
+  public void setW(@javax.annotation.Nullable Double w) {
     this.w = w;
   }
 
 
-  public ObjectMomenttensorTdmtStationsInner vr(Double vr) {
+  public ObjectMomenttensorTdmtStationsInner vr(@javax.annotation.Nullable Double vr) {
     this.vr = vr;
     return this;
   }
 
-   /**
+  /**
    * vr
    * @return vr
-  **/
+   */
   @javax.annotation.Nullable
   public Double getVr() {
     return vr;
   }
 
-  public void setVr(Double vr) {
+  public void setVr(@javax.annotation.Nullable Double vr) {
     this.vr = vr;
   }
 
 
-  public ObjectMomenttensorTdmtStationsInner zcor(Double zcor) {
+  public ObjectMomenttensorTdmtStationsInner zcor(@javax.annotation.Nullable Double zcor) {
     this.zcor = zcor;
     return this;
   }
 
-   /**
+  /**
    * zcor
    * @return zcor
-  **/
+   */
   @javax.annotation.Nullable
   public Double getZcor() {
     return zcor;
   }
 
-  public void setZcor(Double zcor) {
+  public void setZcor(@javax.annotation.Nullable Double zcor) {
     this.zcor = zcor;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -221,10 +228,10 @@ public class ObjectMomenttensorTdmtStationsInner {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -350,12 +357,12 @@ public class ObjectMomenttensorTdmtStationsInner {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectMomenttensorTdmtStationsInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectMomenttensorTdmtStationsInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectMomenttensorTdmtStationsInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -440,22 +447,22 @@ public class ObjectMomenttensorTdmtStationsInner {
     }
   }
 
- /**
-  * Create an instance of ObjectMomenttensorTdmtStationsInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectMomenttensorTdmtStationsInner
-  * @throws IOException if the JSON string is invalid with respect to ObjectMomenttensorTdmtStationsInner
-  */
+  /**
+   * Create an instance of ObjectMomenttensorTdmtStationsInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectMomenttensorTdmtStationsInner
+   * @throws IOException if the JSON string is invalid with respect to ObjectMomenttensorTdmtStationsInner
+   */
   public static ObjectMomenttensorTdmtStationsInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectMomenttensorTdmtStationsInner.class);
   }
 
- /**
-  * Convert an instance of ObjectMomenttensorTdmtStationsInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectMomenttensorTdmtStationsInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

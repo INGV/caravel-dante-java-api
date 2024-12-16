@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,53 +50,55 @@ import org.ingv.dante.JSON;
 /**
  * Quake2kSchema
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class Quake2kSchema {
   public static final String SERIALIZED_NAME_EW_MESSAGE = "ewMessage";
   @SerializedName(SERIALIZED_NAME_EW_MESSAGE)
+  @javax.annotation.Nullable
   private Quake2kSchemaEwMessage ewMessage;
 
   public static final String SERIALIZED_NAME_EW_LOGO = "ewLogo";
   @SerializedName(SERIALIZED_NAME_EW_LOGO)
+  @javax.annotation.Nullable
   private Quake2kSchemaEwLogo ewLogo;
 
   public Quake2kSchema() {
   }
 
-  public Quake2kSchema ewMessage(Quake2kSchemaEwMessage ewMessage) {
+  public Quake2kSchema ewMessage(@javax.annotation.Nullable Quake2kSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
     return this;
   }
 
-   /**
+  /**
    * Get ewMessage
    * @return ewMessage
-  **/
+   */
   @javax.annotation.Nullable
   public Quake2kSchemaEwMessage getEwMessage() {
     return ewMessage;
   }
 
-  public void setEwMessage(Quake2kSchemaEwMessage ewMessage) {
+  public void setEwMessage(@javax.annotation.Nullable Quake2kSchemaEwMessage ewMessage) {
     this.ewMessage = ewMessage;
   }
 
 
-  public Quake2kSchema ewLogo(Quake2kSchemaEwLogo ewLogo) {
+  public Quake2kSchema ewLogo(@javax.annotation.Nullable Quake2kSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
     return this;
   }
 
-   /**
+  /**
    * Get ewLogo
    * @return ewLogo
-  **/
+   */
   @javax.annotation.Nullable
   public Quake2kSchemaEwLogo getEwLogo() {
     return ewLogo;
   }
 
-  public void setEwLogo(Quake2kSchemaEwLogo ewLogo) {
+  public void setEwLogo(@javax.annotation.Nullable Quake2kSchemaEwLogo ewLogo) {
     this.ewLogo = ewLogo;
   }
 
@@ -202,12 +203,12 @@ public class Quake2kSchema {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to Quake2kSchema
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to Quake2kSchema
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!Quake2kSchema.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -297,22 +298,22 @@ public class Quake2kSchema {
     }
   }
 
- /**
-  * Create an instance of Quake2kSchema given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of Quake2kSchema
-  * @throws IOException if the JSON string is invalid with respect to Quake2kSchema
-  */
+  /**
+   * Create an instance of Quake2kSchema given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of Quake2kSchema
+   * @throws IOException if the JSON string is invalid with respect to Quake2kSchema
+   */
   public static Quake2kSchema fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, Quake2kSchema.class);
   }
 
- /**
-  * Convert an instance of Quake2kSchema to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of Quake2kSchema to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

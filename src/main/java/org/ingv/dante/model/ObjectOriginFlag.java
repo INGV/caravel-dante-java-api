@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,30 +50,36 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginFlag
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectOriginFlag {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_NOTE = "note";
   @SerializedName(SERIALIZED_NAME_NOTE)
+  @javax.annotation.Nullable
   private String note;
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private Float value;
 
   public ObjectOriginFlag() {
@@ -91,10 +96,10 @@ public class ObjectOriginFlag {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -102,10 +107,10 @@ public class ObjectOriginFlag {
 
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -113,10 +118,10 @@ public class ObjectOriginFlag {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -124,59 +129,59 @@ public class ObjectOriginFlag {
 
 
 
-  public ObjectOriginFlag name(String name) {
+  public ObjectOriginFlag name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Flag name | varchar(255)
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public ObjectOriginFlag note(String note) {
+  public ObjectOriginFlag note(@javax.annotation.Nullable String note) {
     this.note = note;
     return this;
   }
 
-   /**
+  /**
    * Additional information | char(255)
    * @return note
-  **/
+   */
   @javax.annotation.Nullable
   public String getNote() {
     return note;
   }
 
-  public void setNote(String note) {
+  public void setNote(@javax.annotation.Nullable String note) {
     this.note = note;
   }
 
 
-  public ObjectOriginFlag value(Float value) {
+  public ObjectOriginFlag value(@javax.annotation.Nullable Float value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * Value associated to the flag | int
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public Float getValue() {
     return value;
   }
 
-  public void setValue(Float value) {
+  public void setValue(@javax.annotation.Nullable Float value) {
     this.value = value;
   }
 
@@ -304,12 +309,12 @@ public class ObjectOriginFlag {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectOriginFlag
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectOriginFlag
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectOriginFlag.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -397,22 +402,22 @@ public class ObjectOriginFlag {
     }
   }
 
- /**
-  * Create an instance of ObjectOriginFlag given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectOriginFlag
-  * @throws IOException if the JSON string is invalid with respect to ObjectOriginFlag
-  */
+  /**
+   * Create an instance of ObjectOriginFlag given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectOriginFlag
+   * @throws IOException if the JSON string is invalid with respect to ObjectOriginFlag
+   */
   public static ObjectOriginFlag fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectOriginFlag.class);
   }
 
- /**
-  * Convert an instance of ObjectOriginFlag to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectOriginFlag to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

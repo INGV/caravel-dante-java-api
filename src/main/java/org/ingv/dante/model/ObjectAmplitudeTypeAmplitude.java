@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,76 +50,79 @@ import org.ingv.dante.JSON;
 /**
  * ObjectAmplitudeTypeAmplitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectAmplitudeTypeAmplitude {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private String name;
 
   public static final String SERIALIZED_NAME_UNIT = "unit";
   @SerializedName(SERIALIZED_NAME_UNIT)
+  @javax.annotation.Nullable
   private String unit;
 
   public static final String SERIALIZED_NAME_CATEGORY = "category";
   @SerializedName(SERIALIZED_NAME_CATEGORY)
+  @javax.annotation.Nullable
   private TypeAmplitudeCategory category;
 
   public ObjectAmplitudeTypeAmplitude() {
   }
 
-  public ObjectAmplitudeTypeAmplitude name(String name) {
+  public ObjectAmplitudeTypeAmplitude name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Type of the amplitude | varchar(50)
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
 
-  public ObjectAmplitudeTypeAmplitude unit(String unit) {
+  public ObjectAmplitudeTypeAmplitude unit(@javax.annotation.Nullable String unit) {
     this.unit = unit;
     return this;
   }
 
-   /**
+  /**
    * Unit of measurement of type amplitude | varchar(255)
    * @return unit
-  **/
+   */
   @javax.annotation.Nullable
   public String getUnit() {
     return unit;
   }
 
-  public void setUnit(String unit) {
+  public void setUnit(@javax.annotation.Nullable String unit) {
     this.unit = unit;
   }
 
 
-  public ObjectAmplitudeTypeAmplitude category(TypeAmplitudeCategory category) {
+  public ObjectAmplitudeTypeAmplitude category(@javax.annotation.Nullable TypeAmplitudeCategory category) {
     this.category = category;
     return this;
   }
 
-   /**
+  /**
    * Get category
    * @return category
-  **/
+   */
   @javax.annotation.Nullable
   public TypeAmplitudeCategory getCategory() {
     return category;
   }
 
-  public void setCategory(TypeAmplitudeCategory category) {
+  public void setCategory(@javax.annotation.Nullable TypeAmplitudeCategory category) {
     this.category = category;
   }
 
@@ -240,12 +242,12 @@ public class ObjectAmplitudeTypeAmplitude {
     openapiRequiredFields.add("name");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectAmplitudeTypeAmplitude
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectAmplitudeTypeAmplitude
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectAmplitudeTypeAmplitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -344,22 +346,22 @@ public class ObjectAmplitudeTypeAmplitude {
     }
   }
 
- /**
-  * Create an instance of ObjectAmplitudeTypeAmplitude given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectAmplitudeTypeAmplitude
-  * @throws IOException if the JSON string is invalid with respect to ObjectAmplitudeTypeAmplitude
-  */
+  /**
+   * Create an instance of ObjectAmplitudeTypeAmplitude given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectAmplitudeTypeAmplitude
+   * @throws IOException if the JSON string is invalid with respect to ObjectAmplitudeTypeAmplitude
+   */
   public static ObjectAmplitudeTypeAmplitude fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectAmplitudeTypeAmplitude.class);
   }
 
- /**
-  * Convert an instance of ObjectAmplitudeTypeAmplitude to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectAmplitudeTypeAmplitude to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

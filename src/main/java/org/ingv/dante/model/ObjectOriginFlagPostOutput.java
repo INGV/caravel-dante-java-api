@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,16 +51,17 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginFlagPostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectOriginFlagPostOutput {
   public static final String SERIALIZED_NAME_ORIGIN_FLAG = "origin-flag";
   @SerializedName(SERIALIZED_NAME_ORIGIN_FLAG)
-  private List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag;
+  @javax.annotation.Nullable
+  private List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag = new ArrayList<>();
 
   public ObjectOriginFlagPostOutput() {
   }
 
-  public ObjectOriginFlagPostOutput originFlag(List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag) {
+  public ObjectOriginFlagPostOutput originFlag(@javax.annotation.Nullable List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag) {
     this.originFlag = originFlag;
     return this;
   }
@@ -74,16 +74,16 @@ public class ObjectOriginFlagPostOutput {
     return this;
   }
 
-   /**
+  /**
    * Get originFlag
    * @return originFlag
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectOriginFlagPostOutputOriginFlagInner> getOriginFlag() {
     return originFlag;
   }
 
-  public void setOriginFlag(List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag) {
+  public void setOriginFlag(@javax.annotation.Nullable List<ObjectOriginFlagPostOutputOriginFlagInner> originFlag) {
     this.originFlag = originFlag;
   }
 
@@ -185,12 +185,12 @@ public class ObjectOriginFlagPostOutput {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectOriginFlagPostOutput
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectOriginFlagPostOutput
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectOriginFlagPostOutput.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -286,22 +286,22 @@ public class ObjectOriginFlagPostOutput {
     }
   }
 
- /**
-  * Create an instance of ObjectOriginFlagPostOutput given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectOriginFlagPostOutput
-  * @throws IOException if the JSON string is invalid with respect to ObjectOriginFlagPostOutput
-  */
+  /**
+   * Create an instance of ObjectOriginFlagPostOutput given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectOriginFlagPostOutput
+   * @throws IOException if the JSON string is invalid with respect to ObjectOriginFlagPostOutput
+   */
   public static ObjectOriginFlagPostOutput fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectOriginFlagPostOutput.class);
   }
 
- /**
-  * Convert an instance of ObjectOriginFlagPostOutput to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectOriginFlagPostOutput to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

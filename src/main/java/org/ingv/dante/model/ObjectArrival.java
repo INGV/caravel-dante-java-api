@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,62 +51,76 @@ import org.ingv.dante.JSON;
 /**
  * ObjectArrival
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectArrival {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ISC_CODE = "isc_code";
   @SerializedName(SERIALIZED_NAME_ISC_CODE)
+  @javax.annotation.Nonnull
   private String iscCode;
 
   public static final String SERIALIZED_NAME_EP_DISTANCE_KM = "ep_distance_km";
   @SerializedName(SERIALIZED_NAME_EP_DISTANCE_KM)
+  @javax.annotation.Nullable
   private Float epDistanceKm;
 
   public static final String SERIALIZED_NAME_EP_DISTANCE_DELTA = "ep_distance_delta";
   @SerializedName(SERIALIZED_NAME_EP_DISTANCE_DELTA)
+  @javax.annotation.Nullable
   private Float epDistanceDelta;
 
   public static final String SERIALIZED_NAME_ORIG_DISTANCE_KM = "orig_distance_km";
   @SerializedName(SERIALIZED_NAME_ORIG_DISTANCE_KM)
+  @javax.annotation.Nullable
   private Double origDistanceKm;
 
   public static final String SERIALIZED_NAME_AZIMUT = "azimut";
   @SerializedName(SERIALIZED_NAME_AZIMUT)
+  @javax.annotation.Nullable
   private Float azimut;
 
   public static final String SERIALIZED_NAME_TAKE_OFF = "take_off";
   @SerializedName(SERIALIZED_NAME_TAKE_OFF)
+  @javax.annotation.Nullable
   private Float takeOff;
 
   public static final String SERIALIZED_NAME_POLARITY_IS_USED = "polarity_is_used";
   @SerializedName(SERIALIZED_NAME_POLARITY_IS_USED)
+  @javax.annotation.Nullable
   private Boolean polarityIsUsed;
 
   public static final String SERIALIZED_NAME_ARR_TIME_IS_USED = "arr_time_is_used";
   @SerializedName(SERIALIZED_NAME_ARR_TIME_IS_USED)
+  @javax.annotation.Nullable
   private Boolean arrTimeIsUsed;
 
   public static final String SERIALIZED_NAME_RESIDUAL = "residual";
   @SerializedName(SERIALIZED_NAME_RESIDUAL)
+  @javax.annotation.Nullable
   private Double residual;
 
   public static final String SERIALIZED_NAME_WEIGHT = "weight";
   @SerializedName(SERIALIZED_NAME_WEIGHT)
+  @javax.annotation.Nullable
   private Double weight;
 
   public static final String SERIALIZED_NAME_PICK = "pick";
   @SerializedName(SERIALIZED_NAME_PICK)
+  @javax.annotation.Nullable
   private ObjectPick pick;
 
   public ObjectArrival() {
@@ -124,10 +137,10 @@ public class ObjectArrival {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -135,10 +148,10 @@ public class ObjectArrival {
 
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -146,10 +159,10 @@ public class ObjectArrival {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -157,211 +170,211 @@ public class ObjectArrival {
 
 
 
-  public ObjectArrival iscCode(String iscCode) {
+  public ObjectArrival iscCode(@javax.annotation.Nonnull String iscCode) {
     this.iscCode = iscCode;
     return this;
   }
 
-   /**
+  /**
    * ISC arrival code | varchar(8)
    * @return iscCode
-  **/
+   */
   @javax.annotation.Nonnull
   public String getIscCode() {
     return iscCode;
   }
 
-  public void setIscCode(String iscCode) {
+  public void setIscCode(@javax.annotation.Nonnull String iscCode) {
     this.iscCode = iscCode;
   }
 
 
-  public ObjectArrival epDistanceKm(Float epDistanceKm) {
+  public ObjectArrival epDistanceKm(@javax.annotation.Nullable Float epDistanceKm) {
     this.epDistanceKm = epDistanceKm;
     return this;
   }
 
-   /**
+  /**
    * Distance from epicenter of the station expressed in Km | double
    * @return epDistanceKm
-  **/
+   */
   @javax.annotation.Nullable
   public Float getEpDistanceKm() {
     return epDistanceKm;
   }
 
-  public void setEpDistanceKm(Float epDistanceKm) {
+  public void setEpDistanceKm(@javax.annotation.Nullable Float epDistanceKm) {
     this.epDistanceKm = epDistanceKm;
   }
 
 
-  public ObjectArrival epDistanceDelta(Float epDistanceDelta) {
+  public ObjectArrival epDistanceDelta(@javax.annotation.Nullable Float epDistanceDelta) {
     this.epDistanceDelta = epDistanceDelta;
     return this;
   }
 
-   /**
+  /**
    * Distance from epicenter of the station expressed in Degrees | double
    * @return epDistanceDelta
-  **/
+   */
   @javax.annotation.Nullable
   public Float getEpDistanceDelta() {
     return epDistanceDelta;
   }
 
-  public void setEpDistanceDelta(Float epDistanceDelta) {
+  public void setEpDistanceDelta(@javax.annotation.Nullable Float epDistanceDelta) {
     this.epDistanceDelta = epDistanceDelta;
   }
 
 
-  public ObjectArrival origDistanceKm(Double origDistanceKm) {
+  public ObjectArrival origDistanceKm(@javax.annotation.Nullable Double origDistanceKm) {
     this.origDistanceKm = origDistanceKm;
     return this;
   }
 
-   /**
+  /**
    * Distance from origin of the station (km) | double
    * @return origDistanceKm
-  **/
+   */
   @javax.annotation.Nullable
   public Double getOrigDistanceKm() {
     return origDistanceKm;
   }
 
-  public void setOrigDistanceKm(Double origDistanceKm) {
+  public void setOrigDistanceKm(@javax.annotation.Nullable Double origDistanceKm) {
     this.origDistanceKm = origDistanceKm;
   }
 
 
-  public ObjectArrival azimut(Float azimut) {
+  public ObjectArrival azimut(@javax.annotation.Nullable Float azimut) {
     this.azimut = azimut;
     return this;
   }
 
-   /**
+  /**
    * Station origin azimut | double
    * @return azimut
-  **/
+   */
   @javax.annotation.Nullable
   public Float getAzimut() {
     return azimut;
   }
 
-  public void setAzimut(Float azimut) {
+  public void setAzimut(@javax.annotation.Nullable Float azimut) {
     this.azimut = azimut;
   }
 
 
-  public ObjectArrival takeOff(Float takeOff) {
+  public ObjectArrival takeOff(@javax.annotation.Nullable Float takeOff) {
     this.takeOff = takeOff;
     return this;
   }
 
-   /**
+  /**
    * Take off angle | double
    * @return takeOff
-  **/
+   */
   @javax.annotation.Nullable
   public Float getTakeOff() {
     return takeOff;
   }
 
-  public void setTakeOff(Float takeOff) {
+  public void setTakeOff(@javax.annotation.Nullable Float takeOff) {
     this.takeOff = takeOff;
   }
 
 
-  public ObjectArrival polarityIsUsed(Boolean polarityIsUsed) {
+  public ObjectArrival polarityIsUsed(@javax.annotation.Nullable Boolean polarityIsUsed) {
     this.polarityIsUsed = polarityIsUsed;
     return this;
   }
 
-   /**
+  /**
    * 1 if it is used for polarity calculation | boolean
    * @return polarityIsUsed
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getPolarityIsUsed() {
     return polarityIsUsed;
   }
 
-  public void setPolarityIsUsed(Boolean polarityIsUsed) {
+  public void setPolarityIsUsed(@javax.annotation.Nullable Boolean polarityIsUsed) {
     this.polarityIsUsed = polarityIsUsed;
   }
 
 
-  public ObjectArrival arrTimeIsUsed(Boolean arrTimeIsUsed) {
+  public ObjectArrival arrTimeIsUsed(@javax.annotation.Nullable Boolean arrTimeIsUsed) {
     this.arrTimeIsUsed = arrTimeIsUsed;
     return this;
   }
 
-   /**
+  /**
    * 1 if it is used for origin calculation | boolean
    * @return arrTimeIsUsed
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getArrTimeIsUsed() {
     return arrTimeIsUsed;
   }
 
-  public void setArrTimeIsUsed(Boolean arrTimeIsUsed) {
+  public void setArrTimeIsUsed(@javax.annotation.Nullable Boolean arrTimeIsUsed) {
     this.arrTimeIsUsed = arrTimeIsUsed;
   }
 
 
-  public ObjectArrival residual(Double residual) {
+  public ObjectArrival residual(@javax.annotation.Nullable Double residual) {
     this.residual = residual;
     return this;
   }
 
-   /**
+  /**
    * Residual | double
    * @return residual
-  **/
+   */
   @javax.annotation.Nullable
   public Double getResidual() {
     return residual;
   }
 
-  public void setResidual(Double residual) {
+  public void setResidual(@javax.annotation.Nullable Double residual) {
     this.residual = residual;
   }
 
 
-  public ObjectArrival weight(Double weight) {
+  public ObjectArrival weight(@javax.annotation.Nullable Double weight) {
     this.weight = weight;
     return this;
   }
 
-   /**
+  /**
    * Weight | double
    * @return weight
-  **/
+   */
   @javax.annotation.Nullable
   public Double getWeight() {
     return weight;
   }
 
-  public void setWeight(Double weight) {
+  public void setWeight(@javax.annotation.Nullable Double weight) {
     this.weight = weight;
   }
 
 
-  public ObjectArrival pick(ObjectPick pick) {
+  public ObjectArrival pick(@javax.annotation.Nullable ObjectPick pick) {
     this.pick = pick;
     return this;
   }
 
-   /**
+  /**
    * Get pick
    * @return pick
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectPick getPick() {
     return pick;
   }
 
-  public void setPick(ObjectPick pick) {
+  public void setPick(@javax.annotation.Nullable ObjectPick pick) {
     this.pick = pick;
   }
 
@@ -514,12 +527,12 @@ public class ObjectArrival {
     openapiRequiredFields.add("isc_code");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectArrival
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectArrival
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectArrival.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -615,22 +628,22 @@ public class ObjectArrival {
     }
   }
 
- /**
-  * Create an instance of ObjectArrival given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectArrival
-  * @throws IOException if the JSON string is invalid with respect to ObjectArrival
-  */
+  /**
+   * Create an instance of ObjectArrival given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectArrival
+   * @throws IOException if the JSON string is invalid with respect to ObjectArrival
+   */
   public static ObjectArrival fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectArrival.class);
   }
 
- /**
-  * Convert an instance of ObjectArrival to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectArrival to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

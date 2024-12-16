@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,53 +48,55 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotionRsaInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectStrongmotionRsaInner {
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
+  @javax.annotation.Nullable
   private Double value;
 
   public static final String SERIALIZED_NAME_PERIOD = "period";
   @SerializedName(SERIALIZED_NAME_PERIOD)
+  @javax.annotation.Nullable
   private Double period;
 
   public ObjectStrongmotionRsaInner() {
   }
 
-  public ObjectStrongmotionRsaInner value(Double value) {
+  public ObjectStrongmotionRsaInner value(@javax.annotation.Nullable Double value) {
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * RSA value (cm/s/s) at given period | double
    * @return value
-  **/
+   */
   @javax.annotation.Nullable
   public Double getValue() {
     return value;
   }
 
-  public void setValue(Double value) {
+  public void setValue(@javax.annotation.Nullable Double value) {
     this.value = value;
   }
 
 
-  public ObjectStrongmotionRsaInner period(Double period) {
+  public ObjectStrongmotionRsaInner period(@javax.annotation.Nullable Double period) {
     this.period = period;
     return this;
   }
 
-   /**
+  /**
    * period (s) at which RSA values are given | double
    * @return period
-  **/
+   */
   @javax.annotation.Nullable
   public Double getPeriod() {
     return period;
   }
 
-  public void setPeriod(Double period) {
+  public void setPeriod(@javax.annotation.Nullable Double period) {
     this.period = period;
   }
 
@@ -200,12 +201,12 @@ public class ObjectStrongmotionRsaInner {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectStrongmotionRsaInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectStrongmotionRsaInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectStrongmotionRsaInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -287,22 +288,22 @@ public class ObjectStrongmotionRsaInner {
     }
   }
 
- /**
-  * Create an instance of ObjectStrongmotionRsaInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectStrongmotionRsaInner
-  * @throws IOException if the JSON string is invalid with respect to ObjectStrongmotionRsaInner
-  */
+  /**
+   * Create an instance of ObjectStrongmotionRsaInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectStrongmotionRsaInner
+   * @throws IOException if the JSON string is invalid with respect to ObjectStrongmotionRsaInner
+   */
   public static ObjectStrongmotionRsaInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectStrongmotionRsaInner.class);
   }
 
- /**
-  * Convert an instance of ObjectStrongmotionRsaInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectStrongmotionRsaInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

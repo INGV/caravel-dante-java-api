@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,306 +50,319 @@ import org.ingv.dante.JSON;
 /**
  * ObjectProvenance
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectProvenance {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private String name = "INGV";
 
   public static final String SERIALIZED_NAME_SOFTWARENAME = "softwarename";
   @SerializedName(SERIALIZED_NAME_SOFTWARENAME)
+  @javax.annotation.Nonnull
   private String softwarename;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
+  @javax.annotation.Nullable
   private String model;
 
   public static final String SERIALIZED_NAME_METHOD = "method";
   @SerializedName(SERIALIZED_NAME_METHOD)
+  @javax.annotation.Nullable
   private String method;
 
   public static final String SERIALIZED_NAME_PARAMETERS = "parameters";
   @SerializedName(SERIALIZED_NAME_PARAMETERS)
+  @javax.annotation.Nullable
   private String parameters;
 
   public static final String SERIALIZED_NAME_PROGRAM = "program";
   @SerializedName(SERIALIZED_NAME_PROGRAM)
+  @javax.annotation.Nullable
   private String program;
 
   public static final String SERIALIZED_NAME_USERNAME = "username";
   @SerializedName(SERIALIZED_NAME_USERNAME)
+  @javax.annotation.Nullable
   private String username;
 
   public static final String SERIALIZED_NAME_HOSTNAME = "hostname";
   @SerializedName(SERIALIZED_NAME_HOSTNAME)
+  @javax.annotation.Nullable
   private String hostname;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_PRIORITY = "priority";
   @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @javax.annotation.Nullable
   private Long priority = 0l;
 
   public static final String SERIALIZED_NAME_EVALUATIONMODE = "evaluationmode";
   @SerializedName(SERIALIZED_NAME_EVALUATIONMODE)
+  @javax.annotation.Nullable
   private ProvenanceEvaluationmode evaluationmode;
 
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
+  @javax.annotation.Nullable
   private String url;
 
   public ObjectProvenance() {
   }
 
-  public ObjectProvenance name(String name) {
+  public ObjectProvenance name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
 
-  public ObjectProvenance softwarename(String softwarename) {
+  public ObjectProvenance softwarename(@javax.annotation.Nonnull String softwarename) {
     this.softwarename = softwarename;
     return this;
   }
 
-   /**
+  /**
    * Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)
    * @return softwarename
-  **/
+   */
   @javax.annotation.Nonnull
   public String getSoftwarename() {
     return softwarename;
   }
 
-  public void setSoftwarename(String softwarename) {
+  public void setSoftwarename(@javax.annotation.Nonnull String softwarename) {
     this.softwarename = softwarename;
   }
 
 
-  public ObjectProvenance version(String version) {
+  public ObjectProvenance version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Version name | varchar(255)
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
 
-  public ObjectProvenance model(String model) {
+  public ObjectProvenance model(@javax.annotation.Nullable String model) {
     this.model = model;
     return this;
   }
 
-   /**
+  /**
    * Name/URI/DOI of the model | varchar(255)
    * @return model
-  **/
+   */
   @javax.annotation.Nullable
   public String getModel() {
     return model;
   }
 
-  public void setModel(String model) {
+  public void setModel(@javax.annotation.Nullable String model) {
     this.model = model;
   }
 
 
-  public ObjectProvenance method(String method) {
+  public ObjectProvenance method(@javax.annotation.Nullable String method) {
     this.method = method;
     return this;
   }
 
-   /**
+  /**
    * Name/URI/DOI of the method | varchar(255)
    * @return method
-  **/
+   */
   @javax.annotation.Nullable
   public String getMethod() {
     return method;
   }
 
-  public void setMethod(String method) {
+  public void setMethod(@javax.annotation.Nullable String method) {
     this.method = method;
   }
 
 
-  public ObjectProvenance parameters(String parameters) {
+  public ObjectProvenance parameters(@javax.annotation.Nullable String parameters) {
     this.parameters = parameters;
     return this;
   }
 
-   /**
+  /**
    * Name/URI/DOI of the parameters | varchar(255)
    * @return parameters
-  **/
+   */
   @javax.annotation.Nullable
   public String getParameters() {
     return parameters;
   }
 
-  public void setParameters(String parameters) {
+  public void setParameters(@javax.annotation.Nullable String parameters) {
     this.parameters = parameters;
   }
 
 
-  public ObjectProvenance program(String program) {
+  public ObjectProvenance program(@javax.annotation.Nullable String program) {
     this.program = program;
     return this;
   }
 
-   /**
+  /**
    * Name/URI/DOI of the program | varchar(255)
    * @return program
-  **/
+   */
   @javax.annotation.Nullable
   public String getProgram() {
     return program;
   }
 
-  public void setProgram(String program) {
+  public void setProgram(@javax.annotation.Nullable String program) {
     this.program = program;
   }
 
 
-  public ObjectProvenance username(String username) {
+  public ObjectProvenance username(@javax.annotation.Nullable String username) {
     this.username = username;
     return this;
   }
 
-   /**
+  /**
    * User name | char(255)
    * @return username
-  **/
+   */
   @javax.annotation.Nullable
   public String getUsername() {
     return username;
   }
 
-  public void setUsername(String username) {
+  public void setUsername(@javax.annotation.Nullable String username) {
     this.username = username;
   }
 
 
-  public ObjectProvenance hostname(String hostname) {
+  public ObjectProvenance hostname(@javax.annotation.Nullable String hostname) {
     this.hostname = hostname;
     return this;
   }
 
-   /**
+  /**
    * Hostname | char(255)
    * @return hostname
-  **/
+   */
   @javax.annotation.Nullable
   public String getHostname() {
     return hostname;
   }
 
-  public void setHostname(String hostname) {
+  public void setHostname(@javax.annotation.Nullable String hostname) {
     this.hostname = hostname;
   }
 
 
-  public ObjectProvenance description(String description) {
+  public ObjectProvenance description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Additional information | char(255)
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public ObjectProvenance priority(Long priority) {
+  public ObjectProvenance priority(@javax.annotation.Nullable Long priority) {
     this.priority = priority;
     return this;
   }
 
-   /**
+  /**
    * Priority | int(8)
    * @return priority
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPriority() {
     return priority;
   }
 
-  public void setPriority(Long priority) {
+  public void setPriority(@javax.annotation.Nullable Long priority) {
     this.priority = priority;
   }
 
 
-  public ObjectProvenance evaluationmode(ProvenanceEvaluationmode evaluationmode) {
+  public ObjectProvenance evaluationmode(@javax.annotation.Nullable ProvenanceEvaluationmode evaluationmode) {
     this.evaluationmode = evaluationmode;
     return this;
   }
 
-   /**
+  /**
    * Get evaluationmode
    * @return evaluationmode
-  **/
+   */
   @javax.annotation.Nullable
   public ProvenanceEvaluationmode getEvaluationmode() {
     return evaluationmode;
   }
 
-  public void setEvaluationmode(ProvenanceEvaluationmode evaluationmode) {
+  public void setEvaluationmode(@javax.annotation.Nullable ProvenanceEvaluationmode evaluationmode) {
     this.evaluationmode = evaluationmode;
   }
 
 
-  public ObjectProvenance url(String url) {
+  public ObjectProvenance url(@javax.annotation.Nullable String url) {
     this.url = url;
     return this;
   }
 
-   /**
+  /**
    * External URL Reference | varchar(512)
    * @return url
-  **/
+   */
   @javax.annotation.Nullable
   public String getUrl() {
     return url;
   }
 
-  public void setUrl(String url) {
+  public void setUrl(@javax.annotation.Nullable String url) {
     this.url = url;
   }
 
@@ -501,12 +513,12 @@ public class ObjectProvenance {
     openapiRequiredFields.add("softwarename");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectProvenance
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectProvenance
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectProvenance.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -632,22 +644,22 @@ public class ObjectProvenance {
     }
   }
 
- /**
-  * Create an instance of ObjectProvenance given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectProvenance
-  * @throws IOException if the JSON string is invalid with respect to ObjectProvenance
-  */
+  /**
+   * Create an instance of ObjectProvenance given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectProvenance
+   * @throws IOException if the JSON string is invalid with respect to ObjectProvenance
+   */
   public static ObjectProvenance fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectProvenance.class);
   }
 
- /**
-  * Convert an instance of ObjectProvenance to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectProvenance to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -44,7 +44,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -56,78 +55,96 @@ import org.ingv.dante.JSON;
 /**
  * ObjectPick
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectPick {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
+  @javax.annotation.Nonnull
   private String net;
 
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
+  @javax.annotation.Nonnull
   private String sta;
 
   public static final String SERIALIZED_NAME_CHA = "cha";
   @SerializedName(SERIALIZED_NAME_CHA)
+  @javax.annotation.Nonnull
   private String cha;
 
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
+  @javax.annotation.Nullable
   private String loc = "--";
 
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_QUALITY_CLASS = "quality_class";
   @SerializedName(SERIALIZED_NAME_QUALITY_CLASS)
+  @javax.annotation.Nullable
   private Integer qualityClass;
 
   public static final String SERIALIZED_NAME_LOWER_UNCERTAINTY = "lower_uncertainty";
   @SerializedName(SERIALIZED_NAME_LOWER_UNCERTAINTY)
+  @javax.annotation.Nullable
   private Float lowerUncertainty;
 
   public static final String SERIALIZED_NAME_UPPER_UNCERTAINTY = "upper_uncertainty";
   @SerializedName(SERIALIZED_NAME_UPPER_UNCERTAINTY)
+  @javax.annotation.Nullable
   private Float upperUncertainty;
 
   public static final String SERIALIZED_NAME_CONFIDENCE_LEVEL = "confidence_level";
   @SerializedName(SERIALIZED_NAME_CONFIDENCE_LEVEL)
+  @javax.annotation.Nullable
   private Float confidenceLevel = 68.3f;
 
   public static final String SERIALIZED_NAME_ARRIVAL_TIME = "arrival_time";
   @SerializedName(SERIALIZED_NAME_ARRIVAL_TIME)
+  @javax.annotation.Nonnull
   private OffsetDateTime arrivalTime;
 
   public static final String SERIALIZED_NAME_FIRSTMOTION = "firstmotion";
   @SerializedName(SERIALIZED_NAME_FIRSTMOTION)
+  @javax.annotation.Nullable
   private PickFirstmotion firstmotion;
 
   public static final String SERIALIZED_NAME_EMERSIO = "emersio";
   @SerializedName(SERIALIZED_NAME_EMERSIO)
+  @javax.annotation.Nullable
   private PickEmersio emersio;
 
   public static final String SERIALIZED_NAME_PICK_EW = "pick_ew";
   @SerializedName(SERIALIZED_NAME_PICK_EW)
+  @javax.annotation.Nullable
   private ObjectPickEw pickEw;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspace localspace;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenance provenance;
 
   public ObjectPick() {
@@ -144,86 +161,86 @@ public class ObjectPick {
     this.inserted = inserted;
   }
 
-  public ObjectPick net(String net) {
+  public ObjectPick net(@javax.annotation.Nonnull String net) {
     this.net = net;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return net
-  **/
+   */
   @javax.annotation.Nonnull
   public String getNet() {
     return net;
   }
 
-  public void setNet(String net) {
+  public void setNet(@javax.annotation.Nonnull String net) {
     this.net = net;
   }
 
 
-  public ObjectPick sta(String sta) {
+  public ObjectPick sta(@javax.annotation.Nonnull String sta) {
     this.sta = sta;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return sta
-  **/
+   */
   @javax.annotation.Nonnull
   public String getSta() {
     return sta;
   }
 
-  public void setSta(String sta) {
+  public void setSta(@javax.annotation.Nonnull String sta) {
     this.sta = sta;
   }
 
 
-  public ObjectPick cha(String cha) {
+  public ObjectPick cha(@javax.annotation.Nonnull String cha) {
     this.cha = cha;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return cha
-  **/
+   */
   @javax.annotation.Nonnull
   public String getCha() {
     return cha;
   }
 
-  public void setCha(String cha) {
+  public void setCha(@javax.annotation.Nonnull String cha) {
     this.cha = cha;
   }
 
 
-  public ObjectPick loc(String loc) {
+  public ObjectPick loc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return loc
-  **/
+   */
   @javax.annotation.Nullable
   public String getLoc() {
     return loc;
   }
 
-  public void setLoc(String loc) {
+  public void setLoc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
   }
 
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -231,10 +248,10 @@ public class ObjectPick {
 
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -242,10 +259,10 @@ public class ObjectPick {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -253,211 +270,211 @@ public class ObjectPick {
 
 
 
-  public ObjectPick idLocalspace(Long idLocalspace) {
+  public ObjectPick idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectPick qualityClass(Integer qualityClass) {
+  public ObjectPick qualityClass(@javax.annotation.Nullable Integer qualityClass) {
     this.qualityClass = qualityClass;
     return this;
   }
 
-   /**
+  /**
    * Pick quality class | bigint
    * @return qualityClass
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getQualityClass() {
     return qualityClass;
   }
 
-  public void setQualityClass(Integer qualityClass) {
+  public void setQualityClass(@javax.annotation.Nullable Integer qualityClass) {
     this.qualityClass = qualityClass;
   }
 
 
-  public ObjectPick lowerUncertainty(Float lowerUncertainty) {
+  public ObjectPick lowerUncertainty(@javax.annotation.Nullable Float lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
     return this;
   }
 
-   /**
+  /**
    * Uncertainty as the absolute value of deviation from the mainvalue towards smaller values. | decimal(8,3)
    * @return lowerUncertainty
-  **/
+   */
   @javax.annotation.Nullable
   public Float getLowerUncertainty() {
     return lowerUncertainty;
   }
 
-  public void setLowerUncertainty(Float lowerUncertainty) {
+  public void setLowerUncertainty(@javax.annotation.Nullable Float lowerUncertainty) {
     this.lowerUncertainty = lowerUncertainty;
   }
 
 
-  public ObjectPick upperUncertainty(Float upperUncertainty) {
+  public ObjectPick upperUncertainty(@javax.annotation.Nullable Float upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
     return this;
   }
 
-   /**
+  /**
    * Uncertainty as the absolute value of deviation from the mainvalue towards larger values. | decimal(8,3)
    * @return upperUncertainty
-  **/
+   */
   @javax.annotation.Nullable
   public Float getUpperUncertainty() {
     return upperUncertainty;
   }
 
-  public void setUpperUncertainty(Float upperUncertainty) {
+  public void setUpperUncertainty(@javax.annotation.Nullable Float upperUncertainty) {
     this.upperUncertainty = upperUncertainty;
   }
 
 
-  public ObjectPick confidenceLevel(Float confidenceLevel) {
+  public ObjectPick confidenceLevel(@javax.annotation.Nullable Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
     return this;
   }
 
-   /**
+  /**
    * Integer numer for confidence level type (68.3 1 sigma, xx &#x3D;2 sigma, 99% 3 sigma) | decimal(5.2)
    * @return confidenceLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Float getConfidenceLevel() {
     return confidenceLevel;
   }
 
-  public void setConfidenceLevel(Float confidenceLevel) {
+  public void setConfidenceLevel(@javax.annotation.Nullable Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
   }
 
 
-  public ObjectPick arrivalTime(OffsetDateTime arrivalTime) {
+  public ObjectPick arrivalTime(@javax.annotation.Nonnull OffsetDateTime arrivalTime) {
     this.arrivalTime = arrivalTime;
     return this;
   }
 
-   /**
+  /**
    * Arrival time with microseconds | datetime(3)
    * @return arrivalTime
-  **/
+   */
   @javax.annotation.Nonnull
   public OffsetDateTime getArrivalTime() {
     return arrivalTime;
   }
 
-  public void setArrivalTime(OffsetDateTime arrivalTime) {
+  public void setArrivalTime(@javax.annotation.Nonnull OffsetDateTime arrivalTime) {
     this.arrivalTime = arrivalTime;
   }
 
 
-  public ObjectPick firstmotion(PickFirstmotion firstmotion) {
+  public ObjectPick firstmotion(@javax.annotation.Nullable PickFirstmotion firstmotion) {
     this.firstmotion = firstmotion;
     return this;
   }
 
-   /**
+  /**
    * Get firstmotion
    * @return firstmotion
-  **/
+   */
   @javax.annotation.Nullable
   public PickFirstmotion getFirstmotion() {
     return firstmotion;
   }
 
-  public void setFirstmotion(PickFirstmotion firstmotion) {
+  public void setFirstmotion(@javax.annotation.Nullable PickFirstmotion firstmotion) {
     this.firstmotion = firstmotion;
   }
 
 
-  public ObjectPick emersio(PickEmersio emersio) {
+  public ObjectPick emersio(@javax.annotation.Nullable PickEmersio emersio) {
     this.emersio = emersio;
     return this;
   }
 
-   /**
+  /**
    * Get emersio
    * @return emersio
-  **/
+   */
   @javax.annotation.Nullable
   public PickEmersio getEmersio() {
     return emersio;
   }
 
-  public void setEmersio(PickEmersio emersio) {
+  public void setEmersio(@javax.annotation.Nullable PickEmersio emersio) {
     this.emersio = emersio;
   }
 
 
-  public ObjectPick pickEw(ObjectPickEw pickEw) {
+  public ObjectPick pickEw(@javax.annotation.Nullable ObjectPickEw pickEw) {
     this.pickEw = pickEw;
     return this;
   }
 
-   /**
+  /**
    * Get pickEw
    * @return pickEw
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectPickEw getPickEw() {
     return pickEw;
   }
 
-  public void setPickEw(ObjectPickEw pickEw) {
+  public void setPickEw(@javax.annotation.Nullable ObjectPickEw pickEw) {
     this.pickEw = pickEw;
   }
 
 
-  public ObjectPick localspace(ObjectLocalspace localspace) {
+  public ObjectPick localspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
 
-  public void setLocalspace(ObjectLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectPick provenance(ObjectProvenance provenance) {
+  public ObjectPick provenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectProvenance getProvenance() {
     return provenance;
   }
 
-  public void setProvenance(ObjectProvenance provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
@@ -625,12 +642,12 @@ public class ObjectPick {
     openapiRequiredFields.add("arrival_time");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectPick
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectPick
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectPick.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -751,22 +768,22 @@ public class ObjectPick {
     }
   }
 
- /**
-  * Create an instance of ObjectPick given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectPick
-  * @throws IOException if the JSON string is invalid with respect to ObjectPick
-  */
+  /**
+   * Create an instance of ObjectPick given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectPick
+   * @throws IOException if the JSON string is invalid with respect to ObjectPick
+   */
   public static ObjectPick fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectPick.class);
   }
 
- /**
-  * Convert an instance of ObjectPick to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectPick to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

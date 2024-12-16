@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,76 +49,79 @@ import org.ingv.dante.JSON;
 /**
  * MetaDefinitionLinksInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class MetaDefinitionLinksInner {
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
+  @javax.annotation.Nullable
   private String url;
 
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
+  @javax.annotation.Nullable
   private String label;
 
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
+  @javax.annotation.Nullable
   private String active;
 
   public MetaDefinitionLinksInner() {
   }
 
-  public MetaDefinitionLinksInner url(String url) {
+  public MetaDefinitionLinksInner url(@javax.annotation.Nullable String url) {
     this.url = url;
     return this;
   }
 
-   /**
+  /**
    * URL base path.
    * @return url
-  **/
+   */
   @javax.annotation.Nullable
   public String getUrl() {
     return url;
   }
 
-  public void setUrl(String url) {
+  public void setUrl(@javax.annotation.Nullable String url) {
     this.url = url;
   }
 
 
-  public MetaDefinitionLinksInner label(String label) {
+  public MetaDefinitionLinksInner label(@javax.annotation.Nullable String label) {
     this.label = label;
     return this;
   }
 
-   /**
+  /**
    * Page label.
    * @return label
-  **/
+   */
   @javax.annotation.Nullable
   public String getLabel() {
     return label;
   }
 
-  public void setLabel(String label) {
+  public void setLabel(@javax.annotation.Nullable String label) {
     this.label = label;
   }
 
 
-  public MetaDefinitionLinksInner active(String active) {
+  public MetaDefinitionLinksInner active(@javax.annotation.Nullable String active) {
     this.active = active;
     return this;
   }
 
-   /**
+  /**
    * Get active
    * @return active
-  **/
+   */
   @javax.annotation.Nullable
   public String getActive() {
     return active;
   }
 
-  public void setActive(String active) {
+  public void setActive(@javax.annotation.Nullable String active) {
     this.active = active;
   }
 
@@ -238,12 +240,12 @@ public class MetaDefinitionLinksInner {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to MetaDefinitionLinksInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to MetaDefinitionLinksInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!MetaDefinitionLinksInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -334,22 +336,22 @@ public class MetaDefinitionLinksInner {
     }
   }
 
- /**
-  * Create an instance of MetaDefinitionLinksInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of MetaDefinitionLinksInner
-  * @throws IOException if the JSON string is invalid with respect to MetaDefinitionLinksInner
-  */
+  /**
+   * Create an instance of MetaDefinitionLinksInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of MetaDefinitionLinksInner
+   * @throws IOException if the JSON string is invalid with respect to MetaDefinitionLinksInner
+   */
   public static MetaDefinitionLinksInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, MetaDefinitionLinksInner.class);
   }
 
- /**
-  * Convert an instance of MetaDefinitionLinksInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of MetaDefinitionLinksInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

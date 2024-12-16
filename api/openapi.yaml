@@ -135,7 +135,9 @@ paths:
       tags:
       - user
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /status:
     get:
       description: Return the application status
@@ -216,7 +218,8 @@ paths:
       summary: Return the application status
       tags:
       - status
-      x-accepts: application/problem+json
+      x-accepts:
+      - application/problem+json
   /quakedb/v1/events-group:
     get:
       description: This API returns the preferred origin and the preferred magnitude
@@ -882,7 +885,9 @@ paths:
         all clusterd events.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/events:
     get:
       description: This API returns the preferred origin and the preferred magnitude
@@ -1548,7 +1553,9 @@ paths:
         the same instance.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/origins:
     get:
       description: This API returns all the preferred origins
@@ -2212,7 +2219,9 @@ paths:
       summary: This API returns all the preferred origins.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/magnitudes:
     get:
       description: This API returns all the origins with own preferred magnitude
@@ -2876,7 +2885,9 @@ paths:
       summary: This API returns all origins with own preferred magnitude.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/all:
     get:
       description: This API returns all the origins with all magnitudes; one per line
@@ -3540,7 +3551,9 @@ paths:
       summary: This API returns all origins with all magnitude; one per line.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/events-catalog:
     get:
       description: "This API returns only the \"catalogs\". \n All `catalogs` are\
@@ -4215,7 +4228,9 @@ paths:
       summary: This API returns the catalogs.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
     post:
       description: This API is used to add a catalog object.
       operationId: addCatalog
@@ -4297,7 +4312,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/eventsgroup:
     patch:
       description: Create a new events-group or Update an existing one.</br> To use
@@ -4393,7 +4410,9 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/type-event:
     get:
       description: This API returns all the type_event(s).
@@ -4474,7 +4493,9 @@ paths:
       summary: This API returns all the type_event(s).
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
     post:
       description: This API is used to add an type_event object.
       operationId: addTypeEvent
@@ -4556,7 +4577,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/type-event/{id}:
     delete:
       description: Delete an existing type_event.</br> To use this API you must be
@@ -4641,7 +4664,8 @@ paths:
       summary: Delete an existing type_event
       tags:
       - delete
-      x-accepts: application/problem+json
+      x-accepts:
+      - application/problem+json
     patch:
       description: Update an existing type_event.</br> To use this API you must be
         authenticated.
@@ -4746,7 +4770,9 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/type-origin:
     get:
       description: This API returns all the type_origin(s).
@@ -4827,7 +4853,9 @@ paths:
       summary: This API returns all the type_origin(s).
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
     post:
       description: This API is used to add an type_origin object.
       operationId: addTypeOrigin
@@ -4909,7 +4937,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/type-origin/{id}:
     delete:
       description: Delete an existing type_origin.</br> To use this API you must be
@@ -4994,7 +5024,8 @@ paths:
       summary: Delete an existing type_origin
       tags:
       - delete
-      x-accepts: application/problem+json
+      x-accepts:
+      - application/problem+json
     patch:
       description: Update an existing type_origin.</br> To use this API you must be
         authenticated.
@@ -5099,7 +5130,9 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/type-magnitude:
     get:
       description: This API returns all the type_magnitude(s).
@@ -5180,7 +5213,9 @@ paths:
       summary: This API returns all the type_magnitude(s).
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
     post:
       description: This API is used to add an type_magnitude object.
       operationId: addTypeMagnitude
@@ -5262,7 +5297,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/type-magnitude/{id}:
     delete:
       description: Delete an existing type_magnitude.</br> To use this API you must
@@ -5347,7 +5384,8 @@ paths:
       summary: Delete an existing type_magnitude
       tags:
       - delete
-      x-accepts: application/problem+json
+      x-accepts:
+      - application/problem+json
     patch:
       description: Update an existing type_magnitude.</br> To use this API you must
         be authenticated.
@@ -5452,7 +5490,9 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/localspace:
     get:
       description: This API returns all the localspace(s).
@@ -5533,7 +5573,9 @@ paths:
       summary: This API returns all the localspace(s).
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
     post:
       description: This API is used to add an localspace object.
       operationId: addLocalspace
@@ -5615,7 +5657,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/localspace/{id}:
     delete:
       description: Delete an existing localspace.</br> To use this API you must be
@@ -5700,7 +5744,8 @@ paths:
       summary: Delete an existing localspace
       tags:
       - delete
-      x-accepts: application/problem+json
+      x-accepts:
+      - application/problem+json
     patch:
       description: Update an existing localspace.</br> To use this API you must be
         authenticated.
@@ -5805,7 +5850,9 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/provenance:
     get:
       description: This API returns all the provenance(s).
@@ -5886,7 +5933,9 @@ paths:
       summary: This API returns all the provenance(s).
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
     post:
       description: This API is used to add an provenance object.
       operationId: addProvenance
@@ -5968,7 +6017,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/provenance/{id}:
     delete:
       description: Delete an existing provenance.</br> To use this API you must be
@@ -6053,7 +6104,8 @@ paths:
       summary: Delete an existing provenance
       tags:
       - delete
-      x-accepts: application/problem+json
+      x-accepts:
+      - application/problem+json
     patch:
       description: Update an existing provenance.</br> To use this API you must be
         authenticated.
@@ -6158,7 +6210,9 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/table/v1/origin-flag/{id}:
     delete:
       description: Delete an existing origin-flag.</br> To use this API you must be
@@ -6243,7 +6297,8 @@ paths:
       summary: Delete an existing origin-flag
       tags:
       - delete
-      x-accepts: application/problem+json
+      x-accepts:
+      - application/problem+json
     patch:
       description: Update an existing origin-flag.</br> To use this API you must be
         authenticated.
@@ -6348,7 +6403,9 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/event:
     get:
       description: This API returns the preferred origin and the preferred magnitude
@@ -6484,7 +6541,9 @@ paths:
         all clusterd events.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
     post:
       description: This API is used to add an event object.
       operationId: addEvent
@@ -6566,7 +6625,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/origin-flag:
     get:
       description: This API returns the all the flags assosiated to the originid.
@@ -6682,7 +6743,9 @@ paths:
       summary: This API returns the all the flags assosiated to the originid.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
     post:
       description: This API is used to add one or more flags to origin.
       operationId: addOriginFlag
@@ -6764,7 +6827,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/pick:
     get:
       description: This API returns picks
@@ -7003,7 +7068,9 @@ paths:
       summary: This API returns picks from DataBase
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/scnl:
     get:
       description: This API returns scnls
@@ -7210,7 +7277,9 @@ paths:
       summary: This API returns scnls from DataBase
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /boundaries/v1/region-name:
     get:
       description: This API returns the region name.
@@ -7306,7 +7375,9 @@ paths:
       summary: This API returns the region name used at INGV.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /boundaries/v1/municipi-distance-km-popolazione:
     get:
       description: This API returns the municipi-distance-km-popolazione.
@@ -7423,7 +7494,9 @@ paths:
       summary: This API returns the municipi-distance-km-popolazione used at INGV.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /boundaries/v1/municipio:
     get:
       description: "This API returns the Italian \"municipio\" information, by name."
@@ -7512,7 +7585,9 @@ paths:
       summary: This API returns the Italian "municipio" information by name.
       tags:
       - get
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/event/{id}:
     patch:
       description: Update an existing event.</br> To use this API you must be authenticated
@@ -7618,7 +7693,9 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/momenttensor/{id}:
     patch:
       description: Update an existing momenttensor.</br> To use this API you must
@@ -7724,7 +7801,9 @@ paths:
       tags:
       - update
       x-content-type: application/merge-patch+json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/origin:
     post:
       description: This API is used to add an origin object.
@@ -7807,7 +7886,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/magnitude:
     post:
       description: This API is used to add a magnitude object.
@@ -7890,7 +7971,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/strongmotion:
     post:
       description: This API is used to add a strongmotion object.
@@ -7973,7 +8056,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/focalmechanism:
     post:
       description: This API is used to add a focalmechanism object.
@@ -8056,7 +8141,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/v1/momenttensor:
     post:
       description: This API is used to add a momenttensor object.
@@ -8139,7 +8226,9 @@ paths:
       tags:
       - store
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/ew/v1/quake2k:
     post:
       description: This API is used to add an Earthworm quake2k object.
@@ -8219,7 +8308,9 @@ paths:
       tags:
       - earthworm api
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/ew/v1/hyp2000arc:
     post:
       description: This API is used to add an Earthworm hyp2000arc object.
@@ -8299,7 +8390,9 @@ paths:
       tags:
       - earthworm api
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/ew/v1/magnitude:
     post:
       description: This API is used to add an Earthworm magnitude object.
@@ -8379,7 +8472,9 @@ paths:
       tags:
       - earthworm api
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/ew/v1/pick-scnl:
     post:
       description: This API is used to add an Earthworm pick_scnl object.
@@ -8459,7 +8554,9 @@ paths:
       tags:
       - earthworm api
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
   /quakedb/ew/v1/strongmotionii:
     post:
       description: This API is used to add an Earthworm strongmotionii object.
@@ -8539,7 +8636,9 @@ paths:
       tags:
       - earthworm api
       x-content-type: application/json
-      x-accepts: "application/json,application/problem+json"
+      x-accepts:
+      - application/json
+      - application/problem+json
 components:
   headers:
     Retry-After:

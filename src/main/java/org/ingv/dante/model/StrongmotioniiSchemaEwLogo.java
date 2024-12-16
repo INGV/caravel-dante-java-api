@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,145 +48,151 @@ import org.ingv.dante.JSON;
 /**
  * StrongmotioniiSchemaEwLogo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class StrongmotioniiSchemaEwLogo {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nonnull
   private String type;
 
   public static final String SERIALIZED_NAME_MODULE = "module";
   @SerializedName(SERIALIZED_NAME_MODULE)
+  @javax.annotation.Nonnull
   private String module;
 
   public static final String SERIALIZED_NAME_INSTALLATION = "installation";
   @SerializedName(SERIALIZED_NAME_INSTALLATION)
+  @javax.annotation.Nonnull
   private String installation;
 
   public static final String SERIALIZED_NAME_USER = "user";
   @SerializedName(SERIALIZED_NAME_USER)
+  @javax.annotation.Nullable
   private String user;
 
   public static final String SERIALIZED_NAME_HOSTNAME = "hostname";
   @SerializedName(SERIALIZED_NAME_HOSTNAME)
+  @javax.annotation.Nullable
   private String hostname;
 
   public static final String SERIALIZED_NAME_INSTANCE = "instance";
   @SerializedName(SERIALIZED_NAME_INSTANCE)
+  @javax.annotation.Nonnull
   private String instance;
 
   public StrongmotioniiSchemaEwLogo() {
   }
 
-  public StrongmotioniiSchemaEwLogo type(String type) {
+  public StrongmotioniiSchemaEwLogo type(@javax.annotation.Nonnull String type) {
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Type description | ???
    * @return type
-  **/
+   */
   @javax.annotation.Nonnull
   public String getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(@javax.annotation.Nonnull String type) {
     this.type = type;
   }
 
 
-  public StrongmotioniiSchemaEwLogo module(String module) {
+  public StrongmotioniiSchemaEwLogo module(@javax.annotation.Nonnull String module) {
     this.module = module;
     return this;
   }
 
-   /**
+  /**
    * Module description | ???
    * @return module
-  **/
+   */
   @javax.annotation.Nonnull
   public String getModule() {
     return module;
   }
 
-  public void setModule(String module) {
+  public void setModule(@javax.annotation.Nonnull String module) {
     this.module = module;
   }
 
 
-  public StrongmotioniiSchemaEwLogo installation(String installation) {
+  public StrongmotioniiSchemaEwLogo installation(@javax.annotation.Nonnull String installation) {
     this.installation = installation;
     return this;
   }
 
-   /**
+  /**
    * Installation description | ???
    * @return installation
-  **/
+   */
   @javax.annotation.Nonnull
   public String getInstallation() {
     return installation;
   }
 
-  public void setInstallation(String installation) {
+  public void setInstallation(@javax.annotation.Nonnull String installation) {
     this.installation = installation;
   }
 
 
-  public StrongmotioniiSchemaEwLogo user(String user) {
+  public StrongmotioniiSchemaEwLogo user(@javax.annotation.Nullable String user) {
     this.user = user;
     return this;
   }
 
-   /**
+  /**
    * User | ???
    * @return user
-  **/
+   */
   @javax.annotation.Nullable
   public String getUser() {
     return user;
   }
 
-  public void setUser(String user) {
+  public void setUser(@javax.annotation.Nullable String user) {
     this.user = user;
   }
 
 
-  public StrongmotioniiSchemaEwLogo hostname(String hostname) {
+  public StrongmotioniiSchemaEwLogo hostname(@javax.annotation.Nullable String hostname) {
     this.hostname = hostname;
     return this;
   }
 
-   /**
+  /**
    * Hostname | ???
    * @return hostname
-  **/
+   */
   @javax.annotation.Nullable
   public String getHostname() {
     return hostname;
   }
 
-  public void setHostname(String hostname) {
+  public void setHostname(@javax.annotation.Nullable String hostname) {
     this.hostname = hostname;
   }
 
 
-  public StrongmotioniiSchemaEwLogo instance(String instance) {
+  public StrongmotioniiSchemaEwLogo instance(@javax.annotation.Nonnull String instance) {
     this.instance = instance;
     return this;
   }
 
-   /**
+  /**
    * Instance description | ???
    * @return instance
-  **/
+   */
   @javax.annotation.Nonnull
   public String getInstance() {
     return instance;
   }
 
-  public void setInstance(String instance) {
+  public void setInstance(@javax.annotation.Nonnull String instance) {
     this.instance = instance;
   }
 
@@ -308,12 +313,12 @@ public class StrongmotioniiSchemaEwLogo {
     openapiRequiredFields.add("instance");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to StrongmotioniiSchemaEwLogo
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to StrongmotioniiSchemaEwLogo
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!StrongmotioniiSchemaEwLogo.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -420,22 +425,22 @@ public class StrongmotioniiSchemaEwLogo {
     }
   }
 
- /**
-  * Create an instance of StrongmotioniiSchemaEwLogo given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of StrongmotioniiSchemaEwLogo
-  * @throws IOException if the JSON string is invalid with respect to StrongmotioniiSchemaEwLogo
-  */
+  /**
+   * Create an instance of StrongmotioniiSchemaEwLogo given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of StrongmotioniiSchemaEwLogo
+   * @throws IOException if the JSON string is invalid with respect to StrongmotioniiSchemaEwLogo
+   */
   public static StrongmotioniiSchemaEwLogo fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, StrongmotioniiSchemaEwLogo.class);
   }
 
- /**
-  * Convert an instance of StrongmotioniiSchemaEwLogo to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of StrongmotioniiSchemaEwLogo to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

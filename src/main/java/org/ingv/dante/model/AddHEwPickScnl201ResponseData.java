@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,16 +51,17 @@ import org.ingv.dante.JSON;
 /**
  * AddHEwPickScnl201ResponseData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddHEwPickScnl201ResponseData {
   public static final String SERIALIZED_NAME_PICKS = "picks";
   @SerializedName(SERIALIZED_NAME_PICKS)
-  private List<AddHEwPickScnl201ResponseDataPicksInner> picks;
+  @javax.annotation.Nullable
+  private List<AddHEwPickScnl201ResponseDataPicksInner> picks = new ArrayList<>();
 
   public AddHEwPickScnl201ResponseData() {
   }
 
-  public AddHEwPickScnl201ResponseData picks(List<AddHEwPickScnl201ResponseDataPicksInner> picks) {
+  public AddHEwPickScnl201ResponseData picks(@javax.annotation.Nullable List<AddHEwPickScnl201ResponseDataPicksInner> picks) {
     this.picks = picks;
     return this;
   }
@@ -74,16 +74,16 @@ public class AddHEwPickScnl201ResponseData {
     return this;
   }
 
-   /**
+  /**
    * Get picks
    * @return picks
-  **/
+   */
   @javax.annotation.Nullable
   public List<AddHEwPickScnl201ResponseDataPicksInner> getPicks() {
     return picks;
   }
 
-  public void setPicks(List<AddHEwPickScnl201ResponseDataPicksInner> picks) {
+  public void setPicks(@javax.annotation.Nullable List<AddHEwPickScnl201ResponseDataPicksInner> picks) {
     this.picks = picks;
   }
 
@@ -185,12 +185,12 @@ public class AddHEwPickScnl201ResponseData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddHEwPickScnl201ResponseData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddHEwPickScnl201ResponseData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddHEwPickScnl201ResponseData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -286,22 +286,22 @@ public class AddHEwPickScnl201ResponseData {
     }
   }
 
- /**
-  * Create an instance of AddHEwPickScnl201ResponseData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddHEwPickScnl201ResponseData
-  * @throws IOException if the JSON string is invalid with respect to AddHEwPickScnl201ResponseData
-  */
+  /**
+   * Create an instance of AddHEwPickScnl201ResponseData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddHEwPickScnl201ResponseData
+   * @throws IOException if the JSON string is invalid with respect to AddHEwPickScnl201ResponseData
+   */
   public static AddHEwPickScnl201ResponseData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddHEwPickScnl201ResponseData.class);
   }
 
- /**
-  * Convert an instance of AddHEwPickScnl201ResponseData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddHEwPickScnl201ResponseData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

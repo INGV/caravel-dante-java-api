@@ -41,7 +41,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -53,105 +52,114 @@ import org.ingv.dante.JSON;
 /**
  * GetTypeEvent200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GetTypeEvent200Response {
   public static final String SERIALIZED_NAME_CURRENT_PAGE = "current_page";
   @SerializedName(SERIALIZED_NAME_CURRENT_PAGE)
+  @javax.annotation.Nullable
   private Integer currentPage;
 
   public static final String SERIALIZED_NAME_FROM = "from";
   @SerializedName(SERIALIZED_NAME_FROM)
+  @javax.annotation.Nullable
   private Integer from;
 
   public static final String SERIALIZED_NAME_LAST_PAGE = "last_page";
   @SerializedName(SERIALIZED_NAME_LAST_PAGE)
+  @javax.annotation.Nullable
   private Integer lastPage;
 
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
-  private List<MetaDefinitionLinksInner> links;
+  @javax.annotation.Nullable
+  private List<MetaDefinitionLinksInner> links = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
+  @javax.annotation.Nullable
   private String path;
 
   public static final String SERIALIZED_NAME_PER_PAGE = "per_page";
   @SerializedName(SERIALIZED_NAME_PER_PAGE)
+  @javax.annotation.Nullable
   private Integer perPage;
 
   public static final String SERIALIZED_NAME_TO = "to";
   @SerializedName(SERIALIZED_NAME_TO)
+  @javax.annotation.Nullable
   private Integer to;
 
   public static final String SERIALIZED_NAME_TOTAL = "total";
   @SerializedName(SERIALIZED_NAME_TOTAL)
+  @javax.annotation.Nullable
   private Integer total;
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<ObjectTableTypeEvent> data;
+  @javax.annotation.Nullable
+  private List<ObjectTableTypeEvent> data = new ArrayList<>();
 
   public GetTypeEvent200Response() {
   }
 
-  public GetTypeEvent200Response currentPage(Integer currentPage) {
+  public GetTypeEvent200Response currentPage(@javax.annotation.Nullable Integer currentPage) {
     this.currentPage = currentPage;
     return this;
   }
 
-   /**
+  /**
    * Current page.
    * @return currentPage
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getCurrentPage() {
     return currentPage;
   }
 
-  public void setCurrentPage(Integer currentPage) {
+  public void setCurrentPage(@javax.annotation.Nullable Integer currentPage) {
     this.currentPage = currentPage;
   }
 
 
-  public GetTypeEvent200Response from(Integer from) {
+  public GetTypeEvent200Response from(@javax.annotation.Nullable Integer from) {
     this.from = from;
     return this;
   }
 
-   /**
+  /**
    * Showed record from.
    * @return from
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getFrom() {
     return from;
   }
 
-  public void setFrom(Integer from) {
+  public void setFrom(@javax.annotation.Nullable Integer from) {
     this.from = from;
   }
 
 
-  public GetTypeEvent200Response lastPage(Integer lastPage) {
+  public GetTypeEvent200Response lastPage(@javax.annotation.Nullable Integer lastPage) {
     this.lastPage = lastPage;
     return this;
   }
 
-   /**
+  /**
    * Last page.
    * @return lastPage
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getLastPage() {
     return lastPage;
   }
 
-  public void setLastPage(Integer lastPage) {
+  public void setLastPage(@javax.annotation.Nullable Integer lastPage) {
     this.lastPage = lastPage;
   }
 
 
-  public GetTypeEvent200Response links(List<MetaDefinitionLinksInner> links) {
+  public GetTypeEvent200Response links(@javax.annotation.Nullable List<MetaDefinitionLinksInner> links) {
     this.links = links;
     return this;
   }
@@ -164,97 +172,97 @@ public class GetTypeEvent200Response {
     return this;
   }
 
-   /**
+  /**
    * Get links
    * @return links
-  **/
+   */
   @javax.annotation.Nullable
   public List<MetaDefinitionLinksInner> getLinks() {
     return links;
   }
 
-  public void setLinks(List<MetaDefinitionLinksInner> links) {
+  public void setLinks(@javax.annotation.Nullable List<MetaDefinitionLinksInner> links) {
     this.links = links;
   }
 
 
-  public GetTypeEvent200Response path(String path) {
+  public GetTypeEvent200Response path(@javax.annotation.Nullable String path) {
     this.path = path;
     return this;
   }
 
-   /**
+  /**
    * URL base path.
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
   public String getPath() {
     return path;
   }
 
-  public void setPath(String path) {
+  public void setPath(@javax.annotation.Nullable String path) {
     this.path = path;
   }
 
 
-  public GetTypeEvent200Response perPage(Integer perPage) {
+  public GetTypeEvent200Response perPage(@javax.annotation.Nullable Integer perPage) {
     this.perPage = perPage;
     return this;
   }
 
-   /**
+  /**
    * Record per page.
    * @return perPage
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPerPage() {
     return perPage;
   }
 
-  public void setPerPage(Integer perPage) {
+  public void setPerPage(@javax.annotation.Nullable Integer perPage) {
     this.perPage = perPage;
   }
 
 
-  public GetTypeEvent200Response to(Integer to) {
+  public GetTypeEvent200Response to(@javax.annotation.Nullable Integer to) {
     this.to = to;
     return this;
   }
 
-   /**
+  /**
    * Showed record to.
    * @return to
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTo() {
     return to;
   }
 
-  public void setTo(Integer to) {
+  public void setTo(@javax.annotation.Nullable Integer to) {
     this.to = to;
   }
 
 
-  public GetTypeEvent200Response total(Integer total) {
+  public GetTypeEvent200Response total(@javax.annotation.Nullable Integer total) {
     this.total = total;
     return this;
   }
 
-   /**
+  /**
    * Total records.
    * @return total
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getTotal() {
     return total;
   }
 
-  public void setTotal(Integer total) {
+  public void setTotal(@javax.annotation.Nullable Integer total) {
     this.total = total;
   }
 
 
-  public GetTypeEvent200Response data(List<ObjectTableTypeEvent> data) {
+  public GetTypeEvent200Response data(@javax.annotation.Nullable List<ObjectTableTypeEvent> data) {
     this.data = data;
     return this;
   }
@@ -267,16 +275,16 @@ public class GetTypeEvent200Response {
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectTableTypeEvent> getData() {
     return data;
   }
 
-  public void setData(List<ObjectTableTypeEvent> data) {
+  public void setData(@javax.annotation.Nullable List<ObjectTableTypeEvent> data) {
     this.data = data;
   }
 
@@ -402,12 +410,12 @@ public class GetTypeEvent200Response {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GetTypeEvent200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetTypeEvent200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GetTypeEvent200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -520,22 +528,22 @@ public class GetTypeEvent200Response {
     }
   }
 
- /**
-  * Create an instance of GetTypeEvent200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetTypeEvent200Response
-  * @throws IOException if the JSON string is invalid with respect to GetTypeEvent200Response
-  */
+  /**
+   * Create an instance of GetTypeEvent200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetTypeEvent200Response
+   * @throws IOException if the JSON string is invalid with respect to GetTypeEvent200Response
+   */
   public static GetTypeEvent200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetTypeEvent200Response.class);
   }
 
- /**
-  * Convert an instance of GetTypeEvent200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetTypeEvent200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

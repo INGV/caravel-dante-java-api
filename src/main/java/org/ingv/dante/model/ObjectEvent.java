@@ -45,7 +45,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -57,75 +56,92 @@ import org.ingv.dante.JSON;
 /**
  * ObjectEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectEvent {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
+  @javax.annotation.Nonnull
   private String typeEvent;
 
   public static final String SERIALIZED_NAME_FLAGS = "flags";
   @SerializedName(SERIALIZED_NAME_FLAGS)
+  @javax.annotation.Nullable
   private String flags;
 
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  @javax.annotation.Nullable
   private Long eventGroupId = 0l;
 
   public static final String SERIALIZED_NAME_PREFERRED_ORIGIN_ID = "preferred_origin_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_ORIGIN_ID)
+  @javax.annotation.Nullable
   private Long preferredOriginId;
 
   public static final String SERIALIZED_NAME_PREFERRED_MAGNITUDE_ID = "preferred_magnitude_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_MAGNITUDE_ID)
+  @javax.annotation.Nullable
   private Long preferredMagnitudeId;
 
   public static final String SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID = "preferred_focalmechanism_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID)
+  @javax.annotation.Nullable
   private Long preferredFocalmechanismId;
 
   public static final String SERIALIZED_NAME_SET_PREFERRED_ORIGIN_ID_LOCALSPACE = "set_preferred_origin_id_localspace";
   @SerializedName(SERIALIZED_NAME_SET_PREFERRED_ORIGIN_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long setPreferredOriginIdLocalspace;
 
   public static final String SERIALIZED_NAME_SET_PREFERRED_MAGNITUDE_ID_LOCALSPACE = "set_preferred_magnitude_id_localspace";
   @SerializedName(SERIALIZED_NAME_SET_PREFERRED_MAGNITUDE_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long setPreferredMagnitudeIdLocalspace;
 
   public static final String SERIALIZED_NAME_TYPE_GROUP = "type_group";
   @SerializedName(SERIALIZED_NAME_TYPE_GROUP)
+  @javax.annotation.Nullable
   private Long typeGroup = 0l;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenance provenance;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspace localspace;
 
   public static final String SERIALIZED_NAME_ORIGINS = "origins";
   @SerializedName(SERIALIZED_NAME_ORIGINS)
-  private List<ObjectOrigin> origins;
+  @javax.annotation.Nullable
+  private List<ObjectOrigin> origins = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_STRONGMOTIONS = "strongmotions";
   @SerializedName(SERIALIZED_NAME_STRONGMOTIONS)
-  private List<ObjectStrongmotion> strongmotions;
+  @javax.annotation.Nullable
+  private List<ObjectStrongmotion> strongmotions = new ArrayList<>();
 
   public ObjectEvent() {
   }
@@ -153,10 +169,10 @@ public class ObjectEvent {
     this.typeGroup = typeGroup;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -164,10 +180,10 @@ public class ObjectEvent {
 
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -175,10 +191,10 @@ public class ObjectEvent {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -186,48 +202,48 @@ public class ObjectEvent {
 
 
 
-  public ObjectEvent idLocalspace(Long idLocalspace) {
+  public ObjectEvent idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectEvent typeEvent(String typeEvent) {
+  public ObjectEvent typeEvent(@javax.annotation.Nonnull String typeEvent) {
     this.typeEvent = typeEvent;
     return this;
   }
 
-   /**
+  /**
    * Name | varchar(255)
    * @return typeEvent
-  **/
+   */
   @javax.annotation.Nonnull
   public String getTypeEvent() {
     return typeEvent;
   }
 
-  public void setTypeEvent(String typeEvent) {
+  public void setTypeEvent(@javax.annotation.Nonnull String typeEvent) {
     this.typeEvent = typeEvent;
   }
 
 
-   /**
+  /**
    * Flags for origin | varchar(255)
    * @return flags
-  **/
+   */
   @javax.annotation.Nullable
   public String getFlags() {
     return flags;
@@ -235,10 +251,10 @@ public class ObjectEvent {
 
 
 
-   /**
+  /**
    * Link event group | bigint(20)
    * @return eventGroupId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getEventGroupId() {
     return eventGroupId;
@@ -246,10 +262,10 @@ public class ObjectEvent {
 
 
 
-   /**
+  /**
    * Link: preferred origin. It can be NULL. | bigint(20)
    * @return preferredOriginId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPreferredOriginId() {
     return preferredOriginId;
@@ -257,10 +273,10 @@ public class ObjectEvent {
 
 
 
-   /**
+  /**
    * Link: preferred magnitude. It can be NULL. | bigint(20)
    * @return preferredMagnitudeId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPreferredMagnitudeId() {
     return preferredMagnitudeId;
@@ -268,10 +284,10 @@ public class ObjectEvent {
 
 
 
-   /**
+  /**
    * Link: preferred focalmechanism. It can be NULL. | bigint(20)
    * @return preferredFocalmechanismId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPreferredFocalmechanismId() {
     return preferredFocalmechanismId;
@@ -279,48 +295,48 @@ public class ObjectEvent {
 
 
 
-  public ObjectEvent setPreferredOriginIdLocalspace(Long setPreferredOriginIdLocalspace) {
+  public ObjectEvent setPreferredOriginIdLocalspace(@javax.annotation.Nullable Long setPreferredOriginIdLocalspace) {
     this.setPreferredOriginIdLocalspace = setPreferredOriginIdLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return setPreferredOriginIdLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getSetPreferredOriginIdLocalspace() {
     return setPreferredOriginIdLocalspace;
   }
 
-  public void setSetPreferredOriginIdLocalspace(Long setPreferredOriginIdLocalspace) {
+  public void setSetPreferredOriginIdLocalspace(@javax.annotation.Nullable Long setPreferredOriginIdLocalspace) {
     this.setPreferredOriginIdLocalspace = setPreferredOriginIdLocalspace;
   }
 
 
-  public ObjectEvent setPreferredMagnitudeIdLocalspace(Long setPreferredMagnitudeIdLocalspace) {
+  public ObjectEvent setPreferredMagnitudeIdLocalspace(@javax.annotation.Nullable Long setPreferredMagnitudeIdLocalspace) {
     this.setPreferredMagnitudeIdLocalspace = setPreferredMagnitudeIdLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return setPreferredMagnitudeIdLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getSetPreferredMagnitudeIdLocalspace() {
     return setPreferredMagnitudeIdLocalspace;
   }
 
-  public void setSetPreferredMagnitudeIdLocalspace(Long setPreferredMagnitudeIdLocalspace) {
+  public void setSetPreferredMagnitudeIdLocalspace(@javax.annotation.Nullable Long setPreferredMagnitudeIdLocalspace) {
     this.setPreferredMagnitudeIdLocalspace = setPreferredMagnitudeIdLocalspace;
   }
 
 
-   /**
+  /**
    * Group type. Used by clustering algorithm | tinyint(4)
    * @return typeGroup
-  **/
+   */
   @javax.annotation.Nullable
   public Long getTypeGroup() {
     return typeGroup;
@@ -328,45 +344,45 @@ public class ObjectEvent {
 
 
 
-  public ObjectEvent provenance(ObjectProvenance provenance) {
+  public ObjectEvent provenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectProvenance getProvenance() {
     return provenance;
   }
 
-  public void setProvenance(ObjectProvenance provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
-  public ObjectEvent localspace(ObjectLocalspace localspace) {
+  public ObjectEvent localspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
 
-  public void setLocalspace(ObjectLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectEvent origins(List<ObjectOrigin> origins) {
+  public ObjectEvent origins(@javax.annotation.Nullable List<ObjectOrigin> origins) {
     this.origins = origins;
     return this;
   }
@@ -379,21 +395,21 @@ public class ObjectEvent {
     return this;
   }
 
-   /**
+  /**
    * Get origins
    * @return origins
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectOrigin> getOrigins() {
     return origins;
   }
 
-  public void setOrigins(List<ObjectOrigin> origins) {
+  public void setOrigins(@javax.annotation.Nullable List<ObjectOrigin> origins) {
     this.origins = origins;
   }
 
 
-  public ObjectEvent strongmotions(List<ObjectStrongmotion> strongmotions) {
+  public ObjectEvent strongmotions(@javax.annotation.Nullable List<ObjectStrongmotion> strongmotions) {
     this.strongmotions = strongmotions;
     return this;
   }
@@ -406,16 +422,16 @@ public class ObjectEvent {
     return this;
   }
 
-   /**
+  /**
    * Get strongmotions
    * @return strongmotions
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectStrongmotion> getStrongmotions() {
     return strongmotions;
   }
 
-  public void setStrongmotions(List<ObjectStrongmotion> strongmotions) {
+  public void setStrongmotions(@javax.annotation.Nullable List<ObjectStrongmotion> strongmotions) {
     this.strongmotions = strongmotions;
   }
 
@@ -577,12 +593,12 @@ public class ObjectEvent {
     openapiRequiredFields.add("type_event");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectEvent
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectEvent
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -713,22 +729,22 @@ public class ObjectEvent {
     }
   }
 
- /**
-  * Create an instance of ObjectEvent given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectEvent
-  * @throws IOException if the JSON string is invalid with respect to ObjectEvent
-  */
+  /**
+   * Create an instance of ObjectEvent given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectEvent
+   * @throws IOException if the JSON string is invalid with respect to ObjectEvent
+   */
   public static ObjectEvent fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectEvent.class);
   }
 
- /**
-  * Convert an instance of ObjectEvent to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectEvent to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

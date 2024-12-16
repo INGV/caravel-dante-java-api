@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,306 +49,319 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudePhasesInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class MagnitudePhasesInner {
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
+  @javax.annotation.Nonnull
   private String net;
 
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
+  @javax.annotation.Nonnull
   private String sta;
 
   public static final String SERIALIZED_NAME_COMP = "comp";
   @SerializedName(SERIALIZED_NAME_COMP)
+  @javax.annotation.Nonnull
   private String comp;
 
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
+  @javax.annotation.Nonnull
   private String loc = "--";
 
   public static final String SERIALIZED_NAME_MAG = "mag";
   @SerializedName(SERIALIZED_NAME_MAG)
+  @javax.annotation.Nullable
   private Double mag;
 
   public static final String SERIALIZED_NAME_DIST = "dist";
   @SerializedName(SERIALIZED_NAME_DIST)
+  @javax.annotation.Nullable
   private Float dist;
 
   public static final String SERIALIZED_NAME_CORR = "corr";
   @SerializedName(SERIALIZED_NAME_CORR)
+  @javax.annotation.Nullable
   private Double corr;
 
   public static final String SERIALIZED_NAME_TIME1 = "time1";
   @SerializedName(SERIALIZED_NAME_TIME1)
+  @javax.annotation.Nonnull
   private OffsetDateTime time1;
 
   public static final String SERIALIZED_NAME_AMP1 = "amp1";
   @SerializedName(SERIALIZED_NAME_AMP1)
+  @javax.annotation.Nonnull
   private Double amp1;
 
   public static final String SERIALIZED_NAME_PERIOD1 = "period1";
   @SerializedName(SERIALIZED_NAME_PERIOD1)
+  @javax.annotation.Nullable
   private Double period1;
 
   public static final String SERIALIZED_NAME_TIME2 = "time2";
   @SerializedName(SERIALIZED_NAME_TIME2)
+  @javax.annotation.Nonnull
   private OffsetDateTime time2;
 
   public static final String SERIALIZED_NAME_AMP2 = "amp2";
   @SerializedName(SERIALIZED_NAME_AMP2)
+  @javax.annotation.Nonnull
   private Double amp2;
 
   public static final String SERIALIZED_NAME_PERIOD2 = "period2";
   @SerializedName(SERIALIZED_NAME_PERIOD2)
+  @javax.annotation.Nullable
   private Double period2;
 
   public MagnitudePhasesInner() {
   }
 
-  public MagnitudePhasesInner net(String net) {
+  public MagnitudePhasesInner net(@javax.annotation.Nonnull String net) {
     this.net = net;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return net
-  **/
+   */
   @javax.annotation.Nonnull
   public String getNet() {
     return net;
   }
 
-  public void setNet(String net) {
+  public void setNet(@javax.annotation.Nonnull String net) {
     this.net = net;
   }
 
 
-  public MagnitudePhasesInner sta(String sta) {
+  public MagnitudePhasesInner sta(@javax.annotation.Nonnull String sta) {
     this.sta = sta;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return sta
-  **/
+   */
   @javax.annotation.Nonnull
   public String getSta() {
     return sta;
   }
 
-  public void setSta(String sta) {
+  public void setSta(@javax.annotation.Nonnull String sta) {
     this.sta = sta;
   }
 
 
-  public MagnitudePhasesInner comp(String comp) {
+  public MagnitudePhasesInner comp(@javax.annotation.Nonnull String comp) {
     this.comp = comp;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return comp
-  **/
+   */
   @javax.annotation.Nonnull
   public String getComp() {
     return comp;
   }
 
-  public void setComp(String comp) {
+  public void setComp(@javax.annotation.Nonnull String comp) {
     this.comp = comp;
   }
 
 
-  public MagnitudePhasesInner loc(String loc) {
+  public MagnitudePhasesInner loc(@javax.annotation.Nonnull String loc) {
     this.loc = loc;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return loc
-  **/
+   */
   @javax.annotation.Nonnull
   public String getLoc() {
     return loc;
   }
 
-  public void setLoc(String loc) {
+  public void setLoc(@javax.annotation.Nonnull String loc) {
     this.loc = loc;
   }
 
 
-  public MagnitudePhasesInner mag(Double mag) {
+  public MagnitudePhasesInner mag(@javax.annotation.Nullable Double mag) {
     this.mag = mag;
     return this;
   }
 
-   /**
+  /**
    * Amplitude magnitude value | double
    * @return mag
-  **/
+   */
   @javax.annotation.Nullable
   public Double getMag() {
     return mag;
   }
 
-  public void setMag(Double mag) {
+  public void setMag(@javax.annotation.Nullable Double mag) {
     this.mag = mag;
   }
 
 
-  public MagnitudePhasesInner dist(Float dist) {
+  public MagnitudePhasesInner dist(@javax.annotation.Nullable Float dist) {
     this.dist = dist;
     return this;
   }
 
-   /**
+  /**
    * Distance from epicenter of the station expressed in Km | double
    * @return dist
-  **/
+   */
   @javax.annotation.Nullable
   public Float getDist() {
     return dist;
   }
 
-  public void setDist(Float dist) {
+  public void setDist(@javax.annotation.Nullable Float dist) {
     this.dist = dist;
   }
 
 
-  public MagnitudePhasesInner corr(Double corr) {
+  public MagnitudePhasesInner corr(@javax.annotation.Nullable Double corr) {
     this.corr = corr;
     return this;
   }
 
-   /**
+  /**
    * magnitude correction | double
    * @return corr
-  **/
+   */
   @javax.annotation.Nullable
   public Double getCorr() {
     return corr;
   }
 
-  public void setCorr(Double corr) {
+  public void setCorr(@javax.annotation.Nullable Double corr) {
     this.corr = corr;
   }
 
 
-  public MagnitudePhasesInner time1(OffsetDateTime time1) {
+  public MagnitudePhasesInner time1(@javax.annotation.Nonnull OffsetDateTime time1) {
     this.time1 = time1;
     return this;
   }
 
-   /**
+  /**
    *  | datetime(3)
    * @return time1
-  **/
+   */
   @javax.annotation.Nonnull
   public OffsetDateTime getTime1() {
     return time1;
   }
 
-  public void setTime1(OffsetDateTime time1) {
+  public void setTime1(@javax.annotation.Nonnull OffsetDateTime time1) {
     this.time1 = time1;
   }
 
 
-  public MagnitudePhasesInner amp1(Double amp1) {
+  public MagnitudePhasesInner amp1(@javax.annotation.Nonnull Double amp1) {
     this.amp1 = amp1;
     return this;
   }
 
-   /**
+  /**
    * Amplitude value | double
    * @return amp1
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getAmp1() {
     return amp1;
   }
 
-  public void setAmp1(Double amp1) {
+  public void setAmp1(@javax.annotation.Nonnull Double amp1) {
     this.amp1 = amp1;
   }
 
 
-  public MagnitudePhasesInner period1(Double period1) {
+  public MagnitudePhasesInner period1(@javax.annotation.Nullable Double period1) {
     this.period1 = period1;
     return this;
   }
 
-   /**
+  /**
    * Amlitude period | double
    * @return period1
-  **/
+   */
   @javax.annotation.Nullable
   public Double getPeriod1() {
     return period1;
   }
 
-  public void setPeriod1(Double period1) {
+  public void setPeriod1(@javax.annotation.Nullable Double period1) {
     this.period1 = period1;
   }
 
 
-  public MagnitudePhasesInner time2(OffsetDateTime time2) {
+  public MagnitudePhasesInner time2(@javax.annotation.Nonnull OffsetDateTime time2) {
     this.time2 = time2;
     return this;
   }
 
-   /**
+  /**
    *  | datetime(3)
    * @return time2
-  **/
+   */
   @javax.annotation.Nonnull
   public OffsetDateTime getTime2() {
     return time2;
   }
 
-  public void setTime2(OffsetDateTime time2) {
+  public void setTime2(@javax.annotation.Nonnull OffsetDateTime time2) {
     this.time2 = time2;
   }
 
 
-  public MagnitudePhasesInner amp2(Double amp2) {
+  public MagnitudePhasesInner amp2(@javax.annotation.Nonnull Double amp2) {
     this.amp2 = amp2;
     return this;
   }
 
-   /**
+  /**
    * Amplitude value | double
    * @return amp2
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getAmp2() {
     return amp2;
   }
 
-  public void setAmp2(Double amp2) {
+  public void setAmp2(@javax.annotation.Nonnull Double amp2) {
     this.amp2 = amp2;
   }
 
 
-  public MagnitudePhasesInner period2(Double period2) {
+  public MagnitudePhasesInner period2(@javax.annotation.Nullable Double period2) {
     this.period2 = period2;
     return this;
   }
 
-   /**
+  /**
    * Amlitude period | double
    * @return period2
-  **/
+   */
   @javax.annotation.Nullable
   public Double getPeriod2() {
     return period2;
   }
 
-  public void setPeriod2(Double period2) {
+  public void setPeriod2(@javax.annotation.Nullable Double period2) {
     this.period2 = period2;
   }
 
@@ -495,12 +507,12 @@ public class MagnitudePhasesInner {
     openapiRequiredFields.add("amp2");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to MagnitudePhasesInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to MagnitudePhasesInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!MagnitudePhasesInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -601,22 +613,22 @@ public class MagnitudePhasesInner {
     }
   }
 
- /**
-  * Create an instance of MagnitudePhasesInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of MagnitudePhasesInner
-  * @throws IOException if the JSON string is invalid with respect to MagnitudePhasesInner
-  */
+  /**
+   * Create an instance of MagnitudePhasesInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of MagnitudePhasesInner
+   * @throws IOException if the JSON string is invalid with respect to MagnitudePhasesInner
+   */
   public static MagnitudePhasesInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, MagnitudePhasesInner.class);
   }
 
- /**
-  * Convert an instance of MagnitudePhasesInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of MagnitudePhasesInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,122 +49,127 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventRequestDataEvent
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UpdateEventRequestDataEvent {
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
+  @javax.annotation.Nullable
   private String typeEvent;
 
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  @javax.annotation.Nullable
   private Long eventGroupId;
 
   public static final String SERIALIZED_NAME_PREFERRED_ORIGIN_ID = "preferred_origin_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_ORIGIN_ID)
+  @javax.annotation.Nullable
   private Long preferredOriginId;
 
   public static final String SERIALIZED_NAME_PREFERRED_MAGNITUDE_ID = "preferred_magnitude_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_MAGNITUDE_ID)
+  @javax.annotation.Nullable
   private Long preferredMagnitudeId;
 
   public static final String SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID = "preferred_focalmechanism_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID)
+  @javax.annotation.Nullable
   private Long preferredFocalmechanismId;
 
   public UpdateEventRequestDataEvent() {
   }
 
-  public UpdateEventRequestDataEvent typeEvent(String typeEvent) {
+  public UpdateEventRequestDataEvent typeEvent(@javax.annotation.Nullable String typeEvent) {
     this.typeEvent = typeEvent;
     return this;
   }
 
-   /**
+  /**
    * Name | varchar(255)
    * @return typeEvent
-  **/
+   */
   @javax.annotation.Nullable
   public String getTypeEvent() {
     return typeEvent;
   }
 
-  public void setTypeEvent(String typeEvent) {
+  public void setTypeEvent(@javax.annotation.Nullable String typeEvent) {
     this.typeEvent = typeEvent;
   }
 
 
-  public UpdateEventRequestDataEvent eventGroupId(Long eventGroupId) {
+  public UpdateEventRequestDataEvent eventGroupId(@javax.annotation.Nullable Long eventGroupId) {
     this.eventGroupId = eventGroupId;
     return this;
   }
 
-   /**
+  /**
    * Link event group | bigint(20)
    * @return eventGroupId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getEventGroupId() {
     return eventGroupId;
   }
 
-  public void setEventGroupId(Long eventGroupId) {
+  public void setEventGroupId(@javax.annotation.Nullable Long eventGroupId) {
     this.eventGroupId = eventGroupId;
   }
 
 
-  public UpdateEventRequestDataEvent preferredOriginId(Long preferredOriginId) {
+  public UpdateEventRequestDataEvent preferredOriginId(@javax.annotation.Nullable Long preferredOriginId) {
     this.preferredOriginId = preferredOriginId;
     return this;
   }
 
-   /**
+  /**
    * Link: preferred origin. It can be NULL. | bigint(20)
    * @return preferredOriginId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPreferredOriginId() {
     return preferredOriginId;
   }
 
-  public void setPreferredOriginId(Long preferredOriginId) {
+  public void setPreferredOriginId(@javax.annotation.Nullable Long preferredOriginId) {
     this.preferredOriginId = preferredOriginId;
   }
 
 
-  public UpdateEventRequestDataEvent preferredMagnitudeId(Long preferredMagnitudeId) {
+  public UpdateEventRequestDataEvent preferredMagnitudeId(@javax.annotation.Nullable Long preferredMagnitudeId) {
     this.preferredMagnitudeId = preferredMagnitudeId;
     return this;
   }
 
-   /**
+  /**
    * Link: preferred magnitude. It can be NULL. | bigint(20)
    * @return preferredMagnitudeId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPreferredMagnitudeId() {
     return preferredMagnitudeId;
   }
 
-  public void setPreferredMagnitudeId(Long preferredMagnitudeId) {
+  public void setPreferredMagnitudeId(@javax.annotation.Nullable Long preferredMagnitudeId) {
     this.preferredMagnitudeId = preferredMagnitudeId;
   }
 
 
-  public UpdateEventRequestDataEvent preferredFocalmechanismId(Long preferredFocalmechanismId) {
+  public UpdateEventRequestDataEvent preferredFocalmechanismId(@javax.annotation.Nullable Long preferredFocalmechanismId) {
     this.preferredFocalmechanismId = preferredFocalmechanismId;
     return this;
   }
 
-   /**
+  /**
    * Link: preferred focalmechanism. It can be NULL. | bigint(20)
    * @return preferredFocalmechanismId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPreferredFocalmechanismId() {
     return preferredFocalmechanismId;
   }
 
-  public void setPreferredFocalmechanismId(Long preferredFocalmechanismId) {
+  public void setPreferredFocalmechanismId(@javax.annotation.Nullable Long preferredFocalmechanismId) {
     this.preferredFocalmechanismId = preferredFocalmechanismId;
   }
 
@@ -290,12 +294,12 @@ public class UpdateEventRequestDataEvent {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UpdateEventRequestDataEvent
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UpdateEventRequestDataEvent
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UpdateEventRequestDataEvent.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -380,22 +384,22 @@ public class UpdateEventRequestDataEvent {
     }
   }
 
- /**
-  * Create an instance of UpdateEventRequestDataEvent given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateEventRequestDataEvent
-  * @throws IOException if the JSON string is invalid with respect to UpdateEventRequestDataEvent
-  */
+  /**
+   * Create an instance of UpdateEventRequestDataEvent given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UpdateEventRequestDataEvent
+   * @throws IOException if the JSON string is invalid with respect to UpdateEventRequestDataEvent
+   */
   public static UpdateEventRequestDataEvent fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UpdateEventRequestDataEvent.class);
   }
 
- /**
-  * Convert an instance of UpdateEventRequestDataEvent to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UpdateEventRequestDataEvent to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

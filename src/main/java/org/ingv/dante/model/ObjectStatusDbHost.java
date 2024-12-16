@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,20 +50,22 @@ import org.ingv.dante.JSON;
 /**
  * DB Connection host(s)
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectStatusDbHost {
   public static final String SERIALIZED_NAME_READ = "read";
   @SerializedName(SERIALIZED_NAME_READ)
-  private List<String> read;
+  @javax.annotation.Nullable
+  private List<String> read = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_WRITE = "write";
   @SerializedName(SERIALIZED_NAME_WRITE)
-  private List<String> write;
+  @javax.annotation.Nullable
+  private List<String> write = new ArrayList<>();
 
   public ObjectStatusDbHost() {
   }
 
-  public ObjectStatusDbHost read(List<String> read) {
+  public ObjectStatusDbHost read(@javax.annotation.Nullable List<String> read) {
     this.read = read;
     return this;
   }
@@ -77,21 +78,21 @@ public class ObjectStatusDbHost {
     return this;
   }
 
-   /**
+  /**
    * Get read
    * @return read
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getRead() {
     return read;
   }
 
-  public void setRead(List<String> read) {
+  public void setRead(@javax.annotation.Nullable List<String> read) {
     this.read = read;
   }
 
 
-  public ObjectStatusDbHost write(List<String> write) {
+  public ObjectStatusDbHost write(@javax.annotation.Nullable List<String> write) {
     this.write = write;
     return this;
   }
@@ -104,16 +105,16 @@ public class ObjectStatusDbHost {
     return this;
   }
 
-   /**
+  /**
    * Get write
    * @return write
-  **/
+   */
   @javax.annotation.Nullable
   public List<String> getWrite() {
     return write;
   }
 
-  public void setWrite(List<String> write) {
+  public void setWrite(@javax.annotation.Nullable List<String> write) {
     this.write = write;
   }
 
@@ -218,12 +219,12 @@ public class ObjectStatusDbHost {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectStatusDbHost
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectStatusDbHost
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectStatusDbHost.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -313,22 +314,22 @@ public class ObjectStatusDbHost {
     }
   }
 
- /**
-  * Create an instance of ObjectStatusDbHost given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectStatusDbHost
-  * @throws IOException if the JSON string is invalid with respect to ObjectStatusDbHost
-  */
+  /**
+   * Create an instance of ObjectStatusDbHost given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectStatusDbHost
+   * @throws IOException if the JSON string is invalid with respect to ObjectStatusDbHost
+   */
   public static ObjectStatusDbHost fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectStatusDbHost.class);
   }
 
- /**
-  * Convert an instance of ObjectStatusDbHost to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectStatusDbHost to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

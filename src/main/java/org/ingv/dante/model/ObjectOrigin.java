@@ -47,7 +47,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -59,199 +58,247 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectOrigin {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_AZIM_GAP = "azim_gap";
   @SerializedName(SERIALIZED_NAME_AZIM_GAP)
+  @javax.annotation.Nullable
   private Float azimGap;
 
   public static final String SERIALIZED_NAME_CONFIDENCE_LEVEL = "confidence_level";
   @SerializedName(SERIALIZED_NAME_CONFIDENCE_LEVEL)
+  @javax.annotation.Nullable
   private Float confidenceLevel = 68.3f;
 
   public static final String SERIALIZED_NAME_DEPTH = "depth";
   @SerializedName(SERIALIZED_NAME_DEPTH)
+  @javax.annotation.Nonnull
   private Double depth;
 
   public static final String SERIALIZED_NAME_E0 = "e0";
   @SerializedName(SERIALIZED_NAME_E0)
+  @javax.annotation.Nullable
   private Double e0;
 
   public static final String SERIALIZED_NAME_E0_AZ = "e0_az";
   @SerializedName(SERIALIZED_NAME_E0_AZ)
+  @javax.annotation.Nullable
   private Float e0Az;
 
   public static final String SERIALIZED_NAME_E0_DIP = "e0_dip";
   @SerializedName(SERIALIZED_NAME_E0_DIP)
+  @javax.annotation.Nullable
   private Double e0Dip;
 
   public static final String SERIALIZED_NAME_E1 = "e1";
   @SerializedName(SERIALIZED_NAME_E1)
+  @javax.annotation.Nullable
   private Double e1;
 
   public static final String SERIALIZED_NAME_E1_AZ = "e1_az";
   @SerializedName(SERIALIZED_NAME_E1_AZ)
+  @javax.annotation.Nullable
   private Float e1Az;
 
   public static final String SERIALIZED_NAME_E1_DIP = "e1_dip";
   @SerializedName(SERIALIZED_NAME_E1_DIP)
+  @javax.annotation.Nullable
   private Double e1Dip;
 
   public static final String SERIALIZED_NAME_E2 = "e2";
   @SerializedName(SERIALIZED_NAME_E2)
+  @javax.annotation.Nullable
   private Double e2;
 
   public static final String SERIALIZED_NAME_E2_AZ = "e2_az";
   @SerializedName(SERIALIZED_NAME_E2_AZ)
+  @javax.annotation.Nullable
   private Float e2Az;
 
   public static final String SERIALIZED_NAME_E2_DIP = "e2_dip";
   @SerializedName(SERIALIZED_NAME_E2_DIP)
+  @javax.annotation.Nullable
   private Long e2Dip;
 
   public static final String SERIALIZED_NAME_ERR_DEPTH = "err_depth";
   @SerializedName(SERIALIZED_NAME_ERR_DEPTH)
+  @javax.annotation.Nullable
   private Double errDepth;
 
   public static final String SERIALIZED_NAME_ERR_H = "err_h";
   @SerializedName(SERIALIZED_NAME_ERR_H)
+  @javax.annotation.Nullable
   private Double errH;
 
   public static final String SERIALIZED_NAME_ERR_LAT = "err_lat";
   @SerializedName(SERIALIZED_NAME_ERR_LAT)
+  @javax.annotation.Nullable
   private Double errLat;
 
   public static final String SERIALIZED_NAME_ERR_LON = "err_lon";
   @SerializedName(SERIALIZED_NAME_ERR_LON)
+  @javax.annotation.Nullable
   private Double errLon;
 
   public static final String SERIALIZED_NAME_ERR_LAT_DEG = "err_lat_deg";
   @SerializedName(SERIALIZED_NAME_ERR_LAT_DEG)
+  @javax.annotation.Nullable
   private Double errLatDeg;
 
   public static final String SERIALIZED_NAME_ERR_LON_DEG = "err_lon_deg";
   @SerializedName(SERIALIZED_NAME_ERR_LON_DEG)
+  @javax.annotation.Nullable
   private Double errLonDeg;
 
   public static final String SERIALIZED_NAME_ERR_OT = "err_ot";
   @SerializedName(SERIALIZED_NAME_ERR_OT)
+  @javax.annotation.Nullable
   private Double errOt;
 
   public static final String SERIALIZED_NAME_ERR_Z = "err_z";
   @SerializedName(SERIALIZED_NAME_ERR_Z)
+  @javax.annotation.Nullable
   private Double errZ;
 
   public static final String SERIALIZED_NAME_FIX_DEPTH = "fix_depth";
   @SerializedName(SERIALIZED_NAME_FIX_DEPTH)
+  @javax.annotation.Nullable
   private Boolean fixDepth = false;
 
   public static final String SERIALIZED_NAME_LAT = "lat";
   @SerializedName(SERIALIZED_NAME_LAT)
+  @javax.annotation.Nonnull
   private Double lat;
 
   public static final String SERIALIZED_NAME_LON = "lon";
   @SerializedName(SERIALIZED_NAME_LON)
+  @javax.annotation.Nonnull
   private Double lon;
 
   public static final String SERIALIZED_NAME_MAX_DISTANCE = "max_distance";
   @SerializedName(SERIALIZED_NAME_MAX_DISTANCE)
+  @javax.annotation.Nullable
   private Double maxDistance;
 
   public static final String SERIALIZED_NAME_MED_DISTANCE = "med_distance";
   @SerializedName(SERIALIZED_NAME_MED_DISTANCE)
+  @javax.annotation.Nullable
   private Double medDistance;
 
   public static final String SERIALIZED_NAME_MIN_DISTANCE = "min_distance";
   @SerializedName(SERIALIZED_NAME_MIN_DISTANCE)
+  @javax.annotation.Nullable
   private Double minDistance;
 
   public static final String SERIALIZED_NAME_NPH = "nph";
   @SerializedName(SERIALIZED_NAME_NPH)
+  @javax.annotation.Nullable
   private Long nph;
 
   public static final String SERIALIZED_NAME_NPH_FM = "nph_fm";
   @SerializedName(SERIALIZED_NAME_NPH_FM)
+  @javax.annotation.Nullable
   private Long nphFm;
 
   public static final String SERIALIZED_NAME_NPH_S = "nph_s";
   @SerializedName(SERIALIZED_NAME_NPH_S)
+  @javax.annotation.Nullable
   private Long nphS;
 
   public static final String SERIALIZED_NAME_NPH_TOT = "nph_tot";
   @SerializedName(SERIALIZED_NAME_NPH_TOT)
+  @javax.annotation.Nullable
   private Long nphTot;
 
   public static final String SERIALIZED_NAME_OT = "ot";
   @SerializedName(SERIALIZED_NAME_OT)
+  @javax.annotation.Nonnull
   private OffsetDateTime ot;
 
   public static final String SERIALIZED_NAME_QUALITY = "quality";
   @SerializedName(SERIALIZED_NAME_QUALITY)
+  @javax.annotation.Nullable
   private String quality;
 
   public static final String SERIALIZED_NAME_QUALITY_NUMERIC = "quality_numeric";
   @SerializedName(SERIALIZED_NAME_QUALITY_NUMERIC)
+  @javax.annotation.Nullable
   private Long qualityNumeric;
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
+  @javax.annotation.Nullable
   private String region;
 
   public static final String SERIALIZED_NAME_RMS = "rms";
   @SerializedName(SERIALIZED_NAME_RMS)
+  @javax.annotation.Nullable
   private Double rms;
 
   public static final String SERIALIZED_NAME_SEC_AZIM_GAP = "sec_azim_gap";
   @SerializedName(SERIALIZED_NAME_SEC_AZIM_GAP)
+  @javax.annotation.Nullable
   private Float secAzimGap;
 
   public static final String SERIALIZED_NAME_W_RMS = "w_rms";
   @SerializedName(SERIALIZED_NAME_W_RMS)
+  @javax.annotation.Nullable
   private Double wRms;
 
   public static final String SERIALIZED_NAME_TYPE_ORIGIN = "type_origin";
   @SerializedName(SERIALIZED_NAME_TYPE_ORIGIN)
+  @javax.annotation.Nullable
   private ObjectTypeOrigin typeOrigin;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspace localspace;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenance provenance;
 
   public static final String SERIALIZED_NAME_FLAGS = "flags";
   @SerializedName(SERIALIZED_NAME_FLAGS)
+  @javax.annotation.Nullable
   private String flags;
 
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
-  private List<ObjectMagnitude> magnitudes;
+  @javax.annotation.Nullable
+  private List<ObjectMagnitude> magnitudes = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_ARRIVALS = "arrivals";
   @SerializedName(SERIALIZED_NAME_ARRIVALS)
-  private List<ObjectArrival> arrivals;
+  @javax.annotation.Nullable
+  private List<ObjectArrival> arrivals = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_FOCALMECHANISMS = "focalmechanisms";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)
-  private List<ObjectFocalmechanism> focalmechanisms;
+  @javax.annotation.Nullable
+  private List<ObjectFocalmechanism> focalmechanisms = new ArrayList<>();
 
   public ObjectOrigin() {
   }
@@ -273,10 +320,10 @@ public class ObjectOrigin {
     this.flags = flags;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -284,10 +331,10 @@ public class ObjectOrigin {
 
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -295,10 +342,10 @@ public class ObjectOrigin {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -306,333 +353,333 @@ public class ObjectOrigin {
 
 
 
-  public ObjectOrigin idLocalspace(Long idLocalspace) {
+  public ObjectOrigin idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectOrigin azimGap(Float azimGap) {
+  public ObjectOrigin azimGap(@javax.annotation.Nullable Float azimGap) {
     this.azimGap = azimGap;
     return this;
   }
 
-   /**
+  /**
    * Azimutal gap | float4
    * @return azimGap
-  **/
+   */
   @javax.annotation.Nullable
   public Float getAzimGap() {
     return azimGap;
   }
 
-  public void setAzimGap(Float azimGap) {
+  public void setAzimGap(@javax.annotation.Nullable Float azimGap) {
     this.azimGap = azimGap;
   }
 
 
-  public ObjectOrigin confidenceLevel(Float confidenceLevel) {
+  public ObjectOrigin confidenceLevel(@javax.annotation.Nullable Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
     return this;
   }
 
-   /**
+  /**
    * Integer numer for confidence level type (68.3 1 sigma, xx &#x3D;2 sigma, 99% 3 sigma) | decimal(5.2)
    * @return confidenceLevel
-  **/
+   */
   @javax.annotation.Nullable
   public Float getConfidenceLevel() {
     return confidenceLevel;
   }
 
-  public void setConfidenceLevel(Float confidenceLevel) {
+  public void setConfidenceLevel(@javax.annotation.Nullable Float confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
   }
 
 
-  public ObjectOrigin depth(Double depth) {
+  public ObjectOrigin depth(@javax.annotation.Nonnull Double depth) {
     this.depth = depth;
     return this;
   }
 
-   /**
+  /**
    * Depth in Km | double
    * @return depth
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getDepth() {
     return depth;
   }
 
-  public void setDepth(Double depth) {
+  public void setDepth(@javax.annotation.Nonnull Double depth) {
     this.depth = depth;
   }
 
 
-  public ObjectOrigin e0(Double e0) {
+  public ObjectOrigin e0(@javax.annotation.Nullable Double e0) {
     this.e0 = e0;
     return this;
   }
 
-   /**
+  /**
    * largest principal error | double
    * @return e0
-  **/
+   */
   @javax.annotation.Nullable
   public Double getE0() {
     return e0;
   }
 
-  public void setE0(Double e0) {
+  public void setE0(@javax.annotation.Nullable Double e0) {
     this.e0 = e0;
   }
 
 
-  public ObjectOrigin e0Az(Float e0Az) {
+  public ObjectOrigin e0Az(@javax.annotation.Nullable Float e0Az) {
     this.e0Az = e0Az;
     return this;
   }
 
-   /**
+  /**
    * azimuth of largest principal error | double
    * @return e0Az
-  **/
+   */
   @javax.annotation.Nullable
   public Float getE0Az() {
     return e0Az;
   }
 
-  public void setE0Az(Float e0Az) {
+  public void setE0Az(@javax.annotation.Nullable Float e0Az) {
     this.e0Az = e0Az;
   }
 
 
-  public ObjectOrigin e0Dip(Double e0Dip) {
+  public ObjectOrigin e0Dip(@javax.annotation.Nullable Double e0Dip) {
     this.e0Dip = e0Dip;
     return this;
   }
 
-   /**
+  /**
    * dip of largest principal error | double
    * @return e0Dip
-  **/
+   */
   @javax.annotation.Nullable
   public Double getE0Dip() {
     return e0Dip;
   }
 
-  public void setE0Dip(Double e0Dip) {
+  public void setE0Dip(@javax.annotation.Nullable Double e0Dip) {
     this.e0Dip = e0Dip;
   }
 
 
-  public ObjectOrigin e1(Double e1) {
+  public ObjectOrigin e1(@javax.annotation.Nullable Double e1) {
     this.e1 = e1;
     return this;
   }
 
-   /**
+  /**
    * intermed principal error | double
    * @return e1
-  **/
+   */
   @javax.annotation.Nullable
   public Double getE1() {
     return e1;
   }
 
-  public void setE1(Double e1) {
+  public void setE1(@javax.annotation.Nullable Double e1) {
     this.e1 = e1;
   }
 
 
-  public ObjectOrigin e1Az(Float e1Az) {
+  public ObjectOrigin e1Az(@javax.annotation.Nullable Float e1Az) {
     this.e1Az = e1Az;
     return this;
   }
 
-   /**
+  /**
    * azimuth of intermediate principal error | double
    * @return e1Az
-  **/
+   */
   @javax.annotation.Nullable
   public Float getE1Az() {
     return e1Az;
   }
 
-  public void setE1Az(Float e1Az) {
+  public void setE1Az(@javax.annotation.Nullable Float e1Az) {
     this.e1Az = e1Az;
   }
 
 
-  public ObjectOrigin e1Dip(Double e1Dip) {
+  public ObjectOrigin e1Dip(@javax.annotation.Nullable Double e1Dip) {
     this.e1Dip = e1Dip;
     return this;
   }
 
-   /**
+  /**
    * dip of intermediate principal error | double
    * @return e1Dip
-  **/
+   */
   @javax.annotation.Nullable
   public Double getE1Dip() {
     return e1Dip;
   }
 
-  public void setE1Dip(Double e1Dip) {
+  public void setE1Dip(@javax.annotation.Nullable Double e1Dip) {
     this.e1Dip = e1Dip;
   }
 
 
-  public ObjectOrigin e2(Double e2) {
+  public ObjectOrigin e2(@javax.annotation.Nullable Double e2) {
     this.e2 = e2;
     return this;
   }
 
-   /**
+  /**
    * smallest principal error | double
    * @return e2
-  **/
+   */
   @javax.annotation.Nullable
   public Double getE2() {
     return e2;
   }
 
-  public void setE2(Double e2) {
+  public void setE2(@javax.annotation.Nullable Double e2) {
     this.e2 = e2;
   }
 
 
-  public ObjectOrigin e2Az(Float e2Az) {
+  public ObjectOrigin e2Az(@javax.annotation.Nullable Float e2Az) {
     this.e2Az = e2Az;
     return this;
   }
 
-   /**
+  /**
    * azimuth of smallest principal error | double
    * @return e2Az
-  **/
+   */
   @javax.annotation.Nullable
   public Float getE2Az() {
     return e2Az;
   }
 
-  public void setE2Az(Float e2Az) {
+  public void setE2Az(@javax.annotation.Nullable Float e2Az) {
     this.e2Az = e2Az;
   }
 
 
-  public ObjectOrigin e2Dip(Long e2Dip) {
+  public ObjectOrigin e2Dip(@javax.annotation.Nullable Long e2Dip) {
     this.e2Dip = e2Dip;
     return this;
   }
 
-   /**
+  /**
    * dip of smallest principal error | double
    * @return e2Dip
-  **/
+   */
   @javax.annotation.Nullable
   public Long getE2Dip() {
     return e2Dip;
   }
 
-  public void setE2Dip(Long e2Dip) {
+  public void setE2Dip(@javax.annotation.Nullable Long e2Dip) {
     this.e2Dip = e2Dip;
   }
 
 
-  public ObjectOrigin errDepth(Double errDepth) {
+  public ObjectOrigin errDepth(@javax.annotation.Nullable Double errDepth) {
     this.errDepth = errDepth;
     return this;
   }
 
-   /**
+  /**
    * Depth error | double
    * @return errDepth
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrDepth() {
     return errDepth;
   }
 
-  public void setErrDepth(Double errDepth) {
+  public void setErrDepth(@javax.annotation.Nullable Double errDepth) {
     this.errDepth = errDepth;
   }
 
 
-  public ObjectOrigin errH(Double errH) {
+  public ObjectOrigin errH(@javax.annotation.Nullable Double errH) {
     this.errH = errH;
     return this;
   }
 
-   /**
+  /**
    * Horizontal error (km) | double
    * @return errH
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrH() {
     return errH;
   }
 
-  public void setErrH(Double errH) {
+  public void setErrH(@javax.annotation.Nullable Double errH) {
     this.errH = errH;
   }
 
 
-  public ObjectOrigin errLat(Double errLat) {
+  public ObjectOrigin errLat(@javax.annotation.Nullable Double errLat) {
     this.errLat = errLat;
     return this;
   }
 
-   /**
+  /**
    * Latitude error (km) | double
    * @return errLat
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrLat() {
     return errLat;
   }
 
-  public void setErrLat(Double errLat) {
+  public void setErrLat(@javax.annotation.Nullable Double errLat) {
     this.errLat = errLat;
   }
 
 
-  public ObjectOrigin errLon(Double errLon) {
+  public ObjectOrigin errLon(@javax.annotation.Nullable Double errLon) {
     this.errLon = errLon;
     return this;
   }
 
-   /**
+  /**
    * Longitude error (km) | double
    * @return errLon
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrLon() {
     return errLon;
   }
 
-  public void setErrLon(Double errLon) {
+  public void setErrLon(@javax.annotation.Nullable Double errLon) {
     this.errLon = errLon;
   }
 
 
-   /**
+  /**
    * Latitude error (deg) | double
    * @return errLatDeg
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrLatDeg() {
     return errLatDeg;
@@ -640,10 +687,10 @@ public class ObjectOrigin {
 
 
 
-   /**
+  /**
    * Longitude error (deg) | double
    * @return errLonDeg
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrLonDeg() {
     return errLonDeg;
@@ -651,432 +698,432 @@ public class ObjectOrigin {
 
 
 
-  public ObjectOrigin errOt(Double errOt) {
+  public ObjectOrigin errOt(@javax.annotation.Nullable Double errOt) {
     this.errOt = errOt;
     return this;
   }
 
-   /**
+  /**
    * Origin time error | double
    * @return errOt
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrOt() {
     return errOt;
   }
 
-  public void setErrOt(Double errOt) {
+  public void setErrOt(@javax.annotation.Nullable Double errOt) {
     this.errOt = errOt;
   }
 
 
-  public ObjectOrigin errZ(Double errZ) {
+  public ObjectOrigin errZ(@javax.annotation.Nullable Double errZ) {
     this.errZ = errZ;
     return this;
   }
 
-   /**
+  /**
    * Depth error (km) | double
    * @return errZ
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrZ() {
     return errZ;
   }
 
-  public void setErrZ(Double errZ) {
+  public void setErrZ(@javax.annotation.Nullable Double errZ) {
     this.errZ = errZ;
   }
 
 
-  public ObjectOrigin fixDepth(Boolean fixDepth) {
+  public ObjectOrigin fixDepth(@javax.annotation.Nullable Boolean fixDepth) {
     this.fixDepth = fixDepth;
     return this;
   }
 
-   /**
+  /**
    * true if depth is fixed | boolean
    * @return fixDepth
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getFixDepth() {
     return fixDepth;
   }
 
-  public void setFixDepth(Boolean fixDepth) {
+  public void setFixDepth(@javax.annotation.Nullable Boolean fixDepth) {
     this.fixDepth = fixDepth;
   }
 
 
-  public ObjectOrigin lat(Double lat) {
+  public ObjectOrigin lat(@javax.annotation.Nonnull Double lat) {
     this.lat = lat;
     return this;
   }
 
-   /**
+  /**
    * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -90
    * maximum: 90
    * @return lat
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getLat() {
     return lat;
   }
 
-  public void setLat(Double lat) {
+  public void setLat(@javax.annotation.Nonnull Double lat) {
     this.lat = lat;
   }
 
 
-  public ObjectOrigin lon(Double lon) {
+  public ObjectOrigin lon(@javax.annotation.Nonnull Double lon) {
     this.lon = lon;
     return this;
   }
 
-   /**
+  /**
    * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -180
    * maximum: 180
    * @return lon
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getLon() {
     return lon;
   }
 
-  public void setLon(Double lon) {
+  public void setLon(@javax.annotation.Nonnull Double lon) {
     this.lon = lon;
   }
 
 
-  public ObjectOrigin maxDistance(Double maxDistance) {
+  public ObjectOrigin maxDistance(@javax.annotation.Nullable Double maxDistance) {
     this.maxDistance = maxDistance;
     return this;
   }
 
-   /**
+  /**
    * Distance from the furthest station (km) | double
    * @return maxDistance
-  **/
+   */
   @javax.annotation.Nullable
   public Double getMaxDistance() {
     return maxDistance;
   }
 
-  public void setMaxDistance(Double maxDistance) {
+  public void setMaxDistance(@javax.annotation.Nullable Double maxDistance) {
     this.maxDistance = maxDistance;
   }
 
 
-  public ObjectOrigin medDistance(Double medDistance) {
+  public ObjectOrigin medDistance(@javax.annotation.Nullable Double medDistance) {
     this.medDistance = medDistance;
     return this;
   }
 
-   /**
+  /**
    * Median distance from the epicenter to the used stations (km) | double
    * @return medDistance
-  **/
+   */
   @javax.annotation.Nullable
   public Double getMedDistance() {
     return medDistance;
   }
 
-  public void setMedDistance(Double medDistance) {
+  public void setMedDistance(@javax.annotation.Nullable Double medDistance) {
     this.medDistance = medDistance;
   }
 
 
-  public ObjectOrigin minDistance(Double minDistance) {
+  public ObjectOrigin minDistance(@javax.annotation.Nullable Double minDistance) {
     this.minDistance = minDistance;
     return this;
   }
 
-   /**
+  /**
    * Distance from the closest station (km) | double
    * @return minDistance
-  **/
+   */
   @javax.annotation.Nullable
   public Double getMinDistance() {
     return minDistance;
   }
 
-  public void setMinDistance(Double minDistance) {
+  public void setMinDistance(@javax.annotation.Nullable Double minDistance) {
     this.minDistance = minDistance;
   }
 
 
-  public ObjectOrigin nph(Long nph) {
+  public ObjectOrigin nph(@javax.annotation.Nullable Long nph) {
     this.nph = nph;
     return this;
   }
 
-   /**
+  /**
    * # arrivals (P&amp;S) weight &gt;0.1 | int(11)
    * @return nph
-  **/
+   */
   @javax.annotation.Nullable
   public Long getNph() {
     return nph;
   }
 
-  public void setNph(Long nph) {
+  public void setNph(@javax.annotation.Nullable Long nph) {
     this.nph = nph;
   }
 
 
-  public ObjectOrigin nphFm(Long nphFm) {
+  public ObjectOrigin nphFm(@javax.annotation.Nullable Long nphFm) {
     this.nphFm = nphFm;
     return this;
   }
 
-   /**
+  /**
    * # P first motions | int(11)
    * @return nphFm
-  **/
+   */
   @javax.annotation.Nullable
   public Long getNphFm() {
     return nphFm;
   }
 
-  public void setNphFm(Long nphFm) {
+  public void setNphFm(@javax.annotation.Nullable Long nphFm) {
     this.nphFm = nphFm;
   }
 
 
-  public ObjectOrigin nphS(Long nphS) {
+  public ObjectOrigin nphS(@javax.annotation.Nullable Long nphS) {
     this.nphS = nphS;
     return this;
   }
 
-   /**
+  /**
    * # S arrivals weight &gt;0.1 | int(11)
    * @return nphS
-  **/
+   */
   @javax.annotation.Nullable
   public Long getNphS() {
     return nphS;
   }
 
-  public void setNphS(Long nphS) {
+  public void setNphS(@javax.annotation.Nullable Long nphS) {
     this.nphS = nphS;
   }
 
 
-  public ObjectOrigin nphTot(Long nphTot) {
+  public ObjectOrigin nphTot(@javax.annotation.Nullable Long nphTot) {
     this.nphTot = nphTot;
     return this;
   }
 
-   /**
+  /**
    * # arrivals (P&amp;S) weight &gt;0.0 | int(11)
    * @return nphTot
-  **/
+   */
   @javax.annotation.Nullable
   public Long getNphTot() {
     return nphTot;
   }
 
-  public void setNphTot(Long nphTot) {
+  public void setNphTot(@javax.annotation.Nullable Long nphTot) {
     this.nphTot = nphTot;
   }
 
 
-  public ObjectOrigin ot(OffsetDateTime ot) {
+  public ObjectOrigin ot(@javax.annotation.Nonnull OffsetDateTime ot) {
     this.ot = ot;
     return this;
   }
 
-   /**
+  /**
    * Origin time | datetime(3)
    * @return ot
-  **/
+   */
   @javax.annotation.Nonnull
   public OffsetDateTime getOt() {
     return ot;
   }
 
-  public void setOt(OffsetDateTime ot) {
+  public void setOt(@javax.annotation.Nonnull OffsetDateTime ot) {
     this.ot = ot;
   }
 
 
-  public ObjectOrigin quality(String quality) {
+  public ObjectOrigin quality(@javax.annotation.Nullable String quality) {
     this.quality = quality;
     return this;
   }
 
-   /**
+  /**
    * Quality of the localization | char(2)
    * @return quality
-  **/
+   */
   @javax.annotation.Nullable
   public String getQuality() {
     return quality;
   }
 
-  public void setQuality(String quality) {
+  public void setQuality(@javax.annotation.Nullable String quality) {
     this.quality = quality;
   }
 
 
-  public ObjectOrigin qualityNumeric(Long qualityNumeric) {
+  public ObjectOrigin qualityNumeric(@javax.annotation.Nullable Long qualityNumeric) {
     this.qualityNumeric = qualityNumeric;
     return this;
   }
 
-   /**
+  /**
    * Quality as numeric value | int(10)
    * @return qualityNumeric
-  **/
+   */
   @javax.annotation.Nullable
   public Long getQualityNumeric() {
     return qualityNumeric;
   }
 
-  public void setQualityNumeric(Long qualityNumeric) {
+  public void setQualityNumeric(@javax.annotation.Nullable Long qualityNumeric) {
     this.qualityNumeric = qualityNumeric;
   }
 
 
-  public ObjectOrigin region(String region) {
+  public ObjectOrigin region(@javax.annotation.Nullable String region) {
     this.region = region;
     return this;
   }
 
-   /**
+  /**
    * Event location remark region | varchar(255)
    * @return region
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegion() {
     return region;
   }
 
-  public void setRegion(String region) {
+  public void setRegion(@javax.annotation.Nullable String region) {
     this.region = region;
   }
 
 
-  public ObjectOrigin rms(Double rms) {
+  public ObjectOrigin rms(@javax.annotation.Nullable Double rms) {
     this.rms = rms;
     return this;
   }
 
-   /**
+  /**
    * Root mean square | double
    * @return rms
-  **/
+   */
   @javax.annotation.Nullable
   public Double getRms() {
     return rms;
   }
 
-  public void setRms(Double rms) {
+  public void setRms(@javax.annotation.Nullable Double rms) {
     this.rms = rms;
   }
 
 
-  public ObjectOrigin secAzimGap(Float secAzimGap) {
+  public ObjectOrigin secAzimGap(@javax.annotation.Nullable Float secAzimGap) {
     this.secAzimGap = secAzimGap;
     return this;
   }
 
-   /**
+  /**
    * Secondary Azimutal gap | double
    * @return secAzimGap
-  **/
+   */
   @javax.annotation.Nullable
   public Float getSecAzimGap() {
     return secAzimGap;
   }
 
-  public void setSecAzimGap(Float secAzimGap) {
+  public void setSecAzimGap(@javax.annotation.Nullable Float secAzimGap) {
     this.secAzimGap = secAzimGap;
   }
 
 
-  public ObjectOrigin wRms(Double wRms) {
+  public ObjectOrigin wRms(@javax.annotation.Nullable Double wRms) {
     this.wRms = wRms;
     return this;
   }
 
-   /**
+  /**
    * Root mean square Weighted | double
    * @return wRms
-  **/
+   */
   @javax.annotation.Nullable
   public Double getwRms() {
     return wRms;
   }
 
-  public void setwRms(Double wRms) {
+  public void setwRms(@javax.annotation.Nullable Double wRms) {
     this.wRms = wRms;
   }
 
 
-  public ObjectOrigin typeOrigin(ObjectTypeOrigin typeOrigin) {
+  public ObjectOrigin typeOrigin(@javax.annotation.Nullable ObjectTypeOrigin typeOrigin) {
     this.typeOrigin = typeOrigin;
     return this;
   }
 
-   /**
+  /**
    * Get typeOrigin
    * @return typeOrigin
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectTypeOrigin getTypeOrigin() {
     return typeOrigin;
   }
 
-  public void setTypeOrigin(ObjectTypeOrigin typeOrigin) {
+  public void setTypeOrigin(@javax.annotation.Nullable ObjectTypeOrigin typeOrigin) {
     this.typeOrigin = typeOrigin;
   }
 
 
-  public ObjectOrigin localspace(ObjectLocalspace localspace) {
+  public ObjectOrigin localspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
 
-  public void setLocalspace(ObjectLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectOrigin provenance(ObjectProvenance provenance) {
+  public ObjectOrigin provenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectProvenance getProvenance() {
     return provenance;
   }
 
-  public void setProvenance(ObjectProvenance provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
-   /**
+  /**
    * Flags for origin | varchar(255)
    * @return flags
-  **/
+   */
   @javax.annotation.Nullable
   public String getFlags() {
     return flags;
@@ -1084,7 +1131,7 @@ public class ObjectOrigin {
 
 
 
-  public ObjectOrigin magnitudes(List<ObjectMagnitude> magnitudes) {
+  public ObjectOrigin magnitudes(@javax.annotation.Nullable List<ObjectMagnitude> magnitudes) {
     this.magnitudes = magnitudes;
     return this;
   }
@@ -1097,21 +1144,21 @@ public class ObjectOrigin {
     return this;
   }
 
-   /**
+  /**
    * Get magnitudes
    * @return magnitudes
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectMagnitude> getMagnitudes() {
     return magnitudes;
   }
 
-  public void setMagnitudes(List<ObjectMagnitude> magnitudes) {
+  public void setMagnitudes(@javax.annotation.Nullable List<ObjectMagnitude> magnitudes) {
     this.magnitudes = magnitudes;
   }
 
 
-  public ObjectOrigin arrivals(List<ObjectArrival> arrivals) {
+  public ObjectOrigin arrivals(@javax.annotation.Nullable List<ObjectArrival> arrivals) {
     this.arrivals = arrivals;
     return this;
   }
@@ -1124,21 +1171,21 @@ public class ObjectOrigin {
     return this;
   }
 
-   /**
+  /**
    * Get arrivals
    * @return arrivals
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectArrival> getArrivals() {
     return arrivals;
   }
 
-  public void setArrivals(List<ObjectArrival> arrivals) {
+  public void setArrivals(@javax.annotation.Nullable List<ObjectArrival> arrivals) {
     this.arrivals = arrivals;
   }
 
 
-  public ObjectOrigin focalmechanisms(List<ObjectFocalmechanism> focalmechanisms) {
+  public ObjectOrigin focalmechanisms(@javax.annotation.Nullable List<ObjectFocalmechanism> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
     return this;
   }
@@ -1151,16 +1198,16 @@ public class ObjectOrigin {
     return this;
   }
 
-   /**
+  /**
    * Get focalmechanisms
    * @return focalmechanisms
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectFocalmechanism> getFocalmechanisms() {
     return focalmechanisms;
   }
 
-  public void setFocalmechanisms(List<ObjectFocalmechanism> focalmechanisms) {
+  public void setFocalmechanisms(@javax.annotation.Nullable List<ObjectFocalmechanism> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
   }
 
@@ -1418,12 +1465,12 @@ public class ObjectOrigin {
     openapiRequiredFields.add("ot");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectOrigin
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectOrigin
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectOrigin.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -1575,22 +1622,22 @@ public class ObjectOrigin {
     }
   }
 
- /**
-  * Create an instance of ObjectOrigin given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectOrigin
-  * @throws IOException if the JSON string is invalid with respect to ObjectOrigin
-  */
+  /**
+   * Create an instance of ObjectOrigin given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectOrigin
+   * @throws IOException if the JSON string is invalid with respect to ObjectOrigin
+   */
   public static ObjectOrigin fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectOrigin.class);
   }
 
- /**
-  * Convert an instance of ObjectOrigin to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectOrigin to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

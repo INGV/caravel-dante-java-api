@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,76 +49,79 @@ import org.ingv.dante.JSON;
 /**
  * ObjectPickEw
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectPickEw {
   public static final String SERIALIZED_NAME_PAMP1 = "pamp1";
   @SerializedName(SERIALIZED_NAME_PAMP1)
+  @javax.annotation.Nullable
   private Float pamp1;
 
   public static final String SERIALIZED_NAME_PAMP2 = "pamp2";
   @SerializedName(SERIALIZED_NAME_PAMP2)
+  @javax.annotation.Nullable
   private Float pamp2;
 
   public static final String SERIALIZED_NAME_PAMP3 = "pamp3";
   @SerializedName(SERIALIZED_NAME_PAMP3)
+  @javax.annotation.Nullable
   private Float pamp3;
 
   public ObjectPickEw() {
   }
 
-  public ObjectPickEw pamp1(Float pamp1) {
+  public ObjectPickEw pamp1(@javax.annotation.Nullable Float pamp1) {
     this.pamp1 = pamp1;
     return this;
   }
 
-   /**
+  /**
    * peak P-wave half amplitude | double(22)
    * @return pamp1
-  **/
+   */
   @javax.annotation.Nullable
   public Float getPamp1() {
     return pamp1;
   }
 
-  public void setPamp1(Float pamp1) {
+  public void setPamp1(@javax.annotation.Nullable Float pamp1) {
     this.pamp1 = pamp1;
   }
 
 
-  public ObjectPickEw pamp2(Float pamp2) {
+  public ObjectPickEw pamp2(@javax.annotation.Nullable Float pamp2) {
     this.pamp2 = pamp2;
     return this;
   }
 
-   /**
+  /**
    * peak P-wave half amplitude | double(22)
    * @return pamp2
-  **/
+   */
   @javax.annotation.Nullable
   public Float getPamp2() {
     return pamp2;
   }
 
-  public void setPamp2(Float pamp2) {
+  public void setPamp2(@javax.annotation.Nullable Float pamp2) {
     this.pamp2 = pamp2;
   }
 
 
-  public ObjectPickEw pamp3(Float pamp3) {
+  public ObjectPickEw pamp3(@javax.annotation.Nullable Float pamp3) {
     this.pamp3 = pamp3;
     return this;
   }
 
-   /**
+  /**
    * peak P-wave half amplitude | double(22)
    * @return pamp3
-  **/
+   */
   @javax.annotation.Nullable
   public Float getPamp3() {
     return pamp3;
   }
 
-  public void setPamp3(Float pamp3) {
+  public void setPamp3(@javax.annotation.Nullable Float pamp3) {
     this.pamp3 = pamp3;
   }
 
@@ -239,12 +241,12 @@ public class ObjectPickEw {
     openapiRequiredFields.add("pamp1");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectPickEw
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectPickEw
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectPickEw.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -333,22 +335,22 @@ public class ObjectPickEw {
     }
   }
 
- /**
-  * Create an instance of ObjectPickEw given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectPickEw
-  * @throws IOException if the JSON string is invalid with respect to ObjectPickEw
-  */
+  /**
+   * Create an instance of ObjectPickEw given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectPickEw
+   * @throws IOException if the JSON string is invalid with respect to ObjectPickEw
+   */
   public static ObjectPickEw fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectPickEw.class);
   }
 
- /**
-  * Convert an instance of ObjectPickEw to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectPickEw to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

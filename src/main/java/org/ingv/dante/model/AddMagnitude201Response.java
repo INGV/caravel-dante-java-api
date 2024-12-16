@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,30 +49,31 @@ import org.ingv.dante.JSON;
 /**
  * AddMagnitude201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddMagnitude201Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
+  @javax.annotation.Nullable
   private ObjectMagnitudePostOutput data;
 
   public AddMagnitude201Response() {
   }
 
-  public AddMagnitude201Response data(ObjectMagnitudePostOutput data) {
+  public AddMagnitude201Response data(@javax.annotation.Nullable ObjectMagnitudePostOutput data) {
     this.data = data;
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectMagnitudePostOutput getData() {
     return data;
   }
 
-  public void setData(ObjectMagnitudePostOutput data) {
+  public void setData(@javax.annotation.Nullable ObjectMagnitudePostOutput data) {
     this.data = data;
   }
 
@@ -175,12 +175,12 @@ public class AddMagnitude201Response {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddMagnitude201Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddMagnitude201Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddMagnitude201Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -266,22 +266,22 @@ public class AddMagnitude201Response {
     }
   }
 
- /**
-  * Create an instance of AddMagnitude201Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddMagnitude201Response
-  * @throws IOException if the JSON string is invalid with respect to AddMagnitude201Response
-  */
+  /**
+   * Create an instance of AddMagnitude201Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddMagnitude201Response
+   * @throws IOException if the JSON string is invalid with respect to AddMagnitude201Response
+   */
   public static AddMagnitude201Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddMagnitude201Response.class);
   }
 
- /**
-  * Convert an instance of AddMagnitude201Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddMagnitude201Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,76 +50,79 @@ import org.ingv.dante.JSON;
 /**
  * ObjectMomenttensorPostOutputMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectMomenttensorPostOutputMomenttensor {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private AddEvent201ResponseDataEventLocalspace localspace;
 
   public ObjectMomenttensorPostOutputMomenttensor() {
   }
 
-  public ObjectMomenttensorPostOutputMomenttensor id(Long id) {
+  public ObjectMomenttensorPostOutputMomenttensor id(@javax.annotation.Nullable Long id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(@javax.annotation.Nullable Long id) {
     this.id = id;
   }
 
 
-  public ObjectMomenttensorPostOutputMomenttensor idLocalspace(Long idLocalspace) {
+  public ObjectMomenttensorPostOutputMomenttensor idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectMomenttensorPostOutputMomenttensor localspace(AddEvent201ResponseDataEventLocalspace localspace) {
+  public ObjectMomenttensorPostOutputMomenttensor localspace(@javax.annotation.Nullable AddEvent201ResponseDataEventLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
   public AddEvent201ResponseDataEventLocalspace getLocalspace() {
     return localspace;
   }
 
-  public void setLocalspace(AddEvent201ResponseDataEventLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable AddEvent201ResponseDataEventLocalspace localspace) {
     this.localspace = localspace;
   }
 
@@ -239,12 +241,12 @@ public class ObjectMomenttensorPostOutputMomenttensor {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectMomenttensorPostOutputMomenttensor
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectMomenttensorPostOutputMomenttensor
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectMomenttensorPostOutputMomenttensor.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -330,22 +332,22 @@ public class ObjectMomenttensorPostOutputMomenttensor {
     }
   }
 
- /**
-  * Create an instance of ObjectMomenttensorPostOutputMomenttensor given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectMomenttensorPostOutputMomenttensor
-  * @throws IOException if the JSON string is invalid with respect to ObjectMomenttensorPostOutputMomenttensor
-  */
+  /**
+   * Create an instance of ObjectMomenttensorPostOutputMomenttensor given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectMomenttensorPostOutputMomenttensor
+   * @throws IOException if the JSON string is invalid with respect to ObjectMomenttensorPostOutputMomenttensor
+   */
   public static ObjectMomenttensorPostOutputMomenttensor fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectMomenttensorPostOutputMomenttensor.class);
   }
 
- /**
-  * Convert an instance of ObjectMomenttensorPostOutputMomenttensor to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectMomenttensorPostOutputMomenttensor to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

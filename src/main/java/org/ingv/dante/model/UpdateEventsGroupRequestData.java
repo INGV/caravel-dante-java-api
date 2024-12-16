@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,43 +50,46 @@ import org.ingv.dante.JSON;
 /**
  * UpdateEventsGroupRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UpdateEventsGroupRequestData {
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  @javax.annotation.Nullable
   private Long eventGroupId;
 
   public static final String SERIALIZED_NAME_EVENTIDS = "eventids";
   @SerializedName(SERIALIZED_NAME_EVENTIDS)
-  private List<Long> eventids;
+  @javax.annotation.Nullable
+  private List<Long> eventids = new ArrayList<>();
 
   public static final String SERIALIZED_NAME_EVENT_GROUP_IDS = "event_group_ids";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_IDS)
-  private List<Long> eventGroupIds;
+  @javax.annotation.Nullable
+  private List<Long> eventGroupIds = new ArrayList<>();
 
   public UpdateEventsGroupRequestData() {
   }
 
-  public UpdateEventsGroupRequestData eventGroupId(Long eventGroupId) {
+  public UpdateEventsGroupRequestData eventGroupId(@javax.annotation.Nullable Long eventGroupId) {
     this.eventGroupId = eventGroupId;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return eventGroupId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getEventGroupId() {
     return eventGroupId;
   }
 
-  public void setEventGroupId(Long eventGroupId) {
+  public void setEventGroupId(@javax.annotation.Nullable Long eventGroupId) {
     this.eventGroupId = eventGroupId;
   }
 
 
-  public UpdateEventsGroupRequestData eventids(List<Long> eventids) {
+  public UpdateEventsGroupRequestData eventids(@javax.annotation.Nullable List<Long> eventids) {
     this.eventids = eventids;
     return this;
   }
@@ -100,21 +102,21 @@ public class UpdateEventsGroupRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get eventids
    * @return eventids
-  **/
+   */
   @javax.annotation.Nullable
   public List<Long> getEventids() {
     return eventids;
   }
 
-  public void setEventids(List<Long> eventids) {
+  public void setEventids(@javax.annotation.Nullable List<Long> eventids) {
     this.eventids = eventids;
   }
 
 
-  public UpdateEventsGroupRequestData eventGroupIds(List<Long> eventGroupIds) {
+  public UpdateEventsGroupRequestData eventGroupIds(@javax.annotation.Nullable List<Long> eventGroupIds) {
     this.eventGroupIds = eventGroupIds;
     return this;
   }
@@ -127,16 +129,16 @@ public class UpdateEventsGroupRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get eventGroupIds
    * @return eventGroupIds
-  **/
+   */
   @javax.annotation.Nullable
   public List<Long> getEventGroupIds() {
     return eventGroupIds;
   }
 
-  public void setEventGroupIds(List<Long> eventGroupIds) {
+  public void setEventGroupIds(@javax.annotation.Nullable List<Long> eventGroupIds) {
     this.eventGroupIds = eventGroupIds;
   }
 
@@ -244,12 +246,12 @@ public class UpdateEventsGroupRequestData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UpdateEventsGroupRequestData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UpdateEventsGroupRequestData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UpdateEventsGroupRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -339,22 +341,22 @@ public class UpdateEventsGroupRequestData {
     }
   }
 
- /**
-  * Create an instance of UpdateEventsGroupRequestData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateEventsGroupRequestData
-  * @throws IOException if the JSON string is invalid with respect to UpdateEventsGroupRequestData
-  */
+  /**
+   * Create an instance of UpdateEventsGroupRequestData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UpdateEventsGroupRequestData
+   * @throws IOException if the JSON string is invalid with respect to UpdateEventsGroupRequestData
+   */
   public static UpdateEventsGroupRequestData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UpdateEventsGroupRequestData.class);
   }
 
- /**
-  * Convert an instance of UpdateEventsGroupRequestData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UpdateEventsGroupRequestData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

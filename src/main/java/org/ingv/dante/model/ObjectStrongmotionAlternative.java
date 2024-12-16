@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,53 +49,55 @@ import org.ingv.dante.JSON;
 /**
  * ObjectStrongmotionAlternative
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectStrongmotionAlternative {
   public static final String SERIALIZED_NAME_TIME = "time";
   @SerializedName(SERIALIZED_NAME_TIME)
+  @javax.annotation.Nullable
   private OffsetDateTime time;
 
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
+  @javax.annotation.Nullable
   private Long code;
 
   public ObjectStrongmotionAlternative() {
   }
 
-  public ObjectStrongmotionAlternative time(OffsetDateTime time) {
+  public ObjectStrongmotionAlternative time(@javax.annotation.Nullable OffsetDateTime time) {
     this.time = time;
     return this;
   }
 
-   /**
+  /**
    * alternate time: trigger reported by SM box - time with microseconds | datetime(3)
    * @return time
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTime() {
     return time;
   }
 
-  public void setTime(OffsetDateTime time) {
+  public void setTime(@javax.annotation.Nullable OffsetDateTime time) {
     this.time = time;
   }
 
 
-  public ObjectStrongmotionAlternative code(Long code) {
+  public ObjectStrongmotionAlternative code(@javax.annotation.Nullable Long code) {
     this.code = code;
     return this;
   }
 
-   /**
+  /**
    * code specifying the source of the alternate time field | int(11)
    * @return code
-  **/
+   */
   @javax.annotation.Nullable
   public Long getCode() {
     return code;
   }
 
-  public void setCode(Long code) {
+  public void setCode(@javax.annotation.Nullable Long code) {
     this.code = code;
   }
 
@@ -201,12 +202,12 @@ public class ObjectStrongmotionAlternative {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectStrongmotionAlternative
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectStrongmotionAlternative
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectStrongmotionAlternative.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -288,22 +289,22 @@ public class ObjectStrongmotionAlternative {
     }
   }
 
- /**
-  * Create an instance of ObjectStrongmotionAlternative given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectStrongmotionAlternative
-  * @throws IOException if the JSON string is invalid with respect to ObjectStrongmotionAlternative
-  */
+  /**
+   * Create an instance of ObjectStrongmotionAlternative given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectStrongmotionAlternative
+   * @throws IOException if the JSON string is invalid with respect to ObjectStrongmotionAlternative
+   */
   public static ObjectStrongmotionAlternative fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectStrongmotionAlternative.class);
   }
 
- /**
-  * Convert an instance of ObjectStrongmotionAlternative to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectStrongmotionAlternative to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

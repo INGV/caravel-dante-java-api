@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,39 +51,41 @@ import org.ingv.dante.JSON;
 /**
  * AddMagnitudeRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddMagnitudeRequestData {
   public static final String SERIALIZED_NAME_ORIGINID = "originid";
   @SerializedName(SERIALIZED_NAME_ORIGINID)
+  @javax.annotation.Nullable
   private Long originid;
 
   public static final String SERIALIZED_NAME_MAGNITUDES = "magnitudes";
   @SerializedName(SERIALIZED_NAME_MAGNITUDES)
-  private List<ObjectMagnitude> magnitudes;
+  @javax.annotation.Nullable
+  private List<ObjectMagnitude> magnitudes = new ArrayList<>();
 
   public AddMagnitudeRequestData() {
   }
 
-  public AddMagnitudeRequestData originid(Long originid) {
+  public AddMagnitudeRequestData originid(@javax.annotation.Nullable Long originid) {
     this.originid = originid;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return originid
-  **/
+   */
   @javax.annotation.Nullable
   public Long getOriginid() {
     return originid;
   }
 
-  public void setOriginid(Long originid) {
+  public void setOriginid(@javax.annotation.Nullable Long originid) {
     this.originid = originid;
   }
 
 
-  public AddMagnitudeRequestData magnitudes(List<ObjectMagnitude> magnitudes) {
+  public AddMagnitudeRequestData magnitudes(@javax.annotation.Nullable List<ObjectMagnitude> magnitudes) {
     this.magnitudes = magnitudes;
     return this;
   }
@@ -97,16 +98,16 @@ public class AddMagnitudeRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get magnitudes
    * @return magnitudes
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectMagnitude> getMagnitudes() {
     return magnitudes;
   }
 
-  public void setMagnitudes(List<ObjectMagnitude> magnitudes) {
+  public void setMagnitudes(@javax.annotation.Nullable List<ObjectMagnitude> magnitudes) {
     this.magnitudes = magnitudes;
   }
 
@@ -211,12 +212,12 @@ public class AddMagnitudeRequestData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddMagnitudeRequestData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddMagnitudeRequestData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddMagnitudeRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -312,22 +313,22 @@ public class AddMagnitudeRequestData {
     }
   }
 
- /**
-  * Create an instance of AddMagnitudeRequestData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddMagnitudeRequestData
-  * @throws IOException if the JSON string is invalid with respect to AddMagnitudeRequestData
-  */
+  /**
+   * Create an instance of AddMagnitudeRequestData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddMagnitudeRequestData
+   * @throws IOException if the JSON string is invalid with respect to AddMagnitudeRequestData
+   */
   public static AddMagnitudeRequestData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddMagnitudeRequestData.class);
   }
 
- /**
-  * Convert an instance of AddMagnitudeRequestData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddMagnitudeRequestData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

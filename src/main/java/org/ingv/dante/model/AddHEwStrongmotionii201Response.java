@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,30 +49,31 @@ import org.ingv.dante.JSON;
 /**
  * AddHEwStrongmotionii201Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddHEwStrongmotionii201Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
+  @javax.annotation.Nullable
   private AddHEwStrongmotionii201ResponseData data;
 
   public AddHEwStrongmotionii201Response() {
   }
 
-  public AddHEwStrongmotionii201Response data(AddHEwStrongmotionii201ResponseData data) {
+  public AddHEwStrongmotionii201Response data(@javax.annotation.Nullable AddHEwStrongmotionii201ResponseData data) {
     this.data = data;
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public AddHEwStrongmotionii201ResponseData getData() {
     return data;
   }
 
-  public void setData(AddHEwStrongmotionii201ResponseData data) {
+  public void setData(@javax.annotation.Nullable AddHEwStrongmotionii201ResponseData data) {
     this.data = data;
   }
 
@@ -175,12 +175,12 @@ public class AddHEwStrongmotionii201Response {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddHEwStrongmotionii201Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddHEwStrongmotionii201Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddHEwStrongmotionii201Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -266,22 +266,22 @@ public class AddHEwStrongmotionii201Response {
     }
   }
 
- /**
-  * Create an instance of AddHEwStrongmotionii201Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddHEwStrongmotionii201Response
-  * @throws IOException if the JSON string is invalid with respect to AddHEwStrongmotionii201Response
-  */
+  /**
+   * Create an instance of AddHEwStrongmotionii201Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddHEwStrongmotionii201Response
+   * @throws IOException if the JSON string is invalid with respect to AddHEwStrongmotionii201Response
+   */
   public static AddHEwStrongmotionii201Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddHEwStrongmotionii201Response.class);
   }
 
- /**
-  * Convert an instance of AddHEwStrongmotionii201Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddHEwStrongmotionii201Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

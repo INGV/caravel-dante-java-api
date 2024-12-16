@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,53 +49,55 @@ import org.ingv.dante.JSON;
 /**
  * AddMomenttensorRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddMomenttensorRequestData {
   public static final String SERIALIZED_NAME_FOCALMECHANISMID = "focalmechanismid";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMID)
+  @javax.annotation.Nullable
   private Long focalmechanismid;
 
   public static final String SERIALIZED_NAME_MOMENTTENSOR = "momenttensor";
   @SerializedName(SERIALIZED_NAME_MOMENTTENSOR)
+  @javax.annotation.Nullable
   private ObjectMomenttensor momenttensor;
 
   public AddMomenttensorRequestData() {
   }
 
-  public AddMomenttensorRequestData focalmechanismid(Long focalmechanismid) {
+  public AddMomenttensorRequestData focalmechanismid(@javax.annotation.Nullable Long focalmechanismid) {
     this.focalmechanismid = focalmechanismid;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return focalmechanismid
-  **/
+   */
   @javax.annotation.Nullable
   public Long getFocalmechanismid() {
     return focalmechanismid;
   }
 
-  public void setFocalmechanismid(Long focalmechanismid) {
+  public void setFocalmechanismid(@javax.annotation.Nullable Long focalmechanismid) {
     this.focalmechanismid = focalmechanismid;
   }
 
 
-  public AddMomenttensorRequestData momenttensor(ObjectMomenttensor momenttensor) {
+  public AddMomenttensorRequestData momenttensor(@javax.annotation.Nullable ObjectMomenttensor momenttensor) {
     this.momenttensor = momenttensor;
     return this;
   }
 
-   /**
+  /**
    * Get momenttensor
    * @return momenttensor
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectMomenttensor getMomenttensor() {
     return momenttensor;
   }
 
-  public void setMomenttensor(ObjectMomenttensor momenttensor) {
+  public void setMomenttensor(@javax.annotation.Nullable ObjectMomenttensor momenttensor) {
     this.momenttensor = momenttensor;
   }
 
@@ -201,12 +202,12 @@ public class AddMomenttensorRequestData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddMomenttensorRequestData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddMomenttensorRequestData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddMomenttensorRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -292,22 +293,22 @@ public class AddMomenttensorRequestData {
     }
   }
 
- /**
-  * Create an instance of AddMomenttensorRequestData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddMomenttensorRequestData
-  * @throws IOException if the JSON string is invalid with respect to AddMomenttensorRequestData
-  */
+  /**
+   * Create an instance of AddMomenttensorRequestData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddMomenttensorRequestData
+   * @throws IOException if the JSON string is invalid with respect to AddMomenttensorRequestData
+   */
   public static AddMomenttensorRequestData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddMomenttensorRequestData.class);
   }
 
- /**
-  * Convert an instance of AddMomenttensorRequestData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddMomenttensorRequestData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

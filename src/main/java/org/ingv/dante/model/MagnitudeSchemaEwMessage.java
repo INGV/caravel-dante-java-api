@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,361 +51,377 @@ import org.ingv.dante.JSON;
 /**
  * MagnitudeSchemaEwMessage
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class MagnitudeSchemaEwMessage {
   public static final String SERIALIZED_NAME_QUAKE_ID = "quakeId";
   @SerializedName(SERIALIZED_NAME_QUAKE_ID)
+  @javax.annotation.Nullable
   private Long quakeId;
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nonnull
   private String version;
 
   public static final String SERIALIZED_NAME_MAG = "mag";
   @SerializedName(SERIALIZED_NAME_MAG)
+  @javax.annotation.Nonnull
   private Double mag;
 
   public static final String SERIALIZED_NAME_ERROR = "error";
   @SerializedName(SERIALIZED_NAME_ERROR)
+  @javax.annotation.Nullable
   private Double error;
 
   public static final String SERIALIZED_NAME_QUALITY = "quality";
   @SerializedName(SERIALIZED_NAME_QUALITY)
+  @javax.annotation.Nullable
   private Double quality;
 
   public static final String SERIALIZED_NAME_MIN_DIST = "minDist";
   @SerializedName(SERIALIZED_NAME_MIN_DIST)
+  @javax.annotation.Nullable
   private Double minDist;
 
   public static final String SERIALIZED_NAME_AZIMUTH = "azimuth";
   @SerializedName(SERIALIZED_NAME_AZIMUTH)
+  @javax.annotation.Nullable
   private Float azimuth;
 
   public static final String SERIALIZED_NAME_N_STATIONS = "nStations";
   @SerializedName(SERIALIZED_NAME_N_STATIONS)
+  @javax.annotation.Nullable
   private Long nStations;
 
   public static final String SERIALIZED_NAME_N_CHANNELS = "nChannels";
   @SerializedName(SERIALIZED_NAME_N_CHANNELS)
+  @javax.annotation.Nullable
   private Long nChannels;
 
   public static final String SERIALIZED_NAME_Q_AUTHOR = "qAuthor";
   @SerializedName(SERIALIZED_NAME_Q_AUTHOR)
+  @javax.annotation.Nullable
   private String qAuthor;
 
   public static final String SERIALIZED_NAME_QDDS_VERSION = "qddsVersion";
   @SerializedName(SERIALIZED_NAME_QDDS_VERSION)
+  @javax.annotation.Nullable
   private Double qddsVersion;
 
   public static final String SERIALIZED_NAME_I_MAG_TYPE = "iMagType";
   @SerializedName(SERIALIZED_NAME_I_MAG_TYPE)
+  @javax.annotation.Nullable
   private Double iMagType;
 
   public static final String SERIALIZED_NAME_MAG_TYPE = "magType";
   @SerializedName(SERIALIZED_NAME_MAG_TYPE)
+  @javax.annotation.Nullable
   private String magType;
 
   public static final String SERIALIZED_NAME_ALGORITHM = "algorithm";
   @SerializedName(SERIALIZED_NAME_ALGORITHM)
+  @javax.annotation.Nullable
   private Double algorithm;
 
   public static final String SERIALIZED_NAME_INGV_QUALITY = "ingvQuality";
   @SerializedName(SERIALIZED_NAME_INGV_QUALITY)
+  @javax.annotation.Nullable
   private String ingvQuality;
 
   public static final String SERIALIZED_NAME_PHASES = "phases";
   @SerializedName(SERIALIZED_NAME_PHASES)
-  private List<MagnitudePhasesInner> phases;
+  @javax.annotation.Nullable
+  private List<MagnitudePhasesInner> phases = new ArrayList<>();
 
   public MagnitudeSchemaEwMessage() {
   }
 
-  public MagnitudeSchemaEwMessage quakeId(Long quakeId) {
+  public MagnitudeSchemaEwMessage quakeId(@javax.annotation.Nullable Long quakeId) {
     this.quakeId = quakeId;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return quakeId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getQuakeId() {
     return quakeId;
   }
 
-  public void setQuakeId(Long quakeId) {
+  public void setQuakeId(@javax.annotation.Nullable Long quakeId) {
     this.quakeId = quakeId;
   }
 
 
-  public MagnitudeSchemaEwMessage version(String version) {
+  public MagnitudeSchemaEwMessage version(@javax.annotation.Nonnull String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Localization name (es:ew prelim,XX,WW,..) | varchar(255)
    * @return version
-  **/
+   */
   @javax.annotation.Nonnull
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nonnull String version) {
     this.version = version;
   }
 
 
-  public MagnitudeSchemaEwMessage mag(Double mag) {
+  public MagnitudeSchemaEwMessage mag(@javax.annotation.Nonnull Double mag) {
     this.mag = mag;
     return this;
   }
 
-   /**
+  /**
    * Magnitude value | double
    * @return mag
-  **/
+   */
   @javax.annotation.Nonnull
   public Double getMag() {
     return mag;
   }
 
-  public void setMag(Double mag) {
+  public void setMag(@javax.annotation.Nonnull Double mag) {
     this.mag = mag;
   }
 
 
-  public MagnitudeSchemaEwMessage error(Double error) {
+  public MagnitudeSchemaEwMessage error(@javax.annotation.Nullable Double error) {
     this.error = error;
     return this;
   }
 
-   /**
+  /**
    * Magnitude error | double
    * @return error
-  **/
+   */
   @javax.annotation.Nullable
   public Double getError() {
     return error;
   }
 
-  public void setError(Double error) {
+  public void setError(@javax.annotation.Nullable Double error) {
     this.error = error;
   }
 
 
-  public MagnitudeSchemaEwMessage quality(Double quality) {
+  public MagnitudeSchemaEwMessage quality(@javax.annotation.Nullable Double quality) {
     this.quality = quality;
     return this;
   }
 
-   /**
+  /**
    * quality | double
    * @return quality
-  **/
+   */
   @javax.annotation.Nullable
   public Double getQuality() {
     return quality;
   }
 
-  public void setQuality(Double quality) {
+  public void setQuality(@javax.annotation.Nullable Double quality) {
     this.quality = quality;
   }
 
 
-  public MagnitudeSchemaEwMessage minDist(Double minDist) {
+  public MagnitudeSchemaEwMessage minDist(@javax.annotation.Nullable Double minDist) {
     this.minDist = minDist;
     return this;
   }
 
-   /**
+  /**
    * Minimal distance from station to origin | double
    * @return minDist
-  **/
+   */
   @javax.annotation.Nullable
   public Double getMinDist() {
     return minDist;
   }
 
-  public void setMinDist(Double minDist) {
+  public void setMinDist(@javax.annotation.Nullable Double minDist) {
     this.minDist = minDist;
   }
 
 
-  public MagnitudeSchemaEwMessage azimuth(Float azimuth) {
+  public MagnitudeSchemaEwMessage azimuth(@javax.annotation.Nullable Float azimuth) {
     this.azimuth = azimuth;
     return this;
   }
 
-   /**
+  /**
    * Azimutal gap | float4
    * @return azimuth
-  **/
+   */
   @javax.annotation.Nullable
   public Float getAzimuth() {
     return azimuth;
   }
 
-  public void setAzimuth(Float azimuth) {
+  public void setAzimuth(@javax.annotation.Nullable Float azimuth) {
     this.azimuth = azimuth;
   }
 
 
-  public MagnitudeSchemaEwMessage nStations(Long nStations) {
+  public MagnitudeSchemaEwMessage nStations(@javax.annotation.Nullable Long nStations) {
     this.nStations = nStations;
     return this;
   }
 
-   /**
+  /**
    * Number of the stations on magnitudo calculation | int(11)
    * @return nStations
-  **/
+   */
   @javax.annotation.Nullable
   public Long getnStations() {
     return nStations;
   }
 
-  public void setnStations(Long nStations) {
+  public void setnStations(@javax.annotation.Nullable Long nStations) {
     this.nStations = nStations;
   }
 
 
-  public MagnitudeSchemaEwMessage nChannels(Long nChannels) {
+  public MagnitudeSchemaEwMessage nChannels(@javax.annotation.Nullable Long nChannels) {
     this.nChannels = nChannels;
     return this;
   }
 
-   /**
+  /**
    * Number of the channel on magnitudo calculation | int(11)
    * @return nChannels
-  **/
+   */
   @javax.annotation.Nullable
   public Long getnChannels() {
     return nChannels;
   }
 
-  public void setnChannels(Long nChannels) {
+  public void setnChannels(@javax.annotation.Nullable Long nChannels) {
     this.nChannels = nChannels;
   }
 
 
-  public MagnitudeSchemaEwMessage qAuthor(String qAuthor) {
+  public MagnitudeSchemaEwMessage qAuthor(@javax.annotation.Nullable String qAuthor) {
     this.qAuthor = qAuthor;
     return this;
   }
 
-   /**
+  /**
    * qAuthor description
    * @return qAuthor
-  **/
+   */
   @javax.annotation.Nullable
   public String getqAuthor() {
     return qAuthor;
   }
 
-  public void setqAuthor(String qAuthor) {
+  public void setqAuthor(@javax.annotation.Nullable String qAuthor) {
     this.qAuthor = qAuthor;
   }
 
 
-  public MagnitudeSchemaEwMessage qddsVersion(Double qddsVersion) {
+  public MagnitudeSchemaEwMessage qddsVersion(@javax.annotation.Nullable Double qddsVersion) {
     this.qddsVersion = qddsVersion;
     return this;
   }
 
-   /**
+  /**
    * qddsVersion description
    * @return qddsVersion
-  **/
+   */
   @javax.annotation.Nullable
   public Double getQddsVersion() {
     return qddsVersion;
   }
 
-  public void setQddsVersion(Double qddsVersion) {
+  public void setQddsVersion(@javax.annotation.Nullable Double qddsVersion) {
     this.qddsVersion = qddsVersion;
   }
 
 
-  public MagnitudeSchemaEwMessage iMagType(Double iMagType) {
+  public MagnitudeSchemaEwMessage iMagType(@javax.annotation.Nullable Double iMagType) {
     this.iMagType = iMagType;
     return this;
   }
 
-   /**
+  /**
    * iMagType description
    * @return iMagType
-  **/
+   */
   @javax.annotation.Nullable
   public Double getiMagType() {
     return iMagType;
   }
 
-  public void setiMagType(Double iMagType) {
+  public void setiMagType(@javax.annotation.Nullable Double iMagType) {
     this.iMagType = iMagType;
   }
 
 
-  public MagnitudeSchemaEwMessage magType(String magType) {
+  public MagnitudeSchemaEwMessage magType(@javax.annotation.Nullable String magType) {
     this.magType = magType;
     return this;
   }
 
-   /**
+  /**
    * Type of the magnitude | varchar(255)
    * @return magType
-  **/
+   */
   @javax.annotation.Nullable
   public String getMagType() {
     return magType;
   }
 
-  public void setMagType(String magType) {
+  public void setMagType(@javax.annotation.Nullable String magType) {
     this.magType = magType;
   }
 
 
-  public MagnitudeSchemaEwMessage algorithm(Double algorithm) {
+  public MagnitudeSchemaEwMessage algorithm(@javax.annotation.Nullable Double algorithm) {
     this.algorithm = algorithm;
     return this;
   }
 
-   /**
+  /**
    * algorithm description
    * @return algorithm
-  **/
+   */
   @javax.annotation.Nullable
   public Double getAlgorithm() {
     return algorithm;
   }
 
-  public void setAlgorithm(Double algorithm) {
+  public void setAlgorithm(@javax.annotation.Nullable Double algorithm) {
     this.algorithm = algorithm;
   }
 
 
-  public MagnitudeSchemaEwMessage ingvQuality(String ingvQuality) {
+  public MagnitudeSchemaEwMessage ingvQuality(@javax.annotation.Nullable String ingvQuality) {
     this.ingvQuality = ingvQuality;
     return this;
   }
 
-   /**
+  /**
    * INGV quality code of the magnitude (computed by ew2moledb) | char(2)
    * @return ingvQuality
-  **/
+   */
   @javax.annotation.Nullable
   public String getIngvQuality() {
     return ingvQuality;
   }
 
-  public void setIngvQuality(String ingvQuality) {
+  public void setIngvQuality(@javax.annotation.Nullable String ingvQuality) {
     this.ingvQuality = ingvQuality;
   }
 
 
-  public MagnitudeSchemaEwMessage phases(List<MagnitudePhasesInner> phases) {
+  public MagnitudeSchemaEwMessage phases(@javax.annotation.Nullable List<MagnitudePhasesInner> phases) {
     this.phases = phases;
     return this;
   }
@@ -419,16 +434,16 @@ public class MagnitudeSchemaEwMessage {
     return this;
   }
 
-   /**
+  /**
    * Get phases
    * @return phases
-  **/
+   */
   @javax.annotation.Nullable
   public List<MagnitudePhasesInner> getPhases() {
     return phases;
   }
 
-  public void setPhases(List<MagnitudePhasesInner> phases) {
+  public void setPhases(@javax.annotation.Nullable List<MagnitudePhasesInner> phases) {
     this.phases = phases;
   }
 
@@ -578,12 +593,12 @@ public class MagnitudeSchemaEwMessage {
     openapiRequiredFields.add("mag");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to MagnitudeSchemaEwMessage
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to MagnitudeSchemaEwMessage
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!MagnitudeSchemaEwMessage.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -701,22 +716,22 @@ public class MagnitudeSchemaEwMessage {
     }
   }
 
- /**
-  * Create an instance of MagnitudeSchemaEwMessage given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of MagnitudeSchemaEwMessage
-  * @throws IOException if the JSON string is invalid with respect to MagnitudeSchemaEwMessage
-  */
+  /**
+   * Create an instance of MagnitudeSchemaEwMessage given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of MagnitudeSchemaEwMessage
+   * @throws IOException if the JSON string is invalid with respect to MagnitudeSchemaEwMessage
+   */
   public static MagnitudeSchemaEwMessage fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, MagnitudeSchemaEwMessage.class);
   }
 
- /**
-  * Convert an instance of MagnitudeSchemaEwMessage to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of MagnitudeSchemaEwMessage to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

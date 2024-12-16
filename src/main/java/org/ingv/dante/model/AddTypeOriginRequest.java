@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,38 +51,46 @@ import org.ingv.dante.JSON;
 /**
  * AddTypeOriginRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddTypeOriginRequest {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private TypeOriginName name = TypeOriginName.HYPOCENTER;
 
   public static final String SERIALIZED_NAME_VERSION_NAME = "version_name";
   @SerializedName(SERIALIZED_NAME_VERSION_NAME)
+  @javax.annotation.Nullable
   private String versionName;
 
   public static final String SERIALIZED_NAME_VERSION_VALUE = "version_value";
   @SerializedName(SERIALIZED_NAME_VERSION_VALUE)
+  @javax.annotation.Nullable
   private Long versionValue;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public static final String SERIALIZED_NAME_PRIORITY = "priority";
   @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @javax.annotation.Nullable
   private Long priority = 0l;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public AddTypeOriginRequest() {
@@ -100,10 +107,10 @@ public class AddTypeOriginRequest {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -111,105 +118,105 @@ public class AddTypeOriginRequest {
 
 
 
-  public AddTypeOriginRequest name(TypeOriginName name) {
+  public AddTypeOriginRequest name(@javax.annotation.Nonnull TypeOriginName name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
   public TypeOriginName getName() {
     return name;
   }
 
-  public void setName(TypeOriginName name) {
+  public void setName(@javax.annotation.Nonnull TypeOriginName name) {
     this.name = name;
   }
 
 
-  public AddTypeOriginRequest versionName(String versionName) {
+  public AddTypeOriginRequest versionName(@javax.annotation.Nullable String versionName) {
     this.versionName = versionName;
     return this;
   }
 
-   /**
+  /**
    * Localization name (es:ew prelim,XX,WW,..) | varchar(255)
    * @return versionName
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersionName() {
     return versionName;
   }
 
-  public void setVersionName(String versionName) {
+  public void setVersionName(@javax.annotation.Nullable String versionName) {
     this.versionName = versionName;
   }
 
 
-  public AddTypeOriginRequest versionValue(Long versionValue) {
+  public AddTypeOriginRequest versionValue(@javax.annotation.Nullable Long versionValue) {
     this.versionValue = versionValue;
     return this;
   }
 
-   /**
+  /**
    * Define a numeric value for type origin. &lt; 100 is automatic location | bigint(20)
    * @return versionValue
-  **/
+   */
   @javax.annotation.Nullable
   public Long getVersionValue() {
     return versionValue;
   }
 
-  public void setVersionValue(Long versionValue) {
+  public void setVersionValue(@javax.annotation.Nullable Long versionValue) {
     this.versionValue = versionValue;
   }
 
 
-  public AddTypeOriginRequest description(String description) {
+  public AddTypeOriginRequest description(@javax.annotation.Nullable String description) {
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * Additional information | char(255)
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
   }
 
-  public void setDescription(String description) {
+  public void setDescription(@javax.annotation.Nullable String description) {
     this.description = description;
   }
 
 
-  public AddTypeOriginRequest priority(Long priority) {
+  public AddTypeOriginRequest priority(@javax.annotation.Nullable Long priority) {
     this.priority = priority;
     return this;
   }
 
-   /**
+  /**
    * Priority | int(8)
    * @return priority
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPriority() {
     return priority;
   }
 
-  public void setPriority(Long priority) {
+  public void setPriority(@javax.annotation.Nullable Long priority) {
     this.priority = priority;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -217,10 +224,10 @@ public class AddTypeOriginRequest {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -358,12 +365,12 @@ public class AddTypeOriginRequest {
     openapiRequiredFields.add("name");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddTypeOriginRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddTypeOriginRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddTypeOriginRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -460,22 +467,22 @@ public class AddTypeOriginRequest {
     }
   }
 
- /**
-  * Create an instance of AddTypeOriginRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddTypeOriginRequest
-  * @throws IOException if the JSON string is invalid with respect to AddTypeOriginRequest
-  */
+  /**
+   * Create an instance of AddTypeOriginRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddTypeOriginRequest
+   * @throws IOException if the JSON string is invalid with respect to AddTypeOriginRequest
+   */
   public static AddTypeOriginRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddTypeOriginRequest.class);
   }
 
- /**
-  * Convert an instance of AddTypeOriginRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddTypeOriginRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

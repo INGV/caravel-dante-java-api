@@ -42,7 +42,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -54,62 +53,65 @@ import org.ingv.dante.JSON;
 /**
  * GetPick200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GetPick200Response {
   public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
+  @javax.annotation.Nullable
   private LinksDefinition links;
 
   public static final String SERIALIZED_NAME_META = "meta";
   @SerializedName(SERIALIZED_NAME_META)
+  @javax.annotation.Nullable
   private MetaDefinition meta;
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<ObjectPick> data;
+  @javax.annotation.Nullable
+  private List<ObjectPick> data = new ArrayList<>();
 
   public GetPick200Response() {
   }
 
-  public GetPick200Response links(LinksDefinition links) {
+  public GetPick200Response links(@javax.annotation.Nullable LinksDefinition links) {
     this.links = links;
     return this;
   }
 
-   /**
+  /**
    * Get links
    * @return links
-  **/
+   */
   @javax.annotation.Nullable
   public LinksDefinition getLinks() {
     return links;
   }
 
-  public void setLinks(LinksDefinition links) {
+  public void setLinks(@javax.annotation.Nullable LinksDefinition links) {
     this.links = links;
   }
 
 
-  public GetPick200Response meta(MetaDefinition meta) {
+  public GetPick200Response meta(@javax.annotation.Nullable MetaDefinition meta) {
     this.meta = meta;
     return this;
   }
 
-   /**
+  /**
    * Get meta
    * @return meta
-  **/
+   */
   @javax.annotation.Nullable
   public MetaDefinition getMeta() {
     return meta;
   }
 
-  public void setMeta(MetaDefinition meta) {
+  public void setMeta(@javax.annotation.Nullable MetaDefinition meta) {
     this.meta = meta;
   }
 
 
-  public GetPick200Response data(List<ObjectPick> data) {
+  public GetPick200Response data(@javax.annotation.Nullable List<ObjectPick> data) {
     this.data = data;
     return this;
   }
@@ -122,16 +124,16 @@ public class GetPick200Response {
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectPick> getData() {
     return data;
   }
 
-  public void setData(List<ObjectPick> data) {
+  public void setData(@javax.annotation.Nullable List<ObjectPick> data) {
     this.data = data;
   }
 
@@ -239,12 +241,12 @@ public class GetPick200Response {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GetPick200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetPick200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GetPick200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -348,22 +350,22 @@ public class GetPick200Response {
     }
   }
 
- /**
-  * Create an instance of GetPick200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetPick200Response
-  * @throws IOException if the JSON string is invalid with respect to GetPick200Response
-  */
+  /**
+   * Create an instance of GetPick200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetPick200Response
+   * @throws IOException if the JSON string is invalid with respect to GetPick200Response
+   */
   public static GetPick200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetPick200Response.class);
   }
 
- /**
-  * Convert an instance of GetPick200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetPick200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

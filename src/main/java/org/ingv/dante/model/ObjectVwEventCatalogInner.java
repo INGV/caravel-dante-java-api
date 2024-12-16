@@ -43,7 +43,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -55,78 +54,96 @@ import org.ingv.dante.JSON;
 /**
  * ObjectVwEventCatalogInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectVwEventCatalogInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  @javax.annotation.Nullable
   private Long eventGroupId = 0l;
 
   public static final String SERIALIZED_NAME_PREFERRED_ORIGIN_ID = "preferred_origin_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_ORIGIN_ID)
+  @javax.annotation.Nullable
   private Long preferredOriginId;
 
   public static final String SERIALIZED_NAME_PREFERRED_MAGNITUDE_ID = "preferred_magnitude_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_MAGNITUDE_ID)
+  @javax.annotation.Nullable
   private Long preferredMagnitudeId;
 
   public static final String SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID = "preferred_focalmechanism_id";
   @SerializedName(SERIALIZED_NAME_PREFERRED_FOCALMECHANISM_ID)
+  @javax.annotation.Nullable
   private Long preferredFocalmechanismId;
 
   public static final String SERIALIZED_NAME_FLAGS = "flags";
   @SerializedName(SERIALIZED_NAME_FLAGS)
+  @javax.annotation.Nullable
   private String flags;
 
   public static final String SERIALIZED_NAME_TYPE_GROUP = "type_group";
   @SerializedName(SERIALIZED_NAME_TYPE_GROUP)
+  @javax.annotation.Nullable
   private Long typeGroup = 0l;
 
   public static final String SERIALIZED_NAME_TYPE_EVENT = "type_event";
   @SerializedName(SERIALIZED_NAME_TYPE_EVENT)
+  @javax.annotation.Nullable
   private String typeEvent;
 
   public static final String SERIALIZED_NAME_ORIGINDIRECTLINKTOEVENT = "origindirectlinktoevent";
   @SerializedName(SERIALIZED_NAME_ORIGINDIRECTLINKTOEVENT)
+  @javax.annotation.Nullable
   private Boolean origindirectlinktoevent = false;
 
   public static final String SERIALIZED_NAME_MAGNITUDEDIRECTLINKTOORIGIN = "magnitudedirectlinktoorigin";
   @SerializedName(SERIALIZED_NAME_MAGNITUDEDIRECTLINKTOORIGIN)
+  @javax.annotation.Nullable
   private Boolean magnitudedirectlinktoorigin = false;
 
   public static final String SERIALIZED_NAME_MAGNITUDEDIRECTLINKTOEVENT = "magnitudedirectlinktoevent";
   @SerializedName(SERIALIZED_NAME_MAGNITUDEDIRECTLINKTOEVENT)
+  @javax.annotation.Nullable
   private Boolean magnitudedirectlinktoevent = false;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspaceForVwWithDOI localspace;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance;
 
   public static final String SERIALIZED_NAME_ORIGIN = "origin";
   @SerializedName(SERIALIZED_NAME_ORIGIN)
+  @javax.annotation.Nullable
   private ObjectOriginForMagnitudesOriginsEventsAndEventsGroup origin;
 
   public static final String SERIALIZED_NAME_MAGNITUDE = "magnitude";
   @SerializedName(SERIALIZED_NAME_MAGNITUDE)
+  @javax.annotation.Nullable
   private ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup magnitude;
 
   public ObjectVwEventCatalogInner() {
@@ -153,48 +170,48 @@ public class ObjectVwEventCatalogInner {
     this.inserted = inserted;
   }
 
-  public ObjectVwEventCatalogInner id(Long id) {
+  public ObjectVwEventCatalogInner id(@javax.annotation.Nullable Long id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(@javax.annotation.Nullable Long id) {
     this.id = id;
   }
 
 
-  public ObjectVwEventCatalogInner idLocalspace(Long idLocalspace) {
+  public ObjectVwEventCatalogInner idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-   /**
+  /**
    * Link event group | bigint(20)
    * @return eventGroupId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getEventGroupId() {
     return eventGroupId;
@@ -202,10 +219,10 @@ public class ObjectVwEventCatalogInner {
 
 
 
-   /**
+  /**
    * Link: preferred origin. It can be NULL. | bigint(20)
    * @return preferredOriginId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPreferredOriginId() {
     return preferredOriginId;
@@ -213,10 +230,10 @@ public class ObjectVwEventCatalogInner {
 
 
 
-   /**
+  /**
    * Link: preferred magnitude. It can be NULL. | bigint(20)
    * @return preferredMagnitudeId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPreferredMagnitudeId() {
     return preferredMagnitudeId;
@@ -224,10 +241,10 @@ public class ObjectVwEventCatalogInner {
 
 
 
-   /**
+  /**
    * Link: preferred focalmechanism. It can be NULL. | bigint(20)
    * @return preferredFocalmechanismId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPreferredFocalmechanismId() {
     return preferredFocalmechanismId;
@@ -235,10 +252,10 @@ public class ObjectVwEventCatalogInner {
 
 
 
-   /**
+  /**
    * Flags for origin | varchar(255)
    * @return flags
-  **/
+   */
   @javax.annotation.Nullable
   public String getFlags() {
     return flags;
@@ -246,10 +263,10 @@ public class ObjectVwEventCatalogInner {
 
 
 
-   /**
+  /**
    * Group type. Used by clustering algorithm | tinyint(4)
    * @return typeGroup
-  **/
+   */
   @javax.annotation.Nullable
   public Long getTypeGroup() {
     return typeGroup;
@@ -257,86 +274,86 @@ public class ObjectVwEventCatalogInner {
 
 
 
-  public ObjectVwEventCatalogInner typeEvent(String typeEvent) {
+  public ObjectVwEventCatalogInner typeEvent(@javax.annotation.Nullable String typeEvent) {
     this.typeEvent = typeEvent;
     return this;
   }
 
-   /**
+  /**
    * Name | varchar(255)
    * @return typeEvent
-  **/
+   */
   @javax.annotation.Nullable
   public String getTypeEvent() {
     return typeEvent;
   }
 
-  public void setTypeEvent(String typeEvent) {
+  public void setTypeEvent(@javax.annotation.Nullable String typeEvent) {
     this.typeEvent = typeEvent;
   }
 
 
-  public ObjectVwEventCatalogInner origindirectlinktoevent(Boolean origindirectlinktoevent) {
+  public ObjectVwEventCatalogInner origindirectlinktoevent(@javax.annotation.Nullable Boolean origindirectlinktoevent) {
     this.origindirectlinktoevent = origindirectlinktoevent;
     return this;
   }
 
-   /**
+  /**
    * Origin entity is directly linked to Event entity (origin.fk_event&#x3D;event.id)
    * @return origindirectlinktoevent
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getOrigindirectlinktoevent() {
     return origindirectlinktoevent;
   }
 
-  public void setOrigindirectlinktoevent(Boolean origindirectlinktoevent) {
+  public void setOrigindirectlinktoevent(@javax.annotation.Nullable Boolean origindirectlinktoevent) {
     this.origindirectlinktoevent = origindirectlinktoevent;
   }
 
 
-  public ObjectVwEventCatalogInner magnitudedirectlinktoorigin(Boolean magnitudedirectlinktoorigin) {
+  public ObjectVwEventCatalogInner magnitudedirectlinktoorigin(@javax.annotation.Nullable Boolean magnitudedirectlinktoorigin) {
     this.magnitudedirectlinktoorigin = magnitudedirectlinktoorigin;
     return this;
   }
 
-   /**
+  /**
    * Magnitude entity is directly linked to Origin entity (magnitude.fk_origin&#x3D;origin.id)
    * @return magnitudedirectlinktoorigin
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getMagnitudedirectlinktoorigin() {
     return magnitudedirectlinktoorigin;
   }
 
-  public void setMagnitudedirectlinktoorigin(Boolean magnitudedirectlinktoorigin) {
+  public void setMagnitudedirectlinktoorigin(@javax.annotation.Nullable Boolean magnitudedirectlinktoorigin) {
     this.magnitudedirectlinktoorigin = magnitudedirectlinktoorigin;
   }
 
 
-  public ObjectVwEventCatalogInner magnitudedirectlinktoevent(Boolean magnitudedirectlinktoevent) {
+  public ObjectVwEventCatalogInner magnitudedirectlinktoevent(@javax.annotation.Nullable Boolean magnitudedirectlinktoevent) {
     this.magnitudedirectlinktoevent = magnitudedirectlinktoevent;
     return this;
   }
 
-   /**
+  /**
    * Magnitude entity is directly linked to Event entity (magnitude.fk_origin&#x3D;origin.id -&gt; origin.fk_event&#x3D;event.id)
    * @return magnitudedirectlinktoevent
-  **/
+   */
   @javax.annotation.Nullable
   public Boolean getMagnitudedirectlinktoevent() {
     return magnitudedirectlinktoevent;
   }
 
-  public void setMagnitudedirectlinktoevent(Boolean magnitudedirectlinktoevent) {
+  public void setMagnitudedirectlinktoevent(@javax.annotation.Nullable Boolean magnitudedirectlinktoevent) {
     this.magnitudedirectlinktoevent = magnitudedirectlinktoevent;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -344,10 +361,10 @@ public class ObjectVwEventCatalogInner {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -355,78 +372,78 @@ public class ObjectVwEventCatalogInner {
 
 
 
-  public ObjectVwEventCatalogInner localspace(ObjectLocalspaceForVwWithDOI localspace) {
+  public ObjectVwEventCatalogInner localspace(@javax.annotation.Nullable ObjectLocalspaceForVwWithDOI localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectLocalspaceForVwWithDOI getLocalspace() {
     return localspace;
   }
 
-  public void setLocalspace(ObjectLocalspaceForVwWithDOI localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspaceForVwWithDOI localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectVwEventCatalogInner provenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
+  public ObjectVwEventCatalogInner provenance(@javax.annotation.Nullable ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup getProvenance() {
     return provenance;
   }
 
-  public void setProvenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     this.provenance = provenance;
   }
 
 
-  public ObjectVwEventCatalogInner origin(ObjectOriginForMagnitudesOriginsEventsAndEventsGroup origin) {
+  public ObjectVwEventCatalogInner origin(@javax.annotation.Nullable ObjectOriginForMagnitudesOriginsEventsAndEventsGroup origin) {
     this.origin = origin;
     return this;
   }
 
-   /**
+  /**
    * Get origin
    * @return origin
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup getOrigin() {
     return origin;
   }
 
-  public void setOrigin(ObjectOriginForMagnitudesOriginsEventsAndEventsGroup origin) {
+  public void setOrigin(@javax.annotation.Nullable ObjectOriginForMagnitudesOriginsEventsAndEventsGroup origin) {
     this.origin = origin;
   }
 
 
-  public ObjectVwEventCatalogInner magnitude(ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup magnitude) {
+  public ObjectVwEventCatalogInner magnitude(@javax.annotation.Nullable ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup magnitude) {
     this.magnitude = magnitude;
     return this;
   }
 
-   /**
+  /**
    * Get magnitude
    * @return magnitude
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup getMagnitude() {
     return magnitude;
   }
 
-  public void setMagnitude(ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup magnitude) {
+  public void setMagnitude(@javax.annotation.Nullable ObjectMagnitudeForMagnitudesOriginsEventsAndEventsGroup magnitude) {
     this.magnitude = magnitude;
   }
 
@@ -590,12 +607,12 @@ public class ObjectVwEventCatalogInner {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectVwEventCatalogInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectVwEventCatalogInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectVwEventCatalogInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -699,22 +716,22 @@ public class ObjectVwEventCatalogInner {
     }
   }
 
- /**
-  * Create an instance of ObjectVwEventCatalogInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectVwEventCatalogInner
-  * @throws IOException if the JSON string is invalid with respect to ObjectVwEventCatalogInner
-  */
+  /**
+   * Create an instance of ObjectVwEventCatalogInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectVwEventCatalogInner
+   * @throws IOException if the JSON string is invalid with respect to ObjectVwEventCatalogInner
+   */
   public static ObjectVwEventCatalogInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectVwEventCatalogInner.class);
   }
 
- /**
-  * Convert an instance of ObjectVwEventCatalogInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectVwEventCatalogInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

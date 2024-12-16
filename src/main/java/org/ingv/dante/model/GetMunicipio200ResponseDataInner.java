@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,172 +48,179 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipio200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GetMunicipio200ResponseDataInner {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name;
 
   public static final String SERIALIZED_NAME_PROV_NAME_ABBR = "prov_name_abbr";
   @SerializedName(SERIALIZED_NAME_PROV_NAME_ABBR)
+  @javax.annotation.Nullable
   private String provNameAbbr;
 
   public static final String SERIALIZED_NAME_PROV_NAME = "prov_name";
   @SerializedName(SERIALIZED_NAME_PROV_NAME)
+  @javax.annotation.Nullable
   private String provName;
 
   public static final String SERIALIZED_NAME_REGION_NAME = "region_name";
   @SerializedName(SERIALIZED_NAME_REGION_NAME)
+  @javax.annotation.Nullable
   private String regionName;
 
   public static final String SERIALIZED_NAME_POPULATION = "population";
   @SerializedName(SERIALIZED_NAME_POPULATION)
+  @javax.annotation.Nullable
   private Long population;
 
   public static final String SERIALIZED_NAME_LAT = "lat";
   @SerializedName(SERIALIZED_NAME_LAT)
+  @javax.annotation.Nullable
   private Double lat;
 
   public static final String SERIALIZED_NAME_LON = "lon";
   @SerializedName(SERIALIZED_NAME_LON)
+  @javax.annotation.Nullable
   private Double lon;
 
   public GetMunicipio200ResponseDataInner() {
   }
 
-  public GetMunicipio200ResponseDataInner name(String name) {
+  public GetMunicipio200ResponseDataInner name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Italian \&quot;municipio\&quot; name.
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public GetMunicipio200ResponseDataInner provNameAbbr(String provNameAbbr) {
+  public GetMunicipio200ResponseDataInner provNameAbbr(@javax.annotation.Nullable String provNameAbbr) {
     this.provNameAbbr = provNameAbbr;
     return this;
   }
 
-   /**
+  /**
    * Italian province abbreviation.
    * @return provNameAbbr
-  **/
+   */
   @javax.annotation.Nullable
   public String getProvNameAbbr() {
     return provNameAbbr;
   }
 
-  public void setProvNameAbbr(String provNameAbbr) {
+  public void setProvNameAbbr(@javax.annotation.Nullable String provNameAbbr) {
     this.provNameAbbr = provNameAbbr;
   }
 
 
-  public GetMunicipio200ResponseDataInner provName(String provName) {
+  public GetMunicipio200ResponseDataInner provName(@javax.annotation.Nullable String provName) {
     this.provName = provName;
     return this;
   }
 
-   /**
+  /**
    * Italian province name.
    * @return provName
-  **/
+   */
   @javax.annotation.Nullable
   public String getProvName() {
     return provName;
   }
 
-  public void setProvName(String provName) {
+  public void setProvName(@javax.annotation.Nullable String provName) {
     this.provName = provName;
   }
 
 
-  public GetMunicipio200ResponseDataInner regionName(String regionName) {
+  public GetMunicipio200ResponseDataInner regionName(@javax.annotation.Nullable String regionName) {
     this.regionName = regionName;
     return this;
   }
 
-   /**
+  /**
    * Italian region name.
    * @return regionName
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegionName() {
     return regionName;
   }
 
-  public void setRegionName(String regionName) {
+  public void setRegionName(@javax.annotation.Nullable String regionName) {
     this.regionName = regionName;
   }
 
 
-  public GetMunicipio200ResponseDataInner population(Long population) {
+  public GetMunicipio200ResponseDataInner population(@javax.annotation.Nullable Long population) {
     this.population = population;
     return this;
   }
 
-   /**
+  /**
    * Popolazione.
    * @return population
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPopulation() {
     return population;
   }
 
-  public void setPopulation(Long population) {
+  public void setPopulation(@javax.annotation.Nullable Long population) {
     this.population = population;
   }
 
 
-  public GetMunicipio200ResponseDataInner lat(Double lat) {
+  public GetMunicipio200ResponseDataInner lat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
     return this;
   }
 
-   /**
+  /**
    * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -90
    * maximum: 90
    * @return lat
-  **/
+   */
   @javax.annotation.Nullable
   public Double getLat() {
     return lat;
   }
 
-  public void setLat(Double lat) {
+  public void setLat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
   }
 
 
-  public GetMunicipio200ResponseDataInner lon(Double lon) {
+  public GetMunicipio200ResponseDataInner lon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
     return this;
   }
 
-   /**
+  /**
    * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -180
    * maximum: 180
    * @return lon
-  **/
+   */
   @javax.annotation.Nullable
   public Double getLon() {
     return lon;
   }
 
-  public void setLon(Double lon) {
+  public void setLon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
   }
 
@@ -334,12 +340,12 @@ public class GetMunicipio200ResponseDataInner {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GetMunicipio200ResponseDataInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetMunicipio200ResponseDataInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GetMunicipio200ResponseDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -433,22 +439,22 @@ public class GetMunicipio200ResponseDataInner {
     }
   }
 
- /**
-  * Create an instance of GetMunicipio200ResponseDataInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetMunicipio200ResponseDataInner
-  * @throws IOException if the JSON string is invalid with respect to GetMunicipio200ResponseDataInner
-  */
+  /**
+   * Create an instance of GetMunicipio200ResponseDataInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetMunicipio200ResponseDataInner
+   * @throws IOException if the JSON string is invalid with respect to GetMunicipio200ResponseDataInner
+   */
   public static GetMunicipio200ResponseDataInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetMunicipio200ResponseDataInner.class);
   }
 
- /**
-  * Convert an instance of GetMunicipio200ResponseDataInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetMunicipio200ResponseDataInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

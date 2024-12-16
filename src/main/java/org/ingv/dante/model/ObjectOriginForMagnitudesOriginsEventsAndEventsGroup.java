@@ -42,7 +42,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -54,102 +53,126 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_OT = "ot";
   @SerializedName(SERIALIZED_NAME_OT)
+  @javax.annotation.Nullable
   private OffsetDateTime ot;
 
   public static final String SERIALIZED_NAME_LAT = "lat";
   @SerializedName(SERIALIZED_NAME_LAT)
+  @javax.annotation.Nullable
   private Double lat;
 
   public static final String SERIALIZED_NAME_LON = "lon";
   @SerializedName(SERIALIZED_NAME_LON)
+  @javax.annotation.Nullable
   private Double lon;
 
   public static final String SERIALIZED_NAME_DEPTH = "depth";
   @SerializedName(SERIALIZED_NAME_DEPTH)
+  @javax.annotation.Nullable
   private Double depth;
 
   public static final String SERIALIZED_NAME_ERR_OT = "err_ot";
   @SerializedName(SERIALIZED_NAME_ERR_OT)
+  @javax.annotation.Nullable
   private Double errOt;
 
   public static final String SERIALIZED_NAME_ERR_H = "err_h";
   @SerializedName(SERIALIZED_NAME_ERR_H)
+  @javax.annotation.Nullable
   private Double errH;
 
   public static final String SERIALIZED_NAME_ERR_Z = "err_z";
   @SerializedName(SERIALIZED_NAME_ERR_Z)
+  @javax.annotation.Nullable
   private Double errZ;
 
   public static final String SERIALIZED_NAME_ERR_LAT = "err_lat";
   @SerializedName(SERIALIZED_NAME_ERR_LAT)
+  @javax.annotation.Nullable
   private Double errLat;
 
   public static final String SERIALIZED_NAME_ERR_LON = "err_lon";
   @SerializedName(SERIALIZED_NAME_ERR_LON)
+  @javax.annotation.Nullable
   private Double errLon;
 
   public static final String SERIALIZED_NAME_MIN_DISTANCE = "min_distance";
   @SerializedName(SERIALIZED_NAME_MIN_DISTANCE)
+  @javax.annotation.Nullable
   private Double minDistance;
 
   public static final String SERIALIZED_NAME_NPH_TOT = "nph_tot";
   @SerializedName(SERIALIZED_NAME_NPH_TOT)
+  @javax.annotation.Nullable
   private Long nphTot;
 
   public static final String SERIALIZED_NAME_QUALITY = "quality";
   @SerializedName(SERIALIZED_NAME_QUALITY)
+  @javax.annotation.Nullable
   private String quality;
 
   public static final String SERIALIZED_NAME_ASSOCIATED_PHASE_COUNT = "associatedPhaseCount";
   @SerializedName(SERIALIZED_NAME_ASSOCIATED_PHASE_COUNT)
+  @javax.annotation.Nullable
   private Long associatedPhaseCount;
 
   public static final String SERIALIZED_NAME_ASSOCIATED_STATION_COUNT = "associatedStationCount";
   @SerializedName(SERIALIZED_NAME_ASSOCIATED_STATION_COUNT)
+  @javax.annotation.Nullable
   private Long associatedStationCount;
 
   public static final String SERIALIZED_NAME_USED_PHASE_COUNT = "usedPhaseCount";
   @SerializedName(SERIALIZED_NAME_USED_PHASE_COUNT)
+  @javax.annotation.Nullable
   private Long usedPhaseCount;
 
   public static final String SERIALIZED_NAME_USED_STATION_COUNT = "usedStationCount";
   @SerializedName(SERIALIZED_NAME_USED_STATION_COUNT)
+  @javax.annotation.Nullable
   private Long usedStationCount;
 
   public static final String SERIALIZED_NAME_REGION = "region";
   @SerializedName(SERIALIZED_NAME_REGION)
+  @javax.annotation.Nullable
   private String region;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_TYPE_ORIGIN = "type_origin";
   @SerializedName(SERIALIZED_NAME_TYPE_ORIGIN)
+  @javax.annotation.Nullable
   private ObjectTypeOriginForVw typeOrigin;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspaceForVw localspace;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance;
 
   public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup() {
@@ -164,375 +187,375 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     this.inserted = inserted;
   }
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup id(Long id) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup id(@javax.annotation.Nullable Long id) {
     this.id = id;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(@javax.annotation.Nullable Long id) {
     this.id = id;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup idLocalspace(Long idLocalspace) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup ot(OffsetDateTime ot) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup ot(@javax.annotation.Nullable OffsetDateTime ot) {
     this.ot = ot;
     return this;
   }
 
-   /**
+  /**
    * Origin time | datetime(3)
    * @return ot
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getOt() {
     return ot;
   }
 
-  public void setOt(OffsetDateTime ot) {
+  public void setOt(@javax.annotation.Nullable OffsetDateTime ot) {
     this.ot = ot;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup lat(Double lat) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup lat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
     return this;
   }
 
-   /**
+  /**
    * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -90
    * maximum: 90
    * @return lat
-  **/
+   */
   @javax.annotation.Nullable
   public Double getLat() {
     return lat;
   }
 
-  public void setLat(Double lat) {
+  public void setLat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup lon(Double lon) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup lon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
     return this;
   }
 
-   /**
+  /**
    * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -180
    * maximum: 180
    * @return lon
-  **/
+   */
   @javax.annotation.Nullable
   public Double getLon() {
     return lon;
   }
 
-  public void setLon(Double lon) {
+  public void setLon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup depth(Double depth) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup depth(@javax.annotation.Nullable Double depth) {
     this.depth = depth;
     return this;
   }
 
-   /**
+  /**
    * Depth in Km | double
    * @return depth
-  **/
+   */
   @javax.annotation.Nullable
   public Double getDepth() {
     return depth;
   }
 
-  public void setDepth(Double depth) {
+  public void setDepth(@javax.annotation.Nullable Double depth) {
     this.depth = depth;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errOt(Double errOt) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errOt(@javax.annotation.Nullable Double errOt) {
     this.errOt = errOt;
     return this;
   }
 
-   /**
+  /**
    * Origin time error | double
    * @return errOt
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrOt() {
     return errOt;
   }
 
-  public void setErrOt(Double errOt) {
+  public void setErrOt(@javax.annotation.Nullable Double errOt) {
     this.errOt = errOt;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errH(Double errH) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errH(@javax.annotation.Nullable Double errH) {
     this.errH = errH;
     return this;
   }
 
-   /**
+  /**
    * Horizontal error (km) | double
    * @return errH
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrH() {
     return errH;
   }
 
-  public void setErrH(Double errH) {
+  public void setErrH(@javax.annotation.Nullable Double errH) {
     this.errH = errH;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errZ(Double errZ) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errZ(@javax.annotation.Nullable Double errZ) {
     this.errZ = errZ;
     return this;
   }
 
-   /**
+  /**
    * Depth error (km) | double
    * @return errZ
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrZ() {
     return errZ;
   }
 
-  public void setErrZ(Double errZ) {
+  public void setErrZ(@javax.annotation.Nullable Double errZ) {
     this.errZ = errZ;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errLat(Double errLat) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errLat(@javax.annotation.Nullable Double errLat) {
     this.errLat = errLat;
     return this;
   }
 
-   /**
+  /**
    * Latitude error (km) | double
    * @return errLat
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrLat() {
     return errLat;
   }
 
-  public void setErrLat(Double errLat) {
+  public void setErrLat(@javax.annotation.Nullable Double errLat) {
     this.errLat = errLat;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errLon(Double errLon) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup errLon(@javax.annotation.Nullable Double errLon) {
     this.errLon = errLon;
     return this;
   }
 
-   /**
+  /**
    * Longitude error (km) | double
    * @return errLon
-  **/
+   */
   @javax.annotation.Nullable
   public Double getErrLon() {
     return errLon;
   }
 
-  public void setErrLon(Double errLon) {
+  public void setErrLon(@javax.annotation.Nullable Double errLon) {
     this.errLon = errLon;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup minDistance(Double minDistance) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup minDistance(@javax.annotation.Nullable Double minDistance) {
     this.minDistance = minDistance;
     return this;
   }
 
-   /**
+  /**
    * Distance from the closest station (km) | double
    * @return minDistance
-  **/
+   */
   @javax.annotation.Nullable
   public Double getMinDistance() {
     return minDistance;
   }
 
-  public void setMinDistance(Double minDistance) {
+  public void setMinDistance(@javax.annotation.Nullable Double minDistance) {
     this.minDistance = minDistance;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup nphTot(Long nphTot) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup nphTot(@javax.annotation.Nullable Long nphTot) {
     this.nphTot = nphTot;
     return this;
   }
 
-   /**
+  /**
    * # arrivals (P&amp;S) weight &gt;0.0 | int(11)
    * @return nphTot
-  **/
+   */
   @javax.annotation.Nullable
   public Long getNphTot() {
     return nphTot;
   }
 
-  public void setNphTot(Long nphTot) {
+  public void setNphTot(@javax.annotation.Nullable Long nphTot) {
     this.nphTot = nphTot;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup quality(String quality) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup quality(@javax.annotation.Nullable String quality) {
     this.quality = quality;
     return this;
   }
 
-   /**
+  /**
    * Quality of the localization | char(2)
    * @return quality
-  **/
+   */
   @javax.annotation.Nullable
   public String getQuality() {
     return quality;
   }
 
-  public void setQuality(String quality) {
+  public void setQuality(@javax.annotation.Nullable String quality) {
     this.quality = quality;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup associatedPhaseCount(Long associatedPhaseCount) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup associatedPhaseCount(@javax.annotation.Nullable Long associatedPhaseCount) {
     this.associatedPhaseCount = associatedPhaseCount;
     return this;
   }
 
-   /**
+  /**
    * Number of associated phases, regardless of their use for origin computation | int(8)&#39;
    * @return associatedPhaseCount
-  **/
+   */
   @javax.annotation.Nullable
   public Long getAssociatedPhaseCount() {
     return associatedPhaseCount;
   }
 
-  public void setAssociatedPhaseCount(Long associatedPhaseCount) {
+  public void setAssociatedPhaseCount(@javax.annotation.Nullable Long associatedPhaseCount) {
     this.associatedPhaseCount = associatedPhaseCount;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup associatedStationCount(Long associatedStationCount) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup associatedStationCount(@javax.annotation.Nullable Long associatedStationCount) {
     this.associatedStationCount = associatedStationCount;
     return this;
   }
 
-   /**
+  /**
    * Number of stations at which the event was observed | int(8)&#39;
    * @return associatedStationCount
-  **/
+   */
   @javax.annotation.Nullable
   public Long getAssociatedStationCount() {
     return associatedStationCount;
   }
 
-  public void setAssociatedStationCount(Long associatedStationCount) {
+  public void setAssociatedStationCount(@javax.annotation.Nullable Long associatedStationCount) {
     this.associatedStationCount = associatedStationCount;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup usedPhaseCount(Long usedPhaseCount) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup usedPhaseCount(@javax.annotation.Nullable Long usedPhaseCount) {
     this.usedPhaseCount = usedPhaseCount;
     return this;
   }
 
-   /**
+  /**
    * Number of defining phases, i.e., phase observations that were actually used for computing the origin | int(8)&#39;
    * @return usedPhaseCount
-  **/
+   */
   @javax.annotation.Nullable
   public Long getUsedPhaseCount() {
     return usedPhaseCount;
   }
 
-  public void setUsedPhaseCount(Long usedPhaseCount) {
+  public void setUsedPhaseCount(@javax.annotation.Nullable Long usedPhaseCount) {
     this.usedPhaseCount = usedPhaseCount;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup usedStationCount(Long usedStationCount) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup usedStationCount(@javax.annotation.Nullable Long usedStationCount) {
     this.usedStationCount = usedStationCount;
     return this;
   }
 
-   /**
+  /**
    * Number of stations from which data was used for origin computation | int(8)&#39;
    * @return usedStationCount
-  **/
+   */
   @javax.annotation.Nullable
   public Long getUsedStationCount() {
     return usedStationCount;
   }
 
-  public void setUsedStationCount(Long usedStationCount) {
+  public void setUsedStationCount(@javax.annotation.Nullable Long usedStationCount) {
     this.usedStationCount = usedStationCount;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup region(String region) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup region(@javax.annotation.Nullable String region) {
     this.region = region;
     return this;
   }
 
-   /**
+  /**
    * Event location remark region | varchar(255)
    * @return region
-  **/
+   */
   @javax.annotation.Nullable
   public String getRegion() {
     return region;
   }
 
-  public void setRegion(String region) {
+  public void setRegion(@javax.annotation.Nullable String region) {
     this.region = region;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -540,10 +563,10 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -551,59 +574,59 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup typeOrigin(ObjectTypeOriginForVw typeOrigin) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup typeOrigin(@javax.annotation.Nullable ObjectTypeOriginForVw typeOrigin) {
     this.typeOrigin = typeOrigin;
     return this;
   }
 
-   /**
+  /**
    * Get typeOrigin
    * @return typeOrigin
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectTypeOriginForVw getTypeOrigin() {
     return typeOrigin;
   }
 
-  public void setTypeOrigin(ObjectTypeOriginForVw typeOrigin) {
+  public void setTypeOrigin(@javax.annotation.Nullable ObjectTypeOriginForVw typeOrigin) {
     this.typeOrigin = typeOrigin;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup localspace(ObjectLocalspaceForVw localspace) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup localspace(@javax.annotation.Nullable ObjectLocalspaceForVw localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectLocalspaceForVw getLocalspace() {
     return localspace;
   }
 
-  public void setLocalspace(ObjectLocalspaceForVw localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspaceForVw localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup provenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup provenance(@javax.annotation.Nullable ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup getProvenance() {
     return provenance;
   }
 
-  public void setProvenance(ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup provenance) {
     this.provenance = provenance;
   }
 
@@ -785,12 +808,12 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -890,22 +913,22 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
     }
   }
 
- /**
-  * Create an instance of ObjectOriginForMagnitudesOriginsEventsAndEventsGroup given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
-  * @throws IOException if the JSON string is invalid with respect to ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
-  */
+  /**
+   * Create an instance of ObjectOriginForMagnitudesOriginsEventsAndEventsGroup given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
+   * @throws IOException if the JSON string is invalid with respect to ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
+   */
   public static ObjectOriginForMagnitudesOriginsEventsAndEventsGroup fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectOriginForMagnitudesOriginsEventsAndEventsGroup.class);
   }
 
- /**
-  * Convert an instance of ObjectOriginForMagnitudesOriginsEventsAndEventsGroup to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectOriginForMagnitudesOriginsEventsAndEventsGroup to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

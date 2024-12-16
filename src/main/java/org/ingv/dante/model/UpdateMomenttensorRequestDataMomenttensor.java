@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,53 +48,55 @@ import org.ingv.dante.JSON;
 /**
  * UpdateMomenttensorRequestDataMomenttensor
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class UpdateMomenttensorRequestDataMomenttensor {
   public static final String SERIALIZED_NAME_ORIGINID_OUT = "originid_out";
   @SerializedName(SERIALIZED_NAME_ORIGINID_OUT)
+  @javax.annotation.Nullable
   private Long originidOut;
 
   public static final String SERIALIZED_NAME_MAGNITUDEID_OUT = "magnitudeid_out";
   @SerializedName(SERIALIZED_NAME_MAGNITUDEID_OUT)
+  @javax.annotation.Nullable
   private Long magnitudeidOut;
 
   public UpdateMomenttensorRequestDataMomenttensor() {
   }
 
-  public UpdateMomenttensorRequestDataMomenttensor originidOut(Long originidOut) {
+  public UpdateMomenttensorRequestDataMomenttensor originidOut(@javax.annotation.Nullable Long originidOut) {
     this.originidOut = originidOut;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return originidOut
-  **/
+   */
   @javax.annotation.Nullable
   public Long getOriginidOut() {
     return originidOut;
   }
 
-  public void setOriginidOut(Long originidOut) {
+  public void setOriginidOut(@javax.annotation.Nullable Long originidOut) {
     this.originidOut = originidOut;
   }
 
 
-  public UpdateMomenttensorRequestDataMomenttensor magnitudeidOut(Long magnitudeidOut) {
+  public UpdateMomenttensorRequestDataMomenttensor magnitudeidOut(@javax.annotation.Nullable Long magnitudeidOut) {
     this.magnitudeidOut = magnitudeidOut;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return magnitudeidOut
-  **/
+   */
   @javax.annotation.Nullable
   public Long getMagnitudeidOut() {
     return magnitudeidOut;
   }
 
-  public void setMagnitudeidOut(Long magnitudeidOut) {
+  public void setMagnitudeidOut(@javax.annotation.Nullable Long magnitudeidOut) {
     this.magnitudeidOut = magnitudeidOut;
   }
 
@@ -200,12 +201,12 @@ public class UpdateMomenttensorRequestDataMomenttensor {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to UpdateMomenttensorRequestDataMomenttensor
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to UpdateMomenttensorRequestDataMomenttensor
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!UpdateMomenttensorRequestDataMomenttensor.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -287,22 +288,22 @@ public class UpdateMomenttensorRequestDataMomenttensor {
     }
   }
 
- /**
-  * Create an instance of UpdateMomenttensorRequestDataMomenttensor given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of UpdateMomenttensorRequestDataMomenttensor
-  * @throws IOException if the JSON string is invalid with respect to UpdateMomenttensorRequestDataMomenttensor
-  */
+  /**
+   * Create an instance of UpdateMomenttensorRequestDataMomenttensor given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of UpdateMomenttensorRequestDataMomenttensor
+   * @throws IOException if the JSON string is invalid with respect to UpdateMomenttensorRequestDataMomenttensor
+   */
   public static UpdateMomenttensorRequestDataMomenttensor fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, UpdateMomenttensorRequestDataMomenttensor.class);
   }
 
- /**
-  * Convert an instance of UpdateMomenttensorRequestDataMomenttensor to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of UpdateMomenttensorRequestDataMomenttensor to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

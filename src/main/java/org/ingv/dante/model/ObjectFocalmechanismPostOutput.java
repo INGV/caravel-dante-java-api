@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,16 +51,17 @@ import org.ingv.dante.JSON;
 /**
  * ObjectFocalmechanismPostOutput
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectFocalmechanismPostOutput {
   public static final String SERIALIZED_NAME_FOCALMECHANISMS = "focalmechanisms";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)
-  private List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms;
+  @javax.annotation.Nullable
+  private List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms = new ArrayList<>();
 
   public ObjectFocalmechanismPostOutput() {
   }
 
-  public ObjectFocalmechanismPostOutput focalmechanisms(List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
+  public ObjectFocalmechanismPostOutput focalmechanisms(@javax.annotation.Nullable List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
     return this;
   }
@@ -74,16 +74,16 @@ public class ObjectFocalmechanismPostOutput {
     return this;
   }
 
-   /**
+  /**
    * Get focalmechanisms
    * @return focalmechanisms
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectFocalmechanismPostOutputFocalmechanismsInner> getFocalmechanisms() {
     return focalmechanisms;
   }
 
-  public void setFocalmechanisms(List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
+  public void setFocalmechanisms(@javax.annotation.Nullable List<ObjectFocalmechanismPostOutputFocalmechanismsInner> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
   }
 
@@ -185,12 +185,12 @@ public class ObjectFocalmechanismPostOutput {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectFocalmechanismPostOutput
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectFocalmechanismPostOutput
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectFocalmechanismPostOutput.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -286,22 +286,22 @@ public class ObjectFocalmechanismPostOutput {
     }
   }
 
- /**
-  * Create an instance of ObjectFocalmechanismPostOutput given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectFocalmechanismPostOutput
-  * @throws IOException if the JSON string is invalid with respect to ObjectFocalmechanismPostOutput
-  */
+  /**
+   * Create an instance of ObjectFocalmechanismPostOutput given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectFocalmechanismPostOutput
+   * @throws IOException if the JSON string is invalid with respect to ObjectFocalmechanismPostOutput
+   */
   public static ObjectFocalmechanismPostOutput fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectFocalmechanismPostOutput.class);
   }
 
- /**
-  * Convert an instance of ObjectFocalmechanismPostOutput to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectFocalmechanismPostOutput to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

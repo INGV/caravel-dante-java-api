@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,30 +49,31 @@ import org.ingv.dante.JSON;
 /**
  * AddEwHyp2000arcRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddEwHyp2000arcRequest {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
+  @javax.annotation.Nullable
   private Hyp2000arcSchema data;
 
   public AddEwHyp2000arcRequest() {
   }
 
-  public AddEwHyp2000arcRequest data(Hyp2000arcSchema data) {
+  public AddEwHyp2000arcRequest data(@javax.annotation.Nullable Hyp2000arcSchema data) {
     this.data = data;
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public Hyp2000arcSchema getData() {
     return data;
   }
 
-  public void setData(Hyp2000arcSchema data) {
+  public void setData(@javax.annotation.Nullable Hyp2000arcSchema data) {
     this.data = data;
   }
 
@@ -175,12 +175,12 @@ public class AddEwHyp2000arcRequest {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddEwHyp2000arcRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddEwHyp2000arcRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddEwHyp2000arcRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -266,22 +266,22 @@ public class AddEwHyp2000arcRequest {
     }
   }
 
- /**
-  * Create an instance of AddEwHyp2000arcRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddEwHyp2000arcRequest
-  * @throws IOException if the JSON string is invalid with respect to AddEwHyp2000arcRequest
-  */
+  /**
+   * Create an instance of AddEwHyp2000arcRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddEwHyp2000arcRequest
+   * @throws IOException if the JSON string is invalid with respect to AddEwHyp2000arcRequest
+   */
   public static AddEwHyp2000arcRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddEwHyp2000arcRequest.class);
   }
 
- /**
-  * Convert an instance of AddEwHyp2000arcRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddEwHyp2000arcRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

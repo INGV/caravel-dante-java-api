@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,39 +51,41 @@ import org.ingv.dante.JSON;
 /**
  * AddFocalmechanismRequestData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddFocalmechanismRequestData {
   public static final String SERIALIZED_NAME_ORIGINID = "originid";
   @SerializedName(SERIALIZED_NAME_ORIGINID)
+  @javax.annotation.Nullable
   private Long originid;
 
   public static final String SERIALIZED_NAME_FOCALMECHANISMS = "focalmechanisms";
   @SerializedName(SERIALIZED_NAME_FOCALMECHANISMS)
-  private List<ObjectFocalmechanism> focalmechanisms;
+  @javax.annotation.Nullable
+  private List<ObjectFocalmechanism> focalmechanisms = new ArrayList<>();
 
   public AddFocalmechanismRequestData() {
   }
 
-  public AddFocalmechanismRequestData originid(Long originid) {
+  public AddFocalmechanismRequestData originid(@javax.annotation.Nullable Long originid) {
     this.originid = originid;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return originid
-  **/
+   */
   @javax.annotation.Nullable
   public Long getOriginid() {
     return originid;
   }
 
-  public void setOriginid(Long originid) {
+  public void setOriginid(@javax.annotation.Nullable Long originid) {
     this.originid = originid;
   }
 
 
-  public AddFocalmechanismRequestData focalmechanisms(List<ObjectFocalmechanism> focalmechanisms) {
+  public AddFocalmechanismRequestData focalmechanisms(@javax.annotation.Nullable List<ObjectFocalmechanism> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
     return this;
   }
@@ -97,16 +98,16 @@ public class AddFocalmechanismRequestData {
     return this;
   }
 
-   /**
+  /**
    * Get focalmechanisms
    * @return focalmechanisms
-  **/
+   */
   @javax.annotation.Nullable
   public List<ObjectFocalmechanism> getFocalmechanisms() {
     return focalmechanisms;
   }
 
-  public void setFocalmechanisms(List<ObjectFocalmechanism> focalmechanisms) {
+  public void setFocalmechanisms(@javax.annotation.Nullable List<ObjectFocalmechanism> focalmechanisms) {
     this.focalmechanisms = focalmechanisms;
   }
 
@@ -211,12 +212,12 @@ public class AddFocalmechanismRequestData {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddFocalmechanismRequestData
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddFocalmechanismRequestData
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddFocalmechanismRequestData.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -312,22 +313,22 @@ public class AddFocalmechanismRequestData {
     }
   }
 
- /**
-  * Create an instance of AddFocalmechanismRequestData given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddFocalmechanismRequestData
-  * @throws IOException if the JSON string is invalid with respect to AddFocalmechanismRequestData
-  */
+  /**
+   * Create an instance of AddFocalmechanismRequestData given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddFocalmechanismRequestData
+   * @throws IOException if the JSON string is invalid with respect to AddFocalmechanismRequestData
+   */
   public static AddFocalmechanismRequestData fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddFocalmechanismRequestData.class);
   }
 
- /**
-  * Convert an instance of AddFocalmechanismRequestData to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddFocalmechanismRequestData to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

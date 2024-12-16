@@ -2,7 +2,8 @@
 
 Dante Web Services
 - API version: 3.28.0-dev
-  - Build date: 2024-12-16T08:52:35.035662350Z[Etc/UTC]
+  - Build date: 2024-12-16T16:25:08.972020114Z[Etc/UTC]
+  - Generator version: 7.10.0
 
   
 
@@ -105,7 +106,7 @@ import org.ingv.dante.ApiClient;
 import org.ingv.dante.ApiException;
 import org.ingv.dante.Configuration;
 import org.ingv.dante.auth.*;
-import org.ingv.dante.models.*;
+import org.ingv.dante.model.*;
 import org.ingv.dante.api.DeleteApi;
 
 public class Example {

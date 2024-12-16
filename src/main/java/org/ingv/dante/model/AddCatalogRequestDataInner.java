@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,42 +49,51 @@ import org.ingv.dante.JSON;
 /**
  * AddCatalogRequestDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class AddCatalogRequestDataInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private String name;
 
   public static final String SERIALIZED_NAME_DOI = "doi";
   @SerializedName(SERIALIZED_NAME_DOI)
+  @javax.annotation.Nullable
   private String doi;
 
   public static final String SERIALIZED_NAME_EVENTID = "eventid";
   @SerializedName(SERIALIZED_NAME_EVENTID)
+  @javax.annotation.Nullable
   private Long eventid;
 
   public static final String SERIALIZED_NAME_ORIGINID = "originid";
   @SerializedName(SERIALIZED_NAME_ORIGINID)
+  @javax.annotation.Nullable
   private Long originid;
 
   public static final String SERIALIZED_NAME_MAGNITUDEID = "magnitudeid";
   @SerializedName(SERIALIZED_NAME_MAGNITUDEID)
+  @javax.annotation.Nullable
   private Long magnitudeid;
 
   public static final String SERIALIZED_NAME_EVENT_GROUP_ID = "event_group_id";
   @SerializedName(SERIALIZED_NAME_EVENT_GROUP_ID)
+  @javax.annotation.Nullable
   private Long eventGroupId;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public AddCatalogRequestDataInner() {
@@ -106,10 +114,10 @@ public class AddCatalogRequestDataInner {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -117,48 +125,48 @@ public class AddCatalogRequestDataInner {
 
 
 
-  public AddCatalogRequestDataInner name(String name) {
+  public AddCatalogRequestDataInner name(@javax.annotation.Nonnull String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Localspace name. i.e. hew1_mole, endeavour_mole | char(255)
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nonnull String name) {
     this.name = name;
   }
 
 
-  public AddCatalogRequestDataInner doi(String doi) {
+  public AddCatalogRequestDataInner doi(@javax.annotation.Nullable String doi) {
     this.doi = doi;
     return this;
   }
 
-   /**
+  /**
    * DOI Resource. i.e. 10.13127/TDMT | varchar(255)
    * @return doi
-  **/
+   */
   @javax.annotation.Nullable
   public String getDoi() {
     return doi;
   }
 
-  public void setDoi(String doi) {
+  public void setDoi(@javax.annotation.Nullable String doi) {
     this.doi = doi;
   }
 
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return eventid
-  **/
+   */
   @javax.annotation.Nullable
   public Long getEventid() {
     return eventid;
@@ -166,48 +174,48 @@ public class AddCatalogRequestDataInner {
 
 
 
-  public AddCatalogRequestDataInner originid(Long originid) {
+  public AddCatalogRequestDataInner originid(@javax.annotation.Nullable Long originid) {
     this.originid = originid;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return originid
-  **/
+   */
   @javax.annotation.Nullable
   public Long getOriginid() {
     return originid;
   }
 
-  public void setOriginid(Long originid) {
+  public void setOriginid(@javax.annotation.Nullable Long originid) {
     this.originid = originid;
   }
 
 
-  public AddCatalogRequestDataInner magnitudeid(Long magnitudeid) {
+  public AddCatalogRequestDataInner magnitudeid(@javax.annotation.Nullable Long magnitudeid) {
     this.magnitudeid = magnitudeid;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return magnitudeid
-  **/
+   */
   @javax.annotation.Nullable
   public Long getMagnitudeid() {
     return magnitudeid;
   }
 
-  public void setMagnitudeid(Long magnitudeid) {
+  public void setMagnitudeid(@javax.annotation.Nullable Long magnitudeid) {
     this.magnitudeid = magnitudeid;
   }
 
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return eventGroupId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getEventGroupId() {
     return eventGroupId;
@@ -215,10 +223,10 @@ public class AddCatalogRequestDataInner {
 
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -226,10 +234,10 @@ public class AddCatalogRequestDataInner {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -359,12 +367,12 @@ public class AddCatalogRequestDataInner {
     openapiRequiredFields.add("name");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to AddCatalogRequestDataInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to AddCatalogRequestDataInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!AddCatalogRequestDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -459,22 +467,22 @@ public class AddCatalogRequestDataInner {
     }
   }
 
- /**
-  * Create an instance of AddCatalogRequestDataInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of AddCatalogRequestDataInner
-  * @throws IOException if the JSON string is invalid with respect to AddCatalogRequestDataInner
-  */
+  /**
+   * Create an instance of AddCatalogRequestDataInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of AddCatalogRequestDataInner
+   * @throws IOException if the JSON string is invalid with respect to AddCatalogRequestDataInner
+   */
   public static AddCatalogRequestDataInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddCatalogRequestDataInner.class);
   }
 
- /**
-  * Convert an instance of AddCatalogRequestDataInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of AddCatalogRequestDataInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

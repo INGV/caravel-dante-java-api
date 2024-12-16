@@ -40,7 +40,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -52,16 +51,17 @@ import org.ingv.dante.JSON;
 /**
  * GetMunicipiDistanceKmPopolazione200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GetMunicipiDistanceKmPopolazione200Response {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<GetMunicipiDistanceKmPopolazione200ResponseDataInner> data;
+  @javax.annotation.Nullable
+  private List<GetMunicipiDistanceKmPopolazione200ResponseDataInner> data = new ArrayList<>();
 
   public GetMunicipiDistanceKmPopolazione200Response() {
   }
 
-  public GetMunicipiDistanceKmPopolazione200Response data(List<GetMunicipiDistanceKmPopolazione200ResponseDataInner> data) {
+  public GetMunicipiDistanceKmPopolazione200Response data(@javax.annotation.Nullable List<GetMunicipiDistanceKmPopolazione200ResponseDataInner> data) {
     this.data = data;
     return this;
   }
@@ -74,16 +74,16 @@ public class GetMunicipiDistanceKmPopolazione200Response {
     return this;
   }
 
-   /**
+  /**
    * Get data
    * @return data
-  **/
+   */
   @javax.annotation.Nullable
   public List<GetMunicipiDistanceKmPopolazione200ResponseDataInner> getData() {
     return data;
   }
 
-  public void setData(List<GetMunicipiDistanceKmPopolazione200ResponseDataInner> data) {
+  public void setData(@javax.annotation.Nullable List<GetMunicipiDistanceKmPopolazione200ResponseDataInner> data) {
     this.data = data;
   }
 
@@ -185,12 +185,12 @@ public class GetMunicipiDistanceKmPopolazione200Response {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GetMunicipiDistanceKmPopolazione200Response
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetMunicipiDistanceKmPopolazione200Response
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GetMunicipiDistanceKmPopolazione200Response.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -286,22 +286,22 @@ public class GetMunicipiDistanceKmPopolazione200Response {
     }
   }
 
- /**
-  * Create an instance of GetMunicipiDistanceKmPopolazione200Response given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetMunicipiDistanceKmPopolazione200Response
-  * @throws IOException if the JSON string is invalid with respect to GetMunicipiDistanceKmPopolazione200Response
-  */
+  /**
+   * Create an instance of GetMunicipiDistanceKmPopolazione200Response given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetMunicipiDistanceKmPopolazione200Response
+   * @throws IOException if the JSON string is invalid with respect to GetMunicipiDistanceKmPopolazione200Response
+   */
   public static GetMunicipiDistanceKmPopolazione200Response fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetMunicipiDistanceKmPopolazione200Response.class);
   }
 
- /**
-  * Convert an instance of GetMunicipiDistanceKmPopolazione200Response to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetMunicipiDistanceKmPopolazione200Response to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

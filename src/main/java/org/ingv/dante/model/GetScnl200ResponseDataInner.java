@@ -38,7 +38,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -50,46 +49,56 @@ import org.ingv.dante.JSON;
 /**
  * GetScnl200ResponseDataInner
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class GetScnl200ResponseDataInner {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
+  @javax.annotation.Nullable
   private String net;
 
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
+  @javax.annotation.Nullable
   private String sta;
 
   public static final String SERIALIZED_NAME_CHA = "cha";
   @SerializedName(SERIALIZED_NAME_CHA)
+  @javax.annotation.Nullable
   private String cha;
 
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
+  @javax.annotation.Nullable
   private String loc = "--";
 
   public static final String SERIALIZED_NAME_LAT = "lat";
   @SerializedName(SERIALIZED_NAME_LAT)
+  @javax.annotation.Nullable
   private Double lat;
 
   public static final String SERIALIZED_NAME_LON = "lon";
   @SerializedName(SERIALIZED_NAME_LON)
+  @javax.annotation.Nullable
   private Double lon;
 
   public static final String SERIALIZED_NAME_ELEV = "elev";
   @SerializedName(SERIALIZED_NAME_ELEV)
+  @javax.annotation.Nullable
   private Double elev;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public GetScnl200ResponseDataInner() {
@@ -106,10 +115,10 @@ public class GetScnl200ResponseDataInner {
     this.inserted = inserted;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -117,147 +126,147 @@ public class GetScnl200ResponseDataInner {
 
 
 
-  public GetScnl200ResponseDataInner net(String net) {
+  public GetScnl200ResponseDataInner net(@javax.annotation.Nullable String net) {
     this.net = net;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return net
-  **/
+   */
   @javax.annotation.Nullable
   public String getNet() {
     return net;
   }
 
-  public void setNet(String net) {
+  public void setNet(@javax.annotation.Nullable String net) {
     this.net = net;
   }
 
 
-  public GetScnl200ResponseDataInner sta(String sta) {
+  public GetScnl200ResponseDataInner sta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return sta
-  **/
+   */
   @javax.annotation.Nullable
   public String getSta() {
     return sta;
   }
 
-  public void setSta(String sta) {
+  public void setSta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
   }
 
 
-  public GetScnl200ResponseDataInner cha(String cha) {
+  public GetScnl200ResponseDataInner cha(@javax.annotation.Nullable String cha) {
     this.cha = cha;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return cha
-  **/
+   */
   @javax.annotation.Nullable
   public String getCha() {
     return cha;
   }
 
-  public void setCha(String cha) {
+  public void setCha(@javax.annotation.Nullable String cha) {
     this.cha = cha;
   }
 
 
-  public GetScnl200ResponseDataInner loc(String loc) {
+  public GetScnl200ResponseDataInner loc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return loc
-  **/
+   */
   @javax.annotation.Nullable
   public String getLoc() {
     return loc;
   }
 
-  public void setLoc(String loc) {
+  public void setLoc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
   }
 
 
-  public GetScnl200ResponseDataInner lat(Double lat) {
+  public GetScnl200ResponseDataInner lat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
     return this;
   }
 
-   /**
+  /**
    * Latitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -90
    * maximum: 90
    * @return lat
-  **/
+   */
   @javax.annotation.Nullable
   public Double getLat() {
     return lat;
   }
 
-  public void setLat(Double lat) {
+  public void setLat(@javax.annotation.Nullable Double lat) {
     this.lat = lat;
   }
 
 
-  public GetScnl200ResponseDataInner lon(Double lon) {
+  public GetScnl200ResponseDataInner lon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
     return this;
   }
 
-   /**
+  /**
    * Longitude of a point expressed in:  * the ETRS89 system for Italian and European territories * and in WGS84 for the others.
    * minimum: -180
    * maximum: 180
    * @return lon
-  **/
+   */
   @javax.annotation.Nullable
   public Double getLon() {
     return lon;
   }
 
-  public void setLon(Double lon) {
+  public void setLon(@javax.annotation.Nullable Double lon) {
     this.lon = lon;
   }
 
 
-  public GetScnl200ResponseDataInner elev(Double elev) {
+  public GetScnl200ResponseDataInner elev(@javax.annotation.Nullable Double elev) {
     this.elev = elev;
     return this;
   }
 
-   /**
+  /**
    * Elevation in meter | double
    * @return elev
-  **/
+   */
   @javax.annotation.Nullable
   public Double getElev() {
     return elev;
   }
 
-  public void setElev(Double elev) {
+  public void setElev(@javax.annotation.Nullable Double elev) {
     this.elev = elev;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -265,10 +274,10 @@ public class GetScnl200ResponseDataInner {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -400,12 +409,12 @@ public class GetScnl200ResponseDataInner {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to GetScnl200ResponseDataInner
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to GetScnl200ResponseDataInner
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!GetScnl200ResponseDataInner.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -499,22 +508,22 @@ public class GetScnl200ResponseDataInner {
     }
   }
 
- /**
-  * Create an instance of GetScnl200ResponseDataInner given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of GetScnl200ResponseDataInner
-  * @throws IOException if the JSON string is invalid with respect to GetScnl200ResponseDataInner
-  */
+  /**
+   * Create an instance of GetScnl200ResponseDataInner given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of GetScnl200ResponseDataInner
+   * @throws IOException if the JSON string is invalid with respect to GetScnl200ResponseDataInner
+   */
   public static GetScnl200ResponseDataInner fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, GetScnl200ResponseDataInner.class);
   }
 
- /**
-  * Convert an instance of GetScnl200ResponseDataInner to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of GetScnl200ResponseDataInner to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

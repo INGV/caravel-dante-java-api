@@ -42,7 +42,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -54,82 +53,101 @@ import org.ingv.dante.JSON;
 /**
  * ObjectAmplitude
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectAmplitude {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nullable
   private Long id;
 
   public static final String SERIALIZED_NAME_ID_LOCALSPACE = "id_localspace";
   @SerializedName(SERIALIZED_NAME_ID_LOCALSPACE)
+  @javax.annotation.Nullable
   private Long idLocalspace;
 
   public static final String SERIALIZED_NAME_NET = "net";
   @SerializedName(SERIALIZED_NAME_NET)
+  @javax.annotation.Nullable
   private String net;
 
   public static final String SERIALIZED_NAME_STA = "sta";
   @SerializedName(SERIALIZED_NAME_STA)
+  @javax.annotation.Nullable
   private String sta;
 
   public static final String SERIALIZED_NAME_CHA = "cha";
   @SerializedName(SERIALIZED_NAME_CHA)
+  @javax.annotation.Nullable
   private String cha;
 
   public static final String SERIALIZED_NAME_LOC = "loc";
   @SerializedName(SERIALIZED_NAME_LOC)
+  @javax.annotation.Nullable
   private String loc = "--";
 
   public static final String SERIALIZED_NAME_TIME1 = "time1";
   @SerializedName(SERIALIZED_NAME_TIME1)
+  @javax.annotation.Nonnull
   private OffsetDateTime time1;
 
   public static final String SERIALIZED_NAME_AMP1 = "amp1";
   @SerializedName(SERIALIZED_NAME_AMP1)
+  @javax.annotation.Nullable
   private Double amp1;
 
   public static final String SERIALIZED_NAME_TIME2 = "time2";
   @SerializedName(SERIALIZED_NAME_TIME2)
+  @javax.annotation.Nullable
   private OffsetDateTime time2;
 
   public static final String SERIALIZED_NAME_AMP2 = "amp2";
   @SerializedName(SERIALIZED_NAME_AMP2)
+  @javax.annotation.Nullable
   private Double amp2;
 
   public static final String SERIALIZED_NAME_PICK_ID = "pick_id";
   @SerializedName(SERIALIZED_NAME_PICK_ID)
+  @javax.annotation.Nullable
   private Long pickId;
 
   public static final String SERIALIZED_NAME_PERIOD = "period";
   @SerializedName(SERIALIZED_NAME_PERIOD)
+  @javax.annotation.Nullable
   private Double period;
 
   public static final String SERIALIZED_NAME_REVISED = "revised";
   @SerializedName(SERIALIZED_NAME_REVISED)
+  @javax.annotation.Nullable
   private Integer revised;
 
   public static final String SERIALIZED_NAME_TYPE_AMPLITUDE = "type_amplitude";
   @SerializedName(SERIALIZED_NAME_TYPE_AMPLITUDE)
+  @javax.annotation.Nullable
   private ObjectAmplitudeTypeAmplitude typeAmplitude;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
+  @javax.annotation.Nullable
   private ObjectLocalspace localspace;
 
   public static final String SERIALIZED_NAME_PROVENANCE = "provenance";
   @SerializedName(SERIALIZED_NAME_PROVENANCE)
+  @javax.annotation.Nullable
   private ObjectProvenance provenance;
 
   public static final String SERIALIZED_NAME_MODIFIED = "modified";
   @SerializedName(SERIALIZED_NAME_MODIFIED)
+  @javax.annotation.Nullable
   private OffsetDateTime modified;
 
   public static final String SERIALIZED_NAME_INSERTED = "inserted";
   @SerializedName(SERIALIZED_NAME_INSERTED)
+  @javax.annotation.Nullable
   private OffsetDateTime inserted;
 
   public static final String SERIALIZED_NAME_TIMEWINDOW_REFERENCE = "timewindow_reference";
   @SerializedName(SERIALIZED_NAME_TIMEWINDOW_REFERENCE)
+  @javax.annotation.Nullable
   private OffsetDateTime timewindowReference;
 
   public ObjectAmplitude() {
@@ -148,10 +166,10 @@ public class ObjectAmplitude {
     this.timewindowReference = timewindowReference;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return id
-  **/
+   */
   @javax.annotation.Nullable
   public Long getId() {
     return id;
@@ -159,295 +177,295 @@ public class ObjectAmplitude {
 
 
 
-  public ObjectAmplitude idLocalspace(Long idLocalspace) {
+  public ObjectAmplitude idLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
     return this;
   }
 
-   /**
+  /**
    * Localspace Id | bigint(19)
    * @return idLocalspace
-  **/
+   */
   @javax.annotation.Nullable
   public Long getIdLocalspace() {
     return idLocalspace;
   }
 
-  public void setIdLocalspace(Long idLocalspace) {
+  public void setIdLocalspace(@javax.annotation.Nullable Long idLocalspace) {
     this.idLocalspace = idLocalspace;
   }
 
 
-  public ObjectAmplitude net(String net) {
+  public ObjectAmplitude net(@javax.annotation.Nullable String net) {
     this.net = net;
     return this;
   }
 
-   /**
+  /**
    * Channel net code | char(2)
    * @return net
-  **/
+   */
   @javax.annotation.Nullable
   public String getNet() {
     return net;
   }
 
-  public void setNet(String net) {
+  public void setNet(@javax.annotation.Nullable String net) {
     this.net = net;
   }
 
 
-  public ObjectAmplitude sta(String sta) {
+  public ObjectAmplitude sta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
     return this;
   }
 
-   /**
+  /**
    * Channel station code | varchar(5)
    * @return sta
-  **/
+   */
   @javax.annotation.Nullable
   public String getSta() {
     return sta;
   }
 
-  public void setSta(String sta) {
+  public void setSta(@javax.annotation.Nullable String sta) {
     this.sta = sta;
   }
 
 
-  public ObjectAmplitude cha(String cha) {
+  public ObjectAmplitude cha(@javax.annotation.Nullable String cha) {
     this.cha = cha;
     return this;
   }
 
-   /**
+  /**
    * Channel code | char(3)
    * @return cha
-  **/
+   */
   @javax.annotation.Nullable
   public String getCha() {
     return cha;
   }
 
-  public void setCha(String cha) {
+  public void setCha(@javax.annotation.Nullable String cha) {
     this.cha = cha;
   }
 
 
-  public ObjectAmplitude loc(String loc) {
+  public ObjectAmplitude loc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
     return this;
   }
 
-   /**
+  /**
    * Channel location | char(2)
    * @return loc
-  **/
+   */
   @javax.annotation.Nullable
   public String getLoc() {
     return loc;
   }
 
-  public void setLoc(String loc) {
+  public void setLoc(@javax.annotation.Nullable String loc) {
     this.loc = loc;
   }
 
 
-  public ObjectAmplitude time1(OffsetDateTime time1) {
+  public ObjectAmplitude time1(@javax.annotation.Nonnull OffsetDateTime time1) {
     this.time1 = time1;
     return this;
   }
 
-   /**
+  /**
    *  | datetime(3)
    * @return time1
-  **/
+   */
   @javax.annotation.Nonnull
   public OffsetDateTime getTime1() {
     return time1;
   }
 
-  public void setTime1(OffsetDateTime time1) {
+  public void setTime1(@javax.annotation.Nonnull OffsetDateTime time1) {
     this.time1 = time1;
   }
 
 
-  public ObjectAmplitude amp1(Double amp1) {
+  public ObjectAmplitude amp1(@javax.annotation.Nullable Double amp1) {
     this.amp1 = amp1;
     return this;
   }
 
-   /**
+  /**
    * Amplitude value | double
    * @return amp1
-  **/
+   */
   @javax.annotation.Nullable
   public Double getAmp1() {
     return amp1;
   }
 
-  public void setAmp1(Double amp1) {
+  public void setAmp1(@javax.annotation.Nullable Double amp1) {
     this.amp1 = amp1;
   }
 
 
-  public ObjectAmplitude time2(OffsetDateTime time2) {
+  public ObjectAmplitude time2(@javax.annotation.Nullable OffsetDateTime time2) {
     this.time2 = time2;
     return this;
   }
 
-   /**
+  /**
    *  | datetime(3)
    * @return time2
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTime2() {
     return time2;
   }
 
-  public void setTime2(OffsetDateTime time2) {
+  public void setTime2(@javax.annotation.Nullable OffsetDateTime time2) {
     this.time2 = time2;
   }
 
 
-  public ObjectAmplitude amp2(Double amp2) {
+  public ObjectAmplitude amp2(@javax.annotation.Nullable Double amp2) {
     this.amp2 = amp2;
     return this;
   }
 
-   /**
+  /**
    * Amplitude value | double
    * @return amp2
-  **/
+   */
   @javax.annotation.Nullable
   public Double getAmp2() {
     return amp2;
   }
 
-  public void setAmp2(Double amp2) {
+  public void setAmp2(@javax.annotation.Nullable Double amp2) {
     this.amp2 = amp2;
   }
 
 
-  public ObjectAmplitude pickId(Long pickId) {
+  public ObjectAmplitude pickId(@javax.annotation.Nullable Long pickId) {
     this.pickId = pickId;
     return this;
   }
 
-   /**
+  /**
    * Unique incremental id | bigint(20)
    * @return pickId
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPickId() {
     return pickId;
   }
 
-  public void setPickId(Long pickId) {
+  public void setPickId(@javax.annotation.Nullable Long pickId) {
     this.pickId = pickId;
   }
 
 
-  public ObjectAmplitude period(Double period) {
+  public ObjectAmplitude period(@javax.annotation.Nullable Double period) {
     this.period = period;
     return this;
   }
 
-   /**
+  /**
    * Amlitude period | double
    * @return period
-  **/
+   */
   @javax.annotation.Nullable
   public Double getPeriod() {
     return period;
   }
 
-  public void setPeriod(Double period) {
+  public void setPeriod(@javax.annotation.Nullable Double period) {
     this.period = period;
   }
 
 
-  public ObjectAmplitude revised(Integer revised) {
+  public ObjectAmplitude revised(@javax.annotation.Nullable Integer revised) {
     this.revised = revised;
     return this;
   }
 
-   /**
+  /**
    * Dichiara se tale ampiezza è stata rivista dall&#39;analista, eventualmente anche non modificata, oppure no. (1/0, true/false) | tinyint(3)
    * @return revised
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getRevised() {
     return revised;
   }
 
-  public void setRevised(Integer revised) {
+  public void setRevised(@javax.annotation.Nullable Integer revised) {
     this.revised = revised;
   }
 
 
-  public ObjectAmplitude typeAmplitude(ObjectAmplitudeTypeAmplitude typeAmplitude) {
+  public ObjectAmplitude typeAmplitude(@javax.annotation.Nullable ObjectAmplitudeTypeAmplitude typeAmplitude) {
     this.typeAmplitude = typeAmplitude;
     return this;
   }
 
-   /**
+  /**
    * Get typeAmplitude
    * @return typeAmplitude
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectAmplitudeTypeAmplitude getTypeAmplitude() {
     return typeAmplitude;
   }
 
-  public void setTypeAmplitude(ObjectAmplitudeTypeAmplitude typeAmplitude) {
+  public void setTypeAmplitude(@javax.annotation.Nullable ObjectAmplitudeTypeAmplitude typeAmplitude) {
     this.typeAmplitude = typeAmplitude;
   }
 
 
-  public ObjectAmplitude localspace(ObjectLocalspace localspace) {
+  public ObjectAmplitude localspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
     return this;
   }
 
-   /**
+  /**
    * Get localspace
    * @return localspace
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectLocalspace getLocalspace() {
     return localspace;
   }
 
-  public void setLocalspace(ObjectLocalspace localspace) {
+  public void setLocalspace(@javax.annotation.Nullable ObjectLocalspace localspace) {
     this.localspace = localspace;
   }
 
 
-  public ObjectAmplitude provenance(ObjectProvenance provenance) {
+  public ObjectAmplitude provenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
     return this;
   }
 
-   /**
+  /**
    * Get provenance
    * @return provenance
-  **/
+   */
   @javax.annotation.Nullable
   public ObjectProvenance getProvenance() {
     return provenance;
   }
 
-  public void setProvenance(ObjectProvenance provenance) {
+  public void setProvenance(@javax.annotation.Nullable ObjectProvenance provenance) {
     this.provenance = provenance;
   }
 
 
-   /**
+  /**
    * Last Review | timestamp
    * @return modified
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getModified() {
     return modified;
@@ -455,10 +473,10 @@ public class ObjectAmplitude {
 
 
 
-   /**
+  /**
    * Insert time | timestamp
    * @return inserted
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getInserted() {
     return inserted;
@@ -466,10 +484,10 @@ public class ObjectAmplitude {
 
 
 
-   /**
+  /**
    * Describes a time window for amplitude measurements, given by a central point in time
    * @return timewindowReference
-  **/
+   */
   @javax.annotation.Nullable
   public OffsetDateTime getTimewindowReference() {
     return timewindowReference;
@@ -640,12 +658,12 @@ public class ObjectAmplitude {
     openapiRequiredFields.add("time1");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectAmplitude
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectAmplitude
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectAmplitude.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -758,22 +776,22 @@ public class ObjectAmplitude {
     }
   }
 
- /**
-  * Create an instance of ObjectAmplitude given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectAmplitude
-  * @throws IOException if the JSON string is invalid with respect to ObjectAmplitude
-  */
+  /**
+   * Create an instance of ObjectAmplitude given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectAmplitude
+   * @throws IOException if the JSON string is invalid with respect to ObjectAmplitude
+   */
   public static ObjectAmplitude fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectAmplitude.class);
   }
 
- /**
-  * Convert an instance of ObjectAmplitude to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectAmplitude to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

@@ -17,7 +17,5 @@
 
 * `OTHER` (value: `"other"`)
 
-* `NULL` (value: `"null"`)
-
 
 

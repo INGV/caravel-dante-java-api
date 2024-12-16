@@ -37,7 +37,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -49,76 +48,79 @@ import org.ingv.dante.JSON;
 /**
  * ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nullable
   private String name = "INGV";
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nullable
   private String version;
 
   public static final String SERIALIZED_NAME_SOFTWARENAME = "softwarename";
   @SerializedName(SERIALIZED_NAME_SOFTWARENAME)
+  @javax.annotation.Nullable
   private String softwarename;
 
   public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup() {
   }
 
-  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup name(String name) {
+  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup name(@javax.annotation.Nullable String name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Name of Provenance. i.e. INGV, ETH, USGS | varchar(255)
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
   public String getName() {
     return name;
   }
 
-  public void setName(String name) {
+  public void setName(@javax.annotation.Nullable String name) {
     this.name = name;
   }
 
 
-  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup version(String version) {
+  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup version(@javax.annotation.Nullable String version) {
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * Version name | varchar(255)
    * @return version
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersion() {
     return version;
   }
 
-  public void setVersion(String version) {
+  public void setVersion(@javax.annotation.Nullable String version) {
     this.version = version;
   }
 
 
-  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup softwarename(String softwarename) {
+  public ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup softwarename(@javax.annotation.Nullable String softwarename) {
     this.softwarename = softwarename;
     return this;
   }
 
-   /**
+  /**
    * Software name. i.e. SisPick, eqassemble, hypoinverse | char(255)
    * @return softwarename
-  **/
+   */
   @javax.annotation.Nullable
   public String getSoftwarename() {
     return softwarename;
   }
 
-  public void setSoftwarename(String softwarename) {
+  public void setSoftwarename(@javax.annotation.Nullable String softwarename) {
     this.softwarename = softwarename;
   }
 
@@ -226,12 +228,12 @@ public class ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -322,22 +324,22 @@ public class ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup {
     }
   }
 
- /**
-  * Create an instance of ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
-  * @throws IOException if the JSON string is invalid with respect to ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
-  */
+  /**
+   * Create an instance of ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
+   * @throws IOException if the JSON string is invalid with respect to ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup
+   */
   public static ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup.class);
   }
 
- /**
-  * Convert an instance of ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }

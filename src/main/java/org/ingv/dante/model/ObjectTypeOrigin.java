@@ -39,7 +39,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -51,26 +50,31 @@ import org.ingv.dante.JSON;
 /**
  * ObjectTypeOrigin
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T08:52:35.035662350Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-16T16:25:08.972020114Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class ObjectTypeOrigin {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
+  @javax.annotation.Nonnull
   private TypeOriginName name = TypeOriginName.HYPOCENTER;
 
   public static final String SERIALIZED_NAME_VERSION_NAME = "version_name";
   @SerializedName(SERIALIZED_NAME_VERSION_NAME)
+  @javax.annotation.Nullable
   private String versionName;
 
   public static final String SERIALIZED_NAME_VERSION_VALUE = "version_value";
   @SerializedName(SERIALIZED_NAME_VERSION_VALUE)
+  @javax.annotation.Nullable
   private Long versionValue;
 
   public static final String SERIALIZED_NAME_PRIORITY = "priority";
   @SerializedName(SERIALIZED_NAME_PRIORITY)
+  @javax.annotation.Nullable
   private Long priority = 0l;
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
   private String description;
 
   public ObjectTypeOrigin() {
@@ -87,48 +91,48 @@ public class ObjectTypeOrigin {
     this.description = description;
   }
 
-  public ObjectTypeOrigin name(TypeOriginName name) {
+  public ObjectTypeOrigin name(@javax.annotation.Nonnull TypeOriginName name) {
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * Get name
    * @return name
-  **/
+   */
   @javax.annotation.Nonnull
   public TypeOriginName getName() {
     return name;
   }
 
-  public void setName(TypeOriginName name) {
+  public void setName(@javax.annotation.Nonnull TypeOriginName name) {
     this.name = name;
   }
 
 
-  public ObjectTypeOrigin versionName(String versionName) {
+  public ObjectTypeOrigin versionName(@javax.annotation.Nullable String versionName) {
     this.versionName = versionName;
     return this;
   }
 
-   /**
+  /**
    * Localization name (es:ew prelim,XX,WW,..) | varchar(255)
    * @return versionName
-  **/
+   */
   @javax.annotation.Nullable
   public String getVersionName() {
     return versionName;
   }
 
-  public void setVersionName(String versionName) {
+  public void setVersionName(@javax.annotation.Nullable String versionName) {
     this.versionName = versionName;
   }
 
 
-   /**
+  /**
    * Define a numeric value for type origin. &lt; 100 is automatic location | bigint(20)
    * @return versionValue
-  **/
+   */
   @javax.annotation.Nullable
   public Long getVersionValue() {
     return versionValue;
@@ -136,10 +140,10 @@ public class ObjectTypeOrigin {
 
 
 
-   /**
+  /**
    * Priority | int(8)
    * @return priority
-  **/
+   */
   @javax.annotation.Nullable
   public Long getPriority() {
     return priority;
@@ -147,10 +151,10 @@ public class ObjectTypeOrigin {
 
 
 
-   /**
+  /**
    * Additional information | char(255)
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
   public String getDescription() {
     return description;
@@ -279,12 +283,12 @@ public class ObjectTypeOrigin {
     openapiRequiredFields.add("name");
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ObjectTypeOrigin
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ObjectTypeOrigin
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ObjectTypeOrigin.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
@@ -381,22 +385,22 @@ public class ObjectTypeOrigin {
     }
   }
 
- /**
-  * Create an instance of ObjectTypeOrigin given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ObjectTypeOrigin
-  * @throws IOException if the JSON string is invalid with respect to ObjectTypeOrigin
-  */
+  /**
+   * Create an instance of ObjectTypeOrigin given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ObjectTypeOrigin
+   * @throws IOException if the JSON string is invalid with respect to ObjectTypeOrigin
+   */
   public static ObjectTypeOrigin fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ObjectTypeOrigin.class);
   }
 
- /**
-  * Convert an instance of ObjectTypeOrigin to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ObjectTypeOrigin to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }
