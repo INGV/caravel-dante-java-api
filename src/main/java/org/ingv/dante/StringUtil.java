@@ -16,7 +16,7 @@ package org.ingv.dante;
 import java.util.Collection;
 import java.util.Iterator;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-17T10:21:18.047628170Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-17T10:23:21.743676796Z[Etc/UTC]", comments = "Generator version: 7.10.0")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).
