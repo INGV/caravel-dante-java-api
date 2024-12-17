@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.27.1
+  version: 3.28.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -32,13 +32,13 @@ servers:
 - description: production
   url: https://caravel-dante.int.ingv.it/api
 - description: development
-  url: "http://{hostname}/api"
+  url: "{hostname}/api"
   variables:
     hostname:
-      default: localhost:8585
+      default: https://dev-caravel-dante.int.ingv.it
       enum:
-      - localhost:8585
-      - caravel-dante.int.ingv.it:8585
+      - http://localhost:8585
+      - https://dev-caravel-dante.int.ingv.it
   x-sandbox: true
 tags:
 - description: status api
