@@ -24,7 +24,7 @@ import java.time.OffsetDateTime;
 import java.util.Arrays;
 import org.ingv.dante.model.ObjectLocalspaceForVw;
 import org.ingv.dante.model.ObjectProvenaceForMagnitudesOriginsEventsAndEventsGroup;
-import org.ingv.dante.model.ObjectTypeOriginForVw;
+import org.ingv.dante.model.ObjectTypeOrigin;
 import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
@@ -53,7 +53,7 @@ import org.ingv.dante.JSON;
 /**
  * ObjectOriginForMagnitudesOriginsEventsAndEventsGroup
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-12-17T10:23:21.743676796Z[Etc/UTC]", comments = "Generator version: 7.10.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.10.0")
 public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -163,7 +163,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
   public static final String SERIALIZED_NAME_TYPE_ORIGIN = "type_origin";
   @SerializedName(SERIALIZED_NAME_TYPE_ORIGIN)
   @javax.annotation.Nullable
-  private ObjectTypeOriginForVw typeOrigin;
+  private ObjectTypeOrigin typeOrigin;
 
   public static final String SERIALIZED_NAME_LOCALSPACE = "localspace";
   @SerializedName(SERIALIZED_NAME_LOCALSPACE)
@@ -574,7 +574,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
 
 
 
-  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup typeOrigin(@javax.annotation.Nullable ObjectTypeOriginForVw typeOrigin) {
+  public ObjectOriginForMagnitudesOriginsEventsAndEventsGroup typeOrigin(@javax.annotation.Nullable ObjectTypeOrigin typeOrigin) {
     this.typeOrigin = typeOrigin;
     return this;
   }
@@ -584,11 +584,11 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
    * @return typeOrigin
    */
   @javax.annotation.Nullable
-  public ObjectTypeOriginForVw getTypeOrigin() {
+  public ObjectTypeOrigin getTypeOrigin() {
     return typeOrigin;
   }
 
-  public void setTypeOrigin(@javax.annotation.Nullable ObjectTypeOriginForVw typeOrigin) {
+  public void setTypeOrigin(@javax.annotation.Nullable ObjectTypeOrigin typeOrigin) {
     this.typeOrigin = typeOrigin;
   }
 
@@ -829,7 +829,7 @@ public class ObjectOriginForMagnitudesOriginsEventsAndEventsGroup {
       }
       // validate the optional field `type_origin`
       if (jsonObj.get("type_origin") != null && !jsonObj.get("type_origin").isJsonNull()) {
-        ObjectTypeOriginForVw.validateJsonElement(jsonObj.get("type_origin"));
+        ObjectTypeOrigin.validateJsonElement(jsonObj.get("type_origin"));
       }
       // validate the optional field `localspace`
       if (jsonObj.get("localspace") != null && !jsonObj.get("localspace").isJsonNull()) {
