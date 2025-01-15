@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.29.0-dev
+  version: 3.31.0-dev
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -9936,6 +9936,7 @@ components:
             name: hew1_mole
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
+          type_magnitude_extended: ML-VAX
           lower_uncertainty: 0.52
         id: 14932631
         event_group_id: 0
@@ -14483,6 +14484,7 @@ components:
           name: hew1_mole
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
+        type_magnitude_extended: ML-VAX
         lower_uncertainty: 0.52
       properties:
         id:
@@ -14505,6 +14507,10 @@ components:
           description: "Type Scale of the magnitude, international scale label (i.e.\
             \ ML, Md, Mw, ...) | varchar(50)"
           example: ML
+          type: string
+        type_magnitude_extended:
+          description: Type of the magnitude | varchar(255)
+          example: ML-VAX
           type: string
         lower_uncertainty:
           description: Magnitude lower_uncertainty | double
@@ -15858,6 +15864,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -15933,6 +15940,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -16042,6 +16050,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -16118,6 +16127,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -16286,6 +16296,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -16362,6 +16373,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -20976,6 +20988,7 @@ components:
             name: hew1_mole
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
+          type_magnitude_extended: ML-VAX
           lower_uncertainty: 0.52
         id: 14932631
         event_group_id: 0
