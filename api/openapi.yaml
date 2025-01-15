@@ -23,7 +23,7 @@ info:
     url: http://creativecommons.org/licenses/by/4.0/
   termsOfService: https://data.ingv.it/docs/principles/
   title: Dante Web Services
-  version: 3.28.0
+  version: 3.29.0
   x-api-id: 24e1e2e6-43ad-4a84-bec7-5c6ddcf5db97
   x-logo: http://webservices.ingv.it/ingv_logo_text_two_lines.png
   x-summary: Web Service to receive location from Earthworm or JSON standard
@@ -9896,6 +9896,8 @@ components:
             version_value: 7
             version_name: ew prelim
             name: hypocenter
+            description: Auto added
+            priority: 0
           region: Norcia
           lat: 45.492599
           associatedPhaseCount: 1
@@ -9934,6 +9936,7 @@ components:
             name: hew1_mole
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
+          type_magnitude_extended: ML-VAX
           lower_uncertainty: 0.52
         id: 14932631
         event_group_id: 0
@@ -10427,11 +10430,11 @@ components:
           id: 14932631
           magnitudes:
           - type_magnitude: ML
-            nsta: 0
+            nsta: 7
             stationmagnitudes:
             - type_magnitude: ML
               mag_correction: 0
-              err_mag: 6.519180951018382
+              err_mag: 7.058770351582356
               weight: 0.88
               is_used: false
               orig_distance_km: 161
@@ -10441,7 +10444,7 @@ components:
                 amp1: -0.358
                 sta: ACER
                 loc: "00"
-                period: 0.10263654006109402
+                period: 6.519180951018382
                 amp2: 0.292
                 type_amplitude:
                   unit: m/s
@@ -10483,7 +10486,7 @@ components:
               id: 14932631
             - type_magnitude: ML
               mag_correction: 0
-              err_mag: 6.519180951018382
+              err_mag: 7.058770351582356
               weight: 0.88
               is_used: false
               orig_distance_km: 161
@@ -10493,7 +10496,7 @@ components:
                 amp1: -0.358
                 sta: ACER
                 loc: "00"
-                period: 0.10263654006109402
+                period: 6.519180951018382
                 amp2: 0.292
                 type_amplitude:
                   unit: m/s
@@ -10536,10 +10539,10 @@ components:
             confidence_level: 68.3
             upper_uncertainty: 0.53
             mag_quality: BB
-            quality: 3.353193347011243
+            quality: 6.704019297950036
             id_localspace: 182491
             mag: 3.01
-            azimut: 7.143538
+            azimut: 3.0937452
             inserted: 2016-06-22T16:52:06.26Z
             nsta_used: 9
             provenance:
@@ -10556,7 +10559,7 @@ components:
               softwarename: software
               parameters: ToDo
               username: ew
-            min_distance: 3.0937452626664474
+            min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
               environment: development
@@ -10566,15 +10569,15 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             type_magnitude_priority: 0
-            ncha: 7
+            ncha: 0
             type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           - type_magnitude: ML
-            nsta: 0
+            nsta: 7
             stationmagnitudes:
             - type_magnitude: ML
               mag_correction: 0
-              err_mag: 6.519180951018382
+              err_mag: 7.058770351582356
               weight: 0.88
               is_used: false
               orig_distance_km: 161
@@ -10584,7 +10587,7 @@ components:
                 amp1: -0.358
                 sta: ACER
                 loc: "00"
-                period: 0.10263654006109402
+                period: 6.519180951018382
                 amp2: 0.292
                 type_amplitude:
                   unit: m/s
@@ -10626,7 +10629,7 @@ components:
               id: 14932631
             - type_magnitude: ML
               mag_correction: 0
-              err_mag: 6.519180951018382
+              err_mag: 7.058770351582356
               weight: 0.88
               is_used: false
               orig_distance_km: 161
@@ -10636,7 +10639,7 @@ components:
                 amp1: -0.358
                 sta: ACER
                 loc: "00"
-                period: 0.10263654006109402
+                period: 6.519180951018382
                 amp2: 0.292
                 type_amplitude:
                   unit: m/s
@@ -10679,10 +10682,10 @@ components:
             confidence_level: 68.3
             upper_uncertainty: 0.53
             mag_quality: BB
-            quality: 3.353193347011243
+            quality: 6.704019297950036
             id_localspace: 182491
             mag: 3.01
-            azimut: 7.143538
+            azimut: 3.0937452
             inserted: 2016-06-22T16:52:06.26Z
             nsta_used: 9
             provenance:
@@ -10699,7 +10702,7 @@ components:
               softwarename: software
               parameters: ToDo
               username: ew
-            min_distance: 3.0937452626664474
+            min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
               environment: development
@@ -10709,7 +10712,7 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             type_magnitude_priority: 0
-            ncha: 7
+            ncha: 0
             type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           e0_dip: 3.616076749251911
@@ -10753,7 +10756,7 @@ components:
                 id: 14932631
                 stations:
                 - sta: ACER
-                  azi: 5.5332584
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -10761,7 +10764,7 @@ components:
                   modified: 2016-06-22T16:52:06.26Z
                   vr: 0.88
                 - sta: ACER
-                  azi: 5.5332584
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -10790,14 +10793,14 @@ components:
               magnitudeid_out: 14932631
               clvd: 0.24
               originid_out: 14932631
-            misfit: 7.740351818741173
+            misfit: 8.969578798196912
             dip2: 40
             strike1: 34
             dip1: 50
-            frac_acc_30deg_pref: 7.04836565559697
+            frac_acc_30deg_pref: 3.0576100241049344
             url: http://mysite
             quality: Ba
-            rms_ang_diff_acc_pref: 3.0576100241049344
+            rms_ang_diff_acc_pref: 3.0205796992916243
             id_localspace: 182491
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
@@ -10815,18 +10818,18 @@ components:
               parameters: ToDo
               username: ew
             strike2: 218
-            azim_gap: 4.652396
+            azim_gap: 0.10263654
             localspace:
               environment: development
               name: hew1_mole
               description: Auto added
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
-            stdr: 3.0205796992916243
+            stdr: 7.740351818741173
             id: 14932631
             rake1: 88
             rake2: 93
-            nsta_polarity: 8
+            nsta_polarity: 4
           - momenttensor:
               iso: 0
               variance_reduction: 41.15
@@ -10856,7 +10859,7 @@ components:
                 id: 14932631
                 stations:
                 - sta: ACER
-                  azi: 5.5332584
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -10864,7 +10867,7 @@ components:
                   modified: 2016-06-22T16:52:06.26Z
                   vr: 0.88
                 - sta: ACER
-                  azi: 5.5332584
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -10893,14 +10896,14 @@ components:
               magnitudeid_out: 14932631
               clvd: 0.24
               originid_out: 14932631
-            misfit: 7.740351818741173
+            misfit: 8.969578798196912
             dip2: 40
             strike1: 34
             dip1: 50
-            frac_acc_30deg_pref: 7.04836565559697
+            frac_acc_30deg_pref: 3.0576100241049344
             url: http://mysite
             quality: Ba
-            rms_ang_diff_acc_pref: 3.0576100241049344
+            rms_ang_diff_acc_pref: 3.0205796992916243
             id_localspace: 182491
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
@@ -10918,18 +10921,18 @@ components:
               parameters: ToDo
               username: ew
             strike2: 218
-            azim_gap: 4.652396
+            azim_gap: 0.10263654
             localspace:
               environment: development
               name: hew1_mole
               description: Auto added
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
-            stdr: 3.0205796992916243
+            stdr: 7.740351818741173
             id: 14932631
             rake1: 88
             rake2: 93
-            nsta_polarity: 8
+            nsta_polarity: 4
           e1: 2.027123023002322
           e2_az: 1.0246457
           med_distance: 9.018348186070783
@@ -10944,7 +10947,7 @@ components:
             description: Auto added
             priority: 0
           type_origin:
-            version_value: 6
+            version_value: 7
             version_name: ew prelim
             name: hypocenter
             description: Auto added
@@ -11093,11 +11096,11 @@ components:
           id: 14932631
           magnitudes:
           - type_magnitude: ML
-            nsta: 0
+            nsta: 7
             stationmagnitudes:
             - type_magnitude: ML
               mag_correction: 0
-              err_mag: 6.519180951018382
+              err_mag: 7.058770351582356
               weight: 0.88
               is_used: false
               orig_distance_km: 161
@@ -11107,7 +11110,7 @@ components:
                 amp1: -0.358
                 sta: ACER
                 loc: "00"
-                period: 0.10263654006109402
+                period: 6.519180951018382
                 amp2: 0.292
                 type_amplitude:
                   unit: m/s
@@ -11149,7 +11152,7 @@ components:
               id: 14932631
             - type_magnitude: ML
               mag_correction: 0
-              err_mag: 6.519180951018382
+              err_mag: 7.058770351582356
               weight: 0.88
               is_used: false
               orig_distance_km: 161
@@ -11159,7 +11162,7 @@ components:
                 amp1: -0.358
                 sta: ACER
                 loc: "00"
-                period: 0.10263654006109402
+                period: 6.519180951018382
                 amp2: 0.292
                 type_amplitude:
                   unit: m/s
@@ -11202,10 +11205,10 @@ components:
             confidence_level: 68.3
             upper_uncertainty: 0.53
             mag_quality: BB
-            quality: 3.353193347011243
+            quality: 6.704019297950036
             id_localspace: 182491
             mag: 3.01
-            azimut: 7.143538
+            azimut: 3.0937452
             inserted: 2016-06-22T16:52:06.26Z
             nsta_used: 9
             provenance:
@@ -11222,7 +11225,7 @@ components:
               softwarename: software
               parameters: ToDo
               username: ew
-            min_distance: 3.0937452626664474
+            min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
               environment: development
@@ -11232,15 +11235,15 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             type_magnitude_priority: 0
-            ncha: 7
+            ncha: 0
             type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           - type_magnitude: ML
-            nsta: 0
+            nsta: 7
             stationmagnitudes:
             - type_magnitude: ML
               mag_correction: 0
-              err_mag: 6.519180951018382
+              err_mag: 7.058770351582356
               weight: 0.88
               is_used: false
               orig_distance_km: 161
@@ -11250,7 +11253,7 @@ components:
                 amp1: -0.358
                 sta: ACER
                 loc: "00"
-                period: 0.10263654006109402
+                period: 6.519180951018382
                 amp2: 0.292
                 type_amplitude:
                   unit: m/s
@@ -11292,7 +11295,7 @@ components:
               id: 14932631
             - type_magnitude: ML
               mag_correction: 0
-              err_mag: 6.519180951018382
+              err_mag: 7.058770351582356
               weight: 0.88
               is_used: false
               orig_distance_km: 161
@@ -11302,7 +11305,7 @@ components:
                 amp1: -0.358
                 sta: ACER
                 loc: "00"
-                period: 0.10263654006109402
+                period: 6.519180951018382
                 amp2: 0.292
                 type_amplitude:
                   unit: m/s
@@ -11345,10 +11348,10 @@ components:
             confidence_level: 68.3
             upper_uncertainty: 0.53
             mag_quality: BB
-            quality: 3.353193347011243
+            quality: 6.704019297950036
             id_localspace: 182491
             mag: 3.01
-            azimut: 7.143538
+            azimut: 3.0937452
             inserted: 2016-06-22T16:52:06.26Z
             nsta_used: 9
             provenance:
@@ -11365,7 +11368,7 @@ components:
               softwarename: software
               parameters: ToDo
               username: ew
-            min_distance: 3.0937452626664474
+            min_distance: 3.353193347011243
             ncha_used: 27
             localspace:
               environment: development
@@ -11375,7 +11378,7 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
             type_magnitude_priority: 0
-            ncha: 7
+            ncha: 0
             type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           e0_dip: 3.616076749251911
@@ -11419,7 +11422,7 @@ components:
                 id: 14932631
                 stations:
                 - sta: ACER
-                  azi: 5.5332584
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -11427,7 +11430,7 @@ components:
                   modified: 2016-06-22T16:52:06.26Z
                   vr: 0.88
                 - sta: ACER
-                  azi: 5.5332584
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -11456,14 +11459,14 @@ components:
               magnitudeid_out: 14932631
               clvd: 0.24
               originid_out: 14932631
-            misfit: 7.740351818741173
+            misfit: 8.969578798196912
             dip2: 40
             strike1: 34
             dip1: 50
-            frac_acc_30deg_pref: 7.04836565559697
+            frac_acc_30deg_pref: 3.0576100241049344
             url: http://mysite
             quality: Ba
-            rms_ang_diff_acc_pref: 3.0576100241049344
+            rms_ang_diff_acc_pref: 3.0205796992916243
             id_localspace: 182491
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
@@ -11481,18 +11484,18 @@ components:
               parameters: ToDo
               username: ew
             strike2: 218
-            azim_gap: 4.652396
+            azim_gap: 0.10263654
             localspace:
               environment: development
               name: hew1_mole
               description: Auto added
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
-            stdr: 3.0205796992916243
+            stdr: 7.740351818741173
             id: 14932631
             rake1: 88
             rake2: 93
-            nsta_polarity: 8
+            nsta_polarity: 4
           - momenttensor:
               iso: 0
               variance_reduction: 41.15
@@ -11522,7 +11525,7 @@ components:
                 id: 14932631
                 stations:
                 - sta: ACER
-                  azi: 5.5332584
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -11530,7 +11533,7 @@ components:
                   modified: 2016-06-22T16:52:06.26Z
                   vr: 0.88
                 - sta: ACER
-                  azi: 5.5332584
+                  azi: 7.0483656
                   r: 223.3
                   inserted: 2016-06-22T16:52:06.26Z
                   zcor: 0.88
@@ -11559,14 +11562,14 @@ components:
               magnitudeid_out: 14932631
               clvd: 0.24
               originid_out: 14932631
-            misfit: 7.740351818741173
+            misfit: 8.969578798196912
             dip2: 40
             strike1: 34
             dip1: 50
-            frac_acc_30deg_pref: 7.04836565559697
+            frac_acc_30deg_pref: 3.0576100241049344
             url: http://mysite
             quality: Ba
-            rms_ang_diff_acc_pref: 3.0576100241049344
+            rms_ang_diff_acc_pref: 3.0205796992916243
             id_localspace: 182491
             inserted: 2016-06-22T16:52:06.26Z
             provenance:
@@ -11584,18 +11587,18 @@ components:
               parameters: ToDo
               username: ew
             strike2: 218
-            azim_gap: 4.652396
+            azim_gap: 0.10263654
             localspace:
               environment: development
               name: hew1_mole
               description: Auto added
               priority: 0
             modified: 2016-06-22T16:52:06.26Z
-            stdr: 3.0205796992916243
+            stdr: 7.740351818741173
             id: 14932631
             rake1: 88
             rake2: 93
-            nsta_polarity: 8
+            nsta_polarity: 4
           e1: 2.027123023002322
           e2_az: 1.0246457
           med_distance: 9.018348186070783
@@ -11610,7 +11613,7 @@ components:
             description: Auto added
             priority: 0
           type_origin:
-            version_value: 6
+            version_value: 7
             version_name: ew prelim
             name: hypocenter
             description: Auto added
@@ -11856,11 +11859,11 @@ components:
         id: 14932631
         magnitudes:
         - type_magnitude: ML
-          nsta: 0
+          nsta: 7
           stationmagnitudes:
           - type_magnitude: ML
             mag_correction: 0
-            err_mag: 6.519180951018382
+            err_mag: 7.058770351582356
             weight: 0.88
             is_used: false
             orig_distance_km: 161
@@ -11870,7 +11873,7 @@ components:
               amp1: -0.358
               sta: ACER
               loc: "00"
-              period: 0.10263654006109402
+              period: 6.519180951018382
               amp2: 0.292
               type_amplitude:
                 unit: m/s
@@ -11912,7 +11915,7 @@ components:
             id: 14932631
           - type_magnitude: ML
             mag_correction: 0
-            err_mag: 6.519180951018382
+            err_mag: 7.058770351582356
             weight: 0.88
             is_used: false
             orig_distance_km: 161
@@ -11922,7 +11925,7 @@ components:
               amp1: -0.358
               sta: ACER
               loc: "00"
-              period: 0.10263654006109402
+              period: 6.519180951018382
               amp2: 0.292
               type_amplitude:
                 unit: m/s
@@ -11965,10 +11968,10 @@ components:
           confidence_level: 68.3
           upper_uncertainty: 0.53
           mag_quality: BB
-          quality: 3.353193347011243
+          quality: 6.704019297950036
           id_localspace: 182491
           mag: 3.01
-          azimut: 7.143538
+          azimut: 3.0937452
           inserted: 2016-06-22T16:52:06.26Z
           nsta_used: 9
           provenance:
@@ -11985,7 +11988,7 @@ components:
             softwarename: software
             parameters: ToDo
             username: ew
-          min_distance: 3.0937452626664474
+          min_distance: 3.353193347011243
           ncha_used: 27
           localspace:
             environment: development
@@ -11995,15 +11998,15 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           type_magnitude_priority: 0
-          ncha: 7
+          ncha: 0
           type_magnitude_extended: ML-VAX
           lower_uncertainty: 0.52
         - type_magnitude: ML
-          nsta: 0
+          nsta: 7
           stationmagnitudes:
           - type_magnitude: ML
             mag_correction: 0
-            err_mag: 6.519180951018382
+            err_mag: 7.058770351582356
             weight: 0.88
             is_used: false
             orig_distance_km: 161
@@ -12013,7 +12016,7 @@ components:
               amp1: -0.358
               sta: ACER
               loc: "00"
-              period: 0.10263654006109402
+              period: 6.519180951018382
               amp2: 0.292
               type_amplitude:
                 unit: m/s
@@ -12055,7 +12058,7 @@ components:
             id: 14932631
           - type_magnitude: ML
             mag_correction: 0
-            err_mag: 6.519180951018382
+            err_mag: 7.058770351582356
             weight: 0.88
             is_used: false
             orig_distance_km: 161
@@ -12065,7 +12068,7 @@ components:
               amp1: -0.358
               sta: ACER
               loc: "00"
-              period: 0.10263654006109402
+              period: 6.519180951018382
               amp2: 0.292
               type_amplitude:
                 unit: m/s
@@ -12108,10 +12111,10 @@ components:
           confidence_level: 68.3
           upper_uncertainty: 0.53
           mag_quality: BB
-          quality: 3.353193347011243
+          quality: 6.704019297950036
           id_localspace: 182491
           mag: 3.01
-          azimut: 7.143538
+          azimut: 3.0937452
           inserted: 2016-06-22T16:52:06.26Z
           nsta_used: 9
           provenance:
@@ -12128,7 +12131,7 @@ components:
             softwarename: software
             parameters: ToDo
             username: ew
-          min_distance: 3.0937452626664474
+          min_distance: 3.353193347011243
           ncha_used: 27
           localspace:
             environment: development
@@ -12138,7 +12141,7 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
           type_magnitude_priority: 0
-          ncha: 7
+          ncha: 0
           type_magnitude_extended: ML-VAX
           lower_uncertainty: 0.52
         e0_dip: 3.616076749251911
@@ -12182,7 +12185,7 @@ components:
               id: 14932631
               stations:
               - sta: ACER
-                azi: 5.5332584
+                azi: 7.0483656
                 r: 223.3
                 inserted: 2016-06-22T16:52:06.26Z
                 zcor: 0.88
@@ -12190,7 +12193,7 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 vr: 0.88
               - sta: ACER
-                azi: 5.5332584
+                azi: 7.0483656
                 r: 223.3
                 inserted: 2016-06-22T16:52:06.26Z
                 zcor: 0.88
@@ -12219,14 +12222,14 @@ components:
             magnitudeid_out: 14932631
             clvd: 0.24
             originid_out: 14932631
-          misfit: 7.740351818741173
+          misfit: 8.969578798196912
           dip2: 40
           strike1: 34
           dip1: 50
-          frac_acc_30deg_pref: 7.04836565559697
+          frac_acc_30deg_pref: 3.0576100241049344
           url: http://mysite
           quality: Ba
-          rms_ang_diff_acc_pref: 3.0576100241049344
+          rms_ang_diff_acc_pref: 3.0205796992916243
           id_localspace: 182491
           inserted: 2016-06-22T16:52:06.26Z
           provenance:
@@ -12244,18 +12247,18 @@ components:
             parameters: ToDo
             username: ew
           strike2: 218
-          azim_gap: 4.652396
+          azim_gap: 0.10263654
           localspace:
             environment: development
             name: hew1_mole
             description: Auto added
             priority: 0
           modified: 2016-06-22T16:52:06.26Z
-          stdr: 3.0205796992916243
+          stdr: 7.740351818741173
           id: 14932631
           rake1: 88
           rake2: 93
-          nsta_polarity: 8
+          nsta_polarity: 4
         - momenttensor:
             iso: 0
             variance_reduction: 41.15
@@ -12285,7 +12288,7 @@ components:
               id: 14932631
               stations:
               - sta: ACER
-                azi: 5.5332584
+                azi: 7.0483656
                 r: 223.3
                 inserted: 2016-06-22T16:52:06.26Z
                 zcor: 0.88
@@ -12293,7 +12296,7 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 vr: 0.88
               - sta: ACER
-                azi: 5.5332584
+                azi: 7.0483656
                 r: 223.3
                 inserted: 2016-06-22T16:52:06.26Z
                 zcor: 0.88
@@ -12322,14 +12325,14 @@ components:
             magnitudeid_out: 14932631
             clvd: 0.24
             originid_out: 14932631
-          misfit: 7.740351818741173
+          misfit: 8.969578798196912
           dip2: 40
           strike1: 34
           dip1: 50
-          frac_acc_30deg_pref: 7.04836565559697
+          frac_acc_30deg_pref: 3.0576100241049344
           url: http://mysite
           quality: Ba
-          rms_ang_diff_acc_pref: 3.0576100241049344
+          rms_ang_diff_acc_pref: 3.0205796992916243
           id_localspace: 182491
           inserted: 2016-06-22T16:52:06.26Z
           provenance:
@@ -12347,18 +12350,18 @@ components:
             parameters: ToDo
             username: ew
           strike2: 218
-          azim_gap: 4.652396
+          azim_gap: 0.10263654
           localspace:
             environment: development
             name: hew1_mole
             description: Auto added
             priority: 0
           modified: 2016-06-22T16:52:06.26Z
-          stdr: 3.0205796992916243
+          stdr: 7.740351818741173
           id: 14932631
           rake1: 88
           rake2: 93
-          nsta_polarity: 8
+          nsta_polarity: 4
         e1: 2.027123023002322
         e2_az: 1.0246457
         med_distance: 9.018348186070783
@@ -12373,7 +12376,7 @@ components:
           description: Auto added
           priority: 0
         type_origin:
-          version_value: 6
+          version_value: 7
           version_name: ew prelim
           name: hypocenter
           description: Auto added
@@ -12671,7 +12674,7 @@ components:
           type: array
     ObjectTypeOrigin:
       example:
-        version_value: 6
+        version_value: 7
         version_name: ew prelim
         name: hypocenter
         description: Auto added
@@ -12706,10 +12709,6 @@ components:
       - name
       type: object
     ObjectTypeOriginForVw:
-      example:
-        version_value: 7
-        version_name: ew prelim
-        name: hypocenter
       properties:
         name:
           $ref: '#/components/schemas/type_origin__name'
@@ -12884,11 +12883,11 @@ components:
     ObjectMagnitude:
       example:
         type_magnitude: ML
-        nsta: 0
+        nsta: 7
         stationmagnitudes:
         - type_magnitude: ML
           mag_correction: 0
-          err_mag: 6.519180951018382
+          err_mag: 7.058770351582356
           weight: 0.88
           is_used: false
           orig_distance_km: 161
@@ -12898,7 +12897,7 @@ components:
             amp1: -0.358
             sta: ACER
             loc: "00"
-            period: 0.10263654006109402
+            period: 6.519180951018382
             amp2: 0.292
             type_amplitude:
               unit: m/s
@@ -12940,7 +12939,7 @@ components:
           id: 14932631
         - type_magnitude: ML
           mag_correction: 0
-          err_mag: 6.519180951018382
+          err_mag: 7.058770351582356
           weight: 0.88
           is_used: false
           orig_distance_km: 161
@@ -12950,7 +12949,7 @@ components:
             amp1: -0.358
             sta: ACER
             loc: "00"
-            period: 0.10263654006109402
+            period: 6.519180951018382
             amp2: 0.292
             type_amplitude:
               unit: m/s
@@ -12993,10 +12992,10 @@ components:
         confidence_level: 68.3
         upper_uncertainty: 0.53
         mag_quality: BB
-        quality: 3.353193347011243
+        quality: 6.704019297950036
         id_localspace: 182491
         mag: 3.01
-        azimut: 7.143538
+        azimut: 3.0937452
         inserted: 2016-06-22T16:52:06.26Z
         nsta_used: 9
         provenance:
@@ -13013,7 +13012,7 @@ components:
           softwarename: software
           parameters: ToDo
           username: ew
-        min_distance: 3.0937452626664474
+        min_distance: 3.353193347011243
         ncha_used: 27
         localspace:
           environment: development
@@ -13023,7 +13022,7 @@ components:
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
         type_magnitude_priority: 0
-        ncha: 7
+        ncha: 0
         type_magnitude_extended: ML-VAX
         lower_uncertainty: 0.52
       properties:
@@ -13183,7 +13182,7 @@ components:
             id: 14932631
             stations:
             - sta: ACER
-              azi: 5.5332584
+              azi: 7.0483656
               r: 223.3
               inserted: 2016-06-22T16:52:06.26Z
               zcor: 0.88
@@ -13191,7 +13190,7 @@ components:
               modified: 2016-06-22T16:52:06.26Z
               vr: 0.88
             - sta: ACER
-              azi: 5.5332584
+              azi: 7.0483656
               r: 223.3
               inserted: 2016-06-22T16:52:06.26Z
               zcor: 0.88
@@ -13220,14 +13219,14 @@ components:
           magnitudeid_out: 14932631
           clvd: 0.24
           originid_out: 14932631
-        misfit: 7.740351818741173
+        misfit: 8.969578798196912
         dip2: 40
         strike1: 34
         dip1: 50
-        frac_acc_30deg_pref: 7.04836565559697
+        frac_acc_30deg_pref: 3.0576100241049344
         url: http://mysite
         quality: Ba
-        rms_ang_diff_acc_pref: 3.0576100241049344
+        rms_ang_diff_acc_pref: 3.0205796992916243
         id_localspace: 182491
         inserted: 2016-06-22T16:52:06.26Z
         provenance:
@@ -13245,18 +13244,18 @@ components:
           parameters: ToDo
           username: ew
         strike2: 218
-        azim_gap: 4.652396
+        azim_gap: 0.10263654
         localspace:
           environment: development
           name: hew1_mole
           description: Auto added
           priority: 0
         modified: 2016-06-22T16:52:06.26Z
-        stdr: 3.0205796992916243
+        stdr: 7.740351818741173
         id: 14932631
         rake1: 88
         rake2: 93
-        nsta_polarity: 8
+        nsta_polarity: 4
       properties:
         id:
           description: Unique incremental id | bigint(20)
@@ -13420,7 +13419,7 @@ components:
           id: 14932631
           stations:
           - sta: ACER
-            azi: 5.5332584
+            azi: 7.0483656
             r: 223.3
             inserted: 2016-06-22T16:52:06.26Z
             zcor: 0.88
@@ -13428,7 +13427,7 @@ components:
             modified: 2016-06-22T16:52:06.26Z
             vr: 0.88
           - sta: ACER
-            azi: 5.5332584
+            azi: 7.0483656
             r: 223.3
             inserted: 2016-06-22T16:52:06.26Z
             zcor: 0.88
@@ -13779,7 +13778,7 @@ components:
         amp1: -0.358
         sta: ACER
         loc: "00"
-        period: 0.10263654006109402
+        period: 6.519180951018382
         amp2: 0.292
         type_amplitude:
           unit: m/s
@@ -13911,7 +13910,7 @@ components:
       example:
         type_magnitude: ML
         mag_correction: 0
-        err_mag: 6.519180951018382
+        err_mag: 7.058770351582356
         weight: 0.88
         is_used: false
         orig_distance_km: 161
@@ -13921,7 +13920,7 @@ components:
           amp1: -0.358
           sta: ACER
           loc: "00"
-          period: 0.10263654006109402
+          period: 6.519180951018382
           amp2: 0.292
           type_amplitude:
             unit: m/s
@@ -14319,6 +14318,8 @@ components:
           version_value: 7
           version_name: ew prelim
           name: hypocenter
+          description: Auto added
+          priority: 0
         region: Norcia
         lat: 45.492599
         associatedPhaseCount: 1
@@ -14438,7 +14439,7 @@ components:
           readOnly: true
           type: string
         type_origin:
-          $ref: '#/components/schemas/ObjectTypeOriginForVw'
+          $ref: '#/components/schemas/ObjectTypeOrigin'
         localspace:
           $ref: '#/components/schemas/ObjectLocalspaceForVw'
         provenance:
@@ -14483,6 +14484,7 @@ components:
           name: hew1_mole
         modified: 2016-06-22T16:52:06.26Z
         id: 14932631
+        type_magnitude_extended: ML-VAX
         lower_uncertainty: 0.52
       properties:
         id:
@@ -14505,6 +14507,10 @@ components:
           description: "Type Scale of the magnitude, international scale label (i.e.\
             \ ML, Md, Mw, ...) | varchar(50)"
           example: ML
+          type: string
+        type_magnitude_extended:
+          description: Type of the magnitude | varchar(255)
+          example: ML-VAX
           type: string
         lower_uncertainty:
           description: Magnitude lower_uncertainty | double
@@ -15818,6 +15824,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15856,6 +15864,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -15891,6 +15900,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -15929,6 +15940,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -15997,6 +16009,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -16036,6 +16050,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -16071,6 +16086,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -16110,6 +16127,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -16237,6 +16255,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -16276,6 +16296,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -16311,6 +16332,8 @@ components:
               version_value: 7
               version_name: ew prelim
               name: hypocenter
+              description: Auto added
+              priority: 0
             region: Norcia
             lat: 45.492599
             associatedPhaseCount: 1
@@ -16350,6 +16373,7 @@ components:
               name: hew1_mole
             modified: 2016-06-22T16:52:06.26Z
             id: 14932631
+            type_magnitude_extended: ML-VAX
             lower_uncertainty: 0.52
           id: 14932631
           event_group_id: 0
@@ -16899,11 +16923,11 @@ components:
             id: 14932631
             magnitudes:
             - type_magnitude: ML
-              nsta: 0
+              nsta: 7
               stationmagnitudes:
               - type_magnitude: ML
                 mag_correction: 0
-                err_mag: 6.519180951018382
+                err_mag: 7.058770351582356
                 weight: 0.88
                 is_used: false
                 orig_distance_km: 161
@@ -16913,7 +16937,7 @@ components:
                   amp1: -0.358
                   sta: ACER
                   loc: "00"
-                  period: 0.10263654006109402
+                  period: 6.519180951018382
                   amp2: 0.292
                   type_amplitude:
                     unit: m/s
@@ -16955,7 +16979,7 @@ components:
                 id: 14932631
               - type_magnitude: ML
                 mag_correction: 0
-                err_mag: 6.519180951018382
+                err_mag: 7.058770351582356
                 weight: 0.88
                 is_used: false
                 orig_distance_km: 161
@@ -16965,7 +16989,7 @@ components:
                   amp1: -0.358
                   sta: ACER
                   loc: "00"
-                  period: 0.10263654006109402
+                  period: 6.519180951018382
                   amp2: 0.292
                   type_amplitude:
                     unit: m/s
@@ -17008,10 +17032,10 @@ components:
               confidence_level: 68.3
               upper_uncertainty: 0.53
               mag_quality: BB
-              quality: 3.353193347011243
+              quality: 6.704019297950036
               id_localspace: 182491
               mag: 3.01
-              azimut: 7.143538
+              azimut: 3.0937452
               inserted: 2016-06-22T16:52:06.26Z
               nsta_used: 9
               provenance:
@@ -17028,7 +17052,7 @@ components:
                 softwarename: software
                 parameters: ToDo
                 username: ew
-              min_distance: 3.0937452626664474
+              min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
                 environment: development
@@ -17038,15 +17062,15 @@ components:
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               type_magnitude_priority: 0
-              ncha: 7
+              ncha: 0
               type_magnitude_extended: ML-VAX
               lower_uncertainty: 0.52
             - type_magnitude: ML
-              nsta: 0
+              nsta: 7
               stationmagnitudes:
               - type_magnitude: ML
                 mag_correction: 0
-                err_mag: 6.519180951018382
+                err_mag: 7.058770351582356
                 weight: 0.88
                 is_used: false
                 orig_distance_km: 161
@@ -17056,7 +17080,7 @@ components:
                   amp1: -0.358
                   sta: ACER
                   loc: "00"
-                  period: 0.10263654006109402
+                  period: 6.519180951018382
                   amp2: 0.292
                   type_amplitude:
                     unit: m/s
@@ -17098,7 +17122,7 @@ components:
                 id: 14932631
               - type_magnitude: ML
                 mag_correction: 0
-                err_mag: 6.519180951018382
+                err_mag: 7.058770351582356
                 weight: 0.88
                 is_used: false
                 orig_distance_km: 161
@@ -17108,7 +17132,7 @@ components:
                   amp1: -0.358
                   sta: ACER
                   loc: "00"
-                  period: 0.10263654006109402
+                  period: 6.519180951018382
                   amp2: 0.292
                   type_amplitude:
                     unit: m/s
@@ -17151,10 +17175,10 @@ components:
               confidence_level: 68.3
               upper_uncertainty: 0.53
               mag_quality: BB
-              quality: 3.353193347011243
+              quality: 6.704019297950036
               id_localspace: 182491
               mag: 3.01
-              azimut: 7.143538
+              azimut: 3.0937452
               inserted: 2016-06-22T16:52:06.26Z
               nsta_used: 9
               provenance:
@@ -17171,7 +17195,7 @@ components:
                 softwarename: software
                 parameters: ToDo
                 username: ew
-              min_distance: 3.0937452626664474
+              min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
                 environment: development
@@ -17181,7 +17205,7 @@ components:
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               type_magnitude_priority: 0
-              ncha: 7
+              ncha: 0
               type_magnitude_extended: ML-VAX
               lower_uncertainty: 0.52
             e0_dip: 3.616076749251911
@@ -17225,7 +17249,7 @@ components:
                   id: 14932631
                   stations:
                   - sta: ACER
-                    azi: 5.5332584
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -17233,7 +17257,7 @@ components:
                     modified: 2016-06-22T16:52:06.26Z
                     vr: 0.88
                   - sta: ACER
-                    azi: 5.5332584
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -17262,14 +17286,14 @@ components:
                 magnitudeid_out: 14932631
                 clvd: 0.24
                 originid_out: 14932631
-              misfit: 7.740351818741173
+              misfit: 8.969578798196912
               dip2: 40
               strike1: 34
               dip1: 50
-              frac_acc_30deg_pref: 7.04836565559697
+              frac_acc_30deg_pref: 3.0576100241049344
               url: http://mysite
               quality: Ba
-              rms_ang_diff_acc_pref: 3.0576100241049344
+              rms_ang_diff_acc_pref: 3.0205796992916243
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -17287,18 +17311,18 @@ components:
                 parameters: ToDo
                 username: ew
               strike2: 218
-              azim_gap: 4.652396
+              azim_gap: 0.10263654
               localspace:
                 environment: development
                 name: hew1_mole
                 description: Auto added
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
-              stdr: 3.0205796992916243
+              stdr: 7.740351818741173
               id: 14932631
               rake1: 88
               rake2: 93
-              nsta_polarity: 8
+              nsta_polarity: 4
             - momenttensor:
                 iso: 0
                 variance_reduction: 41.15
@@ -17328,7 +17352,7 @@ components:
                   id: 14932631
                   stations:
                   - sta: ACER
-                    azi: 5.5332584
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -17336,7 +17360,7 @@ components:
                     modified: 2016-06-22T16:52:06.26Z
                     vr: 0.88
                   - sta: ACER
-                    azi: 5.5332584
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -17365,14 +17389,14 @@ components:
                 magnitudeid_out: 14932631
                 clvd: 0.24
                 originid_out: 14932631
-              misfit: 7.740351818741173
+              misfit: 8.969578798196912
               dip2: 40
               strike1: 34
               dip1: 50
-              frac_acc_30deg_pref: 7.04836565559697
+              frac_acc_30deg_pref: 3.0576100241049344
               url: http://mysite
               quality: Ba
-              rms_ang_diff_acc_pref: 3.0576100241049344
+              rms_ang_diff_acc_pref: 3.0205796992916243
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -17390,18 +17414,18 @@ components:
                 parameters: ToDo
                 username: ew
               strike2: 218
-              azim_gap: 4.652396
+              azim_gap: 0.10263654
               localspace:
                 environment: development
                 name: hew1_mole
                 description: Auto added
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
-              stdr: 3.0205796992916243
+              stdr: 7.740351818741173
               id: 14932631
               rake1: 88
               rake2: 93
-              nsta_polarity: 8
+              nsta_polarity: 4
             e1: 2.027123023002322
             e2_az: 1.0246457
             med_distance: 9.018348186070783
@@ -17416,7 +17440,7 @@ components:
               description: Auto added
               priority: 0
             type_origin:
-              version_value: 6
+              version_value: 7
               version_name: ew prelim
               name: hypocenter
               description: Auto added
@@ -17565,11 +17589,11 @@ components:
             id: 14932631
             magnitudes:
             - type_magnitude: ML
-              nsta: 0
+              nsta: 7
               stationmagnitudes:
               - type_magnitude: ML
                 mag_correction: 0
-                err_mag: 6.519180951018382
+                err_mag: 7.058770351582356
                 weight: 0.88
                 is_used: false
                 orig_distance_km: 161
@@ -17579,7 +17603,7 @@ components:
                   amp1: -0.358
                   sta: ACER
                   loc: "00"
-                  period: 0.10263654006109402
+                  period: 6.519180951018382
                   amp2: 0.292
                   type_amplitude:
                     unit: m/s
@@ -17621,7 +17645,7 @@ components:
                 id: 14932631
               - type_magnitude: ML
                 mag_correction: 0
-                err_mag: 6.519180951018382
+                err_mag: 7.058770351582356
                 weight: 0.88
                 is_used: false
                 orig_distance_km: 161
@@ -17631,7 +17655,7 @@ components:
                   amp1: -0.358
                   sta: ACER
                   loc: "00"
-                  period: 0.10263654006109402
+                  period: 6.519180951018382
                   amp2: 0.292
                   type_amplitude:
                     unit: m/s
@@ -17674,10 +17698,10 @@ components:
               confidence_level: 68.3
               upper_uncertainty: 0.53
               mag_quality: BB
-              quality: 3.353193347011243
+              quality: 6.704019297950036
               id_localspace: 182491
               mag: 3.01
-              azimut: 7.143538
+              azimut: 3.0937452
               inserted: 2016-06-22T16:52:06.26Z
               nsta_used: 9
               provenance:
@@ -17694,7 +17718,7 @@ components:
                 softwarename: software
                 parameters: ToDo
                 username: ew
-              min_distance: 3.0937452626664474
+              min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
                 environment: development
@@ -17704,15 +17728,15 @@ components:
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               type_magnitude_priority: 0
-              ncha: 7
+              ncha: 0
               type_magnitude_extended: ML-VAX
               lower_uncertainty: 0.52
             - type_magnitude: ML
-              nsta: 0
+              nsta: 7
               stationmagnitudes:
               - type_magnitude: ML
                 mag_correction: 0
-                err_mag: 6.519180951018382
+                err_mag: 7.058770351582356
                 weight: 0.88
                 is_used: false
                 orig_distance_km: 161
@@ -17722,7 +17746,7 @@ components:
                   amp1: -0.358
                   sta: ACER
                   loc: "00"
-                  period: 0.10263654006109402
+                  period: 6.519180951018382
                   amp2: 0.292
                   type_amplitude:
                     unit: m/s
@@ -17764,7 +17788,7 @@ components:
                 id: 14932631
               - type_magnitude: ML
                 mag_correction: 0
-                err_mag: 6.519180951018382
+                err_mag: 7.058770351582356
                 weight: 0.88
                 is_used: false
                 orig_distance_km: 161
@@ -17774,7 +17798,7 @@ components:
                   amp1: -0.358
                   sta: ACER
                   loc: "00"
-                  period: 0.10263654006109402
+                  period: 6.519180951018382
                   amp2: 0.292
                   type_amplitude:
                     unit: m/s
@@ -17817,10 +17841,10 @@ components:
               confidence_level: 68.3
               upper_uncertainty: 0.53
               mag_quality: BB
-              quality: 3.353193347011243
+              quality: 6.704019297950036
               id_localspace: 182491
               mag: 3.01
-              azimut: 7.143538
+              azimut: 3.0937452
               inserted: 2016-06-22T16:52:06.26Z
               nsta_used: 9
               provenance:
@@ -17837,7 +17861,7 @@ components:
                 softwarename: software
                 parameters: ToDo
                 username: ew
-              min_distance: 3.0937452626664474
+              min_distance: 3.353193347011243
               ncha_used: 27
               localspace:
                 environment: development
@@ -17847,7 +17871,7 @@ components:
               modified: 2016-06-22T16:52:06.26Z
               id: 14932631
               type_magnitude_priority: 0
-              ncha: 7
+              ncha: 0
               type_magnitude_extended: ML-VAX
               lower_uncertainty: 0.52
             e0_dip: 3.616076749251911
@@ -17891,7 +17915,7 @@ components:
                   id: 14932631
                   stations:
                   - sta: ACER
-                    azi: 5.5332584
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -17899,7 +17923,7 @@ components:
                     modified: 2016-06-22T16:52:06.26Z
                     vr: 0.88
                   - sta: ACER
-                    azi: 5.5332584
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -17928,14 +17952,14 @@ components:
                 magnitudeid_out: 14932631
                 clvd: 0.24
                 originid_out: 14932631
-              misfit: 7.740351818741173
+              misfit: 8.969578798196912
               dip2: 40
               strike1: 34
               dip1: 50
-              frac_acc_30deg_pref: 7.04836565559697
+              frac_acc_30deg_pref: 3.0576100241049344
               url: http://mysite
               quality: Ba
-              rms_ang_diff_acc_pref: 3.0576100241049344
+              rms_ang_diff_acc_pref: 3.0205796992916243
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -17953,18 +17977,18 @@ components:
                 parameters: ToDo
                 username: ew
               strike2: 218
-              azim_gap: 4.652396
+              azim_gap: 0.10263654
               localspace:
                 environment: development
                 name: hew1_mole
                 description: Auto added
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
-              stdr: 3.0205796992916243
+              stdr: 7.740351818741173
               id: 14932631
               rake1: 88
               rake2: 93
-              nsta_polarity: 8
+              nsta_polarity: 4
             - momenttensor:
                 iso: 0
                 variance_reduction: 41.15
@@ -17994,7 +18018,7 @@ components:
                   id: 14932631
                   stations:
                   - sta: ACER
-                    azi: 5.5332584
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -18002,7 +18026,7 @@ components:
                     modified: 2016-06-22T16:52:06.26Z
                     vr: 0.88
                   - sta: ACER
-                    azi: 5.5332584
+                    azi: 7.0483656
                     r: 223.3
                     inserted: 2016-06-22T16:52:06.26Z
                     zcor: 0.88
@@ -18031,14 +18055,14 @@ components:
                 magnitudeid_out: 14932631
                 clvd: 0.24
                 originid_out: 14932631
-              misfit: 7.740351818741173
+              misfit: 8.969578798196912
               dip2: 40
               strike1: 34
               dip1: 50
-              frac_acc_30deg_pref: 7.04836565559697
+              frac_acc_30deg_pref: 3.0576100241049344
               url: http://mysite
               quality: Ba
-              rms_ang_diff_acc_pref: 3.0576100241049344
+              rms_ang_diff_acc_pref: 3.0205796992916243
               id_localspace: 182491
               inserted: 2016-06-22T16:52:06.26Z
               provenance:
@@ -18056,18 +18080,18 @@ components:
                 parameters: ToDo
                 username: ew
               strike2: 218
-              azim_gap: 4.652396
+              azim_gap: 0.10263654
               localspace:
                 environment: development
                 name: hew1_mole
                 description: Auto added
                 priority: 0
               modified: 2016-06-22T16:52:06.26Z
-              stdr: 3.0205796992916243
+              stdr: 7.740351818741173
               id: 14932631
               rake1: 88
               rake2: 93
-              nsta_polarity: 8
+              nsta_polarity: 4
             e1: 2.027123023002322
             e2_az: 1.0246457
             med_distance: 9.018348186070783
@@ -18082,7 +18106,7 @@ components:
               description: Auto added
               priority: 0
             type_origin:
-              version_value: 6
+              version_value: 7
               version_name: ew prelim
               name: hypocenter
               description: Auto added
@@ -18362,11 +18386,11 @@ components:
               id: 14932631
               magnitudes:
               - type_magnitude: ML
-                nsta: 0
+                nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML
                   mag_correction: 0
-                  err_mag: 6.519180951018382
+                  err_mag: 7.058770351582356
                   weight: 0.88
                   is_used: false
                   orig_distance_km: 161
@@ -18376,7 +18400,7 @@ components:
                     amp1: -0.358
                     sta: ACER
                     loc: "00"
-                    period: 0.10263654006109402
+                    period: 6.519180951018382
                     amp2: 0.292
                     type_amplitude:
                       unit: m/s
@@ -18418,7 +18442,7 @@ components:
                   id: 14932631
                 - type_magnitude: ML
                   mag_correction: 0
-                  err_mag: 6.519180951018382
+                  err_mag: 7.058770351582356
                   weight: 0.88
                   is_used: false
                   orig_distance_km: 161
@@ -18428,7 +18452,7 @@ components:
                     amp1: -0.358
                     sta: ACER
                     loc: "00"
-                    period: 0.10263654006109402
+                    period: 6.519180951018382
                     amp2: 0.292
                     type_amplitude:
                       unit: m/s
@@ -18471,10 +18495,10 @@ components:
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
                 mag_quality: BB
-                quality: 3.353193347011243
+                quality: 6.704019297950036
                 id_localspace: 182491
                 mag: 3.01
-                azimut: 7.143538
+                azimut: 3.0937452
                 inserted: 2016-06-22T16:52:06.26Z
                 nsta_used: 9
                 provenance:
@@ -18491,7 +18515,7 @@ components:
                   softwarename: software
                   parameters: ToDo
                   username: ew
-                min_distance: 3.0937452626664474
+                min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
                   environment: development
@@ -18501,15 +18525,15 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 type_magnitude_priority: 0
-                ncha: 7
+                ncha: 0
                 type_magnitude_extended: ML-VAX
                 lower_uncertainty: 0.52
               - type_magnitude: ML
-                nsta: 0
+                nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML
                   mag_correction: 0
-                  err_mag: 6.519180951018382
+                  err_mag: 7.058770351582356
                   weight: 0.88
                   is_used: false
                   orig_distance_km: 161
@@ -18519,7 +18543,7 @@ components:
                     amp1: -0.358
                     sta: ACER
                     loc: "00"
-                    period: 0.10263654006109402
+                    period: 6.519180951018382
                     amp2: 0.292
                     type_amplitude:
                       unit: m/s
@@ -18561,7 +18585,7 @@ components:
                   id: 14932631
                 - type_magnitude: ML
                   mag_correction: 0
-                  err_mag: 6.519180951018382
+                  err_mag: 7.058770351582356
                   weight: 0.88
                   is_used: false
                   orig_distance_km: 161
@@ -18571,7 +18595,7 @@ components:
                     amp1: -0.358
                     sta: ACER
                     loc: "00"
-                    period: 0.10263654006109402
+                    period: 6.519180951018382
                     amp2: 0.292
                     type_amplitude:
                       unit: m/s
@@ -18614,10 +18638,10 @@ components:
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
                 mag_quality: BB
-                quality: 3.353193347011243
+                quality: 6.704019297950036
                 id_localspace: 182491
                 mag: 3.01
-                azimut: 7.143538
+                azimut: 3.0937452
                 inserted: 2016-06-22T16:52:06.26Z
                 nsta_used: 9
                 provenance:
@@ -18634,7 +18658,7 @@ components:
                   softwarename: software
                   parameters: ToDo
                   username: ew
-                min_distance: 3.0937452626664474
+                min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
                   environment: development
@@ -18644,7 +18668,7 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 type_magnitude_priority: 0
-                ncha: 7
+                ncha: 0
                 type_magnitude_extended: ML-VAX
                 lower_uncertainty: 0.52
               e0_dip: 3.616076749251911
@@ -18688,7 +18712,7 @@ components:
                     id: 14932631
                     stations:
                     - sta: ACER
-                      azi: 5.5332584
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -18696,7 +18720,7 @@ components:
                       modified: 2016-06-22T16:52:06.26Z
                       vr: 0.88
                     - sta: ACER
-                      azi: 5.5332584
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -18725,14 +18749,14 @@ components:
                   magnitudeid_out: 14932631
                   clvd: 0.24
                   originid_out: 14932631
-                misfit: 7.740351818741173
+                misfit: 8.969578798196912
                 dip2: 40
                 strike1: 34
                 dip1: 50
-                frac_acc_30deg_pref: 7.04836565559697
+                frac_acc_30deg_pref: 3.0576100241049344
                 url: http://mysite
                 quality: Ba
-                rms_ang_diff_acc_pref: 3.0576100241049344
+                rms_ang_diff_acc_pref: 3.0205796992916243
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -18750,18 +18774,18 @@ components:
                   parameters: ToDo
                   username: ew
                 strike2: 218
-                azim_gap: 4.652396
+                azim_gap: 0.10263654
                 localspace:
                   environment: development
                   name: hew1_mole
                   description: Auto added
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
-                stdr: 3.0205796992916243
+                stdr: 7.740351818741173
                 id: 14932631
                 rake1: 88
                 rake2: 93
-                nsta_polarity: 8
+                nsta_polarity: 4
               - momenttensor:
                   iso: 0
                   variance_reduction: 41.15
@@ -18791,7 +18815,7 @@ components:
                     id: 14932631
                     stations:
                     - sta: ACER
-                      azi: 5.5332584
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -18799,7 +18823,7 @@ components:
                       modified: 2016-06-22T16:52:06.26Z
                       vr: 0.88
                     - sta: ACER
-                      azi: 5.5332584
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -18828,14 +18852,14 @@ components:
                   magnitudeid_out: 14932631
                   clvd: 0.24
                   originid_out: 14932631
-                misfit: 7.740351818741173
+                misfit: 8.969578798196912
                 dip2: 40
                 strike1: 34
                 dip1: 50
-                frac_acc_30deg_pref: 7.04836565559697
+                frac_acc_30deg_pref: 3.0576100241049344
                 url: http://mysite
                 quality: Ba
-                rms_ang_diff_acc_pref: 3.0576100241049344
+                rms_ang_diff_acc_pref: 3.0205796992916243
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -18853,18 +18877,18 @@ components:
                   parameters: ToDo
                   username: ew
                 strike2: 218
-                azim_gap: 4.652396
+                azim_gap: 0.10263654
                 localspace:
                   environment: development
                   name: hew1_mole
                   description: Auto added
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
-                stdr: 3.0205796992916243
+                stdr: 7.740351818741173
                 id: 14932631
                 rake1: 88
                 rake2: 93
-                nsta_polarity: 8
+                nsta_polarity: 4
               e1: 2.027123023002322
               e2_az: 1.0246457
               med_distance: 9.018348186070783
@@ -18879,7 +18903,7 @@ components:
                 description: Auto added
                 priority: 0
               type_origin:
-                version_value: 6
+                version_value: 7
                 version_name: ew prelim
                 name: hypocenter
                 description: Auto added
@@ -19028,11 +19052,11 @@ components:
               id: 14932631
               magnitudes:
               - type_magnitude: ML
-                nsta: 0
+                nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML
                   mag_correction: 0
-                  err_mag: 6.519180951018382
+                  err_mag: 7.058770351582356
                   weight: 0.88
                   is_used: false
                   orig_distance_km: 161
@@ -19042,7 +19066,7 @@ components:
                     amp1: -0.358
                     sta: ACER
                     loc: "00"
-                    period: 0.10263654006109402
+                    period: 6.519180951018382
                     amp2: 0.292
                     type_amplitude:
                       unit: m/s
@@ -19084,7 +19108,7 @@ components:
                   id: 14932631
                 - type_magnitude: ML
                   mag_correction: 0
-                  err_mag: 6.519180951018382
+                  err_mag: 7.058770351582356
                   weight: 0.88
                   is_used: false
                   orig_distance_km: 161
@@ -19094,7 +19118,7 @@ components:
                     amp1: -0.358
                     sta: ACER
                     loc: "00"
-                    period: 0.10263654006109402
+                    period: 6.519180951018382
                     amp2: 0.292
                     type_amplitude:
                       unit: m/s
@@ -19137,10 +19161,10 @@ components:
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
                 mag_quality: BB
-                quality: 3.353193347011243
+                quality: 6.704019297950036
                 id_localspace: 182491
                 mag: 3.01
-                azimut: 7.143538
+                azimut: 3.0937452
                 inserted: 2016-06-22T16:52:06.26Z
                 nsta_used: 9
                 provenance:
@@ -19157,7 +19181,7 @@ components:
                   softwarename: software
                   parameters: ToDo
                   username: ew
-                min_distance: 3.0937452626664474
+                min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
                   environment: development
@@ -19167,15 +19191,15 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 type_magnitude_priority: 0
-                ncha: 7
+                ncha: 0
                 type_magnitude_extended: ML-VAX
                 lower_uncertainty: 0.52
               - type_magnitude: ML
-                nsta: 0
+                nsta: 7
                 stationmagnitudes:
                 - type_magnitude: ML
                   mag_correction: 0
-                  err_mag: 6.519180951018382
+                  err_mag: 7.058770351582356
                   weight: 0.88
                   is_used: false
                   orig_distance_km: 161
@@ -19185,7 +19209,7 @@ components:
                     amp1: -0.358
                     sta: ACER
                     loc: "00"
-                    period: 0.10263654006109402
+                    period: 6.519180951018382
                     amp2: 0.292
                     type_amplitude:
                       unit: m/s
@@ -19227,7 +19251,7 @@ components:
                   id: 14932631
                 - type_magnitude: ML
                   mag_correction: 0
-                  err_mag: 6.519180951018382
+                  err_mag: 7.058770351582356
                   weight: 0.88
                   is_used: false
                   orig_distance_km: 161
@@ -19237,7 +19261,7 @@ components:
                     amp1: -0.358
                     sta: ACER
                     loc: "00"
-                    period: 0.10263654006109402
+                    period: 6.519180951018382
                     amp2: 0.292
                     type_amplitude:
                       unit: m/s
@@ -19280,10 +19304,10 @@ components:
                 confidence_level: 68.3
                 upper_uncertainty: 0.53
                 mag_quality: BB
-                quality: 3.353193347011243
+                quality: 6.704019297950036
                 id_localspace: 182491
                 mag: 3.01
-                azimut: 7.143538
+                azimut: 3.0937452
                 inserted: 2016-06-22T16:52:06.26Z
                 nsta_used: 9
                 provenance:
@@ -19300,7 +19324,7 @@ components:
                   softwarename: software
                   parameters: ToDo
                   username: ew
-                min_distance: 3.0937452626664474
+                min_distance: 3.353193347011243
                 ncha_used: 27
                 localspace:
                   environment: development
@@ -19310,7 +19334,7 @@ components:
                 modified: 2016-06-22T16:52:06.26Z
                 id: 14932631
                 type_magnitude_priority: 0
-                ncha: 7
+                ncha: 0
                 type_magnitude_extended: ML-VAX
                 lower_uncertainty: 0.52
               e0_dip: 3.616076749251911
@@ -19354,7 +19378,7 @@ components:
                     id: 14932631
                     stations:
                     - sta: ACER
-                      azi: 5.5332584
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -19362,7 +19386,7 @@ components:
                       modified: 2016-06-22T16:52:06.26Z
                       vr: 0.88
                     - sta: ACER
-                      azi: 5.5332584
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -19391,14 +19415,14 @@ components:
                   magnitudeid_out: 14932631
                   clvd: 0.24
                   originid_out: 14932631
-                misfit: 7.740351818741173
+                misfit: 8.969578798196912
                 dip2: 40
                 strike1: 34
                 dip1: 50
-                frac_acc_30deg_pref: 7.04836565559697
+                frac_acc_30deg_pref: 3.0576100241049344
                 url: http://mysite
                 quality: Ba
-                rms_ang_diff_acc_pref: 3.0576100241049344
+                rms_ang_diff_acc_pref: 3.0205796992916243
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -19416,18 +19440,18 @@ components:
                   parameters: ToDo
                   username: ew
                 strike2: 218
-                azim_gap: 4.652396
+                azim_gap: 0.10263654
                 localspace:
                   environment: development
                   name: hew1_mole
                   description: Auto added
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
-                stdr: 3.0205796992916243
+                stdr: 7.740351818741173
                 id: 14932631
                 rake1: 88
                 rake2: 93
-                nsta_polarity: 8
+                nsta_polarity: 4
               - momenttensor:
                   iso: 0
                   variance_reduction: 41.15
@@ -19457,7 +19481,7 @@ components:
                     id: 14932631
                     stations:
                     - sta: ACER
-                      azi: 5.5332584
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -19465,7 +19489,7 @@ components:
                       modified: 2016-06-22T16:52:06.26Z
                       vr: 0.88
                     - sta: ACER
-                      azi: 5.5332584
+                      azi: 7.0483656
                       r: 223.3
                       inserted: 2016-06-22T16:52:06.26Z
                       zcor: 0.88
@@ -19494,14 +19518,14 @@ components:
                   magnitudeid_out: 14932631
                   clvd: 0.24
                   originid_out: 14932631
-                misfit: 7.740351818741173
+                misfit: 8.969578798196912
                 dip2: 40
                 strike1: 34
                 dip1: 50
-                frac_acc_30deg_pref: 7.04836565559697
+                frac_acc_30deg_pref: 3.0576100241049344
                 url: http://mysite
                 quality: Ba
-                rms_ang_diff_acc_pref: 3.0576100241049344
+                rms_ang_diff_acc_pref: 3.0205796992916243
                 id_localspace: 182491
                 inserted: 2016-06-22T16:52:06.26Z
                 provenance:
@@ -19519,18 +19543,18 @@ components:
                   parameters: ToDo
                   username: ew
                 strike2: 218
-                azim_gap: 4.652396
+                azim_gap: 0.10263654
                 localspace:
                   environment: development
                   name: hew1_mole
                   description: Auto added
                   priority: 0
                 modified: 2016-06-22T16:52:06.26Z
-                stdr: 3.0205796992916243
+                stdr: 7.740351818741173
                 id: 14932631
                 rake1: 88
                 rake2: 93
-                nsta_polarity: 8
+                nsta_polarity: 4
               e1: 2.027123023002322
               e2_az: 1.0246457
               med_distance: 9.018348186070783
@@ -19545,7 +19569,7 @@ components:
                 description: Auto added
                 priority: 0
               type_origin:
-                version_value: 6
+                version_value: 7
                 version_name: ew prelim
                 name: hypocenter
                 description: Auto added
@@ -20923,6 +20947,8 @@ components:
             version_value: 7
             version_name: ew prelim
             name: hypocenter
+            description: Auto added
+            priority: 0
           region: Norcia
           lat: 45.492599
           associatedPhaseCount: 1
@@ -20962,6 +20988,7 @@ components:
             name: hew1_mole
           modified: 2016-06-22T16:52:06.26Z
           id: 14932631
+          type_magnitude_extended: ML-VAX
           lower_uncertainty: 0.52
         id: 14932631
         event_group_id: 0
@@ -21098,7 +21125,7 @@ components:
     ObjectMomenttensor_tdmt_stations_inner:
       example:
         sta: ACER
-        azi: 5.5332584
+        azi: 7.0483656
         r: 223.3
         inserted: 2016-06-22T16:52:06.26Z
         zcor: 0.88
@@ -21153,7 +21180,7 @@ components:
         id: 14932631
         stations:
         - sta: ACER
-          azi: 5.5332584
+          azi: 7.0483656
           r: 223.3
           inserted: 2016-06-22T16:52:06.26Z
           zcor: 0.88
@@ -21161,7 +21188,7 @@ components:
           modified: 2016-06-22T16:52:06.26Z
           vr: 0.88
         - sta: ACER
-          azi: 5.5332584
+          azi: 7.0483656
           r: 223.3
           inserted: 2016-06-22T16:52:06.26Z
           zcor: 0.88
