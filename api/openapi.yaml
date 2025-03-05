@@ -15044,6 +15044,7 @@ components:
       description: First motion polarity associated with the pick | varchar(1)
       enum:
       - U
+      - "{}"
       - D
       - null
       example: D
