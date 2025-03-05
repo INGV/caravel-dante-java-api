@@ -7,7 +7,7 @@
 
 * `U` (value: `"U"`)
 
-* `u` (value: `"{}"`)
+* `QUESTION_MARK` (value: `"?"`)
 
 * `D` (value: `"D"`)
 
