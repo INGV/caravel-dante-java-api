@@ -13904,6 +13904,7 @@ components:
           readOnly: true
           type: string
       required:
+      - amp1
       - time1
       type: object
     ObjectStationmagnitude:

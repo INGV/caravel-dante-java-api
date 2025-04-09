@@ -14,7 +14,7 @@
 |**cha** | **String** | Channel code | char(3) |  [optional] |
 |**loc** | **String** | Channel location | char(2) |  [optional] |
 |**time1** | **OffsetDateTime** |  | datetime(3) |  |
-|**amp1** | **Double** | Amplitude value | double |  [optional] |
+|**amp1** | **Double** | Amplitude value | double |  |
 |**time2** | **OffsetDateTime** |  | datetime(3) |  [optional] |
 |**amp2** | **Double** | Amplitude value | double |  [optional] |
 |**pickId** | **Long** | Unique incremental id | bigint(20) |  [optional] |

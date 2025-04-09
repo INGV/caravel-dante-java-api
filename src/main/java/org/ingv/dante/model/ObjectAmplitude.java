@@ -92,7 +92,7 @@ public class ObjectAmplitude {
 
   public static final String SERIALIZED_NAME_AMP1 = "amp1";
   @SerializedName(SERIALIZED_NAME_AMP1)
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   private Double amp1;
 
   public static final String SERIALIZED_NAME_TIME2 = "time2";
@@ -291,7 +291,7 @@ public class ObjectAmplitude {
   }
 
 
-  public ObjectAmplitude amp1(@javax.annotation.Nullable Double amp1) {
+  public ObjectAmplitude amp1(@javax.annotation.Nonnull Double amp1) {
     this.amp1 = amp1;
     return this;
   }
@@ -300,12 +300,12 @@ public class ObjectAmplitude {
    * Amplitude value | double
    * @return amp1
    */
-  @javax.annotation.Nullable
+  @javax.annotation.Nonnull
   public Double getAmp1() {
     return amp1;
   }
 
-  public void setAmp1(@javax.annotation.Nullable Double amp1) {
+  public void setAmp1(@javax.annotation.Nonnull Double amp1) {
     this.amp1 = amp1;
   }
 
@@ -656,6 +656,7 @@ public class ObjectAmplitude {
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("time1");
+    openapiRequiredFields.add("amp1");
   }
 
   /**
