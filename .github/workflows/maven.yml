@@ -68,11 +68,11 @@ jobs:
       run: |
         mvn deploy -B \
           -s $HOME/.m2/settings.xml \
-          -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/INGV/caravel-dante-java-api
+          -DaltDeploymentRepository=github-ingv-dante::default::https://maven.pkg.github.com/INGV/caravel-dante-java-api
     # 7b) Deploy SNAPSHOT to GitHub Packages (override POM)
     - name: Deploy SNAPSHOT to GitHub Packages (override POM)
       if: matrix.java == '17' && github.ref == 'refs/heads/develop'
       run: |
         mvn deploy -B \
           -s $HOME/.m2/settings.xml \
-          -DaltSnapshotDeploymentRepository=github::default::https://maven.pkg.github.com/INGV/caravel-dante-java-api
+          -DaltSnapshotDeploymentRepository=github-ingv-dante::default::https://maven.pkg.github.com/INGV/caravel-dante-java-api
