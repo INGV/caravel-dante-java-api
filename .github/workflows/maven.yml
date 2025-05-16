@@ -2,40 +2,77 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ main, master, develop ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ main, master, develop ]
+    branches: [ main, develop ]
 
 jobs:
-  build:
-    name: Build Dante Web Services
+  build-and-deploy:
+    name: Build & Deploy Dante Web Services (Java ${{ matrix.java }})
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java: [ 17, 21 ]
+        java: [ 17, 23 ]
+
     steps:
+    # 1) Checkout the code
     - uses: actions/checkout@v4
 
-    - name: Set up JDK & authenticate to GitHub Packages
+    # 2) Set up JDK and enable Maven cache
+    - name: Set up JDK ${{ matrix.java }}
       uses: actions/setup-java@v4
       with:
         java-version: ${{ matrix.java }}
         distribution: 'temurin'
         cache: maven
-        # ===== configurazione per il deploy =====
-        server-id: github                       # deve corrispondere all'<id> in pom.xml
-        server-username: ${{ github.actor }}    # il tuo user GitHub
-        server-password: ${{ secrets.GITHUB_TOKEN }}
-        settings-path: $HOME/.m2               # genera $HOME/.m2/settings.xml
 
-    - name: Build with Maven
-      run: mvn clean verify
+    # 3) Prepare Maven settings.xml for deployment (credentials)
+    - name: Prepare Maven settings.xml
+      run: |
+        mkdir -p $HOME/.m2
+        cat <<EOF > $HOME/.m2/settings.xml
+        <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                                      https://maven.apache.org/xsd/settings-1.0.0.xsd">
+          <servers>
+            <server>
+              <id>github</id>
+              <username>${{ github.actor }}</username>
+              <password>${{ secrets.MAVEN_PKG_TOKEN }}</password>
+            </server>
+          </servers>
+        </settings>
+        EOF
 
-    - name: Deploy with Maven to GitHub Packages
-      run: mvn deploy -B
+    # 4) Retrieve current version from pom.xml
+    - name: Get POM version
+      id: get_version
+      run: |
+        version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+        echo "version=$version" >> $GITHUB_OUTPUT
 
-    #- name: Deploy with Maven
-    #  env:
-    #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #  run: |
-    #    mvn deploy -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/INGV/caravel-dante-java-api --settings .github/settings.xml
+    # 5) Convert to SNAPSHOT on develop branch (Java 17 only)
+    - name: Convert to SNAPSHOT on develop
+      if: github.ref == 'refs/heads/develop' && matrix.java == '17'
+      run: |
+        mvn versions:set -DnewVersion=${{ steps.get_version.outputs.version }}-SNAPSHOT
+
+    # 6) Build and test on all JVMs
+    - name: Build & Test
+      run: mvn clean verify -s $HOME/.m2/settings.xml
+
+    # 7a) Deploy to GitHub Packages (override POM)
+    - name: Deploy to GitHub Packages (override POM)
+      if: matrix.java == '17' && (github.ref == 'refs/heads/main')
+      run: |
+        mvn deploy -B \
+          -s $HOME/.m2/settings.xml \
+          -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/INGV/caravel-dante-java-api
+    # 7b) Deploy SNAPSHOT to GitHub Packages (override POM)
+    - name: Deploy SNAPSHOT to GitHub Packages (override POM)
+      if: matrix.java == '17' && github.ref == 'refs/heads/develop'
+      run: |
+        mvn deploy -B \
+          -s $HOME/.m2/settings.xml \
+          -DaltSnapshotDeploymentRepository=github::default::https://maven.pkg.github.com/INGV/caravel-dante-java-api
