@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.ingv.dante</groupId>
-    <artifactId>java-openapi-generator-cli-dante</artifactId>
+    <groupId>org.ingv</groupId>
+    <artifactId>dante</artifactId>
     <packaging>jar</packaging>
-    <name>java-openapi-generator-cli-dante</name>
-    <version>3.45.0</version>
+    <name>dante</name>
+    <version>3.46.0</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

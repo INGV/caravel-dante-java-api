@@ -1,7 +1,7 @@
-# java-openapi-generator-cli-dante
+# dante
 
 Dante Web Services
-- API version: 3.45.0
+- API version: 3.46.0
   - Generator version: 7.10.0
 
   
@@ -59,9 +59,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.ingv.dante</groupId>
-  <artifactId>java-openapi-generator-cli-dante</artifactId>
-  <version>3.45.0</version>
+  <groupId>org.ingv</groupId>
+  <artifactId>dante</artifactId>
+  <version>3.46.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -72,12 +72,12 @@ Add this dependency to your project's build file:
 
 ```groovy
   repositories {
-    mavenCentral()     // Needed if the 'java-openapi-generator-cli-dante' jar has been published to maven central.
-    mavenLocal()       // Needed if the 'java-openapi-generator-cli-dante' jar has been published to the local maven repo.
+    mavenCentral()     // Needed if the 'dante' jar has been published to maven central.
+    mavenLocal()       // Needed if the 'dante' jar has been published to the local maven repo.
   }
 
   dependencies {
-     implementation "org.ingv.dante:java-openapi-generator-cli-dante:3.45.0"
+     implementation "org.ingv:dante:3.46.0"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/java-openapi-generator-cli-dante-3.45.0.jar`
+* `target/dante-3.46.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
