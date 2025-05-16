@@ -1,7 +1,7 @@
 # dante
 
 Dante Web Services
-- API version: 3.47.0-dev
+- API version: 3.48.0-dev
   - Generator version: 7.10.0
 
   
@@ -61,7 +61,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.ingv</groupId>
   <artifactId>dante</artifactId>
-  <version>3.47.0-dev</version>
+  <version>3.48.0-dev</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -77,7 +77,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "org.ingv:dante:3.47.0-dev"
+     implementation "org.ingv:dante:3.48.0-dev"
   }
 ```
 
@@ -91,7 +91,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/dante-3.47.0-dev.jar`
+* `target/dante-3.48.0-dev.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
