@@ -5,7 +5,7 @@
     <artifactId>dante</artifactId>
     <packaging>jar</packaging>
     <name>dante</name>
-    <version>3.46.0</version>
+    <version>3.47.0</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>OpenAPI Java</description>
     <scm>

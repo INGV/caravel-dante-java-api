@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "org.ingv",
     name := "dante",
-    version := "3.46.0",
+    version := "3.47.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),
