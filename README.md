@@ -4,27 +4,25 @@ Dante Web Services
 - API version: 3.48.0-dev
   - Generator version: 7.10.0
 
-  
+# Introduction
 
-  # Introduction
-  Dante is an API Web Service used for iteract with earthquake data stored in database (**quakedb**); the **quakedb** database schema is used at INGV.
-  Use other schema would require cration of specific `Model` and `Controller` but this is the potential of web services.  
+Dante is a RESTful API service designed to interact with seismic data stored in the **quakedb** database schema used at INGV. Dante can be extended to other database schemas by creating custom `Model` and `Controller` implementations.
 
-  Dante provides a set of routes to store message **event**, **origin**, **magnitude**, **arrival**, **...**.  
+Dante provides a set of routes to store message: **event**, **origin**, **magnitude**, **arrival**, **...**.
 
-  # Input
-  As input, Dante acept:
-  - A `json` message (view '**store**' spec below) 
-  - An Eartworm `json` message (view '**earthworm api**' spec below) produced by **ew2openapi** module  
+## Input
 
-  # Output
-  As output, Dante has a RESTful api foreach database table and implement three specific routes: 
-  - `events-group`: returns the preferred origin and the preferred magnitude from all clusterd events. 
-  - `events`: returns the preferred origin and the preferred magnitude from the same instance. 
-  - `event`: returns the full event (event, origins, magnitudes, arrivals, amplitude, etc...) from an **eventid** or **originid**_/_**originid**. 
-  
+Dante accepts:
+- A `json` message (view '**store**' spec below).
+- An Eartworm `json` message (view '**earthworm api**' spec below) produced by **ew2openapi** module.
 
-  
+## Output
+
+Dante exposes RESTful routes for each database table and implements three specialized endpoints:
+- `/events-group`: returns the preferred origin and magnitude for all clustered events.
+- `/events`: returns the preferred origin and magnitude for a single event instance.
+- `/event`: returns the full event details (event, origins, magnitudes, arrivals, amplitudes, etc.) based on an **eventid** or **originid**.
+
 
   For more information, please visit [http://terremoti.ingv.it/webservices_and_software](http://terremoti.ingv.it/webservices_and_software)
 
